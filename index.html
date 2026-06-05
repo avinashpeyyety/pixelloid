@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Two-person dialogue — animation + sound</title>
+  <title>Spider-Man &amp; Iron Man — dialogue</title>
   <style>
     :root {
       --bg: #1a1d2e;
       --floor: #252a3d;
-      --a: #6eb5ff;
-      --a-glow: rgba(110, 181, 255, 0.4);
-      --b: #ffb86c;
-      --b-glow: rgba(255, 184, 108, 0.4);
+      --a: #e23636;
+      --a-glow: rgba(226, 54, 54, 0.45);
+      --b: #f0c14a;
+      --b-glow: rgba(240, 193, 74, 0.4);
       --bubble: #f4f1ea;
       --ink: #2a2630;
       --muted: #8b90a8;
@@ -65,282 +65,258 @@
     }
 
     .avatar {
-      --skin: #f2c9a8;
-      --skin-shadow: #d9a67e;
-      --ink-line: #1e1828;
-      width: 100px;
-      height: 118px;
+      --ink: #121018;
+      width: 108px;
+      height: 124px;
       position: relative;
       animation: bob 2.8s ease-in-out infinite;
-      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
     }
 
-    .person-b .avatar {
-      animation-delay: -1.4s;
-    }
+    .person-b .avatar { animation-delay: -1.4s; }
 
-    .person-a .avatar { --skin: #f5d0b5; --skin-shadow: #dba882; }
-    .person-b .avatar { --skin: #e8b896; --skin-shadow: #c9926a; }
-
-    .hair-back,
-    .hair-front,
     .head,
-    .neck,
     .torso,
-    .ear,
-    .brow,
-    .eye,
-    .nose,
+    .lens,
+    .panel,
+    .emblem,
     .mouth,
-    .cheek {
+    .slit,
+    .arc,
+    .web-line {
       position: absolute;
     }
-
-    .hair-back {
-      top: 2px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 72px;
-      height: 52px;
-      border-radius: 40px 40px 20px 20px;
-      background: var(--hair-back);
-      border: 2.5px solid var(--ink-line);
-      z-index: 1;
-    }
-
-    .person-a { --hair-back: #2a1f3d; --hair-front: #3d2f55; --shirt: #3d8fd9; --shirt-shadow: #2a6aa8; }
-    .person-b { --hair-back: #1f2428; --hair-front: #3a4248; --shirt: #e8923a; --shirt-shadow: #b86a22; }
-
-    .hair-front {
-      z-index: 5;
-      border: 2.5px solid var(--ink-line);
-      background: var(--hair-front);
-    }
-
-    .person-a .hair-front {
-      top: 0;
-      left: 14px;
-      width: 58px;
-      height: 28px;
-      border-radius: 30px 36px 8px 20px;
-    }
-
-    .person-a .hair-front::after {
-      content: "";
-      position: absolute;
-      right: -18px;
-      top: 14px;
-      width: 28px;
-      height: 38px;
-      background: var(--hair-front);
-      border: 2.5px solid var(--ink-line);
-      border-radius: 0 50% 60% 0;
-    }
-
-    .person-b .hair-front {
-      top: 4px;
-      left: 18px;
-      width: 62px;
-      height: 22px;
-      border-radius: 18px 22px 6px 6px;
-    }
-
-    .person-b .hair-front::before {
-      content: "";
-      position: absolute;
-      left: 8px;
-      top: -4px;
-      width: 14px;
-      height: 12px;
-      background: var(--hair-front);
-      border: 2px solid var(--ink-line);
-      border-radius: 50%;
-    }
-
-    .head {
-      top: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 64px;
-      height: 72px;
-      background: linear-gradient(160deg, var(--skin) 40%, var(--skin-shadow));
-      border: 2.5px solid var(--ink-line);
-      border-radius: 42% 42% 48% 48%;
-      z-index: 2;
-      overflow: hidden;
-    }
-
-    .person-a .head { transform: translateX(-50%) rotate(-3deg); }
-    .person-b .head { transform: translateX(-50%) rotate(3deg); }
-
-    .person-b .head::after {
-      content: "";
-      position: absolute;
-      left: 12px;
-      right: 12px;
-      bottom: 8px;
-      height: 18px;
-      background: repeating-linear-gradient(
-        90deg,
-        transparent 0 3px,
-        rgba(30, 24, 40, 0.12) 3px 4px
-      );
-      border-radius: 0 0 40% 40%;
-      pointer-events: none;
-    }
-
-    .ear {
-      top: 34px;
-      width: 12px;
-      height: 16px;
-      background: var(--skin-shadow);
-      border: 2px solid var(--ink-line);
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    .ear-l { left: -6px; }
-    .ear-r { right: -6px; }
-
-    .face {
-      position: absolute;
-      inset: 14px 10px 10px;
-      z-index: 3;
-    }
-
-    .brow {
-      top: 6px;
-      width: 18px;
-      height: 5px;
-      background: var(--ink-line);
-      border-radius: 4px;
-    }
-
-    .person-a .brow-l { left: 4px; transform: rotate(-8deg); }
-    .person-a .brow-r { right: 4px; transform: rotate(6deg); }
-    .person-b .brow-l { left: 2px; transform: rotate(-12deg) scaleX(1.1); }
-    .person-b .brow-r { right: 2px; transform: rotate(10deg) scaleX(1.1); }
-
-    .eyes {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 16px;
-      padding: 0 2px;
-    }
-
-    .eye {
-      width: 20px;
-      height: 22px;
-      background: #fff;
-      border: 2.5px solid var(--ink-line);
-      border-radius: 55% 55% 45% 45%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .eye::before {
-      content: "";
-      position: absolute;
-      width: 9px;
-      height: 11px;
-      background: var(--ink-line);
-      border-radius: 50%;
-      bottom: 3px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .eye::after {
-      content: "";
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: #fff;
-      border-radius: 50%;
-      top: 6px;
-      right: 4px;
-    }
-
-    .person-a .eye-r::after { left: 4px; right: auto; }
-
-    .nose {
-      left: 50%;
-      top: 38px;
-      transform: translateX(-50%);
-      width: 10px;
-      height: 12px;
-      border: 2px solid transparent;
-      border-bottom: 2.5px solid rgba(30, 24, 40, 0.35);
-      border-radius: 0 0 50% 50%;
-    }
-
-    .cheek {
-      top: 42px;
-      width: 10px;
-      height: 6px;
-      background: rgba(230, 120, 100, 0.35);
-      border-radius: 50%;
-    }
-
-    .cheek-l { left: 0; }
-    .cheek-r { right: 0; }
 
     .mouth {
       left: 50%;
-      top: 50px;
       transform: translateX(-50%);
-      width: 18px;
-      height: 5px;
-      background: #6b3548;
-      border: 2.5px solid var(--ink-line);
-      border-top: none;
-      border-radius: 0 0 12px 12px;
-      z-index: 4;
+      z-index: 6;
     }
 
     .person-a .mouth { animation: speak-a var(--cycle) linear infinite; }
     .person-b .mouth { animation: speak-b var(--cycle) linear infinite; }
 
-    .neck {
-      top: 82px;
+    /* —— Spider-Man —— */
+    .person-a .avatar { filter: drop-shadow(0 8px 18px var(--a-glow)); }
+
+    .person-a .head {
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-4deg);
+      width: 70px;
+      height: 78px;
+      background: #d42b2b;
+      border: 3px solid var(--ink);
+      border-radius: 46% 46% 42% 42%;
+      z-index: 3;
+      overflow: hidden;
+    }
+
+    .person-a .head::before,
+    .person-a .head::after {
+      content: "";
+      position: absolute;
+      top: 18px;
+      width: 22px;
+      height: 38px;
+      background: #1565c0;
+      border: 2.5px solid var(--ink);
+      border-radius: 0 0 70% 70%;
+    }
+
+    .person-a .head::before { left: -4px; transform: skewX(6deg); }
+    .person-a .head::after { right: -4px; transform: skewX(-6deg); }
+
+    .person-a .web-line {
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 2;
+    }
+
+    .person-a .web-line-1 {
+      top: 28px;
+      left: 50%;
+      width: 2px;
+      height: 36px;
+      transform: translateX(-50%);
+    }
+
+    .person-a .web-line-2 {
+      top: 40px;
+      left: 12px;
+      width: 46px;
+      height: 2px;
+      transform: rotate(-28deg);
+    }
+
+    .person-a .web-line-3 {
+      top: 40px;
+      right: 12px;
+      width: 46px;
+      height: 2px;
+      transform: rotate(28deg);
+    }
+
+    .person-a .lens {
+      top: 22px;
+      width: 26px;
+      height: 30px;
+      background: #fff;
+      border: 3px solid var(--ink);
+      border-radius: 58% 58% 42% 42%;
+      z-index: 4;
+      box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    .person-a .lens-l { left: 6px; transform: rotate(-8deg); }
+    .person-a .lens-r { right: 6px; transform: rotate(8deg); }
+
+    .person-a .mouth {
+      top: 56px;
+      width: 16px;
+      height: 4px;
+      background: #8b1010;
+      border: 2px solid var(--ink);
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .person-a .torso {
+      top: 88px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 82px;
+      height: 34px;
+      background: linear-gradient(180deg, #d42b2b 0%, #a81f1f 100%);
+      border: 3px solid var(--ink);
+      border-radius: 20px 20px 12px 12px;
+      z-index: 1;
+    }
+
+    .person-a .torso::before,
+    .person-a .torso::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 22px;
+      height: 100%;
+      background: #1565c0;
+      border: 2px solid var(--ink);
+    }
+
+    .person-a .torso::before { left: 0; border-radius: 18px 0 0 8px; }
+    .person-a .torso::after { right: 0; border-radius: 0 18px 8px 0; }
+
+    .person-a .emblem {
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 22px;
+      height: 22px;
+      background: var(--ink);
+      clip-path: polygon(
+        50% 0%, 62% 32%, 100% 38%, 72% 58%, 80% 100%,
+        50% 78%, 20% 100%, 28% 58%, 0% 38%, 38% 32%
+      );
+      z-index: 2;
+    }
+
+    /* —— Iron Man —— */
+    .person-b .avatar { filter: drop-shadow(0 8px 18px var(--b-glow)); }
+
+    .person-b .head {
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(4deg);
+      width: 74px;
+      height: 82px;
+      background: linear-gradient(180deg, #b71c1c 0%, #d32f2f 45%, #f9a825 46%, #fbc02d 100%);
+      border: 3px solid var(--ink);
+      border-radius: 38% 38% 36% 36%;
+      z-index: 3;
+      overflow: hidden;
+    }
+
+    .person-b .panel {
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fdd835;
+      border: 2px solid var(--ink);
+      z-index: 2;
+    }
+
+    .person-b .panel-brow {
+      top: 18px;
+      width: 52px;
+      height: 14px;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .person-b .panel-jaw {
+      bottom: 0;
+      width: 58px;
+      height: 28px;
+      border-radius: 0 0 40% 40%;
+    }
+
+    .person-b .slit {
+      top: 36px;
+      height: 8px;
+      background: #84ffff;
+      border: 2px solid var(--ink);
+      border-radius: 2px;
+      box-shadow: 0 0 10px #00e5ff, 0 0 4px #fff;
+      z-index: 4;
+    }
+
+    .person-b .slit-l { left: 14px; width: 18px; transform: skewX(-12deg); }
+    .person-b .slit-r { right: 14px; width: 18px; transform: skewX(12deg); }
+
+    .person-b .mouth {
+      top: 58px;
+      width: 20px;
+      height: 5px;
+      background: #5d4037;
+      border: 2px solid var(--ink);
+      border-radius: 4px;
+      box-shadow: inset 0 0 6px rgba(0, 229, 255, 0.35);
+    }
+
+    .person-b .arc {
+      top: 94px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: #00e5ff;
+      border-radius: 50%;
+      border: 2px solid var(--ink);
+      box-shadow: 0 0 12px #00e5ff;
+      z-index: 5;
+    }
+
+    .person-b .torso {
+      top: 86px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 86px;
+      height: 36px;
+      background: linear-gradient(180deg, #c62828 0%, #8e0000 55%, #f9a825 56%, #f57f17 100%);
+      border: 3px solid var(--ink);
+      border-radius: 22px 22px 14px 14px;
+      z-index: 1;
+    }
+
+    .person-b .torso::before {
+      content: "";
+      position: absolute;
+      top: 6px;
       left: 50%;
       transform: translateX(-50%);
       width: 28px;
       height: 18px;
-      background: linear-gradient(90deg, var(--skin-shadow), var(--skin), var(--skin-shadow));
-      border-left: 2.5px solid var(--ink-line);
-      border-right: 2.5px solid var(--ink-line);
-      z-index: 1;
+      background: #fdd835;
+      border: 2px solid var(--ink);
+      border-radius: 0 0 50% 50%;
     }
-
-    .torso {
-      top: 96px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 76px;
-      height: 28px;
-      background: linear-gradient(180deg, var(--shirt) 0%, var(--shirt-shadow) 100%);
-      border: 2.5px solid var(--ink-line);
-      border-radius: 18px 18px 10px 10px;
-      z-index: 0;
-    }
-
-    .person-a .torso::before,
-    .person-b .torso::before {
-      content: "";
-      position: absolute;
-      top: 4px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 14px;
-      height: 14px;
-      border: 2px solid rgba(0, 0, 0, 0.15);
-      border-radius: 4px;
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .person-a .avatar { filter: drop-shadow(0 6px 16px var(--a-glow)); }
-    .person-b .avatar { filter: drop-shadow(0 6px 16px var(--b-glow)); }
 
     .name {
       font-size: 0.72rem;
@@ -530,7 +506,7 @@
   </style>
 </head>
 <body>
-  <h1>Dialogue — animation + voice &amp; music</h1>
+  <h1>Spider-Man &amp; Iron Man — dialogue</h1>
 
   <div class="controls">
     <button type="button" id="btn-play" aria-pressed="false">▶ Play with sound</button>
@@ -541,80 +517,60 @@
   <div class="stage">
     <div class="cast">
       <div class="person person-a">
-        <div class="avatar" aria-hidden="true">
-          <div class="hair-back"></div>
-          <div class="torso"></div>
-          <div class="neck"></div>
+        <div class="avatar" aria-hidden="true" title="Spider-Man">
+          <div class="torso">
+            <span class="emblem"></span>
+          </div>
           <div class="head">
-            <span class="ear ear-l"></span>
-            <span class="ear ear-r"></span>
-            <div class="hair-front"></div>
-            <div class="face">
-              <span class="brow brow-l"></span>
-              <span class="brow brow-r"></span>
-              <div class="eyes">
-                <span class="eye eye-l"></span>
-                <span class="eye eye-r"></span>
-              </div>
-              <span class="nose"></span>
-              <span class="cheek cheek-l"></span>
-              <span class="cheek cheek-r"></span>
-              <span class="mouth"></span>
-            </div>
+            <span class="web-line web-line-1"></span>
+            <span class="web-line web-line-2"></span>
+            <span class="web-line web-line-3"></span>
+            <span class="lens lens-l"></span>
+            <span class="lens lens-r"></span>
+            <span class="mouth"></span>
           </div>
         </div>
-        <span class="name">Anya</span>
+        <span class="name">Spider-Man</span>
       </div>
       <div class="person person-b">
-        <div class="avatar" aria-hidden="true">
-          <div class="hair-back"></div>
+        <div class="avatar" aria-hidden="true" title="Iron Man">
           <div class="torso"></div>
-          <div class="neck"></div>
+          <span class="arc"></span>
           <div class="head">
-            <span class="ear ear-l"></span>
-            <span class="ear ear-r"></span>
-            <div class="hair-front"></div>
-            <div class="face">
-              <span class="brow brow-l"></span>
-              <span class="brow brow-r"></span>
-              <div class="eyes">
-                <span class="eye eye-l"></span>
-                <span class="eye eye-r"></span>
-              </div>
-              <span class="nose"></span>
-              <span class="cheek cheek-l"></span>
-              <span class="cheek cheek-r"></span>
-              <span class="mouth"></span>
-            </div>
+            <span class="panel panel-brow"></span>
+            <span class="panel panel-jaw"></span>
+            <span class="slit slit-l"></span>
+            <span class="slit slit-r"></span>
+            <span class="mouth"></span>
           </div>
         </div>
-        <span class="name">Ravi</span>
+        <span class="name">Iron Man</span>
       </div>
     </div>
 
     <div class="dialogue">
       <div class="line from-a">
-        <div class="bubble">Did you finish the animation sketch?</div>
+        <div class="bubble">Hey Tony — you finish the web-shooter calibration?</div>
       </div>
       <div class="line from-b">
-        <div class="bubble">Almost — just the timing on the bubbles.</div>
+        <div class="bubble">Almost. Arc reactor timing still needs a tweak.</div>
       </div>
       <div class="line from-a">
-        <div class="bubble">Pure CSS? No JavaScript?</div>
+        <div class="bubble">Pure CSS? No repulsors?</div>
       </div>
       <div class="line from-b">
-        <div class="bubble">Only keyframes and animation-delay.</div>
+        <div class="bubble">Only keyframes and animation-delay, kid.</div>
       </div>
       <div class="line from-a">
-        <div class="bubble">Nice. It loops cleanly too.</div>
+        <div class="bubble">Nice. Loops cleaner than my commute.</div>
       </div>
       <div class="line from-b">
-        <div class="bubble">Ship it. Coffee after.</div>
+        <div class="bubble">Ship it. Shawarma after.</div>
       </div>
     </div>
   </div>
 
-  <p class="hint">18s loop · click Play for cartoon music &amp; voice-over (browser TTS). Mute either track anytime.</p>
+  <p class="hint">18s loop · fan CSS tribute (Marvel characters © Marvel). Play for music &amp; voice-over.</p>
   <script src="audio.js" defer></script>
 </body>
 </html>

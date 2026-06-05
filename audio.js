@@ -2,12 +2,12 @@
   const CYCLE_MS = 18000;
 
   const LINES = [
-    { at: 0.04, who: "a", text: "Did you finish the animation sketch?" },
-    { at: 0.16, who: "b", text: "Almost — just the timing on the bubbles." },
-    { at: 0.32, who: "a", text: "Pure CSS? No JavaScript?" },
-    { at: 0.48, who: "b", text: "Only keyframes and animation-delay." },
-    { at: 0.64, who: "a", text: "Nice. It loops cleanly too." },
-    { at: 0.8, who: "b", text: "Ship it. Coffee after." },
+    { at: 0.04, who: "a", text: "Hey Tony — you finish the web-shooter calibration?" },
+    { at: 0.16, who: "b", text: "Almost. Arc reactor timing still needs a tweak." },
+    { at: 0.32, who: "a", text: "Pure CSS? No repulsors?" },
+    { at: 0.48, who: "b", text: "Only keyframes and animation-delay, kid." },
+    { at: 0.64, who: "a", text: "Nice. Loops cleaner than my commute." },
+    { at: 0.8, who: "b", text: "Ship it. Shawarma after." },
   ];
 
   const VOICES = { a: { pitch: 1.15, rate: 1.05 }, b: { pitch: 0.82, rate: 0.95 } };

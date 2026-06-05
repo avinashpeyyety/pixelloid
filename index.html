@@ -52,7 +52,9 @@
     .cast {
       display: flex;
       justify-content: space-between;
-      padding: 0 0.25rem 1.5rem;
+      align-items: flex-end;
+      padding: 0.5rem 0.5rem 1.5rem;
+      gap: 1rem;
     }
 
     .person {
@@ -63,53 +65,282 @@
     }
 
     .avatar {
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
+      --skin: #f2c9a8;
+      --skin-shadow: #d9a67e;
+      --ink-line: #1e1828;
+      width: 100px;
+      height: 118px;
       position: relative;
       animation: bob 2.8s ease-in-out infinite;
-    }
-
-    .person-a .avatar {
-      background: linear-gradient(145deg, #5a9fd8, #2d5a8a);
-      box-shadow: 0 0 0 3px var(--bg), 0 0 20px var(--a-glow);
+      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
     }
 
     .person-b .avatar {
-      background: linear-gradient(145deg, #e8a050, #b86a28);
-      box-shadow: 0 0 0 3px var(--bg), 0 0 20px var(--b-glow);
       animation-delay: -1.4s;
     }
 
+    .person-a .avatar { --skin: #f5d0b5; --skin-shadow: #dba882; }
+    .person-b .avatar { --skin: #e8b896; --skin-shadow: #c9926a; }
+
+    .hair-back,
+    .hair-front,
+    .head,
+    .neck,
+    .torso,
+    .ear,
+    .brow,
+    .eye,
+    .nose,
+    .mouth,
+    .cheek {
+      position: absolute;
+    }
+
+    .hair-back {
+      top: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 72px;
+      height: 52px;
+      border-radius: 40px 40px 20px 20px;
+      background: var(--hair-back);
+      border: 2.5px solid var(--ink-line);
+      z-index: 1;
+    }
+
+    .person-a { --hair-back: #2a1f3d; --hair-front: #3d2f55; --shirt: #3d8fd9; --shirt-shadow: #2a6aa8; }
+    .person-b { --hair-back: #1f2428; --hair-front: #3a4248; --shirt: #e8923a; --shirt-shadow: #b86a22; }
+
+    .hair-front {
+      z-index: 5;
+      border: 2.5px solid var(--ink-line);
+      background: var(--hair-front);
+    }
+
+    .person-a .hair-front {
+      top: 0;
+      left: 14px;
+      width: 58px;
+      height: 28px;
+      border-radius: 30px 36px 8px 20px;
+    }
+
+    .person-a .hair-front::after {
+      content: "";
+      position: absolute;
+      right: -18px;
+      top: 14px;
+      width: 28px;
+      height: 38px;
+      background: var(--hair-front);
+      border: 2.5px solid var(--ink-line);
+      border-radius: 0 50% 60% 0;
+    }
+
+    .person-b .hair-front {
+      top: 4px;
+      left: 18px;
+      width: 62px;
+      height: 22px;
+      border-radius: 18px 22px 6px 6px;
+    }
+
+    .person-b .hair-front::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: -4px;
+      width: 14px;
+      height: 12px;
+      background: var(--hair-front);
+      border: 2px solid var(--ink-line);
+      border-radius: 50%;
+    }
+
+    .head {
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 64px;
+      height: 72px;
+      background: linear-gradient(160deg, var(--skin) 40%, var(--skin-shadow));
+      border: 2.5px solid var(--ink-line);
+      border-radius: 42% 42% 48% 48%;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .person-a .head { transform: translateX(-50%) rotate(-3deg); }
+    .person-b .head { transform: translateX(-50%) rotate(3deg); }
+
+    .person-b .head::after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 8px;
+      height: 18px;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent 0 3px,
+        rgba(30, 24, 40, 0.12) 3px 4px
+      );
+      border-radius: 0 0 40% 40%;
+      pointer-events: none;
+    }
+
+    .ear {
+      top: 34px;
+      width: 12px;
+      height: 16px;
+      background: var(--skin-shadow);
+      border: 2px solid var(--ink-line);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .ear-l { left: -6px; }
+    .ear-r { right: -6px; }
+
     .face {
       position: absolute;
-      inset: 24% 30%;
+      inset: 14px 10px 10px;
+      z-index: 3;
     }
+
+    .brow {
+      top: 6px;
+      width: 18px;
+      height: 5px;
+      background: var(--ink-line);
+      border-radius: 4px;
+    }
+
+    .person-a .brow-l { left: 4px; transform: rotate(-8deg); }
+    .person-a .brow-r { right: 4px; transform: rotate(6deg); }
+    .person-b .brow-l { left: 2px; transform: rotate(-12deg) scaleX(1.1); }
+    .person-b .brow-r { right: 2px; transform: rotate(10deg) scaleX(1.1); }
 
     .eyes {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 7px;
+      margin-top: 16px;
+      padding: 0 2px;
     }
 
     .eye {
-      width: 7px;
-      height: 7px;
-      background: var(--bg);
+      width: 20px;
+      height: 22px;
+      background: #fff;
+      border: 2.5px solid var(--ink-line);
+      border-radius: 55% 55% 45% 45%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eye::before {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 11px;
+      background: var(--ink-line);
+      border-radius: 50%;
+      bottom: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .eye::after {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: #fff;
+      border-radius: 50%;
+      top: 6px;
+      right: 4px;
+    }
+
+    .person-a .eye-r::after { left: 4px; right: auto; }
+
+    .nose {
+      left: 50%;
+      top: 38px;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 12px;
+      border: 2px solid transparent;
+      border-bottom: 2.5px solid rgba(30, 24, 40, 0.35);
+      border-radius: 0 0 50% 50%;
+    }
+
+    .cheek {
+      top: 42px;
+      width: 10px;
+      height: 6px;
+      background: rgba(230, 120, 100, 0.35);
       border-radius: 50%;
     }
 
+    .cheek-l { left: 0; }
+    .cheek-r { right: 0; }
+
     .mouth {
-      width: 16px;
-      height: 7px;
-      margin: 0 auto;
-      border: 2px solid var(--bg);
+      left: 50%;
+      top: 50px;
+      transform: translateX(-50%);
+      width: 18px;
+      height: 5px;
+      background: #6b3548;
+      border: 2.5px solid var(--ink-line);
       border-top: none;
-      border-radius: 0 0 10px 10px;
+      border-radius: 0 0 12px 12px;
+      z-index: 4;
     }
 
     .person-a .mouth { animation: speak-a var(--cycle) linear infinite; }
     .person-b .mouth { animation: speak-b var(--cycle) linear infinite; }
+
+    .neck {
+      top: 82px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 28px;
+      height: 18px;
+      background: linear-gradient(90deg, var(--skin-shadow), var(--skin), var(--skin-shadow));
+      border-left: 2.5px solid var(--ink-line);
+      border-right: 2.5px solid var(--ink-line);
+      z-index: 1;
+    }
+
+    .torso {
+      top: 96px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 76px;
+      height: 28px;
+      background: linear-gradient(180deg, var(--shirt) 0%, var(--shirt-shadow) 100%);
+      border: 2.5px solid var(--ink-line);
+      border-radius: 18px 18px 10px 10px;
+      z-index: 0;
+    }
+
+    .person-a .torso::before,
+    .person-b .torso::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .person-a .avatar { filter: drop-shadow(0 6px 16px var(--a-glow)); }
+    .person-b .avatar { filter: drop-shadow(0 6px 16px var(--b-glow)); }
 
     .name {
       font-size: 0.72rem;
@@ -125,27 +356,31 @@
 
     @keyframes speak-a {
       0%, 4%, 28%, 32%, 56%, 60%, 84%, 88%, 100% {
-        height: 7px;
-        border-radius: 0 0 10px 10px;
-        transform: scaleY(1);
+        height: 5px;
+        width: 18px;
+        border-radius: 0 0 12px 12px;
+        transform: translateX(-50%) scaleY(1);
       }
       4.1%, 27.9%, 32.1%, 55.9%, 60.1%, 83.9%, 88.1%, 99.9% {
-        height: 9px;
+        height: 12px;
+        width: 14px;
         border-radius: 50%;
-        transform: scaleY(1.25);
+        transform: translateX(-50%) scaleY(1.1);
       }
     }
 
     @keyframes speak-b {
       0%, 16%, 20%, 44%, 48%, 72%, 76%, 100% {
-        height: 7px;
-        border-radius: 0 0 10px 10px;
-        transform: scaleY(1);
+        height: 5px;
+        width: 18px;
+        border-radius: 0 0 12px 12px;
+        transform: translateX(-50%) scaleY(1);
       }
       16.1%, 19.9%, 20.1%, 43.9%, 48.1%, 71.9%, 76.1%, 99.9% {
-        height: 9px;
+        height: 12px;
+        width: 14px;
         border-radius: 50%;
-        transform: scaleY(1.25);
+        transform: translateX(-50%) scaleY(1.1);
       }
     }
 
@@ -207,6 +442,7 @@
       clip-path: polygon(0 0, 0 100%, 100% 100%);
     }
 
+    /* One 18s timeline — each line visible ~14% of cycle */
     .line:nth-child(1) { animation: show-1 var(--cycle) linear infinite; }
     .line:nth-child(2) { animation: show-2 var(--cycle) linear infinite; }
     .line:nth-child(3) { animation: show-3 var(--cycle) linear infinite; }
@@ -305,19 +541,51 @@
   <div class="stage">
     <div class="cast">
       <div class="person person-a">
-        <div class="avatar">
-          <div class="face">
-            <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-            <div class="mouth"></div>
+        <div class="avatar" aria-hidden="true">
+          <div class="hair-back"></div>
+          <div class="torso"></div>
+          <div class="neck"></div>
+          <div class="head">
+            <span class="ear ear-l"></span>
+            <span class="ear ear-r"></span>
+            <div class="hair-front"></div>
+            <div class="face">
+              <span class="brow brow-l"></span>
+              <span class="brow brow-r"></span>
+              <div class="eyes">
+                <span class="eye eye-l"></span>
+                <span class="eye eye-r"></span>
+              </div>
+              <span class="nose"></span>
+              <span class="cheek cheek-l"></span>
+              <span class="cheek cheek-r"></span>
+              <span class="mouth"></span>
+            </div>
           </div>
         </div>
         <span class="name">Anya</span>
       </div>
       <div class="person person-b">
-        <div class="avatar">
-          <div class="face">
-            <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-            <div class="mouth"></div>
+        <div class="avatar" aria-hidden="true">
+          <div class="hair-back"></div>
+          <div class="torso"></div>
+          <div class="neck"></div>
+          <div class="head">
+            <span class="ear ear-l"></span>
+            <span class="ear ear-r"></span>
+            <div class="hair-front"></div>
+            <div class="face">
+              <span class="brow brow-l"></span>
+              <span class="brow brow-r"></span>
+              <div class="eyes">
+                <span class="eye eye-l"></span>
+                <span class="eye eye-r"></span>
+              </div>
+              <span class="nose"></span>
+              <span class="cheek cheek-l"></span>
+              <span class="cheek cheek-r"></span>
+              <span class="mouth"></span>
+            </div>
           </div>
         </div>
         <span class="name">Ravi</span>

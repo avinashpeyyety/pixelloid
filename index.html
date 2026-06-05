@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Two-person dialogue — HTML &amp; CSS</title>
+  <title>Two-person dialogue — animation + sound</title>
   <style>
     :root {
       --bg: #1a1d2e;
@@ -207,7 +207,6 @@
       clip-path: polygon(0 0, 0 100%, 100% 100%);
     }
 
-    /* One 18s timeline — each line visible ~14% of cycle */
     .line:nth-child(1) { animation: show-1 var(--cycle) linear infinite; }
     .line:nth-child(2) { animation: show-2 var(--cycle) linear infinite; }
     .line:nth-child(3) { animation: show-3 var(--cycle) linear infinite; }
@@ -252,10 +251,56 @@
       color: var(--muted);
       text-align: center;
     }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .controls button {
+      font: inherit;
+      font-size: 0.82rem;
+      padding: 0.5rem 0.9rem;
+      border: 1px solid #3d4460;
+      border-radius: 999px;
+      background: #2a3048;
+      color: #e8e6e3;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .controls button:hover {
+      background: #353d5c;
+      transform: translateY(-1px);
+    }
+
+    .controls button.off {
+      opacity: 0.45;
+    }
+
+    #btn-play {
+      background: linear-gradient(145deg, #5a9fd8, #3d6a9e);
+      border-color: #6eb5ff;
+      font-weight: 600;
+    }
+
+    body:not(.audio-on) .stage,
+    body:not(.audio-on) .stage * {
+      animation-play-state: paused;
+    }
   </style>
 </head>
 <body>
-  <h1>Dialogue — HTML &amp; CSS only</h1>
+  <h1>Dialogue — animation + voice &amp; music</h1>
+
+  <div class="controls">
+    <button type="button" id="btn-play" aria-pressed="false">▶ Play with sound</button>
+    <button type="button" id="btn-music" aria-pressed="true">🎵 Music</button>
+    <button type="button" id="btn-voice" aria-pressed="true">🗣 Voice</button>
+  </div>
 
   <div class="stage">
     <div class="cast">
@@ -301,6 +346,7 @@
     </div>
   </div>
 
-  <p class="hint">18s loop · edit the <code>.bubble</code> text and <code>@keyframes show-*</code> to add lines</p>
+  <p class="hint">18s loop · click Play for cartoon music &amp; voice-over (browser TTS). Mute either track anytime.</p>
+  <script src="audio.js" defer></script>
 </body>
 </html>

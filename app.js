@@ -1,7 +1,7 @@
 (function () {
   const SPEAKERS = {
-    brother: { label: "Brother", age: "7", pitch: 1.82, rate: 1.24 },
-    sister: { label: "Sister", age: "5", pitch: 1.92, rate: 1.3 },
+    brother: { label: "Brother", age: "7", pitch: 2.0, rate: 1.14 },
+    sister: { label: "Sister", age: "5", pitch: 2.0, rate: 1.26 },
     grok: { label: "Grok Ara", age: "", pitch: 1.05, rate: 0.92 },
   };
 
@@ -18,6 +18,7 @@
   let voiceOn = true;
   let lineIndex = 0;
   let playToken = 0;
+  let speakQueue = Promise.resolve();
 
   const chatLog = document.getElementById("chat-log");
   const activeBubble = document.getElementById("active-bubble");
@@ -33,29 +34,47 @@
   function pickVoice(who) {
     const voices = englishVoices();
     if (!voices.length) return speechSynthesis.getVoices()[0] || null;
-    const avoidAdultMale = (v) => !/daniel|alex|fred|david|james|oliver|tom|lee|ralph/i.test(v.name);
+    const avoidAdultMale = (v) => !/daniel|alex|fred|david|james|oliver|tom|lee|ralph|aaron|gordon|bruce/i.test(v.name);
     if (who === "grok") {
       return voices.find((v) => /samantha|karen|victoria|zira|aria|moira|susan/i.test(v.name)) || voices[0];
     }
     if (who === "sister") {
-      return voices.find((v) => /samantha|karen|victoria|zira|flo|tessa/i.test(v.name)) || voices[0];
+      return voices.find((v) => /junior|samantha|karen|victoria|zira|flo|tessa/i.test(v.name)) || voices[0];
     }
+    // 7yo boy: never use adult male TTS — Junior or a light voice pitched up
     return (
-      voices.find((v) => /junior|samantha|karen|flo|tessa/i.test(v.name)) ||
+      voices.find((v) => /junior/i.test(v.name)) ||
+      voices.find((v) => /samantha|karen|flo|tessa/i.test(v.name)) ||
       voices.find(avoidAdultMale) ||
       voices[0]
     );
   }
 
-  function speak(who, text) {
+  function estimateReadMs(text) {
+    const words = text.split(/\s+/).filter(Boolean).length;
+    return Math.max(1600, words * 380);
+  }
+
+  async function waitForSpeechIdle() {
+    let quietTicks = 0;
+    while (quietTicks < 4) {
+      await pause(120);
+      if (!speechSynthesis.speaking && !speechSynthesis.pending) quietTicks++;
+      else quietTicks = 0;
+    }
+    await pause(420);
+  }
+
+  function speakOne(who, text) {
     return new Promise((resolve) => {
-      const words = text.split(/\s+/).filter(Boolean).length;
-      const readMs = Math.max(1400, words * 320);
+      const readMs = estimateReadMs(text);
 
       if (!voiceOn || !window.speechSynthesis) {
         setTimeout(resolve, readMs);
         return;
       }
+
+      speechSynthesis.cancel();
 
       const u = new SpeechSynthesisUtterance(text);
       const cfg = SPEAKERS[who];
@@ -66,27 +85,39 @@
       u.volume = 0.95;
 
       let settled = false;
-      const done = () => {
+      const finish = async () => {
         if (settled) return;
         settled = true;
-        clearInterval(pulse);
+        clearInterval(keepAlive);
         clearTimeout(fallback);
+        await waitForSpeechIdle();
         resolve();
       };
 
-      u.onend = done;
-      u.onerror = done;
+      u.onend = () => finish();
+      u.onerror = () => finish();
 
-      const pulse = setInterval(() => {
-        if (settled || !speechSynthesis.speaking) return;
-        speechSynthesis.pause();
-        speechSynthesis.resume();
-      }, 7000);
+      // Chrome/Safari: keep long utterances alive without ending early
+      const keepAlive = setInterval(() => {
+        if (settled) return;
+        if (speechSynthesis.speaking) {
+          if (speechSynthesis.paused) speechSynthesis.resume();
+          else {
+            speechSynthesis.pause();
+            speechSynthesis.resume();
+          }
+        }
+      }, 9000);
 
-      const fallback = setTimeout(done, Math.min(150000, readMs + 8000));
+      const fallback = setTimeout(() => finish(), Math.min(180000, readMs + 12000));
 
       speechSynthesis.speak(u);
     });
+  }
+
+  function speak(who, text) {
+    speakQueue = speakQueue.then(() => speakOne(who, text));
+    return speakQueue;
   }
 
   function setSpeaker(who) {
@@ -136,9 +167,8 @@
       showLine(i);
       await speak(line.who, line.text);
       if (token !== playToken || !running) return;
-      while (voiceOn && speechSynthesis.speaking) await pause(80);
       addToLog(line.who, line.text);
-      await pause(500);
+      await pause(650);
     }
     clearSpeaker();
     activeLabel.textContent = "The end";
@@ -229,6 +259,7 @@
   function stopShow() {
     running = false;
     playToken++;
+    speakQueue = Promise.resolve();
     document.body.classList.remove("audio-on");
     speechSynthesis.cancel();
     stopMusic();

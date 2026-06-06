@@ -1,7 +1,7 @@
 (function () {
   const SPEAKERS = {
-    brother: { label: "Brother", age: "7", pitch: 2.0, rate: 1.26 },
-    sister: { label: "Sister", age: "5", pitch: 2.0, rate: 1.18 },
+    brother: { label: "Brother", age: "7", pitch: 2.0, rate: 1.24 },
+    sister: { label: "Sister", age: "5", pitch: 2.0, rate: 1.1 },
     grok: { label: "Grok Ara", age: "", pitch: 1.05, rate: 0.92 },
   };
 
@@ -29,15 +29,46 @@
   const progressLabel = document.getElementById("progress-label");
   const cast = document.getElementById("cast");
 
-  const ADULT_MALE =
-    /daniel|alex|fred|david|james|oliver|tom|lee|ralph|aaron|gordon|bruce|richard|mark|george|microsoft david|google uk english male|google us english.*\bmale\b/i;
+  // Block deep / adult voices — browser TTS often defaults to these
+  const DEEP_VOICE =
+    /daniel|alex|fred|david|james|oliver|tom|lee|ralph|aaron|gordon|bruce|richard|mark|george|brian|christopher|microsoft david|microsoft mark|google uk english male|google us english male|english male|\bmale\b/i;
+
+  const BROTHER_VOICE_PREFS = [
+    /junior/i,
+    /samantha/i,
+    /karen/i,
+    /zira/i,
+    /flo/i,
+    /tessa/i,
+    /google uk english f/i,
+    /google us english f/i,
+    /female/i,
+  ];
+
+  const SISTER_VOICE_PREFS = [
+    /moira/i,
+    /samantha/i,
+    /karen/i,
+    /victoria/i,
+    /flo/i,
+    /tessa/i,
+    /susan/i,
+    /zira/i,
+    /google uk english f/i,
+    /google us english f/i,
+    /female/i,
+  ];
 
   function englishVoices() {
     return speechSynthesis.getVoices().filter((v) => /^en/i.test(v.lang));
   }
 
-  function kidFriendlyVoices(voices) {
-    return voices.filter((v) => !ADULT_MALE.test(v.name));
+  function childVoices(voices) {
+    return voices.filter((v) => !DEEP_VOICE.test(v.name));
+  }
+
+  function isDeepVoice(voice) {
+    return !voice || DEEP_VOICE.test(voice.name);
   }
 
   function matchVoice(voices, pattern) {
@@ -53,20 +84,15 @@
   }
 
   function resolveKidVoices() {
-    const voices = kidFriendlyVoices(englishVoices());
-    if (!voices.length) return;
+    const pool = childVoices(englishVoices());
+    if (!pool.length) return;
 
-    brotherVoice =
-      firstMatch(voices, [/junior/i, /samantha/i, /karen/i, /moira/i, /victoria/i, /zira/i, /flo/i, /tessa/i, /female/i, /google uk english f/i]) ||
-      voices[0];
+    // 7yo boy: Junior (Mac kid voice) or brightest light voice available
+    brotherVoice = firstMatch(pool, BROTHER_VOICE_PREFS) || pool[0];
 
-    sisterVoice =
-      firstMatch(
-        voices.filter((v) => v !== brotherVoice),
-        [/moira/i, /samantha/i, /karen/i, /victoria/i, /flo/i, /tessa/i, /susan/i, /female/i, /google uk english f/i]
-      ) ||
-      voices.find((v) => v !== brotherVoice) ||
-      brotherVoice;
+    // 5yo girl: soft voice, always different from brother when possible
+    const sisterPool = pool.filter((v) => v !== brotherVoice);
+    sisterVoice = firstMatch(sisterPool, SISTER_VOICE_PREFS) || sisterPool[0] || brotherVoice;
   }
 
   function pickVoice(who) {
@@ -76,7 +102,10 @@
       return matchVoice(voices, /samantha|karen|victoria|zira|aria|moira|susan/i) || voices[0];
     }
     resolveKidVoices();
-    return who === "brother" ? brotherVoice : sisterVoice;
+    const voice = who === "brother" ? brotherVoice : sisterVoice;
+    if (!isDeepVoice(voice)) return voice;
+    const prefs = who === "brother" ? BROTHER_VOICE_PREFS : SISTER_VOICE_PREFS;
+    return firstMatch(childVoices(voices), prefs);
   }
 
   function estimateReadMs(text) {
@@ -108,7 +137,7 @@
       const u = new SpeechSynthesisUtterance(text);
       const cfg = SPEAKERS[who];
       const v = pickVoice(who);
-      if (v) u.voice = v;
+      if (v && !isDeepVoice(v)) u.voice = v;
       u.pitch = cfg.pitch;
       u.rate = cfg.rate;
       u.volume = 0.95;

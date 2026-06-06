@@ -1,12 +1,10 @@
-# Dialogue animation
+# Kids chat with Grok Ara — dialogue animation
 
-Two-person conversation with **CSS animation**, **browser voice-over** (TTS), and **cartoon music** (Web Audio).
+Animated replay of a real hilarious conversation between a **7-year-old brother**, his **5-year-old sister**, and **Grok Ara** — dinosaurs, chickens, Pluto, jokes, chocolate, bunnies, water, and the endless goodbye loop.
 
 ## Live site
 
 **https://avinashpeyyety.github.io/dialogue-animation/**
-
-Repo: [avinashpeyyety/dialogue-animation](https://github.com/avinashpeyyety/dialogue-animation) — deploys to GitHub Pages on every push to `main`.
 
 ## Run locally
 
@@ -15,18 +13,24 @@ cd dialogue-animation
 python3 -m http.server 8767
 ```
 
-Open http://127.0.0.1:8767 — or open `index.html` in a browser.
+Open http://127.0.0.1:8767 — click **▶ Play conversation**.
 
-## Sound
+## Controls
 
-Click **Play with sound** on the page (required by browsers). Toggle **Music** or **Voice** independently.
+| Button | Action |
+|--------|--------|
+| **Play conversation** | Plays full transcript with voice + soft music |
+| **Restart** | Jump back to line 1 |
+| **Music / Voice** | Toggle background tune or browser TTS |
 
-- Voice: `speechSynthesis` — Anya (higher pitch), Ravi (lower). Edit lines in `audio.js` → `LINES`.
-- Music: bouncy loop synthesized in `audio.js` (no audio files to host).
+Runtime is about **15–20 minutes** with voice (114 lines). It loops when finished.
 
-## How it works
+## Files
 
-- Speech bubbles fade/slide in on a shared **18s** timeline (`@keyframes show-1` … `show-6`).
-- Avatars **bob** idle; mouths pulse on `speak-a` / `speak-b` while that person’s lines are active.
-- Change dialogue: update `.bubble` text in `index.html` and matching `LINES` in `audio.js`.
-- Add a seventh line: duplicate a `.line` block, add `show-7` keyframes, and a `LINES` entry.
+| File | Role |
+|------|------|
+| `conversation.js` | Full transcript (`who`: `brother`, `sister`, `grok`) |
+| `app.js` | Playback, TTS, UI, progress bar |
+| `index.html` | Comic avatars + chat panel |
+
+Edit dialogue in `conversation.js` only — `app.js` reads it automatically.

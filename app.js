@@ -34,12 +34,12 @@
     /daniel|alex|fred|david|james|oliver|tom|lee|ralph|aaron|gordon|bruce|richard|mark|george|brian|christopher|microsoft david|microsoft mark|google uk english male|google us english male|english male|\bmale\b/i;
 
   const BROTHER_VOICE_PREFS = [
-    /junior/i,
-    /samantha/i,
+    /victoria/i,
+    /tessa/i,
+    /flo/i,
     /karen/i,
     /zira/i,
-    /flo/i,
-    /tessa/i,
+    /junior/i,
     /google uk english f/i,
     /google us english f/i,
     /female/i,
@@ -87,12 +87,12 @@
     const pool = childVoices(englishVoices());
     if (!pool.length) return;
 
-    // 7yo boy: Junior (Mac kid voice) or brightest light voice available
-    brotherVoice = firstMatch(pool, BROTHER_VOICE_PREFS) || pool[0];
+    // 5yo girl first — keeps Moira/Samantha away from brother
+    sisterVoice = firstMatch(pool, SISTER_VOICE_PREFS) || pool[0];
 
-    // 5yo girl: soft voice, always different from brother when possible
-    const sisterPool = pool.filter((v) => v !== brotherVoice);
-    sisterVoice = firstMatch(sisterPool, SISTER_VOICE_PREFS) || sisterPool[0] || brotherVoice;
+    // 7yo boy: Victoria/Tessa/Flo — bright and distinct from sister
+    const brotherPool = pool.filter((v) => v !== sisterVoice);
+    brotherVoice = firstMatch(brotherPool, BROTHER_VOICE_PREFS) || brotherPool[0] || sisterVoice;
   }
 
   function pickVoice(who) {
@@ -155,6 +155,7 @@
       u.onend = () => finish();
       u.onerror = () => finish();
 
+      // Chrome/Safari: keep long utterances alive without ending early
       const keepAlive = setInterval(() => {
         if (settled) return;
         if (speechSynthesis.speaking) {

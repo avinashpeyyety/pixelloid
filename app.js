@@ -29,39 +29,53 @@
   const progressLabel = document.getElementById("progress-label");
   const cast = document.getElementById("cast");
 
+  const ADULT_MALE =
+    /daniel|alex|fred|david|james|oliver|tom|lee|ralph|aaron|gordon|bruce|richard|mark|george|microsoft david|google uk english male|google us english.*\bmale\b/i;
+
   function englishVoices() {
     return speechSynthesis.getVoices().filter((v) => /^en/i.test(v.lang));
+  }
+
+  function kidFriendlyVoices(voices) {
+    return voices.filter((v) => !ADULT_MALE.test(v.name));
   }
 
   function matchVoice(voices, pattern) {
     return voices.find((v) => pattern.test(v.name));
   }
 
+  function firstMatch(voices, patterns) {
+    for (const pattern of patterns) {
+      const hit = matchVoice(voices, pattern);
+      if (hit) return hit;
+    }
+    return null;
+  }
+
   function resolveKidVoices() {
-    const voices = englishVoices();
+    const voices = kidFriendlyVoices(englishVoices());
     if (!voices.length) return;
 
-    // Brother gets sister's old voice: Junior, or the previous light fallback chain
     brotherVoice =
-      matchVoice(voices, /junior/i) ||
-      matchVoice(voices, /samantha|karen|victoria|zira|flo|tessa/i) ||
+      firstMatch(voices, [/junior/i, /samantha/i, /karen/i, /moira/i, /victoria/i, /zira/i, /flo/i, /tessa/i, /female/i, /google uk english f/i]) ||
       voices[0];
 
-    // Sister: softer 5yo girl voice, always different from brother when possible
-    const girlPrefs = [/samantha/i, /moira/i, /karen/i, /victoria/i, /flo/i, /tessa/i, /susan/i];
     sisterVoice =
-      girlPrefs.map((p) => matchVoice(voices, p)).find((v) => v && v !== brotherVoice) ||
+      firstMatch(
+        voices.filter((v) => v !== brotherVoice),
+        [/moira/i, /samantha/i, /karen/i, /victoria/i, /flo/i, /tessa/i, /susan/i, /female/i, /google uk english f/i]
+      ) ||
       voices.find((v) => v !== brotherVoice) ||
-      voices[0];
+      brotherVoice;
   }
 
   function pickVoice(who) {
     const voices = englishVoices();
-    if (!voices.length) return speechSynthesis.getVoices()[0] || null;
+    if (!voices.length) return null;
     if (who === "grok") {
       return matchVoice(voices, /samantha|karen|victoria|zira|aria|moira|susan/i) || voices[0];
     }
-    if (!brotherVoice || !sisterVoice) resolveKidVoices();
+    resolveKidVoices();
     return who === "brother" ? brotherVoice : sisterVoice;
   }
 
@@ -112,7 +126,6 @@
       u.onend = () => finish();
       u.onerror = () => finish();
 
-      // Chrome/Safari: keep long utterances alive without ending early
       const keepAlive = setInterval(() => {
         if (settled) return;
         if (speechSynthesis.speaking) {
@@ -247,25 +260,26 @@
     speechSynthesis.getVoices();
     speechSynthesis.onvoiceschanged = () => {
       speechSynthesis.getVoices();
+      brotherVoice = null;
+      sisterVoice = null;
       resolveKidVoices();
     };
   }
 
   function waitForVoices() {
     return new Promise((resolve) => {
-      if (speechSynthesis.getVoices().length) {
-        resolveKidVoices();
-        resolve();
-        return;
-      }
-      speechSynthesis.onvoiceschanged = () => {
+      const ready = () => {
+        brotherVoice = null;
+        sisterVoice = null;
         resolveKidVoices();
         resolve();
       };
-      setTimeout(() => {
-        resolveKidVoices();
-        resolve();
-      }, 400);
+      if (speechSynthesis.getVoices().length) {
+        ready();
+        return;
+      }
+      speechSynthesis.onvoiceschanged = ready;
+      setTimeout(ready, 1200);
     });
   }
 

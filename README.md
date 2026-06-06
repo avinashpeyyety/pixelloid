@@ -23,7 +23,7 @@ Open http://127.0.0.1:8767 — click **▶ Play conversation**.
 | **Restart** | Jump back to line 1 |
 | **Music / Voice** | Toggle background tune or browser TTS |
 
-Runtime is about **15–20 minutes** with voice (114 lines). It loops when finished.
+Runtime is about **15–20 minutes** with voice (116 lines). It loops when finished.
 
 ## Files
 

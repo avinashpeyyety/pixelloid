@@ -1,7 +1,7 @@
 (function () {
   const SPEAKERS = {
-    brother: { label: "Brother", age: "7", pitch: 2.0, rate: 1.14 },
-    sister: { label: "Sister", age: "5", pitch: 2.0, rate: 1.26 },
+    brother: { label: "Brother", age: "7", pitch: 2.0, rate: 1.26 },
+    sister: { label: "Sister", age: "5", pitch: 2.0, rate: 1.18 },
     grok: { label: "Grok Ara", age: "", pitch: 1.05, rate: 0.92 },
   };
 
@@ -19,6 +19,8 @@
   let lineIndex = 0;
   let playToken = 0;
   let speakQueue = Promise.resolve();
+  let brotherVoice = null;
+  let sisterVoice = null;
 
   const chatLog = document.getElementById("chat-log");
   const activeBubble = document.getElementById("active-bubble");
@@ -31,23 +33,36 @@
     return speechSynthesis.getVoices().filter((v) => /^en/i.test(v.lang));
   }
 
+  function matchVoice(voices, pattern) {
+    return voices.find((v) => pattern.test(v.name));
+  }
+
+  function resolveKidVoices() {
+    const voices = englishVoices();
+    if (!voices.length) return;
+
+    // Brother gets sister's old voice: Junior, or the previous light fallback chain
+    brotherVoice =
+      matchVoice(voices, /junior/i) ||
+      matchVoice(voices, /samantha|karen|victoria|zira|flo|tessa/i) ||
+      voices[0];
+
+    // Sister: softer 5yo girl voice, always different from brother when possible
+    const girlPrefs = [/samantha/i, /moira/i, /karen/i, /victoria/i, /flo/i, /tessa/i, /susan/i];
+    sisterVoice =
+      girlPrefs.map((p) => matchVoice(voices, p)).find((v) => v && v !== brotherVoice) ||
+      voices.find((v) => v !== brotherVoice) ||
+      voices[0];
+  }
+
   function pickVoice(who) {
     const voices = englishVoices();
     if (!voices.length) return speechSynthesis.getVoices()[0] || null;
-    const avoidAdultMale = (v) => !/daniel|alex|fred|david|james|oliver|tom|lee|ralph|aaron|gordon|bruce/i.test(v.name);
     if (who === "grok") {
-      return voices.find((v) => /samantha|karen|victoria|zira|aria|moira|susan/i.test(v.name)) || voices[0];
+      return matchVoice(voices, /samantha|karen|victoria|zira|aria|moira|susan/i) || voices[0];
     }
-    if (who === "sister") {
-      return voices.find((v) => /junior|samantha|karen|victoria|zira|flo|tessa/i.test(v.name)) || voices[0];
-    }
-    // 7yo boy: never use adult male TTS — Junior or a light voice pitched up
-    return (
-      voices.find((v) => /junior/i.test(v.name)) ||
-      voices.find((v) => /samantha|karen|flo|tessa/i.test(v.name)) ||
-      voices.find(avoidAdultMale) ||
-      voices[0]
-    );
+    if (!brotherVoice || !sisterVoice) resolveKidVoices();
+    return who === "brother" ? brotherVoice : sisterVoice;
   }
 
   function estimateReadMs(text) {
@@ -230,17 +245,27 @@
     music.master.gain.value = 0;
     music.master.connect(ctx.destination);
     speechSynthesis.getVoices();
-    speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
+    speechSynthesis.onvoiceschanged = () => {
+      speechSynthesis.getVoices();
+      resolveKidVoices();
+    };
   }
 
   function waitForVoices() {
     return new Promise((resolve) => {
       if (speechSynthesis.getVoices().length) {
+        resolveKidVoices();
         resolve();
         return;
       }
-      speechSynthesis.onvoiceschanged = () => resolve();
-      setTimeout(resolve, 400);
+      speechSynthesis.onvoiceschanged = () => {
+        resolveKidVoices();
+        resolve();
+      };
+      setTimeout(() => {
+        resolveKidVoices();
+        resolve();
+      }, 400);
     });
   }
 

@@ -1,0 +1,24 @@
+# Lab defaults — private repos; keep secrets & heavy local junk out
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+dist/
+build/
+*.egg-info/
+.aider*
+.idea/
+.vscode/
+*.log
+.cache/
+credentials/
+*.pem
+

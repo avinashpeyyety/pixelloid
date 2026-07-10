@@ -1,4 +1,17 @@
-# Kids chat with Grok Ara — dialogue animation
+# Pixelloid — kids entertainment animations
+
+Short, funny browser shows for little humans. No signup. Press play and giggle.
+
+## Apps
+
+| App | What | Run |
+|-----|------|-----|
+| **[Kids chat with Grok Ara](index.html)** | Dialogue + TTS + music | `python3 -m http.server 8767` → [localhost:8767](http://127.0.0.1:8767) |
+| **[Chocolate Dance School](chocolate-dance/)** | Three.js chocolates learning to dance | `cd chocolate-dance && python3 -m http.server 8768` → [localhost:8768](http://127.0.0.1:8768) |
+
+---
+
+## Kids chat with Grok Ara
 
 Animated replay of a real hilarious conversation between a **7-year-old brother**, his **5-year-old sister**, and **Grok Ara** — dinosaurs, chickens, Pluto, jokes, chocolate, bunnies, water, and the endless goodbye loop.
 
@@ -6,10 +19,10 @@ Animated replay of a real hilarious conversation between a **7-year-old brother*
 
 **https://avinashpeyyety.github.io/dialogue-animation/**
 
-## Run locally
+## Run (dialogue)
 
 ```bash
-cd dialogue-animation
+cd pixelloid
 python3 -m http.server 8767
 ```
 

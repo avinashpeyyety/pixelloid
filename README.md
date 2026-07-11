@@ -1,61 +1,37 @@
-# Pixelloid — kids entertainment animations
+# Pixelloid — interactive browser shows
 
-Monorepo of short, funny browser shows. No signup. Press play and giggle.
+Public monorepo of short, fun, and educational browser experiences.
 
-**GitHub:** https://github.com/avinashpeyyety/pixelloid · **public**  
+**GitHub:** https://github.com/avinashpeyyety/pixelloid  
 **Hub:** https://avinashpeyyety.github.io/pixelloid/
 
 ## Subprojects
 
-| Subproject | Path | Local | Live |
-|------------|------|-------|------|
-| **Kids · Grok Ara** | [`kids-grok/`](kids-grok/) | `:8767` | […/pixelloid/kids-grok/](https://avinashpeyyety.github.io/pixelloid/kids-grok/) |
-| **Chocolate Dance School** | [`chocolate-dance/`](chocolate-dance/) | `:8768` | […/pixelloid/chocolate-dance/](https://avinashpeyyety.github.io/pixelloid/chocolate-dance/) |
+| Subproject | Path | Live |
+|------------|------|------|
+| **Kids · Grok Ara** | [`kids-grok/`](kids-grok/) | […/pixelloid/kids-grok/](https://avinashpeyyety.github.io/pixelloid/kids-grok/) |
+| **Chocolate Dance School** | [`chocolate-dance/`](chocolate-dance/) | […/pixelloid/chocolate-dance/](https://avinashpeyyety.github.io/pixelloid/chocolate-dance/) |
+| **Cosmos** | [`cosmos/`](cosmos/) | […/pixelloid/cosmos/](https://avinashpeyyety.github.io/pixelloid/cosmos/) |
 
-Root [`index.html`](index.html) is the hub that links both shows.
+Root [`index.html`](index.html) is the hub.
 
-> Renamed: **dialogue-animation → kids-grok** (folder + all landing URLs).
-
----
-
-## Kids · Grok Ara
-
-Animated replay of a hilarious conversation between a **7-year-old brother**, his **5-year-old sister**, and **Grok Ara**.
+## Local
 
 ```bash
-cd pixelloid/kids-grok
+cd pixelloid
 python3 -m http.server 8767
-# http://127.0.0.1:8767
+# http://127.0.0.1:8767/           hub
+# http://127.0.0.1:8767/kids-grok/
+# http://127.0.0.1:8767/chocolate-dance/
+# http://127.0.0.1:8767/cosmos/
 ```
 
-See [`kids-grok/README.md`](kids-grok/README.md).
+## Deploy
 
----
-
-## Chocolate Dance School 🍫
-
-Professor Cocoa + silly chocolates learn to dance (Three.js + procedural music).
+Push `main` → GitHub Pages (workflow). After any iterate that touches a subproject:
 
 ```bash
-cd pixelloid/chocolate-dance
-python3 -m http.server 8768
-# http://127.0.0.1:8768
+ai-lab-vault/scripts/publish-pages.sh pixelloid
+# cosmos-only (syncs lab cosmos/ first):
+ai-lab-vault/scripts/publish-pages.sh cosmos
 ```
-
-See [`chocolate-dance/README.md`](chocolate-dance/README.md).
-
----
-
-## Deploy / Pages
-
-Push to `main` deploys the whole tree via `.github/workflows/deploy-pages.yml`.
-
-```bash
-../ai-lab-vault/scripts/publish-pages.sh pixelloid
-```
-
-Expected URLs after deploy:
-
-- https://avinashpeyyety.github.io/pixelloid/
-- https://avinashpeyyety.github.io/pixelloid/kids-grok/
-- https://avinashpeyyety.github.io/pixelloid/chocolate-dance/

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#05060a" />
+  <title>Cosmos — Solar System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="canvas-host" aria-hidden="true"></div>
+
+  <!-- Top bar -->
+  <header class="hud-top">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <div>
+        <h1>Cosmos</h1>
+        <p class="brand-sub" id="brand-sub">Solar system · ephemeris-lite</p>
+      </div>
+    </div>
+    <div class="top-meta">
+      <div class="meta-chip" title="Simulated epoch">
+        <span class="meta-label">Epoch</span>
+        <span id="sim-date" class="meta-value mono">—</span>
+      </div>
+      <div class="meta-chip" title="Elapsed simulation days">
+        <span class="meta-label">Δt</span>
+        <span id="sim-elapsed" class="meta-value mono">0.0 d</span>
+      </div>
+      <div class="meta-chip accent" title="Time scale">
+        <span class="meta-label">Scale</span>
+        <span id="speed-readout" class="meta-value mono">1×</span>
+      </div>
+      <div class="mode-group" role="group" aria-label="View mode">
+        <button type="button" class="mode-btn active" id="btn-solar" title="Solar system (S)">Solar</button>
+        <button type="button" class="mode-btn" id="btn-earth" title="Earth surface · launch sites (E)">Earth</button>
+        <button type="button" class="mode-btn" id="btn-leo" title="Low Earth Orbit (L)">LEO</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Earth surface / site mission bar -->
+  <div class="earth-bar hidden" id="earth-bar">
+    <div class="earth-bar-head">
+      <strong id="earth-bar-title">Earth surface</strong>
+      <span class="earth-caption" id="earth-caption">Click a launch site marker</span>
+    </div>
+    <div class="earth-sites" id="earth-sites"></div>
+    <div class="earth-missions hidden" id="earth-missions-wrap">
+      <div class="earth-missions-label">Missions at site</div>
+      <div class="earth-missions" id="earth-missions"></div>
+    </div>
+    <div class="earth-phase" id="earth-phase">—</div>
+  </div>
+
+  <!-- Left: focus / layers -->
+  <aside class="hud-panel hud-left">
+    <div class="panel-head">
+      <h2>Bodies</h2>
+      <span class="panel-hint">click · focus</span>
+    </div>
+    <ul class="body-list" id="body-list" role="listbox" aria-label="Solar system bodies"></ul>
+
+    <div class="panel-section">
+      <h3>Layers</h3>
+      <label class="toggle">
+        <input type="checkbox" id="tog-orbits" checked />
+        <span class="toggle-ui"></span>
+        <span>Orbital paths</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="tog-labels" checked />
+        <span class="toggle-ui"></span>
+        <span>Name labels</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="tog-stars" checked />
+        <span class="toggle-ui"></span>
+        <span>Star field</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="tog-belt" checked />
+        <span class="toggle-ui"></span>
+        <span>Asteroid belt</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="tog-comets" checked />
+        <span class="toggle-ui"></span>
+        <span>Comets &amp; tails</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="tog-moons" checked />
+        <span class="toggle-ui"></span>
+        <span>Moons (all)</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="tog-follow" />
+        <span class="toggle-ui"></span>
+        <span>Follow focus</span>
+      </label>
+    </div>
+  </aside>
+
+  <!-- Right: selected body -->
+  <aside class="hud-panel hud-right" id="detail-panel">
+    <div class="panel-head">
+      <h2 id="detail-name">Sol</h2>
+      <span class="badge" id="detail-type">Star</span>
+    </div>
+    <p class="detail-blurb" id="detail-blurb">The Sun — G2V main-sequence star at the center of the system.</p>
+    <dl class="stat-grid" id="detail-stats"></dl>
+  </aside>
+
+  <!-- Bottom: transport -->
+  <footer class="hud-bottom">
+    <div class="transport">
+      <button type="button" class="icon-btn" id="btn-reset" title="Reset to epoch (R)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 10 9 10"/></svg>
+      </button>
+      <button type="button" class="icon-btn primary" id="btn-play" title="Play / Pause (Space)" aria-pressed="true">
+        <svg id="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+        <svg id="icon-play" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="speed-block">
+        <div class="speed-labels">
+          <span>Time</span>
+          <div class="presets">
+            <button type="button" data-speed="0" class="preset">0×</button>
+            <button type="button" data-speed="1" class="preset active">1×</button>
+            <button type="button" data-speed="10" class="preset">10×</button>
+            <button type="button" data-speed="100" class="preset">100×</button>
+            <button type="button" data-speed="1000" class="preset">1k×</button>
+            <button type="button" data-speed="10000" class="preset">10k×</button>
+            <button type="button" data-speed="100000" class="preset">100k×</button>
+          </div>
+        </div>
+        <input type="range" id="speed" min="0" max="1000" value="200" step="1" aria-label="Time speed" />
+        <div class="speed-scale">
+          <span>Pause</span>
+          <span>Days / sec → centuries</span>
+        </div>
+      </div>
+      <button type="button" class="icon-btn" id="btn-fs" title="Fullscreen (F)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+      </button>
+    </div>
+    <p class="hint-bar">
+      <kbd>drag</kbd> orbit · <kbd>scroll</kbd> zoom · <kbd>space</kbd> pause · <kbd>S</kbd> solar · <kbd>E</kbd> earth · <kbd>L</kbd> LEO · <kbd>P</kbd> Pluto · <kbd>1–9</kbd> focus · <kbd>C</kbd> Halley · <kbd>R</kbd> reset
+    </p>
+  </footer>
+
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="loader" id="loader">
+    <div class="loader-ring"></div>
+    <p>Igniting Sol…</p>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

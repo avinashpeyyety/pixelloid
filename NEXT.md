@@ -1,12 +1,12 @@
 # NEXT — pixelloid
 
-> Monorepo: hub + `kids-grok/` + `chocolate-dance/`. Live under `github.io/pixelloid/…`
+> Monorepo: hub + `kids-grok/` + `chocolate-dance/` + **`cosmos/`**. Live under `github.io/pixelloid/…`
 
 ## Now
 
 - [ ] Chocolate Dance: one more joke beat after the “graduation” loop
 - [ ] Optional: pause / speed controls on kids-grok playback bar
-- [ ] Confirm Pages site source is repo **pixelloid** (not old dialogue-animation name)
+- [ ] Hub polish: screenshots / short blurbs per subproject
 
 ## Later
 
@@ -26,3 +26,4 @@
 - [x] Chocolate Dance School subproject
 - [x] Restructure landings: `/pixelloid/kids-grok/` + `/pixelloid/chocolate-dance/`
 - [x] Rename dialogue-animation → **kids-grok** (folder + URLs + docs)
+- [x] Cosmos subproject under monorepo → `/pixelloid/cosmos/`

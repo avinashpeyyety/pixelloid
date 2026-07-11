@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pixelloid — kids shows</title>
-  <meta name="description" content="Pixelloid: kids-grok dialogue and Chocolate Dance School" />
+  <title>Pixelloid — interactive shows</title>
+  <meta name="description" content="Pixelloid: kids-grok, Chocolate Dance School, and Cosmos solar system" />
   <style>
     :root {
       --bg: #0c0e16;
@@ -14,6 +14,7 @@
       --muted: #8b93a7;
       --a: #7dd3fc;
       --b: #fbbf24;
+      --c: #a78bfa;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -22,12 +23,13 @@
       background:
         radial-gradient(ellipse 80% 50% at 20% 0%, rgba(125, 211, 252, 0.12), transparent 50%),
         radial-gradient(ellipse 60% 40% at 90% 10%, rgba(251, 191, 36, 0.1), transparent 45%),
+        radial-gradient(ellipse 50% 35% at 50% 100%, rgba(167, 139, 250, 0.1), transparent 50%),
         var(--bg);
       color: var(--text);
       padding: 2.5rem 1.25rem 3rem;
       line-height: 1.45;
     }
-    .wrap { max-width: 720px; margin: 0 auto; }
+    .wrap { max-width: 880px; margin: 0 auto; }
     .brand {
       font-size: 0.72rem;
       letter-spacing: 0.16em;
@@ -41,13 +43,16 @@
       letter-spacing: -0.03em;
       margin-bottom: 0.5rem;
     }
-    .lead { color: var(--muted); margin-bottom: 2rem; max-width: 36em; }
+    .lead { color: var(--muted); margin-bottom: 2rem; max-width: 40em; }
     .grid {
       display: grid;
       gap: 1rem;
     }
-    @media (min-width: 560px) {
+    @media (min-width: 640px) {
       .grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: 1fr 1fr 1fr; }
     }
     a.card {
       display: block;
@@ -59,6 +64,7 @@
       background: var(--card);
       backdrop-filter: blur(12px);
       transition: border-color 0.15s, transform 0.15s, background 0.15s;
+      min-height: 11rem;
     }
     a.card:hover {
       border-color: rgba(125, 211, 252, 0.4);
@@ -68,6 +74,10 @@
     a.card.dance:hover {
       border-color: rgba(251, 191, 36, 0.45);
       background: rgba(251, 191, 36, 0.08);
+    }
+    a.card.cosmos:hover {
+      border-color: rgba(167, 139, 250, 0.5);
+      background: rgba(167, 139, 250, 0.1);
     }
     .card h2 {
       font-size: 1.1rem;
@@ -82,6 +92,7 @@
       color: var(--a);
     }
     a.card.dance .path { color: var(--b); }
+    a.card.cosmos .path { color: var(--c); }
     footer {
       margin-top: 2.5rem;
       font-size: 0.8rem;
@@ -93,20 +104,26 @@
 <body>
   <div class="wrap">
     <p class="brand">Pixelloid</p>
-    <h1>Kids entertainment</h1>
+    <h1>Interactive shows</h1>
     <p class="lead">
-      Short, funny browser shows. No signup — pick a show and press play.
+      Browser experiences — kids comedy, dance school, and a full solar-system theater.
+      No signup. Pick one and play.
     </p>
     <div class="grid">
       <a class="card" href="kids-grok/">
         <h2>Kids · Grok Ara</h2>
-        <p>Brother, sister &amp; Grok Ara — full comic dialogue with voice &amp; music.</p>
+        <p>Brother, sister &amp; Grok Ara — comic dialogue with voice &amp; music.</p>
         <span class="path">/pixelloid/kids-grok/</span>
       </a>
       <a class="card dance" href="chocolate-dance/">
         <h2>Chocolate Dance School</h2>
-        <p>Professor Cocoa teaches silly chocolates to dance — Three.js comedy short.</p>
+        <p>Professor Cocoa teaches silly chocolates to dance — Three.js short.</p>
         <span class="path">/pixelloid/chocolate-dance/</span>
+      </a>
+      <a class="card cosmos" href="cosmos/">
+        <h2>Cosmos</h2>
+        <p>Solar system, Earth launch sites, and LEO theater — modern 3D sim.</p>
+        <span class="path">/pixelloid/cosmos/</span>
       </a>
     </div>
     <footer>

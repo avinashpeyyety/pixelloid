@@ -4,7 +4,8 @@ Professor **Cocoa** teaches a class of silly chocolates how to dance. Built for 
 
 **Subproject of [Pixelloid](../)** — same git repo (`avinashpeyyety/pixelloid`), not a separate remote.
 
-Live: https://avinashpeyyety.github.io/dialogue-animation/chocolate-dance/
+**Live:** https://avinashpeyyety.github.io/pixelloid/chocolate-dance/  
+**Hub:** https://avinashpeyyety.github.io/pixelloid/
 
 ## Run
 

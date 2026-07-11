@@ -1,49 +1,40 @@
 # Pixelloid — kids entertainment animations
 
-Monorepo of short, funny browser shows for little humans. No signup. Press play and giggle.
+Monorepo of short, funny browser shows. No signup. Press play and giggle.
 
-**GitHub:** https://github.com/avinashpeyyety/pixelloid · **public**
+**GitHub:** https://github.com/avinashpeyyety/pixelloid · **public**  
+**Hub:** https://avinashpeyyety.github.io/pixelloid/
 
 ## Subprojects
 
 | Subproject | Path | Local | Live |
 |------------|------|-------|------|
-| **Kids chat with Grok Ara** | repo root (`index.html`) | `:8767` | [github.io](https://avinashpeyyety.github.io/dialogue-animation/) |
-| **Chocolate Dance School** | [`chocolate-dance/`](chocolate-dance/) | `:8768` | [github.io/chocolate-dance](https://avinashpeyyety.github.io/dialogue-animation/chocolate-dance/) |
+| **Kids · Grok Ara** | [`kids-grok/`](kids-grok/) | `:8767` | […/pixelloid/kids-grok/](https://avinashpeyyety.github.io/pixelloid/kids-grok/) |
+| **Chocolate Dance School** | [`chocolate-dance/`](chocolate-dance/) | `:8768` | […/pixelloid/chocolate-dance/](https://avinashpeyyety.github.io/pixelloid/chocolate-dance/) |
 
-> **Chocolate Dance** is a first-class subproject under this repo (not a separate GitHub remote). Ship it with the same `main` push → Pages deploy.
+Root [`index.html`](index.html) is the hub that links both shows.
+
+> Renamed: **dialogue-animation → kids-grok** (folder + all landing URLs).
 
 ---
 
-## Kids chat with Grok Ara
+## Kids · Grok Ara
 
-Animated replay of a real hilarious conversation between a **7-year-old brother**, his **5-year-old sister**, and **Grok Ara** — dinosaurs, chickens, Pluto, jokes, chocolate, bunnies, water, and the endless goodbye loop.
+Animated replay of a hilarious conversation between a **7-year-old brother**, his **5-year-old sister**, and **Grok Ara**.
 
 ```bash
-cd pixelloid
+cd pixelloid/kids-grok
 python3 -m http.server 8767
 # http://127.0.0.1:8767
 ```
 
-| Button | Action |
-|--------|--------|
-| **Play conversation** | Full transcript with voice + soft music |
-| **Restart** | Jump back to line 1 |
-| **Music / Voice** | Toggle background tune or browser TTS |
-
-Runtime ~**15–20 minutes** with voice (116 lines).
-
-| File | Role |
-|------|------|
-| `conversation.js` | Transcript (`who`: brother / sister / grok) |
-| `app.js` | Playback, TTS, UI |
-| `index.html` | Comic avatars + chat panel |
+See [`kids-grok/README.md`](kids-grok/README.md).
 
 ---
 
 ## Chocolate Dance School 🍫
 
-Subproject: `chocolate-dance/` — Professor Cocoa + silly chocolates learn to dance (Three.js + procedural music).
+Professor Cocoa + silly chocolates learn to dance (Three.js + procedural music).
 
 ```bash
 cd pixelloid/chocolate-dance
@@ -57,9 +48,14 @@ See [`chocolate-dance/README.md`](chocolate-dance/README.md).
 
 ## Deploy / Pages
 
-Push to `main` on **pixelloid** runs `.github/workflows/deploy-pages.yml` (whole tree, including `chocolate-dance/`).
+Push to `main` deploys the whole tree via `.github/workflows/deploy-pages.yml`.
 
 ```bash
-# from lab vault after landing-facing edits:
 ../ai-lab-vault/scripts/publish-pages.sh pixelloid
 ```
+
+Expected URLs after deploy:
+
+- https://avinashpeyyety.github.io/pixelloid/
+- https://avinashpeyyety.github.io/pixelloid/kids-grok/
+- https://avinashpeyyety.github.io/pixelloid/chocolate-dance/

@@ -1,13 +1,17 @@
 # Pixelloid — kids entertainment animations
 
-Short, funny browser shows for little humans. No signup. Press play and giggle.
+Monorepo of short, funny browser shows for little humans. No signup. Press play and giggle.
 
-## Apps
+**GitHub:** https://github.com/avinashpeyyety/pixelloid · **public**
 
-| App | What | Run |
-|-----|------|-----|
-| **[Kids chat with Grok Ara](index.html)** | Dialogue + TTS + music | `python3 -m http.server 8767` → [localhost:8767](http://127.0.0.1:8767) |
-| **[Chocolate Dance School](chocolate-dance/)** | Three.js chocolates learning to dance | `cd chocolate-dance && python3 -m http.server 8768` → [localhost:8768](http://127.0.0.1:8768) |
+## Subprojects
+
+| Subproject | Path | Local | Live |
+|------------|------|-------|------|
+| **Kids chat with Grok Ara** | repo root (`index.html`) | `:8767` | [github.io](https://avinashpeyyety.github.io/dialogue-animation/) |
+| **Chocolate Dance School** | [`chocolate-dance/`](chocolate-dance/) | `:8768` | [github.io/chocolate-dance](https://avinashpeyyety.github.io/dialogue-animation/chocolate-dance/) |
+
+> **Chocolate Dance** is a first-class subproject under this repo (not a separate GitHub remote). Ship it with the same `main` push → Pages deploy.
 
 ---
 
@@ -15,35 +19,47 @@ Short, funny browser shows for little humans. No signup. Press play and giggle.
 
 Animated replay of a real hilarious conversation between a **7-year-old brother**, his **5-year-old sister**, and **Grok Ara** — dinosaurs, chickens, Pluto, jokes, chocolate, bunnies, water, and the endless goodbye loop.
 
-## Live site
-
-**https://avinashpeyyety.github.io/dialogue-animation/**
-
-## Run (dialogue)
-
 ```bash
 cd pixelloid
 python3 -m http.server 8767
+# http://127.0.0.1:8767
 ```
-
-Open http://127.0.0.1:8767 — click **▶ Play conversation**.
-
-## Controls
 
 | Button | Action |
 |--------|--------|
-| **Play conversation** | Plays full transcript with voice + soft music |
+| **Play conversation** | Full transcript with voice + soft music |
 | **Restart** | Jump back to line 1 |
 | **Music / Voice** | Toggle background tune or browser TTS |
 
-Runtime is about **15–20 minutes** with voice (116 lines). It loops when finished.
-
-## Files
+Runtime ~**15–20 minutes** with voice (116 lines).
 
 | File | Role |
 |------|------|
-| `conversation.js` | Full transcript (`who`: `brother`, `sister`, `grok`) |
-| `app.js` | Playback, TTS, UI, progress bar |
+| `conversation.js` | Transcript (`who`: brother / sister / grok) |
+| `app.js` | Playback, TTS, UI |
 | `index.html` | Comic avatars + chat panel |
 
-Edit dialogue in `conversation.js` only — `app.js` reads it automatically.
+---
+
+## Chocolate Dance School 🍫
+
+Subproject: `chocolate-dance/` — Professor Cocoa + silly chocolates learn to dance (Three.js + procedural music).
+
+```bash
+cd pixelloid/chocolate-dance
+python3 -m http.server 8768
+# http://127.0.0.1:8768
+```
+
+See [`chocolate-dance/README.md`](chocolate-dance/README.md).
+
+---
+
+## Deploy / Pages
+
+Push to `main` on **pixelloid** runs `.github/workflows/deploy-pages.yml` (whole tree, including `chocolate-dance/`).
+
+```bash
+# from lab vault after landing-facing edits:
+../ai-lab-vault/scripts/publish-pages.sh pixelloid
+```

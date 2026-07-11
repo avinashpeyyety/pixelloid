@@ -2,7 +2,9 @@
 
 Professor **Cocoa** teaches a class of silly chocolates how to dance. Built for kids — goofy moves, jokes, confetti, and optional bouncy music.
 
-Part of **[Pixelloid](../)** (kids entertainment animations).
+**Subproject of [Pixelloid](../)** — same git repo (`avinashpeyyety/pixelloid`), not a separate remote.
+
+Live: https://avinashpeyyety.github.io/dialogue-animation/chocolate-dance/
 
 ## Run
 

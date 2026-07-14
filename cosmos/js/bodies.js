@@ -128,12 +128,15 @@ export const PLANETS = [
     inclinationDeg: 1.3,
     eccentricity: 0.0489,
     rotationDays: 0.414,
-    blurb: "King of planets — Galilean moons plus a vast swarm of smaller satellites.",
+    hasCrown: true,
+    blurb:
+      "King of planets — wears the crown. Galilean moons plus a vast swarm of smaller satellites attend court.",
     stats: {
       "Semi-major": "5.20 AU",
       Year: "11.86 y",
       Day: "9.9 h",
       Moons: moonCountLabel(JUPITER_MOONS),
+      Status: "Giant · crowned",
     },
     moons: JUPITER_MOONS,
   },

@@ -1,6 +1,7 @@
 # NEXT — cosmos
 
-> Three theaters: Solar · Earth surface (sites → launches) · LEO. One Now item → verify in browser → commit → daily + labboard.
+> Ships on **https://avinashpeyyety.github.io/pixelloid/cosmos/**  
+> After any change: `ai-lab-vault/scripts/publish-pages.sh cosmos` (sync + Pages). Do not treat local :8777 as the publish target.
 
 ## Now
 
@@ -10,22 +11,19 @@
 
 ## Later
 
-- [ ] Optional NASA day/night textures when offline assets allowed (keep procedural default)
-- [ ] More missions: Shuttle final, Artemis I, Electron, GSLV
-- [ ] LEO: Hubble + one Starlink shell as clean toggles (not cluttered multi-mission soup)
+- [ ] Optional NASA day/night textures when offline assets allowed
+- [ ] More missions: Shuttle final, Artemis I, Electron
+- [ ] LEO: Hubble + one Starlink shell as clean toggles
 - [ ] Embed mode (`?embed=1`) · screenshot export
-- [ ] Comet dual-tail mesh ribbons
 
 ## Curiosity / explore
 
-- [ ] True site azimuths (polar vs east) baked into ascent heading
-- [ ] Audio: muted whoosh / ignition optional toggle
+- [ ] True site azimuths baked into ascent heading
+- [ ] Optional audio whoosh / ignition toggle
 
 ## Done
 
-- [x] Three.js solar system + Kepler orbits + HUD + time scale
-- [x] Comets + Earth LEO theater (v1, replaced)
-- [x] Major planet moons + crowned Pluto
-- [x] **Earth surface separate from solar** — hyper-clear globe, launch markers only
-- [x] **Site zoom + ultra-modern launch sequences** (liftoff → staging → orbit → beyond)
-- [x] **LEO as its own mode** (clean orbital theater)
+- [x] Three.js solar + comets + moons + LEO v1
+- [x] Earth surface separate from solar; site zoom + modern launch sequences
+- [x] LEO as its own mode
+- [x] **Ship under Pixelloid monorepo** → github.io/pixelloid/cosmos/

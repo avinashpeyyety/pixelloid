@@ -790,7 +790,7 @@ function createPlanetMesh(def) {
     mesh.add(rings);
   }
 
-  // Pluto's royal crown 👑
+  // Royal crown 👑 (Pluto, Jupiter, …)
   if (def.hasCrown) {
     const crown = new THREE.Group();
     const gold = new THREE.MeshStandardMaterial({

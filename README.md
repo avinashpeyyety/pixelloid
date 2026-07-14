@@ -12,6 +12,7 @@ Public monorepo of short, fun, and educational browser experiences.
 | **Kids · Grok Ara** | [`kids-grok/`](kids-grok/) | […/pixelloid/kids-grok/](https://avinashpeyyety.github.io/pixelloid/kids-grok/) |
 | **Chocolate Dance School** | [`chocolate-dance/`](chocolate-dance/) | […/pixelloid/chocolate-dance/](https://avinashpeyyety.github.io/pixelloid/chocolate-dance/) |
 | **Cosmos** | [`cosmos/`](cosmos/) | […/pixelloid/cosmos/](https://avinashpeyyety.github.io/pixelloid/cosmos/) |
+| **Mahābhārata** | [`mahabharata/`](mahabharata/) | […/pixelloid/mahabharata/](https://avinashpeyyety.github.io/pixelloid/mahabharata/) |
 
 Root [`index.html`](index.html) is the hub.
 
@@ -24,6 +25,8 @@ python3 -m http.server 8767
 # http://127.0.0.1:8767/kids-grok/
 # http://127.0.0.1:8767/chocolate-dance/
 # http://127.0.0.1:8767/cosmos/
+# http://127.0.0.1:8767/mahabharata/
+# http://127.0.0.1:8767/mahabharata/play.html?ep=01
 ```
 
 ## Deploy

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#07050c" />
+  <title>Mahābhārata · Play — Pixelloid</title>
+  <meta name="description" content="Play a Mahābhārata episode — cinematic Three.js theater." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body class="player">
+  <div id="canvas-host" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <header class="player-top">
+    <div class="player-brand">
+      <div class="mark" aria-hidden="true">ॐ</div>
+      <div>
+        <h1 id="ep-title">The Bird's Eye</h1>
+        <p id="ep-sub">Drona’s test of Arjuna</p>
+      </div>
+    </div>
+    <div class="player-actions">
+      <a class="icon-btn" href="./" title="Series home" aria-label="Series home">⌂</a>
+    </div>
+  </header>
+
+  <div class="dialogue" id="dialogue">
+    <div class="dialogue-who" id="who">Narrator</div>
+    <div class="dialogue-text" id="line">…</div>
+  </div>
+
+  <div class="player-bottom">
+    <div class="progress-row">
+      <div class="progress-track" id="progress-track" role="slider" aria-label="Playback progress" tabindex="0">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <span class="time-readout" id="time-readout">0:00 / 1:28</span>
+    </div>
+    <div class="controls-row">
+      <button type="button" class="ctrl-btn primary" id="btn-play">Play</button>
+      <button type="button" class="ctrl-btn" id="btn-restart">Restart</button>
+      <button type="button" class="ctrl-btn" id="btn-mute" title="Ambient tone">Sound</button>
+    </div>
+  </div>
+
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <p>Preparing the garden…</p>
+    </div>
+  </div>
+
+  <div class="end-card" id="end-card">
+    <div class="end-card-inner">
+      <h2>End of Episode 01</h2>
+      <p>See the essential — and nothing else.</p>
+      <div class="end-actions">
+        <button type="button" class="btn btn-primary" id="btn-replay">Play again</button>
+        <a class="btn btn-ghost" href="./">Series home</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

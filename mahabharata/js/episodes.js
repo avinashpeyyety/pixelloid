@@ -1,0 +1,29 @@
+/**
+ * Episode registry — add entries as the series grows.
+ * Each playable ep has a module under episodes/<id>/script.js
+ */
+export const EPISODES = [
+  {
+    id: "01",
+    slug: "birds-eye",
+    title: "The Bird's Eye",
+    sanskrit: "पक्षिणश्चक्षुः",
+    chapter: "Ādi Parva · training of the princes",
+    duration: "~90s",
+    status: "live",
+    blurb:
+      "Drona tests his pupils. Only Arjuna sees what must be seen — the eye, and nothing else.",
+    play: "play.html?ep=01",
+  },
+  {
+    id: "02",
+    slug: "coming-soon",
+    title: "Next episode",
+    sanskrit: "शीघ्रम्",
+    chapter: "TBD",
+    duration: "—",
+    status: "planned",
+    blurb: "Script first, then light. The series grows one parva-beat at a time.",
+    play: null,
+  },
+];

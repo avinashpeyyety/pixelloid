@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#07050c" />
+  <title>Mahābhārata — animated itihāsa · Pixelloid</title>
+  <meta name="description" content="Episodic browser theater of the Mahābhārata. Write, stage, animate — Three.js cinematic shorts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="landing">
+  <div class="landing-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav class="nav-top">
+      <p class="nav-brand"><a href="../">Pixelloid</a> · series</p>
+      <a class="nav-link" href="https://github.com/avinashpeyyety/pixelloid">Source</a>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-mark" aria-hidden="true">ॐ</div>
+      <p class="eyebrow">Animated itihāsa</p>
+      <h1>Mahābhārata</h1>
+      <p class="sanskrit">महाभारतम्</p>
+      <p class="lead">
+        Episodic browser theater — write the beat, stage the light, animate the gaze.
+        Self-contained Three.js. Mythic atmosphere first; Grok Imagine stills when a frame needs more.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="play.html?ep=01">Play Episode 01</a>
+        <a class="btn btn-ghost" href="#episodes">All episodes</a>
+      </div>
+    </header>
+
+    <section id="episodes">
+      <p class="section-label">Episodes</p>
+      <div class="ep-grid" id="ep-grid">
+        <!-- filled by js/landing.js -->
+      </div>
+    </section>
+
+    <div class="note-box">
+      <h3>Three.js — is it enough?</h3>
+      <p>
+        <strong style="color: var(--text)">Yes for this product.</strong>
+        Stylized cinematic shorts, silhouettes, camera-as-storyteller, particle atmosphere —
+        all self-contained in the browser with no build step.
+        Film-grade faces, cloth, and long lip-sync need Blender / pre-rendered plates;
+        we escalate with Imagine stills or hybrid media only when a beat demands it.
+      </p>
+    </div>
+
+    <footer class="landing-foot">
+      <span>Pixelloid · incremental series</span>
+      <span>
+        <a href="../">Hub</a>
+        ·
+        <a href="https://github.com/avinashpeyyety/pixelloid">GitHub</a>
+      </span>
+    </footer>
+  </div>
+  <script type="module" src="js/landing.js"></script>
+</body>
+</html>

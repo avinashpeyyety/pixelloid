@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pixelloid — interactive shows</title>
-  <meta name="description" content="Pixelloid: kids-grok, Chocolate Dance School, and Cosmos solar system" />
+  <meta name="description" content="Pixelloid: kids-grok, Chocolate Dance School, Cosmos, and Mahābhārata" />
   <style>
     :root {
       --bg: #0c0e16;
@@ -15,6 +15,7 @@
       --a: #7dd3fc;
       --b: #fbbf24;
       --c: #a78bfa;
+      --d: #e8a838;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -52,7 +53,10 @@
       .grid { grid-template-columns: 1fr 1fr; }
     }
     @media (min-width: 900px) {
-      .grid { grid-template-columns: 1fr 1fr 1fr; }
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1100px) {
+      .grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
     }
     a.card {
       display: block;
@@ -79,6 +83,10 @@
       border-color: rgba(167, 139, 250, 0.5);
       background: rgba(167, 139, 250, 0.1);
     }
+    a.card.maha:hover {
+      border-color: rgba(232, 168, 56, 0.5);
+      background: rgba(232, 168, 56, 0.1);
+    }
     .card h2 {
       font-size: 1.1rem;
       margin-bottom: 0.35rem;
@@ -93,6 +101,7 @@
     }
     a.card.dance .path { color: var(--b); }
     a.card.cosmos .path { color: var(--c); }
+    a.card.maha .path { color: var(--d); }
     footer {
       margin-top: 2.5rem;
       font-size: 0.8rem;
@@ -106,7 +115,7 @@
     <p class="brand">Pixelloid</p>
     <h1>Interactive shows</h1>
     <p class="lead">
-      Browser experiences — kids comedy, dance school, and a full solar-system theater.
+      Browser experiences — kids comedy, dance school, solar-system theater, and Mahābhārata episodes.
       No signup. Pick one and play.
     </p>
     <div class="grid">
@@ -124,6 +133,11 @@
         <h2>Cosmos</h2>
         <p>Solar system, Earth launch sites, and LEO theater — modern 3D sim.</p>
         <span class="path">/pixelloid/cosmos/</span>
+      </a>
+      <a class="card maha" href="mahabharata/">
+        <h2>Mahābhārata</h2>
+        <p>Animated itihāsa — write, stage, animate. Ep 01: The Bird's Eye.</p>
+        <span class="path">/pixelloid/mahabharata/</span>
       </a>
     </div>
     <footer>

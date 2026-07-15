@@ -356,24 +356,185 @@ function fillStroke(fill, stroke = C.ink, lw = 2.5) {
   }
 }
 
-function drawBorderMotif(x, y, size, gold) {
+// ── Kalamkari motif library (Sri Kalahasti / Machilipatnam spirit) ──
+const K = {
+  madder: "#8b2a1a",
+  indigo: "#1a3358",
+  indigoDeep: "#0c1a30",
+  rust: "#a84820",
+  ochre: "#c48828",
+  gold: "#e0b840",
+  cream: "#f2e6c8",
+  black: "#1a1008",
+  teal: "#1a5048",
+  rose: "#a83848",
+};
+
+/** Classic mango paisley (butta) */
+function drawPaisley(x, y, s = 1, flip = 1, fill = K.madder) {
   ctx.save();
   ctx.translate(x, y);
+  ctx.scale(s * flip, s);
   ctx.beginPath();
-  for (let i = 0; i < 6; i++) {
-    const a = (i / 6) * Math.PI * 2 - Math.PI / 2;
-    const r = i % 2 === 0 ? size : size * 0.45;
-    const px = Math.cos(a) * r;
-    const py = Math.sin(a) * r;
-    if (i === 0) ctx.moveTo(px, py);
-    else ctx.lineTo(px, py);
-  }
+  ctx.moveTo(0, 12);
+  ctx.bezierCurveTo(-14, 8, -16, -6, -6, -14);
+  ctx.bezierCurveTo(4, -20, 14, -12, 10, 0);
+  ctx.bezierCurveTo(18, -8, 16, -22, 4, -26);
+  ctx.bezierCurveTo(-12, -30, -22, -12, -18, 4);
+  ctx.bezierCurveTo(-16, 14, -6, 16, 0, 12);
   ctx.closePath();
-  fillStroke(gold ? C.gold : C.vermillion, C.ink, 1.5);
+  fillStroke(fill, K.black, 1.4);
+  // inner seed
   ctx.beginPath();
-  ctx.arc(0, 0, size * 0.18, 0, Math.PI * 2);
-  fillStroke(C.white, C.ink, 1);
+  ctx.ellipse(-2, -4, 3.5, 5, -0.3, 0, Math.PI * 2);
+  fillStroke(K.gold, K.black, 0.9);
+  ctx.beginPath();
+  ctx.arc(-2, -4, 1.2, 0, Math.PI * 2);
+  fillStroke(K.cream, null);
+  // tip curl
+  ctx.beginPath();
+  ctx.arc(6, -22, 3, 0, Math.PI * 2);
+  fillStroke(K.ochre, K.black, 0.8);
   ctx.restore();
+}
+
+/** Small lotus rosette */
+function drawLotus(x, y, r = 10, fill = K.rose) {
+  ctx.save();
+  ctx.translate(x, y);
+  for (let i = 0; i < 8; i++) {
+    const a = (i / 8) * Math.PI * 2;
+    ctx.beginPath();
+    ctx.ellipse(Math.cos(a) * r * 0.45, Math.sin(a) * r * 0.45, r * 0.38, r * 0.18, a, 0, Math.PI * 2);
+    fillStroke(i % 2 ? fill : K.gold, K.black, 0.9);
+  }
+  ctx.beginPath();
+  ctx.arc(0, 0, r * 0.28, 0, Math.PI * 2);
+  fillStroke(K.cream, K.black, 1);
+  ctx.beginPath();
+  ctx.arc(0, 0, r * 0.12, 0, Math.PI * 2);
+  fillStroke(K.madder, null);
+  ctx.restore();
+}
+
+/** Peacock feather eye (kalamkari classic) */
+function drawPeacockEye(x, y, s = 1) {
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.scale(s, s);
+  ctx.beginPath();
+  ctx.ellipse(0, 0, 7, 11, 0, 0, Math.PI * 2);
+  fillStroke(K.teal, K.black, 1.1);
+  ctx.beginPath();
+  ctx.ellipse(0, -1, 4.5, 7, 0, 0, Math.PI * 2);
+  fillStroke("#2a6a58", K.black, 0.8);
+  ctx.beginPath();
+  ctx.ellipse(0, -1, 2.5, 4, 0, 0, Math.PI * 2);
+  fillStroke(K.gold, K.black, 0.7);
+  ctx.beginPath();
+  ctx.arc(0, -1, 1.2, 0, Math.PI * 2);
+  fillStroke(K.indigoDeep, null);
+  // stem
+  ctx.beginPath();
+  ctx.moveTo(0, 11);
+  ctx.quadraticCurveTo(2, 16, 0, 20);
+  ctx.strokeStyle = K.teal;
+  ctx.lineWidth = 1.2;
+  ctx.stroke();
+  ctx.restore();
+}
+
+/** Vine tendril segment */
+function drawVine(x0, y0, x1, y1, amp = 6) {
+  const mx = (x0 + x1) / 2;
+  const my = (y0 + y1) / 2 + amp;
+  ctx.beginPath();
+  ctx.moveTo(x0, y0);
+  ctx.quadraticCurveTo(mx, my, x1, y1);
+  ctx.strokeStyle = K.teal;
+  ctx.lineWidth = 1.3;
+  ctx.stroke();
+  // leaf
+  ctx.beginPath();
+  ctx.ellipse(mx + 3, my - 2, 4, 2.2, 0.5, 0, Math.PI * 2);
+  fillStroke(K.teal, K.black, 0.7);
+}
+
+/** Horizontal jali / border band of buttas */
+function drawKalamkariBand(x, y, w, h, motif = "paisley") {
+  ctx.save();
+  roundRect(x, y, w, h, 2);
+  fillStroke(K.indigoDeep, K.black, 1.2);
+  // inner gold line
+  ctx.strokeStyle = K.gold;
+  ctx.lineWidth = 0.8;
+  ctx.strokeRect(x + 2, y + 2, w - 4, h - 4);
+  const n = Math.max(2, Math.floor(w / 14));
+  for (let i = 0; i < n; i++) {
+    const px = x + 8 + (i + 0.5) * ((w - 16) / n);
+    const py = y + h / 2;
+    if (motif === "lotus") drawLotus(px, py, h * 0.28, i % 2 ? K.rose : K.madder);
+    else if (motif === "eye") drawPeacockEye(px, py - 1, h * 0.045);
+    else drawPaisley(px, py + 1, h * 0.055, i % 2 ? 1 : -1, i % 3 === 0 ? K.madder : K.ochre);
+  }
+  ctx.restore();
+}
+
+/** Fill a polygon path already begun — clip and stamp motifs */
+function stampKalamkariInPath(drawPathFn, opts = {}) {
+  const {
+    density = 1,
+    style = "royal", // royal | sage | warrior | simple
+  } = opts;
+  ctx.save();
+  drawPathFn();
+  ctx.clip();
+
+  // dyed base wash already filled by caller — motifs on top
+  const bounds = { x: -36, y: -80, w: 72, h: 160 };
+  if (style === "royal") {
+    for (let row = 0; row < 5 * density; row++) {
+      for (let col = 0; col < 3; col++) {
+        const px = bounds.x + 12 + col * 22 + (row % 2) * 10;
+        const py = bounds.y + 18 + row * 28;
+        if ((row + col) % 2 === 0) drawPaisley(px, py, 0.55, col % 2 ? 1 : -1, K.madder);
+        else drawLotus(px, py, 6, K.rose);
+      }
+    }
+    // vertical vine
+    for (let i = 0; i < 4; i++) {
+      drawVine(-8, -60 + i * 30, 8, -40 + i * 30, 5 + (i % 2) * 4);
+    }
+  } else if (style === "sage") {
+    // restrained indigo geometry + small lotuses (ācārya)
+    for (let i = 0; i < 6; i++) {
+      const py = -65 + i * 22;
+      ctx.beginPath();
+      ctx.moveTo(-18, py);
+      ctx.lineTo(18, py);
+      ctx.strokeStyle = "rgba(224,184,64,0.55)";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      if (i % 2 === 0) drawLotus(0, py + 8, 5, K.ochre);
+    }
+    drawPaisley(-12, 20, 0.4, 1, K.ochre);
+    drawPaisley(12, 20, 0.4, -1, K.ochre);
+  } else if (style === "warrior") {
+    for (let i = 0; i < 4; i++) {
+      drawPeacockEye(-14 + (i % 2) * 28, -55 + i * 26, 0.85);
+      drawPaisley(10 - (i % 2) * 20, -40 + i * 26, 0.45, i % 2 ? 1 : -1, K.indigo);
+    }
+    drawLotus(0, 10, 7, K.madder);
+  } else {
+    for (let i = 0; i < 3; i++) {
+      drawPaisley(-10 + i * 10, -40 + i * 30, 0.4, i % 2 ? 1 : -1, K.rust);
+    }
+  }
+  ctx.restore();
+}
+
+function drawBorderMotif(x, y, size, gold) {
+  drawLotus(x, y, size * 0.9, gold ? K.gold : K.madder);
 }
 
 function drawClothBackground() {
@@ -459,17 +620,22 @@ function drawOrnateBorder() {
 
   // title cartouche (top center of cloth)
   ctx.save();
-  roundRect(WORLD_W / 2 - 160, 58, 320, 36, 4);
+  roundRect(WORLD_W / 2 - 170, 52, 340, 48, 4);
   fillStroke(C.indigoDeep, C.gold, 2);
+  // mini kalamkari band under title
+  drawKalamkariBand(WORLD_W / 2 - 150, 88, 300, 8, "paisley");
   ctx.fillStyle = C.gold;
   ctx.font = "600 15px 'Cormorant Garamond', Georgia, serif";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillText("आदिपर्व · पक्षिणश्चक्षुः", WORLD_W / 2, 76);
+  ctx.fillText("आदिपर्व · पक्षिणश्चक्षुः", WORLD_W / 2, 70);
+  ctx.font = "500 10px 'DM Sans', sans-serif";
+  ctx.fillStyle = K.ochre;
+  ctx.fillText("kalamkari · phad", WORLD_W / 2, 84);
   ctx.restore();
 }
 
-// ── Figures (flat tapestry puppets) ────────────────────────────
+// ── Figures (kalamkari-attired puppets) ────────────────────────
 function drawFigure(x, y, opts = {}) {
   const {
     scale = 1,
@@ -480,6 +646,9 @@ function drawFigure(x, y, opts = {}) {
     crown = false,
     name = "",
     breath = 0,
+    kalamkari = "simple", // royal | sage | warrior | simple
+    jewels = false,
+    angavastram = false, // shoulder cloth
   } = opts;
 
   ctx.save();
@@ -492,63 +661,115 @@ function drawFigure(x, y, opts = {}) {
   ctx.fillStyle = "rgba(40,20,10,0.25)";
   ctx.fill();
 
-  // legs
-  ctx.beginPath();
-  ctx.moveTo(-16, 0);
-  ctx.lineTo(-22, 70);
-  ctx.lineTo(-8, 70);
-  ctx.lineTo(-4, 10);
-  ctx.closePath();
-  fillStroke(robe, C.ink, 2.2);
+  const legPath = (side) => {
+    const s = side;
+    ctx.beginPath();
+    ctx.moveTo(-16 * s, 0);
+    ctx.lineTo(-22 * s, 70);
+    ctx.lineTo(-8 * s, 70);
+    ctx.lineTo(-4 * s, 10);
+    ctx.closePath();
+  };
 
-  ctx.beginPath();
-  ctx.moveTo(16, 0);
-  ctx.lineTo(22, 70);
-  ctx.lineTo(8, 70);
-  ctx.lineTo(4, 10);
-  ctx.closePath();
-  fillStroke(robe, C.ink, 2.2);
+  // legs + dhoti with kalamkari
+  for (const side of [1, -1]) {
+    legPath(side);
+    fillStroke(robe, C.ink, 2.2);
+    stampKalamkariInPath(() => legPath(side), { style: kalamkari, density: 0.6 });
+    // ankle kadas
+    if (jewels || kalamkari === "royal" || kalamkari === "warrior") {
+      ctx.beginPath();
+      ctx.ellipse(-15 * side, 66, 7, 3, 0, 0, Math.PI * 2);
+      fillStroke(K.gold, K.black, 1);
+    }
+  }
 
   // dhoti panel
-  ctx.beginPath();
-  ctx.moveTo(-28, 5);
-  ctx.quadraticCurveTo(0, 25, 28, 5);
-  ctx.lineTo(22, -15);
-  ctx.lineTo(-22, -15);
-  ctx.closePath();
+  const dhoti = () => {
+    ctx.beginPath();
+    ctx.moveTo(-28, 5);
+    ctx.quadraticCurveTo(0, 28, 28, 5);
+    ctx.lineTo(24, -15);
+    ctx.lineTo(-24, -15);
+    ctx.closePath();
+  };
+  dhoti();
   fillStroke(robe, C.ink, 2.2);
+  stampKalamkariInPath(dhoti, { style: kalamkari });
+  // dhoti border (zari / kalamkari edge)
+  drawKalamkariBand(-26, -8, 52, 9, kalamkari === "sage" ? "lotus" : "paisley");
 
-  // torso
-  ctx.beginPath();
-  ctx.moveTo(-26, -15);
-  ctx.lineTo(-30, -75);
-  ctx.lineTo(30, -75);
-  ctx.lineTo(26, -15);
-  ctx.closePath();
+  // torso angarakha / jama
+  const torso = () => {
+    ctx.beginPath();
+    ctx.moveTo(-26, -15);
+    ctx.lineTo(-32, -78);
+    ctx.lineTo(32, -78);
+    ctx.lineTo(26, -15);
+    ctx.closePath();
+  };
+  torso();
   fillStroke(robe, C.ink, 2.5);
+  stampKalamkariInPath(torso, { style: kalamkari });
 
-  // chest band
+  // ornate neck yoke
   ctx.beginPath();
-  ctx.moveTo(-28, -50);
-  ctx.lineTo(28, -50);
-  ctx.lineTo(26, -42);
-  ctx.lineTo(-26, -42);
+  ctx.moveTo(-30, -78);
+  ctx.quadraticCurveTo(0, -62, 30, -78);
+  ctx.lineTo(28, -72);
+  ctx.quadraticCurveTo(0, -58, -28, -72);
   ctx.closePath();
-  fillStroke(robeTrim, C.ink, 1.5);
+  fillStroke(K.gold, K.black, 1.4);
+  drawLotus(0, -70, 5, K.madder);
 
-  // left arm
+  // chest band (kamarband upper)
+  drawKalamkariBand(-28, -48, 56, 11, kalamkari === "warrior" ? "eye" : "lotus");
+
+  // angavastram (shawl drape)
+  if (angavastram) {
+    ctx.beginPath();
+    ctx.moveTo(-34, -70);
+    ctx.quadraticCurveTo(-50, -20, -30, 40);
+    ctx.lineTo(-18, 38);
+    ctx.quadraticCurveTo(-38, -20, -22, -68);
+    ctx.closePath();
+    fillStroke(K.ochre, K.black, 1.5);
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(-34, -70);
+    ctx.quadraticCurveTo(-50, -20, -30, 40);
+    ctx.lineTo(-18, 38);
+    ctx.quadraticCurveTo(-38, -20, -22, -68);
+    ctx.closePath();
+    ctx.clip();
+    for (let i = 0; i < 5; i++) {
+      drawPaisley(-32, -50 + i * 18, 0.4, 1, i % 2 ? K.madder : K.indigo);
+    }
+    ctx.restore();
+  }
+
+  // left arm + bangle
   ctx.save();
   ctx.translate(-28, -68);
   ctx.rotate(0.35);
   ctx.beginPath();
   roundRect(-8, 0, 16, 55, 7);
   fillStroke(C.skin, C.ink, 2);
+  // armlet
+  ctx.beginPath();
+  ctx.ellipse(0, 18, 10, 4, 0, 0, Math.PI * 2);
+  fillStroke(K.gold, K.black, 1);
+  drawPaisley(0, 18, 0.25, 1, K.madder);
   ctx.beginPath();
   ctx.arc(0, 58, 8, 0, Math.PI * 2);
   fillStroke(C.skin, C.ink, 1.8);
+  // wrist kada
+  ctx.beginPath();
+  ctx.ellipse(0, 52, 9, 3.5, 0, 0, Math.PI * 2);
+  fillStroke(K.gold, K.black, 1);
   ctx.restore();
 
-  // right arm (bow raise)
+  // right arm
   ctx.save();
   ctx.translate(28, -68);
   ctx.rotate(-0.35 - armRaise * 1.35);
@@ -556,8 +777,14 @@ function drawFigure(x, y, opts = {}) {
   roundRect(-8, 0, 16, 55, 7);
   fillStroke(C.skin, C.ink, 2);
   ctx.beginPath();
+  ctx.ellipse(0, 18, 10, 4, 0, 0, Math.PI * 2);
+  fillStroke(K.gold, K.black, 1);
+  ctx.beginPath();
   ctx.arc(0, 58, 8, 0, Math.PI * 2);
   fillStroke(C.skin, C.ink, 1.8);
+  ctx.beginPath();
+  ctx.ellipse(0, 52, 9, 3.5, 0, 0, Math.PI * 2);
+  fillStroke(K.gold, K.black, 1);
   ctx.restore();
 
   // head
@@ -572,8 +799,17 @@ function drawFigure(x, y, opts = {}) {
   ctx.beginPath();
   ctx.arc(0, -132, 10, 0, Math.PI * 2);
   fillStroke(C.ink, C.ink, 1);
+  // hair jewel
+  if (crown || jewels) {
+    ctx.beginPath();
+    ctx.arc(0, -132, 4, 0, Math.PI * 2);
+    fillStroke(K.gold, K.black, 1);
+    ctx.beginPath();
+    ctx.arc(0, -132, 1.8, 0, Math.PI * 2);
+    fillStroke(K.madder, null);
+  }
 
-  // eyes (front ¾, painted almond)
+  // eyes
   ctx.beginPath();
   ctx.ellipse(-7, -102, 5.5, 3.5, -0.15, 0, Math.PI * 2);
   fillStroke(C.white, C.ink, 1.2);
@@ -587,13 +823,40 @@ function drawFigure(x, y, opts = {}) {
   ctx.arc(6, -102, 2.2, 0, Math.PI * 2);
   fillStroke(C.ink, null);
 
-  // tilak
+  // tilak / urna
   ctx.beginPath();
   ctx.moveTo(0, -112);
-  ctx.lineTo(-3, -100);
-  ctx.lineTo(3, -100);
+  ctx.lineTo(-3.5, -98);
+  ctx.lineTo(3.5, -98);
   ctx.closePath();
   fillStroke(C.vermillion, C.ink, 1);
+
+  // earrings
+  if (jewels || crown || kalamkari === "royal") {
+    for (const sx of [-18, 18]) {
+      ctx.beginPath();
+      ctx.arc(sx, -95, 4, 0, Math.PI * 2);
+      fillStroke(K.gold, K.black, 1);
+      ctx.beginPath();
+      ctx.arc(sx, -88, 3, 0, Math.PI * 2);
+      fillStroke(K.madder, K.black, 0.8);
+    }
+  }
+
+  // necklace
+  if (jewels || kalamkari === "royal" || kalamkari === "warrior") {
+    ctx.beginPath();
+    ctx.arc(0, -78, 16, 0.2, Math.PI - 0.2);
+    ctx.strokeStyle = K.gold;
+    ctx.lineWidth = 2.5;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(0, -76, 12, 0.3, Math.PI - 0.3);
+    ctx.strokeStyle = K.madder;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+    drawLotus(0, -68, 4, K.gold);
+  }
 
   if (beard) {
     ctx.beginPath();
@@ -604,17 +867,38 @@ function drawFigure(x, y, opts = {}) {
   }
 
   if (crown) {
+    // kirīṭa — multi-tier kalamkari crown
     ctx.beginPath();
-    ctx.moveTo(-20, -122);
-    ctx.lineTo(-16, -145);
-    ctx.lineTo(0, -155);
-    ctx.lineTo(16, -145);
-    ctx.lineTo(20, -122);
+    ctx.moveTo(-24, -118);
+    ctx.lineTo(-22, -138);
+    ctx.lineTo(-10, -150);
+    ctx.lineTo(0, -162);
+    ctx.lineTo(10, -150);
+    ctx.lineTo(22, -138);
+    ctx.lineTo(24, -118);
     ctx.closePath();
-    fillStroke(C.gold, C.ink, 2);
+    fillStroke(K.gold, K.black, 2);
+    // tiers
     ctx.beginPath();
-    ctx.arc(0, -148, 5, 0, Math.PI * 2);
-    fillStroke(C.vermillion, C.ink, 1);
+    ctx.moveTo(-20, -128);
+    ctx.lineTo(20, -128);
+    ctx.strokeStyle = K.madder;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(-16, -140);
+    ctx.lineTo(16, -140);
+    ctx.stroke();
+    // peacock eyes on crown
+    drawPeacockEye(-10, -136, 0.55);
+    drawPeacockEye(10, -136, 0.55);
+    drawLotus(0, -152, 6, K.madder);
+    // hanging pearls
+    for (const sx of [-18, -8, 8, 18]) {
+      ctx.beginPath();
+      ctx.arc(sx, -116, 2.2, 0, Math.PI * 2);
+      fillStroke(K.cream, K.black, 0.7);
+    }
   }
 
   // mouth
@@ -625,10 +909,14 @@ function drawFigure(x, y, opts = {}) {
   ctx.stroke();
 
   if (name) {
+    // name plate with tiny border
+    roundRect(-28, 82, 56, 16, 3);
+    fillStroke("rgba(244,234,212,0.85)", K.gold, 1.2);
     ctx.fillStyle = C.ink;
     ctx.font = "600 11px 'DM Sans', sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText(name, 0, 95);
+    ctx.textBaseline = "middle";
+    ctx.fillText(name, 0, 90);
   }
 
   ctx.restore();
@@ -638,42 +926,106 @@ function drawBow(x, y, scale, drawAmt = 0) {
   ctx.save();
   ctx.translate(x, y);
   ctx.scale(scale, scale);
-  // bow arc
+
+  // Gāṇḍīva-inspired ornate bow
   ctx.beginPath();
   ctx.arc(0, 0, 48, -1.1, 1.1);
-  ctx.strokeStyle = C.clothDark;
-  ctx.lineWidth = 5;
+  ctx.strokeStyle = "#5a3018";
+  ctx.lineWidth = 7;
+  ctx.stroke();
+  // gold kalamkari inlay line
+  ctx.beginPath();
+  ctx.arc(0, 0, 48, -1.1, 1.1);
+  ctx.strokeStyle = K.gold;
+  ctx.lineWidth = 3;
   ctx.stroke();
   ctx.beginPath();
   ctx.arc(0, 0, 48, -1.1, 1.1);
-  ctx.strokeStyle = C.ink;
-  ctx.lineWidth = 2;
+  ctx.strokeStyle = K.black;
+  ctx.lineWidth = 1.5;
   ctx.stroke();
+
+  // grip with paisley wraps
+  for (let i = -2; i <= 2; i++) {
+    const a = i * 0.18;
+    const gx = Math.cos(a) * 48;
+    const gy = Math.sin(a) * 48;
+    drawPaisley(gx * 0.15, gy, 0.28, 1, i % 2 ? K.madder : K.ochre);
+  }
+  // tip lotuses
+  const t0x = Math.cos(-1.1) * 48;
+  const t0y = Math.sin(-1.1) * 48;
+  const t1x = Math.cos(1.1) * 48;
+  const t1y = Math.sin(1.1) * 48;
+  drawLotus(t0x, t0y, 5, K.gold);
+  drawLotus(t1x, t1y, 5, K.gold);
+
   // string
   const pull = -12 - drawAmt * 18;
   ctx.beginPath();
-  ctx.moveTo(Math.cos(-1.1) * 48, Math.sin(-1.1) * 48);
+  ctx.moveTo(t0x, t0y);
   ctx.lineTo(pull, 0);
-  ctx.lineTo(Math.cos(1.1) * 48, Math.sin(1.1) * 48);
-  ctx.strokeStyle = C.white;
-  ctx.lineWidth = 1.5;
+  ctx.lineTo(t1x, t1y);
+  ctx.strokeStyle = K.cream;
+  ctx.lineWidth = 1.6;
   ctx.stroke();
+
   // arrow on string
   if (drawAmt > 0.05) {
     ctx.beginPath();
     ctx.moveTo(pull - 8, 0);
     ctx.lineTo(55, 0);
-    ctx.strokeStyle = C.ash;
-    ctx.lineWidth = 2.5;
+    ctx.strokeStyle = "#6a4428";
+    ctx.lineWidth = 2.8;
     ctx.stroke();
+    // shaft gold rings
+    for (let i = 0; i < 3; i++) {
+      ctx.beginPath();
+      ctx.arc(pull + 10 + i * 14, 0, 2.5, 0, Math.PI * 2);
+      fillStroke(K.gold, K.black, 0.7);
+    }
     // tip
     ctx.beginPath();
-    ctx.moveTo(55, 0);
-    ctx.lineTo(48, -5);
-    ctx.lineTo(48, 5);
+    ctx.moveTo(58, 0);
+    ctx.lineTo(48, -6);
+    ctx.lineTo(48, 6);
     ctx.closePath();
-    fillStroke("#a8b0b8", C.ink, 1);
+    fillStroke("#c0c8d0", K.black, 1);
+    // fletching peacock-hued
+    ctx.beginPath();
+    ctx.moveTo(pull - 6, 0);
+    ctx.lineTo(pull - 18, -8);
+    ctx.lineTo(pull - 2, 0);
+    ctx.lineTo(pull - 18, 8);
+    ctx.closePath();
+    fillStroke(K.teal, K.black, 1);
   }
+  ctx.restore();
+}
+
+function drawDronaStaff(x, y, breath = 0) {
+  ctx.save();
+  ctx.translate(x, y + breath);
+  // bamboo/wood shaft with kalamkari bands
+  ctx.beginPath();
+  ctx.moveTo(0, 30);
+  ctx.lineTo(6, -100);
+  ctx.strokeStyle = "#6a4428";
+  ctx.lineWidth = 6;
+  ctx.lineCap = "round";
+  ctx.stroke();
+  ctx.strokeStyle = K.black;
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+  for (let i = 0; i < 5; i++) {
+    const ty = 20 - i * 28;
+    ctx.beginPath();
+    ctx.ellipse(3, ty, 7, 3, 0.1, 0, Math.PI * 2);
+    fillStroke(i % 2 ? K.gold : K.madder, K.black, 0.9);
+  }
+  // finial lotus + peacock
+  drawLotus(7, -108, 9, K.gold);
+  drawPeacockEye(7, -122, 0.7);
   ctx.restore();
 }
 
@@ -681,7 +1033,7 @@ function drawTree(x, y, sway = 0) {
   ctx.save();
   ctx.translate(x, y);
 
-  // trunk
+  // trunk with bark rings (textile tree)
   ctx.beginPath();
   ctx.moveTo(-18, 0);
   ctx.quadraticCurveTo(-8 + sway * 4, -120, -12 + sway * 6, -220);
@@ -689,8 +1041,16 @@ function drawTree(x, y, sway = 0) {
   ctx.quadraticCurveTo(12 + sway * 4, -120, 20, 0);
   ctx.closePath();
   fillStroke("#5a3820", C.ink, 2.5);
+  for (let i = 0; i < 6; i++) {
+    const ty = -20 - i * 32;
+    ctx.beginPath();
+    ctx.ellipse(0 + sway * 2, ty, 14 - i, 4, 0, 0, Math.PI * 2);
+    ctx.strokeStyle = "rgba(26,16,8,0.45)";
+    ctx.lineWidth = 1.2;
+    ctx.stroke();
+  }
 
-  // canopy clusters (pattachitra leaf masses)
+  // canopy clusters
   const clusters = [
     [0, -280, 70],
     [-55, -250, 55],
@@ -703,14 +1063,21 @@ function drawTree(x, y, sway = 0) {
     ctx.beginPath();
     ctx.arc(cx + sway * 8, cy, r, 0, Math.PI * 2);
     fillStroke(C.leaf, C.ink, 2.5);
-    // inner highlight leaf marks
     ctx.beginPath();
     ctx.arc(cx + sway * 8 - r * 0.2, cy - r * 0.15, r * 0.45, 0, Math.PI * 2);
     ctx.fillStyle = "rgba(80,140,90,0.35)";
     ctx.fill();
   }
 
-  // decorative leaf strokes
+  // kalamkari leaf vines in canopy
+  for (let i = 0; i < 8; i++) {
+    const a = (i / 8) * Math.PI * 2;
+    const lx = Math.cos(a) * 55 + sway * 8;
+    const ly = -280 + Math.sin(a) * 40;
+    drawPaisley(lx, ly, 0.35, i % 2 ? 1 : -1, i % 2 ? K.teal : K.ochre);
+  }
+  drawLotus(sway * 8, -300, 10, K.rose);
+
   ctx.strokeStyle = C.leafDark;
   ctx.lineWidth = 1.5;
   for (let i = 0; i < 14; i++) {
@@ -735,7 +1102,7 @@ function drawBird(x, y, opts = {}) {
   ctx.save();
   ctx.translate(x, y + bob);
 
-  // branch perch
+  // branch perch with kalamkari rings
   ctx.beginPath();
   ctx.moveTo(-40, 18);
   ctx.quadraticCurveTo(0, 28, 50, 14);
@@ -745,33 +1112,59 @@ function drawBird(x, y, opts = {}) {
   ctx.strokeStyle = C.ink;
   ctx.lineWidth = 2;
   ctx.stroke();
+  for (const bx of [-20, 0, 25]) {
+    ctx.beginPath();
+    ctx.ellipse(bx, 20, 5, 2.5, 0.1, 0, Math.PI * 2);
+    fillStroke(K.gold, K.black, 0.7);
+  }
 
-  // body
+  // body — peafowl-inspired kalamkari bird
   ctx.beginPath();
   ctx.ellipse(0, 0, 28, 18, -0.2, 0, Math.PI * 2);
   fillStroke(C.indigo, C.ink, 2.2);
+  // breast buttas
+  drawPaisley(-6, 2, 0.4, 1, K.madder);
+  drawPaisley(4, 4, 0.32, -1, K.ochre);
+  drawLotus(-2, -4, 4, K.gold);
 
-  // wing
+  // wing with peacock-eye cascade
   ctx.beginPath();
   ctx.moveTo(-5, -5);
   ctx.quadraticCurveTo(-35, -25, -40, 5);
   ctx.quadraticCurveTo(-20, 10, -5, 5);
   ctx.closePath();
   fillStroke("#2a3a5a", C.ink, 2);
+  drawPeacockEye(-22, -8, 0.75);
+  drawPeacockEye(-30, 0, 0.55);
 
-  // tail
+  // kalamkari tail train
   ctx.beginPath();
   ctx.moveTo(-24, 5);
-  ctx.lineTo(-48, 18);
+  ctx.lineTo(-55, 12);
+  ctx.lineTo(-62, 28);
   ctx.lineTo(-40, 22);
   ctx.lineTo(-20, 10);
   ctx.closePath();
-  fillStroke(C.saffron, C.ink, 1.8);
+  fillStroke(K.teal, C.ink, 1.8);
+  drawPeacockEye(-48, 16, 0.7);
+  drawPaisley(-38, 8, 0.35, 1, K.ochre);
 
   // head
   ctx.beginPath();
   ctx.ellipse(22, -10, 14, 12, 0.2, 0, Math.PI * 2);
   fillStroke(C.indigo, C.ink, 2);
+  // crest
+  for (let i = 0; i < 3; i++) {
+    ctx.beginPath();
+    ctx.moveTo(18 + i * 3, -20);
+    ctx.quadraticCurveTo(16 + i * 4, -32, 20 + i * 3, -36);
+    ctx.strokeStyle = K.teal;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(20 + i * 3, -36, 2, 0, Math.PI * 2);
+    fillStroke(K.gold, K.black, 0.6);
+  }
 
   // beak
   ctx.beginPath();
@@ -840,13 +1233,23 @@ function drawGardenDecor() {
   ctx.closePath();
   fillStroke("rgba(50,40,60,0.4)", C.ink, 2);
 
-  // sun / dusk disc
+  // sun / dusk disc with kalamkari rays
   ctx.beginPath();
   ctx.arc(200, 160, 42, 0, Math.PI * 2);
   fillStroke(C.saffron, C.ink, 2.5);
   ctx.beginPath();
   ctx.arc(200, 160, 28, 0, Math.PI * 2);
   fillStroke(C.gold, C.ink, 1.5);
+  drawLotus(200, 160, 10, K.madder);
+  for (let i = 0; i < 12; i++) {
+    const a = (i / 12) * Math.PI * 2;
+    ctx.beginPath();
+    ctx.moveTo(200 + Math.cos(a) * 44, 160 + Math.sin(a) * 44);
+    ctx.lineTo(200 + Math.cos(a) * 58, 160 + Math.sin(a) * 58);
+    ctx.strokeStyle = K.ochre;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  }
 
   // decorative grass tufts
   ctx.strokeStyle = C.leafDark;
@@ -862,22 +1265,30 @@ function drawGardenDecor() {
     ctx.stroke();
   }
 
-  // peepal leaf motif (lower left corner art)
-  ctx.save();
-  ctx.translate(160, 720);
-  ctx.rotate(-0.4);
-  ctx.beginPath();
-  ctx.moveTo(0, 0);
-  ctx.bezierCurveTo(40, -20, 50, -60, 0, -90);
-  ctx.bezierCurveTo(-50, -60, -40, -20, 0, 0);
-  fillStroke("rgba(42,90,56,0.55)", C.ink, 2);
-  ctx.beginPath();
-  ctx.moveTo(0, -5);
-  ctx.lineTo(0, -75);
-  ctx.strokeStyle = C.ink;
-  ctx.lineWidth = 1.5;
-  ctx.stroke();
-  ctx.restore();
+  // corner kalamkari panels (tree of life buttas)
+  for (const [bx, by, flip] of [
+    [140, 720, 1],
+    [1460, 720, -1],
+    [140, 200, 1],
+    [1460, 200, -1],
+  ]) {
+    ctx.save();
+    ctx.translate(bx, by);
+    ctx.scale(flip, 1);
+    drawPaisley(0, 0, 1.1, 1, K.madder);
+    drawPaisley(18, -28, 0.75, -1, K.ochre);
+    drawLotus(8, -50, 8, K.rose);
+    drawVine(0, 10, 0, 50, 8);
+    drawPeacockEye(-12, -20, 0.8);
+    ctx.restore();
+  }
+
+  // ground border strip of buttas
+  for (let x = 100; x < WORLD_W - 100; x += 48) {
+    if (x > 450 && x < 700) continue;
+    if (x > 1000 && x < 1300) continue;
+    drawPaisley(x, 780, 0.45, (x / 48) % 2 ? 1 : -1, (x / 48) % 3 === 0 ? K.madder : K.indigo);
+  }
 }
 
 function drawFlyingArrow(x0, y0, x1, y1, u) {
@@ -890,33 +1301,39 @@ function drawFlyingArrow(x0, y0, x1, y1, u) {
   ctx.save();
   ctx.translate(x, y);
   ctx.rotate(ang);
-  // shaft
+  // ornate shaft
   ctx.beginPath();
   ctx.moveTo(-28, 0);
   ctx.lineTo(28, 0);
-  ctx.strokeStyle = C.ash;
-  ctx.lineWidth = 3;
+  ctx.strokeStyle = "#6a4428";
+  ctx.lineWidth = 3.2;
   ctx.stroke();
-  ctx.strokeStyle = C.ink;
+  ctx.strokeStyle = K.gold;
   ctx.lineWidth = 1.2;
   ctx.stroke();
+  for (const rx of [-12, 0, 12]) {
+    ctx.beginPath();
+    ctx.arc(rx, 0, 2.2, 0, Math.PI * 2);
+    fillStroke(K.madder, K.black, 0.6);
+  }
   // tip
   ctx.beginPath();
-  ctx.moveTo(28, 0);
+  ctx.moveTo(30, 0);
   ctx.lineTo(18, -6);
   ctx.lineTo(18, 6);
   ctx.closePath();
   fillStroke("#c0c8d0", C.ink, 1);
-  // fletching
+  // peacock fletching
   ctx.beginPath();
   ctx.moveTo(-28, 0);
-  ctx.lineTo(-36, -8);
-  ctx.lineTo(-22, 0);
-  ctx.lineTo(-36, 8);
+  ctx.lineTo(-40, -9);
+  ctx.lineTo(-20, 0);
+  ctx.lineTo(-40, 9);
   ctx.closePath();
-  fillStroke(C.vermillion, C.ink, 1);
+  fillStroke(K.teal, C.ink, 1);
+  drawPeacockEye(-34, 0, 0.45);
   // trail
-  ctx.globalAlpha = 0.35;
+  ctx.globalAlpha = 0.4;
   ctx.beginPath();
   ctx.moveTo(-28, 0);
   ctx.lineTo(-70, 4);
@@ -1047,19 +1464,26 @@ function renderWorld(now) {
   drawGardenDecor();
   drawTree(1080, 580, sway);
 
-  // princes (left group)
-  const princeColors = ["#4a2030", "#2a3a28", "#3a2a48", "#4a3a20"];
+  // princes — each a different kalamkari field
+  const princeStyles = [
+    { robe: "#4a2030", kalamkari: "simple" },
+    { robe: "#1a3a28", kalamkari: "warrior" },
+    { robe: "#3a2a48", kalamkari: "simple" },
+    { robe: "#4a3a18", kalamkari: "royal" },
+  ];
   for (let i = 0; i < 4; i++) {
     drawFigure(480 + i * 55, 600 + (i % 2) * 8, {
       scale: 0.72,
-      robe: princeColors[i],
+      robe: princeStyles[i].robe,
       robeTrim: C.saffron,
+      kalamkari: princeStyles[i].kalamkari,
+      jewels: i === 3,
       breath: breath * 0.6 + i,
       armRaise: 0.05 * Math.sin(now * 0.002 + i),
     });
   }
 
-  // Drona
+  // Drona — sage kalamkari, angavastram, staff
   drawFigure(320, 580, {
     scale: 1.05,
     robe: C.indigoDeep,
@@ -1067,33 +1491,24 @@ function renderWorld(now) {
     beard: true,
     crown: false,
     name: "Drona",
+    kalamkari: "sage",
+    angavastram: true,
+    jewels: true,
     breath,
     armRaise: 0.1 + Math.sin(now * 0.001) * 0.05,
   });
-  // staff
-  ctx.save();
-  ctx.translate(360, 520 + breath);
-  ctx.beginPath();
-  ctx.moveTo(0, 20);
-  ctx.lineTo(8, -90);
-  ctx.strokeStyle = "#6a4428";
-  ctx.lineWidth = 5;
-  ctx.stroke();
-  ctx.strokeStyle = C.ink;
-  ctx.lineWidth = 1.5;
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.arc(8, -95, 8, 0, Math.PI * 2);
-  fillStroke(C.gold, C.ink, 1.5);
-  ctx.restore();
+  drawDronaStaff(368, 530, breath);
 
-  // Arjuna
+  // Arjuna — royal warrior kalamkari, kirīṭa, Gāṇḍīva
   drawFigure(1220, 590, {
     scale: 1.0,
     robe: "#1e3a5f",
     robeTrim: C.gold,
     crown: true,
     name: "Arjuna",
+    kalamkari: "warrior",
+    jewels: true,
+    angavastram: true,
     breath: breath * 0.9,
     armRaise,
   });

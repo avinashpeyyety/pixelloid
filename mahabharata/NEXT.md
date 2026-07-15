@@ -20,3 +20,4 @@
 - [x] Hub card + github.io path
 - [x] Pivot to 2D Phad/Pattachitra narrative-cloth player (Canvas 2D)
 - [x] Kathavachak narration (Web Speech, deep Indian-English male preference)
+- [x] Rich Kalamkari on attires & props (paisley, lotus, peacock-eye, bands)

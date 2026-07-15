@@ -16,7 +16,7 @@ Indian epic already has professional *cloth* narration traditions:
 | **Cheriyal scroll** | Telangana | Narrative ballad scrolls in sequential frames. |
 | **Kalamkari** | Andhra | Block/hand painted cotton epics — great for still keyframes later. |
 
-We use a **Phad + Pattachitra hybrid**: dyed cloth ground, vermillion/indigo/saffron, black contour, ornate border, camera pans the scroll like a living phad performance.  
+We use a **Phad + Pattachitra + Kalamkari hybrid**: dyed cloth ground, vermillion/indigo/saffron, black contour, ornate border; **Kalamkari** on attires & props (paisley buttas, lotus rosettes, peacock-eye feathers, vine bands, zari-style edges). Camera pans the scroll like a living phad performance.  
 
 **Not film CGI.** Flat, legible, mythic — closer to high-end illustration/animation than low-poly 3D, with far less complexity. Grok Imagine stills can later texture a panel when a face or court needs more density.
 

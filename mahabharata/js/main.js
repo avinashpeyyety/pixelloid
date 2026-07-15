@@ -198,53 +198,277 @@ const C = {
   skyDusk: "#6a3a4a",
 };
 
-// ── Soft ambient ───────────────────────────────────────────────
-class AmbientDrone {
+// ── Soulful sitar ambient (Web Audio synthesis) ────────────────
+/**
+ * Sparse sitar plucks + soft tanpura bed. No samples — metallic
+ * partials, slow meend, sympathetic shimmer. Soulful, not busy.
+ */
+class SoulfulSitar {
   constructor() {
     this.ctx = null;
     this.master = null;
+    this.wet = null;
     this.nodes = [];
+    this.timers = [];
     this.on = false;
+    // Sa-based free scale (Hz) — soft evening contour
+    this.Sa = 138.59; // C#3-ish
+    this.scale = null; // filled on ensure
   }
+
   async ensure() {
     if (this.ctx) return;
     const AC = window.AudioContext || window.webkitAudioContext;
     this.ctx = new AC();
     this.master = this.ctx.createGain();
     this.master.gain.value = 0;
+
+    // simple lush delay "hall" for soul
+    const delay = this.ctx.createDelay(1.2);
+    delay.delayTime.value = 0.32;
+    const fb = this.ctx.createGain();
+    fb.gain.value = 0.28;
+    const delayGain = this.ctx.createGain();
+    delayGain.gain.value = 0.22;
+    delay.connect(fb);
+    fb.connect(delay);
+    delay.connect(delayGain);
+    delayGain.connect(this.master);
+
+    // second longer echo
+    const delay2 = this.ctx.createDelay(2);
+    delay2.delayTime.value = 0.58;
+    const fb2 = this.ctx.createGain();
+    fb2.gain.value = 0.18;
+    const d2g = this.ctx.createGain();
+    d2g.gain.value = 0.12;
+    delay2.connect(fb2);
+    fb2.connect(delay2);
+    delay2.connect(d2g);
+    d2g.connect(this.master);
+
+    this.wet = this.ctx.createGain();
+    this.wet.gain.value = 1;
+    this.wet.connect(this.master);
+    this.wet.connect(delay);
+    this.wet.connect(delay2);
     this.master.connect(this.ctx.destination);
+
+    this._delay = delay;
+    this._delay2 = delay2;
+
+    const Sa = this.Sa;
+    // just ratios: Sa Re(komal-ish soft) Ga Ma Pa Dha Ni Sa
+    this.scale = [
+      Sa,
+      Sa * (16 / 15),
+      Sa * (5 / 4),
+      Sa * (4 / 3),
+      Sa * (3 / 2),
+      Sa * (8 / 5),
+      Sa * (15 / 8),
+      Sa * 2,
+      Sa * 2 * (5 / 4),
+      Sa * 2 * (3 / 2),
+    ];
   }
+
+  _track(node) {
+    this.nodes.push(node);
+    return node;
+  }
+
+  /** Soft continuous tanpura bed under plucks */
+  _startTanpura(t0) {
+    const Sa = this.Sa;
+    const Pa = Sa * 1.5;
+    const SaLow = Sa / 2;
+    for (const [freq, type, amp, det] of [
+      [SaLow, "sine", 0.045, 0],
+      [SaLow * 1.002, "triangle", 0.02, 0.3],
+      [Sa, "sine", 0.035, -0.2],
+      [Sa * 1.003, "sine", 0.02, 0.4],
+      [Pa, "sine", 0.028, 0],
+      [Pa * 0.997, "triangle", 0.012, -0.3],
+      [Sa * 2, "sine", 0.012, 0.1],
+    ]) {
+      const o = this._track(this.ctx.createOscillator());
+      const g = this._track(this.ctx.createGain());
+      o.type = type;
+      o.frequency.value = freq;
+      if (det) {
+        const lfo = this._track(this.ctx.createOscillator());
+        const lg = this._track(this.ctx.createGain());
+        lfo.frequency.value = 0.08 + Math.abs(det) * 0.05;
+        lg.gain.value = 0.4;
+        lfo.connect(lg);
+        lg.connect(o.frequency);
+        lfo.start(t0);
+      }
+      g.gain.value = amp;
+      o.connect(g);
+      g.connect(this.wet);
+      o.start(t0);
+    }
+  }
+
+  /**
+   * Metallic sitar-like pluck: slightly inharmonic partials + meend.
+   */
+  pluck(freq, when, { dur = 2.8, amp = 0.22, meend = 0 } = {}) {
+    if (!this.ctx || !this.on) return;
+    const t = when;
+    const out = this._track(this.ctx.createGain());
+    out.gain.setValueAtTime(0, t);
+    out.gain.linearRampToValueAtTime(amp, t + 0.012);
+    out.gain.exponentialRampToValueAtTime(0.001, t + dur);
+    out.connect(this.wet);
+
+    // bright attack noise through bandpass
+    const noiseBuf = this.ctx.createBuffer(1, Math.floor(this.ctx.sampleRate * 0.04), this.ctx.sampleRate);
+    const data = noiseBuf.getChannelData(0);
+    for (let i = 0; i < data.length; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / data.length);
+    const noise = this._track(this.ctx.createBufferSource());
+    noise.buffer = noiseBuf;
+    const bp = this._track(this.ctx.createBiquadFilter());
+    bp.type = "bandpass";
+    bp.frequency.value = freq * 3;
+    bp.Q.value = 4;
+    const ng = this._track(this.ctx.createGain());
+    ng.gain.setValueAtTime(amp * 0.55, t);
+    ng.gain.exponentialRampToValueAtTime(0.001, t + 0.08);
+    noise.connect(bp);
+    bp.connect(ng);
+    ng.connect(out);
+    noise.start(t);
+    noise.stop(t + 0.05);
+
+    // partials — slightly stretched like a string
+    const ratios = [1, 2.01, 3.02, 4.05, 5.08, 6.12, 8.2, 10.3, 12.4];
+    const amps = [1, 0.55, 0.32, 0.2, 0.14, 0.1, 0.07, 0.045, 0.03];
+    for (let i = 0; i < ratios.length; i++) {
+      const o = this._track(this.ctx.createOscillator());
+      const g = this._track(this.ctx.createGain());
+      o.type = i < 2 ? "triangle" : "sine";
+      const f0 = freq * ratios[i];
+      o.frequency.setValueAtTime(f0, t);
+      // gentle meend (glide) on fundamental-ish partials
+      if (meend && i < 3) {
+        o.frequency.linearRampToValueAtTime(f0 * (1 + meend), t + dur * 0.45);
+        o.frequency.linearRampToValueAtTime(f0 * (1 + meend * 0.3), t + dur * 0.85);
+      }
+      // slow jawari-ish vibrato
+      const lfo = this._track(this.ctx.createOscillator());
+      const lg = this._track(this.ctx.createGain());
+      lfo.frequency.value = 4.5 + i * 0.15;
+      lg.gain.value = f0 * 0.0025;
+      lfo.connect(lg);
+      lg.connect(o.frequency);
+      lfo.start(t);
+      lfo.stop(t + dur + 0.1);
+
+      const peak = amps[i] * (i === 0 ? 0.5 : 0.35);
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(peak, t + 0.008 + i * 0.002);
+      g.gain.exponentialRampToValueAtTime(0.001, t + dur * (0.55 + 0.4 / (i + 1)));
+      o.connect(g);
+      g.connect(out);
+      o.start(t);
+      o.stop(t + dur + 0.15);
+    }
+
+    // sympathetic string shimmer (quiet high Sa)
+    const sym = this._track(this.ctx.createOscillator());
+    const sg = this._track(this.ctx.createGain());
+    sym.type = "sine";
+    sym.frequency.value = this.Sa * 2 * 1.5;
+    sg.gain.setValueAtTime(0, t);
+    sg.gain.linearRampToValueAtTime(0.03, t + 0.05);
+    sg.gain.exponentialRampToValueAtTime(0.001, t + dur * 0.9);
+    sym.connect(sg);
+    sg.connect(this.wet);
+    sym.start(t);
+    sym.stop(t + dur);
+  }
+
+  _schedulePhrase() {
+    if (!this.on || !this.ctx) return;
+    const t0 = this.ctx.currentTime + 0.08;
+    const sc = this.scale;
+    // soulful sparse motifs — never dense
+    const phrases = [
+      [
+        [0, 0],
+        [1.6, 4],
+        [3.4, 2],
+        [5.2, 7],
+        [7.5, 4],
+      ],
+      [
+        [0, 4],
+        [1.2, 5],
+        [2.8, 7],
+        [4.5, 8],
+        [6.8, 4],
+        [9.0, 0],
+      ],
+      [
+        [0, 2],
+        [2.0, 4],
+        [3.5, 3],
+        [5.5, 4],
+        [8.0, 7],
+      ],
+      [
+        [0, 7],
+        [1.8, 5],
+        [3.6, 4],
+        [5.5, 2],
+        [7.8, 0],
+        [10.0, 4],
+      ],
+    ];
+    const phrase = phrases[(Math.random() * phrases.length) | 0];
+    let lastEnd = 0;
+    for (const [at, deg] of phrase) {
+      const freq = sc[deg % sc.length];
+      const meend = Math.random() > 0.45 ? 0.03 + Math.random() * 0.04 : 0;
+      const amp = 0.14 + Math.random() * 0.1;
+      const dur = 2.2 + Math.random() * 1.6;
+      this.pluck(freq, t0 + at, { dur, amp, meend: Math.random() > 0.5 ? meend : -meend * 0.5 });
+      lastEnd = Math.max(lastEnd, at + dur * 0.5);
+    }
+    // occasional low Sa anchor
+    if (Math.random() > 0.4) {
+      this.pluck(this.Sa / 2, t0 + lastEnd * 0.3, { dur: 3.5, amp: 0.1, meend: 0.015 });
+    }
+    const waitMs = (lastEnd + 2.5 + Math.random() * 3.5) * 1000;
+    this.timers.push(setTimeout(() => this._schedulePhrase(), waitMs));
+  }
+
   async start() {
     await this.ensure();
     if (this.ctx.state === "suspended") await this.ctx.resume();
     if (this.on) return;
     this.on = true;
     const t = this.ctx.currentTime;
-    for (const [freq, type, g] of [
-      [73.4, "sine", 0.06],
-      [110, "triangle", 0.03],
-      [220, "sine", 0.015],
-      [329.6, "sine", 0.01],
-    ]) {
-      const o = this.ctx.createOscillator();
-      const gain = this.ctx.createGain();
-      o.type = type;
-      o.frequency.value = freq;
-      gain.gain.value = g;
-      o.connect(gain);
-      gain.connect(this.master);
-      o.start(t);
-      this.nodes.push(o, gain);
-    }
+    this._startTanpura(t);
+    // opening pluck
+    this.pluck(this.Sa * 1.5, t + 0.4, { dur: 3.2, amp: 0.2, meend: 0.035 });
+    this.pluck(this.Sa, t + 1.8, { dur: 3.5, amp: 0.16, meend: -0.02 });
+    this.timers.push(setTimeout(() => this._schedulePhrase(), 3200));
     this.master.gain.cancelScheduledValues(t);
-    this.master.gain.linearRampToValueAtTime(0.5, t + 1.2);
+    this.master.gain.linearRampToValueAtTime(0.72, t + 1.4);
   }
+
   stop() {
     if (!this.ctx || !this.on) return;
     const t = this.ctx.currentTime;
     this.master.gain.cancelScheduledValues(t);
-    this.master.gain.linearRampToValueAtTime(0, t + 0.6);
+    this.master.gain.linearRampToValueAtTime(0, t + 0.8);
     this.on = false;
+    for (const id of this.timers) clearTimeout(id);
+    this.timers = [];
     setTimeout(() => {
       for (const n of this.nodes) {
         try {
@@ -255,15 +479,16 @@ class AmbientDrone {
         }
       }
       this.nodes = [];
-    }, 700);
+    }, 900);
   }
+
   async toggle() {
     if (this.on) this.stop();
     else await this.start();
     return this.on;
   }
 }
-const drone = new AmbientDrone();
+const drone = new SoulfulSitar();
 
 // ── Canvas ─────────────────────────────────────────────────────
 const canvas = document.createElement("canvas");
@@ -1349,7 +1574,7 @@ btnPlay.addEventListener("click", async () => {
   if (playing) {
     try {
       await drone.start();
-      btnMute.textContent = "Drone ✓";
+      btnMute.textContent = "Sitar ✓";
     } catch {
       /* autoplay */
     }
@@ -1367,7 +1592,7 @@ btnRestart.addEventListener("click", async () => {
   btnPlay.textContent = "Pause";
   try {
     await drone.start();
-    btnMute.textContent = "Drone ✓";
+    btnMute.textContent = "Sitar ✓";
   } catch {
     /* ok */
   }
@@ -1380,7 +1605,7 @@ btnReplay?.addEventListener("click", () => btnRestart.click());
 
 btnMute.addEventListener("click", async () => {
   const on = await drone.toggle();
-  btnMute.textContent = on ? "Drone ✓" : "Drone";
+  btnMute.textContent = on ? "Sitar ✓" : "Sitar";
 });
 
 btnVoice?.addEventListener("click", () => {

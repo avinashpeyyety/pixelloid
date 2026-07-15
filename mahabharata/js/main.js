@@ -469,21 +469,21 @@ function drawOrnateBorder() {
 }
 
 /**
- * Bapu figure: lyrical silhouette, large soft eyes, flowing dhoti,
- * minimal jewelry — character through gesture and face, not pattern.
+ * Warriors: hands on hips, curly mustaches (Bapu-ish line).
+ * Drona: saffron + long white beard.
  */
 function drawFigure(x, y, opts = {}) {
   const {
     scale = 1,
     robe = B.blue,
     robeLight = null,
-    armRaise = 0,
     beard = false,
     crown = false,
     name = "",
     breath = 0,
     sage = false,
     young = false,
+    mustache = true,
   } = opts;
   const light = robeLight || robe;
 
@@ -491,25 +491,23 @@ function drawFigure(x, y, opts = {}) {
   ctx.translate(x, y + breath);
   ctx.scale(scale, scale);
 
-  // soft ground shadow
   ctx.beginPath();
-  ctx.ellipse(0, 10, 38, 9, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, 10, 40, 9, 0, 0, Math.PI * 2);
   ctx.fillStyle = "rgba(40,24,12,0.18)";
   ctx.fill();
 
-  // legs — slender, slightly curved (Bapu elongation)
+  // wider warrior stance
   const drawLeg = (sx) => {
     ctx.beginPath();
-    ctx.moveTo(sx * 10, 5);
-    ctx.quadraticCurveTo(sx * 18, 35, sx * 14, 72);
-    ctx.lineTo(sx * 4, 72);
-    ctx.quadraticCurveTo(sx * 8, 35, sx * 4, 8);
+    ctx.moveTo(sx * 12, 5);
+    ctx.quadraticCurveTo(sx * 22, 35, sx * 16, 72);
+    ctx.lineTo(sx * 5, 72);
+    ctx.quadraticCurveTo(sx * 10, 35, sx * 5, 8);
     ctx.closePath();
     fillStroke(robe, B.ink, 2);
-    // soft fold line
     ctx.beginPath();
-    ctx.moveTo(sx * 8, 20);
-    ctx.quadraticCurveTo(sx * 12, 40, sx * 10, 65);
+    ctx.moveTo(sx * 9, 20);
+    ctx.quadraticCurveTo(sx * 14, 40, sx * 12, 65);
     ctx.strokeStyle = "rgba(42,24,16,0.25)";
     ctx.lineWidth = 1.2;
     ctx.stroke();
@@ -517,20 +515,19 @@ function drawFigure(x, y, opts = {}) {
   drawLeg(-1);
   drawLeg(1);
 
-  // dhoti — soft flowing panel, simple folds
+  // dhoti
   ctx.beginPath();
-  ctx.moveTo(-30, -8);
-  ctx.quadraticCurveTo(-34, 20, -22, 48);
-  ctx.quadraticCurveTo(0, 58, 22, 48);
-  ctx.quadraticCurveTo(34, 20, 30, -8);
-  ctx.quadraticCurveTo(0, 8, -30, -8);
+  ctx.moveTo(-32, -8);
+  ctx.quadraticCurveTo(-36, 20, -24, 48);
+  ctx.quadraticCurveTo(0, 58, 24, 48);
+  ctx.quadraticCurveTo(36, 20, 32, -8);
+  ctx.quadraticCurveTo(0, 8, -32, -8);
   ctx.closePath();
   const dhotiG = ctx.createLinearGradient(-30, -10, 30, 50);
   dhotiG.addColorStop(0, light);
   dhotiG.addColorStop(0.5, robe);
   dhotiG.addColorStop(1, light);
   fillStroke(dhotiG, B.ink, 2.2);
-  // three soft fold arcs
   for (const fy of [8, 22, 36]) {
     ctx.beginPath();
     ctx.moveTo(-22, fy);
@@ -539,137 +536,114 @@ function drawFigure(x, y, opts = {}) {
     ctx.lineWidth = 1.3;
     ctx.stroke();
   }
-  // waist cord
   ctx.beginPath();
-  ctx.moveTo(-28, -6);
-  ctx.quadraticCurveTo(0, 4, 28, -6);
+  ctx.moveTo(-30, -6);
+  ctx.quadraticCurveTo(0, 4, 30, -6);
   ctx.strokeStyle = B.gold;
-  ctx.lineWidth = 2;
+  ctx.lineWidth = 2.2;
   ctx.stroke();
 
-  // torso — soft rounded chest, elegant slope
+  // torso
   ctx.beginPath();
-  ctx.moveTo(-24, -10);
-  ctx.quadraticCurveTo(-32, -45, -26, -82);
-  ctx.quadraticCurveTo(0, -90, 26, -82);
-  ctx.quadraticCurveTo(32, -45, 24, -10);
-  ctx.quadraticCurveTo(0, -4, -24, -10);
+  ctx.moveTo(-26, -10);
+  ctx.quadraticCurveTo(-34, -45, -28, -82);
+  ctx.quadraticCurveTo(0, -90, 28, -82);
+  ctx.quadraticCurveTo(34, -45, 26, -10);
+  ctx.quadraticCurveTo(0, -4, -26, -10);
   ctx.closePath();
   const torsoG = ctx.createLinearGradient(0, -90, 0, -5);
   torsoG.addColorStop(0, light);
   torsoG.addColorStop(1, robe);
   fillStroke(torsoG, B.ink, 2.2);
 
-  // soft chest highlight
-  ctx.beginPath();
-  ctx.ellipse(-6, -50, 10, 16, -0.2, 0, Math.PI * 2);
-  ctx.fillStyle = "rgba(255,248,240,0.12)";
-  ctx.fill();
-
-  // angavastram for sage — simple drape, no buttas
   if (sage) {
     ctx.beginPath();
-    ctx.moveTo(-28, -78);
-    ctx.quadraticCurveTo(-48, -30, -28, 30);
-    ctx.lineTo(-16, 28);
-    ctx.quadraticCurveTo(-34, -30, -16, -74);
+    ctx.moveTo(-30, -78);
+    ctx.quadraticCurveTo(-50, -30, -30, 28);
+    ctx.lineTo(-16, 26);
+    ctx.quadraticCurveTo(-36, -30, -16, -74);
     ctx.closePath();
     fillStroke(B.cream, B.ink, 1.8);
-    ctx.beginPath();
-    ctx.moveTo(-36, -50);
-    ctx.quadraticCurveTo(-30, -20, -24, 10);
-    ctx.strokeStyle = "rgba(42,24,16,0.2)";
-    ctx.lineWidth = 1.2;
-    ctx.stroke();
   }
 
-  // thin sacred thread
   ctx.beginPath();
   ctx.moveTo(-12, -78);
   ctx.quadraticCurveTo(8, -40, 14, -12);
-  ctx.strokeStyle = "rgba(247,237,216,0.7)";
+  ctx.strokeStyle = "rgba(247,237,216,0.75)";
   ctx.lineWidth = 1.4;
   ctx.stroke();
 
-  // arms — graceful curves
-  const drawArm = (side, raise) => {
-    ctx.save();
-    ctx.translate(side * 26, -72);
-    ctx.rotate(side * (0.4 - raise * 1.2));
-    // upper
+  // hands on hips
+  const drawArmOnHip = (side) => {
+    const sx = side * 28;
+    const sy = -74;
     ctx.beginPath();
-    ctx.ellipse(0, 18, 7, 20, 0, 0, Math.PI * 2);
+    ctx.moveTo(sx, sy);
+    ctx.quadraticCurveTo(sx + side * 28, sy + 18, sx + side * 32, sy + 38);
+    ctx.lineTo(sx + side * 24, sy + 42);
+    ctx.quadraticCurveTo(sx + side * 20, sy + 22, sx + side * 4, sy + 8);
+    ctx.closePath();
     fillStroke(B.skin, B.ink, 1.8);
-    // forearm
     ctx.beginPath();
-    ctx.ellipse(0, 42, 6, 16, 0.1 * side, 0, Math.PI * 2);
+    ctx.moveTo(sx + side * 28, sy + 36);
+    ctx.quadraticCurveTo(sx + side * 36, sy + 58, sx + side * 22, sy + 72);
+    ctx.lineTo(sx + side * 14, sy + 70);
+    ctx.quadraticCurveTo(sx + side * 26, sy + 54, sx + side * 22, sy + 40);
+    ctx.closePath();
     fillStroke(B.skin, B.ink, 1.8);
-    // hand
     ctx.beginPath();
-    ctx.ellipse(0, 58, 7, 6, 0, 0, Math.PI * 2);
+    ctx.ellipse(sx + side * 18, sy + 74, 8, 7, side * 0.2, 0, Math.PI * 2);
     fillStroke(B.skin, B.ink, 1.6);
-    // simple thin bangle
-    if (crown || young) {
-      ctx.beginPath();
-      ctx.ellipse(0, 50, 8, 3, 0, 0, Math.PI * 2);
-      ctx.strokeStyle = B.gold;
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
-    }
-    ctx.restore();
+    ctx.beginPath();
+    ctx.ellipse(sx + side * 26, sy + 48, 7, 3.5, side * 0.4, 0, Math.PI * 2);
+    ctx.strokeStyle = B.gold;
+    ctx.lineWidth = 1.8;
+    ctx.stroke();
   };
-  drawArm(-1, 0.05);
-  drawArm(1, armRaise);
+  drawArmOnHip(-1);
+  drawArmOnHip(1);
 
-  // neck
+  // neck + head
   ctx.beginPath();
   ctx.ellipse(0, -88, 8, 10, 0, 0, Math.PI * 2);
   fillStroke(B.skin, B.ink, 1.5);
 
-  // head — slightly large, soft oval (Bapu signature)
   ctx.beginPath();
   ctx.ellipse(0, -112, 26, 30, 0, 0, Math.PI * 2);
   fillStroke(B.skin, B.ink, 2.2);
-  // cheek soft shadow
   ctx.beginPath();
   ctx.ellipse(10, -105, 8, 10, 0.3, 0, Math.PI * 2);
   ctx.fillStyle = "rgba(196,144,112,0.35)";
   ctx.fill();
 
-  // hair — soft mass + topknot
+  // hair (white-grey for long-bearded Drona)
+  const hair = beard ? "#e8e0d0" : B.ink;
   ctx.beginPath();
   ctx.ellipse(0, -128, 24, 16, 0, Math.PI * 1.05, Math.PI * 1.95);
-  fillStroke(B.ink, B.ink, 1);
+  fillStroke(hair, B.ink, 1);
   ctx.beginPath();
   ctx.ellipse(0, -142, 11, 10, 0, 0, Math.PI * 2);
-  fillStroke(B.ink, B.ink, 1);
-  // soft hairline
+  fillStroke(beard ? "#f0ebe0" : B.ink, B.ink, 1);
   ctx.beginPath();
   ctx.moveTo(-20, -120);
   ctx.quadraticCurveTo(0, -112, 20, -120);
-  ctx.strokeStyle = B.ink;
+  ctx.strokeStyle = beard ? "#a09888" : B.ink;
   ctx.lineWidth = 1.5;
   ctx.stroke();
 
-  // EYES — large almond, thick upper lid, soft lower (Bapu hallmark)
   const drawEye = (ex) => {
-    // white
     ctx.beginPath();
     ctx.ellipse(ex, -112, 8, 5.5, ex > 0 ? 0.12 : -0.12, 0, Math.PI * 2);
     fillStroke(B.white, B.ink, 1.3);
-    // iris
     ctx.beginPath();
     ctx.arc(ex + (ex > 0 ? 1 : -1), -112, 3.2, 0, Math.PI * 2);
     fillStroke("#3a2818", null);
-    // pupil
     ctx.beginPath();
     ctx.arc(ex + (ex > 0 ? 1.2 : -1.2), -112, 1.5, 0, Math.PI * 2);
     fillStroke(B.ink, null);
-    // spark
     ctx.beginPath();
     ctx.arc(ex + (ex > 0 ? 0 : -2), -113.5, 1, 0, Math.PI * 2);
     fillStroke(B.white, null);
-    // thick upper lid curve
     ctx.beginPath();
     ctx.moveTo(ex - 8, -112);
     ctx.quadraticCurveTo(ex, -120, ex + 8, -112);
@@ -677,18 +651,16 @@ function drawFigure(x, y, opts = {}) {
     ctx.lineWidth = 2.4;
     ctx.lineCap = "round";
     ctx.stroke();
-    // soft brow
     ctx.beginPath();
-    ctx.moveTo(ex - 9, -120);
-    ctx.quadraticCurveTo(ex, -126, ex + 8, -121);
-    ctx.strokeStyle = B.softInk;
-    ctx.lineWidth = 1.5;
+    ctx.moveTo(ex - 10, -118);
+    ctx.quadraticCurveTo(ex, -128, ex + 9, -119);
+    ctx.strokeStyle = B.ink;
+    ctx.lineWidth = 2;
     ctx.stroke();
   };
   drawEye(-9);
   drawEye(9);
 
-  // nose — soft curve
   ctx.beginPath();
   ctx.moveTo(0, -112);
   ctx.quadraticCurveTo(3, -104, 1, -98);
@@ -696,16 +668,14 @@ function drawFigure(x, y, opts = {}) {
   ctx.lineWidth = 1.4;
   ctx.stroke();
 
-  // gentle smile
   ctx.beginPath();
-  ctx.moveTo(-7, -92);
-  ctx.quadraticCurveTo(0, -87, 7, -92);
+  ctx.moveTo(-6, -92);
+  ctx.quadraticCurveTo(0, -90, 6, -92);
   ctx.strokeStyle = B.softInk;
   ctx.lineWidth = 1.6;
   ctx.lineCap = "round";
   ctx.stroke();
 
-  // tilak — soft vertical
   ctx.beginPath();
   ctx.moveTo(0, -122);
   ctx.lineTo(0, -106);
@@ -717,31 +687,59 @@ function drawFigure(x, y, opts = {}) {
   ctx.arc(0, -124, 2, 0, Math.PI * 2);
   fillStroke(C.vermillion, null);
 
-  if (beard) {
+  // curly warrior mustache
+  if (mustache) {
+    const mCol = beard ? "#f4f0e8" : B.ink;
+    const drawCurl = (side) => {
+      ctx.beginPath();
+      ctx.moveTo(side * 3, -94);
+      ctx.quadraticCurveTo(side * 14, -96, side * 20, -92);
+      ctx.quadraticCurveTo(side * 26, -88, side * 24, -84);
+      ctx.quadraticCurveTo(side * 20, -86, side * 18, -90);
+      ctx.quadraticCurveTo(side * 12, -94, side * 4, -93);
+      ctx.closePath();
+      fillStroke(mCol, B.ink, 1.2);
+      ctx.beginPath();
+      ctx.arc(side * 25, -86, 3.2, 0, Math.PI * 2);
+      fillStroke(mCol, B.ink, 1);
+    };
+    drawCurl(-1);
+    drawCurl(1);
     ctx.beginPath();
-    ctx.moveTo(-16, -96);
-    ctx.quadraticCurveTo(0, -78, 16, -96);
-    ctx.quadraticCurveTo(0, -88, -16, -96);
-    fillStroke(B.cream, B.ink, 1.4);
+    ctx.ellipse(0, -94, 5, 2.5, 0, 0, Math.PI * 2);
+    fillStroke(mCol, B.ink, 1);
   }
 
-  // thin earrings (young / crown)
-  if (crown || young) {
-    for (const sx of [-22, 22]) {
+  // long white beard (Drona)
+  if (beard) {
+    ctx.beginPath();
+    ctx.moveTo(-18, -90);
+    ctx.quadraticCurveTo(-28, -58, -14, -14);
+    ctx.quadraticCurveTo(0, 0, 14, -14);
+    ctx.quadraticCurveTo(28, -58, 18, -90);
+    ctx.quadraticCurveTo(0, -76, -18, -90);
+    ctx.closePath();
+    const bg = ctx.createLinearGradient(0, -90, 0, 0);
+    bg.addColorStop(0, "#f8f4ec");
+    bg.addColorStop(0.55, "#ebe4d8");
+    bg.addColorStop(1, "#d0c8bc");
+    fillStroke(bg, B.ink, 1.8);
+    for (const sx of [-10, 0, 10]) {
       ctx.beginPath();
-      ctx.arc(sx, -100, 3, 0, Math.PI * 2);
-      fillStroke(B.gold, B.ink, 1);
-      ctx.beginPath();
-      ctx.moveTo(sx, -97);
-      ctx.lineTo(sx, -90);
-      ctx.strokeStyle = B.gold;
+      ctx.moveTo(sx, -85);
+      ctx.quadraticCurveTo(sx + 3, -45, sx, -12);
+      ctx.strokeStyle = "rgba(42,24,16,0.16)";
       ctx.lineWidth = 1.2;
       ctx.stroke();
     }
   }
 
-  // simple necklace line
   if (crown || young) {
+    for (const sx of [-22, 22]) {
+      ctx.beginPath();
+      ctx.arc(sx, -100, 3, 0, Math.PI * 2);
+      fillStroke(B.gold, B.ink, 1);
+    }
     ctx.beginPath();
     ctx.arc(0, -82, 14, 0.25, Math.PI - 0.25);
     ctx.strokeStyle = B.gold;
@@ -750,7 +748,6 @@ function drawFigure(x, y, opts = {}) {
   }
 
   if (crown) {
-    // elegant tall mukuta — clean silhouette, not busy
     ctx.beginPath();
     ctx.moveTo(-20, -130);
     ctx.quadraticCurveTo(-18, -155, 0, -168);
@@ -762,13 +759,9 @@ function drawFigure(x, y, opts = {}) {
     cg.addColorStop(0, B.gold);
     cg.addColorStop(1, B.saffron);
     fillStroke(cg, B.ink, 1.8);
-    // single jewel
     ctx.beginPath();
     ctx.arc(0, -148, 4, 0, Math.PI * 2);
     fillStroke(C.vermillion, B.ink, 1);
-    ctx.beginPath();
-    ctx.arc(0, -148, 1.5, 0, Math.PI * 2);
-    fillStroke(B.cream, null);
   }
 
   if (name) {
@@ -780,6 +773,7 @@ function drawFigure(x, y, opts = {}) {
 
   ctx.restore();
 }
+
 
 function drawBow(x, y, scale, drawAmt = 0) {
   ctx.save();
@@ -1173,7 +1167,7 @@ function renderWorld(now) {
   drawGardenDecor();
   drawTree(1080, 580, sway);
 
-  // princes — soft Bapu silhouettes
+  // princes — warriors, hands on hips, curly mustaches
   const princeRobes = [
     { robe: "#6a4050", light: "#8a6070" },
     { robe: "#3a5a48", light: "#5a7a68" },
@@ -1186,36 +1180,37 @@ function renderWorld(now) {
       robe: princeRobes[i].robe,
       robeLight: princeRobes[i].light,
       young: true,
+      mustache: true,
       breath: breath * 0.6 + i,
-      armRaise: 0.05 * Math.sin(now * 0.002 + i),
     });
   }
 
-  // Drona — sage, flowing angavastram
+  // Drona — saffron-clad ācārya, long white beard, warrior mustache
   drawFigure(320, 580, {
-    scale: 1.05,
-    robe: "#2a3848",
-    robeLight: "#4a5868",
+    scale: 1.08,
+    robe: "#d47820",
+    robeLight: "#e8a848",
     beard: true,
     sage: true,
+    mustache: true,
     name: "Drona",
     breath,
-    armRaise: 0.1 + Math.sin(now * 0.001) * 0.05,
   });
   drawDronaStaff(368, 530, breath);
 
-  // Arjuna — young prince, clean crown, bow
+  // Arjuna — warrior prince, hands on hips; bow nearby
   drawFigure(1220, 590, {
     scale: 1.0,
     robe: "#2a4a68",
     robeLight: "#4a6a88",
     crown: true,
     young: true,
+    mustache: true,
     name: "Arjuna",
     breath: breath * 0.9,
-    armRaise,
   });
-  drawBow(1285, 500 + breath * 0.9, 1.05, armRaise);
+  // bow rests beside him (drawn as if held at hip readiness)
+  drawBow(1295, 520 + breath * 0.9, 0.95, Math.max(0.15, armRaise * 0.5));
 
   // Bird
   const eyeGlow = Math.max(0, (focus - 0.55) / 0.45);

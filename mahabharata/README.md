@@ -34,6 +34,14 @@ cd pixelloid && python3 -m http.server 8767
 # http://127.0.0.1:8767/mahabharata/play.html?ep=01
 ```
 
+## Narration
+
+Browser **Web Speech API** — kathavachak style: one deep Indian-English male voice for all lines  
+(prefers `en-IN` / Ravi-class voices; falls back to deep English male + low pitch).  
+Toggle **Voice** in the player. Quality depends on OS voices (macOS/Windows often have Ravi or similar).
+
+For studio-grade voice later: pre-render with a TTS service offline → `episodes/…/audio/` and swap the player to `<audio>` clips.
+
 ## Imagine (optional)
 
 Place generated stills in `episodes/01-birds-eye/stills/` (Kalamkari / Pattachitra prompts work well).  

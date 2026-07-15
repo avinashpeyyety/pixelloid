@@ -19,3 +19,4 @@
 - [x] Ep 01 *The Bird's Eye* prototype
 - [x] Hub card + github.io path
 - [x] Pivot to 2D Phad/Pattachitra narrative-cloth player (Canvas 2D)
+- [x] Kathavachak narration (Web Speech, deep Indian-English male preference)

@@ -15,6 +15,7 @@ const trackEl = document.getElementById("progress-track");
 const btnPlay = document.getElementById("btn-play");
 const btnRestart = document.getElementById("btn-restart");
 const btnMute = document.getElementById("btn-mute");
+const btnVoice = document.getElementById("btn-voice");
 const btnReplay = document.getElementById("btn-replay");
 const loader = document.getElementById("loader");
 const endCard = document.getElementById("end-card");
@@ -25,6 +26,153 @@ epTitle.textContent = EPISODE.title;
 epSub.textContent = EPISODE.subtitle;
 
 const TOTAL = EPISODE.totalSec;
+
+// ── Narration — deep Indian-English male (browser TTS) ─────────
+/**
+ * Kathavachak-style: one bard voice for the phad.
+ * Prefers en-IN male (Ravi, etc.), else deep English male + low pitch.
+ */
+class Kathavachak {
+  constructor() {
+    this.on = true;
+    this.voice = null;
+    this._ready = false;
+    this._token = 0;
+    this._keepAlive = null;
+    if (typeof speechSynthesis !== "undefined") {
+      speechSynthesis.getVoices();
+      speechSynthesis.addEventListener("voiceschanged", () => this.pickVoice());
+      // delayed pick (Chrome loads voices async)
+      setTimeout(() => this.pickVoice(), 200);
+      setTimeout(() => this.pickVoice(), 800);
+    }
+  }
+
+  pickVoice() {
+    if (typeof speechSynthesis === "undefined") return null;
+    const all = speechSynthesis.getVoices();
+    if (!all.length) return this.voice;
+
+    const score = (v) => {
+      const name = v.name || "";
+      const lang = (v.lang || "").toLowerCase();
+      let s = 0;
+      // Indian English / Hindi-capable systems
+      if (/^en-in/i.test(lang)) s += 100;
+      if (/^hi/i.test(lang)) s += 40;
+      if (/ravi|hemant|indian|india/i.test(name)) s += 80;
+      // Known deep / male storyteller-ish English voices
+      if (/google uk english male|microsoft (david|mark|george|ryan|guy)|daniel|alex|fred|bruce|aaron|james|tom|lee|ralph|gordon|richard|brian|christopher|english male|\bmale\b/i.test(name))
+        s += 50;
+      if (/en-gb|en-us|en-au/i.test(lang) && /male|david|daniel|james|george/i.test(name)) s += 30;
+      // Prefer local for lower latency
+      if (v.localService) s += 5;
+      // Penalize clearly female
+      if (/female|zira|samantha|karen|moira|victoria|susan|aria|tessa|flo|neerja/i.test(name) && !/ravi|hemant|male/i.test(name))
+        s -= 120;
+      if (/^en/i.test(lang)) s += 10;
+      return s;
+    };
+
+    let best = null;
+    let bestS = -Infinity;
+    for (const v of all) {
+      const s = score(v);
+      if (s > bestS) {
+        bestS = s;
+        best = v;
+      }
+    }
+    this.voice = best;
+    this._ready = !!best;
+    return this.voice;
+  }
+
+  /** Slight role colouring — still one deep male bard. */
+  roleParams(who) {
+    const w = (who || "Narrator").toLowerCase();
+    if (w === "drona") return { pitch: 0.72, rate: 0.82 };
+    if (w === "arjuna") return { pitch: 0.88, rate: 0.9 };
+    if (w === "prince") return { pitch: 0.92, rate: 0.93 };
+    // Narrator / default — deep, measured
+    return { pitch: 0.78, rate: 0.86 };
+  }
+
+  stop() {
+    this._token++;
+    if (this._keepAlive) {
+      clearInterval(this._keepAlive);
+      this._keepAlive = null;
+    }
+    try {
+      speechSynthesis?.cancel();
+    } catch {
+      /* ok */
+    }
+  }
+
+  speak(who, text) {
+    if (!this.on || !text || !text.trim()) return;
+    if (typeof speechSynthesis === "undefined") return;
+
+    this.stop();
+    const token = this._token;
+    if (!this.voice) this.pickVoice();
+
+    const u = new SpeechSynthesisUtterance(text.trim());
+    const { pitch, rate } = this.roleParams(who);
+    u.pitch = pitch;
+    u.rate = rate;
+    u.volume = 1;
+    if (this.voice) {
+      u.voice = this.voice;
+      // Force Indian English locale when possible for accent
+      if (/en-in|india|ravi|hemant/i.test(`${this.voice.lang} ${this.voice.name}`)) {
+        u.lang = "en-IN";
+      } else if (/^hi/i.test(this.voice.lang || "")) {
+        u.lang = this.voice.lang;
+      } else {
+        u.lang = this.voice.lang || "en-IN";
+      }
+    } else {
+      u.lang = "en-IN";
+    }
+
+    // Chrome bug: long speech can stall — nudge pause/resume
+    this._keepAlive = setInterval(() => {
+      if (token !== this._token) return;
+      if (!speechSynthesis.speaking) return;
+      if (speechSynthesis.paused) speechSynthesis.resume();
+      else {
+        speechSynthesis.pause();
+        speechSynthesis.resume();
+      }
+    }, 10000);
+
+    u.onend = () => {
+      if (token !== this._token) return;
+      if (this._keepAlive) {
+        clearInterval(this._keepAlive);
+        this._keepAlive = null;
+      }
+    };
+    u.onerror = () => {
+      if (this._keepAlive) {
+        clearInterval(this._keepAlive);
+        this._keepAlive = null;
+      }
+    };
+
+    speechSynthesis.speak(u);
+  }
+
+  setEnabled(on) {
+    this.on = on;
+    if (!on) this.stop();
+  }
+}
+
+const katha = new Kathavachak();
 
 // ── Palette (phad / pattachitra) ───────────────────────────────
 const C = {
@@ -800,7 +948,7 @@ const dust = Array.from({ length: 60 }, () => ({
   a: Math.random() * Math.PI * 2,
 }));
 
-function applyBeat(idx) {
+function applyBeat(idx, { speak = true } = {}) {
   const b = EPISODE.beats[idx];
   if (!b) return;
   setCamera(b.cam);
@@ -812,6 +960,7 @@ function applyBeat(idx) {
     lineEl.textContent = b.text || "";
   } else {
     dialogueEl.classList.add("hidden");
+    katha.stop();
   }
 
   if (b.cam === "arjuna-bow" || b.cam === "arjuna-eye" || b.cam === "eye") {
@@ -825,16 +974,21 @@ function applyBeat(idx) {
   } else {
     targetArm = b.cam === "drona" ? 0.15 : 0;
   }
+
+  // Kathavachak: speak line when the beat lands during play
+  if (speak && playing && b.text) {
+    katha.speak(b.who || "Narrator", b.text);
+  }
 }
 
-function updateBeat(time) {
+function updateBeat(time, opts) {
   let idx = 0;
   for (let i = 0; i < EPISODE.beats.length; i++) {
     if (time >= EPISODE.beats[i].t) idx = i;
   }
   if (idx !== lastBeatIdx) {
     lastBeatIdx = idx;
-    applyBeat(idx);
+    applyBeat(idx, opts);
   }
 }
 
@@ -851,14 +1005,15 @@ function resetPlay() {
   birdHit = false;
   goldHour = 0;
   targetGold = 0;
+  katha.stop();
   endCard.classList.remove("show");
   btnPlay.textContent = "Play";
   setCamera("wide");
   cam.cx = camT.cx;
   cam.cy = camT.cy;
   cam.zoom = camT.zoom;
-  updateBeat(0);
-  applyBeat(0);
+  applyBeat(0, { speak: false });
+  lastBeatIdx = 0;
 }
 
 function fmt(sec) {
@@ -1003,6 +1158,7 @@ function frame(now) {
       t = TOTAL;
       playing = false;
       ended = true;
+      katha.stop();
       btnPlay.textContent = "Play";
       endCard.classList.add("show");
       dialogueEl.classList.add("hidden");
@@ -1067,6 +1223,12 @@ function frame(now) {
 }
 
 // ── UI ─────────────────────────────────────────────────────────
+function syncVoiceBtn() {
+  if (!btnVoice) return;
+  btnVoice.textContent = katha.on ? "Voice ✓" : "Voice";
+  btnVoice.setAttribute("aria-pressed", katha.on ? "true" : "false");
+}
+
 btnPlay.addEventListener("click", async () => {
   if (ended) resetPlay();
   playing = !playing;
@@ -1074,10 +1236,15 @@ btnPlay.addEventListener("click", async () => {
   if (playing) {
     try {
       await drone.start();
-      btnMute.textContent = "Sound ✓";
+      btnMute.textContent = "Drone ✓";
     } catch {
       /* autoplay */
     }
+    // Speak current beat immediately on play/resume
+    const b = EPISODE.beats[lastBeatIdx] || EPISODE.beats[0];
+    if (b?.text) katha.speak(b.who || "Narrator", b.text);
+  } else {
+    katha.stop();
   }
 });
 
@@ -1087,17 +1254,29 @@ btnRestart.addEventListener("click", async () => {
   btnPlay.textContent = "Pause";
   try {
     await drone.start();
-    btnMute.textContent = "Sound ✓";
+    btnMute.textContent = "Drone ✓";
   } catch {
     /* ok */
   }
+  const b = EPISODE.beats[0];
+  if (b?.text) katha.speak(b.who || "Narrator", b.text);
+  lastBeatIdx = 0;
 });
 
 btnReplay?.addEventListener("click", () => btnRestart.click());
 
 btnMute.addEventListener("click", async () => {
   const on = await drone.toggle();
-  btnMute.textContent = on ? "Sound ✓" : "Sound";
+  btnMute.textContent = on ? "Drone ✓" : "Drone";
+});
+
+btnVoice?.addEventListener("click", () => {
+  katha.setEnabled(!katha.on);
+  syncVoiceBtn();
+  if (katha.on && playing) {
+    const b = EPISODE.beats[lastBeatIdx] || EPISODE.beats[0];
+    if (b?.text) katha.speak(b.who || "Narrator", b.text);
+  }
 });
 
 trackEl.addEventListener("click", (e) => {
@@ -1111,8 +1290,9 @@ trackEl.addEventListener("click", (e) => {
   birdHit = false;
   goldHour = 0;
   targetGold = 0;
-  // re-apply state from scrub
-  updateBeat(t);
+  katha.stop();
+  // re-apply state from scrub; speak if playing
+  updateBeat(t, { speak: playing });
   if (t >= 66) {
     arrowU = Math.min(1, (t - 66) / 1.4);
     birdHit = arrowU >= 1;
@@ -1122,7 +1302,9 @@ trackEl.addEventListener("click", (e) => {
 
 // boot
 setCamera("wide");
-applyBeat(0);
+applyBeat(0, { speak: false });
+lastBeatIdx = 0;
+syncVoiceBtn();
 requestAnimationFrame(frame);
 requestAnimationFrame(() => {
   setTimeout(() => loader.classList.add("done"), 350);

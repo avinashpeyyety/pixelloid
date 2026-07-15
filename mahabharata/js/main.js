@@ -687,26 +687,38 @@ function drawFigure(x, y, opts = {}) {
   ctx.arc(0, -124, 2, 0, Math.PI * 2);
   fillStroke(C.vermillion, null);
 
-  // curly warrior mustache
+  // curly warrior mustache — tips curl UP (handlebar / Rajput style)
   if (mustache) {
     const mCol = beard ? "#f4f0e8" : B.ink;
     const drawCurl = (side) => {
+      // thick ribbon from lip out and up, spiral tip above
       ctx.beginPath();
-      ctx.moveTo(side * 3, -94);
-      ctx.quadraticCurveTo(side * 14, -96, side * 20, -92);
-      ctx.quadraticCurveTo(side * 26, -88, side * 24, -84);
-      ctx.quadraticCurveTo(side * 20, -86, side * 18, -90);
-      ctx.quadraticCurveTo(side * 12, -94, side * 4, -93);
+      ctx.moveTo(side * 2, -93);
+      // out along lip, slight lift
+      ctx.quadraticCurveTo(side * 12, -95, side * 18, -98);
+      // sweep outward and UP
+      ctx.quadraticCurveTo(side * 26, -104, side * 24, -112);
+      // curl tip (inward spiral, still high)
+      ctx.quadraticCurveTo(side * 18, -118, side * 14, -112);
+      ctx.quadraticCurveTo(side * 16, -106, side * 20, -104);
+      // underside back to lip
+      ctx.quadraticCurveTo(side * 14, -98, side * 4, -94);
       ctx.closePath();
-      fillStroke(mCol, B.ink, 1.2);
+      fillStroke(mCol, B.ink, 1.3);
+      // bold upturned tip disc
       ctx.beginPath();
-      ctx.arc(side * 25, -86, 3.2, 0, Math.PI * 2);
-      fillStroke(mCol, B.ink, 1);
+      ctx.arc(side * 17, -113, 3.6, 0, Math.PI * 2);
+      fillStroke(mCol, B.ink, 1.1);
+      // inner curl ring (reads as upward roll)
+      ctx.beginPath();
+      ctx.arc(side * 17, -113, 1.6, 0, Math.PI * 2);
+      fillStroke(beard ? "#ddd6cc" : "#1a1008", null);
     };
     drawCurl(-1);
     drawCurl(1);
+    // center bridge under nose
     ctx.beginPath();
-    ctx.ellipse(0, -94, 5, 2.5, 0, 0, Math.PI * 2);
+    ctx.ellipse(0, -94, 5, 2.8, 0, 0, Math.PI * 2);
     fillStroke(mCol, B.ink, 1);
   }
 

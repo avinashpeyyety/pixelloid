@@ -1,6 +1,6 @@
 /**
  * Episode 01 — The Bird's Eye
- * Dronācārya’s test: what do you see?
+ * Dronāchārya’s test: what do you see?
  *
  * Beats drive phad-camera (pan/zoom on the cloth), focus, and dialogue.
  * Style: Bapu-inspired figures on narrative cloth.
@@ -25,7 +25,7 @@ export const EPISODE = {
       cam: "wide",
       focus: 0,
       who: "Narrator",
-      text: "In the gardens of Hastināpura, the ācārya sets a test no prince will forget.",
+      text: "In the gardens of Hastināpura, the Acharya sets a test no prince will forget.",
     },
     {
       t: 8,

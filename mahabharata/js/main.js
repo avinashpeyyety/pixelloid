@@ -1185,7 +1185,7 @@ function renderWorld(now) {
     });
   }
 
-  // Drona — saffron-clad ācārya, long white beard, warrior mustache
+  // Drona — saffron-clad Acharya, long white beard, warrior mustache
   drawFigure(320, 580, {
     scale: 1.08,
     robe: "#d47820",

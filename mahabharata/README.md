@@ -3,22 +3,17 @@
 **Live:** https://avinashpeyyety.github.io/pixelloid/mahabharata/
 
 Episodic browser theater: **write script → stage beats → animate on a narrative cloth**.  
-**2D Canvas** (no build, no Three.js). Style: **Phad / Pattachitra** — Indian scroll storytelling.
+**2D Canvas** (no build). **Figures in the spirit of Bapu** (Sattiraju Lakshmi Narayana) on a soft phad ground.
 
-## Why this visual language?
+## Visual language
 
-Indian epic already has professional *cloth* narration traditions:
+| Layer | Choice |
+|-------|--------|
+| **Figures** | **Bapu** — elongated lyrical silhouettes, large almond eyes with thick upper lids, soft dhoti folds, minimal jewelry, character via face & gesture |
+| **Stage** | Cloth-scroll atmosphere (phad-like pan/zoom), quiet borders — not textile-stamped costumes |
+| **Avoided** | Heavy kalamkari butta-stamping on robes (over-literal; fights Bapu’s clean line) |
 
-| Form | Region | Fit for this series |
-|------|--------|---------------------|
-| **Phad** | Rajasthan | Long painted cloth + oral performance (Bhopa). Episodes as panels on one scroll — ideal metaphor for our player. |
-| **Pattachitra** | Odisha | Mythic cloth painting, bold outline, flat color, lotus borders. Mahābhārata is a classic subject. |
-| **Cheriyal scroll** | Telangana | Narrative ballad scrolls in sequential frames. |
-| **Kalamkari** | Andhra | Block/hand painted cotton epics — great for still keyframes later. |
-
-We use a **Phad + Pattachitra + Kalamkari hybrid**: dyed cloth ground, vermillion/indigo/saffron, black contour, ornate border; **Kalamkari** on attires & props (paisley buttas, lotus rosettes, peacock-eye feathers, vine bands, zari-style edges). Camera pans the scroll like a living phad performance.  
-
-**Not film CGI.** Flat, legible, mythic — closer to high-end illustration/animation than low-poly 3D, with far less complexity. Grok Imagine stills can later texture a panel when a face or court needs more density.
+**Not film CGI.** Soft illustration language suited to episodic itihāsa. Grok Imagine later if a keyframe needs denser art.
 
 ## Episodes
 

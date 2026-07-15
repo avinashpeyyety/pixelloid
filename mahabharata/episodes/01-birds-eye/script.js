@@ -3,13 +3,13 @@
  * Dronācārya’s test: what do you see?
  *
  * Beats drive phad-camera (pan/zoom on the cloth), focus, and dialogue.
- * Style: Phad / Pattachitra narrative scroll.
+ * Style: Bapu-inspired figures on narrative cloth.
  */
 export const EPISODE = {
   id: "01",
   title: "The Bird's Eye",
   subtitle: "Drona’s test of Arjuna",
-  style: "phad-pattachitra",
+  style: "bapu-phad",
   totalSec: 88,
   palette: {
     cloth: "#c4a06a",

@@ -2,21 +2,29 @@
 
 **Live:** https://avinashpeyyety.github.io/pixelloid/mahabharata/
 
-Episodic browser theater: **write script → stage beats → animate**.  
-Self-contained **Three.js** (no build step). Grok Imagine can supply stills later; v1 is pure procedural art direction.
+Episodic browser theater: **write script → stage beats → animate on a narrative cloth**.  
+**2D Canvas** (no build, no Three.js). Style: **Phad / Pattachitra** — Indian scroll storytelling.
 
-## Three.js — is it enough?
+## Why this visual language?
 
-**Yes for this product shape:** stylized cinematic shorts, mythic light, silhouettes, camera as storyteller, particle atmosphere.  
-**Not a substitute for:** full character performance (faces, cloth, long dialogue lip-sync film). Those need Blender/USD pipelines or pre-rendered video.
+Indian epic already has professional *cloth* narration traditions:
 
-Pixelloid ships **high-aesthetic web episodes** — Three.js is the right default. Escalate to hybrid (Imagine stills as textures / short video plates) only when a beat needs photoreal faces.
+| Form | Region | Fit for this series |
+|------|--------|---------------------|
+| **Phad** | Rajasthan | Long painted cloth + oral performance (Bhopa). Episodes as panels on one scroll — ideal metaphor for our player. |
+| **Pattachitra** | Odisha | Mythic cloth painting, bold outline, flat color, lotus borders. Mahābhārata is a classic subject. |
+| **Cheriyal scroll** | Telangana | Narrative ballad scrolls in sequential frames. |
+| **Kalamkari** | Andhra | Block/hand painted cotton epics — great for still keyframes later. |
+
+We use a **Phad + Pattachitra hybrid**: dyed cloth ground, vermillion/indigo/saffron, black contour, ornate border, camera pans the scroll like a living phad performance.  
+
+**Not film CGI.** Flat, legible, mythic — closer to high-end illustration/animation than low-poly 3D, with far less complexity. Grok Imagine stills can later texture a panel when a face or court needs more density.
 
 ## Episodes
 
 | # | Title | Status |
 |---|--------|--------|
-| 01 | **The Bird's Eye** — Drona’s test of Arjuna | Prototype |
+| 01 | **The Bird's Eye** — Drona’s test of Arjuna | Prototype (2D phad) |
 
 ## Local
 
@@ -28,5 +36,5 @@ cd pixelloid && python3 -m http.server 8767
 
 ## Imagine (optional)
 
-Place generated stills in `episodes/01-birds-eye/stills/` and reference from the episode script.  
-Browser cannot safely hold production API keys; generate offline with Imagine / Grok, then commit assets if licensed for the show.
+Place generated stills in `episodes/01-birds-eye/stills/` (Kalamkari / Pattachitra prompts work well).  
+Never put production API keys in the browser.

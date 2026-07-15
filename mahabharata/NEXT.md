@@ -2,9 +2,10 @@
 
 ## Now
 
-- [ ] Ep 02 script + beats (e.g. Draupadi swayamvara or dice hall — careful tone)
-- [ ] Shared episode schema doc (`docs/EPISODE_FORMAT.md`)
-- [ ] Optional Imagine stills for ep 01 keyframes (offline generate → `stills/`)
+- [ ] Ep 02 script + beats on same phad engine (e.g. Draupadi swayamvara — careful tone)
+- [ ] Shared episode schema doc (`docs/EPISODE_FORMAT.md`) — cam keys + figure props
+- [ ] Richer puppet library: multi-layer limbs, expression frames, horse/chariot motifs
+- [ ] Optional Imagine stills as phad panel textures (Kalamkari/Pattachitra prompts)
 
 ## Later
 
@@ -15,5 +16,6 @@
 ## Done
 
 - [x] Series scaffold under pixelloid
-- [x] Ep 01 *The Bird's Eye* Three.js prototype
+- [x] Ep 01 *The Bird's Eye* prototype
 - [x] Hub card + github.io path
+- [x] Pivot to 2D Phad/Pattachitra narrative-cloth player (Canvas 2D)

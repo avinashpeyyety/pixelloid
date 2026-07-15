@@ -2,21 +2,22 @@
  * Episode 01 — The Bird's Eye
  * Dronācārya’s test: what do you see?
  *
- * Beats drive camera, focus, and dialogue. Pure data — animator reads this.
+ * Beats drive phad-camera (pan/zoom on the cloth), focus, and dialogue.
+ * Style: Phad / Pattachitra narrative scroll.
  */
 export const EPISODE = {
   id: "01",
   title: "The Bird's Eye",
   subtitle: "Drona’s test of Arjuna",
+  style: "phad-pattachitra",
   totalSec: 88,
   palette: {
-    skyTop: 0x0a0614,
-    skyBot: 0x1a0a28,
-    saffron: 0xe8a838,
-    gold: 0xf5d76e,
-    earth: 0x2a1810,
-    leaf: 0x1a3d28,
-    blood: 0x8b1a1a,
+    cloth: "#c4a06a",
+    vermillion: "#b83218",
+    saffron: "#e08a1e",
+    gold: "#e8c547",
+    indigo: "#1a2744",
+    leaf: "#2a5a38",
   },
   beats: [
     {

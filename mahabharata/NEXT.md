@@ -2,22 +2,29 @@
 
 ## Now
 
-- [ ] Ep 02 script + beats on same phad engine (e.g. Draupadi swayamvara — careful tone)
-- [ ] Shared episode schema doc (`docs/EPISODE_FORMAT.md`) — cam keys + figure props
-- [ ] Richer puppet library: multi-layer limbs, expression frames, horse/chariot motifs
-- [ ] Optional Imagine stills as phad panel textures (Kalamkari/Pattachitra prompts)
+- [ ] Ep 02 script + beats + locus (forest or court) on same engine
+- [ ] Shared episode schema doc (`docs/EPISODE_FORMAT.md`) — cam + poses + stills
+- [ ] Optional Blender prop sprites (bow / arrow / staff PNGs)
 
 ## Later
 
-- [ ] Chapter map UI (Adi → Svargarohana outline, episodes as nodes)
+- [ ] Chapter map UI (Ādi → Svargarohana as Kaavad/phad nodes)
 - [ ] Subtitles / bilingual Sanskrit-English lines
 - [ ] Accessibility: reduced-motion mode, pause + skip beat
+- [ ] Studio narrator audio clips per beat
+
+## Curiosity / explore
+
+- [ ] Parva accent packs (Vana Kangra wash, Sabhā miniature plate)
+- [ ] Tholu silhouette mode for night battle episodes
 
 ## Done
 
 - [x] Series scaffold under pixelloid
 - [x] Ep 01 *The Bird's Eye* prototype
 - [x] Hub card + github.io path
-- [x] Pivot to 2D Phad/Pattachitra narrative-cloth player (Canvas 2D)
-- [x] Kathavachak narration (Web Speech, deep Indian-English male preference)
-- [x] Revert costume kalamkari; figures in Bapu-inspired line (eyes, elongation, soft drape)
+- [x] 2D Phad player (Canvas) + Bapu figure line
+- [x] Kathavachak narration + soulful sitar ambient
+- [x] STYLE.md art bible
+- [x] Pose library (hips / teach / bow / grief / vow) wired to beats
+- [x] Imagine poster + garden plate for Ep 01

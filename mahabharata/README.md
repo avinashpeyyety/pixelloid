@@ -13,7 +13,9 @@ Episodic browser theater: **write script → stage beats → animate on a narrat
 | **Stage** | Cloth-scroll atmosphere (phad-like pan/zoom), quiet borders — not textile-stamped costumes |
 | **Avoided** | Heavy kalamkari butta-stamping on robes (over-literal; fights Bapu’s clean line) |
 
-**Not film CGI.** Soft illustration language suited to episodic itihāsa. Grok Imagine later if a keyframe needs denser art.
+**Not film CGI.** Soft illustration language suited to episodic itihāsa.  
+**Art bible:** [`STYLE.md`](STYLE.md) · **Poses:** `hips` · `teach` · `bow` · `grief` · `vow`  
+**Imagine stills (Ep 01):** `episodes/01-birds-eye/stills/` (poster + garden plate).
 
 ## Episodes
 
@@ -37,7 +39,12 @@ Toggle **Voice** in the player. Quality depends on OS voices (macOS/Windows ofte
 
 For studio-grade voice later: pre-render with a TTS service offline → `episodes/…/audio/` and swap the player to `<audio>` clips.
 
-## Imagine (optional)
+## Imagine stills
 
-Place generated stills in `episodes/01-birds-eye/stills/` (Kalamkari / Pattachitra prompts work well).  
-Never put production API keys in the browser.
+```
+episodes/01-birds-eye/stills/poster.jpg      # hub / share key art
+episodes/01-birds-eye/stills/garden-plate.jpg # player environment plate
+```
+
+Generate offline (Grok Imagine); commit assets. Never put production API keys in the browser.  
+Prompt seeds: see `STYLE.md`.

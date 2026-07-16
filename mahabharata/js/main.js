@@ -694,7 +694,8 @@ function drawOrnateBorder() {
 }
 
 /**
- * Warriors: hands on hips, curly mustaches (Bapu-ish line).
+ * Bapu-ish warriors with pose library.
+ * Poses: hips | teach | bow | grief | vow
  * Drona: saffron + long white beard.
  */
 function drawFigure(x, y, opts = {}) {
@@ -709,30 +710,36 @@ function drawFigure(x, y, opts = {}) {
     sage = false,
     young = false,
     mustache = true,
+    pose = "hips",
   } = opts;
   const light = robeLight || robe;
+  const p = pose || "hips";
 
   ctx.save();
   ctx.translate(x, y + breath);
   ctx.scale(scale, scale);
+
+  // slight head dip for grief
+  const headY = p === "grief" ? 4 : 0;
 
   ctx.beginPath();
   ctx.ellipse(0, 10, 40, 9, 0, 0, Math.PI * 2);
   ctx.fillStyle = "rgba(40,24,12,0.18)";
   ctx.fill();
 
-  // wider warrior stance
+  // stance: wider for hips/bow, softer for grief
+  const stance = p === "grief" ? 0.85 : p === "vow" ? 0.95 : 1.05;
   const drawLeg = (sx) => {
     ctx.beginPath();
-    ctx.moveTo(sx * 12, 5);
-    ctx.quadraticCurveTo(sx * 22, 35, sx * 16, 72);
-    ctx.lineTo(sx * 5, 72);
-    ctx.quadraticCurveTo(sx * 10, 35, sx * 5, 8);
+    ctx.moveTo(sx * 12 * stance, 5);
+    ctx.quadraticCurveTo(sx * 22 * stance, 35, sx * 16 * stance, 72);
+    ctx.lineTo(sx * 5 * stance, 72);
+    ctx.quadraticCurveTo(sx * 10 * stance, 35, sx * 5 * stance, 8);
     ctx.closePath();
     fillStroke(robe, B.ink, 2);
     ctx.beginPath();
-    ctx.moveTo(sx * 9, 20);
-    ctx.quadraticCurveTo(sx * 14, 40, sx * 12, 65);
+    ctx.moveTo(sx * 9 * stance, 20);
+    ctx.quadraticCurveTo(sx * 14 * stance, 40, sx * 12 * stance, 65);
     ctx.strokeStyle = "rgba(42,24,16,0.25)";
     ctx.lineWidth = 1.2;
     ctx.stroke();
@@ -798,8 +805,32 @@ function drawFigure(x, y, opts = {}) {
   ctx.lineWidth = 1.4;
   ctx.stroke();
 
-  // hands on hips
-  const drawArmOnHip = (side) => {
+  // ── Arms by pose ───────────────────────────────────────────
+  const bangle = (x, y, ang = 0) => {
+    ctx.beginPath();
+    ctx.ellipse(x, y, 7, 3.5, ang, 0, Math.PI * 2);
+    ctx.strokeStyle = B.gold;
+    ctx.lineWidth = 1.8;
+    ctx.stroke();
+  };
+  const fist = (x, y) => {
+    ctx.beginPath();
+    ctx.ellipse(x, y, 8, 7, 0, 0, Math.PI * 2);
+    fillStroke(B.skin, B.ink, 1.6);
+  };
+  const limb = (x0, y0, x1, y1, thick = 7) => {
+    const ang = Math.atan2(y1 - y0, x1 - x0);
+    const len = Math.hypot(x1 - x0, y1 - y0);
+    ctx.save();
+    ctx.translate(x0, y0);
+    ctx.rotate(ang);
+    ctx.beginPath();
+    roundRect(0, -thick / 2, len, thick, thick / 2);
+    fillStroke(B.skin, B.ink, 1.6);
+    ctx.restore();
+  };
+
+  const armHips = (side) => {
     const sx = side * 28;
     const sy = -74;
     ctx.beginPath();
@@ -816,69 +847,100 @@ function drawFigure(x, y, opts = {}) {
     ctx.quadraticCurveTo(sx + side * 26, sy + 54, sx + side * 22, sy + 40);
     ctx.closePath();
     fillStroke(B.skin, B.ink, 1.8);
-    ctx.beginPath();
-    ctx.ellipse(sx + side * 18, sy + 74, 8, 7, side * 0.2, 0, Math.PI * 2);
-    fillStroke(B.skin, B.ink, 1.6);
-    ctx.beginPath();
-    ctx.ellipse(sx + side * 26, sy + 48, 7, 3.5, side * 0.4, 0, Math.PI * 2);
-    ctx.strokeStyle = B.gold;
-    ctx.lineWidth = 1.8;
-    ctx.stroke();
+    fist(sx + side * 18, sy + 74);
+    bangle(sx + side * 26, sy + 48, side * 0.4);
   };
-  drawArmOnHip(-1);
-  drawArmOnHip(1);
+
+  if (p === "teach") {
+    // left on hip; right points up-right (toward tree/bird)
+    armHips(-1);
+    limb(28, -74, 55, -110, 8);
+    limb(55, -110, 78, -130, 7);
+    fist(80, -132);
+    bangle(50, -100, 0.5);
+  } else if (p === "bow") {
+    // left braces; right draws
+    limb(-28, -74, -50, -40, 8);
+    limb(-50, -40, -42, -5, 7);
+    fist(-40, -2);
+    bangle(-48, -48, -0.3);
+    limb(28, -74, 48, -100, 8);
+    limb(48, -100, 20, -55, 7);
+    fist(18, -50);
+    bangle(40, -95, 0.4);
+  } else if (p === "grief") {
+    limb(-26, -72, -20, -30, 7);
+    limb(-20, -30, -8, 5, 6);
+    fist(-6, 8);
+    limb(26, -72, 20, -30, 7);
+    limb(20, -30, 8, 5, 6);
+    fist(6, 8);
+  } else if (p === "vow") {
+    // left open low; right hand on heart
+    limb(-28, -74, -40, -30, 7);
+    limb(-40, -30, -32, 5, 6);
+    fist(-30, 8);
+    limb(28, -74, 10, -50, 7);
+    limb(10, -50, -2, -35, 6);
+    fist(0, -32);
+    bangle(12, -55, 0.2);
+  } else {
+    // hips default
+    armHips(-1);
+    armHips(1);
+  }
 
   // neck + head
   ctx.beginPath();
-  ctx.ellipse(0, -88, 8, 10, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, -88 + headY, 8, 10, 0, 0, Math.PI * 2);
   fillStroke(B.skin, B.ink, 1.5);
 
   ctx.beginPath();
-  ctx.ellipse(0, -112, 26, 30, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, -112 + headY, 26, 30, 0, 0, Math.PI * 2);
   fillStroke(B.skin, B.ink, 2.2);
   ctx.beginPath();
-  ctx.ellipse(10, -105, 8, 10, 0.3, 0, Math.PI * 2);
+  ctx.ellipse(10, -105 + headY, 8, 10, 0.3, 0, Math.PI * 2);
   ctx.fillStyle = "rgba(196,144,112,0.35)";
   ctx.fill();
 
-  // hair (white-grey for long-bearded Drona)
   const hair = beard ? "#e8e0d0" : B.ink;
   ctx.beginPath();
-  ctx.ellipse(0, -128, 24, 16, 0, Math.PI * 1.05, Math.PI * 1.95);
+  ctx.ellipse(0, -128 + headY, 24, 16, 0, Math.PI * 1.05, Math.PI * 1.95);
   fillStroke(hair, B.ink, 1);
   ctx.beginPath();
-  ctx.ellipse(0, -142, 11, 10, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, -142 + headY, 11, 10, 0, 0, Math.PI * 2);
   fillStroke(beard ? "#f0ebe0" : B.ink, B.ink, 1);
   ctx.beginPath();
-  ctx.moveTo(-20, -120);
-  ctx.quadraticCurveTo(0, -112, 20, -120);
+  ctx.moveTo(-20, -120 + headY);
+  ctx.quadraticCurveTo(0, -112 + headY, 20, -120 + headY);
   ctx.strokeStyle = beard ? "#a09888" : B.ink;
   ctx.lineWidth = 1.5;
   ctx.stroke();
 
   const drawEye = (ex) => {
+    const ey = -112 + headY;
     ctx.beginPath();
-    ctx.ellipse(ex, -112, 8, 5.5, ex > 0 ? 0.12 : -0.12, 0, Math.PI * 2);
+    ctx.ellipse(ex, ey, 8, 5.5, ex > 0 ? 0.12 : -0.12, 0, Math.PI * 2);
     fillStroke(B.white, B.ink, 1.3);
     ctx.beginPath();
-    ctx.arc(ex + (ex > 0 ? 1 : -1), -112, 3.2, 0, Math.PI * 2);
+    ctx.arc(ex + (ex > 0 ? 1 : -1), ey, 3.2, 0, Math.PI * 2);
     fillStroke("#3a2818", null);
     ctx.beginPath();
-    ctx.arc(ex + (ex > 0 ? 1.2 : -1.2), -112, 1.5, 0, Math.PI * 2);
+    ctx.arc(ex + (ex > 0 ? 1.2 : -1.2), ey, 1.5, 0, Math.PI * 2);
     fillStroke(B.ink, null);
     ctx.beginPath();
-    ctx.arc(ex + (ex > 0 ? 0 : -2), -113.5, 1, 0, Math.PI * 2);
+    ctx.arc(ex + (ex > 0 ? 0 : -2), ey - 1.5, 1, 0, Math.PI * 2);
     fillStroke(B.white, null);
     ctx.beginPath();
-    ctx.moveTo(ex - 8, -112);
-    ctx.quadraticCurveTo(ex, -120, ex + 8, -112);
+    ctx.moveTo(ex - 8, ey);
+    ctx.quadraticCurveTo(ex, ey - 8, ex + 8, ey);
     ctx.strokeStyle = B.ink;
     ctx.lineWidth = 2.4;
     ctx.lineCap = "round";
     ctx.stroke();
     ctx.beginPath();
-    ctx.moveTo(ex - 10, -118);
-    ctx.quadraticCurveTo(ex, -128, ex + 9, -119);
+    ctx.moveTo(ex - 10, ey - 6);
+    ctx.quadraticCurveTo(ex, ey - 16, ex + 9, ey - 7);
     ctx.strokeStyle = B.ink;
     ctx.lineWidth = 2;
     ctx.stroke();
@@ -887,86 +949,83 @@ function drawFigure(x, y, opts = {}) {
   drawEye(9);
 
   ctx.beginPath();
-  ctx.moveTo(0, -112);
-  ctx.quadraticCurveTo(3, -104, 1, -98);
+  ctx.moveTo(0, -112 + headY);
+  ctx.quadraticCurveTo(3, -104 + headY, 1, -98 + headY);
   ctx.strokeStyle = B.softInk;
   ctx.lineWidth = 1.4;
   ctx.stroke();
 
+  // mouth: firmer for vow/bow, softer for grief
   ctx.beginPath();
-  ctx.moveTo(-6, -92);
-  ctx.quadraticCurveTo(0, -90, 6, -92);
+  if (p === "grief") {
+    ctx.moveTo(-6, -90 + headY);
+    ctx.quadraticCurveTo(0, -93 + headY, 6, -90 + headY);
+  } else {
+    ctx.moveTo(-6, -92 + headY);
+    ctx.quadraticCurveTo(0, -90 + headY, 6, -92 + headY);
+  }
   ctx.strokeStyle = B.softInk;
   ctx.lineWidth = 1.6;
   ctx.lineCap = "round";
   ctx.stroke();
 
   ctx.beginPath();
-  ctx.moveTo(0, -122);
-  ctx.lineTo(0, -106);
+  ctx.moveTo(0, -122 + headY);
+  ctx.lineTo(0, -106 + headY);
   ctx.strokeStyle = C.vermillion;
   ctx.lineWidth = 2.2;
   ctx.lineCap = "round";
   ctx.stroke();
   ctx.beginPath();
-  ctx.arc(0, -124, 2, 0, Math.PI * 2);
+  ctx.arc(0, -124 + headY, 2, 0, Math.PI * 2);
   fillStroke(C.vermillion, null);
 
-  // curly warrior mustache
   if (mustache) {
     const mCol = beard ? "#f4f0e8" : B.ink;
     const drawCurl = (side) => {
+      const my = headY;
       ctx.beginPath();
-      ctx.moveTo(side * 3, -94);
-      ctx.quadraticCurveTo(side * 14, -96, side * 20, -92);
-      ctx.quadraticCurveTo(side * 26, -88, side * 24, -84);
-      ctx.quadraticCurveTo(side * 20, -86, side * 18, -90);
-      ctx.quadraticCurveTo(side * 12, -94, side * 4, -93);
+      ctx.moveTo(side * 3, -94 + my);
+      ctx.quadraticCurveTo(side * 14, -96 + my, side * 20, -92 + my);
+      ctx.quadraticCurveTo(side * 26, -88 + my, side * 24, -84 + my);
+      ctx.quadraticCurveTo(side * 20, -86 + my, side * 18, -90 + my);
+      ctx.quadraticCurveTo(side * 12, -94 + my, side * 4, -93 + my);
       ctx.closePath();
       fillStroke(mCol, B.ink, 1.2);
       ctx.beginPath();
-      ctx.arc(side * 25, -86, 3.2, 0, Math.PI * 2);
+      ctx.arc(side * 25, -86 + my, 3.2, 0, Math.PI * 2);
       fillStroke(mCol, B.ink, 1);
     };
     drawCurl(-1);
     drawCurl(1);
     ctx.beginPath();
-    ctx.ellipse(0, -94, 5, 2.5, 0, 0, Math.PI * 2);
+    ctx.ellipse(0, -94 + headY, 5, 2.5, 0, 0, Math.PI * 2);
     fillStroke(mCol, B.ink, 1);
   }
 
-  // long white beard (Drona)
   if (beard) {
     ctx.beginPath();
-    ctx.moveTo(-18, -90);
-    ctx.quadraticCurveTo(-28, -58, -14, -14);
-    ctx.quadraticCurveTo(0, 0, 14, -14);
-    ctx.quadraticCurveTo(28, -58, 18, -90);
-    ctx.quadraticCurveTo(0, -76, -18, -90);
+    ctx.moveTo(-18, -90 + headY);
+    ctx.quadraticCurveTo(-28, -58 + headY, -14, -14 + headY);
+    ctx.quadraticCurveTo(0, 0 + headY, 14, -14 + headY);
+    ctx.quadraticCurveTo(28, -58 + headY, 18, -90 + headY);
+    ctx.quadraticCurveTo(0, -76 + headY, -18, -90 + headY);
     ctx.closePath();
-    const bg = ctx.createLinearGradient(0, -90, 0, 0);
+    const bg = ctx.createLinearGradient(0, -90 + headY, 0, headY);
     bg.addColorStop(0, "#f8f4ec");
     bg.addColorStop(0.55, "#ebe4d8");
     bg.addColorStop(1, "#d0c8bc");
     fillStroke(bg, B.ink, 1.8);
-    for (const sx of [-10, 0, 10]) {
-      ctx.beginPath();
-      ctx.moveTo(sx, -85);
-      ctx.quadraticCurveTo(sx + 3, -45, sx, -12);
-      ctx.strokeStyle = "rgba(42,24,16,0.16)";
-      ctx.lineWidth = 1.2;
-      ctx.stroke();
-    }
   }
 
   if (crown || young) {
     for (const sx of [-22, 22]) {
       ctx.beginPath();
-      ctx.arc(sx, -100, 3, 0, Math.PI * 2);
+      ctx.arc(sx, -100 + headY, 3, 0, Math.PI * 2);
       fillStroke(B.gold, B.ink, 1);
     }
     ctx.beginPath();
-    ctx.arc(0, -82, 14, 0.25, Math.PI - 0.25);
+    ctx.arc(0, -82 + headY, 14, 0.25, Math.PI - 0.25);
     ctx.strokeStyle = B.gold;
     ctx.lineWidth = 1.8;
     ctx.stroke();
@@ -974,18 +1033,18 @@ function drawFigure(x, y, opts = {}) {
 
   if (crown) {
     ctx.beginPath();
-    ctx.moveTo(-20, -130);
-    ctx.quadraticCurveTo(-18, -155, 0, -168);
-    ctx.quadraticCurveTo(18, -155, 20, -130);
-    ctx.lineTo(16, -128);
-    ctx.quadraticCurveTo(0, -148, -16, -128);
+    ctx.moveTo(-20, -130 + headY);
+    ctx.quadraticCurveTo(-18, -155 + headY, 0, -168 + headY);
+    ctx.quadraticCurveTo(18, -155 + headY, 20, -130 + headY);
+    ctx.lineTo(16, -128 + headY);
+    ctx.quadraticCurveTo(0, -148 + headY, -16, -128 + headY);
     ctx.closePath();
-    const cg = ctx.createLinearGradient(0, -168, 0, -128);
+    const cg = ctx.createLinearGradient(0, -168 + headY, 0, -128 + headY);
     cg.addColorStop(0, B.gold);
     cg.addColorStop(1, B.saffron);
     fillStroke(cg, B.ink, 1.8);
     ctx.beginPath();
-    ctx.arc(0, -148, 4, 0, Math.PI * 2);
+    ctx.arc(0, -148 + headY, 4, 0, Math.PI * 2);
     fillStroke(C.vermillion, B.ink, 1);
   }
 
@@ -1278,12 +1337,28 @@ let lastBeatIdx = -1;
 let ended = false;
 let focus = 0;
 let targetFocus = 0;
-let armRaise = 0;
+let armRaise = 0; // still drives bow draw amount
 let targetArm = 0;
 let arrowU = -1;
 let birdHit = false;
 let goldHour = 0;
 let targetGold = 0;
+let poses = { drona: "hips", arjuna: "hips", princes: "hips" };
+
+// Optional Imagine garden plate (behind procedural if load fails)
+const gardenPlate = new Image();
+let gardenPlateReady = false;
+{
+  const src = EPISODE.stills?.garden || "episodes/01-birds-eye/stills/garden-plate.jpg";
+  gardenPlate.onload = () => {
+    gardenPlateReady = true;
+  };
+  gardenPlate.onerror = () => {
+    gardenPlateReady = false;
+  };
+  // resolve relative to mahabharata/ root from play.html
+  gardenPlate.src = src.replace(/^episodes\//, "episodes/");
+}
 
 const dust = Array.from({ length: 60 }, () => ({
   x: Math.random() * WORLD_W,
@@ -1298,6 +1373,9 @@ function applyBeat(idx, { speak = true } = {}) {
   if (!b) return;
   setCamera(b.cam);
   targetFocus = b.focus ?? 0;
+  if (b.poses) {
+    poses = { ...poses, ...b.poses };
+  }
 
   if (b.who || b.text) {
     dialogueEl.classList.remove("hidden");
@@ -1350,6 +1428,7 @@ function resetPlay() {
   birdHit = false;
   goldHour = 0;
   targetGold = 0;
+  poses = { drona: "hips", arjuna: "hips", princes: "hips" };
   katha.stop();
   endCard.classList.remove("show");
   btnPlay.textContent = "Play";
@@ -1376,6 +1455,18 @@ function renderWorld(now) {
 
   drawClothBackground();
 
+  // Imagine garden plate under soft cloth wash (when available)
+  if (gardenPlateReady) {
+    ctx.save();
+    ctx.globalAlpha = 0.55;
+    // draw plate into inner frame
+    ctx.drawImage(gardenPlate, 56, 56, WORLD_W - 112, WORLD_H - 140);
+    ctx.restore();
+    // light cloth tint so puppets stay readable
+    ctx.fillStyle = "rgba(196, 160, 106, 0.18)";
+    ctx.fillRect(56, 56, WORLD_W - 112, WORLD_H - 140);
+  }
+
   // gold hour wash
   if (goldHour > 0.01) {
     ctx.save();
@@ -1389,10 +1480,15 @@ function renderWorld(now) {
     ctx.restore();
   }
 
-  drawGardenDecor();
-  drawTree(1080, 580, sway);
+  if (!gardenPlateReady) {
+    drawGardenDecor();
+    drawTree(1080, 580, sway);
+  } else {
+    // light procedural tree still anchors bird perch
+    drawTree(1080, 580, sway * 0.6);
+  }
 
-  // princes — warriors, hands on hips, curly mustaches
+  // princes
   const princeRobes = [
     { robe: "#6a4050", light: "#8a6070" },
     { robe: "#3a5a48", light: "#5a7a68" },
@@ -1406,11 +1502,12 @@ function renderWorld(now) {
       robeLight: princeRobes[i].light,
       young: true,
       mustache: true,
+      pose: poses.princes || "hips",
       breath: breath * 0.6 + i,
     });
   }
 
-  // Drona — saffron-clad Acharya, long white beard, warrior mustache
+  // Drona — saffron Acharya
   drawFigure(320, 580, {
     scale: 1.08,
     robe: "#d47820",
@@ -1418,12 +1515,13 @@ function renderWorld(now) {
     beard: true,
     sage: true,
     mustache: true,
+    pose: poses.drona || "hips",
     name: "Drona",
     breath,
   });
   drawDronaStaff(368, 530, breath);
 
-  // Arjuna — warrior prince, hands on hips; bow nearby
+  // Arjuna
   drawFigure(1220, 590, {
     scale: 1.0,
     robe: "#2a4a68",
@@ -1431,11 +1529,13 @@ function renderWorld(now) {
     crown: true,
     young: true,
     mustache: true,
+    pose: poses.arjuna || "hips",
     name: "Arjuna",
     breath: breath * 0.9,
   });
-  // bow rests beside him (drawn as if held at hip readiness)
-  drawBow(1295, 520 + breath * 0.9, 0.95, Math.max(0.15, armRaise * 0.5));
+  // bow near Arjuna; draw amount rises when pose is bow
+  const bowDraw = poses.arjuna === "bow" ? Math.max(0.55, armRaise) : Math.max(0.12, armRaise * 0.35);
+  drawBow(1295, 520 + breath * 0.9, 0.95, bowDraw);
 
   // Bird
   const eyeGlow = Math.max(0, (focus - 0.55) / 0.45);

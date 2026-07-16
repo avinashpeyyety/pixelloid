@@ -174,10 +174,10 @@ const C = {
   skyDusk: "#6a3a4a",
 };
 
-// ── Soulful sitar ambient (Web Audio synthesis) ────────────────
+// ── Nimble sitar ambient (Web Audio) ───────────────────────────
 /**
- * Sparse sitar plucks + soft tanpura bed. No samples — metallic
- * partials, slow meend, sympathetic shimmer. Soulful, not busy.
+ * Light, dancing sitar — bright register, short plucks, playful phrases.
+ * Less drone/weight, more sparkle under the story.
  */
 class SoulfulSitar {
   constructor() {
@@ -187,9 +187,9 @@ class SoulfulSitar {
     this.nodes = [];
     this.timers = [];
     this.on = false;
-    // Sa-based free scale (Hz) — soft evening contour
-    this.Sa = 138.59; // C#3-ish
-    this.scale = null; // filled on ensure
+    // Higher Sa — nimble mid register (not heavy bass)
+    this.Sa = 196.0; // G3
+    this.scale = null;
   }
 
   async ensure() {
@@ -199,25 +199,24 @@ class SoulfulSitar {
     this.master = this.ctx.createGain();
     this.master.gain.value = 0;
 
-    // simple lush delay "hall" for soul
-    const delay = this.ctx.createDelay(1.2);
-    delay.delayTime.value = 0.32;
+    // Short airy slap-back — not a solemn hall
+    const delay = this.ctx.createDelay(0.6);
+    delay.delayTime.value = 0.14;
     const fb = this.ctx.createGain();
-    fb.gain.value = 0.28;
+    fb.gain.value = 0.12;
     const delayGain = this.ctx.createGain();
-    delayGain.gain.value = 0.22;
+    delayGain.gain.value = 0.14;
     delay.connect(fb);
     fb.connect(delay);
     delay.connect(delayGain);
     delayGain.connect(this.master);
 
-    // second longer echo
-    const delay2 = this.ctx.createDelay(2);
-    delay2.delayTime.value = 0.58;
+    const delay2 = this.ctx.createDelay(0.8);
+    delay2.delayTime.value = 0.28;
     const fb2 = this.ctx.createGain();
-    fb2.gain.value = 0.18;
+    fb2.gain.value = 0.08;
     const d2g = this.ctx.createGain();
-    d2g.gain.value = 0.12;
+    d2g.gain.value = 0.08;
     delay2.connect(fb2);
     fb2.connect(delay2);
     delay2.connect(d2g);
@@ -230,22 +229,21 @@ class SoulfulSitar {
     this.wet.connect(delay2);
     this.master.connect(this.ctx.destination);
 
-    this._delay = delay;
-    this._delay2 = delay2;
-
     const Sa = this.Sa;
-    // just ratios: Sa Re(komal-ish soft) Ga Ma Pa Dha Ni Sa
+    // Brighter major-ish playfulness: Sa Re Ga Ma Pa Dha Ni Sa² Ga² Pa²
     this.scale = [
       Sa,
-      Sa * (16 / 15),
+      Sa * (9 / 8),
       Sa * (5 / 4),
       Sa * (4 / 3),
       Sa * (3 / 2),
-      Sa * (8 / 5),
+      Sa * (5 / 3),
       Sa * (15 / 8),
       Sa * 2,
       Sa * 2 * (5 / 4),
       Sa * 2 * (3 / 2),
+      Sa * 2 * (15 / 8),
+      Sa * 4,
     ];
   }
 
@@ -254,19 +252,17 @@ class SoulfulSitar {
     return node;
   }
 
-  /** Soft continuous tanpura bed under plucks */
+  /** Thin high tanpura — whisper, not weight */
   _startTanpura(t0) {
     const Sa = this.Sa;
     const Pa = Sa * 1.5;
-    const SaLow = Sa / 2;
     for (const [freq, type, amp, det] of [
-      [SaLow, "sine", 0.045, 0],
-      [SaLow * 1.002, "triangle", 0.02, 0.3],
-      [Sa, "sine", 0.035, -0.2],
-      [Sa * 1.003, "sine", 0.02, 0.4],
-      [Pa, "sine", 0.028, 0],
-      [Pa * 0.997, "triangle", 0.012, -0.3],
-      [Sa * 2, "sine", 0.012, 0.1],
+      [Sa, "sine", 0.014, 0.15],
+      [Sa * 1.002, "sine", 0.008, -0.1],
+      [Pa, "sine", 0.01, 0.12],
+      [Sa * 2, "sine", 0.012, 0.2],
+      [Sa * 2 * 1.003, "triangle", 0.006, -0.15],
+      [Pa * 2, "sine", 0.005, 0.1],
     ]) {
       const o = this._track(this.ctx.createOscillator());
       const g = this._track(this.ctx.createGain());
@@ -275,8 +271,8 @@ class SoulfulSitar {
       if (det) {
         const lfo = this._track(this.ctx.createOscillator());
         const lg = this._track(this.ctx.createGain());
-        lfo.frequency.value = 0.08 + Math.abs(det) * 0.05;
-        lg.gain.value = 0.4;
+        lfo.frequency.value = 0.12 + Math.abs(det) * 0.08;
+        lg.gain.value = 0.25;
         lfo.connect(lg);
         lg.connect(o.frequency);
         lfo.start(t0);
@@ -288,79 +284,76 @@ class SoulfulSitar {
     }
   }
 
-  /**
-   * Metallic sitar-like pluck: slightly inharmonic partials + meend.
-   */
-  pluck(freq, when, { dur = 2.8, amp = 0.22, meend = 0 } = {}) {
+  /** Short bright pluck — nimble, less solemn */
+  pluck(freq, when, { dur = 1.1, amp = 0.16, meend = 0 } = {}) {
     if (!this.ctx || !this.on) return;
     const t = when;
     const out = this._track(this.ctx.createGain());
     out.gain.setValueAtTime(0, t);
-    out.gain.linearRampToValueAtTime(amp, t + 0.012);
+    out.gain.linearRampToValueAtTime(amp, t + 0.006);
     out.gain.exponentialRampToValueAtTime(0.001, t + dur);
     out.connect(this.wet);
 
-    // bright attack noise through bandpass
-    const noiseBuf = this.ctx.createBuffer(1, Math.floor(this.ctx.sampleRate * 0.04), this.ctx.sampleRate);
+    // Crisp tick attack
+    const noiseBuf = this.ctx.createBuffer(1, Math.floor(this.ctx.sampleRate * 0.02), this.ctx.sampleRate);
     const data = noiseBuf.getChannelData(0);
     for (let i = 0; i < data.length; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / data.length);
     const noise = this._track(this.ctx.createBufferSource());
     noise.buffer = noiseBuf;
     const bp = this._track(this.ctx.createBiquadFilter());
     bp.type = "bandpass";
-    bp.frequency.value = freq * 3;
-    bp.Q.value = 4;
+    bp.frequency.value = Math.min(freq * 4.5, 6000);
+    bp.Q.value = 2.5;
     const ng = this._track(this.ctx.createGain());
-    ng.gain.setValueAtTime(amp * 0.55, t);
-    ng.gain.exponentialRampToValueAtTime(0.001, t + 0.08);
+    ng.gain.setValueAtTime(amp * 0.7, t);
+    ng.gain.exponentialRampToValueAtTime(0.001, t + 0.04);
     noise.connect(bp);
     bp.connect(ng);
     ng.connect(out);
     noise.start(t);
-    noise.stop(t + 0.05);
+    noise.stop(t + 0.03);
 
-    // partials — slightly stretched like a string
-    const ratios = [1, 2.01, 3.02, 4.05, 5.08, 6.12, 8.2, 10.3, 12.4];
-    const amps = [1, 0.55, 0.32, 0.2, 0.14, 0.1, 0.07, 0.045, 0.03];
+    // Fewer partials, brighter balance
+    const ratios = [1, 2.01, 3.02, 4.05, 5.1, 7.15, 9.2];
+    const amps = [0.85, 0.55, 0.28, 0.18, 0.12, 0.07, 0.04];
     for (let i = 0; i < ratios.length; i++) {
       const o = this._track(this.ctx.createOscillator());
       const g = this._track(this.ctx.createGain());
-      o.type = i < 2 ? "triangle" : "sine";
+      o.type = i === 0 ? "triangle" : "sine";
       const f0 = freq * ratios[i];
       o.frequency.setValueAtTime(f0, t);
-      // gentle meend (glide) on fundamental-ish partials
-      if (meend && i < 3) {
-        o.frequency.linearRampToValueAtTime(f0 * (1 + meend), t + dur * 0.45);
-        o.frequency.linearRampToValueAtTime(f0 * (1 + meend * 0.3), t + dur * 0.85);
+      // Quick playful slides, not long meend
+      if (meend && i < 2) {
+        o.frequency.linearRampToValueAtTime(f0 * (1 + meend), t + dur * 0.25);
+        o.frequency.linearRampToValueAtTime(f0, t + dur * 0.55);
       }
-      // slow jawari-ish vibrato
       const lfo = this._track(this.ctx.createOscillator());
       const lg = this._track(this.ctx.createGain());
-      lfo.frequency.value = 4.5 + i * 0.15;
-      lg.gain.value = f0 * 0.0025;
+      lfo.frequency.value = 5.5 + i * 0.2;
+      lg.gain.value = f0 * 0.0018;
       lfo.connect(lg);
       lg.connect(o.frequency);
       lfo.start(t);
-      lfo.stop(t + dur + 0.1);
+      lfo.stop(t + dur + 0.05);
 
-      const peak = amps[i] * (i === 0 ? 0.5 : 0.35);
+      const peak = amps[i] * (i === 0 ? 0.55 : 0.4);
       g.gain.setValueAtTime(0, t);
-      g.gain.linearRampToValueAtTime(peak, t + 0.008 + i * 0.002);
-      g.gain.exponentialRampToValueAtTime(0.001, t + dur * (0.55 + 0.4 / (i + 1)));
+      g.gain.linearRampToValueAtTime(peak, t + 0.004 + i * 0.001);
+      g.gain.exponentialRampToValueAtTime(0.001, t + dur * (0.35 + 0.25 / (i + 1)));
       o.connect(g);
       g.connect(out);
       o.start(t);
-      o.stop(t + dur + 0.15);
+      o.stop(t + dur + 0.08);
     }
 
-    // sympathetic string shimmer (quiet high Sa)
+    // High chime sparkle
     const sym = this._track(this.ctx.createOscillator());
     const sg = this._track(this.ctx.createGain());
     sym.type = "sine";
-    sym.frequency.value = this.Sa * 2 * 1.5;
+    sym.frequency.value = freq * 4 * 1.01;
     sg.gain.setValueAtTime(0, t);
-    sg.gain.linearRampToValueAtTime(0.03, t + 0.05);
-    sg.gain.exponentialRampToValueAtTime(0.001, t + dur * 0.9);
+    sg.gain.linearRampToValueAtTime(0.025, t + 0.01);
+    sg.gain.exponentialRampToValueAtTime(0.001, t + Math.min(0.6, dur * 0.5));
     sym.connect(sg);
     sg.connect(this.wet);
     sym.start(t);
@@ -369,56 +362,83 @@ class SoulfulSitar {
 
   _schedulePhrase() {
     if (!this.on || !this.ctx) return;
-    const t0 = this.ctx.currentTime + 0.08;
+    const t0 = this.ctx.currentTime + 0.05;
     const sc = this.scale;
-    // soulful sparse motifs — never dense
+    // Nimble motifs — higher degrees, tight spacing
     const phrases = [
       [
-        [0, 0],
-        [1.6, 4],
-        [3.4, 2],
-        [5.2, 7],
-        [7.5, 4],
-      ],
-      [
         [0, 4],
-        [1.2, 5],
-        [2.8, 7],
-        [4.5, 8],
-        [6.8, 4],
-        [9.0, 0],
-      ],
-      [
-        [0, 2],
-        [2.0, 4],
-        [3.5, 3],
-        [5.5, 4],
-        [8.0, 7],
+        [0.28, 5],
+        [0.55, 7],
+        [0.9, 9],
+        [1.35, 7],
+        [1.7, 5],
+        [2.1, 4],
       ],
       [
         [0, 7],
-        [1.8, 5],
-        [3.6, 4],
-        [5.5, 2],
-        [7.8, 0],
-        [10.0, 4],
+        [0.22, 9],
+        [0.45, 11],
+        [0.75, 9],
+        [1.05, 7],
+        [1.4, 8],
+        [1.85, 7],
+      ],
+      [
+        [0, 2],
+        [0.2, 4],
+        [0.4, 5],
+        [0.65, 7],
+        [0.95, 5],
+        [1.25, 4],
+        [1.6, 7],
+        [2.0, 9],
+      ],
+      [
+        [0, 9],
+        [0.18, 7],
+        [0.35, 5],
+        [0.55, 7],
+        [0.85, 9],
+        [1.2, 11],
+        [1.55, 9],
+      ],
+      [
+        [0, 4],
+        [0.15, 4],
+        [0.35, 5],
+        [0.55, 7],
+        [0.85, 4],
+        [1.1, 5],
+        [1.4, 7],
+        [1.75, 9],
+        [2.15, 7],
       ],
     ];
     const phrase = phrases[(Math.random() * phrases.length) | 0];
     let lastEnd = 0;
     for (const [at, deg] of phrase) {
       const freq = sc[deg % sc.length];
-      const meend = Math.random() > 0.45 ? 0.03 + Math.random() * 0.04 : 0;
-      const amp = 0.14 + Math.random() * 0.1;
-      const dur = 2.2 + Math.random() * 1.6;
-      this.pluck(freq, t0 + at, { dur, amp, meend: Math.random() > 0.5 ? meend : -meend * 0.5 });
-      lastEnd = Math.max(lastEnd, at + dur * 0.5);
+      const meend = Math.random() > 0.65 ? 0.015 + Math.random() * 0.02 : 0;
+      const amp = 0.1 + Math.random() * 0.08;
+      const dur = 0.7 + Math.random() * 0.55;
+      this.pluck(freq, t0 + at, {
+        dur,
+        amp,
+        meend: Math.random() > 0.5 ? meend : -meend,
+      });
+      lastEnd = Math.max(lastEnd, at + dur * 0.4);
     }
-    // occasional low Sa anchor
-    if (Math.random() > 0.4) {
-      this.pluck(this.Sa / 2, t0 + lastEnd * 0.3, { dur: 3.5, amp: 0.1, meend: 0.015 });
+    // Occasional bright high sparkle, not low drone
+    if (Math.random() > 0.55) {
+      this.pluck(sc[9 + ((Math.random() * 3) | 0)], t0 + lastEnd * 0.5, {
+        dur: 0.9,
+        amp: 0.08,
+        meend: 0.02,
+      });
     }
-    const waitMs = (lastEnd + 2.5 + Math.random() * 3.5) * 1000;
+    // Short breath, then next phrase — keeps energy light
+    const waitMs = (lastEnd + 0.55 + Math.random() * 1.1) * 1000;
     this.timers.push(setTimeout(() => this._schedulePhrase(), waitMs));
   }
 
@@ -429,19 +449,20 @@ class SoulfulSitar {
     this.on = true;
     const t = this.ctx.currentTime;
     this._startTanpura(t);
-    // opening pluck
-    this.pluck(this.Sa * 1.5, t + 0.4, { dur: 3.2, amp: 0.2, meend: 0.035 });
-    this.pluck(this.Sa, t + 1.8, { dur: 3.5, amp: 0.16, meend: -0.02 });
-    this.timers.push(setTimeout(() => this._schedulePhrase(), 3200));
+    // Opening: light skip upward
+    this.pluck(this.Sa * 1.5, t + 0.15, { dur: 0.9, amp: 0.14, meend: 0.02 });
+    this.pluck(this.Sa * 2, t + 0.45, { dur: 0.85, amp: 0.12, meend: 0.015 });
+    this.pluck(this.Sa * 2 * 1.25, t + 0.75, { dur: 1.0, amp: 0.13, meend: 0.02 });
+    this.timers.push(setTimeout(() => this._schedulePhrase(), 1100));
     this.master.gain.cancelScheduledValues(t);
-    this.master.gain.linearRampToValueAtTime(0.72, t + 1.4);
+    this.master.gain.linearRampToValueAtTime(0.58, t + 0.6);
   }
 
   stop() {
     if (!this.ctx || !this.on) return;
     const t = this.ctx.currentTime;
     this.master.gain.cancelScheduledValues(t);
-    this.master.gain.linearRampToValueAtTime(0, t + 0.8);
+    this.master.gain.linearRampToValueAtTime(0, t + 0.45);
     this.on = false;
     for (const id of this.timers) clearTimeout(id);
     this.timers = [];
@@ -455,7 +476,7 @@ class SoulfulSitar {
         }
       }
       this.nodes = [];
-    }, 900);
+    }, 550);
   }
 
   async toggle() {

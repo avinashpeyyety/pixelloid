@@ -40,7 +40,7 @@ class Kathavachak {
     this._fallbackVoice = null;
     // Relative to play.html in mahabharata/
     this.base = EPISODE.voice?.base || "episodes/01-birds-eye/audio/";
-    this.cacheTag = EPISODE.voice?.cache || "atlas2";
+    this.cacheTag = EPISODE.voice?.cache || "orion1";
     if (typeof speechSynthesis !== "undefined") {
       speechSynthesis.getVoices();
       speechSynthesis.addEventListener("voiceschanged", () => this._pickFallback());

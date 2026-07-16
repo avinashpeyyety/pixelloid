@@ -29,80 +29,42 @@ const TOTAL = EPISODE.totalSec;
 
 // ── Narration — deep Indian-English male (browser TTS) ─────────
 /**
- * Kathavachak-style: one bard voice for the phad.
- * Prefers en-IN male (Ravi, etc.), else deep English male + low pitch.
+ * Kathavachak voice — prefers pre-rendered Grok TTS (voice: naksh).
+ * Falls back to browser speechSynthesis if clip missing.
  */
 class Kathavachak {
   constructor() {
     this.on = true;
-    this.voice = null;
-    this._ready = false;
     this._token = 0;
-    this._keepAlive = null;
+    this._audio = null;
+    this._fallbackVoice = null;
+    this.base = EPISODE.voice?.base || "episodes/01-birds-eye/audio/";
     if (typeof speechSynthesis !== "undefined") {
       speechSynthesis.getVoices();
-      speechSynthesis.addEventListener("voiceschanged", () => this.pickVoice());
-      // delayed pick (Chrome loads voices async)
-      setTimeout(() => this.pickVoice(), 200);
-      setTimeout(() => this.pickVoice(), 800);
+      speechSynthesis.addEventListener("voiceschanged", () => this._pickFallback());
+      setTimeout(() => this._pickFallback(), 300);
     }
   }
 
-  pickVoice() {
-    if (typeof speechSynthesis === "undefined") return null;
+  _pickFallback() {
+    if (typeof speechSynthesis === "undefined") return;
     const all = speechSynthesis.getVoices();
-    if (!all.length) return this.voice;
-
-    const score = (v) => {
-      const name = v.name || "";
-      const lang = (v.lang || "").toLowerCase();
-      let s = 0;
-      // Indian English / Hindi-capable systems
-      if (/^en-in/i.test(lang)) s += 100;
-      if (/^hi/i.test(lang)) s += 40;
-      if (/ravi|hemant|indian|india/i.test(name)) s += 80;
-      // Known deep / male storyteller-ish English voices
-      if (/google uk english male|microsoft (david|mark|george|ryan|guy)|daniel|alex|fred|bruce|aaron|james|tom|lee|ralph|gordon|richard|brian|christopher|english male|\bmale\b/i.test(name))
-        s += 50;
-      if (/en-gb|en-us|en-au/i.test(lang) && /male|david|daniel|james|george/i.test(name)) s += 30;
-      // Prefer local for lower latency
-      if (v.localService) s += 5;
-      // Penalize clearly female
-      if (/female|zira|samantha|karen|moira|victoria|susan|aria|tessa|flo|neerja/i.test(name) && !/ravi|hemant|male/i.test(name))
-        s -= 120;
-      if (/^en/i.test(lang)) s += 10;
-      return s;
-    };
-
-    let best = null;
-    let bestS = -Infinity;
-    for (const v of all) {
-      const s = score(v);
-      if (s > bestS) {
-        bestS = s;
-        best = v;
-      }
-    }
-    this.voice = best;
-    this._ready = !!best;
-    return this.voice;
-  }
-
-  /** Slight role colouring — still one deep male bard. */
-  roleParams(who) {
-    const w = (who || "Narrator").toLowerCase();
-    if (w === "drona") return { pitch: 0.72, rate: 0.82 };
-    if (w === "arjuna") return { pitch: 0.88, rate: 0.9 };
-    if (w === "prince") return { pitch: 0.92, rate: 0.93 };
-    // Narrator / default — deep, measured
-    return { pitch: 0.78, rate: 0.86 };
+    const prefer = all.find((v) => /en-in|ravi|india/i.test(`${v.lang} ${v.name}`));
+    this._fallbackVoice =
+      prefer || all.find((v) => /male|daniel|alex|david|george/i.test(v.name) && /^en/i.test(v.lang)) || all.find((v) => /^en/i.test(v.lang));
   }
 
   stop() {
     this._token++;
-    if (this._keepAlive) {
-      clearInterval(this._keepAlive);
-      this._keepAlive = null;
+    if (this._audio) {
+      try {
+        this._audio.pause();
+        this._audio.removeAttribute("src");
+        this._audio.load();
+      } catch {
+        /* ok */
+      }
+      this._audio = null;
     }
     try {
       speechSynthesis?.cancel();
@@ -111,58 +73,50 @@ class Kathavachak {
     }
   }
 
-  speak(who, text) {
-    if (!this.on || !text || !text.trim()) return;
-    if (typeof speechSynthesis === "undefined") return;
-
+  /**
+   * @param {string} who
+   * @param {string} text
+   * @param {{ audio?: string }} [opts]
+   */
+  speak(who, text, opts = {}) {
+    if (!this.on) return;
     this.stop();
     const token = this._token;
-    if (!this.voice) this.pickVoice();
+    const file = opts.audio;
 
-    const u = new SpeechSynthesisUtterance(text.trim());
-    const { pitch, rate } = this.roleParams(who);
-    u.pitch = pitch;
-    u.rate = rate;
-    u.volume = 1;
-    if (this.voice) {
-      u.voice = this.voice;
-      // Force Indian English locale when possible for accent
-      if (/en-in|india|ravi|hemant/i.test(`${this.voice.lang} ${this.voice.name}`)) {
-        u.lang = "en-IN";
-      } else if (/^hi/i.test(this.voice.lang || "")) {
-        u.lang = this.voice.lang;
-      } else {
-        u.lang = this.voice.lang || "en-IN";
-      }
-    } else {
-      u.lang = "en-IN";
+    if (file) {
+      const url = this.base + file;
+      const a = new Audio(url);
+      a.preload = "auto";
+      a.volume = 1;
+      this._audio = a;
+      a.play().catch(() => {
+        // missing file / autoplay — fallback
+        if (token === this._token) this._speakBrowser(who, text, token);
+      });
+      a.onended = () => {
+        if (token === this._token) this._audio = null;
+      };
+      a.onerror = () => {
+        if (token === this._token) this._speakBrowser(who, text, token);
+      };
+      return;
     }
 
-    // Chrome bug: long speech can stall — nudge pause/resume
-    this._keepAlive = setInterval(() => {
-      if (token !== this._token) return;
-      if (!speechSynthesis.speaking) return;
-      if (speechSynthesis.paused) speechSynthesis.resume();
-      else {
-        speechSynthesis.pause();
-        speechSynthesis.resume();
-      }
-    }, 10000);
+    if (text) this._speakBrowser(who, text, token);
+  }
 
-    u.onend = () => {
-      if (token !== this._token) return;
-      if (this._keepAlive) {
-        clearInterval(this._keepAlive);
-        this._keepAlive = null;
-      }
-    };
-    u.onerror = () => {
-      if (this._keepAlive) {
-        clearInterval(this._keepAlive);
-        this._keepAlive = null;
-      }
-    };
-
+  _speakBrowser(who, text, token) {
+    if (!text?.trim() || typeof speechSynthesis === "undefined") return;
+    if (!this._fallbackVoice) this._pickFallback();
+    const u = new SpeechSynthesisUtterance(text.trim());
+    u.pitch = who?.toLowerCase() === "drona" ? 0.75 : 0.85;
+    u.rate = 0.88;
+    u.volume = 1;
+    u.lang = "en-IN";
+    if (this._fallbackVoice) u.voice = this._fallbackVoice;
+    u.onend = () => {};
+    if (token !== this._token) return;
     speechSynthesis.speak(u);
   }
 
@@ -584,8 +538,8 @@ function applyBeat(idx, { speak = true } = {}) {
     katha.stop();
   }
 
-  if (speak && playing && b.text) {
-    katha.speak(b.who || "Narrator", b.text);
+  if (speak && playing && (b.text || b.audio)) {
+    katha.speak(b.who || "Narrator", b.text || "", { audio: b.audio });
   }
 }
 
@@ -779,7 +733,7 @@ btnPlay.addEventListener("click", async () => {
       /* autoplay */
     }
     const b = EPISODE.beats[lastBeatIdx] || EPISODE.beats[0];
-    if (b?.text) katha.speak(b.who || "Narrator", b.text);
+    if (b?.text || b?.audio) katha.speak(b.who || "Narrator", b.text || "", { audio: b.audio });
   } else {
     katha.stop();
   }
@@ -796,7 +750,7 @@ btnRestart.addEventListener("click", async () => {
     /* ok */
   }
   const b = EPISODE.beats[0];
-  if (b?.text) katha.speak(b.who || "Narrator", b.text);
+  if (b?.text || b?.audio) katha.speak(b.who || "Narrator", b.text || "", { audio: b.audio });
   lastBeatIdx = 0;
 });
 
@@ -812,7 +766,7 @@ btnVoice?.addEventListener("click", () => {
   syncVoiceBtn();
   if (katha.on && playing) {
     const b = EPISODE.beats[lastBeatIdx] || EPISODE.beats[0];
-    if (b?.text) katha.speak(b.who || "Narrator", b.text);
+    if (b?.text || b?.audio) katha.speak(b.who || "Narrator", b.text || "", { audio: b.audio });
   }
 });
 

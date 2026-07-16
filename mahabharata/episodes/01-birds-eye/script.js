@@ -1,19 +1,22 @@
 /**
  * Episode 01 — The Bird's Eye
- * Cinematic plate animation (painterly plates matching garden aesthetic).
- * Beats: plate key, ken-burns focus, dialogue.
+ * Cinematic plates + Grok TTS (voice: naksh) pre-rendered audio.
  */
 export const EPISODE = {
   id: "01",
   title: "The Bird's Eye",
   subtitle: "Drona’s test of Arjuna",
   style: "cinematic-plates",
+  voice: {
+    provider: "grok-tts",
+    voice_id: "naksh",
+    base: "episodes/01-birds-eye/audio/",
+  },
   totalSec: 88,
   stills: {
     poster: "episodes/01-birds-eye/stills/poster.jpg",
     garden: "episodes/01-birds-eye/stills/garden-plate.jpg",
   },
-  /** Named plates under episodes/01-birds-eye/stills/ */
   plates: {
     wide: "plate-wide.jpg",
     drona: "plate-drona.jpg",
@@ -39,6 +42,7 @@ export const EPISODE = {
       zoom: 1.05,
       panX: 0,
       panY: 0,
+      audio: "00.mp3",
       who: "Narrator",
       text: "In the gardens of Hastināpura, the Acharya sets a test no prince will forget.",
     },
@@ -48,6 +52,7 @@ export const EPISODE = {
       zoom: 1.12,
       panX: -0.05,
       panY: -0.02,
+      audio: "01.mp3",
       who: "Drona",
       text: "There — a bird upon the tree. Fix an arrow. Tell me what you see.",
     },
@@ -57,6 +62,7 @@ export const EPISODE = {
       zoom: 1.1,
       panX: 0.04,
       panY: 0,
+      audio: "02.mp3",
       who: "Narrator",
       text: "One by one they speak of leaves, of sky, of feathers catching light.",
     },
@@ -66,6 +72,7 @@ export const EPISODE = {
       zoom: 1.2,
       panX: 0.08,
       panY: -0.06,
+      audio: "03.mp3",
       who: "Prince",
       text: "I see the bird, the branch, the cloud behind it…",
     },
@@ -75,6 +82,7 @@ export const EPISODE = {
       zoom: 1.15,
       panX: -0.04,
       panY: 0,
+      audio: "04.mp3",
       who: "Drona",
       text: "Not enough. Step aside.",
     },
@@ -84,6 +92,7 @@ export const EPISODE = {
       zoom: 1.14,
       panX: 0.06,
       panY: 0,
+      audio: "05.mp3",
       who: "Narrator",
       text: "Then Arjuna raises the bow. The world narrows.",
     },
@@ -93,6 +102,7 @@ export const EPISODE = {
       zoom: 1.28,
       panX: 0.08,
       panY: -0.04,
+      audio: "06.mp3",
       who: "Drona",
       text: "What do you see, Arjuna?",
     },
@@ -102,6 +112,7 @@ export const EPISODE = {
       zoom: 1.35,
       panX: 0,
       panY: 0,
+      audio: "07.mp3",
       who: "Arjuna",
       text: "I see only the eye of the bird.",
     },
@@ -111,6 +122,7 @@ export const EPISODE = {
       zoom: 1.5,
       panX: 0,
       panY: 0,
+      audio: "08.mp3",
       who: "Drona",
       text: "Loose.",
     },
@@ -120,6 +132,7 @@ export const EPISODE = {
       zoom: 1.18,
       panX: 0.05,
       panY: -0.03,
+      audio: "09.mp3",
       who: "Narrator",
       text: "The arrow flies true. Concentration is the first dharma of the warrior.",
     },
@@ -129,6 +142,7 @@ export const EPISODE = {
       zoom: 1.08,
       panX: 0,
       panY: 0.02,
+      audio: "10.mp3",
       who: "Narrator",
       text: "Thus the son of Indra learned: see the essential — and nothing else.",
     },

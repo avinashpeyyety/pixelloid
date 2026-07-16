@@ -11,7 +11,7 @@ Episodic browser theater: **write script → Imagine plates → animate**.
 |-------|--------|
 | **Plates** | Grok Imagine keyframes (matching garden aesthetic) |
 | **Motion** | Crossfade + slow zoom/pan per beat |
-| **Voice** | Kathavachak TTS (deep Indian-English male preference) |
+| **Voice** | **Grok TTS** (`naksh`) pre-rendered per beat → `episodes/…/audio/` |
 | **Music** | Soulful sitar + tanpura bed |
 
 **Art bible:** [`STYLE.md`](STYLE.md)

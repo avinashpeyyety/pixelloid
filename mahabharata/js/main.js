@@ -29,8 +29,8 @@ const TOTAL = EPISODE.totalSec;
 
 // ── Narration — deep Indian-English male (browser TTS) ─────────
 /**
- * Kathavachak voice — prefers pre-rendered Grok TTS (voice: naksh).
- * Falls back to browser speechSynthesis if clip missing.
+ * Kathavachak — Grok TTS pre-rendered MP3s only (no browser voice when clip exists).
+ * Browser speechSynthesis is last-resort fallback only if the file 404s.
  */
 class Kathavachak {
   constructor() {
@@ -38,7 +38,9 @@ class Kathavachak {
     this._token = 0;
     this._audio = null;
     this._fallbackVoice = null;
+    // Relative to play.html in mahabharata/
     this.base = EPISODE.voice?.base || "episodes/01-birds-eye/audio/";
+    this.cacheTag = EPISODE.voice?.cache || "atlas2";
     if (typeof speechSynthesis !== "undefined") {
       speechSynthesis.getVoices();
       speechSynthesis.addEventListener("voiceschanged", () => this._pickFallback());
@@ -49,15 +51,24 @@ class Kathavachak {
   _pickFallback() {
     if (typeof speechSynthesis === "undefined") return;
     const all = speechSynthesis.getVoices();
-    const prefer = all.find((v) => /en-in|ravi|india/i.test(`${v.lang} ${v.name}`));
     this._fallbackVoice =
-      prefer || all.find((v) => /male|daniel|alex|david|george/i.test(v.name) && /^en/i.test(v.lang)) || all.find((v) => /^en/i.test(v.lang));
+      all.find((v) => /en-in|ravi|india/i.test(`${v.lang} ${v.name}`)) ||
+      all.find((v) => /male/i.test(v.name) && /^en/i.test(v.lang)) ||
+      all.find((v) => /^en/i.test(v.lang));
   }
 
   stop() {
     this._token++;
+    // Always kill browser TTS first so it cannot overlap Grok clips
+    try {
+      speechSynthesis?.cancel();
+    } catch {
+      /* ok */
+    }
     if (this._audio) {
       try {
+        this._audio.onended = null;
+        this._audio.onerror = null;
         this._audio.pause();
         this._audio.removeAttribute("src");
         this._audio.load();
@@ -65,11 +76,6 @@ class Kathavachak {
         /* ok */
       }
       this._audio = null;
-    }
-    try {
-      speechSynthesis?.cancel();
-    } catch {
-      /* ok */
     }
   }
 
@@ -85,21 +91,34 @@ class Kathavachak {
     const file = opts.audio;
 
     if (file) {
-      const url = this.base + file;
-      const a = new Audio(url);
+      const url = `${this.base}${file}?v=${encodeURIComponent(this.cacheTag)}`;
+      const a = new Audio();
       a.preload = "auto";
       a.volume = 1;
+      a.crossOrigin = "anonymous";
       this._audio = a;
-      a.play().catch(() => {
-        // missing file / autoplay — fallback
-        if (token === this._token) this._speakBrowser(who, text, token);
-      });
+
+      const playClip = () => {
+        if (token !== this._token) return;
+        a.play().catch((err) => {
+          console.warn("[katha] Grok clip play failed", url, err);
+          // Do NOT fall back to browser TTS on autoplay policy if user already clicked Play
+          // Only fall back when the resource is missing
+        });
+      };
+
       a.onended = () => {
         if (token === this._token) this._audio = null;
       };
       a.onerror = () => {
-        if (token === this._token) this._speakBrowser(who, text, token);
+        console.warn("[katha] Grok clip missing or blocked", url);
+        if (token === this._token && text) this._speakBrowser(who, text, token);
       };
+      a.oncanplaythrough = playClip;
+      a.src = url;
+      a.load();
+      // Some browsers fire playable before canplaythrough
+      if (a.readyState >= 3) playClip();
       return;
     }
 
@@ -109,13 +128,17 @@ class Kathavachak {
   _speakBrowser(who, text, token) {
     if (!text?.trim() || typeof speechSynthesis === "undefined") return;
     if (!this._fallbackVoice) this._pickFallback();
+    try {
+      speechSynthesis.cancel();
+    } catch {
+      /* ok */
+    }
     const u = new SpeechSynthesisUtterance(text.trim());
     u.pitch = who?.toLowerCase() === "drona" ? 0.75 : 0.85;
     u.rate = 0.88;
     u.volume = 1;
     u.lang = "en-IN";
     if (this._fallbackVoice) u.voice = this._fallbackVoice;
-    u.onend = () => {};
     if (token !== this._token) return;
     speechSynthesis.speak(u);
   }

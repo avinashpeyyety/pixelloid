@@ -493,6 +493,7 @@ resize();
 // Load plates
 const plateCache = new Map();
 const plateBase = "episodes/01-birds-eye/stills/";
+const plateCacheTag = EPISODE.voice?.cache || "orion1";
 
 function loadPlate(name) {
   if (plateCache.has(name)) return plateCache.get(name);
@@ -507,7 +508,7 @@ function loadPlate(name) {
     img.onerror = () => {
       entry.ready = false;
     };
-    img.src = plateBase + file;
+    img.src = `${plateBase}${file}?v=${encodeURIComponent(plateCacheTag)}-plates`;
   }
   plateCache.set(name, entry);
   return entry;

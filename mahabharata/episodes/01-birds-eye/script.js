@@ -11,7 +11,7 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "orion1",
+    cache: "orion1-goldfix",
     note: "Deep heroic male Grok voice (orion @ ~0.82). Files: orion-NN.mp3 (filenames kept, content is orion)",
     base: "episodes/01-birds-eye/audio/",
   },

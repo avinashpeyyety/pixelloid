@@ -7,24 +7,25 @@ Series spine for all episodes. Change *locus* and *secondary accent* by parva; k
 | Layer | Rule |
 |-------|------|
 | **Runtime** | 2D Canvas, **cinematic plates** (Imagine) + Ken Burns / crossfade |
-| **Figures** | Painted into plates at **garden-plate realism** (not stick puppets) |
-| **Stage** | Full-frame stills timed to beats; slow zoom/pan for life |
+| **Master look** | Ep 01 closing plate (`plate-wide-gold.jpg`) — warm cream–saffron–gold comic illustration |
+| **Figures** | **Charming comic-book / painted mythology** — stylized, NOT photoreal people |
+| **Stage** | Ornate lotus frame, peepal tree, palace silhouette, golden-hour sky; full-frame plates |
 | **Voice** | One kathavachak (Acharya tone), not multi-cast Hollywood |
 | **Music** | Sparse sitar + tanpura bed under dialogue |
 
 ## Do
 
-- Character via **pose + face**, not costume noise
-- Warrior **curly mustaches** (default); Drona = **saffron + long white beard**
-- Soft warm palette: cream, saffron, indigo, muted leaf green, gold line
-- One **locus** per episode (garden, court, forest…) with optional Imagine plate
-- Props few and iconic (bow, staff, bird eye)
+- Match **plate-wide-gold** for palette, frame, light, and character design language
+- **Stylized comic charm** (Amar Chitra / painted epic feel) — soft faces, clear silhouettes
+- Drona = saffron + long white beard + topknot; Arjuna = peacock-feather crown + dark mustache
+- Warrior curly mustaches on princes; peepal + bird eye as sacred focus
+- Ornate lotus border on every plate for series cohesion
 
 ## Don’t
 
-- All-over **kalamkari / butta** stamping on robes
-- Photoreal faces or Raja Ravi Varma oil look as default
-- Full 3D character acting in-browser (Blender only for props/plates offline)
+- Photoreal / live-action faces or 3D CGI people
+- Stick-figure / low-poly puppets as final art
+- Cold blue-grey “realistic dusk” that breaks the gold comic world
 - Busy multi-character lip-sync
 
 ## Pose library
@@ -68,9 +69,11 @@ Never put production API keys in the browser. Generate stills offline; commit li
 
 ## Imagine prompt seeds
 
-**Poster:** Bapu line, elongated figures, large almond eyes, saffron Acharya, young archer, bird eye glow, phad border, dusk garden, no photoreal, no dense textile pattern.
+**Master ref:** always attach `plate-wide-gold.jpg` (or current ep’s gold close).
 
-**Garden plate:** Empty Hastināpura garden, peepal tree, soft sky wash, cloth texture, Ajanta/Kangra softness, no people, wide plate for puppets.
+**Any beat plate:** same lotus frame, cream–saffron–gold hour, charming comic characters (not photoreal), peepal + palace silhouette, match Drona/Arjuna design from master.
+
+**Garden plate:** same world empty of people.
 
 ## Files
 

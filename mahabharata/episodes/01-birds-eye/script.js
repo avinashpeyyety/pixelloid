@@ -1,6 +1,6 @@
 /**
  * Episode 01 — The Bird's Eye
- * Natural dialogue + Grok TTS (atlas) pre-rendered audio.
+ * Natural dialogue + Grok TTS (orion) pre-rendered audio.
  * Plates/animation timing unchanged.
  */
 export const EPISODE = {

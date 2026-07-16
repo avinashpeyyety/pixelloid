@@ -23,8 +23,7 @@
 - [x] Series scaffold under pixelloid
 - [x] Ep 01 *The Bird's Eye* prototype
 - [x] Hub card + github.io path
-- [x] 2D Phad player (Canvas) + Bapu figure line
 - [x] Kathavachak narration + soulful sitar ambient
 - [x] STYLE.md art bible
-- [x] Pose library (hips / teach / bow / grief / vow) wired to beats
-- [x] Imagine poster + garden plate for Ep 01
+- [x] Imagine poster + garden plate
+- [x] **Cinematic plate player** — replace stick figures with painterly plates + Ken Burns

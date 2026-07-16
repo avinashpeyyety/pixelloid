@@ -6,9 +6,9 @@ Series spine for all episodes. Change *locus* and *secondary accent* by parva; k
 
 | Layer | Rule |
 |-------|------|
-| **Runtime** | 2D Canvas, beat-driven camera on a narrative cloth |
-| **Figures** | **Bapu spirit** — elongated silhouette, large almond eyes, thick upper lids, soft dhoti folds, minimal jewelry |
-| **Stage** | **Phad-like** pan/zoom; quiet borders; cloth grain |
+| **Runtime** | 2D Canvas, **cinematic plates** (Imagine) + Ken Burns / crossfade |
+| **Figures** | Painted into plates at **garden-plate realism** (not stick puppets) |
+| **Stage** | Full-frame stills timed to beats; slow zoom/pan for life |
 | **Voice** | One kathavachak (Acharya tone), not multi-cast Hollywood |
 | **Music** | Sparse sitar + tanpura bed under dialogue |
 

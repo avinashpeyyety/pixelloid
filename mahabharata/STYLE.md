@@ -11,7 +11,7 @@ Series spine for all episodes. Change *locus* and *secondary accent* by parva; k
 | **Figures** | **Charming comic-book / painted mythology** — stylized, NOT photoreal people |
 | **Stage** | Ornate lotus frame, peepal tree, palace silhouette, golden-hour sky; full-frame plates |
 | **Voice** | One kathavachak (Acharya tone), not multi-cast Hollywood |
-| **Music** | Sparse sitar + tanpura bed under dialogue |
+| **Music** | Soft flute (bansuri-like) + light tabla under dialogue |
 
 ## Do
 

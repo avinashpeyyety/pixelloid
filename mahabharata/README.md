@@ -12,7 +12,7 @@ Episodic browser theater: **write script → Imagine plates → animate**.
 | **Plates** | Grok Imagine keyframes (matching garden aesthetic) |
 | **Motion** | Crossfade + slow zoom/pan per beat |
 | **Voice** | **Grok TTS** (`orion` — deep heroic male) pre-rendered → `episodes/…/audio/` |
-| **Music** | Soulful sitar + tanpura bed |
+| **Music** | Soft bansuri-like flute + light tabla (Web Audio) |
 
 **Art bible:** [`STYLE.md`](STYLE.md)
 

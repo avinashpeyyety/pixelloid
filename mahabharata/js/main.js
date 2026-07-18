@@ -1,6 +1,6 @@
 /**
  * Mahābhārata player — cinematic plate theater.
- * Painterly Imagine plates + Ken Burns / crossfade; voice + sitar.
+ * Painterly Imagine plates + Ken Burns / crossfade; voice + flute/tabla.
  */
 import { EPISODE } from "../episodes/01-birds-eye/script.js";
 
@@ -174,12 +174,12 @@ const C = {
   skyDusk: "#6a3a4a",
 };
 
-// ── Nimble sitar ambient (Web Audio) ───────────────────────────
+// ── Flute + tabla ambient (Web Audio) ──────────────────────────
 /**
- * Light, dancing sitar — bright register, short plucks, playful phrases.
- * Less drone/weight, more sparkle under the story.
+ * Soft bansuri-like flute lines over a light tabla pulse.
+ * Gentle, story-friendly — not heavy sitar/drone.
  */
-class SoulfulSitar {
+class FluteTablaBed {
   constructor() {
     this.ctx = null;
     this.master = null;
@@ -187,9 +187,9 @@ class SoulfulSitar {
     this.nodes = [];
     this.timers = [];
     this.on = false;
-    // Higher Sa — nimble mid register (not heavy bass)
-    this.Sa = 196.0; // G3
+    this.Sa = 293.66; // D4 — flute-friendly
     this.scale = null;
+    this.beat = 0.42; // ~142 bpm feel, light
   }
 
   async ensure() {
@@ -199,39 +199,28 @@ class SoulfulSitar {
     this.master = this.ctx.createGain();
     this.master.gain.value = 0;
 
-    // Short airy slap-back — not a solemn hall
-    const delay = this.ctx.createDelay(0.6);
-    delay.delayTime.value = 0.14;
+    // Soft room for flute
+    const delay = this.ctx.createDelay(1.0);
+    delay.delayTime.value = 0.22;
     const fb = this.ctx.createGain();
-    fb.gain.value = 0.12;
+    fb.gain.value = 0.18;
     const delayGain = this.ctx.createGain();
-    delayGain.gain.value = 0.14;
+    delayGain.gain.value = 0.16;
     delay.connect(fb);
     fb.connect(delay);
     delay.connect(delayGain);
     delayGain.connect(this.master);
 
-    const delay2 = this.ctx.createDelay(0.8);
-    delay2.delayTime.value = 0.28;
-    const fb2 = this.ctx.createGain();
-    fb2.gain.value = 0.08;
-    const d2g = this.ctx.createGain();
-    d2g.gain.value = 0.08;
-    delay2.connect(fb2);
-    fb2.connect(delay2);
-    delay2.connect(d2g);
-    d2g.connect(this.master);
-
     this.wet = this.ctx.createGain();
     this.wet.gain.value = 1;
     this.wet.connect(this.master);
     this.wet.connect(delay);
-    this.wet.connect(delay2);
     this.master.connect(this.ctx.destination);
 
     const Sa = this.Sa;
-    // Brighter major-ish playfulness: Sa Re Ga Ma Pa Dha Ni Sa² Ga² Pa²
+    // Soft raga-ish path: Sa Re Ga Ma Pa Dha Ni Sa
     this.scale = [
+      Sa * 0.75,
       Sa,
       Sa * (9 / 8),
       Sa * (5 / 4),
@@ -240,10 +229,8 @@ class SoulfulSitar {
       Sa * (5 / 3),
       Sa * (15 / 8),
       Sa * 2,
+      Sa * 2 * (9 / 8),
       Sa * 2 * (5 / 4),
-      Sa * 2 * (3 / 2),
-      Sa * 2 * (15 / 8),
-      Sa * 4,
     ];
   }
 
@@ -252,31 +239,18 @@ class SoulfulSitar {
     return node;
   }
 
-  /** Thin high tanpura — whisper, not weight */
-  _startTanpura(t0) {
+  /** Quiet Sa–Pa air under the flute */
+  _startPad(t0) {
     const Sa = this.Sa;
-    const Pa = Sa * 1.5;
-    for (const [freq, type, amp, det] of [
-      [Sa, "sine", 0.014, 0.15],
-      [Sa * 1.002, "sine", 0.008, -0.1],
-      [Pa, "sine", 0.01, 0.12],
-      [Sa * 2, "sine", 0.012, 0.2],
-      [Sa * 2 * 1.003, "triangle", 0.006, -0.15],
-      [Pa * 2, "sine", 0.005, 0.1],
+    for (const [freq, amp] of [
+      [Sa * 0.5, 0.012],
+      [Sa, 0.01],
+      [Sa * 1.5, 0.008],
     ]) {
       const o = this._track(this.ctx.createOscillator());
       const g = this._track(this.ctx.createGain());
-      o.type = type;
+      o.type = "sine";
       o.frequency.value = freq;
-      if (det) {
-        const lfo = this._track(this.ctx.createOscillator());
-        const lg = this._track(this.ctx.createGain());
-        lfo.frequency.value = 0.12 + Math.abs(det) * 0.08;
-        lg.gain.value = 0.25;
-        lfo.connect(lg);
-        lg.connect(o.frequency);
-        lfo.start(t0);
-      }
       g.gain.value = amp;
       o.connect(g);
       g.connect(this.wet);
@@ -284,162 +258,204 @@ class SoulfulSitar {
     }
   }
 
-  /** Short bright pluck — nimble, less solemn */
-  pluck(freq, when, { dur = 1.1, amp = 0.16, meend = 0 } = {}) {
+  /**
+   * Bansuri-like tone: soft attack, breath noise, gentle vibrato, legato.
+   */
+  flute(freq, when, { dur = 1.4, amp = 0.12, glide = 0 } = {}) {
     if (!this.ctx || !this.on) return;
     const t = when;
     const out = this._track(this.ctx.createGain());
+    // Soft breath-in attack
     out.gain.setValueAtTime(0, t);
-    out.gain.linearRampToValueAtTime(amp, t + 0.006);
+    out.gain.linearRampToValueAtTime(amp, t + 0.06);
+    out.gain.setValueAtTime(amp * 0.92, t + dur * 0.55);
     out.gain.exponentialRampToValueAtTime(0.001, t + dur);
     out.connect(this.wet);
 
-    // Crisp tick attack
-    const noiseBuf = this.ctx.createBuffer(1, Math.floor(this.ctx.sampleRate * 0.02), this.ctx.sampleRate);
-    const data = noiseBuf.getChannelData(0);
-    for (let i = 0; i < data.length; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / data.length);
-    const noise = this._track(this.ctx.createBufferSource());
-    noise.buffer = noiseBuf;
-    const bp = this._track(this.ctx.createBiquadFilter());
-    bp.type = "bandpass";
-    bp.frequency.value = Math.min(freq * 4.5, 6000);
-    bp.Q.value = 2.5;
-    const ng = this._track(this.ctx.createGain());
-    ng.gain.setValueAtTime(amp * 0.7, t);
-    ng.gain.exponentialRampToValueAtTime(0.001, t + 0.04);
-    noise.connect(bp);
-    bp.connect(ng);
-    ng.connect(out);
-    noise.start(t);
-    noise.stop(t + 0.03);
-
-    // Fewer partials, brighter balance
-    const ratios = [1, 2.01, 3.02, 4.05, 5.1, 7.15, 9.2];
-    const amps = [0.85, 0.55, 0.28, 0.18, 0.12, 0.07, 0.04];
-    for (let i = 0; i < ratios.length; i++) {
+    // Body: fundamental + soft octave (flute formants)
+    const partials = [
+      [1, 0.7, "sine"],
+      [2, 0.22, "sine"],
+      [3, 0.08, "triangle"],
+    ];
+    for (const [ratio, level, type] of partials) {
       const o = this._track(this.ctx.createOscillator());
       const g = this._track(this.ctx.createGain());
-      o.type = i === 0 ? "triangle" : "sine";
-      const f0 = freq * ratios[i];
-      o.frequency.setValueAtTime(f0, t);
-      // Quick playful slides, not long meend
-      if (meend && i < 2) {
-        o.frequency.linearRampToValueAtTime(f0 * (1 + meend), t + dur * 0.25);
-        o.frequency.linearRampToValueAtTime(f0, t + dur * 0.55);
-      }
+      o.type = type;
+      const f0 = freq * ratio;
+      o.frequency.setValueAtTime(glide ? f0 * (1 - glide) : f0, t);
+      if (glide) o.frequency.linearRampToValueAtTime(f0, t + Math.min(0.12, dur * 0.2));
+      // Vibrato
       const lfo = this._track(this.ctx.createOscillator());
       const lg = this._track(this.ctx.createGain());
-      lfo.frequency.value = 5.5 + i * 0.2;
-      lg.gain.value = f0 * 0.0018;
+      lfo.frequency.value = 4.8;
+      lg.gain.value = f0 * 0.004;
       lfo.connect(lg);
       lg.connect(o.frequency);
       lfo.start(t);
       lfo.stop(t + dur + 0.05);
-
-      const peak = amps[i] * (i === 0 ? 0.55 : 0.4);
-      g.gain.setValueAtTime(0, t);
-      g.gain.linearRampToValueAtTime(peak, t + 0.004 + i * 0.001);
-      g.gain.exponentialRampToValueAtTime(0.001, t + dur * (0.35 + 0.25 / (i + 1)));
+      g.gain.value = level;
       o.connect(g);
       g.connect(out);
       o.start(t);
-      o.stop(t + dur + 0.08);
+      o.stop(t + dur + 0.05);
     }
 
-    // High chime sparkle
-    const sym = this._track(this.ctx.createOscillator());
-    const sg = this._track(this.ctx.createGain());
-    sym.type = "sine";
-    sym.frequency.value = freq * 4 * 1.01;
-    sg.gain.setValueAtTime(0, t);
-    sg.gain.linearRampToValueAtTime(0.025, t + 0.01);
-    sg.gain.exponentialRampToValueAtTime(0.001, t + Math.min(0.6, dur * 0.5));
-    sym.connect(sg);
-    sg.connect(this.wet);
-    sym.start(t);
-    sym.stop(t + dur);
+    // Breath air (bandpassed noise)
+    const nlen = Math.max(1, Math.floor(this.ctx.sampleRate * Math.min(dur, 2.5)));
+    const noiseBuf = this.ctx.createBuffer(1, nlen, this.ctx.sampleRate);
+    const data = noiseBuf.getChannelData(0);
+    for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
+    const noise = this._track(this.ctx.createBufferSource());
+    noise.buffer = noiseBuf;
+    const bp = this._track(this.ctx.createBiquadFilter());
+    bp.type = "bandpass";
+    bp.frequency.value = Math.min(freq * 2.2, 2800);
+    bp.Q.value = 0.8;
+    const ng = this._track(this.ctx.createGain());
+    ng.gain.setValueAtTime(0, t);
+    ng.gain.linearRampToValueAtTime(amp * 0.09, t + 0.08);
+    ng.gain.exponentialRampToValueAtTime(0.001, t + dur);
+    noise.connect(bp);
+    bp.connect(ng);
+    ng.connect(this.wet);
+    noise.start(t);
+    noise.stop(t + dur);
   }
 
-  _schedulePhrase() {
+  /** Tabla-ish: bayan (dha) low boom + dayan (tin/na) click */
+  tabla(kind, when, amp = 0.2) {
+    if (!this.ctx || !this.on) return;
+    const t = when;
+    if (kind === "dha" || kind === "dhin") {
+      // Low bayan: pitch drop sine
+      const o = this._track(this.ctx.createOscillator());
+      const g = this._track(this.ctx.createGain());
+      o.type = "sine";
+      const f0 = kind === "dhin" ? 95 : 72;
+      o.frequency.setValueAtTime(f0, t);
+      o.frequency.exponentialRampToValueAtTime(38, t + 0.14);
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(amp * 0.55, t + 0.004);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.28);
+      o.connect(g);
+      g.connect(this.master);
+      o.start(t);
+      o.stop(t + 0.32);
+    } else {
+      // tin / na / ke: high slap
+      const nlen = Math.floor(this.ctx.sampleRate * 0.05);
+      const noiseBuf = this.ctx.createBuffer(1, nlen, this.ctx.sampleRate);
+      const data = noiseBuf.getChannelData(0);
+      for (let i = 0; i < data.length; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / data.length);
+      const noise = this._track(this.ctx.createBufferSource());
+      noise.buffer = noiseBuf;
+      const bp = this._track(this.ctx.createBiquadFilter());
+      bp.type = kind === "na" ? "highpass" : "bandpass";
+      bp.frequency.value = kind === "na" ? 1800 : 900;
+      bp.Q.value = kind === "ke" ? 1.2 : 3.5;
+      const g = this._track(this.ctx.createGain());
+      const peak = amp * (kind === "tin" ? 0.28 : 0.18);
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(peak, t + 0.002);
+      g.gain.exponentialRampToValueAtTime(0.001, t + (kind === "tin" ? 0.08 : 0.05));
+      noise.connect(bp);
+      bp.connect(g);
+      g.connect(this.master);
+      noise.start(t);
+      noise.stop(t + 0.06);
+
+      // Brief tonal ping
+      if (kind === "tin" || kind === "na") {
+        const o = this._track(this.ctx.createOscillator());
+        const og = this._track(this.ctx.createGain());
+        o.type = "triangle";
+        o.frequency.setValueAtTime(kind === "tin" ? 420 : 520, t);
+        o.frequency.exponentialRampToValueAtTime(280, t + 0.06);
+        og.gain.setValueAtTime(amp * 0.12, t);
+        og.gain.exponentialRampToValueAtTime(0.001, t + 0.07);
+        o.connect(og);
+        og.connect(this.master);
+        o.start(t);
+        o.stop(t + 0.08);
+      }
+    }
+  }
+
+  _scheduleTablaLoop() {
     if (!this.on || !this.ctx) return;
-    const t0 = this.ctx.currentTime + 0.05;
+    const t0 = this.ctx.currentTime + 0.04;
+    const b = this.beat;
+    // Light tintal-ish 8-beat feel: Dha - tin tin Na | Dha - dhin Na
+    const pattern = [
+      [0, "dha", 0.22],
+      [1, "ke", 0.08],
+      [2, "tin", 0.16],
+      [3, "tin", 0.14],
+      [4, "na", 0.15],
+      [5, "ke", 0.07],
+      [6, "dhin", 0.18],
+      [7, "na", 0.14],
+    ];
+    for (const [beat, kind, amp] of pattern) {
+      // occasional skip for air
+      if (Math.random() > 0.92 && kind === "ke") continue;
+      this.tabla(kind, t0 + beat * b, amp * (0.85 + Math.random() * 0.2));
+    }
+    const waitMs = 8 * b * 1000 - 20;
+    this.timers.push(setTimeout(() => this._scheduleTablaLoop(), waitMs));
+  }
+
+  _scheduleFlutePhrase() {
+    if (!this.on || !this.ctx) return;
+    const t0 = this.ctx.currentTime + 0.08;
     const sc = this.scale;
-    // Nimble motifs — higher degrees, tight spacing
+    // Lyrical, unhurried flute lines
     const phrases = [
       [
-        [0, 4],
-        [0.28, 5],
-        [0.55, 7],
-        [0.9, 9],
-        [1.35, 7],
-        [1.7, 5],
-        [2.1, 4],
+        [0, 1, 1.1],
+        [1.0, 3, 0.9],
+        [1.9, 5, 1.2],
+        [3.2, 4, 0.8],
+        [4.1, 5, 1.4],
       ],
       [
-        [0, 7],
-        [0.22, 9],
-        [0.45, 11],
-        [0.75, 9],
-        [1.05, 7],
-        [1.4, 8],
-        [1.85, 7],
+        [0, 5, 0.7],
+        [0.75, 6, 0.7],
+        [1.5, 8, 1.3],
+        [2.9, 5, 0.9],
+        [3.9, 3, 1.1],
       ],
       [
-        [0, 2],
-        [0.2, 4],
-        [0.4, 5],
-        [0.65, 7],
-        [0.95, 5],
-        [1.25, 4],
-        [1.6, 7],
-        [2.0, 9],
+        [0, 2, 0.85],
+        [0.9, 4, 0.85],
+        [1.8, 5, 0.7],
+        [2.5, 7, 1.2],
+        [3.8, 5, 1.0],
+        [4.9, 4, 1.1],
       ],
       [
-        [0, 9],
-        [0.18, 7],
-        [0.35, 5],
-        [0.55, 7],
-        [0.85, 9],
-        [1.2, 11],
-        [1.55, 9],
-      ],
-      [
-        [0, 4],
-        [0.15, 4],
-        [0.35, 5],
-        [0.55, 7],
-        [0.85, 4],
-        [1.1, 5],
-        [1.4, 7],
-        [1.75, 9],
-        [2.15, 7],
+        [0, 8, 1.0],
+        [1.1, 7, 0.75],
+        [1.9, 5, 0.9],
+        [2.9, 6, 0.8],
+        [3.8, 8, 1.3],
       ],
     ];
     const phrase = phrases[(Math.random() * phrases.length) | 0];
     let lastEnd = 0;
-    for (const [at, deg] of phrase) {
+    for (const [at, deg, dur] of phrase) {
       const freq = sc[deg % sc.length];
-      const meend = Math.random() > 0.65 ? 0.015 + Math.random() * 0.02 : 0;
-      const amp = 0.1 + Math.random() * 0.08;
-      const dur = 0.7 + Math.random() * 0.55;
-      this.pluck(freq, t0 + at, {
-        dur,
-        amp,
-        meend: Math.random() > 0.5 ? meend : -meend,
+      const glide = Math.random() > 0.55 ? 0.03 : 0;
+      this.flute(freq, t0 + at, {
+        dur: dur * (0.9 + Math.random() * 0.2),
+        amp: 0.09 + Math.random() * 0.05,
+        glide,
       });
-      lastEnd = Math.max(lastEnd, at + dur * 0.4);
+      lastEnd = Math.max(lastEnd, at + dur);
     }
-    // Occasional bright high sparkle, not low drone
-    if (Math.random() > 0.55) {
-      this.pluck(sc[9 + ((Math.random() * 3) | 0)], t0 + lastEnd * 0.5, {
-        dur: 0.9,
-        amp: 0.08,
-        meend: 0.02,
-      });
-    }
-    // Short breath, then next phrase — keeps energy light
-    const waitMs = (lastEnd + 0.55 + Math.random() * 1.1) * 1000;
-    this.timers.push(setTimeout(() => this._schedulePhrase(), waitMs));
+    const waitMs = (lastEnd + 1.2 + Math.random() * 2.0) * 1000;
+    this.timers.push(setTimeout(() => this._scheduleFlutePhrase(), waitMs));
   }
 
   async start() {
@@ -448,21 +464,21 @@ class SoulfulSitar {
     if (this.on) return;
     this.on = true;
     const t = this.ctx.currentTime;
-    this._startTanpura(t);
-    // Opening: light skip upward
-    this.pluck(this.Sa * 1.5, t + 0.15, { dur: 0.9, amp: 0.14, meend: 0.02 });
-    this.pluck(this.Sa * 2, t + 0.45, { dur: 0.85, amp: 0.12, meend: 0.015 });
-    this.pluck(this.Sa * 2 * 1.25, t + 0.75, { dur: 1.0, amp: 0.13, meend: 0.02 });
-    this.timers.push(setTimeout(() => this._schedulePhrase(), 1100));
+    this._startPad(t);
+    // Opening flute breath
+    this.flute(this.Sa, t + 0.2, { dur: 1.5, amp: 0.11, glide: 0.02 });
+    this.flute(this.Sa * 1.5, t + 1.5, { dur: 1.3, amp: 0.1, glide: 0.025 });
+    this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
+    this.timers.push(setTimeout(() => this._scheduleFlutePhrase(), 2200));
     this.master.gain.cancelScheduledValues(t);
-    this.master.gain.linearRampToValueAtTime(0.58, t + 0.6);
+    this.master.gain.linearRampToValueAtTime(0.62, t + 0.8);
   }
 
   stop() {
     if (!this.ctx || !this.on) return;
     const t = this.ctx.currentTime;
     this.master.gain.cancelScheduledValues(t);
-    this.master.gain.linearRampToValueAtTime(0, t + 0.45);
+    this.master.gain.linearRampToValueAtTime(0, t + 0.5);
     this.on = false;
     for (const id of this.timers) clearTimeout(id);
     this.timers = [];
@@ -476,7 +492,7 @@ class SoulfulSitar {
         }
       }
       this.nodes = [];
-    }, 550);
+    }, 600);
   }
 
   async toggle() {
@@ -485,7 +501,7 @@ class SoulfulSitar {
     return this.on;
   }
 }
-const drone = new SoulfulSitar();
+const drone = new FluteTablaBed();
 
 
 
@@ -773,7 +789,7 @@ btnPlay.addEventListener("click", async () => {
   if (playing) {
     try {
       await drone.start();
-      btnMute.textContent = "Sitar ✓";
+      btnMute.textContent = "Music ✓";
     } catch {
       /* autoplay */
     }
@@ -790,7 +806,7 @@ btnRestart.addEventListener("click", async () => {
   btnPlay.textContent = "Pause";
   try {
     await drone.start();
-    btnMute.textContent = "Sitar ✓";
+    btnMute.textContent = "Music ✓";
   } catch {
     /* ok */
   }
@@ -803,7 +819,7 @@ btnReplay?.addEventListener("click", () => btnRestart.click());
 
 btnMute.addEventListener("click", async () => {
   const on = await drone.toggle();
-  btnMute.textContent = on ? "Sitar ✓" : "Sitar";
+  btnMute.textContent = on ? "Music ✓" : "Music";
 });
 
 btnVoice?.addEventListener("click", () => {

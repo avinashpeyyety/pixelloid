@@ -2,7 +2,7 @@
 
 ## Now
 
-- [ ] Ep 02 script + beats + locus (forest or court) on same engine
+- [ ] Ep 03 script + beats (same engine) — pick next Ādi beat
 - [ ] Shared episode schema doc (`docs/EPISODE_FORMAT.md`) — cam + poses + stills
 - [ ] Optional Blender prop sprites (bow / arrow / staff PNGs)
 
@@ -17,13 +17,16 @@
 
 - [ ] Parva accent packs (Vana Kangra wash, Sabhā miniature plate)
 - [ ] Tholu silhouette mode for night battle episodes
+- [ ] Ep 02 polish: aim geometry variants, peacock-free consistency pass
 
 ## Done
 
 - [x] Series scaffold under pixelloid
 - [x] Ep 01 *The Bird's Eye* prototype
 - [x] Hub card + github.io path
-- [x] Kathavachak narration + soulful sitar ambient
+- [x] Kathavachak narration + flute/tabla ambient
 - [x] STYLE.md art bible
 - [x] Imagine poster + garden plate
-- [x] **Cinematic plate player** — replace stick figures with painterly plates + Ken Burns
+- [x] **Cinematic plate player** — painterly plates + Ken Burns
+- [x] Multi-ep loader (`?ep=01|02`)
+- [x] **Ep 02 *The Fish's Eye*** — swayamvara plates + orion TTS

@@ -5,20 +5,28 @@
  */
 export const EPISODE = {
   id: "01",
+  slug: "birds-eye",
   title: "The Bird's Eye",
   subtitle: "Drona’s test of Arjuna",
   style: "cinematic-plates",
+  stillsDir: "episodes/01-birds-eye/stills/",
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
     cache: "nofeather1",
-    note: "Deep heroic male Grok voice (orion @ ~0.82). Files: orion-NN.mp3 (filenames kept, content is orion)",
+    note: "Deep heroic male Grok voice (orion). Files: orion-NN.mp3",
     base: "episodes/01-birds-eye/audio/",
   },
   totalSec: 88,
   stills: {
     poster: "episodes/01-birds-eye/stills/poster.jpg",
     garden: "episodes/01-birds-eye/stills/garden-plate.jpg",
+  },
+  end: {
+    title: "End of Episode 01",
+    line: "See the essential — and nothing else.",
+    next: "play.html?ep=02",
+    nextLabel: "Play Episode 02",
   },
   plates: {
     wide: "plate-wide.jpg",

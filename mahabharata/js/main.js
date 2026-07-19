@@ -1,8 +1,16 @@
 /**
  * Mahābhārata player — cinematic plate theater.
  * Painterly Imagine plates + Ken Burns / crossfade; voice + flute/tabla.
+ * Loads episode from ?ep=01 | ?ep=02
  */
-import { EPISODE } from "../episodes/01-birds-eye/script.js";
+const EP_LOADERS = {
+  "01": () => import("../episodes/01-birds-eye/script.js"),
+  "02": () => import("../episodes/02-swayamvara/script.js"),
+};
+
+const _epParam = String(new URLSearchParams(location.search).get("ep") || "01").replace(/\D/g, "") || "01";
+const EP_ID = _epParam.padStart(2, "0");
+const { EPISODE } = await (EP_LOADERS[EP_ID] || EP_LOADERS["01"])();
 
 // ── DOM ────────────────────────────────────────────────────────
 const host = document.getElementById("canvas-host");
@@ -23,7 +31,28 @@ const epTitle = document.getElementById("ep-title");
 const epSub = document.getElementById("ep-sub");
 
 epTitle.textContent = EPISODE.title;
-epSub.textContent = EPISODE.subtitle;
+epSub.textContent = `${EPISODE.subtitle} · cinematic plates`;
+document.title = `Mahābhārata · ${EPISODE.title} — Pixelloid`;
+const loaderP = loader?.querySelector("p");
+if (loaderP) loaderP.textContent = "Loading the episode…";
+
+// End card from episode metadata
+const endMeta = EPISODE.end || {};
+const endH2 = endCard?.querySelector("h2");
+const endP = endCard?.querySelector(".end-card-inner > p");
+const endActions = endCard?.querySelector(".end-actions");
+if (endH2) endH2.textContent = endMeta.title || `End of Episode ${EPISODE.id}`;
+if (endP) endP.textContent = endMeta.line || "";
+if (endActions && endMeta.next) {
+  let nextA = endActions.querySelector("a.btn-next");
+  if (!nextA) {
+    nextA = document.createElement("a");
+    nextA.className = "btn btn-ghost btn-next";
+    endActions.appendChild(nextA);
+  }
+  nextA.href = endMeta.next;
+  nextA.textContent = endMeta.nextLabel || "Next episode";
+}
 
 const TOTAL = EPISODE.totalSec;
 
@@ -529,8 +558,8 @@ resize();
 
 // Load plates
 const plateCache = new Map();
-const plateBase = "episodes/01-birds-eye/stills/";
-const plateCacheTag = EPISODE.voice?.cache || "nofeather1";
+const plateBase = EPISODE.stillsDir || `episodes/${EPISODE.slug || "01-birds-eye"}/stills/`;
+const plateCacheTag = EPISODE.voice?.cache || "v1";
 
 function loadPlate(name) {
   if (plateCache.has(name)) return plateCache.get(name);

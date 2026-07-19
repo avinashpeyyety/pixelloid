@@ -20,7 +20,8 @@ Episodic browser theater: **write script → Imagine plates → animate**.
 
 | # | Title | Status |
 |---|--------|--------|
-| 01 | **The Bird's Eye** — Drona’s test of Arjuna | Live (cinematic plates) |
+| 01 | **The Bird's Eye** — Drona’s test of Arjuna | Live |
+| 02 | **The Fish's Eye** — Draupadi’s swayamvara | Live |
 
 ## Local
 
@@ -28,6 +29,7 @@ Episodic browser theater: **write script → Imagine plates → animate**.
 cd pixelloid && python3 -m http.server 8767
 # http://127.0.0.1:8767/mahabharata/
 # http://127.0.0.1:8767/mahabharata/play.html?ep=01
+# http://127.0.0.1:8767/mahabharata/play.html?ep=02
 ```
 
 ## Ep 01 plates
@@ -46,4 +48,20 @@ episodes/01-birds-eye/stills/
   plate-wide-gold.jpg
 ```
 
-Generate offline with Imagine (use garden plate as style ref). Never put API keys in the browser.
+## Ep 02 plates
+
+```
+episodes/02-swayamvara/stills/
+  poster.jpg
+  plate-wide.jpg
+  plate-challenge.jpg
+  plate-kings.jpg
+  plate-draupadi.jpg
+  plate-brahmin.jpg
+  plate-aim.jpg
+  plate-hit.jpg
+  plate-garland.jpg
+  plate-wide-gold.jpg
+```
+
+Generate offline with Imagine (use `plate-wide-gold` as style ref). Never put API keys in the browser.

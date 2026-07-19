@@ -17,6 +17,18 @@ export const EPISODES = [
   },
   {
     id: "02",
+    slug: "swayamvara",
+    title: "The Fish's Eye",
+    sanskrit: "मत्स्यचक्षुः",
+    chapter: "Ādi Parva · Draupadi’s swayamvara",
+    duration: "~96s",
+    status: "live",
+    blurb:
+      "At Drupada’s court the prize is won by looking only at the reflection — Arjuna strings the bow and strikes the fish’s eye.",
+    play: "play.html?ep=02",
+  },
+  {
+    id: "03",
     slug: "coming-soon",
     title: "Next episode",
     sanskrit: "शीघ्रम्",

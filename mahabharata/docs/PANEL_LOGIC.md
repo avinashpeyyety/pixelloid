@@ -70,6 +70,14 @@ The challenge is **optically inverted**. The logic agent must verify **both** ha
 
 **PASS when:** head/eyes → pool below; bow/arrow → aquarium above; tank is the **same large ceiling disc** as the challenge lock, high under the roof.
 
+**Stage layout (aim / hit):**
+
+| Rule | Detail |
+|------|--------|
+| Pool is empty | Archer stands on **dry floor beside** the pool — **never in** the water |
+| Preferred composition | Archer on the **left**; aquarium **top center**; pool mid/bottom center |
+| Hit arrow path | Arrow enters the fish from the **same side** as Arjuna (left → up), not the opposite side |
+
 ### 4. Character lock
 
 | Check | Rule |

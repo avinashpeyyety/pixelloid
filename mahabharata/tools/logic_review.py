@@ -304,6 +304,32 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool) -> list[str
             fails.append(
                 f"{pid}: aim geometry FAIL — arrow must not target the pool; pool is mirror only"
             )
+        # Never stand in the reflection pool
+        if re.search(r"\bstand(ing|s)?\b.{0,25}\bin\b.{0,15}\b(the )?(pool|water)\b", field, re.I):
+            if not re.search(r"\b(not|never|no)\b.{0,20}\bstand", field, re.I) and not re.search(
+                r"\b(beside|next to|outside)\b.{0,15}\bpool\b", field, re.I
+            ):
+                fails.append(f"{pid}: aim FAIL — archer must not stand in the pool (stand beside it)")
+        if not re.search(r"\b(beside|next to|outside|dry floor|left side)\b", field, re.I):
+            fails.append(
+                f"{pid}: aim FAIL — must place archer on dry floor beside pool (prefer left side)"
+            )
+
+    # Hit beat: arrow must come from same side as archer
+    if plate.get("id") == "hit" or re.search(r"\bhit\b|arrow (strikes|hits)", positive, re.I):
+        if plate.get("has_fish_apparatus") and re.search(r"\barrow\b", positive, re.I):
+            if re.search(r"\b(opposite side|from the right while.{0,20}left|wrong side)\b", positive, re.I):
+                fails.append(f"{pid}: hit FAIL — arrow must enter from archer's side, not opposite")
+            if not re.search(
+                r"\b(from (the )?(left|archer)|same side|toward|upward into)\b",
+                positive,
+                re.I,
+            ):
+                # soft: require some path wording when hit plate
+                if plate.get("id") == "hit":
+                    fails.append(
+                        f"{pid}: hit FAIL — must specify arrow path from archer's position into the fish"
+                    )
 
     for cid in plate.get("cast_present") or []:
         if cid not in cast_ids:

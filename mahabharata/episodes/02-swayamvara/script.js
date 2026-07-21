@@ -12,7 +12,7 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep02-v6-curtain-largetank",
+    cache: "ep02-v7-aim-hit",
     note: "Grok TTS orion — v4 ceiling-high aquarium + split aim geometry",
     base: "episodes/02-swayamvara/audio/",
   },

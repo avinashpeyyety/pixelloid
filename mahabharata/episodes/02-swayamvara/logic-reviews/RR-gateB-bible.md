@@ -1,9 +1,15 @@
 # Logic review — Ep 02 — GATE B (plate bible)
-Status: PASS
+Status: FAIL
 Reviewer: panel-logic agent (tools/logic_review.py)
 
 Plates: 9
 
-## Result
-All automated checks passed.
+## Blocking issues
+
+1. aim: fish apparatus must encode ceiling_height
+2. aim: aim geometry FAIL — arrow must not target the pool; pool is mirror only
+3. hit: hit FAIL — arrow must enter from archer's side, not opposite
+
+## Required fixes before Imagine
+Resolve every blocking issue in plate-bible.json, re-run this tool.
 

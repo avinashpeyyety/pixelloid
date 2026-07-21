@@ -27,12 +27,13 @@
 
 This is the **only** allowed matsya target setup unless a future ep bible overrides it:
 
-1. **Target:** Live fish **swimming in a sealed glass vessel** filled with water  
-2. **Mount:** Vessel **fixed to the roof / high ceiling beam** (or high scaffold under the roof)  
-3. **Motion:** Fish clearly **inside water** (not dry metal fish on a stick, not floating free in air)  
-4. **Mirror:** Circular **water pool on the floor** under the vessel shows a **clear reflection** of the fish  
-5. **Task:** Hit the **eye of the real fish above** while **looking only at the reflection below**  
-6. **Forbidden:** Dry fish on pole, fish swimming free in the floor pool as the target, wheel-only mounts without glass water, decorative fish with no reflection setup
+1. **Target:** Live fish swimming in a **large circular ornamental sealed glass aquarium** (flat bottom, ornate rim), filled with water  
+2. **Mount:** **Chandelier-style** hang from a **high ceiling** medallion via slender chains/rods — aquarium sits **well above human eye level**  
+3. **Clear view:** **No** wooden cradle, **no** thick horizontal beams or box frames that obstruct the fish  
+4. **Motion:** Fish clearly **inside water** in the aquarium  
+5. **Mirror:** Circular **water pool on the floor** under the aquarium shows a **clear reflection** of the fish  
+6. **Task:** Hit the **eye of the real fish above** while **looking only at the reflection below**  
+7. **Forbidden:** Dry fish on pole; fish only in floor pool as target; aquarium at eye/chest height; wooden beam cradle; view-blocking horizontal supports
 
 ### 4. Character lock
 

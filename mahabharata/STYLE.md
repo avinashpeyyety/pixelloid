@@ -33,10 +33,11 @@ Series spine for all episodes. Change *locus* and *secondary accent* by parva; k
 
 ## Fish’s Eye apparatus (Ep 02+ lock)
 
-1. Fish **swims in sealed glass vessel of water**  
-2. Vessel **fixed to roof / ceiling beams**  
-3. **Floor pool** reflects the vessel — archer aims by **looking only at the reflection**  
-4. Hit the **eye of the real fish above**
+1. Fish swims in a **large circular ornamental sealed aquarium** (flat bottom, gold/bronze rim)  
+2. **Chandelier hang** from high ceiling — **above eye level**; slender chains only  
+3. **No** wooden cradle or view-blocking horizontal beams  
+4. **Floor pool** reflects the aquarium — archer aims by **looking only at the reflection**  
+5. Hit the **eye of the real fish above**
 
 ## Assets pipeline
 

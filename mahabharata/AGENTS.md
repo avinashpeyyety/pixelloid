@@ -14,7 +14,7 @@ Before generating or shipping any plate:
 
 ## Ep 02 apparatus (locked)
 
-Fish **in sealed glass water vessel fixed to roof**; reflection in **floor pool**; archer aims by **looking at the pool**. No dry hanging fish, no floor-only fish target, no random bow sculptures next to Draupadi.
+Fish in a **large circular ornamental sealed aquarium**, hanging **chandelier-style from high ceiling** (above eye level, flat bottom, no wooden cradle / no obstructing beams). Reflection in **floor pool**; archer aims by **looking at the pool**. No dry hanging fish, no floor-only fish target, no random bow sculptures next to Draupadi.
 
 ## Style
 

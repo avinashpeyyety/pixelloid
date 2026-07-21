@@ -5,6 +5,7 @@
 - [ ] Ep 03 script + plate-bible + logic gates (same engine)
 - [ ] Shared episode schema doc (`docs/EPISODE_FORMAT.md`) — cam + poses + stills
 - [ ] Optional: re-edit Ep02 aim plate for stricter eyes-down-at-pool geometry
+- [x] Ep02 apparatus v3 — chandelier ornamental aquarium (no wooden cradle)
 
 ## Later
 

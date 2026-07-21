@@ -12,8 +12,8 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep02-v2-logic",
-    note: "Grok TTS orion — deep heroic narration (v2 logic-reviewed)",
+    cache: "ep02-v3-chandelier",
+    note: "Grok TTS orion — deep heroic narration (v3 chandelier aquarium)",
     base: "episodes/02-swayamvara/audio/",
   },
   totalSec: 96,
@@ -64,7 +64,7 @@ export const EPISODE = {
       panY: -0.03,
       audio: "orion-01.mp3",
       who: "Narrator",
-      text: "The test is set: a fish swims in a glass vessel fixed high to the roof. Hit its eye — by looking only at its reflection in the pool below.",
+      text: "The test is set: a fish swims in a great glass aquarium hung high like a chandelier. Hit its eye — by looking only at its reflection in the pool below.",
     },
     {
       t: 20,

@@ -270,8 +270,8 @@
       "is_aim_beat": false,
       "must_show": [
         "Arjuna on left side of hall",
-        "Arrow path from left (archer's side) upward into the fish",
-        "SAME LARGE ceiling aquarium as challenge plate under roof",
+        "Arrow path from archer's left side upward into the fish",
+        "SAME LARGE ceiling-height aquarium with swimming fish in water under roof as challenge plate",
         "High graphic quality",
         "Splash where arrow hits fish eye"
       ],
@@ -286,7 +286,7 @@
         "pool",
         "bow"
       ],
-      "prompt": "Premium quality. Arjuna stands LEFT. LARGE ceiling aquarium top center. ONE arrow has struck the fish flying from Arjuna's left side upward into the tank (same side as archer). Splash at hit. Not from the opposite side of the hall."
+      "prompt": "Premium quality painted comic. Arjuna stands LEFT. SAME LARGE circular gold-rimmed sealed aquarium with swimming fish at TRUE ceiling height under the roof, top center. ONE arrow struck the fish eye flying from Arjuna's left side upward into the tank (same side as archer). Water splash. Floor pool below. Not from the opposite side."
     },
     {
       "id": "garland",

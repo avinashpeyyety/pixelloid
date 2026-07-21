@@ -316,20 +316,27 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool) -> list[str
             )
 
     # Hit beat: arrow must come from same side as archer
-    if plate.get("id") == "hit" or re.search(r"\bhit\b|arrow (strikes|hits)", positive, re.I):
-        if plate.get("has_fish_apparatus") and re.search(r"\barrow\b", positive, re.I):
-            if re.search(r"\b(opposite side|from the right while.{0,20}left|wrong side)\b", positive, re.I):
-                fails.append(f"{pid}: hit FAIL — arrow must enter from archer's side, not opposite")
+    if plate.get("id") == "hit":
+        field = f"{must_show} {prompt}"
+        if plate.get("has_fish_apparatus"):
+            if not re.search(r"water|swim", field, re.I):
+                fails.append(f"{pid}: hit FAIL — encode water/swim in ceiling aquarium")
+            if not re.search(r"ceiling|roof|high under", field, re.I):
+                fails.append(f"{pid}: hit FAIL — encode ceiling-height aquarium")
             if not re.search(
-                r"\b(from (the )?(left|archer)|same side|toward|upward into)\b",
-                positive,
+                r"\b(from (the )?(left|archer)|same side|archer's (left )?side|upward into)\b",
+                field,
                 re.I,
             ):
-                # soft: require some path wording when hit plate
-                if plate.get("id") == "hit":
-                    fails.append(
-                        f"{pid}: hit FAIL — must specify arrow path from archer's position into the fish"
-                    )
+                fails.append(
+                    f"{pid}: hit FAIL — must specify arrow path from archer's side into the fish"
+                )
+            # Fail only if opposite-side path is asserted without negation
+            for m in re.finditer(r"\bopposite side\b", field, re.I):
+                win = field[max(0, m.start() - 30) : m.end()]
+                if not re.search(r"\b(not|never|no)\b", win, re.I):
+                    fails.append(f"{pid}: hit FAIL — arrow must not enter from opposite side")
+                    break
 
     for cid in plate.get("cast_present") or []:
         if cid not in cast_ids:

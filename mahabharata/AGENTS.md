@@ -14,7 +14,9 @@ Before generating or shipping any plate:
 
 ## Ep 02 apparatus (locked)
 
-Fish in a **large circular ornamental sealed aquarium** at **true palace ceiling height** (long chains, top of frame, people small). Chandelier hang only — no wooden cradle. **Aim split:** eyes **down** into floor pool; arrow **up** at the high tank. No mid-height tank, no looking up at the fish, no shooting the pool.
+**Mirror + ground fish:** large ornamental **mirror on the ceiling**; **fish in the ground pool**. Archer looks **up into the mirror** and shoots the **fish eye in the pool**. No ceiling aquarium.  
+
+**Durbar (panel 1):** hall floor = men only (king, princes). **All women only on balconies** behind curtains — never giant women on the court floor.
 
 ## Style
 

@@ -1,43 +1,45 @@
 {
   "episode_id": "02",
   "title": "The Fish's Eye",
-  "style_lock": "Charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour; soft faces; clear silhouettes",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour; refined linework",
   "style_master_ref": "episodes/01-birds-eye/stills/plate-wide-gold.jpg",
   "photoreal_allowed": false,
-  "frame": "Ornate lotus / peony carved wooden frame on every plate",
+  "frame": "Ornate lotus carved wooden frame on every plate",
   "apparatus": {
-    "continuity_id": "matsya-chandelier-ceiling-v4",
-    "target": "Live fish swimming inside a large circular ornamental sealed glass aquarium filled with water; flat bottom, elegant gold/bronze rim",
-    "mount": "Chandelier-style suspension from the high palace ceiling medallion via slender gold chains only — open air around the tank",
-    "height": "TRUE CEILING HEIGHT: aquarium hangs under the palace roof, far above any standing person. In composition: near the top of the frame, long chains visible, people small relative to hall height. Never mid-hall or eye-level.",
-    "mirror": "Circular still water pool set into the stone floor directly below; clear reflection of the distant high aquarium",
+    "continuity_id": "matsya-ceiling-mirror-pool-fish-v8",
+    "target": "Live fish swimming in a circular ornamental pool set into the palace ground/floor",
+    "mirror": "Large ornamental circular mirror with gold frame mounted high under the palace ceiling — used only for aiming sight",
+    "mount": "Ceiling mirror fixed high under roof (large disc scale); no fish aquarium",
+    "height": "Mirror at true ceiling height top of hall; pool on the ground",
     "aim_geometry": {
-      "eyes": "Look DOWN at the floor pool reflection only — chin/gaze toward water; pool is the optical mirror",
-      "arrow": "Arms and arrow aimed UPWARD / steeply up at the ceiling aquarium — the real target is high above",
+      "eyes": "Look UP into the ceiling mirror (sees the fish reflected)",
+      "arrow": "Aim DOWN at the real fish in the ground pool — hit the eye",
       "forbidden": [
-        "Looking up at the fish with direct eyes",
-        "Arrow aimed into the pool as if reflection were physical target",
-        "Aquarium at archer head/chest height filling mid-frame"
+        "Ceiling aquarium of fish",
+        "Shooting the mirror",
+        "Standing in the pool",
+        "Looking only at the pool without the mirror"
       ]
     },
-    "task": "Hit the eye of the real fish in the ceiling-high aquarium while looking only at the reflection in the floor pool",
+    "task": "Hit the eye of the fish in the ground pool while aiming by looking into the ceiling mirror",
     "forbidden": [
-      "Dry metal fish on a pole",
-      "Fish only in the floor pool as the target",
-      "Wooden cradle or box holding the aquarium",
-      "Heavy horizontal wooden beams obstructing the aquarium",
-      "Aquarium at human eye / chest / mid-hall height",
-      "Archer looking up at the tank",
-      "Arrow aimed down into the pool"
+      "Glass aquarium / fish tank on the ceiling",
+      "Fish hanging dry on a pole",
+      "Women standing giant-sized on the court floor in durbar",
+      "Maids instead of princesses on balconies"
     ],
-    "size": "LARGE ceiling disc matching challenge plate: wide gold-rimmed ornamental sealed aquarium spanning a large fraction of the roof opening — NOT a small pot, jar, or fishbowl. Same dimensions on every fish panel.",
     "size_lock_ref": "episodes/02-swayamvara/stills/plate-challenge.jpg"
   },
   "cast": {
     "draupadi": {
-      "face": "Young woman, warm brown skin, large dark eyes, soft brows, gentle smile, small bindi",
+      "face": "Young woman, warm brown skin, large dark eyes, soft brows, small bindi",
       "hair": "Long black wavy hair, gold maang tikka + small crown",
-      "costume": "Deep red silk sari with gold border, gold jewelry, flower garland when waiting"
+      "costume": "Deep red silk sari with gold border, gold jewelry, veil optional"
+    },
+    "princess": {
+      "face": "Young royal women, comic painted style",
+      "hair": "Ornate hair and jewelry",
+      "costume": "Rich silk saris, crowns — princesses only, never maids"
     },
     "arjuna_brahmin": {
       "face": "Young man, oval face, dark eyes, thin dark mustache, calm focus",
@@ -54,8 +56,13 @@
       "hair": "Crowns or turbans, mustaches",
       "costume": "Jewel-tone silks"
     },
+    "king_drupada": {
+      "face": "Mature king, regal mustache and beard",
+      "hair": "Crown",
+      "costume": "Royal white and gold on throne"
+    },
     "courtiers": {
-      "face": "Background comic silhouettes",
+      "face": "Background male comic silhouettes",
       "hair": "Turbans",
       "costume": "Muted court dress"
     }
@@ -66,63 +73,61 @@
       "file": "plate-wide.jpg",
       "beat_text": "In the court of King Drupada, suitors gather for Draupadi’s swayamvara.",
       "cast_present": [
-        "draupadi",
+        "king_drupada",
         "king_suitor",
-        "courtiers"
+        "draupadi",
+        "princess"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Reginal durbar king throne princes seated both sides",
-        "ALL women are princesses with royal jewelry and silk — no maids",
-        "Princesses behind curtains on balconies, shyly peering"
+        "Premium high-quality painted comic Amar Chitra durbar",
+        "King on center throne; princes/suitors ONLY on the hall floor seated both sides — equal natural human scale",
+        "ALL women and princesses ONLY on upper balconies left and right — none standing on the court floor",
+        "Princesses behind curtains/jali, shyly peering out",
+        "No giant women, no maids, no fish apparatus"
       ],
       "must_not_show": [
-        "Maids or servants in plain white",
-        "Sitting on terrace wall"
+        "Women standing on the court floor among princes",
+        "Giant princesses in the hall aisle",
+        "Maids or servants",
+        "Sitting on terrace railing",
+        "Fish tank or mirror apparatus",
+        "Photoreal or crude low quality"
       ],
       "props": [
         "throne",
         "carpets",
-        "curtains",
-        "jali screens"
+        "balcony curtains"
       ],
-      "prompt": "Wide regal Indian palace durbar. King on center throne. Suitors seated left and right on the floor. On first-floor balconies left and right: Draupadi and her maids stand or sit BEHIND heavy sheer curtains and carved jali screens, only shyly peering out through a curtain gap — they are NOT sitting on the terrace wall or railing. Equal human scale. Painted comic gold style, lotus frame. No fish tank."
+      "prompt": "Premium high-quality painted comic Amar Chitra regal Indian palace durbar. Eye-level balanced perspective, ALL figures equal natural human scale — no giants. CENTER: King Drupada on golden throne. HALL FLOOR ONLY: adult suitor princes seated in neat rows left and right — NO women on the floor. UPPER BALCONIES left and right only: Draupadi and other PRINCESSES in rich silk saris and jewelry behind heavy sheer curtains, shyly peering through gaps — not on railings, not standing in the court. Ornate lotus frame, cream-saffron-gold light. No fish, no mirror apparatus. Polished refined linework."
     },
     {
       "id": "challenge",
       "file": "plate-challenge.jpg",
-      "beat_text": "The test is set: a revolving fish high above. Hit its eye — by looking only at its reflection in the water below.",
+      "beat_text": "The test is set: a mirror high above; the fish waits in the pool. Hit its eye by looking only into the mirror.",
       "cast_present": [],
       "has_fish_apparatus": true,
       "is_aim_beat": false,
       "must_show": [
-        "SAME LARGE circular ornamental ceiling aquarium as challenge plate (wide gold-rimmed disc under roof, large dimensions — NOT a small pot/jar)",
-        "Close heroic view of large circular ornamental aquarium hanging high chandelier-style",
-        "Floor pool reflection of the fish used as aiming mirror",
-        "Great contest bow resting alone on a stone pedestal in foreground (not next to Draupadi)",
-        "Lotus frame, painted comic style"
+        "Premium painted comic quality",
+        "LARGE circular ornamental gold-framed MIRROR high under the palace ceiling top center",
+        "Circular ground pool with live fish swimming in the water",
+        "Contest bow on floor pedestal beside pool",
+        "Mirror reflects the pool/fish; no aquarium"
       ],
       "must_not_show": [
-        "Dry fish on pole",
-        "Fish only in floor pool as the sole target",
-        "Photoreal",
-        "Wooden cradle or box around the aquarium",
-        "Heavy horizontal wooden beams blocking the aquarium",
-        "Aquarium at human eye level",
-        "Aquarium at eye level or mid-hall height",
-        "Aquarium beside archer's head or torso",
-        "Looking up at the fish on aim",
-        "Arrow aimed into the pool",
-        "Small pot/jar/fishbowl-sized tank",
-        "Different tank size than challenge plate"
+        "Ceiling aquarium or fish tank",
+        "Fish only in hanging glass",
+        "Small hand mirror",
+        "Photoreal"
       ],
       "props": [
-        "glass fish vessel",
-        "floor pool",
-        "contest bow on pedestal"
+        "ceiling mirror",
+        "ground pool with fish",
+        "bow"
       ],
-      "prompt": "Hero plate of the swayamvara test apparatus. Ornate lotus frame, cream-saffron-gold painted comic style matching Ep01 gold master — not photoreal. Center-high: sealed glass sphere or cylindrical vessel of water hanging high chandelier-style from the ceiling; a golden-scaled fish swims inside. Below: circular floor pool showing a crisp reflection of the fish. Foreground stone pedestal holds one great wooden contest bow (normal human-scale bow, not a weird sculpture). Empty palace courtyard soft light, no people or tiny background figures only. Clear physics: ornamental aquarium above, reflection pool below. Flat-bottomed large circular ornamental aquarium; chandelier hang only; no wooden cradle or obstructing beams. Aquarium is at TRUE PALACE CEILING HEIGHT — near the top of the frame under the roof, long hanging chains, far above people (people look small in the tall hall). Low-angle / worm's-eye composition. NOT mid-air at human height. CRITICAL: use the SAME LARGE wide gold-rimmed circular ceiling aquarium as the challenge lock plate — large dimensions spanning the roof, NOT a small hanging pot or jar."
+      "prompt": "Premium high-quality painted comic hall. LARGE circular ornamental gold-framed MIRROR fixed high under the ceiling (top center, wide disc). On the ground: circular ornamental pool with a golden fish swimming in the water. Mirror above can show the fish. Contest bow on a stone pedestal on dry floor. No aquarium, no fish tank on ceiling. Tall palace, cream-saffron-gold light, lotus frame, refined Amar Chitra quality."
     },
     {
       "id": "kings",
@@ -134,134 +139,111 @@
       "has_fish_apparatus": true,
       "is_aim_beat": false,
       "must_show": [
-        "SAME LARGE circular ornamental ceiling aquarium as challenge plate (wide gold-rimmed disc under roof, large dimensions — NOT a small pot/jar)",
-        "Ornamental sealed aquarium at TRUE ceiling height (top of frame, long chains, far above heads)",
-        "Several adult warrior princes same comic style",
-        "One prince struggling to string or lift the contest bow",
-        "High chandelier aquarium and floor pool visible in background",
-        "Frustration, not comedy kids"
+        "Premium painted comic quality",
+        "Princes fail with bow on dry floor",
+        "LARGE ceiling mirror high under roof",
+        "Ground pool with fish swimming",
+        "Same apparatus as challenge"
       ],
       "must_not_show": [
+        "Ceiling aquarium",
         "Photoreal",
-        "Peacock on princes",
-        "Dry hanging fish without glass",
-        "Wooden cradle or box around the aquarium",
-        "Heavy horizontal wooden beams blocking the aquarium",
-        "Aquarium at human eye level",
-        "Aquarium at eye level or mid-hall height",
-        "Aquarium beside archer's head or torso",
-        "Looking up at the fish on aim",
-        "Arrow aimed into the pool",
-        "Small pot/jar/fishbowl-sized tank",
-        "Different tank size than challenge plate"
+        "Women on floor"
       ],
       "props": [
-        "contest bow",
-        "glass vessel",
-        "pool"
+        "bow",
+        "ceiling mirror",
+        "pool with fish"
       ],
-      "prompt": "Palace hall, painted comic mythology style matching Ep01 gold master — not photoreal. Adult suitor princes in jewel-tone silks and crowns attempt the contest; center prince strains to string a large wooden bow and fails. Background: large circular ornamental sealed glass aquarium with swimming fish fixed high to roof beams, circular floor pool reflecting it. Ornate lotus frame, golden hour. Consistent comic line weight on all faces — no photoreal skin. The aquarium is a LARGE CIRCULAR ornamental sealed glass tank with a FLAT bottom and ornate gold rim, suspended chandelier-style by slender gold chains from a high ceiling medallion — HIGH above people, NOT at eye level. NO wooden cradle, NO thick horizontal wooden beams obstructing the view of the fish. Aquarium is at TRUE PALACE CEILING HEIGHT — near the top of the frame under the roof, long hanging chains, far above people (people look small in the tall hall). Low-angle / worm's-eye composition. NOT mid-air at human height. CRITICAL: use the SAME LARGE wide gold-rimmed circular ceiling aquarium as the challenge lock plate — large dimensions spanning the roof, NOT a small hanging pot or jar."
+      "prompt": "Premium painted comic. Adult princes fail to string the contest bow on the hall floor. Behind: LARGE gold-framed circular MIRROR high on the ceiling; circular ground pool with swimming fish. No aquarium. Lotus frame, refined quality."
     },
     {
       "id": "draupadi",
       "file": "plate-draupadi.jpg",
       "beat_text": "Draupadi waits with the garland, calm as the challenge grows heavier.",
       "cast_present": [
-        "draupadi",
-        "courtiers"
+        "draupadi"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Draupadi matching cast sheet: red sari, garland in hands, calm",
-        "Soft palace pillars, golden light",
-        "No bow near her"
+        "Premium painted comic portrait of Draupadi with garland",
+        "Royal princess quality, no maid"
       ],
       "must_not_show": [
-        "Any bow next to Draupadi",
+        "Bow next to her",
         "Photoreal",
-        "Weapon props"
+        "Maids"
       ],
       "props": [
-        "garland only"
+        "garland"
       ],
-      "prompt": "Medium portrait of Draupadi for swayamvara wait. Same face lock: warm brown skin, large dark eyes, long black hair, small gold crown, deep red gold-bordered sari, holding white and red flower garland with both hands. Calm serene expression. Soft palace arches behind, painted comic Amar Chitra style matching Ep01 gold master — not photoreal. Ornate lotus frame. No bow, no weapons, no fish apparatus needed in this intimate shot. Background courtiers softly blurred comic silhouettes."
+      "prompt": "Premium high-quality painted comic medium portrait of Princess Draupadi in deep red gold sari, long black hair, holding flower garland, calm. Soft palace arches. Lotus frame. Amar Chitra refined quality, not photoreal."
     },
     {
       "id": "brahmin",
       "file": "plate-brahmin.jpg",
       "beat_text": "Then a young brahmin steps forward — quiet, steady. None yet know him as Arjuna.",
       "cast_present": [
-        "arjuna_brahmin",
-        "courtiers"
+        "arjuna_brahmin"
       ],
       "has_fish_apparatus": true,
       "is_aim_beat": false,
       "must_show": [
-        "SAME LARGE circular ornamental ceiling aquarium as challenge plate (wide gold-rimmed disc under roof, large dimensions — NOT a small pot/jar)",
-        "Ornamental sealed aquarium at TRUE ceiling height (top of frame, long chains, far above heads)",
-        "Young brahmin Arjuna: white dhoti, topknot, thin dark mustache, no crown, no peacock",
-        "He approaches or lifts the contest bow with calm confidence",
-        "High chandelier aquarium and floor pool visible behind",
-        "Same face as later aim/hit/garland plates"
+        "Premium quality",
+        "Young brahmin Arjuna white dhoti topknot mustache reaches for bow",
+        "LARGE ceiling mirror high under roof",
+        "Ground pool with fish"
       ],
       "must_not_show": [
-        "Jeweled crown",
-        "Peacock feather",
-        "Photoreal",
-        "Blue prince costume",
-        "Wooden cradle or box around the aquarium",
-        "Heavy horizontal wooden beams blocking the aquarium",
-        "Aquarium at human eye level",
-        "Aquarium at eye level or mid-hall height",
-        "Aquarium beside archer's head or torso",
-        "Looking up at the fish on aim",
-        "Arrow aimed into the pool",
-        "Small pot/jar/fishbowl-sized tank",
-        "Different tank size than challenge plate"
+        "Peacock",
+        "Ceiling aquarium",
+        "Sage required",
+        "Photoreal"
       ],
       "props": [
-        "contest bow",
-        "glass vessel",
+        "bow",
+        "ceiling mirror",
         "pool"
       ],
-      "prompt": "Young brahmin (secretly Arjuna) steps forward in King Drupada’s hall. Face lock: oval face, dark eyes, thin dark mustache, black curly hair in simple topknot — NO peacock feather, NO crown. Plain cream-white dhoti, bare chest with simple cloth. Calm quiet strength as he reaches for the great contest bow on a pedestal. Behind him: large circular ornamental sealed glass aquarium with swimming fish hanging high chandelier-style from the ceiling and circular floor pool reflection. Courtiers watching. Painted comic style matching Ep01 gold master — not photoreal. Ornate lotus frame, golden hour. Flat-bottomed large circular ornamental aquarium; chandelier hang only; no wooden cradle or obstructing beams. Aquarium is at TRUE PALACE CEILING HEIGHT — near the top of the frame under the roof, long hanging chains, far above people (people look small in the tall hall). Low-angle / worm's-eye composition. NOT mid-air at human height. CRITICAL: use the SAME LARGE wide gold-rimmed circular ceiling aquarium as the challenge lock plate — large dimensions spanning the roof, NOT a small hanging pot or jar."
+      "prompt": "Premium painted comic. Young brahmin (black topknot, thin mustache, white dhoti) reaches for contest bow on pedestal. Hall shows LARGE gold-framed ceiling MIRROR high under roof and ground pool with swimming fish. No peacock, no aquarium. Lotus frame, refined quality."
     },
     {
       "id": "aim",
       "file": "plate-aim.jpg",
-      "beat_text": "He strings the bow, looks only at the water, and finds the eye.",
+      "beat_text": "He strings the bow, looks into the high mirror, and finds the eye in the pool.",
       "cast_present": [
         "arjuna_brahmin"
       ],
       "has_fish_apparatus": true,
       "is_aim_beat": true,
       "must_show": [
-        "Arjuna LEFT side on DRY floor beside pool — never in the pool",
-        "Floor pool empty of people, reflection only",
-        "SAME LARGE ceiling-height aquarium as challenge plate, top center under roof",
-        "Arrow aimed UP at ceiling fish",
-        "Eyes looking DOWN at pool reflection",
-        "Premium painted comic graphic quality"
+        "Premium high-quality painted comic",
+        "Arjuna on LEFT dry floor BESIDE the pool — never in the water",
+        "LARGE circular gold-framed MIRROR high under ceiling top center",
+        "Ground pool with fish swimming — real target",
+        "Eyes looking UP into the ceiling mirror",
+        "Bow drawn, arrow aimed DOWN at the fish eye in the pool"
       ],
       "must_not_show": [
         "Standing in the pool",
-        "Centered under the tank in the pool",
-        "Small pot tank",
-        "Photoreal or crude low quality"
+        "Ceiling aquarium",
+        "Arrow aimed at the mirror",
+        "Shooting upward at a tank of fish",
+        "Photoreal or crude quality"
       ],
       "props": [
         "bow",
         "arrow",
-        "glass vessel",
-        "pool"
+        "ceiling mirror",
+        "pool with fish"
       ],
-      "prompt": "Premium Amar Chitra quality. Arjuna on LEFT dry floor BESIDE the pool (never standing in water). LARGE circular gold-rimmed aquarium at TRUE ceiling height top center under the roof (same large dimensions as challenge plate). Full draw: arrow angled UPWARD at the ceiling aquarium. Eyes looking DOWN at the floor pool reflection. Pool is mirror only — do not shoot the pool. High graphic quality painted comic style."
+      "prompt": "Premium high-quality painted comic Amar Chitra. Arjuna LEFT on dry stone floor beside the circular ground pool (never in water), white dhoti, topknot, mustache. LARGE ornamental gold-framed circular MIRROR high under ceiling top center. Fish swims in the ground pool. AIM GEOMETRY: his eyes look UP into the ceiling mirror; his bow is drawn with arrow aimed DOWN at the fish eye in the pool. Mirror reflects the fish. Refined polished quality, lotus frame. No aquarium."
     },
     {
       "id": "hit",
       "file": "plate-hit.jpg",
-      "beat_text": "The arrow flies. The fish is struck. The court falls silent — then roars.",
+      "beat_text": "The arrow flies. The fish in the pool is struck. The court falls silent — then roars.",
       "cast_present": [
         "arjuna_brahmin",
         "courtiers"
@@ -269,24 +251,25 @@
       "has_fish_apparatus": true,
       "is_aim_beat": false,
       "must_show": [
-        "Arjuna on left side of hall",
-        "Arrow path from archer's left side upward into the fish",
-        "SAME LARGE ceiling-height aquarium with swimming fish in water under roof as challenge plate",
-        "High graphic quality",
-        "Splash where arrow hits fish eye"
+        "Premium high-quality painted comic",
+        "Arjuna on left side dry floor",
+        "Arrow from archer's left side hits the fish eye IN THE GROUND POOL",
+        "LARGE ceiling mirror still high above",
+        "Splash in pool where fish is hit"
       ],
       "must_not_show": [
-        "Arrow entering from the side opposite Arjuna",
-        "Low quality crude graphics",
-        "Small pot tank"
+        "Fish hanging from ceiling",
+        "Arrow from opposite side of Arjuna",
+        "Crude low quality",
+        "Standing in pool"
       ],
       "props": [
         "arrow",
-        "glass vessel",
-        "pool",
+        "pool fish",
+        "ceiling mirror",
         "bow"
       ],
-      "prompt": "Premium quality painted comic. Arjuna stands LEFT. SAME LARGE circular gold-rimmed sealed aquarium with swimming fish at TRUE ceiling height under the roof, top center. ONE arrow struck the fish eye flying from Arjuna's left side upward into the tank (same side as archer). Water splash. Floor pool below. Not from the opposite side."
+      "prompt": "Premium high-quality painted comic. Arjuna LEFT celebrating. LARGE gold-framed circular MIRROR high under the ceiling. Circular ground pool: arrow from Arjuna's left has struck the fish eye in the pool — splash. No fish hanging above. Same-side arrow path. Refined Amar Chitra quality, lotus frame."
     },
     {
       "id": "garland",
@@ -294,25 +277,22 @@
       "beat_text": "Draupadi places the garland on his neck. The prize is won by skill, not boast.",
       "cast_present": [
         "draupadi",
-        "arjuna_revealed",
-        "courtiers"
+        "arjuna_revealed"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Same Draupadi face placing garland",
-        "Same Arjuna face receiving garland (white cloth, optional light diadem, no peacock)",
-        "Warm intimate palace mid-shot"
+        "Premium quality",
+        "Same Draupadi and Arjuna faces, garland moment"
       ],
       "must_not_show": [
-        "Peacock feather",
-        "Photoreal",
-        "Different faces from earlier plates"
+        "Peacock",
+        "Photoreal"
       ],
       "props": [
         "garland"
       ],
-      "prompt": "Draupadi places the flower garland around Arjuna’s neck. Face continuity: same Draupadi as earlier (red sari, long black hair); same Arjuna face as brahmin plates (thin mustache, dark eyes) now gently smiling, still mostly white dhoti, optional simple gold diadem, absolutely NO peacock feather. Soft palace pillars, cheering courtiers soft in background. Painted comic Amar Chitra style matching Ep01 gold master — not photoreal. Ornate lotus frame, warm golden hour."
+      "prompt": "Premium painted comic. Draupadi places garland on Arjuna (white dhoti, mustache, topknot, no peacock). Soft palace, warm light, lotus frame, refined quality."
     },
     {
       "id": "wide-gold",
@@ -326,33 +306,21 @@
       "has_fish_apparatus": true,
       "is_aim_beat": false,
       "must_show": [
-        "SAME LARGE circular ornamental ceiling aquarium as challenge plate (wide gold-rimmed disc under roof, large dimensions — NOT a small pot/jar)",
-        "Celebratory wide hall: Arjuna and Draupadi together",
-        "Large circular ornamental aquarium still hanging high chandelier-style from ceiling with water and swimming fish",
-        "Floor pool reflection still present for continuity",
-        "Same faces as garland plate",
-        "Gold comic closing mood like Ep01 wide-gold"
+        "Premium quality closing plate",
+        "Arjuna and Draupadi together with garland",
+        "LARGE ceiling mirror and ground pool with fish still in hall for continuity"
       ],
       "must_not_show": [
+        "Ceiling aquarium",
         "Photoreal",
-        "Peacock",
-        "Missing apparatus continuity",
-        "Wooden cradle or box around the aquarium",
-        "Heavy horizontal wooden beams blocking the aquarium",
-        "Aquarium at human eye level",
-        "Aquarium at eye level or mid-hall height",
-        "Aquarium beside archer's head or torso",
-        "Looking up at the fish on aim",
-        "Arrow aimed into the pool",
-        "Small pot/jar/fishbowl-sized tank",
-        "Different tank size than challenge plate"
+        "Peacock"
       ],
       "props": [
         "garland",
-        "glass vessel",
+        "ceiling mirror",
         "pool"
       ],
-      "prompt": "Closing wide gold plate. Arjuna and Draupadi stand together after the swayamvara — same faces as prior plates, garland on his neck, her red sari. Behind them the sealed ornamental chandelier aquarium remains hanging high from the ceiling and the floor pool still mirrors it, quiet now. Courtiers celebrate. Warm cream-saffron-gold painted comic style identical language to Ep01 plate-wide-gold — charming, not photoreal. Ornate lotus frame, peaceful victory light. Flat-bottomed large circular ornamental aquarium; chandelier hang only; no wooden cradle or obstructing beams. Aquarium is at TRUE PALACE CEILING HEIGHT — near the top of the frame under the roof, long hanging chains, far above people (people look small in the tall hall). Low-angle / worm's-eye composition. NOT mid-air at human height. CRITICAL: use the SAME LARGE wide gold-rimmed circular ceiling aquarium as the challenge lock plate — large dimensions spanning the roof, NOT a small hanging pot or jar."
+      "prompt": "Premium painted comic closing gold plate. Arjuna and Draupadi after victory. Behind: LARGE ceiling gold-framed MIRROR and ground pool (fish continuity). No aquarium. Warm cream-saffron-gold, lotus frame, refined quality."
     }
   ]
 }

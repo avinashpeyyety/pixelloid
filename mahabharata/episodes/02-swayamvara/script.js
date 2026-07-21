@@ -1,6 +1,6 @@
 /**
  * Episode 02 — The Fish's Eye (Draupadi’s Swayamvara)
- * Same pipeline as Ep 01: cinematic plates + Grok TTS (orion) + flute/tabla.
+ * Ceiling mirror + ground-pool fish; cinematic plates + Orion TTS + flute/tabla.
  */
 export const EPISODE = {
   id: "02",
@@ -12,8 +12,8 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep02-v7-aim-hit",
-    note: "Grok TTS orion — v4 ceiling-high aquarium + split aim geometry",
+    cache: "ep02-v8-mirror",
+    note: "Grok TTS orion — v8 ceiling mirror + ground-pool fish",
     base: "episodes/02-swayamvara/audio/",
   },
   totalSec: 96,
@@ -64,7 +64,7 @@ export const EPISODE = {
       panY: -0.03,
       audio: "orion-01.mp3",
       who: "Narrator",
-      text: "The test is set: high under the palace roof, a glass aquarium hangs like a chandelier. Hit its eye — but look only down into the pool’s reflection.",
+      text: "The test is set: a great mirror hangs high under the roof. The fish waits in the pool below. Hit its eye — by looking only into the mirror.",
     },
     {
       t: 20,
@@ -104,7 +104,7 @@ export const EPISODE = {
       panY: -0.04,
       audio: "orion-05.mp3",
       who: "Narrator",
-      text: "He strings the bow, looks only down into the water, and aims the arrow up — finding the eye.",
+      text: "He strings the bow, looks up into the high mirror, and finds the eye in the pool.",
     },
     {
       t: 60,
@@ -114,7 +114,7 @@ export const EPISODE = {
       panY: -0.06,
       audio: "orion-06.mp3",
       who: "Narrator",
-      text: "The arrow flies. The fish is struck. The court falls silent — then roars.",
+      text: "The arrow flies. The fish in the pool is struck. The court falls silent — then roars.",
     },
     {
       t: 70,

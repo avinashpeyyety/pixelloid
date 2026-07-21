@@ -68,37 +68,30 @@
         "king_suitor",
         "courtiers"
       ],
-      "has_fish_apparatus": true,
+      "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Ornamental sealed aquarium at TRUE ceiling height (top of frame, long chains, far above heads)",
-        "Grand palace hall with pillars and arches",
-        "Large circular ornamental sealed glass aquarium with swimming fish, hanging high chandelier-style well above eye level",
-        "Circular floor pool under the vessel with fish reflection",
-        "Draupadi on a raised dais in red sari holding a garland (no bow beside her)",
-        "Rows of suitors and courtiers watching",
-        "Lotus ornate frame, painted comic style"
+        "Regal palace durbar hall, balanced eye-level perspective, all figures natural equal scale",
+        "King Drupada on center throne under canopy",
+        "Suitors/princes seated in rows on both sides of the hall",
+        "First-floor ornamental balconies left and right opening into the court",
+        "Draupadi veiled on balcony with maids — human scale, not giant",
+        "No fish tank or aquarium in this establishing court scene"
       ],
       "must_not_show": [
-        "Decorative or giant bow sculpture next to Draupadi",
-        "Dry fish on a pole",
-        "Photoreal faces",
-        "Peacock feather on anyone",
-        "Wooden cradle or box around the aquarium",
-        "Heavy horizontal wooden beams blocking the aquarium",
-        "Aquarium at human eye level",
-        "Aquarium at eye level or mid-hall height",
-        "Aquarium beside archer's head or torso",
-        "Looking up at the fish on aim",
-        "Arrow aimed into the pool"
+        "Fish aquarium or tank",
+        "Giant Draupadi vs dwarf courtiers",
+        "Worm's-eye extreme forced perspective",
+        "Contest bow as main prop",
+        "Photoreal faces"
       ],
       "props": [
-        "glass fish vessel on roof",
-        "floor reflection pool",
-        "garland",
-        "throne dais"
+        "throne",
+        "carpets",
+        "balconies",
+        "veil"
       ],
-      "prompt": "Wide establishing shot of King Drupada’s palace hall for Draupadi’s swayamvara. Ornate lotus wooden frame. Warm cream-saffron-gold painted comic illustration matching Amar Chitra / Ep01 gold master — NOT photoreal. High near the roof: a sealed transparent ornamental aquarium full of water with a live fish swimming inside, fixed to the ceiling beams. Directly below on the stone floor: a circular water pool reflecting that fish clearly. On a raised dais: Draupadi in deep red gold-bordered sari, long black hair, holding a flower garland — calm, no weapon near her. Left and foreground: many suitor princes and courtiers in jewel-tone comic costumes watching. No bows lying decorative next to Draupadi. Soft golden-hour light, painterly faces. The aquarium is a LARGE CIRCULAR ornamental sealed glass tank with a FLAT bottom and ornate gold rim, suspended chandelier-style by slender gold chains from a high ceiling medallion — HIGH above people, NOT at eye level. NO wooden cradle, NO thick horizontal wooden beams obstructing the view of the fish. Aquarium is at TRUE PALACE CEILING HEIGHT — near the top of the frame under the roof, long hanging chains, far above people (people look small in the tall hall). Low-angle / worm's-eye composition. NOT mid-air at human height."
+      "prompt": "Wide regal Indian palace durbar. King on center throne. Princes seated left and right. Draupadi in veil with maids on ornamental first-floor balconies both sides. Equal human scale for all figures. Painted comic gold style, lotus frame. No fish tank."
     },
     {
       "id": "challenge",

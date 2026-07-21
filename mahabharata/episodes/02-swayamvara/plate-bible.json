@@ -237,12 +237,12 @@
       "has_fish_apparatus": true,
       "is_aim_beat": true,
       "must_show": [
-        "Arjuna on LEFT side of panel on DRY stone floor beside the pool — never standing in the pool",
-        "Circular floor pool separate center/bottom, empty of people, shows reflection",
-        "SAME LARGE circular gold-rimmed ceiling aquarium as challenge plate, top center under roof",
-        "Full bow draw with arrow angled UP toward ceiling fish",
-        "Eyes may glance toward pool reflection; head can be slightly down while arms aim up",
-        "Premium high graphic quality painted comic style"
+        "Arjuna LEFT side on DRY floor beside pool — never in the pool",
+        "Floor pool empty of people, reflection only",
+        "SAME LARGE ceiling-height aquarium as challenge plate, top center under roof",
+        "Arrow aimed UP at ceiling fish",
+        "Eyes looking DOWN at pool reflection",
+        "Premium painted comic graphic quality"
       ],
       "must_not_show": [
         "Standing in the pool",
@@ -256,7 +256,7 @@
         "glass vessel",
         "pool"
       ],
-      "prompt": "Arjuna LEFT on dry floor beside pool (not in water). LARGE ceiling aquarium top center. Arrow UP at fish. Eyes looking down at pool reflection while aiming. Same large tank as challenge lock. Premium Amar Chitra quality."
+      "prompt": "Premium Amar Chitra quality. Arjuna on LEFT dry floor BESIDE the pool (never standing in water). LARGE circular gold-rimmed aquarium at TRUE ceiling height top center under the roof (same large dimensions as challenge plate). Full draw: arrow angled UPWARD at the ceiling aquarium. Eyes looking DOWN at the floor pool reflection. Pool is mirror only — do not shoot the pool. High graphic quality painted comic style."
     },
     {
       "id": "hit",
@@ -270,15 +270,15 @@
       "is_aim_beat": false,
       "must_show": [
         "Arjuna on left side of hall",
-        "Arrow path from Arjuna's left side upward into fish (same side)",
-        "LARGE ceiling tank matching challenge",
+        "Arrow path from left (archer's side) upward into the fish",
+        "SAME LARGE ceiling aquarium as challenge plate under roof",
         "High graphic quality",
-        "Arrow path from archer's left side upward into the fish (same side as Arjuna)",
-        "LARGE ceiling aquarium matching challenge plate"
+        "Splash where arrow hits fish eye"
       ],
       "must_not_show": [
         "Arrow entering from the side opposite Arjuna",
-        "Low quality crude graphics"
+        "Low quality crude graphics",
+        "Small pot tank"
       ],
       "props": [
         "arrow",
@@ -286,7 +286,7 @@
         "pool",
         "bow"
       ],
-      "prompt": "Climax: arrow hits the eye of the fish swimming inside the sealed ornamental aquarium hanging high from the ceiling beams; spark of success at the eye. Same young brahmin Arjuna (white dhoti, topknot, mustache, no peacock) below with bow, victorious follow-through. Floor pool still reflects the vessel. Courtiers gasp. Painted comic mythology style matching Ep01 gold master — not photoreal. Ornate lotus frame, golden light, dramatic but charming. The aquarium is a LARGE CIRCULAR ornamental sealed glass tank with a FLAT bottom and ornate gold rim, suspended chandelier-style by slender gold chains from a high ceiling medallion — HIGH above people, NOT at eye level. NO wooden cradle, NO thick horizontal wooden beams obstructing the view of the fish. Aquarium is at TRUE PALACE CEILING HEIGHT — near the top of the frame under the roof, long hanging chains, far above people (people look small in the tall hall). Low-angle / worm's-eye composition. NOT mid-air at human height. CRITICAL: use the SAME LARGE wide gold-rimmed circular ceiling aquarium as the challenge lock plate — large dimensions spanning the roof, NOT a small hanging pot or jar. Arrow flies from Arjuna on the left upward into the fish; not from the opposite side."
+      "prompt": "Premium quality. Arjuna stands LEFT. LARGE ceiling aquarium top center. ONE arrow has struck the fish flying from Arjuna's left side upward into the tank (same side as archer). Splash at hit. Not from the opposite side of the hall."
     },
     {
       "id": "garland",

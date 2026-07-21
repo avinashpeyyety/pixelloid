@@ -300,7 +300,7 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool) -> list[str
             r"\barrow\b.{0,40}\b(into|at|toward)\b.{0,20}\b(pool|reflection)\b",
             field,
             re.I,
-        ):
+        ) and not re.search(r"\b(do not|don't|never|not)\b.{0,30}\b(shoot|target|aim).{0,20}\bpool", field, re.I):
             fails.append(
                 f"{pid}: aim geometry FAIL — arrow must not target the pool; pool is mirror only"
             )

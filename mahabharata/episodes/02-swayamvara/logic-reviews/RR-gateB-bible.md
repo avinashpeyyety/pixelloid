@@ -6,8 +6,8 @@ Plates: 9
 
 ## Blocking issues
 
-1. aim: fish apparatus must encode ceiling_height
-2. aim: aim geometry FAIL — arrow must not target the pool; pool is mirror only
+1. hit: fish apparatus must encode water_in_vessel
+2. hit: fish apparatus must encode ceiling_height
 3. hit: hit FAIL — arrow must enter from archer's side, not opposite
 
 ## Required fixes before Imagine

@@ -17,9 +17,10 @@ Series spine for all episodes. Change *locus* and *secondary accent* by parva; k
 
 - Match **plate-wide-gold** for palette, frame, light, and character design language
 - **Stylized comic charm** (Amar Chitra / painted epic feel) — soft faces, clear silhouettes
-- Drona = saffron + long white beard + topknot; Arjuna = peacock-feather crown + dark mustache
+- Drona = saffron + long white beard + topknot; Arjuna = dark mustache, simple topknot or light diadem (**no peacock feather**)
 - Warrior curly mustaches on princes; peepal + bird eye as sacred focus
 - Ornate lotus border on every plate for series cohesion
+- **Panel-logic agent** at every gate — see `docs/PANEL_LOGIC.md` + `tools/logic_review.py`
 
 ## Don’t
 
@@ -27,6 +28,26 @@ Series spine for all episodes. Change *locus* and *secondary accent* by parva; k
 - Stick-figure / low-poly puppets as final art
 - Cold blue-grey “realistic dusk” that breaks the gold comic world
 - Busy multi-character lip-sync
+- Orphan props (decorative bows by Draupadi, dry fish-on-a-stick “targets”)
+- Mix photoreal + comic styles inside one episode
+
+## Fish’s Eye apparatus (Ep 02+ lock)
+
+1. Fish **swims in sealed glass vessel of water**  
+2. Vessel **fixed to roof / ceiling beams**  
+3. **Floor pool** reflects the vessel — archer aims by **looking only at the reflection**  
+4. Hit the **eye of the real fish above**
+
+## Assets pipeline
+
+```
+script → cast-sheet + plate-bible
+      → GATE A/B logic_review.py
+      → Imagine locks (style + cast + apparatus)
+      → per-beat plates (image_edit)
+      → GATE C visual logic review
+      → TTS → ship
+```
 
 ## Pose library
 
@@ -57,21 +78,13 @@ Beat scripts may set `pose` per role:
 | Sabhā | Miniature architecture plate |
 | War edge | Higher contrast; silhouette night |
 
-## Assets pipeline
-
-```
-script beats → Canvas puppets
-            ↘ Imagine: poster + env plates → episodes/<id>/stills/
-            ↘ Optional Blender: prop PNGs → episodes/<id>/props/
-```
-
 Never put production API keys in the browser. Generate stills offline; commit licensed assets only.
 
 ## Imagine prompt seeds
 
 **Master ref:** always attach `plate-wide-gold.jpg` (or current ep’s gold close).
 
-**Any beat plate:** same lotus frame, cream–saffron–gold hour, charming comic characters (not photoreal), peepal + palace silhouette, match Drona/Arjuna design from master.
+**Any beat plate:** same lotus frame, cream–saffron–gold hour, charming comic characters (not photoreal), peepal + palace silhouette, match cast sheet from episode bible.
 
 **Garden plate:** same world empty of people.
 
@@ -80,4 +93,5 @@ Never put production API keys in the browser. Generate stills offline; commit li
 - Player: `js/main.js`
 - Beats: `episodes/*/script.js`
 - Stills: `episodes/*/stills/`
+- Logic: `docs/PANEL_LOGIC.md` · `tools/logic_review.py` · `AGENTS.md`
 - Live: https://avinashpeyyety.github.io/pixelloid/mahabharata/

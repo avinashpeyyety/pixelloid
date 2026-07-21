@@ -65,3 +65,13 @@ episodes/02-swayamvara/stills/
 ```
 
 Generate offline with Imagine (use `plate-wide-gold` as style ref). Never put API keys in the browser.
+
+## Panel logic agent
+
+Every episode must pass the **panel-logic** gates before ship:
+
+- Spec: [`docs/PANEL_LOGIC.md`](docs/PANEL_LOGIC.md) · workflow: [`docs/WORKFLOW.md`](docs/WORKFLOW.md)
+- Tool: `python3 tools/logic_review.py episodes/<id>/plate-bible.json --report`
+- Episode files: `cast-sheet.json`, `plate-bible.json`, `logic-reviews/`
+
+**Ep 02 apparatus lock:** fish swims in **sealed glass vessel fixed to the roof**; archer aims via **floor pool reflection**.

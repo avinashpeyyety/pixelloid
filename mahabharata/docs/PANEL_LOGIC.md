@@ -21,20 +21,35 @@
 | Real-world read | Every prop must be readable as a real object (bow, garland, pool, glass vessel) |
 | No orphan props | No floating weapons, random sculpture-bows, or props with no story role |
 | Scale | Bow height, pool diameter, ceiling mount scale match palace architecture |
+| Human scale | All people same natural size; no giant/dwarf forced perspective |
+| Court etiquette | Royal women do **not** sit on balcony railings/terrace walls (see §2a) |
 | Aim geometry | **Split body:** eyes look **down** at the pool; arms/arrow aim **up** at the high aquarium (see §3a) |
+
+### 2a. Court / balcony etiquette (durbar plates)
+
+Royal women (Draupadi, princesses, maids) in a public court:
+
+| PASS | FAIL |
+|------|------|
+| Seated **behind** curtains, jali screens, or inner balcony recess | Sitting **on** the terrace wall, railing, or ledge with legs dangling |
+| **Shyly peering** out through a gap in curtains / screen | Boldly perched on the balustrade like spectators on a wall |
+| Same human scale as courtiers below | Giant balcony figures vs dwarf floor figures |
+
+**Why the gate must catch this:** Sitting on terrace walls is not how high-born women appear in a regal durbar — it breaks social logic and looks cartoon-wrong even if the composition is pretty.
 
 ### 3. Fish’s Eye apparatus (canonical for Ep 02+)
 
 This is the **only** allowed matsya target setup unless a future ep bible overrides it:
 
 1. **Target:** Live fish swimming in a **large circular ornamental sealed glass aquarium** (flat bottom, ornate rim), filled with water  
-2. **Height:** Aquarium is **at palace ceiling height** — suspended from the roof, **far above** any standing person. In frame: near the **top**, with **long** hanging chains visible; people are **small** relative to hall height. Not mid-air at chest/head height.  
-3. **Mount:** **Chandelier-style** hang from a high ceiling medallion via slender chains/rods only  
-4. **Clear view:** **No** wooden cradle, **no** thick horizontal beams or box frames that obstruct the fish  
-5. **Motion:** Fish clearly **inside water** in the aquarium  
-6. **Mirror:** Circular **water pool on the floor** under the aquarium shows a **clear reflection** of the fish  
-7. **Task:** Hit the **eye of the real fish high above** while **looking only at the reflection below**  
-8. **Forbidden:** Dry fish on pole; fish only in floor pool as target; aquarium at eye/chest/mid-hall height; wooden beam cradle; view-blocking horizontal supports
+2. **Size continuity (critical):** Every fish plate must use the **same large tank dimensions** as the **challenge / apparatus lock plate** — a wide ceiling disc spanning a large fraction of the roof span. **Not** a small pot, jar, fishbowl, or hanging bauble.  
+3. **Height:** Aquarium is **at palace ceiling height** — under the roof, **far above** any standing person.  
+4. **Mount:** **Chandelier-style** or ceiling-fixed ornamental disc; slender chains/rods only if any; **no** wooden cradle  
+5. **Clear view:** **No** thick horizontal beams or box frames that obstruct the fish  
+6. **Motion:** Fish clearly **inside water** in the aquarium  
+7. **Mirror:** Circular **water pool on the floor** under the aquarium shows a **clear reflection** of the fish  
+8. **Task:** Hit the **eye of the real fish high above** while **looking only at the reflection below**  
+9. **Forbidden:** Dry fish on pole; fish only in floor pool as target; aquarium at eye/chest/mid-hall height; wooden beam cradle; **small pot/jar/bowl-sized tank**; view-blocking supports
 
 ### 3a. Aim geometry nuance (critical — aim beats)
 
@@ -53,7 +68,7 @@ The challenge is **optically inverted**. The logic agent must verify **both** ha
 - Arrow aims **into the pool** (as if the reflection were the physical target)  
 - Eyes and arrow both point the same wrong way  
 
-**PASS when:** head/eyes → pool below; bow/arrow → aquarium above; tank is a small high object under the ceiling.
+**PASS when:** head/eyes → pool below; bow/arrow → aquarium above; tank is the **same large ceiling disc** as the challenge lock, high under the roof.
 
 ### 4. Character lock
 

@@ -26,7 +26,40 @@ ORPHAN_PROP_BAN = [
     "dry fish on pole",
     "metal fish without glass",
     "fish swimming in floor pool as target",
+    "sitting on the railing",
+    "sitting on the balcony railing",
+    "sitting on the terrace wall",
+    "sitting on the balustrade",
+    "perched on the railing",
+    "legs dangling from balcony",
+    "women sitting on the wall",
 ]
+
+# Court etiquette — positive seating fails
+RAILING_SIT_BAN = re.compile(
+    r"\b(sit|sitting|seated|perch|perched)\b.{0,40}\b(on|atop|upon)\b.{0,30}"
+    r"\b(railing|rail|ledge|terrace wall|balcony wall|balustrade|parapet)\b|"
+    r"\b(railing|ledge|balustrade|terrace wall)\b.{0,20}\b(sit|sitting|seated)\b",
+    re.I,
+)
+CURTAIN_PEER_OK = re.compile(
+    r"\b(behind|through)\b.{0,30}\b(curtain|veil|jali|screen|lattice)\b|"
+    r"\b(peer|peering|shy|shyly|recess|inner balcony)\b",
+    re.I,
+)
+
+# Tank must be large / match challenge — not pot-sized
+TANK_LARGE = re.compile(
+    r"\b(large|wide|broad|huge|same (size|dimensions?|scale)|matching challenge|"
+    r"challenge[- ]lock|apparatus lock|ceiling disc|wide diameter|spans?.{0,20}roof|"
+    r"large fraction|ornamental sealed)\b",
+    re.I,
+)
+TANK_POT_BAN = re.compile(
+    r"\b(small (pot|jar|bowl|tank|fishbowl)|hanging (pot|jar|bauble)|"
+    r"tiny (tank|aquarium|jar)|pot[- ]sized|jar[- ]sized|goldfish bowl)\b",
+    re.I,
+)
 
 # Style words that fail only if requested as the desired look (not negated)
 STYLE_BAN_POSITIVE = re.compile(
@@ -136,6 +169,14 @@ def check_apparatus(bible: dict) -> list[str]:
             fails.append(f"apparatus missing: {name}")
     if re.search(r"dry fish|pole-mounted fish without glass|metal fish on stick", blob):
         fails.append("apparatus forbids dry/pole fish without glass water")
+    # Size lock: check allowed fields only (ignore "forbidden" list wording)
+    size_blob = " ".join(
+        str(app.get(k) or "")
+        for k in ("target", "size", "mount", "height", "size_lock_ref", "task")
+    ).lower()
+    if not re.search(r"large|wide|same (size|dimensions)|challenge", size_blob):
+        fails.append("apparatus must lock LARGE tank size (match challenge plate dimensions)")
+    # Positive allowance of pot-size is fail; listing pot in forbidden is OK
     geom = app.get("aim_geometry") or {}
     if any(p.get("is_aim_beat") for p in bible.get("plates") or []):
         if not geom and "eyes" not in blob:
@@ -170,6 +211,10 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool) -> list[str
 
     for ban in ORPHAN_PROP_BAN:
         if ban in positive and ban not in must_not:
+            idx = positive.find(ban)
+            # Allow explicit negation nearby: "NOT sitting on the terrace wall"
+            if idx >= 0 and re.search(r"\b(not|never|no|without|forbid)\b", positive[max(0, idx - 40) : idx]):
+                continue
             fails.append(f"{pid}: banned phrase in positive spec: {ban}")
 
     if STYLE_BAN_POSITIVE.search(positive):
@@ -198,6 +243,38 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool) -> list[str
             re.I,
         ):
             fails.append(f"{pid}: aquarium must not be described at mid/eye height (use ceiling height)")
+        if not TANK_LARGE.search(field):
+            fails.append(
+                f"{pid}: tank size FAIL — must require LARGE tank matching challenge/apparatus lock dimensions"
+            )
+        if TANK_POT_BAN.search(field) and not re.search(r"\bnot\b.{0,20}(pot|jar|bowl)", field, re.I):
+            fails.append(f"{pid}: tank size FAIL — pot/jar/bowl-sized tank forbidden")
+
+    # Durbar / balcony etiquette
+    courtish = bool(
+        re.search(r"\b(durbar|balcony|draupadi|maid|princess|veil|throne|prince)", positive, re.I)
+    )
+    if courtish and (
+        plate.get("id") in ("wide", "poster")
+        or re.search(r"\bbalcony\b", positive, re.I)
+    ):
+        # Only fail if sitting-on-railing is asserted without negation
+        for m in RAILING_SIT_BAN.finditer(positive):
+            start = max(0, m.start() - 40)
+            window = positive[start : m.end()]
+            if re.search(r"\b(not|never|no|must not|don't|do not)\b", window):
+                continue
+            fails.append(
+                f"{pid}: court etiquette FAIL — women must not sit on terrace wall/railing/ledge"
+            )
+            break
+        if re.search(r"\b(balcony|terrace)\b", positive, re.I) and re.search(
+            r"\b(draupadi|maid|princess|women|ladies)\b", positive, re.I
+        ):
+            if not CURTAIN_PEER_OK.search(positive):
+                fails.append(
+                    f"{pid}: court etiquette FAIL — royal women on balcony must peer from behind curtains/jali (shy), not sit exposed on the wall"
+                )
 
     # Aim beat: split geometry — eyes DOWN at pool, arrow UP at ceiling aquarium
     if plate.get("is_aim_beat"):

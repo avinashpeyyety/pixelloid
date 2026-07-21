@@ -35,12 +35,43 @@ STYLE_BAN_POSITIVE = re.compile(
 )
 
 FISH_REQUIRED_KEYS = {
-    "vessel": re.compile(r"glass|crystal|sealed", re.I),
+    "vessel": re.compile(r"glass|crystal|sealed|aquarium", re.I),
     "water_in_vessel": re.compile(r"water|swim", re.I),
-    "roof_mount": re.compile(r"roof|ceiling|high|overhead|beam", re.I),
+    "roof_mount": re.compile(r"roof|ceiling|high|overhead|chandelier", re.I),
     "floor_pool": re.compile(r"pool|reflection|mirror", re.I),
-    "aim_eyes": re.compile(r"look.*pool|eyes? (on|at|to) (the )?(pool|water|reflection)|reflection", re.I),
+    # Height: must assert true ceiling height, not vague "high"
+    "ceiling_height": re.compile(
+        r"ceiling height|near (the )?ceiling|top of (the )?frame|far above|"
+        r"well above|long (hanging )?chains|under the (palace )?roof|"
+        r"palace ceiling|high up from|worm.?s.?eye|low.?angle",
+        re.I,
+    ),
 }
+
+# Aim-beat geometry: BOTH halves required (optically inverted challenge)
+AIM_EYES_DOWN = re.compile(
+    r"eyes? (look |angled |point )?(down|toward|to|at|into).{0,40}(pool|water|reflection)|"
+    r"look(s|ing)? (only )?(down|at|into).{0,40}(pool|reflection)|"
+    r"gaze (down|toward).{0,20}(pool|reflection)|"
+    r"chin (tilted |toward |to )?(down|pool)|"
+    r"head .{0,20}(down|pool|reflection)",
+    re.I,
+)
+AIM_ARROW_UP = re.compile(
+    r"arrow .{0,40}(up|upward|ceiling|aquarium|high)|"
+    r"(aim|aimed|pointing|angled) .{0,20}(up|upward|steep)|"
+    r"bow .{0,30}(up|upward)|"
+    r"arms?.{0,20}(up|upward)|"
+    r"upward (toward|at|to).{0,30}(aquarium|fish|ceiling|tank)",
+    re.I,
+)
+
+# Positive specs that place the tank too low (fail unless negated)
+MID_HEIGHT_BAN = re.compile(
+    r"\b(at (human )?eye level|chest height|head height|beside (his |her )?face|"
+    r"next to (the )?archer|mid-?hall height|torso height|shoulder height)\b",
+    re.I,
+)
 
 
 def load(path: Path) -> dict:
@@ -94,15 +125,27 @@ def check_apparatus(bible: dict) -> list[str]:
         return fails
     blob = json.dumps(app).lower()
     for name, pat in [
-        ("glass sealed vessel", re.compile(r"glass|crystal")),
+        ("glass sealed vessel/aquarium", re.compile(r"glass|crystal|aquarium")),
         ("water + swimming fish", re.compile(r"swim|water")),
-        ("roof/ceiling mount", re.compile(r"roof|ceiling|overhead")),
+        ("roof/ceiling mount", re.compile(r"roof|ceiling|overhead|chandelier")),
+        ("true ceiling height", re.compile(r"ceiling height|far above|near the ceiling|high up|above eye|long chain")),
         ("floor pool reflection", re.compile(r"pool|reflection")),
+        ("aim split (eyes down / arrow up)", re.compile(r"eyes?.{0,40}down|look.{0,20}pool|arrow.{0,30}up|aim.{0,20}up", re.I)),
     ]:
         if not pat.search(blob):
             fails.append(f"apparatus missing: {name}")
     if re.search(r"dry fish|pole-mounted fish without glass|metal fish on stick", blob):
         fails.append("apparatus forbids dry/pole fish without glass water")
+    geom = app.get("aim_geometry") or {}
+    if any(p.get("is_aim_beat") for p in bible.get("plates") or []):
+        if not geom and "eyes" not in blob:
+            fails.append("apparatus.aim_geometry required when any plate is_aim_beat")
+        else:
+            gblob = json.dumps(geom).lower() if geom else blob
+            if not re.search(r"eyes?|gaze|look", gblob) or not re.search(r"down|pool", gblob):
+                fails.append("apparatus.aim_geometry must state eyes/gaze down at pool")
+            if not re.search(r"arrow|bow|arms?", gblob) or not re.search(r"up|ceiling|aquarium", gblob):
+                fails.append("apparatus.aim_geometry must state arrow/bow aimed up at aquarium")
     return fails
 
 
@@ -147,10 +190,43 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool) -> list[str
             fails.append(f"{pid}: has_fish_apparatus but bible.apparatus empty")
         field = f"{must_show} {prompt} {props}"
         for key, pat in FISH_REQUIRED_KEYS.items():
-            if key == "aim_eyes" and not plate.get("is_aim_beat"):
-                continue
             if not pat.search(field):
                 fails.append(f"{pid}: fish apparatus must encode {key}")
+        if MID_HEIGHT_BAN.search(field) and not re.search(
+            r"\b(not|never|no|forbid)\b.{0,30}(eye level|chest height|head height)",
+            field,
+            re.I,
+        ):
+            fails.append(f"{pid}: aquarium must not be described at mid/eye height (use ceiling height)")
+
+    # Aim beat: split geometry — eyes DOWN at pool, arrow UP at ceiling aquarium
+    if plate.get("is_aim_beat"):
+        field = f"{must_show} {prompt} {props} {plate.get('notes') or ''}"
+        if not AIM_EYES_DOWN.search(field):
+            fails.append(
+                f"{pid}: aim geometry FAIL — must specify eyes/head looking DOWN at pool reflection"
+            )
+        if not AIM_ARROW_UP.search(field):
+            fails.append(
+                f"{pid}: aim geometry FAIL — must specify arrow/bow aimed UP at high aquarium"
+            )
+        # Contradiction: "looking up at the fish/aquarium" as positive action
+        if re.search(
+            r"\b(look|looking|gaze|gazing|eyes)\b.{0,25}\bup\b.{0,30}\b(fish|aquarium|tank|jar)\b",
+            field,
+            re.I,
+        ) and not re.search(r"\bnot\b.{0,15}look", field, re.I):
+            fails.append(
+                f"{pid}: aim geometry FAIL — must not look up at the fish (use pool mirror)"
+            )
+        if re.search(
+            r"\barrow\b.{0,40}\b(into|at|toward)\b.{0,20}\b(pool|reflection)\b",
+            field,
+            re.I,
+        ):
+            fails.append(
+                f"{pid}: aim geometry FAIL — arrow must not target the pool; pool is mirror only"
+            )
 
     for cid in plate.get("cast_present") or []:
         if cid not in cast_ids:

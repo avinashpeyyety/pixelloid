@@ -12,8 +12,8 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep02-v3-chandelier",
-    note: "Grok TTS orion — deep heroic narration (v3 chandelier aquarium)",
+    cache: "ep02-v4-ceiling-aim",
+    note: "Grok TTS orion — v4 ceiling-high aquarium + split aim geometry",
     base: "episodes/02-swayamvara/audio/",
   },
   totalSec: 96,
@@ -64,7 +64,7 @@ export const EPISODE = {
       panY: -0.03,
       audio: "orion-01.mp3",
       who: "Narrator",
-      text: "The test is set: a fish swims in a great glass aquarium hung high like a chandelier. Hit its eye — by looking only at its reflection in the pool below.",
+      text: "The test is set: high under the palace roof, a glass aquarium hangs like a chandelier. Hit its eye — but look only down into the pool’s reflection.",
     },
     {
       t: 20,
@@ -104,7 +104,7 @@ export const EPISODE = {
       panY: -0.04,
       audio: "orion-05.mp3",
       who: "Narrator",
-      text: "He strings the bow, looks only at the water, and finds the eye.",
+      text: "He strings the bow, looks only down into the water, and aims the arrow up — finding the eye.",
     },
     {
       t: 60,

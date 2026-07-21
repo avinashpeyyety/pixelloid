@@ -21,19 +21,39 @@
 | Real-world read | Every prop must be readable as a real object (bow, garland, pool, glass vessel) |
 | No orphan props | No floating weapons, random sculpture-bows, or props with no story role |
 | Scale | Bow height, pool diameter, ceiling mount scale match palace architecture |
-| Aim geometry | Archer’s **eyes on the pool reflection**; arrow path aims **up** at the real target |
+| Aim geometry | **Split body:** eyes look **down** at the pool; arms/arrow aim **up** at the high aquarium (see §3a) |
 
 ### 3. Fish’s Eye apparatus (canonical for Ep 02+)
 
 This is the **only** allowed matsya target setup unless a future ep bible overrides it:
 
 1. **Target:** Live fish swimming in a **large circular ornamental sealed glass aquarium** (flat bottom, ornate rim), filled with water  
-2. **Mount:** **Chandelier-style** hang from a **high ceiling** medallion via slender chains/rods — aquarium sits **well above human eye level**  
-3. **Clear view:** **No** wooden cradle, **no** thick horizontal beams or box frames that obstruct the fish  
-4. **Motion:** Fish clearly **inside water** in the aquarium  
-5. **Mirror:** Circular **water pool on the floor** under the aquarium shows a **clear reflection** of the fish  
-6. **Task:** Hit the **eye of the real fish above** while **looking only at the reflection below**  
-7. **Forbidden:** Dry fish on pole; fish only in floor pool as target; aquarium at eye/chest height; wooden beam cradle; view-blocking horizontal supports
+2. **Height:** Aquarium is **at palace ceiling height** — suspended from the roof, **far above** any standing person. In frame: near the **top**, with **long** hanging chains visible; people are **small** relative to hall height. Not mid-air at chest/head height.  
+3. **Mount:** **Chandelier-style** hang from a high ceiling medallion via slender chains/rods only  
+4. **Clear view:** **No** wooden cradle, **no** thick horizontal beams or box frames that obstruct the fish  
+5. **Motion:** Fish clearly **inside water** in the aquarium  
+6. **Mirror:** Circular **water pool on the floor** under the aquarium shows a **clear reflection** of the fish  
+7. **Task:** Hit the **eye of the real fish high above** while **looking only at the reflection below**  
+8. **Forbidden:** Dry fish on pole; fish only in floor pool as target; aquarium at eye/chest/mid-hall height; wooden beam cradle; view-blocking horizontal supports
+
+### 3a. Aim geometry nuance (critical — aim beats)
+
+The challenge is **optically inverted**. The logic agent must verify **both** halves:
+
+| Half | Body | What it means in the plate |
+|------|------|----------------------------|
+| **Eyes / head** | Look **down** | Chin or gaze toward the **floor pool**; he reads the reflection as a mirror |
+| **Arms / arrow** | Point **up** | Bow at full draw; arrow shaft angled **steeply upward** toward the **ceiling aquarium** |
+| **Target** | Real fish is high | Aquarium remains **near ceiling**, not beside his face or at bow height |
+
+**FAIL if any of:**
+
+- Aquarium hangs at human height (next to torso/head, filling mid-frame like a portrait prop)  
+- Archer looks **up** at the tank (direct sight line to fish)  
+- Arrow aims **into the pool** (as if the reflection were the physical target)  
+- Eyes and arrow both point the same wrong way  
+
+**PASS when:** head/eyes → pool below; bow/arrow → aquarium above; tank is a small high object under the ceiling.
 
 ### 4. Character lock
 

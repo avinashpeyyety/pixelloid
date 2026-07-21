@@ -34,10 +34,11 @@ Series spine for all episodes. Change *locus* and *secondary accent* by parva; k
 ## Fish’s Eye apparatus (Ep 02+ lock)
 
 1. Fish swims in a **large circular ornamental sealed aquarium** (flat bottom, gold/bronze rim)  
-2. **Chandelier hang** from high ceiling — **above eye level**; slender chains only  
-3. **No** wooden cradle or view-blocking horizontal beams  
-4. **Floor pool** reflects the aquarium — archer aims by **looking only at the reflection**  
-5. Hit the **eye of the real fish above**
+2. **True ceiling height** — under the palace roof; long chains; people small in the tall hall (not mid-frame at human height)  
+3. **Chandelier hang** — slender chains from ceiling medallion only; no wooden cradle  
+4. **Floor pool** reflects the aquarium  
+5. **Aim split:** eyes **down** at pool; arrow **up** at ceiling tank  
+6. Hit the **eye of the real fish above**
 
 ## Assets pipeline
 

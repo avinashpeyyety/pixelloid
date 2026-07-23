@@ -12,7 +12,7 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep04-v1",
+    cache: "ep04-v2-vessel",
     note: "Grok TTS orion — deep heroic narration",
     base: "episodes/04-akshayapatra/audio/",
   },

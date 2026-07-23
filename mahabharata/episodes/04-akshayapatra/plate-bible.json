@@ -1,0 +1,191 @@
+{
+  "episode_id": "04",
+  "title": "The Akshayapatra",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour; refined linework",
+  "style_master_ref": "episodes/01-birds-eye/stills/plate-wide-gold.jpg",
+  "photoreal_allowed": false,
+  "frame": "Ornate lotus carved wooden frame on every plate",
+  "apparatus": {},
+  "cast": {
+    "draupadi": {
+      "face": "Young woman, warm brown skin, large dark eyes, soft brows, small bindi",
+      "hair": "Long black wavy hair, simple gold",
+      "costume": "Deep red or rose sari with gold border"
+    },
+    "krishna": {
+      "face": "Youthful divine smile, dark eyes",
+      "hair": "Dark curly hair",
+      "costume": "Yellow pitambar dhoti, blue upper cloth or garland, charming comic not photoreal"
+    },
+    "durvasa": {
+      "face": "Fierce ascetic, intense eyes, grey-white beard",
+      "hair": "Matted topknot",
+      "costume": "Saffron robes, rudraksha, staff"
+    },
+    "yudhishthira": {
+      "face": "Gentle eldest Pandava",
+      "hair": "Simple topknot",
+      "costume": "Cream exile dhoti"
+    },
+    "disciples": {
+      "face": "Background ascetics",
+      "hair": "Topknots",
+      "costume": "Saffron or cream"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "In the forest of exile the Pandavas keep a simple camp — and one divine gift that never runs dry by day.",
+      "cast_present": ["yudhishthira", "draupadi"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium high-quality painted comic Amar Chitra forest hermitage camp",
+        "Simple leaf huts, peepal, golden hour forest clearing",
+        "Peaceful exile mood, equal natural human scale",
+        "Ornate lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Palace luxury", "Modern props", "Giant scale errors"],
+      "props": ["hermitage huts", "forest"],
+      "prompt": "Premium high-quality painted comic Amar Chitra. Wide forest hermitage of the Pandavas in exile at cream-saffron golden hour. Simple leaf-and-wood huts, peepal tree, soft mist, distant hills. Quiet dignity of vanavasa. Ornate lotus wooden frame. Refined linework matching Ep01 gold master, not photoreal."
+    },
+    {
+      "id": "vessel",
+      "file": "plate-vessel.jpg",
+      "beat_text": "The Akshayapatra: so long as Draupadi has not finished her meal, the vessel feeds every guest.",
+      "cast_present": ["draupadi"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Sacred golden Akshayapatra vessel glowing with divine abundance",
+        "Draupadi nearby or hands near vessel, food vessels and guests implied or soft",
+        "Warm holy light, lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Modern cookware", "Empty cold kitchen only"],
+      "props": ["akshayapatra", "food bowls"],
+      "prompt": "Premium painted comic Amar Chitra. Hero plate of the sacred Akshayapatra — ornate golden inexhaustible food vessel glowing with soft divine light, steam and abundance of simple forest feast around it. Draupadi in red-rose sari nearby with calm grace. Hermitage interior golden hour. Ornate lotus frame. Refined quality, not photoreal."
+    },
+    {
+      "id": "empty",
+      "file": "plate-empty.jpg",
+      "beat_text": "One evening the meal is done. Draupadi washes the vessel clean — and the day’s grace is sealed.",
+      "cast_present": ["draupadi"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Draupadi washing or setting down the clean empty Akshayapatra",
+        "Quiet evening hermitage, meal finished mood",
+        "Same Draupadi face lock"
+      ],
+      "must_not_show": ["Photoreal", "Messy comedy", "Palace kitchen"],
+      "props": ["empty vessel", "water pot"],
+      "prompt": "Premium painted comic Amar Chitra. Draupadi in red-rose sari gently washes or dries the golden Akshayapatra — it is empty and clean for the night. Soft evening hermitage light, quiet after meal. Ornate lotus frame. Same charming face design, refined quality, not photoreal."
+    },
+    {
+      "id": "arrival",
+      "file": "plate-arrival.jpg",
+      "beat_text": "Then comes sage Durvasa with a throng of hungry disciples — and the camp has nothing left to offer.",
+      "cast_present": ["durvasa", "disciples"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Sage Durvasa leading many saffron-clad disciples arriving at hermitage path",
+        "Intense ascetic energy, not photoreal horror",
+        "Forest path golden hour, lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Gore", "Tiny illegible crowd without Durvasa focus"],
+      "props": ["staff", "forest path"],
+      "prompt": "Premium painted comic Amar Chitra. Fierce ascetic sage Durvasa with matted topknot, grey-white beard, saffron robes and staff leads a throng of hungry disciples in saffron along a forest path toward a simple hermitage. Golden hour, dramatic arrival. Ornate lotus frame. Stylized comic not photoreal."
+    },
+    {
+      "id": "prayer",
+      "file": "plate-prayer.jpg",
+      "beat_text": "Draupadi’s heart trembles. She prays to Krishna, the friend who never abandons the devoted.",
+      "cast_present": ["draupadi"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Draupadi in prayer or anxious devotion, hands joined or vessel nearby",
+        "Intimate hermitage moment, emotional but dignified",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Melodramatic distortion", "Maids crowding"],
+      "props": ["akshayapatra optional"],
+      "prompt": "Premium painted comic Amar Chitra. Close-medium of Draupadi in red-rose sari, hands joined in prayer, eyes lifted in hope and fear. Soft hermitage interior, golden lamp light. Ornate lotus frame. Dignified emotion, refined quality, not photoreal."
+    },
+    {
+      "id": "krishna",
+      "file": "plate-krishna.jpg",
+      "beat_text": "Krishna arrives, smiling as if the forest itself has exhaled.",
+      "cast_present": ["krishna", "draupadi"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Krishna entering hermitage — yellow pitambar, charming divine smile, comic mythology style",
+        "Draupadi relieved or welcoming",
+        "Warm forest light, lotus frame"
+      ],
+      "must_not_show": ["Photoreal blue CGI", "Dark horror Krishna", "Modern dress"],
+      "props": ["garland optional"],
+      "prompt": "Premium painted comic Amar Chitra. Lord Krishna arrives at the forest hermitage — youthful divine smile, dark curly hair, yellow pitambar dhoti and flower garland, charming mythology comic style not photoreal. Draupadi nearby soft relief. Golden cream-saffron light. Ornate lotus frame. Match Ep01 gold master language."
+    },
+    {
+      "id": "grain",
+      "file": "plate-grain.jpg",
+      "beat_text": "He finds a single grain of rice clinging to the vessel — and eats it with love.",
+      "cast_present": ["krishna"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Krishna holding or looking into the Akshayapatra, taking a single grain of rice",
+        "Sacred intimate miracle moment, soft glow",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Huge feast on plate", "Comedy mess"],
+      "props": ["akshayapatra", "single grain"],
+      "prompt": "Premium painted comic Amar Chitra. Intimate close of Krishna smiling, yellow pitambar, lifting a single glowing grain of rice from the clean golden Akshayapatra. Soft divine glow, hermitage warm light. Ornate lotus frame. Refined charming quality, not photoreal."
+    },
+    {
+      "id": "satisfied",
+      "file": "plate-satisfied.jpg",
+      "beat_text": "Far away, Durvasa and his disciples feel full. They bless the Pandavas and turn back, content.",
+      "cast_present": ["durvasa", "disciples"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Durvasa and disciples on forest path, content satisfied expressions, turning away peacefully",
+        "Soft relief mood, golden light",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Anger still dominant", "Photoreal", "Gore"],
+      "props": ["forest path", "staff"],
+      "prompt": "Premium painted comic Amar Chitra. Sage Durvasa and his saffron disciples pause on a forest path looking peacefully content and full, blessing the direction of the hermitage, turning to leave. Soft golden light, relief after hunger. Ornate lotus frame. Refined quality, not photoreal."
+    },
+    {
+      "id": "wide-gold",
+      "file": "plate-wide-gold.jpg",
+      "beat_text": "So grace filled what fear had emptied — and the forest remembered Krishna’s name.",
+      "cast_present": ["krishna", "draupadi", "yudhishthira"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality gold closing mood like Ep01 wide-gold",
+        "Peaceful hermitage after grace — Krishna and Pandavas soft gathering",
+        "Warm cream-saffron-gold hour",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Dark storm mood", "Giant scale errors"],
+      "props": ["hermitage", "akshayapatra optional"],
+      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold forest hermitage peace like Ep01 plate-wide-gold. Krishna with yellow pitambar among the Pandavas and Draupadi in quiet gratitude; soft light, peepal, simple huts. Ornate lotus frame. Refined charming quality, not photoreal."
+    }
+  ]
+}

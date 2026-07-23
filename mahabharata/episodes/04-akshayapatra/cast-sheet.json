@@ -1,0 +1,31 @@
+{
+  "episode_id": "04",
+  "notes": "Vana Parva forest exile. Continuity: Draupadi face lock, Krishna blue-saffron comic charm, Durvasa ascetic sage.",
+  "cast": {
+    "draupadi": {
+      "face": "Young woman, warm brown skin, large dark eyes, soft brows, small bindi, calm dignity",
+      "hair": "Long black wavy hair, simple gold ornaments (exile-simple, still royal)",
+      "costume": "Deep red or forest-rose sari with gold border, modest exile jewelry"
+    },
+    "krishna": {
+      "face": "Youthful divine smile, dark eyes, serene playfulness",
+      "hair": "Dark curly hair, peacock feather optional subtle, peacock-crown light",
+      "costume": "Indigo-blue skin tone stylized comic OR warm brown with yellow pitambar dhoti — prefer yellow pitambar + dark blue upper cloth, flute optional, charming not photoreal"
+    },
+    "durvasa": {
+      "face": "Fierce ascetic sage, intense eyes, lean face, short temper energy but comic style",
+      "hair": "Matted topknot, grey-white wild beard",
+      "costume": "Saffron/ruddy bark-cloth or saffron robes, rudraksha beads, staff"
+    },
+    "yudhishthira": {
+      "face": "Gentle eldest Pandava, light mustache, composed",
+      "hair": "Simple topknot",
+      "costume": "Cream dhoti, modest exile dress"
+    },
+    "disciples": {
+      "face": "Background ascetic students, comic silhouettes",
+      "hair": "Topknots",
+      "costume": "Saffron or cream bark-cloth"
+    }
+  }
+}

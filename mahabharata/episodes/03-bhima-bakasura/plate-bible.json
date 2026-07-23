@@ -1,0 +1,194 @@
+{
+  "episode_id": "03",
+  "title": "Bhima and Bakasura",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour; refined linework",
+  "style_master_ref": "episodes/01-birds-eye/stills/plate-wide-gold.jpg",
+  "photoreal_allowed": false,
+  "frame": "Ornate lotus carved wooden frame on every plate",
+  "apparatus": {},
+  "cast": {
+    "bhima": {
+      "face": "Young adult warrior, broad jaw, dark eyes, thick dark mustache, confident calm",
+      "hair": "Black curly topknot, no peacock",
+      "costume": "Saffron-yellow dhoti with gold border, powerful bare chest, armbands"
+    },
+    "bakasura": {
+      "face": "Stylized rakshasa, fierce comic mythology not gore",
+      "hair": "Wild dark hair",
+      "costume": "Dark forest cloth, towering build"
+    },
+    "kunti": {
+      "face": "Noble mother, serene resolve",
+      "hair": "Dark hair, simple gold",
+      "costume": "Saffron or cream sari"
+    },
+    "brahmin_father": {
+      "face": "Middle-aged brahmin, grief",
+      "hair": "Topknot, light beard",
+      "costume": "White cotton"
+    },
+    "townsfolk": {
+      "face": "Background villagers",
+      "hair": "Turbans",
+      "costume": "Muted village dress"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "In the town of Ekachakra the Pandavas live in secret — and a shadow hangs over every home.",
+      "cast_present": ["townsfolk"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium high-quality painted comic Amar Chitra village at golden hour",
+        "Quiet Indian town Ekachakra with thatched and tiled homes, peepal, distant hills",
+        "Subtle sense of unease — empty street or worried townsfolk at doorways",
+        "Equal natural human scale",
+        "Ornate lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Gore", "Giant scale mismatch", "Modern buildings"],
+      "props": ["village street", "peepal tree"],
+      "prompt": "Premium high-quality painted comic Amar Chitra mythology. Wide establishing view of the ancient Indian town of Ekachakra at cream-saffron golden hour. Thatched and low brick houses, peepal tree, distant forest hills. A few worried townsfolk at doorways — equal natural scale. Soft shadow of fear over a peaceful town. Ornate lotus wooden frame. Refined linework matching Ep01 gold master, not photoreal."
+    },
+    {
+      "id": "terror",
+      "file": "plate-terror.jpg",
+      "beat_text": "Bakasura, a terrible rakshasa, demands a cart of food and one human life each day.",
+      "cast_present": ["bakasura"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Towering stylized rakshasa Bakasura in forest clearing — fierce but not gory photoreal horror",
+        "Sense of demand and menace, empty food cart nearby optional",
+        "Lotus frame, gold hour forest"
+      ],
+      "must_not_show": ["Photoreal gore", "Blood splatter heavy", "Modern elements"],
+      "props": ["forest", "optional cart"],
+      "prompt": "Premium high-quality painted comic Amar Chitra. Giant stylized rakshasa Bakasura stands in a golden-hour forest clearing — large, fierce, comic-mythology design not photoreal horror or gore. Dark green-brown cloth, wild hair. Menace and power. Ornate lotus frame, cream-saffron light. Match Ep01 gold master style."
+    },
+    {
+      "id": "family",
+      "file": "plate-family.jpg",
+      "beat_text": "When the lot falls on a brahmin household, grief fills the cottage.",
+      "cast_present": ["brahmin_father"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Brahmin family in a simple cottage interior, grief and fear",
+        "Warm lamp light, equal scale, dignified sorrow not melodrama",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Gore", "Comedy"],
+      "props": ["cottage interior"],
+      "prompt": "Premium painted comic Amar Chitra. Simple brahmin cottage interior at evening. Father in white, mother and children grieving — dignified sorrow when the lot falls to them. Warm cream-gold lamp light. Equal natural scale. Ornate lotus frame, refined quality, not photoreal."
+    },
+    {
+      "id": "kunti",
+      "file": "plate-kunti.jpg",
+      "beat_text": "Kunti hears their sorrow. She sends her son Bhima in their place.",
+      "cast_present": ["kunti", "bhima"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Mother Kunti in saffron/cream sari speaking with resolve",
+        "Bhima beside her — large powerful young warrior, saffron-yellow dhoti, thick mustache, topknot, calm strength",
+        "Same character lock for Bhima",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Peacock feather on Bhima", "Weak or tiny Bhima"],
+      "props": ["simple home"],
+      "prompt": "Premium painted comic Amar Chitra. Mother Kunti in cream-saffron sari places a hand of blessing or resolve. Beside her stands Bhima: largest young Pandava warrior, broad shoulders, thick dark mustache, black topknot, saffron-yellow dhoti with gold border, calm noble strength. Cottage interior, warm light. Ornate lotus frame. Refined quality, not photoreal."
+    },
+    {
+      "id": "cart",
+      "file": "plate-cart.jpg",
+      "beat_text": "Bhima drives the food cart toward the forest, calm as a mountain on the move.",
+      "cast_present": ["bhima"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Bhima driving or walking with a wooden cart loaded with food pots toward forest path",
+        "Same Bhima face and build as kunti plate",
+        "Golden hour road, lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Modern cart", "Peacock"],
+      "props": ["wooden cart", "food pots"],
+      "prompt": "Premium painted comic Amar Chitra. Powerful Bhima in saffron-yellow dhoti, thick mustache, topknot, drives a wooden ox-cart or pulls a cart stacked with food pots and vessels along a golden-hour path toward dark forest. Calm mountain strength. Ornate lotus frame. Same character design, refined quality, not photoreal."
+    },
+    {
+      "id": "feast",
+      "file": "plate-feast.jpg",
+      "beat_text": "He sits and eats every last morsel — then waits for the monster who would claim him.",
+      "cast_present": ["bhima"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Bhima seated among empty pots and trays, having finished the feast, waiting calmly",
+        "Forest clearing golden light",
+        "Same Bhima lock"
+      ],
+      "must_not_show": ["Gross eating gore", "Photoreal", "Messy comedy vomit"],
+      "props": ["pots", "trays"],
+      "prompt": "Premium painted comic Amar Chitra. Bhima sits in a forest clearing among emptied clay pots and food trays, last of the feast done, relaxed powerful posture waiting. Saffron-yellow dhoti, thick mustache, topknot. Golden hour. Ornate lotus frame. Refined charming style, not photoreal, not gross."
+    },
+    {
+      "id": "clash",
+      "file": "plate-clash.jpg",
+      "beat_text": "Bakasura comes roaring. Bhima meets him with bare hands and a warrior’s joy.",
+      "cast_present": ["bhima", "bakasura"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Dynamic clash: Bhima grappling or striking Bakasura",
+        "Both full figures, equal comic mythology style, Bakasura larger but not photoreal monster CGI",
+        "Forest battlefield, dramatic golden light",
+        "Same Bhima face lock"
+      ],
+      "must_not_show": ["Heavy blood gore", "Photoreal horror", "Dismemberment"],
+      "props": ["forest"],
+      "prompt": "Premium painted comic Amar Chitra action plate. Bhima (saffron dhoti, thick mustache, topknot, powerful build) clashes bare-handed with towering stylized rakshasa Bakasura in a forest clearing. Dramatic dynamic poses, warrior energy. Stylized not gory — no heavy blood or photoreal horror. Ornate lotus frame, cream-saffron-gold light, refined quality."
+    },
+    {
+      "id": "victory",
+      "file": "plate-victory.jpg",
+      "beat_text": "The fight ends. Bakasura falls. Ekachakra will fear him no more.",
+      "cast_present": ["bhima", "bakasura"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Bhima standing composed and victorious; Bakasura defeated on the ground (tasteful, not gory)",
+        "Same character locks",
+        "Clearing after battle, lotus frame"
+      ],
+      "must_not_show": ["Gore", "Photoreal corpses", "Ecstatic silly pose"],
+      "props": ["forest clearing"],
+      "prompt": "Premium painted comic Amar Chitra. Bhima stands composed and princely after victory — calm strength, saffron dhoti, mustache, topknot. Stylized Bakasura defeated on the ground (tasteful collapse, no gore). Forest clearing golden light. Ornate lotus frame. Refined quality, not photoreal."
+    },
+    {
+      "id": "wide-gold",
+      "file": "plate-wide-gold.jpg",
+      "beat_text": "So Bhima kept the vow of the strong: protect those who cannot protect themselves.",
+      "cast_present": ["bhima", "townsfolk"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality gold closing mood like Ep01 wide-gold",
+        "Bhima returning or standing before grateful townsfolk of Ekachakra",
+        "Warm cream-saffron-gold peace",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Gore", "Photoreal", "Giant scale errors"],
+      "props": ["village path"],
+      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold hour like Ep01 plate-wide-gold. Bhima (powerful, saffron dhoti, mustache) walks or stands as grateful Ekachakra townsfolk bow in relief. Peace after terror. Ornate lotus frame. Refined charming quality, not photoreal."
+    }
+  ]
+}

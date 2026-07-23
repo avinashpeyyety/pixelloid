@@ -1,0 +1,31 @@
+{
+  "episode_id": "03",
+  "notes": "Bhima continuity lock — large powerful build, not photoreal. Bakasura fearsome but comic-mythology, not gore.",
+  "cast": {
+    "bhima": {
+      "face": "Young adult warrior, broad jaw, dark eyes, thick dark mustache, confident calm expression",
+      "hair": "Black curly hair in warrior topknot, no peacock feather",
+      "costume": "Saffron-yellow or cream dhoti with gold border, bare powerful chest, simple armbands — largest of the Pandavas"
+    },
+    "bakasura": {
+      "face": "Rakshasa: large, fierce but stylized comic features, not photoreal horror",
+      "hair": "Wild dark hair, optional small horns or topknot",
+      "costume": "Dark forest greens and browns, ragged warrior cloth, large stature towering over trees"
+    },
+    "kunti": {
+      "face": "Mature noble mother, warm brown skin, serene resolve",
+      "hair": "Dark hair with simple gold ornaments",
+      "costume": "Saffron or cream sari with gold border"
+    },
+    "brahmin_father": {
+      "face": "Middle-aged brahmin, distressed",
+      "hair": "Simple topknot, light beard",
+      "costume": "White cotton dhoti and upper cloth"
+    },
+    "townsfolk": {
+      "face": "Background comic villagers",
+      "hair": "Turbans or simple hair",
+      "costume": "Muted village dress"
+    }
+  }
+}

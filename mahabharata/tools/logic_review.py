@@ -202,8 +202,15 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool) -> list[str
     if not QUALITY_OK.search(field):
         fails.append(f"{pid}: quality FAIL — prompt/must_show must require premium/high painted comic quality")
 
-    # Durbar / wide court layout
-    is_durbar = pid in ("wide", "poster") or bool(re.search(r"\bdurbar\b", positive, re.I))
+    # Durbar court layout — only when explicitly a durbar/court (not every "wide" village plate)
+    is_durbar = bool(
+        plate.get("scene") == "durbar"
+        or re.search(r"\bdurbar\b", positive, re.I)
+        or (
+            re.search(r"\b(throne|king|princes?|suitors?)\b", positive, re.I)
+            and re.search(r"\b(balcony|princess|court hall|palace court)\b", positive, re.I)
+        )
+    )
     if is_durbar:
         if not re.search(r"\bbalcon", field, re.I):
             fails.append(f"{pid}: durbar FAIL — must include balconies for princesses")

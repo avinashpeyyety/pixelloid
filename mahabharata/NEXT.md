@@ -2,17 +2,16 @@
 
 ## Now
 
-- [ ] Ep 03 script + plate-bible + logic gates (same engine)
+- [ ] Ep 04 script + plate-bible + logic gates (same engine)
 - [ ] Shared episode schema doc (`docs/EPISODE_FORMAT.md`) — cam + poses + stills
-- [ ] Optional: re-edit Ep02 aim plate for stricter eyes-down-at-pool geometry
-- [x] Ep02 apparatus v3 — chandelier ornamental aquarium (no wooden cradle)
+- [ ] Optional: polish Ep03 clash/victory consistency pass
 
 ## Later
 
 - [ ] Chapter map UI (Ādi → Svargarohana as Kaavad/phad nodes)
 - [ ] Subtitles / bilingual Sanskrit-English lines
 - [ ] Accessibility: reduced-motion mode, pause + skip beat
-- [ ] Optional Blender prop sprites (bow / arrow / staff PNGs)
+- [ ] Optional Blender prop sprites (bow / mace / staff PNGs)
 
 ## Curiosity / explore
 
@@ -23,13 +22,7 @@
 ## Done
 
 - [x] Series scaffold under pixelloid
-- [x] Ep 01 *The Bird's Eye* prototype
-- [x] Hub card + github.io path
-- [x] Kathavachak narration + flute/tabla ambient
-- [x] STYLE.md art bible
-- [x] Imagine poster + garden plate
-- [x] **Cinematic plate player** — painterly plates + Ken Burns
-- [x] Multi-ep loader (`?ep=01|02`)
-- [x] Ep 02 *The Fish's Eye* first ship
-- [x] **Panel-logic agent** (docs + `tools/logic_review.py` + gates)
-- [x] **Ep 02 logic re-run** — glass roof fish, cast locks, comic style pass
+- [x] Ep 01 *The Bird's Eye*
+- [x] Ep 02 *The Fish's Eye* (mirror + pool apparatus)
+- [x] Multi-ep loader + panel-logic agent
+- [x] **Ep 03 *Bhima and Bakasura*** — Ekachakra plates + Orion TTS

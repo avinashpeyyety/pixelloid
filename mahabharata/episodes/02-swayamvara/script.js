@@ -34,8 +34,8 @@ export const EPISODE = {
   end: {
     title: "End of Episode 02",
     line: "The hand that saw truly won the prize.",
-    next: "index.html",
-    nextLabel: "All episodes",
+    next: "play.html?ep=03",
+    nextLabel: "Play Episode 03",
   },
   palette: {
     cloth: "#c4a06a",

@@ -29,6 +29,18 @@ export const EPISODES = [
   },
   {
     id: "03",
+    slug: "bhima-bakasura",
+    title: "Bhima and Bakasura",
+    sanskrit: "भीमबकासुरः",
+    chapter: "Ādi Parva · Ekachakra",
+    duration: "~100s",
+    status: "live",
+    blurb:
+      "In Ekachakra a rakshasa takes a daily due. Kunti sends Bhima — and the strong keep the helpless safe.",
+    play: "play.html?ep=03",
+  },
+  {
+    id: "04",
     slug: "coming-soon",
     title: "Next episode",
     sanskrit: "शीघ्रम्",

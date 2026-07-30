@@ -53,6 +53,18 @@ export const EPISODES = [
   },
   {
     id: "05",
+    slug: "yaksha-prashna",
+    title: "Yaksha Prashna",
+    sanskrit: "यक्षप्रश्नः",
+    chapter: "Vana Parva · the lake of questions",
+    duration: "~102s",
+    status: "live",
+    blurb:
+      "Thirst leads to a silent lake. Brothers fall; Yudhishthira answers the yaksha — and dharma restores them.",
+    play: "play.html?ep=05",
+  },
+  {
+    id: "06",
     slug: "coming-soon",
     title: "Next episode",
     sanskrit: "शीघ्रम्",

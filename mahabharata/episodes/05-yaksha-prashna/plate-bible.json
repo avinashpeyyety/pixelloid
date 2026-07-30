@@ -1,0 +1,191 @@
+{
+  "episode_id": "05",
+  "title": "Yaksha Prashna",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour with cool lake mist; refined linework",
+  "style_master_ref": "episodes/01-birds-eye/stills/plate-wide-gold.jpg",
+  "photoreal_allowed": false,
+  "frame": "Ornate lotus carved wooden frame on every plate",
+  "apparatus": {},
+  "cast": {
+    "yudhishthira": {
+      "face": "Gentle eldest Pandava, light mustache, composed wise eyes",
+      "hair": "Black simple topknot",
+      "costume": "Cream exile dhoti"
+    },
+    "bhima": {
+      "face": "Powerful, thick dark mustache",
+      "hair": "Black topknot",
+      "costume": "Saffron-yellow dhoti"
+    },
+    "arjuna": {
+      "face": "Young archer, thin mustache",
+      "hair": "Black topknot no peacock",
+      "costume": "Cream dhoti"
+    },
+    "nakula_sahadeva": {
+      "face": "Younger twins, gentle",
+      "hair": "Topknots",
+      "costume": "Cream exile dress"
+    },
+    "yaksha": {
+      "face": "Luminous stern spirit, ethereal comic mythology",
+      "hair": "Pale light or crown of mist",
+      "costume": "Glowing pale gold and white robes over water"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "Deep in the forest the Pandavas wander, weary from the long exile.",
+      "cast_present": ["yudhishthira", "bhima", "arjuna"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic forest path exile scene",
+        "Pandavas walking weary through dense forest golden hour",
+        "Equal natural human scale",
+        "Ornate lotus frame — NOT Drona bird-training scene"
+      ],
+      "must_not_show": ["Photoreal", "Palace", "Drona teaching bird eye", "Modern props"],
+      "props": ["forest path"],
+      "prompt": "Premium high-quality painted comic Amar Chitra. Deep forest path, cream-saffron golden hour mist. Five weary Pandava brothers in simple exile dress walking through tall trees — Yudhishthira leading, powerful Bhima, archer Arjuna, twins. Tired but noble. Ornate lotus frame. Match Ep01 gold master style language, NOT the bird-on-branch training scene. Not photoreal."
+    },
+    {
+      "id": "thirst",
+      "file": "plate-thirst.jpg",
+      "beat_text": "Thirst burns their throats. Yudhishthira sends his brothers one by one to find water.",
+      "cast_present": ["yudhishthira", "bhima"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Yudhishthira directing brothers, thirsty expressions, dry lips suggested gently",
+        "Forest clearing rest",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Comedy"],
+      "props": ["empty water pots optional"],
+      "prompt": "Premium painted comic Amar Chitra. Forest clearing. Yudhishthira in cream dhoti gestures sending brothers to seek water. Bhima and others look weary with thirst. Soft golden light through trees. Ornate lotus frame. Refined quality, not photoreal."
+    },
+    {
+      "id": "lake",
+      "file": "plate-lake.jpg",
+      "beat_text": "They find a still forest lake — clear as glass, and strangely silent.",
+      "cast_present": ["arjuna"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Mysterious still forest lake, clear water, lotuses optional, eerie quiet beauty",
+        "Brother approaching shore",
+        "Lotus frame, cool mist gold light"
+      ],
+      "must_not_show": ["Photoreal", "Busy village lake"],
+      "props": ["lake", "forest"],
+      "prompt": "Premium painted comic Amar Chitra. Magical still forest lake, glass-clear water, soft mist, peepal and jungle around, cream-gold light with cool blue-green water. One Pandava brother approaches the shore. Strange sacred silence. Ornate lotus frame. Not photoreal."
+    },
+    {
+      "id": "fall",
+      "file": "plate-fall.jpg",
+      "beat_text": "A voice warns: answer my questions, or do not drink. They drink. One by one they fall.",
+      "cast_present": ["bhima", "arjuna", "nakula_sahadeva"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Brothers collapsed unconscious beside the lake shore — tasteful sleep-like stillness not gore",
+        "Lake and forest",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Blood gore", "Photoreal corpses", "Horror"],
+      "props": ["lake shore"],
+      "prompt": "Premium painted comic Amar Chitra. Forest lake shore: four Pandava brothers lie still as if in deep sleep after drinking — tasteful, no gore. Empty water pots. Soft golden mist. Ornate lotus frame. Stylized not photoreal horror."
+    },
+    {
+      "id": "yudhi",
+      "file": "plate-yudhi.jpg",
+      "beat_text": "Yudhishthira comes last, finds his brothers still as stone, and will not drink without leave.",
+      "cast_present": ["yudhishthira"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Yudhishthira kneeling or standing grief-struck yet composed by fallen brothers at lake",
+        "Same Yudhishthira face lock",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Hysterical melodrama"],
+      "props": ["lake"],
+      "prompt": "Premium painted comic Amar Chitra. Yudhishthira in cream dhoti at the lake, composed grief, hand near fallen brothers, will not drink yet. Soft light on water. Ornate lotus frame. Refined dignified emotion, not photoreal."
+    },
+    {
+      "id": "yaksha",
+      "file": "plate-yaksha.jpg",
+      "beat_text": "A yaksha appears upon the waters — luminous, stern, and endless with questions.",
+      "cast_present": ["yaksha", "yudhishthira"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Luminous yaksha spirit rising from or standing upon lake surface — ethereal comic mythology not CGI monster",
+        "Yudhishthira facing him respectfully",
+        "Lotus frame, mystical gold and mist light"
+      ],
+      "must_not_show": ["Photoreal horror", "Gore", "Tiny yaksha unreadable"],
+      "props": ["lake"],
+      "prompt": "Premium painted comic Amar Chitra. Luminous yaksha spirit on the forest lake — glowing pale gold and white robes, stern serene face, ethereal presence above water. Yudhishthira on shore facing him with folded hands. Mystical cream-gold light and mist. Ornate lotus frame. Charming mythic not photoreal horror."
+    },
+    {
+      "id": "answers",
+      "file": "plate-answers.jpg",
+      "beat_text": "What is heavier than earth? What is higher than heaven? Yudhishthira answers with dharma’s calm.",
+      "cast_present": ["yudhishthira", "yaksha"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Dialogue moment: Yudhishthira speaking calmly to the yaksha",
+        "Sense of wisdom exchange",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Angry shouting fight"],
+      "props": ["lake"],
+      "prompt": "Premium painted comic Amar Chitra. Close two-shot: Yudhishthira answers the luminous yaksha with calm raised hand of teaching/dharma. Lake and soft mist behind. Warm gold light on faces. Ornate lotus frame. Refined quality, not photoreal."
+    },
+    {
+      "id": "rise",
+      "file": "plate-rise.jpg",
+      "beat_text": "Pleased, the yaksha restores the brothers. It is Dharma himself, testing his son.",
+      "cast_present": ["yudhishthira", "bhima", "arjuna", "yaksha"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Brothers rising revived by the lake, light of blessing",
+        "Yaksha blessing or transforming with soft light (Dharma reveal suggested gently)",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Gore", "Photoreal", "Dark horror"],
+      "props": ["lake"],
+      "prompt": "Premium painted comic Amar Chitra. Forest lake miracle: Pandava brothers rising to their feet with soft divine light as the luminous yaksha blesses them. Yudhishthira grateful. Golden cream light, hope. Ornate lotus frame. Not photoreal, not gore."
+    },
+    {
+      "id": "wide-gold",
+      "file": "plate-wide-gold.jpg",
+      "beat_text": "So the lake taught what the war would ask: strength without dharma is only thirst.",
+      "cast_present": ["yudhishthira", "bhima", "arjuna"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality gold closing mood like Ep01 wide-gold",
+        "Brothers together at peaceful lake after trial",
+        "Warm cream-saffron-gold hour",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Corpses", "Giant scale errors"],
+      "props": ["lake", "forest"],
+      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold forest lake at peace. Five Pandava brothers standing together renewed, Yudhishthira calm at center. Soft light like Ep01 plate-wide-gold mood. Ornate lotus frame. Refined charming quality, not photoreal."
+    }
+  ]
+}

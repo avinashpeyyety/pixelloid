@@ -34,8 +34,8 @@ export const EPISODE = {
   end: {
     title: "End of Episode 04",
     line: "When the heart is true, even a grain can feed the world.",
-    next: "index.html",
-    nextLabel: "All episodes",
+    next: "play.html?ep=05",
+    nextLabel: "Play Episode 05",
   },
   palette: {
     cloth: "#c4a06a",

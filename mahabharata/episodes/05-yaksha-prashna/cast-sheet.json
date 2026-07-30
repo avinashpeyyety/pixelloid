@@ -1,0 +1,31 @@
+{
+  "episode_id": "05",
+  "notes": "Vana Parva. Yudhishthira calm eldest. Brothers fallen at lake. Yaksha = luminous spirit, later revealed as Dharma.",
+  "cast": {
+    "yudhishthira": {
+      "face": "Gentle eldest Pandava, light dark mustache, composed wise eyes, serene resolve",
+      "hair": "Black hair simple topknot, no peacock",
+      "costume": "Cream or soft gold dhoti, modest exile dress, simple sacred thread"
+    },
+    "bhima": {
+      "face": "Powerful younger brother, thick dark mustache, broad face",
+      "hair": "Black topknot",
+      "costume": "Saffron-yellow dhoti, large build"
+    },
+    "arjuna": {
+      "face": "Young archer, thin dark mustache, focused",
+      "hair": "Black topknot, no peacock in exile",
+      "costume": "Cream or indigo-trim dhoti"
+    },
+    "nakula_sahadeva": {
+      "face": "Younger twins, gentle features, light mustaches",
+      "hair": "Topknots",
+      "costume": "Cream exile dress"
+    },
+    "yaksha": {
+      "face": "Luminous spirit face, stern calm, not gory monster — comic mythology ethereal",
+      "hair": "Crown of light or wild pale hair",
+      "costume": "Glowing pale gold and mist-white robes, semi-divine presence over water"
+    }
+  }
+}

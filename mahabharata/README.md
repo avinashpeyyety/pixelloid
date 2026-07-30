@@ -24,6 +24,7 @@ Episodic browser theater: **write script → Imagine plates → animate**.
 | 02 | **The Fish's Eye** — Draupadi’s swayamvara | Live |
 | 03 | **Bhima and Bakasura** — Ekachakra | Live |
 | 04 | **The Akshayapatra** — Durvasa & the grain of grace | Live |
+| 05 | **Yaksha Prashna** — the lake of questions | Live |
 
 ## Local
 
@@ -34,6 +35,7 @@ cd pixelloid && python3 -m http.server 8767
 # http://127.0.0.1:8767/mahabharata/play.html?ep=02
 # http://127.0.0.1:8767/mahabharata/play.html?ep=03
 # http://127.0.0.1:8767/mahabharata/play.html?ep=04
+# http://127.0.0.1:8767/mahabharata/play.html?ep=05
 ```
 
 ## Ep 01 plates

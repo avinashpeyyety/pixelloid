@@ -2,20 +2,14 @@
 
 ## Now
 
-- [ ] Ep 06 script + plate-bible + logic gates (same engine)
+- [ ] Ep 07 script + plate-bible + logic gates
 - [ ] Shared episode schema doc (`docs/EPISODE_FORMAT.md`)
-- [ ] Optional: polish Ep05 yaksha continuity
 
 ## Later
 
-- [ ] Chapter map UI (Ādi → Svargarohana)
+- [ ] Chapter map UI
 - [ ] Subtitles / bilingual lines
 - [ ] Accessibility: reduced-motion, pause + skip beat
-
-## Curiosity / explore
-
-- [ ] Parva accent packs (Vana Kangra wash, Sabhā miniature)
-- [ ] Tholu silhouette mode for night battles
 
 ## Done
 
@@ -23,5 +17,5 @@
 - [x] Ep 02 *The Fish's Eye*
 - [x] Ep 03 *Bhima and Bakasura*
 - [x] Ep 04 *The Akshayapatra*
-- [x] Multi-ep loader + panel-logic agent
-- [x] **Ep 05 *Yaksha Prashna*** — lake of questions
+- [x] Ep 05 *Yaksha Prashna*
+- [x] **Ep 06 *The Kirata*** — Arjuna & Shiva / Pashupatastra

@@ -34,8 +34,8 @@ export const EPISODE = {
   end: {
     title: "End of Episode 05",
     line: "Dharma is the highest wealth — and the lake yields to the one who knows it.",
-    next: "index.html",
-    nextLabel: "All episodes",
+    next: "play.html?ep=06",
+    nextLabel: "Play Episode 06",
   },
   palette: {
     cloth: "#c4a06a",

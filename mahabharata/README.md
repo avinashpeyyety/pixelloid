@@ -25,6 +25,7 @@ Episodic browser theater: **write script → Imagine plates → animate**.
 | 03 | **Bhima and Bakasura** — Ekachakra | Live |
 | 04 | **The Akshayapatra** — Durvasa & the grain of grace | Live |
 | 05 | **Yaksha Prashna** — the lake of questions | Live |
+| 06 | **The Kirata** — Arjuna, Shiva & Pashupatastra | Live |
 
 ## Local
 
@@ -36,6 +37,7 @@ cd pixelloid && python3 -m http.server 8767
 # http://127.0.0.1:8767/mahabharata/play.html?ep=03
 # http://127.0.0.1:8767/mahabharata/play.html?ep=04
 # http://127.0.0.1:8767/mahabharata/play.html?ep=05
+# http://127.0.0.1:8767/mahabharata/play.html?ep=06
 ```
 
 ## Ep 01 plates

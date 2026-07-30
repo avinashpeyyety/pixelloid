@@ -1,0 +1,268 @@
+{
+  "episode_id": "06",
+  "title": "The Kirata",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cool Himalayan gold-hour with blue peaks; refined linework",
+  "style_master_ref": "episodes/01-birds-eye/stills/plate-wide-gold.jpg",
+  "photoreal_allowed": false,
+  "frame": "Ornate lotus carved wooden frame on every plate",
+  "apparatus": {},
+  "cast": {
+    "arjuna": {
+      "face": "Young warrior, thin dark mustache, focused calm",
+      "hair": "Black topknot, no peacock",
+      "costume": "Cream ascetic/simple dhoti, bow when armed"
+    },
+    "kirata": {
+      "face": "Rugged hunter, fierce comic eyes",
+      "hair": "Wild dark hair",
+      "costume": "Leaf-hide mountain hunter dress, bow"
+    },
+    "shiva": {
+      "face": "Divine serene, soft third-eye glow optional",
+      "hair": "Jata with crescent",
+      "costume": "Tiger skin or white, rudraksha, trident, luminous aura"
+    },
+    "boar": {
+      "face": "Stylized wild boar",
+      "hair": "Bristles",
+      "costume": "Forest beast"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "To win the weapons of heaven, Arjuna climbs alone into the high Himalaya.",
+      "cast_present": [
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic Himalayan peaks and pine path",
+        "Lone Arjuna climbing or walking into mountains",
+        "Cool blue-gold hour, lotus frame",
+        "NOT Ep01 garden bird scene"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Drona",
+        "Bird eye training",
+        "Palace"
+      ],
+      "props": [
+        "mountains",
+        "path"
+      ],
+      "prompt": "Premium high-quality painted comic Amar Chitra. Wide Himalayan landscape: snow peaks, pine forests, golden hour mist. Lone young warrior Arjuna in simple cream dhoti and topknot climbs a mountain path with bow. Epic solitude. Ornate lotus frame. Match Ep01 gold comic style language NOT the bird-garden training scene. Not photoreal."
+    },
+    {
+      "id": "penance",
+      "file": "plate-penance.jpg",
+      "beat_text": "There he stands in fierce penance — still as stone, mind fixed on Mahadeva.",
+      "cast_present": [
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Arjuna in tapas: standing on one leg or arms raised / still meditation on mountain ledge",
+        "Same Arjuna face lock, no peacock",
+        "Snow peaks, lotus frame"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Comedy",
+        "Peacock feather"
+      ],
+      "props": [
+        "mountain ledge",
+        "bow set aside"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Arjuna in fierce mountain penance on a rocky ledge — still posture, thin mustache, black topknot, cream dhoti, mind fixed upward. Snow peaks and pines behind. Soft divine light. Ornate lotus frame. Same character lock, refined quality, not photoreal."
+    },
+    {
+      "id": "boar",
+      "file": "plate-boar.jpg",
+      "beat_text": "A terrible boar charges through the pines. Two arrows leave two bows at once.",
+      "cast_present": [
+        "arjuna",
+        "boar"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Wild boar charging; Arjuna drawing bow; second arrow path or hunter presence suggested",
+        "Dynamic forest action, not gore",
+        "Lotus frame"
+      ],
+      "must_not_show": [
+        "Heavy blood gore",
+        "Photoreal"
+      ],
+      "props": [
+        "boar",
+        "bows",
+        "pines"
+      ],
+      "prompt": "Premium painted comic Amar Chitra action. Fierce stylized wild boar charges through pine forest. Arjuna draws bow; a second arrow from off-frame or hunter side flies too. Dynamic golden-cool mountain light. Ornate lotus frame. Stylized not photoreal, not gory."
+    },
+    {
+      "id": "hunter",
+      "file": "plate-hunter.jpg",
+      "beat_text": "A mountain hunter claims the kill. Arjuna will not yield the honor of the shot.",
+      "cast_present": [
+        "arjuna",
+        "kirata"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Kirata hunter and Arjuna face each other over the fallen boar",
+        "Dispute of honor, equal pride",
+        "Lotus frame"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Gore pile"
+      ],
+      "props": [
+        "boar",
+        "bows"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Mountain clearing: rugged kirata hunter in leaf-hide dress with bow faces young Arjuna over a fallen boar. Argument of who shot first — proud stance both. Cool gold pine light. Ornate lotus frame. Not photoreal."
+    },
+    {
+      "id": "duel",
+      "file": "plate-duel.jpg",
+      "beat_text": "Bow meets bow. The kirata matches Arjuna blow for blow — and the forest shakes.",
+      "cast_present": [
+        "arjuna",
+        "kirata"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Dynamic duel: Arjuna and kirata with bows clashing",
+        "Equal power, forest mountains",
+        "Lotus frame"
+      ],
+      "must_not_show": [
+        "Heavy gore",
+        "Photoreal"
+      ],
+      "props": [
+        "bows"
+      ],
+      "prompt": "Premium painted comic Amar Chitra action duel. Arjuna and the kirata hunter clash with bows in mountain forest — matched strength, dramatic poses, flying leaves. Cool gold light. Ornate lotus frame. Stylized energy not gore, not photoreal."
+    },
+    {
+      "id": "equal",
+      "file": "plate-equal.jpg",
+      "beat_text": "Arjuna’s strength fails against an equal. He falls, astonished, at a hunter’s feet.",
+      "cast_present": [
+        "arjuna",
+        "kirata"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Arjuna kneeling or fallen astonished before standing kirata",
+        "Moment of humility",
+        "Lotus frame"
+      ],
+      "must_not_show": [
+        "Gore",
+        "Photoreal",
+        "Cruel humiliation comedy"
+      ],
+      "props": [
+        "bows"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Arjuna kneels astonished on mountain ground before the proud kirata hunter who still stands with bow. Wonder and humility. Soft gold light through pines. Ornate lotus frame. Dignified, not photoreal."
+    },
+    {
+      "id": "reveal",
+      "file": "plate-reveal.jpg",
+      "beat_text": "Then the kirata shines with a thousand suns. It is Shiva, the Lord, smiling.",
+      "cast_present": [
+        "arjuna",
+        "shiva"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Divine reveal: Shiva luminous with jata, crescent, trident, aura replacing hunter",
+        "Arjuna in awe / pranam",
+        "Lotus frame, sacred light"
+      ],
+      "must_not_show": [
+        "Horror demon",
+        "Photoreal CGI",
+        "Gore"
+      ],
+      "props": [
+        "trident",
+        "mountain"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Divine revelation: the hunter becomes Lord Shiva — jata matted locks, crescent moon, soft third-eye glow, trident, luminous cream-gold aura, serene smile. Arjuna bows in awe. Mountain forest radiant. Ornate lotus frame. Sacred charming not photoreal horror."
+    },
+    {
+      "id": "gift",
+      "file": "plate-gift.jpg",
+      "beat_text": "Pleased by courage and devotion, Mahadeva grants the Pashupatastra.",
+      "cast_present": [
+        "arjuna",
+        "shiva"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Shiva blessing Arjuna; glowing divine weapon or arrow of light (Pashupatastra)",
+        "Composed gift moment",
+        "Lotus frame"
+      ],
+      "must_not_show": [
+        "Gore",
+        "Photoreal"
+      ],
+      "props": [
+        "divine weapon light"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Lord Shiva places a glowing divine weapon or arrow of light into Arjuna’s hands — Pashupatastra gift. Arjuna receives with bowed head, thin mustache, topknot. Soft sacred gold light on mountain. Ornate lotus frame. Refined quality, not photoreal."
+    },
+    {
+      "id": "wide-gold",
+      "file": "plate-wide-gold.jpg",
+      "beat_text": "So the archer who saw only the eye is given the weapon that ends the war of ages.",
+      "cast_present": [
+        "arjuna",
+        "shiva"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality gold closing mood like Ep01 wide-gold",
+        "Arjuna blessed on mountain peak, soft Shiva presence or afterglow",
+        "Warm cream-saffron-gold Himalayan peace",
+        "Lotus frame"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Dark war scene"
+      ],
+      "props": [
+        "peaks",
+        "bow"
+      ],
+      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold Himalayan peak peace like Ep01 plate-wide-gold mood. Arjuna stands renewed with bow, soft divine afterglow of Shiva’s blessing. Ornate lotus frame. Refined charming quality, not photoreal."
+    }
+  ]
+}

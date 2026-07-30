@@ -65,6 +65,18 @@ export const EPISODES = [
   },
   {
     id: "06",
+    slug: "kirata",
+    title: "The Kirata",
+    sanskrit: "किरातार्जुनम्",
+    chapter: "Vana Parva · Arjuna’s penance",
+    duration: "~102s",
+    status: "live",
+    blurb:
+      "In the Himalaya Arjuna meets a mountain hunter — and wins the Pashupatastra from Shiva himself.",
+    play: "play.html?ep=06",
+  },
+  {
+    id: "07",
     slug: "coming-soon",
     title: "Next episode",
     sanskrit: "शीघ्रम्",

@@ -1,0 +1,26 @@
+{
+  "episode_id": "06",
+  "notes": "Arjuna in penance — no peacock in exile. Kirata = hunter disguise of Shiva; reveal is luminous not horror.",
+  "cast": {
+    "arjuna": {
+      "face": "Young warrior, thin dark mustache, focused calm, oval face",
+      "hair": "Black curly topknot — NO peacock feather during penance",
+      "costume": "Ascetic or simple cream dhoti for penance; bow and quiver when fighting"
+    },
+    "kirata": {
+      "face": "Rugged mountain hunter, strong jaw, fierce eyes, dark skin tone comic style",
+      "hair": "Wild dark hair or simple hunter topknot",
+      "costume": "Leaf-and-hide hunter dress, bow, mountain simplicity — still charming comic not photoreal"
+    },
+    "shiva": {
+      "face": "Divine serene fierce beauty, third eye optional soft glow, calm smile of blessing",
+      "hair": "Jata matted locks with crescent moon, Ganga soft stream optional",
+      "costume": "Tiger skin or white ash, rudraksha, trident, luminous gold-cream aura"
+    },
+    "boar": {
+      "face": "Stylized wild boar, fierce comic mythology",
+      "hair": "Bristles",
+      "costume": "Forest beast — not gore"
+    }
+  }
+}

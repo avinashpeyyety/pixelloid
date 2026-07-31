@@ -1,0 +1,31 @@
+{
+  "episode_id": "08",
+  "notes": "Udyoga Parva. Krishna messenger. Cosmic form tasteful comic radiance not horror.",
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine smile, dark eyes",
+      "hair": "Dark curly hair, optional peacock feather",
+      "costume": "Yellow pitambar dhoti, garland, charming comic"
+    },
+    "duryodhana": {
+      "face": "Proud adult prince, fierce mustache, arrogant eyes",
+      "hair": "Crown",
+      "costume": "Deep jewel tones, gold armor accents"
+    },
+    "dhritarashtra": {
+      "face": "Elderly blind king, white beard, troubled",
+      "hair": "White hair crown",
+      "costume": "Royal white and gold robes on throne"
+    },
+    "yudhishthira": {
+      "face": "Gentle eldest Pandava",
+      "hair": "Topknot",
+      "costume": "Cream royal exile dress"
+    },
+    "courtiers": {
+      "face": "Background sabha figures",
+      "hair": "Turbans",
+      "costume": "Muted court dress"
+    }
+  }
+}

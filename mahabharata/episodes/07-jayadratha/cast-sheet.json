@@ -1,0 +1,31 @@
+{
+  "episode_id": "07",
+  "notes": "Vana Parva. Tasteful abduction — distress without gore/sexualization. Draupadi dignified.",
+  "cast": {
+    "draupadi": {
+      "face": "Young woman, warm brown skin, large dark eyes, bindi, resolute dignity",
+      "hair": "Long black wavy hair",
+      "costume": "Deep red sari with gold border, exile jewelry"
+    },
+    "jayadratha": {
+      "face": "Adult king, mustache, proud then fearful",
+      "hair": "Crown or turban",
+      "costume": "Royal jewel-tone silks, Sindhu king"
+    },
+    "bhima": {
+      "face": "Powerful warrior, thick mustache",
+      "hair": "Black topknot",
+      "costume": "Saffron dhoti"
+    },
+    "arjuna": {
+      "face": "Young archer, thin mustache",
+      "hair": "Black topknot no peacock",
+      "costume": "Cream dhoti, bow"
+    },
+    "yudhishthira": {
+      "face": "Gentle eldest, composed",
+      "hair": "Simple topknot",
+      "costume": "Cream exile dhoti"
+    }
+  }
+}

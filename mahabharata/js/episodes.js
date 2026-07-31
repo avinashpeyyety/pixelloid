@@ -77,6 +77,30 @@ export const EPISODES = [
   },
   {
     id: "07",
+    slug: "jayadratha",
+    title: "Jayadratha",
+    sanskrit: "जयद्रथः",
+    chapter: "Vana Parva · the forest abduction",
+    duration: "~100s",
+    status: "live",
+    blurb:
+      "While the brothers hunt, Jayadratha seizes Draupadi — and the Pandavas turn the chase into justice.",
+    play: "play.html?ep=07",
+  },
+  {
+    id: "08",
+    slug: "peace-embassy",
+    title: "The Peace Embassy",
+    sanskrit: "शान्तिदूतः",
+    chapter: "Udyoga Parva · Krishna at Hastinapura",
+    duration: "~102s",
+    status: "live",
+    blurb:
+      "Krishna asks for five villages. Duryodhana refuses. Peace fails — and Kurukshetra draws near.",
+    play: "play.html?ep=08",
+  },
+  {
+    id: "09",
     slug: "coming-soon",
     title: "Next episode",
     sanskrit: "शीघ्रम्",

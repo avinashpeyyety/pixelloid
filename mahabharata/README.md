@@ -26,6 +26,8 @@ Episodic browser theater: **write script → Imagine plates → animate**.
 | 04 | **The Akshayapatra** — Durvasa & the grain of grace | Live |
 | 05 | **Yaksha Prashna** — the lake of questions | Live |
 | 06 | **The Kirata** — Arjuna, Shiva & Pashupatastra | Live |
+| 07 | **Jayadratha** — forest abduction of Draupadi | Live |
+| 08 | **The Peace Embassy** — Krishna at Hastinapura | Live |
 
 ## Local
 

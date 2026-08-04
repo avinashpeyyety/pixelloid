@@ -1,0 +1,21 @@
+{
+  "episode_id": "09",
+  "notes": "Kurukshetra open. Cosmic form tasteful comic radiance not horror. Arjuna warrior with diadem OK on battlefield.",
+  "cast": {
+    "arjuna": {
+      "face": "Young warrior, thin dark mustache, grief then resolve",
+      "hair": "Black curly hair with warrior diadem on field (no peacock required)",
+      "costume": "White/cream dhoti with gold, armor light, bow Gandiva"
+    },
+    "krishna": {
+      "face": "Youthful divine calm smile, dark eyes",
+      "hair": "Dark curly hair, peacock feather optional",
+      "costume": "Yellow pitambar as charioteer, garland"
+    },
+    "armies": {
+      "face": "Background comic warriors",
+      "hair": "Helmets and turbans",
+      "costume": "Banners of Pandava and Kaurava hosts"
+    }
+  }
+}

@@ -34,8 +34,8 @@ export const EPISODE = {
   end: {
     title: "End of Episode 08",
     line: "When peace is refused, dharma takes the field.",
-    next: "index.html",
-    nextLabel: "All episodes",
+    next: "play.html?ep=09",
+    nextLabel: "Play Episode 09",
   },
   palette: {
     cloth: "#c4a06a",

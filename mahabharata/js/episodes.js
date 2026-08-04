@@ -101,6 +101,18 @@ export const EPISODES = [
   },
   {
     id: "09",
+    slug: "gita",
+    title: "The Gita",
+    sanskrit: "भगवद्गीता",
+    chapter: "Bhishma Parva · Kurukshetra",
+    duration: "~104s",
+    status: "live",
+    blurb:
+      "On Kurukshetra Arjuna’s bow slips. Krishna speaks the Gita — duty, the soul, and the cosmic form.",
+    play: "play.html?ep=09",
+  },
+  {
+    id: "10",
     slug: "coming-soon",
     title: "Next episode",
     sanskrit: "शीघ्रम्",

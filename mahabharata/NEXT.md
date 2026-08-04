@@ -1,9 +1,8 @@
-# NEXT — mahabharata (pixelloid)
+# NEXT — mahabharata
 
 ## Now
-- [ ] Ep 09 (Bhagavad Gita / Kurukshetra open)
+- [ ] Ep 10 (war beats / Bhishma falls)
 
 ## Done
-- [x] Ep 01–06
-- [x] Ep 07 *Jayadratha*
-- [x] Ep 08 *The Peace Embassy*
+- [x] Ep 01–08
+- [x] Ep 09 *The Gita*

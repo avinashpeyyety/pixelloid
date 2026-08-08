@@ -1,21 +1,26 @@
 {
   "episode_id": "09",
-  "notes": "Kurukshetra open. Cosmic form tasteful comic radiance not horror. Arjuna warrior with diadem OK on battlefield.",
+  "notes": "Bhishma Parva opening. Krishna charioteer + teacher. Vishvarupa tasteful comic radiance not horror. No gore battle focus — sacred teaching on the field.",
   "cast": {
-    "arjuna": {
-      "face": "Young warrior, thin dark mustache, grief then resolve",
-      "hair": "Black curly hair with warrior diadem on field (no peacock required)",
-      "costume": "White/cream dhoti with gold, armor light, bow Gandiva"
-    },
     "krishna": {
-      "face": "Youthful divine calm smile, dark eyes",
-      "hair": "Dark curly hair, peacock feather optional",
-      "costume": "Yellow pitambar as charioteer, garland"
+      "face": "Youthful divine smile, dark eyes, serene",
+      "hair": "Dark curly hair, optional peacock feather",
+      "costume": "Yellow pitambar dhoti, garland, charioteer posture"
+    },
+    "arjuna": {
+      "face": "Noble young warrior prince, expressive eyes (grief then resolve)",
+      "hair": "Dark hair, warrior topknot / crown optional",
+      "costume": "White and gold armor accents, bow Gandiva"
     },
     "armies": {
-      "face": "Background comic warriors",
-      "hair": "Helmets and turbans",
-      "costume": "Banners of Pandava and Kaurava hosts"
+      "face": "Background warriors distant",
+      "hair": "Helmets turbans",
+      "costume": "Muted army ranks, banners — equal human scale"
+    },
+    "chariot": {
+      "face": "n/a prop",
+      "hair": "n/a",
+      "costume": "White horses, ornate Pandava chariot with Krishna as driver"
     }
   }
 }

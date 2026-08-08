@@ -1,172 +1,179 @@
 {
   "episode_id": "09",
-  "title": "The Gita",
-  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; dawn cream-saffron-gold battlefield; refined linework",
+  "title": "The Bhagavad Gita",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold sacred hour on Kurukshetra; refined linework",
   "style_master_ref": "episodes/01-birds-eye/stills/plate-wide-gold.jpg",
   "photoreal_allowed": false,
   "frame": "Ornate lotus carved wooden frame on every plate",
   "apparatus": {},
   "cast": {
-    "arjuna": {
-      "face": "Young warrior, thin dark mustache",
-      "hair": "Black hair warrior diadem",
-      "costume": "Cream dhoti gold, light armor, bow"
-    },
     "krishna": {
-      "face": "Divine calm smile",
-      "hair": "Dark curly hair",
-      "costume": "Yellow pitambar charioteer"
+      "face": "Youthful divine smile, dark eyes",
+      "hair": "Dark curly hair, peacock feather optional",
+      "costume": "Yellow pitambar, garland"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince",
+      "hair": "Dark topknot",
+      "costume": "White-gold armor, bow Gandiva"
     },
     "armies": {
-      "face": "Background warriors",
+      "face": "Distant ranks",
       "hair": "Helmets",
-      "costume": "Banners two hosts"
+      "costume": "Muted banners and spears"
     }
   },
   "plates": [
     {
       "id": "wide",
       "file": "plate-wide.jpg",
-      "beat_text": "On the field of Kurukshetra the two oceans of war face each other at dawn.",
+      "beat_text": "On the field of Kurukshetra two oceans of men stand ready — kin against kin.",
       "cast_present": ["armies"],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium painted comic epic Kurukshetra plain at dawn",
-        "Two armies facing across field, banners, soft gold light",
-        "Ornate lotus frame, not photoreal"
+        "Premium painted comic: vast battlefield Kurukshetra at dawn, two armies facing",
+        "Banners and ranks, equal natural human scale, no gore focus",
+        "Ornate lotus frame",
+        "Not photoreal"
       ],
-      "must_not_show": ["Photoreal", "Heavy gore", "Modern weapons"],
-      "props": ["banners", "chariots"],
-      "prompt": "Premium painted comic Amar Chitra. Wide Kurukshetra plain at cream-saffron dawn. Two vast ancient armies face each other with banners and chariots, epic and solemn, no gore. Ornate lotus frame. Not photoreal."
+      "must_not_show": ["Photoreal", "Graphic gore", "Giant scale mismatch"],
+      "props": ["banners", "chariots distant"],
+      "prompt": "Premium painted comic Amar Chitra. Wide dawn view of Kurukshetra: two great armies facing across a dusty sacred plain, banners saffron and gold, distant chariots. Epic quiet before war. Equal human scale. Ornate lotus frame. Not photoreal."
     },
     {
-      "id": "armies",
-      "file": "plate-armies.jpg",
-      "beat_text": "Conches sound. Banners lift. Kin stand ready to strike kin.",
-      "cast_present": ["armies"],
-      "has_fish_apparatus": false,
-      "is_aim_beat": false,
-      "must_show": [
-        "Premium quality",
-        "Warriors raising conches and banners, tension before battle",
-        "Lotus frame"
-      ],
-      "must_not_show": ["Photoreal", "Gore"],
-      "props": ["conches", "banners"],
-      "prompt": "Premium painted comic Amar Chitra. Close-mid of ancient Indian warriors lifting conch shells and battle banners at dawn. Epic tension. Ornate lotus frame. Not photoreal, not gory."
-    },
-    {
-      "id": "chariot",
-      "file": "plate-chariot.jpg",
-      "beat_text": "Arjuna asks Krishna to drive between the hosts — to see those he must fight.",
+      "id": "field",
+      "file": "plate-field.jpg",
+      "beat_text": "Arjuna asks Krishna to drive between the armies, that he may see whom he must face.",
       "cast_present": ["arjuna", "krishna"],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
         "Premium quality",
-        "Krishna as charioteer yellow pitambar; Arjuna with bow on chariot between armies",
+        "Chariot with white horses; Krishna as charioteer; Arjuna standing with bow",
+        "Armies soft in background",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal"],
-      "props": ["chariot", "bow"],
-      "prompt": "Premium painted comic Amar Chitra. Krishna in yellow pitambar drives chariot; Arjuna warrior with bow stands behind him looking toward the opposing army. Dawn field. Ornate lotus frame. Not photoreal."
+      "must_not_show": ["Photoreal", "Gore"],
+      "props": ["chariot", "Gandiva bow"],
+      "prompt": "Premium painted comic Amar Chitra. Ornate chariot between two armies. Krishna in yellow pitambar holds the reins as charioteer. Arjuna in white-gold armor stands with bow, looking toward the ranks. Soft cream-saffron light. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "despair",
       "file": "plate-despair.jpg",
-      "beat_text": "His bow slips. Teachers, cousins, friends — his heart collapses into grief.",
-      "cast_present": ["arjuna", "krishna"],
+      "beat_text": "He sees teachers, cousins, friends — and his bow Gandiva slips from his hands.",
+      "cast_present": ["arjuna"],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
         "Premium quality",
-        "Arjuna collapsed in grief on chariot, bow slipped; Krishna watching with compassion",
+        "Arjuna grief-stricken on chariot; Gandiva bow falling or lowered",
+        "No gore; emotional sacred tone",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Comedy"],
-      "props": ["bow on floor of chariot"],
-      "prompt": "Premium painted comic Amar Chitra. Arjuna sinks in despair on the chariot, Gandiva bow slipped from his hand, face full of grief. Krishna turns with compassion. Soft golden light. Ornate lotus frame. Dignified emotion, not photoreal."
+      "must_not_show": ["Photoreal", "Gore battle close-up"],
+      "props": ["Gandiva bow lowered"],
+      "prompt": "Premium painted comic Amar Chitra. Close mid-shot: Arjuna on the chariot seat, face full of sorrow, white-gold armor; the great bow Gandiva slips from his hands toward the chariot floor. Soft golden dust light. Sacred pathos. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "counsel",
       "file": "plate-counsel.jpg",
-      "beat_text": "Krishna speaks: the soul is not slain; the body is only a garment.",
+      "beat_text": "Grief shakes the great archer. Krishna, calm as the sky, begins to speak.",
       "cast_present": ["arjuna", "krishna"],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
         "Premium quality",
-        "Intimate teaching: Krishna speaking, Arjuna listening on chariot",
+        "Krishna turned toward Arjuna teaching calmly; Arjuna listening in grief",
+        "Chariot setting",
         "Lotus frame"
       ],
       "must_not_show": ["Photoreal"],
       "props": ["chariot"],
-      "prompt": "Premium painted comic Amar Chitra. Close two-shot on chariot: Krishna teaches with calm raised hand; Arjuna listens, still sorrowful. Soft gold dawn. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. On the chariot Krishna in yellow pitambar turns with serene smile, speaking wisdom. Arjuna sits grieving but listening. Soft sacred gold light between them. Ornate lotus frame. Not photoreal."
     },
     {
-      "id": "self",
-      "file": "plate-self.jpg",
-      "beat_text": "Act without clinging to the fruit. Stand in your dharma as a warrior.",
+      "id": "dharma",
+      "file": "plate-dharma.jpg",
+      "beat_text": "He teaches of the soul that is never slain, of duty without clinging to fruit.",
       "cast_present": ["arjuna", "krishna"],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
         "Premium quality",
-        "Krishna pointing to duty; Arjuna beginning to straighten with resolve",
+        "Teaching moment: Krishna gesturing with calm authority; Arjuna attentive",
+        "Subtle soft glow of wisdom, not full cosmic form yet",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal"],
+      "must_not_show": ["Photoreal", "Horror"],
       "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Krishna counsels Arjuna about duty and detachment; Arjuna’s posture lifts with growing resolve. Chariot between soft-blurred armies. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Krishna teaches Arjuna on the chariot — open hand of dharma, gentle radiance around Krishna. Arjuna looks upward with dawning understanding. Cream-saffron sacred palette. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "form",
       "file": "plate-form.jpg",
-      "beat_text": "Then Krishna shows the cosmic form — time itself devouring worlds.",
+      "beat_text": "At Arjuna’s prayer he shows the cosmic form — a universe of light upon the chariot.",
       "cast_present": ["arjuna", "krishna"],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
         "Premium quality",
-        "Tasteful Vishvarupa: Krishna radiant multi-armed cosmic form, soft gold-saffron light, Arjuna awed with hands joined — charming comic not horror CGI",
+        "Tasteful Vishvarupa: Krishna radiant multi-armed cosmic form of light on chariot — charming comic sacred awe NOT horror CGI",
+        "Arjuna awed with hands joined",
         "Lotus frame"
       ],
-      "must_not_show": ["Horror gore", "Photoreal CGI nightmare"],
-      "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Krishna reveals cosmic Vishvarupa form — radiant many-armed divine presence with soft gold and saffron light, sacred awe. Arjuna bows with joined hands. Mythic charming style NOT horror CGI. Ornate lotus frame. Not photoreal."
+      "must_not_show": ["Horror gore", "Photoreal CGI nightmare", "Graphic death imagery"],
+      "props": ["chariot"],
+      "prompt": "Premium painted comic Amar Chitra. Krishna reveals a tasteful cosmic Vishvarupa form above the chariot — many-armed radiant divine figure of soft gold and saffron light, stars and sacred glow, charming mythic style. Arjuna kneels in awe with joined hands. NOT horror CGI. Ornate lotus frame. Not photoreal."
     },
     {
-      "id": "rise",
-      "file": "plate-rise.jpg",
-      "beat_text": "Arjuna’s confusion burns away. He takes up the bow again.",
+      "id": "resolve",
+      "file": "plate-resolve.jpg",
+      "beat_text": "Doubt falls away. Arjuna takes up his bow again, mind steady in dharma.",
       "cast_present": ["arjuna", "krishna"],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
         "Premium quality",
-        "Arjuna standing firm lifting bow; Krishna smiling as charioteer",
+        "Arjuna standing resolved, lifting Gandiva; Krishna smiling as charioteer",
         "Lotus frame"
       ],
       "must_not_show": ["Photoreal", "Gore"],
-      "props": ["bow"],
-      "prompt": "Premium painted comic Amar Chitra. Arjuna rises on the chariot, lifts his bow with calm warrior resolve. Krishna smiles as charioteer. Dawn light stronger. Ornate lotus frame. Not photoreal."
+      "props": ["Gandiva raised"],
+      "prompt": "Premium painted comic Amar Chitra. Arjuna stands firm on the chariot, lifting the bow Gandiva with clear resolve. Krishna in yellow pitambar holds reins, calm approving smile. Soft gold hour. Ornate lotus frame. Not photoreal."
+    },
+    {
+      "id": "conch",
+      "file": "plate-conch.jpg",
+      "beat_text": "Conches sound across the field. The song is sung — and the war of ages begins.",
+      "cast_present": ["arjuna", "krishna", "armies"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium quality",
+        "Krishna and/or Arjuna sounding conch; banners and armies responding",
+        "Epic opening of war without graphic gore",
+        "Lotus frame"
+      ],
+      "must_not_show": ["Photoreal", "Gore"],
+      "props": ["conch shell", "banners"],
+      "prompt": "Premium painted comic Amar Chitra. Krishna sounds the Panchajanya conch on the chariot; Arjuna ready with bow. Sound waves of light across banners and distant armies. Epic sacred opening of war — no gore. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "wide-gold",
       "file": "plate-wide-gold.jpg",
-      "beat_text": "So the song of the Lord was sung between two armies — and the war of ages began.",
-      "cast_present": ["arjuna", "krishna"],
+      "beat_text": "Thus on Kurukshetra the Bhagavad Gita was spoken — light before the storm.",
+      "cast_present": ["krishna", "arjuna"],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
         "Premium quality gold closing mood like Ep01 wide-gold",
-        "Chariot ready between armies, sacred calm before storm",
+        "Chariot silhouette or calm Krishna-Arjuna before golden field",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Heavy gore"],
-      "props": ["chariot", "armies soft"],
-      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold Kurukshetra dawn. Krishna and Arjuna’s chariot stands ready between two soft armies — sacred calm before battle. Ornate lotus frame. Match Ep01 gold mood. Not photoreal."
+      "must_not_show": ["Photoreal", "Gore"],
+      "props": ["chariot silhouette"],
+      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold Kurukshetra dawn; chariot with Krishna and Arjuna small against a luminous sky — quiet epic light before the storm. Match Ep01 gold mood. Ornate lotus frame. Not photoreal."
     }
   ]
 }

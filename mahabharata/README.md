@@ -28,7 +28,6 @@ Episodic browser theater: **write script → Imagine plates → animate**.
 | 06 | **The Kirata** — Arjuna, Shiva & Pashupatastra | Live |
 | 07 | **Jayadratha** — forest abduction of Draupadi | Live |
 | 08 | **The Peace Embassy** — Krishna at Hastinapura | Live |
-| 09 | **The Gita** — counsel on Kurukshetra | Live |
 
 ## Local
 

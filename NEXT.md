@@ -4,7 +4,7 @@
 
 ## Now
 
-- [ ] Mahābhārata Ep 02 script + beats (see `mahabharata/NEXT.md`)
+- [ ] Mahābhārata Ep 10 (next beat — see `mahabharata/NEXT.md`)
 - [ ] Chocolate Dance: one more joke beat after the “graduation” loop
 - [ ] Optional: pause / speed controls on kids-grok playback bar
 
@@ -28,3 +28,4 @@
 - [x] Rename dialogue-animation → **kids-grok** (folder + URLs + docs)
 - [x] Cosmos subproject under monorepo → `/pixelloid/cosmos/`
 - [x] Mahābhārata series + Ep 01 *The Bird's Eye* Three.js prototype → `/pixelloid/mahabharata/`
+- [x] Mahābhārata Ep 09 *The Bhagavad Gita* (plates + Orion TTS) → `play.html?ep=09`

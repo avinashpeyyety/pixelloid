@@ -96,6 +96,33 @@ STYLE_BAN_POSITIVE = re.compile(
     re.I,
 )
 
+# Bleed: Ep01 Drona / white-bearded sage must not appear unless cast
+SAGE_PRESENT = re.compile(
+    r"\b(drona|dronacharya|acharya|white-?bearded sage|elderly (white-?bearded )?guru|"
+    r"saffron sage|old sage|bearded sage)\b",
+    re.I,
+)
+# Style-ref that includes Drona — banned as Imagine input when Drona absent
+EP01_FIGURE_REF = re.compile(
+    r"episodes/01-birds-eye/stills/plate-wide-gold",
+    re.I,
+)
+# Arjuna continuity tokens when arjuna is present
+ARJUNA_TOKENS = {
+    "crown_or_topknot": re.compile(r"\b(crown|diadem|topknot)\b", re.I),
+    "mustache": re.compile(r"\bmustache\b", re.I),
+    "cream_white": re.compile(r"\b(cream|white|white-gold|ivory)\b", re.I),
+}
+ARJUNA_BAN_ON_SELF = re.compile(
+    r"\b(flower garland|vaijayanti|peacock feather)\b",
+    re.I,
+)
+DUPLICATE_HERO = re.compile(
+    r"\b(two|2|duplicate|extra|second|twin)\s+(arjuna|krishna)s?\b|"
+    r"\b(arjuna|krishna).{0,20}\b(twice|again as a second)\b",
+    re.I,
+)
+
 
 def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -112,8 +139,32 @@ def check_style(bible: dict) -> list[str]:
         fails.append("style_lock must require painted comic / Amar Chitra language")
     if bible.get("photoreal_allowed"):
         fails.append("photoreal_allowed must be false")
-    if "plate-wide-gold" not in (bible.get("style_master_ref") or ""):
-        fails.append("style_master_ref must point at Ep01 plate-wide-gold")
+    # Palette/mood may cite Ep01 gold; Imagine *image* ref must be scene_lock if Drona absent
+    scene = bible.get("scene_lock_ref") or ""
+    style_ref = bible.get("style_master_ref") or ""
+    if not scene and not style_ref:
+        fails.append("need scene_lock_ref (preferred) or style_master_ref")
+    return fails
+
+
+def check_cast_bleed(bible: dict) -> list[str]:
+    """Drona/sage and Imagine refs must not leak into plates that omit them."""
+    fails = []
+    plates = bible.get("plates") or []
+    style_ref = bible.get("style_master_ref") or ""
+    imagine_refs = " ".join(
+        [
+            style_ref,
+            bible.get("scene_lock_ref") or "",
+            " ".join(bible.get("imagine_refs") or []),
+        ]
+    )
+    any_drona = any("drona" in (p.get("cast_present") or []) for p in plates)
+    if EP01_FIGURE_REF.search(imagine_refs) and not any_drona:
+        fails.append(
+            "Imagine ref must NOT be Ep01 plate-wide-gold when Drona is absent "
+            "(sage bleeds into frames). Use scene_lock_ref / chariot-master instead."
+        )
     return fails
 
 
@@ -170,7 +221,7 @@ def check_apparatus(bible: dict) -> list[str]:
     return fails
 
 
-def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool) -> list[str]:
+def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool, bible: dict | None = None) -> list[str]:
     fails = []
     pid = plate.get("id") or "?"
     if not plate.get("beat_text"):
@@ -285,6 +336,43 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool) -> list[str
         if cid not in cast_ids:
             fails.append(f"{pid}: unknown cast id {cid}")
 
+    present = set(plate.get("cast_present") or [])
+
+    # Sage / Drona bleed
+    if "drona" not in present:
+        if not re.search(r"\b(drona|sage)\b", must_not, re.I):
+            fails.append(
+                f"{pid}: must_not_show must forbid Drona / white-bearded sage "
+                "(not in cast_present)"
+            )
+        for m in SAGE_PRESENT.finditer(prompt + " " + must_show):
+            if not _negated(prompt + " " + must_show, m.start()):
+                fails.append(f"{pid}: sage/Drona appears in positive spec but not in cast_present")
+                break
+
+    # Arjuna continuity — strict on episodes that set strict_hero_lock
+    bible = bible or {}
+    strict = (bible.get("strict_hero_lock") or "") == "arjuna" or bible.get("episode_id") == "09"
+    if strict and "arjuna" in present:
+        blob = f"{prompt} {must_show}"
+        for token, pat in ARJUNA_TOKENS.items():
+            if not pat.search(blob):
+                fails.append(f"{pid}: Arjuna lock missing token `{token}` (crown/topknot, mustache, cream-white cloth)")
+        for m in ARJUNA_BAN_ON_SELF.finditer(blob):
+            win = blob[max(0, m.start() - 40) : m.end() + 20]
+            if re.search(r"\barjuna\b", win, re.I) and not _negated(blob, m.start()):
+                if not re.search(r"\bkrishna\b", win, re.I):
+                    fails.append(
+                        f"{pid}: Arjuna must not wear Krishna props ({m.group(0)})"
+                    )
+                    break
+
+    if DUPLICATE_HERO.search(field) and not _negated(field, 0):
+        # only fail if not a negation
+        m = DUPLICATE_HERO.search(field)
+        if m and not _negated(field, m.start()):
+            fails.append(f"{pid}: duplicate hero wording — only one of each named cast")
+
     return fails
 
 
@@ -292,6 +380,7 @@ def review(bible: dict) -> tuple[bool, list[str]]:
     fails: list[str] = []
     fails += check_style(bible)
     fails += check_cast(bible)
+    fails += check_cast_bleed(bible)
     fails += check_apparatus(bible)
     cast_ids = set((bible.get("cast") or {}).keys())
     apparatus_on = bool(bible.get("apparatus"))
@@ -299,7 +388,7 @@ def review(bible: dict) -> tuple[bool, list[str]]:
     if not plates:
         fails.append("no plates in bible")
     for p in plates:
-        fails += check_plate(p, cast_ids, apparatus_on)
+        fails += check_plate(p, cast_ids, apparatus_on, bible)
     app_plates = [p["id"] for p in plates if p.get("has_fish_apparatus")]
     if len(app_plates) >= 2 and not bible.get("apparatus", {}).get("continuity_id"):
         fails.append("apparatus.continuity_id required when multiple fish plates")

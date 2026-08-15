@@ -2,7 +2,7 @@
   "episode_id": "08",
   "title": "The Peace Embassy",
   "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold palace hour; refined linework",
-  "style_master_ref": "episodes/01-birds-eye/stills/plate-wide-gold.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 Drona figure plate)",
   "photoreal_allowed": false,
   "frame": "Ornate lotus carved wooden frame on every plate",
   "apparatus": {},
@@ -37,8 +37,11 @@
     {
       "id": "wide",
       "file": "plate-wide.jpg",
-      "beat_text": "The years of exile end. Armies gather — and one last chance for peace remains.",
-      "cast_present": ["yudhishthira", "krishna"],
+      "beat_text": "The years of exile end. Armies gather \u2014 and one last chance for peace remains.",
+      "cast_present": [
+        "yudhishthira",
+        "krishna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -46,15 +49,26 @@
         "Soft gold hour, lotus frame",
         "Not photoreal"
       ],
-      "must_not_show": ["Photoreal", "Gore battle yet"],
-      "props": ["banners", "tents"],
+      "must_not_show": [
+        "Photoreal",
+        "Gore battle yet",
+        "Drona",
+        "white-bearded sage"
+      ],
+      "props": [
+        "banners",
+        "tents"
+      ],
       "prompt": "Premium painted comic Amar Chitra. Wide plain at golden hour: Pandava camp tents and banners, armies gathering in soft distance. Krishna and Yudhishthira small or mid figures discussing. Sense of last chance before war. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "mission",
       "file": "plate-mission.jpg",
-      "beat_text": "Krishna takes the Pandavas’ plea to Hastinapura: five villages, and no war.",
-      "cast_present": ["krishna", "yudhishthira"],
+      "beat_text": "Krishna takes the Pandavas\u2019 plea to Hastinapura: five villages, and no war.",
+      "cast_present": [
+        "krishna",
+        "yudhishthira"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -62,7 +76,11 @@
         "Krishna accepting mission from Yudhishthira",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal"],
+      "must_not_show": [
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
+      ],
       "props": [],
       "prompt": "Premium painted comic Amar Chitra. Yudhishthira requests Krishna to go as peace envoy; Krishna in yellow pitambar accepts with calm smile. Camp tent interior. Ornate lotus frame. Not photoreal."
     },
@@ -70,7 +88,9 @@
       "id": "journey",
       "file": "plate-journey.jpg",
       "beat_text": "He rides toward the city of the Kurus as messenger, friend, and witness of dharma.",
-      "cast_present": ["krishna"],
+      "cast_present": [
+        "krishna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -78,15 +98,26 @@
         "Krishna on chariot toward distant city of Hastinapura",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal"],
-      "props": ["chariot", "city silhouette"],
+      "must_not_show": [
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
+      ],
+      "props": [
+        "chariot",
+        "city silhouette"
+      ],
       "prompt": "Premium painted comic Amar Chitra. Krishna in yellow pitambar rides a chariot on a royal road toward a distant golden palace city of Hastinapura. Peaceful but purposeful. Cream-saffron sky. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "court",
       "file": "plate-court.jpg",
-      "beat_text": "In the great sabha Dhritarashtra sits blind; Duryodhana’s pride fills the hall.",
-      "cast_present": ["dhritarashtra", "duryodhana", "courtiers"],
+      "beat_text": "In the great sabha Dhritarashtra sits blind; Duryodhana\u2019s pride fills the hall.",
+      "cast_present": [
+        "dhritarashtra",
+        "duryodhana",
+        "courtiers"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -95,15 +126,27 @@
         "Equal natural human scale, men of the court only",
         "Ornate lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Giant scale mismatch"],
-      "props": ["throne", "sabha pillars"],
+      "must_not_show": [
+        "Photoreal",
+        "Giant scale mismatch",
+        "Drona",
+        "white-bearded sage"
+      ],
+      "props": [
+        "throne",
+        "sabha pillars"
+      ],
       "prompt": "Premium painted comic Amar Chitra regal sabha. Blind elderly king Dhritarashtra on throne. Proud Duryodhana in jewel tones among seated princes. Grand pillars, equal natural human scale. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "offer",
       "file": "plate-offer.jpg",
       "beat_text": "Krishna offers peace: five villages for the sons of Pandu. Nothing more is asked.",
-      "cast_present": ["krishna", "dhritarashtra", "duryodhana"],
+      "cast_present": [
+        "krishna",
+        "dhritarashtra",
+        "duryodhana"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -112,15 +155,22 @@
         "King and Duryodhana listening",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal"],
+      "must_not_show": [
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
+      ],
       "props": [],
       "prompt": "Premium painted comic Amar Chitra. Krishna stands in the Kuru sabha offering peace with open hand. Dhritarashtra on throne; Duryodhana scowls. Golden court light. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "refuse",
       "file": "plate-refuse.jpg",
-      "beat_text": "Duryodhana refuses. He will not give land enough to drive a needle’s point.",
-      "cast_present": ["duryodhana", "krishna"],
+      "beat_text": "Duryodhana refuses. He will not give land enough to drive a needle\u2019s point.",
+      "cast_present": [
+        "duryodhana",
+        "krishna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -128,32 +178,49 @@
         "Duryodhana refusing angrily; Krishna calm",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Gore"],
+      "must_not_show": [
+        "Photoreal",
+        "Gore",
+        "Drona",
+        "white-bearded sage"
+      ],
       "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Duryodhana stands defiant refusing Krishna’s offer; Krishna remains serene. Court tension. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Duryodhana stands defiant refusing Krishna\u2019s offer; Krishna remains serene. Court tension. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "form",
       "file": "plate-form.jpg",
-      "beat_text": "When they plot to seize him, Krishna shows a fraction of his cosmic form — and the hall trembles.",
-      "cast_present": ["krishna", "duryodhana", "courtiers"],
+      "beat_text": "When they plot to seize him, Krishna shows a fraction of his cosmic form \u2014 and the hall trembles.",
+      "cast_present": [
+        "krishna",
+        "duryodhana",
+        "courtiers"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
         "Premium quality",
-        "Tasteful Vishvarupa-lite: Krishna radiant multi-armed or cosmic glow filling sabha — charming comic not horror CGI",
+        "Tasteful Vishvarupa-lite: Krishna radiant multi-armed or cosmic glow filling sabha \u2014 charming comic not horror CGI",
         "Courtiers awed",
         "Lotus frame"
       ],
-      "must_not_show": ["Horror gore", "Photoreal CGI nightmare"],
+      "must_not_show": [
+        "Horror gore",
+        "Photoreal CGI nightmare",
+        "Drona",
+        "white-bearded sage"
+      ],
       "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Krishna reveals a tasteful cosmic form in the sabha — radiant many-armed divine presence with soft gold light filling the hall. Courtiers and Duryodhana shield their eyes in awe. Sacred charming mythic style, NOT horror CGI. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Krishna reveals a tasteful cosmic form in the sabha \u2014 radiant many-armed divine presence with soft gold light filling the hall. Courtiers and Duryodhana shield their eyes in awe. Sacred charming mythic style, NOT horror CGI. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "war",
       "file": "plate-war.jpg",
       "beat_text": "He returns to the Pandavas. Peace has failed. The road to Kurukshetra is open.",
-      "cast_present": ["krishna", "yudhishthira"],
+      "cast_present": [
+        "krishna",
+        "yudhishthira"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -161,15 +228,23 @@
         "Krishna returns to Pandava camp; solemn faces",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal"],
-      "props": ["camp"],
+      "must_not_show": [
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
+      ],
+      "props": [
+        "camp"
+      ],
       "prompt": "Premium painted comic Amar Chitra. Krishna returns to the Pandava camp at dusk; Yudhishthira and brothers receive the failed peace with solemn resolve. Soft gold-violet light. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "wide-gold",
       "file": "plate-wide-gold.jpg",
-      "beat_text": "Thus the last word of peace was spoken — and the age turned toward battle.",
-      "cast_present": ["krishna"],
+      "beat_text": "Thus the last word of peace was spoken \u2014 and the age turned toward battle.",
+      "cast_present": [
+        "krishna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -177,9 +252,15 @@
         "Krishna silhouette or calm figure before dawn plains of destiny",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Gore"],
+      "must_not_show": [
+        "Photoreal",
+        "Gore",
+        "Drona",
+        "white-bearded sage"
+      ],
       "props": [],
       "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold plains at dawn; Krishna stands calmly facing the horizon of coming war. Quiet epic. Ornate lotus frame. Match Ep01 gold mood. Not photoreal."
     }
-  ]
+  ],
+  "scene_lock_ref": ""
 }

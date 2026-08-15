@@ -2,18 +2,18 @@
   "episode_id": "02",
   "title": "The Fish's Eye",
   "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour; refined linework",
-  "style_master_ref": "episodes/01-birds-eye/stills/plate-wide-gold.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 Drona figure plate)",
   "photoreal_allowed": false,
   "frame": "Ornate lotus carved wooden frame on every plate",
   "apparatus": {
     "continuity_id": "matsya-ceiling-mirror-pool-fish-v8",
     "target": "Live fish swimming in a circular ornamental pool set into the palace ground/floor",
-    "mirror": "Large ornamental circular mirror with gold frame mounted high under the palace ceiling — used only for aiming sight",
+    "mirror": "Large ornamental circular mirror with gold frame mounted high under the palace ceiling \u2014 used only for aiming sight",
     "mount": "Ceiling mirror fixed high under roof (large disc scale); no fish aquarium",
     "height": "Mirror at true ceiling height top of hall; pool on the ground",
     "aim_geometry": {
       "eyes": "Look UP into the ceiling mirror (sees the fish reflected)",
-      "arrow": "Aim DOWN at the real fish in the ground pool — hit the eye",
+      "arrow": "Aim DOWN at the real fish in the ground pool \u2014 hit the eye",
       "forbidden": [
         "Ceiling aquarium of fish",
         "Shooting the mirror",
@@ -39,7 +39,7 @@
     "princess": {
       "face": "Young royal women, comic painted style",
       "hair": "Ornate hair and jewelry",
-      "costume": "Rich silk saris, crowns — princesses only, never maids"
+      "costume": "Rich silk saris, crowns \u2014 princesses only, never maids"
     },
     "arjuna_brahmin": {
       "face": "Young man, oval face, dark eyes, thin dark mustache, calm focus",
@@ -71,7 +71,7 @@
     {
       "id": "wide",
       "file": "plate-wide.jpg",
-      "beat_text": "In the court of King Drupada, suitors gather for Draupadi’s swayamvara.",
+      "beat_text": "In the court of King Drupada, suitors gather for Draupadi\u2019s swayamvara.",
       "cast_present": [
         "king_drupada",
         "king_suitor",
@@ -82,8 +82,8 @@
       "is_aim_beat": false,
       "must_show": [
         "Premium high-quality painted comic Amar Chitra durbar",
-        "King on center throne; princes/suitors ONLY on the hall floor seated both sides — equal natural human scale",
-        "ALL women and princesses ONLY on upper balconies left and right — none standing on the court floor",
+        "King on center throne; princes/suitors ONLY on the hall floor seated both sides \u2014 equal natural human scale",
+        "ALL women and princesses ONLY on upper balconies left and right \u2014 none standing on the court floor",
         "Princesses behind curtains/jali, shyly peering out",
         "No giant women, no maids, no fish apparatus"
       ],
@@ -93,14 +93,16 @@
         "Maids or servants",
         "Sitting on terrace railing",
         "Fish tank or mirror apparatus",
-        "Photoreal or crude low quality"
+        "Photoreal or crude low quality",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "throne",
         "carpets",
         "balcony curtains"
       ],
-      "prompt": "Premium high-quality painted comic Amar Chitra regal Indian palace durbar. Eye-level balanced perspective, ALL figures equal natural human scale — no giants. CENTER: King Drupada on golden throne. HALL FLOOR ONLY: adult suitor princes seated in neat rows left and right — NO women on the floor. UPPER BALCONIES left and right only: Draupadi and other PRINCESSES in rich silk saris and jewelry behind heavy sheer curtains, shyly peering through gaps — not on railings, not standing in the court. Ornate lotus frame, cream-saffron-gold light. No fish, no mirror apparatus. Polished refined linework."
+      "prompt": "Premium high-quality painted comic Amar Chitra regal Indian palace durbar. Eye-level balanced perspective, ALL figures equal natural human scale \u2014 no giants. CENTER: King Drupada on golden throne. HALL FLOOR ONLY: adult suitor princes seated in neat rows left and right \u2014 NO women on the floor. UPPER BALCONIES left and right only: Draupadi and other PRINCESSES in rich silk saris and jewelry behind heavy sheer curtains, shyly peering through gaps \u2014 not on railings, not standing in the court. Ornate lotus frame, cream-saffron-gold light. No fish, no mirror apparatus. Polished refined linework."
     },
     {
       "id": "challenge",
@@ -120,7 +122,9 @@
         "Ceiling aquarium or fish tank",
         "Fish only in hanging glass",
         "Small hand mirror",
-        "Photoreal"
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "ceiling mirror",
@@ -148,7 +152,9 @@
       "must_not_show": [
         "Ceiling aquarium",
         "Photoreal",
-        "Women on floor"
+        "Women on floor",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "bow",
@@ -173,7 +179,9 @@
       "must_not_show": [
         "Bow next to her",
         "Photoreal",
-        "Maids"
+        "Maids",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "garland"
@@ -183,7 +191,7 @@
     {
       "id": "brahmin",
       "file": "plate-brahmin.jpg",
-      "beat_text": "Then a young brahmin steps forward — quiet, steady. None yet know him as Arjuna.",
+      "beat_text": "Then a young brahmin steps forward \u2014 quiet, steady. None yet know him as Arjuna.",
       "cast_present": [
         "arjuna_brahmin"
       ],
@@ -199,7 +207,9 @@
         "Peacock",
         "Ceiling aquarium",
         "Sage required",
-        "Photoreal"
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "bow",
@@ -219,9 +229,9 @@
       "is_aim_beat": true,
       "must_show": [
         "Premium high-quality painted comic",
-        "Arjuna on LEFT dry floor BESIDE the pool — never in the water",
+        "Arjuna on LEFT dry floor BESIDE the pool \u2014 never in the water",
         "LARGE circular gold-framed MIRROR high under ceiling top center",
-        "Ground pool with fish swimming — real target",
+        "Ground pool with fish swimming \u2014 real target",
         "Eyes looking UP into the ceiling mirror",
         "Bow drawn, arrow aimed DOWN at the fish eye in the pool"
       ],
@@ -230,7 +240,9 @@
         "Ceiling aquarium",
         "Arrow aimed at the mirror",
         "Shooting upward at a tank of fish",
-        "Photoreal or crude quality"
+        "Photoreal or crude quality",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "bow",
@@ -243,7 +255,7 @@
     {
       "id": "hit",
       "file": "plate-hit.jpg",
-      "beat_text": "The arrow flies. The fish in the pool is struck. The court falls silent — then roars.",
+      "beat_text": "The arrow flies. The fish in the pool is struck. The court falls silent \u2014 then roars.",
       "cast_present": [
         "arjuna_brahmin",
         "courtiers"
@@ -261,7 +273,9 @@
         "Fish hanging from ceiling",
         "Arrow from opposite side of Arjuna",
         "Crude low quality",
-        "Standing in pool"
+        "Standing in pool",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "arrow",
@@ -269,7 +283,7 @@
         "ceiling mirror",
         "bow"
       ],
-      "prompt": "Premium high-quality painted comic. Arjuna LEFT celebrating. LARGE gold-framed circular MIRROR high under the ceiling. Circular ground pool: arrow from Arjuna's left has struck the fish eye in the pool — splash. No fish hanging above. Same-side arrow path. Refined Amar Chitra quality, lotus frame."
+      "prompt": "Premium high-quality painted comic. Arjuna LEFT celebrating. LARGE gold-framed circular MIRROR high under the ceiling. Circular ground pool: arrow from Arjuna's left has struck the fish eye in the pool \u2014 splash. No fish hanging above. Same-side arrow path. Refined Amar Chitra quality, lotus frame."
     },
     {
       "id": "garland",
@@ -287,7 +301,9 @@
       ],
       "must_not_show": [
         "Peacock",
-        "Photoreal"
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "garland"
@@ -313,7 +329,9 @@
       "must_not_show": [
         "Ceiling aquarium",
         "Photoreal",
-        "Peacock"
+        "Peacock",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "garland",
@@ -322,5 +340,6 @@
       ],
       "prompt": "Premium painted comic closing gold plate. Arjuna and Draupadi after victory. Behind: LARGE ceiling gold-framed MIRROR and ground pool (fish continuity). No aquarium. Warm cream-saffron-gold, lotus frame, refined quality."
     }
-  ]
+  ],
+  "scene_lock_ref": ""
 }

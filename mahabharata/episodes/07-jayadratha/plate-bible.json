@@ -2,7 +2,7 @@
   "episode_id": "07",
   "title": "Jayadratha",
   "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold forest hour; refined linework",
-  "style_master_ref": "episodes/01-birds-eye/stills/plate-wide-gold.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 Drona figure plate)",
   "photoreal_allowed": false,
   "frame": "Ornate lotus carved wooden frame on every plate",
   "apparatus": {},
@@ -38,24 +38,36 @@
       "id": "wide",
       "file": "plate-wide.jpg",
       "beat_text": "While the Pandavas hunt, Draupadi keeps the forest hermitage alone.",
-      "cast_present": ["draupadi"],
+      "cast_present": [
+        "draupadi"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
         "Premium painted comic forest hermitage exile camp",
         "Quiet thatch huts, peepal, Draupadi near hermitage",
         "Pandavas absent hunting implied",
-        "Ornate lotus frame — not bird training scene"
+        "Ornate lotus frame \u2014 not bird training scene"
       ],
-      "must_not_show": ["Photoreal", "Drona bird scene", "Gore"],
-      "props": ["hermitage"],
+      "must_not_show": [
+        "Photoreal",
+        "Drona bird scene",
+        "Gore",
+        "white-bearded sage"
+      ],
+      "props": [
+        "hermitage"
+      ],
       "prompt": "Premium painted comic Amar Chitra. Forest hermitage of the Pandavas in exile, golden hour. Thatch huts, peepal tree. Draupadi in red sari near the camp, alone and calm. Brothers away hunting. Ornate lotus frame. Not photoreal. Not Drona bird training."
     },
     {
       "id": "alone",
       "file": "plate-alone.jpg",
-      "beat_text": "Jayadratha, king of Sindhu, rides past and sees her — and desire turns to crime.",
-      "cast_present": ["draupadi", "jayadratha"],
+      "beat_text": "Jayadratha, king of Sindhu, rides past and sees her \u2014 and desire turns to crime.",
+      "cast_present": [
+        "draupadi",
+        "jayadratha"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -64,15 +76,26 @@
         "Tasteful: predatory gaze without sexualization",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Sexualized pose", "Gore"],
-      "props": ["chariot"],
+      "must_not_show": [
+        "Photoreal",
+        "Sexualized pose",
+        "Gore",
+        "Drona",
+        "white-bearded sage"
+      ],
+      "props": [
+        "chariot"
+      ],
       "prompt": "Premium painted comic Amar Chitra. King Jayadratha in royal silks on a chariot on forest road, looking toward Draupadi at the hermitage. Narrative tension, dignified not sexualized. Golden hour forest. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "approach",
       "file": "plate-approach.jpg",
       "beat_text": "He greets her with soft words. She answers with the dignity of a queen in exile.",
-      "cast_present": ["draupadi", "jayadratha"],
+      "cast_present": [
+        "draupadi",
+        "jayadratha"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -80,7 +103,12 @@
         "Conversation: Jayadratha speaking, Draupadi standing proud and reserved",
         "Equal scale, lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Sexualization"],
+      "must_not_show": [
+        "Photoreal",
+        "Sexualization",
+        "Drona",
+        "white-bearded sage"
+      ],
       "props": [],
       "prompt": "Premium painted comic Amar Chitra. Jayadratha greets Draupadi with false courtesy; she stands proud in red sari, queenly dignity. Hermitage background. Ornate lotus frame. Not photoreal."
     },
@@ -88,7 +116,10 @@
       "id": "seize",
       "file": "plate-seize.jpg",
       "beat_text": "When soft words fail, his men seize her chariot and carry Draupadi away.",
-      "cast_present": ["draupadi", "jayadratha"],
+      "cast_present": [
+        "draupadi",
+        "jayadratha"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -97,15 +128,27 @@
         "Jayadratha commanding",
         "Lotus frame"
       ],
-      "must_not_show": ["Gore", "Sexual violence imagery", "Photoreal"],
-      "props": ["chariot"],
-      "prompt": "Premium painted comic Amar Chitra. Tasteful dramatic moment: soldiers guide Draupadi onto a chariot as Jayadratha commands — distress and resistance, NO gore, NO sexualization. Forest road. Ornate lotus frame. Not photoreal."
+      "must_not_show": [
+        "Gore",
+        "Sexual violence imagery",
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
+      ],
+      "props": [
+        "chariot"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Tasteful dramatic moment: soldiers guide Draupadi onto a chariot as Jayadratha commands \u2014 distress and resistance, NO gore, NO sexualization. Forest road. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "cry",
       "file": "plate-cry.jpg",
       "beat_text": "Her cry reaches the forest. The brothers hear it and turn from the hunt.",
-      "cast_present": ["bhima", "arjuna", "yudhishthira"],
+      "cast_present": [
+        "bhima",
+        "arjuna",
+        "yudhishthira"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -113,15 +156,25 @@
         "Pandava brothers hunting, suddenly alert turning toward sound",
         "Forest, lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Gore"],
-      "props": ["bows"],
-      "prompt": "Premium painted comic Amar Chitra. Pandava brothers in forest hunt — Bhima, Arjuna, Yudhishthira — heads turn sharply toward a distant cry. Alarm and resolve. Golden forest light. Ornate lotus frame. Not photoreal."
+      "must_not_show": [
+        "Photoreal",
+        "Gore",
+        "Drona",
+        "white-bearded sage"
+      ],
+      "props": [
+        "bows"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Pandava brothers in forest hunt \u2014 Bhima, Arjuna, Yudhishthira \u2014 heads turn sharply toward a distant cry. Alarm and resolve. Golden forest light. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "chase",
       "file": "plate-chase.jpg",
-      "beat_text": "Arjuna and Bhima lead the chase — dust and arrows on the forest road.",
-      "cast_present": ["arjuna", "bhima"],
+      "beat_text": "Arjuna and Bhima lead the chase \u2014 dust and arrows on the forest road.",
+      "cast_present": [
+        "arjuna",
+        "bhima"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -129,15 +182,28 @@
         "Dynamic chase: Arjuna and Bhima pursuing chariot on forest road",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Heavy gore"],
-      "props": ["chariot", "bow"],
-      "prompt": "Premium painted comic Amar Chitra action. Arjuna and powerful Bhima chase Jayadratha’s chariot along a dusty forest road. Dynamic motion, golden light. Ornate lotus frame. Not photoreal, not gory."
+      "must_not_show": [
+        "Photoreal",
+        "Heavy gore",
+        "Drona",
+        "white-bearded sage"
+      ],
+      "props": [
+        "chariot",
+        "bow"
+      ],
+      "prompt": "Premium painted comic Amar Chitra action. Arjuna and powerful Bhima chase Jayadratha\u2019s chariot along a dusty forest road. Dynamic motion, golden light. Ornate lotus frame. Not photoreal, not gory."
     },
     {
       "id": "catch",
       "file": "plate-catch.jpg",
-      "beat_text": "They overtake Jayadratha. Bhima would end him; Draupadi’s honor is restored.",
-      "cast_present": ["bhima", "jayadratha", "draupadi", "arjuna"],
+      "beat_text": "They overtake Jayadratha. Bhima would end him; Draupadi\u2019s honor is restored.",
+      "cast_present": [
+        "bhima",
+        "jayadratha",
+        "draupadi",
+        "arjuna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -146,15 +212,24 @@
         "Tasteful victory, no gore",
         "Lotus frame"
       ],
-      "must_not_show": ["Gore", "Photoreal"],
+      "must_not_show": [
+        "Gore",
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
+      ],
       "props": [],
       "prompt": "Premium painted comic Amar Chitra. Pandavas overtake the chariot. Bhima grabs Jayadratha; Draupadi stands free and proud. Dramatic but not gory. Forest road. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "mercy",
       "file": "plate-mercy.jpg",
-      "beat_text": "Yudhishthira grants a hard mercy — Jayadratha lives, shamed, and rides home.",
-      "cast_present": ["yudhishthira", "jayadratha", "draupadi"],
+      "beat_text": "Yudhishthira grants a hard mercy \u2014 Jayadratha lives, shamed, and rides home.",
+      "cast_present": [
+        "yudhishthira",
+        "jayadratha",
+        "draupadi"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -162,15 +237,25 @@
         "Yudhishthira judging; Jayadratha humbled; Draupadi present",
         "Lotus frame"
       ],
-      "must_not_show": ["Gore", "Photoreal"],
+      "must_not_show": [
+        "Gore",
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
+      ],
       "props": [],
       "prompt": "Premium painted comic Amar Chitra. Yudhishthira raises a hand of judgment granting hard mercy. Jayadratha kneels or bows shamed. Draupadi watches with composure. Forest clearing. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "wide-gold",
       "file": "plate-wide-gold.jpg",
-      "beat_text": "The forest is quiet again — but every insult of exile will be paid in war.",
-      "cast_present": ["draupadi", "yudhishthira", "bhima", "arjuna"],
+      "beat_text": "The forest is quiet again \u2014 but every insult of exile will be paid in war.",
+      "cast_present": [
+        "draupadi",
+        "yudhishthira",
+        "bhima",
+        "arjuna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -178,9 +263,17 @@
         "Family reunited at hermitage, quiet resolve",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Gore"],
-      "props": ["hermitage"],
+      "must_not_show": [
+        "Photoreal",
+        "Gore",
+        "Drona",
+        "white-bearded sage"
+      ],
+      "props": [
+        "hermitage"
+      ],
       "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold hermitage. Pandavas and Draupadi reunited in quiet resolve after the ordeal. Peace with steel underneath. Ornate lotus frame. Not photoreal."
     }
-  ]
+  ],
+  "scene_lock_ref": ""
 }

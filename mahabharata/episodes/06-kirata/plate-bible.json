@@ -2,7 +2,7 @@
   "episode_id": "06",
   "title": "The Kirata",
   "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cool Himalayan gold-hour with blue peaks; refined linework",
-  "style_master_ref": "episodes/01-birds-eye/stills/plate-wide-gold.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 Drona figure plate)",
   "photoreal_allowed": false,
   "frame": "Ornate lotus carved wooden frame on every plate",
   "apparatus": {},
@@ -48,7 +48,8 @@
         "Photoreal",
         "Drona",
         "Bird eye training",
-        "Palace"
+        "Palace",
+        "white-bearded sage"
       ],
       "props": [
         "mountains",
@@ -59,7 +60,7 @@
     {
       "id": "penance",
       "file": "plate-penance.jpg",
-      "beat_text": "There he stands in fierce penance — still as stone, mind fixed on Mahadeva.",
+      "beat_text": "There he stands in fierce penance \u2014 still as stone, mind fixed on Mahadeva.",
       "cast_present": [
         "arjuna"
       ],
@@ -74,13 +75,15 @@
       "must_not_show": [
         "Photoreal",
         "Comedy",
-        "Peacock feather"
+        "Peacock feather",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "mountain ledge",
         "bow set aside"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Arjuna in fierce mountain penance on a rocky ledge — still posture, thin mustache, black topknot, cream dhoti, mind fixed upward. Snow peaks and pines behind. Soft divine light. Ornate lotus frame. Same character lock, refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Arjuna in fierce mountain penance on a rocky ledge \u2014 still posture, thin mustache, black topknot, cream dhoti, mind fixed upward. Snow peaks and pines behind. Soft divine light. Ornate lotus frame. Same character lock, refined quality, not photoreal."
     },
     {
       "id": "boar",
@@ -100,7 +103,9 @@
       ],
       "must_not_show": [
         "Heavy blood gore",
-        "Photoreal"
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "boar",
@@ -127,18 +132,20 @@
       ],
       "must_not_show": [
         "Photoreal",
-        "Gore pile"
+        "Gore pile",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "boar",
         "bows"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Mountain clearing: rugged kirata hunter in leaf-hide dress with bow faces young Arjuna over a fallen boar. Argument of who shot first — proud stance both. Cool gold pine light. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Mountain clearing: rugged kirata hunter in leaf-hide dress with bow faces young Arjuna over a fallen boar. Argument of who shot first \u2014 proud stance both. Cool gold pine light. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "duel",
       "file": "plate-duel.jpg",
-      "beat_text": "Bow meets bow. The kirata matches Arjuna blow for blow — and the forest shakes.",
+      "beat_text": "Bow meets bow. The kirata matches Arjuna blow for blow \u2014 and the forest shakes.",
       "cast_present": [
         "arjuna",
         "kirata"
@@ -153,17 +160,19 @@
       ],
       "must_not_show": [
         "Heavy gore",
-        "Photoreal"
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "bows"
       ],
-      "prompt": "Premium painted comic Amar Chitra action duel. Arjuna and the kirata hunter clash with bows in mountain forest — matched strength, dramatic poses, flying leaves. Cool gold light. Ornate lotus frame. Stylized energy not gore, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra action duel. Arjuna and the kirata hunter clash with bows in mountain forest \u2014 matched strength, dramatic poses, flying leaves. Cool gold light. Ornate lotus frame. Stylized energy not gore, not photoreal."
     },
     {
       "id": "equal",
       "file": "plate-equal.jpg",
-      "beat_text": "Arjuna’s strength fails against an equal. He falls, astonished, at a hunter’s feet.",
+      "beat_text": "Arjuna\u2019s strength fails against an equal. He falls, astonished, at a hunter\u2019s feet.",
       "cast_present": [
         "arjuna",
         "kirata"
@@ -179,7 +188,9 @@
       "must_not_show": [
         "Gore",
         "Photoreal",
-        "Cruel humiliation comedy"
+        "Cruel humiliation comedy",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "bows"
@@ -205,13 +216,15 @@
       "must_not_show": [
         "Horror demon",
         "Photoreal CGI",
-        "Gore"
+        "Gore",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "trident",
         "mountain"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Divine revelation: the hunter becomes Lord Shiva — jata matted locks, crescent moon, soft third-eye glow, trident, luminous cream-gold aura, serene smile. Arjuna bows in awe. Mountain forest radiant. Ornate lotus frame. Sacred charming not photoreal horror."
+      "prompt": "Premium painted comic Amar Chitra. Divine revelation: the hunter becomes Lord Shiva \u2014 jata matted locks, crescent moon, soft third-eye glow, trident, luminous cream-gold aura, serene smile. Arjuna bows in awe. Mountain forest radiant. Ornate lotus frame. Sacred charming not photoreal horror."
     },
     {
       "id": "gift",
@@ -231,12 +244,14 @@
       ],
       "must_not_show": [
         "Gore",
-        "Photoreal"
+        "Photoreal",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "divine weapon light"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Lord Shiva places a glowing divine weapon or arrow of light into Arjuna’s hands — Pashupatastra gift. Arjuna receives with bowed head, thin mustache, topknot. Soft sacred gold light on mountain. Ornate lotus frame. Refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Lord Shiva places a glowing divine weapon or arrow of light into Arjuna\u2019s hands \u2014 Pashupatastra gift. Arjuna receives with bowed head, thin mustache, topknot. Soft sacred gold light on mountain. Ornate lotus frame. Refined quality, not photoreal."
     },
     {
       "id": "wide-gold",
@@ -256,13 +271,16 @@
       ],
       "must_not_show": [
         "Photoreal",
-        "Dark war scene"
+        "Dark war scene",
+        "Drona",
+        "white-bearded sage"
       ],
       "props": [
         "peaks",
         "bow"
       ],
-      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold Himalayan peak peace like Ep01 plate-wide-gold mood. Arjuna stands renewed with bow, soft divine afterglow of Shiva’s blessing. Ornate lotus frame. Refined charming quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold Himalayan peak peace like Ep01 plate-wide-gold mood. Arjuna stands renewed with bow, soft divine afterglow of Shiva\u2019s blessing. Ornate lotus frame. Refined charming quality, not photoreal."
     }
-  ]
+  ],
+  "scene_lock_ref": ""
 }

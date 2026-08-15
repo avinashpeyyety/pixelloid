@@ -58,13 +58,32 @@
 
 **FAIL if:** eyes look only at pool without mirror · arrow aims at mirror · archer stands in pool · fish in ceiling tank · women on hall floor in durbar.
 
-### 4. Character lock
+### 4. Character lock (strict)
 
-Same face/costume continuity per cast sheet. Ep02: women on balconies = **princesses** (royal dress), not maids.
+| Check | Rule |
+|-------|------|
+| One face | Same face / hair / costume tokens on every plate that lists that id |
+| Single-figure locks | `_locks/<id>.jpg` must show **only that character** — no extra people in the lock |
+| No costume swap | Do not put another hero’s props on this one (e.g. Krishna’s flower garland on Arjuna) |
+| Count | Number of named heroes in the frame = `cast_present` length (extras only as tiny distant ranks) |
+| No duplicates | Never two Arjunas / two Krishnas unless the beat is cosmic form |
+
+**Ep 09 Arjuna lock (canonical):** gold crown, dark mustache, cream-white dhoti, quiver on back, **no flower garland**, **no saffron sage robes**.
+
+### 4a. Absent-cast / sage bleed — **strict**
+
+| Check | Rule |
+|-------|------|
+| Drona / white-bearded saffron sage | **Only** if `drona` is in `cast_present` (Ep 01 teaching plates) |
+| Style-ref bleed | Do **not** attach Ep01 `plate-wide-gold.jpg` as an image ref for plates where Drona is absent — it contains Drona and will leak |
+| Scene lock | Use `_locks/<scene>-master.jpg` (e.g. chariot-master) or a **people-free** garden plate for style |
+| Prompt | Every plate `must_not_show` must list every major hero **not** in `cast_present` |
+
+**FAIL if:** Drona/sage appears on Gita, embassy, swayamvara, or any plate that does not list him.
 
 ### 5. Style lock
 
-Match Ep01 `plate-wide-gold.jpg` — charming painted comic, not photoreal. Premium linework.
+Charming painted comic, not photoreal. Premium linework. Palette may match Ep01 gold **mood** in words; **do not** composite Drona’s figure plate into later episodes.
 
 ## Review output
 

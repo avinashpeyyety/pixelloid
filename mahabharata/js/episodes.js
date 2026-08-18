@@ -113,13 +113,14 @@ export const EPISODES = [
   },
   {
     id: "10",
-    slug: "coming-soon",
-    title: "Next episode",
-    sanskrit: "शीघ्रम्",
-    chapter: "TBD",
-    duration: "—",
-    status: "planned",
-    blurb: "Script first, then light. The series grows one parva-beat at a time.",
-    play: null,
+    slug: "bhishma-fall",
+    title: "The Fall of Bhishma",
+    sanskrit: "भीष्मपतनम्",
+    chapter: "Bhishma Parva · tenth day",
+    duration: "~104s",
+    status: "live",
+    blurb:
+      "On the tenth day the grandsire will not strike Shikhandi — Arjuna’s arrows find him, and Bhishma takes the bed of shafts until the sun turns north.",
+    play: "play.html?ep=10",
   },
 ];

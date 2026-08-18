@@ -1,0 +1,297 @@
+{
+  "episode_id": "10",
+  "strict_hero_lock": "arjuna",
+  "title": "The Fall of Bhishma",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold sacred hour on Kurukshetra; refined linework",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 figure plate)",
+  "scene_lock_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/10-bhishma-fall/stills/_locks/bhishma.jpg",
+    "episodes/10-bhishma-fall/stills/_locks/shikhandi.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg"
+  ],
+  "photoreal_allowed": false,
+  "frame": "Ornate lotus carved wooden frame on every plate",
+  "apparatus": {},
+  "cast": {
+    "bhishma": {
+      "face": "Ancient Kuru grandsire, noble lined face, long white beard (warrior, not sage)",
+      "hair": "Long white hair, Kuru diadem \u2014 no saffron topknot of a guru",
+      "costume": "Silver-white armor, pale cream dhoti, bow of the grandsire, no saffron robes"
+    },
+    "arjuna": {
+      "face": "Noble young warrior prince, dark mustache, same face as Ep 09",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva \u2014 never flower garland"
+    },
+    "shikhandi": {
+      "face": "Young Panchala warrior, determined, no mustache or light, distinct from Arjuna",
+      "hair": "Dark hair, simple warrior topknot, no gold crown",
+      "costume": "Teal-green Panchala armor, shield and spear or bow \u2014 field warrior, not a princess gown"
+    },
+    "krishna": {
+      "face": "Youthful divine smile, dark eyes, serene",
+      "hair": "Dark curly hair, peacock feather",
+      "costume": "Yellow pitambar, garland, charioteer"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "On the tenth day the grandsire still holds the field \u2014 a white flame among the banners.",
+      "cast_present": [
+        "bhishma",
+        "armies"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Ornate lotus carved wooden frame on every plate",
+        "Vast Kurukshetra at gold hour, two armies",
+        "Bhishma standing tall in silver-white armor as commander, equal human scale",
+        "Distant muted banners, no gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "saffron sage robes",
+        "Giant scale mismatch"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Wide gold-hour Kurukshetra. Bhishma the Kuru grandsire: long white hair and warrior beard, silver-white armor, pale cream dhoti, Kuru diadem \u2014 a pitamaha warrior, never saffron guru robes stands as commander before distant equal-scale army ranks. Ornate lotus frame. Not photoreal. No Drona."
+    },
+    {
+      "id": "storm",
+      "file": "plate-storm.jpg",
+      "beat_text": "His arrows fly like a river of light. The Pandava host cannot pass the grandsire.",
+      "cast_present": [
+        "bhishma",
+        "armies"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Ornate lotus carved wooden frame on every plate",
+        "Bhishma drawing a great bow, silver-white armor",
+        "Arrows as streaks of gold light, not gore or wounds",
+        "Distant ranks recoiling, equal human scale"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "saffron sage robes",
+        "Giant scale mismatch"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Bhishma the Kuru grandsire: long white hair and warrior beard, silver-white armor, pale cream dhoti, Kuru diadem \u2014 a pitamaha warrior, never saffron guru robes draws a great bow; gold light-streaks of arrows fill the sky, no blood. Distant army ranks. Ornate lotus frame. Not photoreal. No Drona."
+    },
+    {
+      "id": "counsel",
+      "file": "plate-counsel.jpg",
+      "beat_text": "Krishna speaks to Arjuna: place Shikhandi before you \u2014 the vow will open the way.",
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Ornate lotus carved wooden frame on every plate",
+        "Exactly one Arjuna: gold crown, dark mustache, cream-white dhoti, quiver",
+        "Krishna in yellow pitambar as charioteer teaching calmly",
+        "Chariot with white horses, no battle gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "saffron sage robes",
+        "Giant scale mismatch"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Two-horse chariot. Krishna in yellow pitambar, peacock feather, garland, holds reins and speaks. Exactly one Arjuna: gold crown, dark mustache, cream-white dhoti, quiver. Soft gold dust. Ornate lotus frame. Not photoreal. No Drona."
+    },
+    {
+      "id": "shikhandi",
+      "file": "plate-shikhandi.jpg",
+      "beat_text": "Shikhandi of Panchala walks to the front \u2014 a warrior the grandsire will not strike.",
+      "cast_present": [
+        "shikhandi",
+        "bhishma"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Ornate lotus carved wooden frame on every plate",
+        "Shikhandi: young Panchala warrior in teal-green armor, topknot, no gold crown, standing on the battlefield",
+        "Bhishma facing them in silver-white armor, lowering his gaze",
+        "Equal human scale, no princess gown, no durbar"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "saffron sage robes",
+        "Giant scale mismatch"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Battlefield. Young Panchala warrior Shikhandi in teal-green armor and topknot stands before Bhishma the Kuru grandsire: long white hair and warrior beard, silver-white armor, pale cream dhoti, Kuru diadem \u2014 a pitamaha warrior, never saffron guru robes. Equal scale, no gown, no palace hall. Ornate lotus frame. Not photoreal. No Drona."
+    },
+    {
+      "id": "vow",
+      "file": "plate-vow.jpg",
+      "beat_text": "Bhishma lowers his weapons. He will not raise a shaft against one born as Amba.",
+      "cast_present": [
+        "bhishma",
+        "shikhandi"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Ornate lotus carved wooden frame on every plate",
+        "Bhishma in silver-white armor lowers his bow, solemn vow",
+        "Shikhandi the Panchala warrior stands before him, unstruck",
+        "No blood, no fallen bodies"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "saffron sage robes",
+        "Giant scale mismatch"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Bhishma the Kuru grandsire: long white hair and warrior beard, silver-white armor, pale cream dhoti, Kuru diadem \u2014 a pitamaha warrior, never saffron guru robes lowers his bow with both hands, eyes closed in a vow. Shikhandi in teal-green armor stands before him. No gore. Ornate lotus frame. Not photoreal. No Drona."
+    },
+    {
+      "id": "arrows",
+      "file": "plate-arrows.jpg",
+      "beat_text": "From behind that shield Arjuna looses Gandiva \u2014 and the grandsire does not answer.",
+      "cast_present": [
+        "arjuna",
+        "shikhandi",
+        "bhishma"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Ornate lotus carved wooden frame on every plate",
+        "Exactly one Arjuna: gold crown, dark mustache, cream-white dhoti, quiver loosing Gandiva from behind Shikhandi",
+        "Shikhandi in teal-green armor in front as a living shield",
+        "Bhishma in silver-white armor receiving shafts as light, no gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "saffron sage robes",
+        "Giant scale mismatch"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Exactly one Arjuna: gold crown, dark mustache, cream-white dhoti, quiver looses Gandiva from behind Shikhandi (teal-green Panchala armor, topknot). Bhishma the Kuru grandsire: long white hair and warrior beard, silver-white armor, pale cream dhoti, Kuru diadem \u2014 a pitamaha warrior, never saffron guru robes does not raise his bow. Gold arrow-light, no blood. Ornate lotus frame. Not photoreal. No Drona. No second Arjuna."
+    },
+    {
+      "id": "fall",
+      "file": "plate-fall.jpg",
+      "beat_text": "He falls as a great tree falls \u2014 slowly, and the earth receives a pitamaha.",
+      "cast_present": [
+        "bhishma"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Ornate lotus carved wooden frame on every plate",
+        "Bhishma falling backward in silver-white armor, composed, no gore",
+        "Arrows becoming a couch of shafts beneath him",
+        "Gold sky, lotus frame"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "saffron sage robes",
+        "Giant scale mismatch"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Bhishma the Kuru grandsire: long white hair and warrior beard, silver-white armor, pale cream dhoti, Kuru diadem \u2014 a pitamaha warrior, never saffron guru robes falls slowly backward onto a couch of gold-lit arrows, composed heroic, no blood no wounds shown. Sacred gold sky. Ornate lotus frame. Not photoreal. No Drona."
+    },
+    {
+      "id": "bed",
+      "file": "plate-bed.jpg",
+      "beat_text": "Upon a bed of arrows he lies and watches the sun \u2014 waiting for the northern turn.",
+      "cast_present": [
+        "bhishma"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Ornate lotus carved wooden frame on every plate",
+        "Bhishma lying composed on a palanquin of arrows, silver-white armor, looking toward the sun",
+        "No gore, no agony grimace \u2014 serene pitamaha",
+        "Golden sky, Uttarayana light"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "saffron sage robes",
+        "Giant scale mismatch"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Bhishma the Kuru grandsire: long white hair and warrior beard, silver-white armor, pale cream dhoti, Kuru diadem \u2014 a pitamaha warrior, never saffron guru robes lies serene on a bed of golden arrows looking at the sun. No blood. Cream-saffron sacred hour. Ornate lotus frame. Not photoreal. No Drona."
+    },
+    {
+      "id": "wide-gold",
+      "file": "plate-wide-gold.jpg",
+      "beat_text": "Thus the tenth day ended. The grandsire would not rise until the sun turned north.",
+      "cast_present": [
+        "bhishma"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Ornate lotus carved wooden frame on every plate",
+        "Closing gold plate: Bhishma at rest on the arrow-bed, distant quiet field",
+        "Warm cream-saffron-gold comic hour matching series spine",
+        "No gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "saffron sage robes",
+        "Giant scale mismatch"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Closing gold plate. Bhishma the Kuru grandsire: long white hair and warrior beard, silver-white armor, pale cream dhoti, Kuru diadem \u2014 a pitamaha warrior, never saffron guru robes rests on a bed of arrows under a sacred cream-saffron sky; quiet field. Ornate lotus frame. Not photoreal. No Drona."
+    }
+  ]
+}

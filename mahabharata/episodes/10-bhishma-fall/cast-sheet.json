@@ -1,0 +1,31 @@
+{
+  "episode_id": "10",
+  "notes": "Bhishma Parva tenth day. Pitamaha as warrior grandsire (silver-white armor, NOT saffron sage). Shikhandi is a Panchala warrior on the field. No gore: bed of arrows as composed palanquin of shafts. No Drona.",
+  "cast": {
+    "bhishma": {
+      "face": "Ancient Kuru grandsire, noble lined face, long white beard (warrior, not sage)",
+      "hair": "Long white hair, Kuru diadem \u2014 no saffron topknot of a guru",
+      "costume": "Silver-white armor, pale cream dhoti, bow of the grandsire, no saffron robes"
+    },
+    "arjuna": {
+      "face": "Noble young warrior prince, dark mustache, same face as Ep 09",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva \u2014 never flower garland"
+    },
+    "shikhandi": {
+      "face": "Young Panchala warrior, determined, no mustache or light, distinct from Arjuna",
+      "hair": "Dark hair, simple warrior topknot, no gold crown",
+      "costume": "Teal-green Panchala armor, shield and spear or bow \u2014 field warrior, not a princess gown"
+    },
+    "krishna": {
+      "face": "Youthful divine smile, dark eyes, serene",
+      "hair": "Dark curly hair, peacock feather",
+      "costume": "Yellow pitambar, garland, charioteer"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore"
+    }
+  }
+}

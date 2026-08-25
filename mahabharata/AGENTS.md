@@ -42,3 +42,5 @@ Comic painted mythology matching **Ep 10 field-master** — carved cartouche, 3:
 ## Per-repo habit
 
 Implement **item 1** of `NEXT.md` only; capture daily + labboard after ship.
+
+When adding an episode: bump `play.html` and `index.html` script `?v=epNN-slug` (and `landing.js` import of `episodes.js`) or browsers keep the previous player and `?ep=NN` silently loads Ep 01.

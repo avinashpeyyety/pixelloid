@@ -19,7 +19,11 @@ const EP_LOADERS = {
 
 const _epParam = String(new URLSearchParams(location.search).get("ep") || "01").replace(/\D/g, "") || "01";
 const EP_ID = _epParam.padStart(2, "0");
-const { EPISODE } = await (EP_LOADERS[EP_ID] || EP_LOADERS["01"])();
+const _loader = EP_LOADERS[EP_ID];
+if (!_loader) {
+  console.error(`Mahābhārata: unknown episode ${EP_ID} — check js/main.js EP_LOADERS`);
+}
+const { EPISODE } = await (_loader || EP_LOADERS["01"])();
 
 // ── DOM ────────────────────────────────────────────────────────
 const host = document.getElementById("canvas-host");

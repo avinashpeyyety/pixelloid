@@ -1,0 +1,36 @@
+{
+  "episode_id": "11",
+  "notes": "Drona Parva, thirteenth day. Chakravyuha. Abhimanyu is a youthful Kuru warrior prince (adult warrior proportions, Amar Chitra maharathi) — not a child. No gore: gold shaft-light, composed last stand with a chariot wheel, dusk fall. Drona is the field commander (saffron acharya-warrior), not a garden sage. Jayadratha is the living gate at the rim. Closing vow is Arjuna at sunset.",
+  "cast": {
+    "drona": {
+      "face": "Aged acharya-warrior, noble lined face, long white beard and mustache (guru on the field, not a garden sage)",
+      "hair": "White hair in a saffron-bound topknot, rudraksha — no Kuru silver diadem of Bhishma",
+      "costume": "Saffron angavastram over pale gold-white armor, bow of the guru, cream dhoti"
+    },
+    "abhimanyu": {
+      "face": "Youthful Kuru warrior prince, adult warrior proportions, determined dark eyes, light mustache — distinct from Arjuna, never a child",
+      "hair": "Dark hair, small gold diadem (not Arjuna’s heavy crown), no peacock feather",
+      "costume": "Indigo-blue armor with gold inlay, cream sash, quiver and bow — never flower garland, never saffron robes"
+    },
+    "jayadratha": {
+      "face": "Adult Sindhu king, proud mustache, hard gaze",
+      "hair": "Dark hair under a jeweled royal crown",
+      "costume": "Jewel-tone crimson and gold Sindhu armor, shield — field king, not a forest abductor"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09–10",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland"
+    },
+    "krishna": {
+      "face": "Youthful divine smile, dark eyes, serene",
+      "hair": "Dark curly hair, peacock feather",
+      "costume": "Yellow pitambar, garland, charioteer"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore"
+    }
+  }
+}

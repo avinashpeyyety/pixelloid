@@ -34,8 +34,8 @@ export const EPISODE = {
   end: {
     title: "End of Episode 10",
     line: "The pitamaha waits upon his bed of arrows for the sun to turn north.",
-    next: "index.html",
-    nextLabel: "All episodes",
+    next: "play.html?ep=11",
+    nextLabel: "Episode 11 — The Chakravyuha",
   },
   palette: {
     cloth: "#c4a06a",

@@ -123,4 +123,16 @@ export const EPISODES = [
       "On the tenth day the grandsire will not strike Shikhandi — Arjuna’s arrows find him, and Bhishma takes the bed of shafts until the sun turns north.",
     play: "play.html?ep=10",
   },
+  {
+    id: "11",
+    slug: "chakravyuha",
+    title: "The Chakravyuha",
+    sanskrit: "चक्रव्यूहः",
+    chapter: "Drona Parva · thirteenth day",
+    duration: "~104s",
+    status: "live",
+    blurb:
+      "Drona arrays a wheel of war. Abhimanyu knows the way in — not the way out — and the thirteenth day darkens.",
+    play: "play.html?ep=11",
+  },
 ];

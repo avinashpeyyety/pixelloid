@@ -1,0 +1,332 @@
+{
+  "episode_id": "11",
+  "strict_hero_lock": "arjuna",
+  "title": "The Chakravyuha",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold sacred hour on Kurukshetra; refined linework; Ep 10 field-master density",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/11-chakravyuha/stills/_locks/vyuha-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/11-chakravyuha/stills/_locks/vyuha-master.jpg",
+    "episodes/11-chakravyuha/stills/_locks/drona.jpg",
+    "episodes/11-chakravyuha/stills/_locks/abhimanyu.jpg",
+    "episodes/11-chakravyuha/stills/_locks/jayadratha.jpg",
+    "episodes/11-chakravyuha/stills/_locks/arjuna.jpg",
+    "episodes/11-chakravyuha/stills/_locks/krishna.jpg"
+  ],
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "drona": {
+      "face": "Aged acharya-warrior, noble lined face, long white beard and mustache (guru on the field, not a garden sage)",
+      "hair": "White hair in a saffron-bound topknot, rudraksha — no Kuru silver diadem of Bhishma",
+      "costume": "Saffron angavastram over pale gold-white armor, bow of the guru, cream dhoti"
+    },
+    "abhimanyu": {
+      "face": "Youthful Kuru warrior prince, adult warrior proportions, determined dark eyes, light mustache — distinct from Arjuna, never a child",
+      "hair": "Dark hair, small gold diadem (not Arjuna’s heavy crown), no peacock feather",
+      "costume": "Indigo-blue armor with gold inlay, cream sash, quiver and bow — never flower garland, never saffron robes"
+    },
+    "jayadratha": {
+      "face": "Adult Sindhu king, proud mustache, hard gaze",
+      "hair": "Dark hair under a jeweled royal crown",
+      "costume": "Jewel-tone crimson and gold Sindhu armor, shield — field king, not a forest abductor"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09–10",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland"
+    },
+    "krishna": {
+      "face": "Youthful divine smile, dark eyes, serene",
+      "hair": "Dark curly hair, peacock feather",
+      "costume": "Yellow pitambar, garland, charioteer"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "The grandsire has fallen. Drona takes the Kaurava host — and the field learns a new commander.",
+      "cast_present": ["drona", "armies"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — Drona fills the frame as field commander",
+        "Drona: saffron angavastram over pale gold-white armor, white beard, saffron-bound topknot, bow of the guru",
+        "Distant equal-scale army ranks, cream-saffron-gold hour"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Bhishma",
+        "Shikhandi",
+        "Abhimanyu",
+        "Arjuna",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "garden sage without armor"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Heroic medium. Drona the acharya-warrior: long white beard and mustache, saffron-bound topknot, saffron angavastram over pale gold-white armor, bow of the guru, stands as commander before distant equal-scale Kurukshetra ranks. Carved gold-and-lotus cartouche. Cream-saffron-gold hour. Not photoreal."
+    },
+    {
+      "id": "vyuha",
+      "file": "plate-vyuha.jpg",
+      "beat_text": "He arrays a wheel of war, the Chakravyuha — rings of chariots turning like a living mandala.",
+      "cast_present": ["drona", "armies"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — Drona in the foreground with the circular array readable behind him",
+        "Chakravyuha as concentric rings of chariots, a living mandala, no gore",
+        "Drona: saffron angavastram, gold-white armor, white beard, topknot, raising a commander’s hand"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Bhishma",
+        "Shikhandi",
+        "Abhimanyu",
+        "Arjuna",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Heroic medium. Drona the acharya-warrior in saffron angavastram and pale gold-white armor, white beard, saffron topknot, raises a commander’s hand. Behind him a Chakravyuha: concentric rings of chariots on the dusty plain, a living mandala of banners, no blood. Carved gold-and-lotus cartouche. Not photoreal."
+    },
+    {
+      "id": "counsel",
+      "file": "plate-counsel.jpg",
+      "beat_text": "Arjuna is drawn to the far flank. Abhimanyu stands forth: I know the way in — not the way out.",
+      "cast_present": ["abhimanyu", "armies"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — one Abhimanyu fills the frame",
+        "Abhimanyu: youthful Kuru warrior prince, adult proportions, light mustache, small gold diadem, indigo-blue armor, quiver, speaking with resolve",
+        "Soft Pandava ranks distant, no gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "Bhishma",
+        "Arjuna",
+        "second Abhimanyu",
+        "child",
+        "peacock feather",
+        "flower garland",
+        "16:9 banner",
+        "thin lotus sticker on cream mat"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Heroic medium. Exactly one Abhimanyu: youthful Kuru warrior prince, adult warrior proportions, light mustache, small gold diadem, indigo-blue engraved armor, cream sash, quiver, speaking with an open hand of resolve. Distant muted Pandava ranks. No Drona. Carved gold-and-lotus cartouche. Not photoreal."
+    },
+    {
+      "id": "enter",
+      "file": "plate-enter.jpg",
+      "beat_text": "The son of Arjuna drives into the spinning rings, and the wheel closes behind him.",
+      "cast_present": ["abhimanyu", "armies"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — Abhimanyu on a chariot entering the rings",
+        "Abhimanyu: indigo-blue armor, small gold diadem, light mustache, adult warrior, bow ready",
+        "Concentric chariot rings closing, gold dust, no gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "Arjuna",
+        "Bhishma",
+        "child",
+        "peacock feather",
+        "flower garland",
+        "16:9 banner",
+        "thin lotus sticker on cream mat"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Heroic medium. Exactly one Abhimanyu — youthful Kuru warrior, adult proportions, light mustache, small gold diadem, indigo-blue armor — drives a two-horse chariot into concentric rings of enemy chariots that close behind him like a wheel. Gold dust, no blood. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Arjuna."
+    },
+    {
+      "id": "gate",
+      "file": "plate-gate.jpg",
+      "beat_text": "At the rim Jayadratha holds the four brothers — a living gate they cannot pass.",
+      "cast_present": ["jayadratha", "armies"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — Jayadratha fills the frame as a living gate",
+        "Jayadratha: adult Sindhu king, jeweled crown, crimson-gold armor, shield raised, blocking the rim",
+        "Distant Pandava warriors held back, circular ranks behind him, no gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "Abhimanyu",
+        "Arjuna",
+        "Bhishma",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Heroic medium. Jayadratha the Sindhu king: adult, proud mustache, jeweled crown, crimson-gold engraved armor, shield raised, stands as a living gate at the rim of the battle-wheel. Distant Pandava warriors cannot pass. No blood. Carved gold-and-lotus cartouche. Not photoreal. No Drona."
+    },
+    {
+      "id": "storm",
+      "file": "plate-storm.jpg",
+      "beat_text": "Inside, the young lion fights as his father fights — a storm of gold shafts, and no one stands near him.",
+      "cast_present": ["abhimanyu", "armies"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — Abhimanyu drawing a great bow",
+        "Abhimanyu: indigo-blue armor, small gold diadem, light mustache, adult warrior",
+        "Arrows as streaks of gold light, distant ranks recoiling, no gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "Arjuna",
+        "Bhishma",
+        "child",
+        "peacock feather",
+        "flower garland",
+        "16:9 banner",
+        "thin lotus sticker on cream mat"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Heroic medium. Exactly one Abhimanyu — youthful Kuru warrior, adult proportions, light mustache, small gold diadem, indigo-blue armor — draws a great bow; gold light-streaks of arrows fill the air, no blood. Distant enemy ranks. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Arjuna."
+    },
+    {
+      "id": "wheel",
+      "file": "plate-wheel.jpg",
+      "beat_text": "His bow is broken. He lifts a chariot wheel — last weapon of a kshatriya.",
+      "cast_present": ["abhimanyu"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — Abhimanyu lifting a chariot wheel as a last weapon",
+        "Abhimanyu: indigo-blue armor, small gold diadem, light mustache, adult warrior, composed heroic resolve",
+        "Chariot wheel intact as a round gold-rimmed shield-weapon, no gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "Arjuna",
+        "Bhishma",
+        "child",
+        "broken body",
+        "blood",
+        "peacock feather",
+        "flower garland",
+        "16:9 banner",
+        "thin lotus sticker on cream mat"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Heroic medium. Exactly one Abhimanyu — youthful Kuru warrior, adult proportions, light mustache, small gold diadem, indigo-blue armor — lifts a great chariot wheel as a last weapon, composed and heroic. No blood, no wounds shown. Sacred gold dust. Carved gold-and-lotus cartouche. Not photoreal. No Drona."
+    },
+    {
+      "id": "dusk",
+      "file": "plate-dusk.jpg",
+      "beat_text": "He falls as a young tree falls — and the thirteenth day darkens.",
+      "cast_present": ["abhimanyu"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — Abhimanyu falling composed, no gore",
+        "Abhimanyu: indigo-blue armor, small gold diadem, light mustache, adult warrior, serene like a falling tree",
+        "Dusk gold-to-saffron sky, thirteenth day darkening"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "Arjuna",
+        "Bhishma",
+        "child",
+        "blood",
+        "agony grimace",
+        "peacock feather",
+        "16:9 banner",
+        "thin lotus sticker on cream mat"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Heroic medium. Exactly one Abhimanyu — youthful Kuru warrior, adult proportions, light mustache, small gold diadem, indigo-blue armor — falls slowly backward, composed heroic, no blood no wounds shown. Dusk gold-to-saffron sacred sky. Carved gold-and-lotus cartouche. Not photoreal. No Drona."
+    },
+    {
+      "id": "wide-gold",
+      "file": "plate-wide-gold.jpg",
+      "beat_text": "Arjuna returns at dusk. He vows: tomorrow Jayadratha dies, or I do not see the sun.",
+      "cast_present": ["arjuna", "krishna"],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality gold closing mood",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — Arjuna and Krishna on the chariot at dusk",
+        "Same Arjuna lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva lowered in a vow",
+        "Krishna in yellow pitambar as charioteer, solemn",
+        "Warm cream-saffron-gold dusk matching series spine"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "Abhimanyu",
+        "Bhishma",
+        "second Arjuna",
+        "flower garland on Arjuna",
+        "16:9 banner",
+        "thin lotus sticker on cream mat"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Closing gold plate. Two-horse chariot at sacred dusk. Krishna in yellow pitambar, peacock feather, garland, holds the reins solemn. Exactly one Arjuna: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva lowered in a vow. No Drona. Carved gold-and-lotus cartouche. Not photoreal."
+    }
+  ]
+}

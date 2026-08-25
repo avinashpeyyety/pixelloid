@@ -3,6 +3,14 @@
   "strict_hero_lock": "arjuna",
   "title": "The Fall of Bhishma",
   "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold sacred hour on Kurukshetra; refined linework",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
   "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 figure plate)",
   "scene_lock_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
   "imagine_refs": [
@@ -13,7 +21,7 @@
     "episodes/09-gita/stills/_locks/krishna.jpg"
   ],
   "photoreal_allowed": false,
-  "frame": "Ornate lotus carved wooden frame on every plate",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / vow) — not a thin rectangular sticker on a cream mat",
   "apparatus": {},
   "cast": {
     "bhishma": {
@@ -142,7 +150,7 @@
         "Ornate lotus carved wooden frame on every plate",
         "Shikhandi: young Panchala warrior in teal-green armor, topknot, no gold crown, standing on the battlefield",
         "Bhishma facing them in silver-white armor, lowering his gaze",
-        "Equal human scale, no princess gown, no durbar"
+        "Equal human scale on the battlefield"
       ],
       "must_not_show": [
         "Photoreal",
@@ -150,7 +158,9 @@
         "Drona",
         "white-bearded sage",
         "saffron sage robes",
-        "Giant scale mismatch"
+        "Giant scale mismatch",
+        "princess gown",
+        "durbar"
       ],
       "props": [],
       "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Battlefield. Young Panchala warrior Shikhandi in teal-green armor and topknot stands before Bhishma the Kuru grandsire: long white hair and warrior beard, silver-white armor, pale cream dhoti, Kuru diadem \u2014 a pitamaha warrior, never saffron guru robes. Equal scale, no gown, no palace hall. Ornate lotus frame. Not photoreal. No Drona."

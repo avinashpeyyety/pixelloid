@@ -9,12 +9,12 @@ Episodic browser theater: **write script → Imagine plates → animate**.
 
 | Layer | Choice |
 |-------|--------|
-| **Plates** | Grok Imagine keyframes (matching garden aesthetic) |
+| **Plates** | Grok Imagine keyframes — **Ep 10 bar:** 1536×1024 **3:2**, carved cartouche, heroic medium |
 | **Motion** | Crossfade + slow zoom/pan per beat |
 | **Voice** | **Grok TTS** (`orion` — deep heroic male) pre-rendered → `episodes/…/audio/` |
 | **Music** | Soft bansuri-like flute + light tabla (Web Audio) |
 
-**Art bible:** [`STYLE.md`](STYLE.md)
+**Art bible:** [`STYLE.md`](STYLE.md) — style spine is Ep 10 `field-master.jpg`, **not** Ep 01 gold.
 
 ## Episodes
 
@@ -76,14 +76,15 @@ episodes/02-swayamvara/stills/
   plate-wide-gold.jpg
 ```
 
-Generate offline with Imagine (use `plate-wide-gold` as style ref). Never put API keys in the browser.
+Generate offline with Imagine at **3:2 / ≥1536×1024**. Style ref = Ep 10 `stills/_locks/field-master.jpg`. **Never** attach Ep 01 `plate-wide-gold.jpg`. Never put API keys in the browser.
 
 ## Panel logic agent
 
 Every episode must pass the **panel-logic** gates before ship:
 
 - Spec: [`docs/PANEL_LOGIC.md`](docs/PANEL_LOGIC.md) · workflow: [`docs/WORKFLOW.md`](docs/WORKFLOW.md)
-- Tool: `python3 tools/logic_review.py episodes/<id>/plate-bible.json --report`
-- Episode files: `cast-sheet.json`, `plate-bible.json`, `logic-reviews/`
+- Bible: `python3 tools/logic_review.py episodes/<id>/plate-bible.json --report`
+- Stills: `python3 tools/stills_review.py episodes/<id>` (Ep 10+ must be 3:2 ≥1536×1024)
+- Episode files: `cast-sheet.json`, `plate-bible.json` (from `episodes/_template/`), `logic-reviews/`
 
-**Ep 02 apparatus lock:** fish swims in **sealed glass vessel fixed to the roof**; archer aims via **floor pool reflection**.
+**Ep 02 apparatus lock:** fish swims in a **ground pool**; archer aims via a **ceiling mirror**.

@@ -1,0 +1,56 @@
+{
+  "episode_id": "NN",
+  "title": "Episode title",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour; refined linework; Ep 10 field-master density",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 vow/field-master) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/<id>/stills/_locks/<scene>-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/<id>/stills/_locks/<scene>-master.jpg"
+  ],
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "example": {
+      "face": "…",
+      "hair": "…",
+      "costume": "…"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "…",
+      "cast_present": [],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Drona",
+        "white-bearded sage",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot"
+      ],
+      "props": [],
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. [locus + action]. Ornate carved lotus cartouche. Heroic medium. Not photoreal. No Drona."
+    }
+  ]
+}

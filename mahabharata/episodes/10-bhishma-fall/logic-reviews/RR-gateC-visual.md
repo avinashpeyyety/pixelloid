@@ -1,6 +1,8 @@
 # Logic review — Ep 10 — GATE C (visual)
 Status: PASS with notes
 
+`stills_review.py`: **PASS** — 13 JPEGs at 1536×1024 3:2 (series canvas bar).
+
 ## Per plate
 | Plate | Cast | Notes |
 |-------|------|-------|

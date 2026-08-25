@@ -22,6 +22,7 @@
 | No orphan props | No decorative junk bows, floating weapons |
 | Human scale | All people **same natural size** — no giant women vs dwarf courtiers |
 | Quality | Spec must demand **premium painted comic** quality (not crude/sketchy) |
+| Canvas (Ep 10+) | Bible `canvas` ≥ **1536×1024**, aspect **3:2**. 1280×720 / 16:9 FAIL |
 
 ### 2a. Court / balcony layout (durbar / wide plates) — **strict**
 
@@ -75,15 +76,28 @@
 | Check | Rule |
 |-------|------|
 | Drona / white-bearded saffron sage | **Only** if `drona` is in `cast_present` (Ep 01 teaching plates) |
-| Style-ref bleed | Do **not** attach Ep01 `plate-wide-gold.jpg` as an image ref for plates where Drona is absent — it contains Drona and will leak |
-| Scene lock | Use `_locks/<scene>-master.jpg` (e.g. chariot-master) or a **people-free** garden plate for style |
+| Style-ref bleed | Do **not** attach Ep01 `plate-wide-gold.jpg` as an image ref — Drona bleeds **and** it is 720p |
+| Finished-plate bleed | Do **not** attach another episode’s `stills/plate-*.jpg` (Ep 10 vow/arrows included) unless those heroes are in `cast` |
+| Scene lock | Use `_locks/<scene>-master.jpg` generated at 3:2. Series style image = Ep 10 `field-master.jpg` only |
+| 720p first-input | Forbidden. Output inherits the first `image_edit` size |
 | Prompt | Every plate `must_not_show` must list every major hero **not** in `cast_present` |
 
 **FAIL if:** Drona/sage appears on Gita, embassy, swayamvara, or any plate that does not list him.
 
-### 5. Style lock
+### 5. Style lock — Ep 10 canvas bar (Ep 10+ **strict**)
 
-Charming painted comic, not photoreal. Premium linework. Palette may match Ep01 gold **mood** in words; **do not** composite Drona’s figure plate into later episodes.
+Charming painted comic, not photoreal. Premium linework.
+
+| Check | Rule |
+|-------|------|
+| Canvas | `canvas.width` ≥ 1536, `canvas.height` ≥ 1024, `canvas.aspect` = `3:2` |
+| Frame | `frame` names a **carved / cartouche / filigree** lotus frame **integrated** into the painting — not a thin sticker on a cream mat |
+| Camera | `camera` requires **heroic medium** (named cast fills the frame) |
+| Prefix | `prompt_prefix` present and names 3:2, cartouche, heroic medium |
+| Quality bar image | `imagine_refs` or `quality_bar_ref` includes Ep 10 `field-master.jpg` |
+| Mood vs image | Palette may say cream–saffron–gold in **words**. Do **not** attach Ep01 `plate-wide-gold.jpg` |
+
+**GATE C (after stills):** `python3 tools/stills_review.py episodes/<id>` must PASS. Then fill `docs/GATE_C_TEMPLATE.md` by comparing to Ep 10 `plate-vow.jpg`. A lore-correct 1280×720 plate is still a **FAIL**.
 
 ## Review output
 

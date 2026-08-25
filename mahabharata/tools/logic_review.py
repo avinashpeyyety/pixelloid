@@ -4,6 +4,7 @@ Panel-logic agent (GATE A/B) — plate-bible validation.
 
 Usage:
   python3 tools/logic_review.py episodes/02-swayamvara/plate-bible.json --report
+  python3 tools/stills_review.py episodes/<id>   # GATE C canvas (Ep 10+)
 """
 from __future__ import annotations
 
@@ -102,11 +103,29 @@ SAGE_PRESENT = re.compile(
     r"saffron sage|old sage|bearded sage)\b",
     re.I,
 )
-# Style-ref that includes Drona — banned as Imagine input when Drona absent
+# Style-ref that includes Drona — banned as Imagine input (also 720p)
 EP01_FIGURE_REF = re.compile(
     r"episodes/01-birds-eye/stills/plate-wide-gold",
     re.I,
 )
+EP10_FIELD_MASTER = "episodes/10-bhishma-fall/stills/_locks/field-master.jpg"
+FINISHED_PLATE_REF = re.compile(
+    r"episodes/[^/]+/stills/plate-[^/]+\.jpe?g",
+    re.I,
+)
+CARTOUCHE_OK = re.compile(r"\b(cartouche|carved|filigree|integrated)\b", re.I)
+CAMERA_OK = re.compile(r"\b(heroic medium|figures fill|named (cast|figures) fill)\b", re.I)
+PREFIX_TOKENS = (
+    re.compile(r"\b3:2\b"),
+    re.compile(r"\b(cartouche|carved)\b", re.I),
+    re.compile(r"\b(heroic medium|figures fill)\b", re.I),
+)
+
+CANVAS_MIN_W = 1536
+CANVAS_MIN_H = 1024
+ASPECT_TARGET = 3 / 2
+ASPECT_TOL = 0.08
+LEGACY_EP_MAX = 9  # Ep 01–09 grandfathered (720p cinematic). Ep 10+ must meet the bar.
 # Arjuna continuity tokens when arjuna is present
 ARJUNA_TOKENS = {
     "crown_or_topknot": re.compile(r"\b(crown|diadem|topknot)\b", re.I),
@@ -128,6 +147,19 @@ def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def episode_num(bible: dict) -> int:
+    raw = str(bible.get("episode_id") or "0")
+    digits = "".join(ch for ch in raw if ch.isdigit())
+    try:
+        return int(digits) if digits else 0
+    except ValueError:
+        return 0
+
+
+def is_legacy(bible: dict) -> bool:
+    return episode_num(bible) <= LEGACY_EP_MAX and episode_num(bible) > 0
+
+
 def _negated(text: str, start: int, window: int = 45) -> bool:
     return bool(re.search(r"\b(not|never|no|without|forbid)\b", text[max(0, start - window) : start], re.I))
 
@@ -139,7 +171,7 @@ def check_style(bible: dict) -> list[str]:
         fails.append("style_lock must require painted comic / Amar Chitra language")
     if bible.get("photoreal_allowed"):
         fails.append("photoreal_allowed must be false")
-    # Palette/mood may cite Ep01 gold; Imagine *image* ref must be scene_lock if Drona absent
+    # Palette/mood may cite gold hour in words; Imagine *image* ref must be scene_lock
     scene = bible.get("scene_lock_ref") or ""
     style_ref = bible.get("style_master_ref") or ""
     if not scene and not style_ref:
@@ -147,24 +179,119 @@ def check_style(bible: dict) -> list[str]:
     return fails
 
 
-def check_cast_bleed(bible: dict) -> list[str]:
-    """Drona/sage and Imagine refs must not leak into plates that omit them."""
-    fails = []
-    plates = bible.get("plates") or []
-    style_ref = bible.get("style_master_ref") or ""
-    imagine_refs = " ".join(
+def check_canvas_bar(bible: dict) -> list[str]:
+    """Ep 10+ must declare the Ep 10 canvas / frame / camera bar."""
+    if is_legacy(bible):
+        return []
+    fails: list[str] = []
+    canvas = bible.get("canvas") or {}
+    if not isinstance(canvas, dict):
+        fails.append("canvas must be an object {width, height, aspect}")
+        canvas = {}
+    w = int(canvas.get("width") or 0)
+    h = int(canvas.get("height") or 0)
+    aspect = str(canvas.get("aspect") or "").replace(" ", "")
+    if w < CANVAS_MIN_W or h < CANVAS_MIN_H:
+        fails.append(
+            f"canvas must be at least {CANVAS_MIN_W}×{CANVAS_MIN_H} (got {w}×{h}). "
+            "1280×720 / 16:9 is forbidden"
+        )
+    if aspect not in ("3:2", "3/2"):
+        fails.append("canvas.aspect must be '3:2' (do not generate 16:9 to fit the player)")
+    elif w and h:
+        ratio = w / h
+        if abs(ratio - ASPECT_TARGET) > ASPECT_TOL:
+            fails.append(f"canvas {w}×{h} is not ~3:2 (ratio {ratio:.3f})")
+
+    frame = bible.get("frame") or ""
+    if not CARTOUCHE_OK.search(frame):
+        fails.append(
+            "frame must specify a carved/cartouche/filigree lotus frame integrated into "
+            "the painting (Ep 10 bar) — not a thin sticker on a cream mat"
+        )
+
+    camera = bible.get("camera") or ""
+    if not CAMERA_OK.search(camera):
+        fails.append(
+            "camera must require heroic medium / named figures filling the frame "
+            "(Ep 10 bar — no tiny-hero banners)"
+        )
+
+    prefix = bible.get("prompt_prefix") or ""
+    for pat in PREFIX_TOKENS:
+        if not pat.search(prefix):
+            fails.append(
+                "prompt_prefix must name 3:2, carved/cartouche frame, and heroic medium "
+                "(prepended to every Imagine call)"
+            )
+            break
+
+    refs = " ".join(
         [
-            style_ref,
+            bible.get("quality_bar_ref") or "",
             bible.get("scene_lock_ref") or "",
             " ".join(bible.get("imagine_refs") or []),
         ]
     )
-    any_drona = any("drona" in (p.get("cast_present") or []) for p in plates)
-    if EP01_FIGURE_REF.search(imagine_refs) and not any_drona:
+    if EP10_FIELD_MASTER not in refs.replace("\\", "/"):
         fails.append(
-            "Imagine ref must NOT be Ep01 plate-wide-gold when Drona is absent "
-            "(sage bleeds into frames). Use scene_lock_ref / chariot-master instead."
+            f"quality_bar_ref or imagine_refs must include series spine {EP10_FIELD_MASTER}"
         )
+    return fails
+
+
+def check_cast_bleed(bible: dict) -> list[str]:
+    """Drona/sage, finished plates, and 720p gold must not leak as Imagine refs."""
+    fails = []
+    plates = bible.get("plates") or []
+    style_ref = bible.get("style_master_ref") or ""
+    ref_list = list(bible.get("imagine_refs") or [])
+    extra = [
+        style_ref,
+        bible.get("scene_lock_ref") or "",
+        bible.get("quality_bar_ref") or "",
+        *ref_list,
+    ]
+    imagine_refs = " ".join(extra)
+    any_drona = any("drona" in (p.get("cast_present") or []) for p in plates)
+    if EP01_FIGURE_REF.search(imagine_refs):
+        fails.append(
+            "Imagine ref must NOT be Ep01 plate-wide-gold "
+            "(sage bleed + 720p density collapse). Use Ep 10 field-master + scene_lock_ref."
+        )
+        if any_drona:
+            fails[-1] += " Drona in cast is not an exception — describe him in words or a 3:2 lock."
+
+    cast_ids = set((bible.get("cast") or {}).keys())
+    for ref in extra:
+        r = (ref or "").replace("\\", "/")
+        m = FINISHED_PLATE_REF.search(r)
+        if not m:
+            continue
+        # Finished plates carry whoever is painted on them. Only field-master-style
+        # _locks/*-master.jpg is a legal style spine; plate-*.jpg is a figure composite.
+        fails.append(
+            f"Imagine ref must not be a finished plate ({r}). "
+            "Use _locks/<scene>-master.jpg + solo _locks/<id>.jpg"
+        )
+
+    # Solo locks from other episodes: id must be in this cast
+    lock_re = re.compile(r"episodes/[^/]+/stills/_locks/([^/.]+)\.jpe?g", re.I)
+    for ref in extra:
+        r = (ref or "").replace("\\", "/")
+        m = lock_re.search(r)
+        if not m:
+            continue
+        name = m.group(1).lower()
+        if name.endswith("-master") or name in ("field-master", "chariot-master", "apparatus"):
+            continue
+        # arjuna-brahmin → arjuna is ok-ish if arjuna in cast; require last/first token in cast
+        token = name.split("-")[0]
+        if token not in cast_ids and name not in cast_ids:
+            fails.append(
+                f"cast lock ref {r} is not in this episode's cast "
+                f"(would bleed {name} into plates)"
+            )
     return fails
 
 
@@ -254,12 +381,15 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool, bible: dict
         fails.append(f"{pid}: quality FAIL — prompt/must_show must require premium/high painted comic quality")
 
     # Durbar court layout — only when explicitly a durbar/court (not every "wide" village plate)
+    durbar_hit = re.search(r"\bdurbar\b", positive, re.I)
+    durbar_named = bool(durbar_hit and not _negated(positive, durbar_hit.start()))
     is_durbar = bool(
         plate.get("scene") == "durbar"
-        or re.search(r"\bdurbar\b", positive, re.I)
+        or durbar_named
         or (
             re.search(r"\b(throne|king|princes?|suitors?)\b", positive, re.I)
             and re.search(r"\b(balcony|princess|court hall|palace court)\b", positive, re.I)
+            and not re.search(r"\bno princess|not a princess|never .{0,20}gown|no durbar|not a durbar", positive, re.I)
         )
     )
     if is_durbar:
@@ -379,6 +509,7 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool, bible: dict
 def review(bible: dict) -> tuple[bool, list[str]]:
     fails: list[str] = []
     fails += check_style(bible)
+    fails += check_canvas_bar(bible)
     fails += check_cast(bible)
     fails += check_cast_bleed(bible)
     fails += check_apparatus(bible)

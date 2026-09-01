@@ -1,6 +1,10 @@
 /**
  * Episode 10 — The Fall of Bhishma
  * Bhishma Parva · tenth day; Shikhandi; the bed of arrows
+ *
+ * Voice: provider grok-tts / voice_id orion (target pipeline).
+ * Cache ep10-v3 files are 24 kHz / 128 kbps / no ID3, matching Ep 02–09 Orion encode.
+ * Render with tools/render_orion_voice.sh — prefers $XAI_API_KEY Grok TTS Orion; falls back to macOS say.
  */
 export const EPISODE = {
   id: "10",
@@ -12,8 +16,8 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep10-v1",
-    note: "Grok TTS orion — deep heroic narration",
+    cache: "ep10-v3",
+    note: "Grok TTS Orion — 24 kHz / 128 kbps / no ID3, matching Ep 02–09",
     base: "episodes/10-bhishma-fall/audio/",
   },
   totalSec: 104,
@@ -55,7 +59,7 @@ export const EPISODE = {
       panY: 0,
       audio: "orion-00.mp3",
       who: "Narrator",
-      text: "On the tenth day the grandsire still holds the field — a white flame among the banners.",
+      text: "Tenth day on Kurukshetra. The grandsire Bhishma still holds the field — a white flame among the banners.",
     },
     {
       t: 12,
@@ -65,7 +69,7 @@ export const EPISODE = {
       panY: -0.02,
       audio: "orion-01.mp3",
       who: "Narrator",
-      text: "His arrows fly like a river of light. The Pandava host cannot pass the grandsire.",
+      text: "His arrows fly like a river of light. No Pandava charge can pass the pitamaha.",
     },
     {
       t: 24,
@@ -74,8 +78,8 @@ export const EPISODE = {
       panX: -0.02,
       panY: -0.02,
       audio: "orion-02.mp3",
-      who: "Narrator",
-      text: "Krishna speaks to Arjuna: place Shikhandi before you — the vow will open the way.",
+      who: "Krishna",
+      text: "Partha, he will not raise a shaft against Shikhandi — who was born Amba. Place that warrior before you, and the way will open.",
     },
     {
       t: 36,
@@ -84,8 +88,8 @@ export const EPISODE = {
       panX: 0.03,
       panY: -0.02,
       audio: "orion-03.mp3",
-      who: "Narrator",
-      text: "Shikhandi of Panchala walks to the front — a warrior the grandsire will not strike.",
+      who: "Arjuna",
+      text: "Shikhandi of Panchala — take the front. I will stand behind you with Gandiva.",
     },
     {
       t: 48,
@@ -94,8 +98,8 @@ export const EPISODE = {
       panX: 0,
       panY: -0.03,
       audio: "orion-04.mp3",
-      who: "Narrator",
-      text: "Bhishma lowers his weapons. He will not raise a shaft against one born as Amba.",
+      who: "Bhishma",
+      text: "I know that form. I will not strike one born as Amba. Let my bow rest.",
     },
     {
       t: 60,
@@ -104,8 +108,8 @@ export const EPISODE = {
       panX: 0.02,
       panY: -0.02,
       audio: "orion-05.mp3",
-      who: "Narrator",
-      text: "From behind that shield Arjuna looses Gandiva — and the grandsire does not answer.",
+      who: "Arjuna",
+      text: "He will not answer. Gandiva — now.",
     },
     {
       t: 72,
@@ -115,7 +119,7 @@ export const EPISODE = {
       panY: 0.02,
       audio: "orion-06.mp3",
       who: "Narrator",
-      text: "He falls as a great tree falls — slowly, and the earth receives a pitamaha.",
+      text: "Bhishma falls as a great tree falls — slowly — and the earth receives a pitamaha.",
     },
     {
       t: 84,
@@ -124,8 +128,8 @@ export const EPISODE = {
       panX: -0.02,
       panY: -0.02,
       audio: "orion-07.mp3",
-      who: "Narrator",
-      text: "Upon a bed of arrows he lies and watches the sun — waiting for the northern turn.",
+      who: "Bhishma",
+      text: "Lay me on these arrows. I will watch the sun, and I will not leave until it turns north.",
     },
     {
       t: 95,
@@ -135,7 +139,7 @@ export const EPISODE = {
       panY: 0.02,
       audio: "orion-08.mp3",
       who: "Narrator",
-      text: "Thus the tenth day ended. The grandsire would not rise until the sun turned north.",
+      text: "Thus the tenth day ended. The grandsire waited upon his bed of arrows for the northern turn.",
     },
     {
       t: 102,

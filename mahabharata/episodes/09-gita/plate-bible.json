@@ -3,21 +3,30 @@
   "strict_hero_lock": "arjuna",
   "title": "The Bhagavad Gita",
   "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold sacred hour on Kurukshetra; refined linework",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
   "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 figure plate)",
   "scene_lock_ref": "episodes/09-gita/stills/_locks/chariot-master.jpg",
   "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
     "episodes/09-gita/stills/_locks/chariot-master.jpg",
     "episodes/09-gita/stills/_locks/arjuna.jpg",
     "episodes/09-gita/stills/_locks/krishna.jpg"
   ],
   "photoreal_allowed": false,
-  "frame": "Ornate lotus carved wooden frame on every plate",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / vow) — not a thin rectangular sticker on a cream mat",
   "apparatus": {},
   "cast": {
     "krishna": {
       "face": "Youthful divine smile, dark eyes",
       "hair": "Dark curly hair, peacock feather optional",
-      "costume": "Yellow pitambar, garland"
+      "costume": "Yellow pitambar, peacock feather, garland, charioteer reins — never a flute, never a bow"
     },
     "arjuna": {
       "face": "Noble warrior prince, dark mustache, same face every plate",
@@ -35,7 +44,9 @@
       "id": "wide",
       "file": "plate-wide.jpg",
       "beat_text": "On the field of Kurukshetra two oceans of men stand ready — kin against kin.",
-      "cast_present": ["armies"],
+      "cast_present": [
+        "armies"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -44,15 +55,27 @@
         "Ornate lotus frame",
         "Not photoreal"
       ],
-      "must_not_show": ["Photoreal", "Graphic gore", "Giant scale mismatch", "Drona", "white-bearded sage"],
-      "props": ["banners", "chariots distant"],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "Giant scale mismatch",
+        "Drona",
+        "white-bearded sage"
+      ],
+      "props": [
+        "banners",
+        "chariots distant"
+      ],
       "prompt": "Premium painted comic Amar Chitra. Wide dawn view of Kurukshetra: two great armies facing across a dusty sacred plain, banners saffron and gold, distant chariots. Epic quiet before war. Equal human scale. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "field",
       "file": "plate-field.jpg",
       "beat_text": "Arjuna asks Krishna to drive between the armies, that he may see whom he must face.",
-      "cast_present": ["arjuna", "krishna"],
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -62,15 +85,28 @@
         "Armies soft in background",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Gore", "Drona", "white-bearded sage", "second Arjuna", "flower garland on Arjuna"],
-      "props": ["chariot", "Gandiva bow"],
+      "must_not_show": [
+        "Photoreal",
+        "Gore",
+        "Drona",
+        "white-bearded sage",
+        "second Arjuna",
+        "flower garland on Arjuna"
+      ],
+      "props": [
+        "chariot",
+        "Gandiva bow"
+      ],
       "prompt": "Premium painted comic Amar Chitra. Ornate two-horse chariot between two armies. Krishna in yellow pitambar holds the reins as charioteer. Exactly one Arjuna: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva bow, looking toward the ranks. No Drona, no sage. Soft cream-saffron light. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "despair",
       "file": "plate-despair.jpg",
       "beat_text": "He sees teachers, cousins, friends — and his bow Gandiva slips from his hands.",
-      "cast_present": ["arjuna", "krishna"],
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -80,15 +116,28 @@
         "Krishna still charioteer with reins",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Gore battle close-up", "Drona", "white-bearded sage", "second Arjuna", "flower garland on Arjuna", "broken bow"],
-      "props": ["Gandiva bow lowered"],
+      "must_not_show": [
+        "Photoreal",
+        "Gore battle close-up",
+        "Drona",
+        "white-bearded sage",
+        "second Arjuna",
+        "flower garland on Arjuna",
+        "broken bow"
+      ],
+      "props": [
+        "Gandiva bow lowered"
+      ],
       "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — slumps in grief; intact Gandiva slips from his hands. Krishna in yellow pitambar holds the reins. No Drona, no sage, no second warrior. Soft golden dust light. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "counsel",
       "file": "plate-counsel.jpg",
       "beat_text": "Grief shakes the great archer. Krishna, calm as the sky, begins to speak.",
-      "cast_present": ["arjuna", "krishna"],
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -98,15 +147,26 @@
         "Chariot setting",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Drona", "white-bearded sage", "second Arjuna", "flower garland on Arjuna"],
-      "props": ["chariot"],
+      "must_not_show": [
+        "Photoreal",
+        "Drona",
+        "white-bearded sage",
+        "second Arjuna",
+        "flower garland on Arjuna"
+      ],
+      "props": [
+        "chariot"
+      ],
       "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna in yellow pitambar turns with serene smile, speaking, reins in one hand. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — sits grieving but listening. No Drona, no sage. Soft sacred gold light. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "dharma",
       "file": "plate-dharma.jpg",
       "beat_text": "He teaches of the soul that is never slain, of duty without clinging to fruit.",
-      "cast_present": ["arjuna", "krishna"],
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -116,7 +176,14 @@
         "Subtle soft glow of wisdom, not full cosmic form yet",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Horror", "Drona", "white-bearded sage", "second Arjuna", "flower garland on Arjuna"],
+      "must_not_show": [
+        "Photoreal",
+        "Horror",
+        "Drona",
+        "white-bearded sage",
+        "second Arjuna",
+        "flower garland on Arjuna"
+      ],
       "props": [],
       "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna teaches with open hand of dharma and a gentle halo. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — looks up with understanding. No Drona, no sage, no third warrior. Cream-saffron sacred palette. Ornate lotus frame. Not photoreal."
     },
@@ -124,7 +191,10 @@
       "id": "form",
       "file": "plate-form.jpg",
       "beat_text": "At Arjuna’s prayer he shows the cosmic form — a universe of light upon the chariot.",
-      "cast_present": ["arjuna", "krishna"],
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -134,15 +204,27 @@
         "Arjuna awed with hands joined",
         "Lotus frame"
       ],
-      "must_not_show": ["Horror gore", "Photoreal CGI nightmare", "Graphic death imagery", "Drona", "white-bearded sage", "second Arjuna"],
-      "props": ["chariot"],
+      "must_not_show": [
+        "Horror gore",
+        "Photoreal CGI nightmare",
+        "Graphic death imagery",
+        "Drona",
+        "white-bearded sage",
+        "second Arjuna"
+      ],
+      "props": [
+        "chariot"
+      ],
       "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna reveals a tasteful cosmic Vishvarupa above the chariot — many-armed radiant gold light, charming mythic style. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — kneels in awe with joined hands. No Drona, no sage. NOT horror CGI. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "resolve",
       "file": "plate-resolve.jpg",
       "beat_text": "Doubt falls away. Arjuna takes up his bow again, mind steady in dharma.",
-      "cast_present": ["arjuna", "krishna"],
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -151,15 +233,28 @@
         "Arjuna standing resolved, lifting Gandiva; Krishna smiling as charioteer",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Gore", "Drona", "white-bearded sage", "second Arjuna", "flower garland on Arjuna"],
-      "props": ["Gandiva raised"],
+      "must_not_show": [
+        "Photoreal",
+        "Gore",
+        "Drona",
+        "white-bearded sage",
+        "second Arjuna",
+        "flower garland on Arjuna"
+      ],
+      "props": [
+        "Gandiva raised"
+      ],
       "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — stands firm lifting Gandiva ready (not overhead like a trophy). Krishna in yellow pitambar holds reins. No Drona, no sage. Soft gold hour. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "conch",
       "file": "plate-conch.jpg",
       "beat_text": "Conches sound across the field. The song is sung — and the war of ages begins.",
-      "cast_present": ["arjuna", "krishna", "armies"],
+      "cast_present": [
+        "arjuna",
+        "krishna",
+        "armies"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -169,15 +264,27 @@
         "Epic opening of war without graphic gore",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Gore", "Drona", "white-bearded sage", "second Arjuna"],
-      "props": ["conch shell", "banners"],
+      "must_not_show": [
+        "Photoreal",
+        "Gore",
+        "Drona",
+        "white-bearded sage",
+        "second Arjuna"
+      ],
+      "props": [
+        "conch shell",
+        "banners"
+      ],
       "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna sounds the Panchajanya conch. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — ready with bow. No Drona, no sage. Soft gold rings of sound. Ornate lotus frame. Not photoreal."
     },
     {
       "id": "wide-gold",
       "file": "plate-wide-gold.jpg",
       "beat_text": "Thus on Kurukshetra the Bhagavad Gita was spoken — light before the storm.",
-      "cast_present": ["krishna", "arjuna"],
+      "cast_present": [
+        "krishna",
+        "arjuna"
+      ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
@@ -186,8 +293,16 @@
         "Chariot silhouette or calm Krishna-Arjuna before golden field",
         "Lotus frame"
       ],
-      "must_not_show": ["Photoreal", "Gore", "Drona", "white-bearded sage", "second Arjuna"],
-      "props": ["chariot silhouette"],
+      "must_not_show": [
+        "Photoreal",
+        "Gore",
+        "Drona",
+        "white-bearded sage",
+        "second Arjuna"
+      ],
+      "props": [
+        "chariot silhouette"
+      ],
       "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold Kurukshetra dawn; same two-horse chariot with Krishna charioteer and one crowned Arjuna small against a luminous sky. No Drona, no sage. Quiet epic light before the storm. Ornate lotus frame. Not photoreal."
     }
   ]

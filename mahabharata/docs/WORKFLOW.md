@@ -2,19 +2,20 @@
 
 ```
 1. Script (episodes/<id>/script.js beats)
-2. Cast sheet + plate bible (copy episodes/_template/plate-bible.json)
-3. GATE A/B — python3 tools/logic_review.py episodes/<id>/plate-bible.json --report
-4. Scene master at 3:2 / ≥1536×1024 (Imagine; style-ref = Ep 10 field-master only)
-5. Solo cast locks at the same canvas
-6. Per-beat plates via image_edit (first image = that 3:2 master, never a 720p file)
-7. GATE C — python3 tools/stills_review.py episodes/<id>
+2. GATE D-dialogue — python3 tools/dialogue_review.py episodes/<id> --report
+3. Cast sheet + plate bible (copy episodes/_template/plate-bible.json)
+4. GATE A/B — python3 tools/logic_review.py episodes/<id>/plate-bible.json --report
+5. Scene master at 3:2 / ≥1536×1024 (Imagine; style-ref = Ep 10 field-master only)
+6. Solo cast locks at the same canvas
+7. Per-beat plates via image_edit (first image = that 3:2 master, never a 720p file)
+8. GATE C — python3 tools/stills_review.py episodes/<id>
           + visual report (docs/GATE_C_TEMPLATE.md) vs Ep 10 vow/arrows
-8. Grok TTS orion → audio/
-9. GATE D — final install check
-10. Registry live · commit · publish-pages
+9. Grok TTS orion → audio/ (or tools/render_orion_voice.sh until Orion is available)
+10. GATE D — final install check
+11. Registry live · commit · publish-pages
 ```
 
-FAIL at 3, 7, or 9 **blocks** Imagine commit and publish.
+FAIL at 2, 4, 8, or 10 **blocks** Imagine commit and publish.
 
 ## Art — how to hit the Ep 10 bar
 
@@ -88,6 +89,7 @@ image_edit
 ## Tools
 
 ```bash
+python3 tools/dialogue_review.py episodes/<id> --report
 python3 tools/logic_review.py episodes/<id>/plate-bible.json --report
 python3 tools/stills_review.py episodes/<id>
 ```

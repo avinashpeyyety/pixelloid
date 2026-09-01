@@ -104,3 +104,11 @@ Charming painted comic, not photoreal. Premium linework.
 Write `episodes/<ep>/logic-reviews/RR-NN-<stage>.md` with PASS/FAIL per plate.
 
 **Rule:** FAIL blocks Imagine commit and publish.
+
+## Dialogue logic (GATE D)
+
+Spoken beats: `python3 tools/dialogue_review.py episodes/<id> --report`.
+
+FAIL if `t` is not strictly increasing, a spoken line has no speaker, the speaker is not in that plate’s `cast_present`, a non-omniscient speaker names someone not yet introduced, a speaker claims off-stage facts they could not know, or lines contradict an earlier vow/plan. Narrator / Kathavachak / Krishna are omniscient. `--strict-bible` (default) requires script `text` to match plate `beat_text`. FAIL blocks Imagine commit and publish.
+
+Does not replace panel-logic (GATE A/B) or stills review (GATE C).

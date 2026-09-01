@@ -8,8 +8,8 @@
     "height": 1024,
     "aspect": "3:2"
   },
-  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
-  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "camera": "Heroic medium \u2014 named cast fills the frame, distant ranks only in the background",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536\u00d71024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
   "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
   "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 figure plate)",
   "scene_lock_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
@@ -21,7 +21,7 @@
     "episodes/09-gita/stills/_locks/krishna.jpg"
   ],
   "photoreal_allowed": false,
-  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / vow) — not a thin rectangular sticker on a cream mat",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / vow) \u2014 not a thin rectangular sticker on a cream mat",
   "apparatus": {},
   "cast": {
     "bhishma": {
@@ -54,7 +54,7 @@
     {
       "id": "wide",
       "file": "plate-wide.jpg",
-      "beat_text": "On the tenth day the grandsire still holds the field \u2014 a white flame among the banners.",
+      "beat_text": "Tenth day on Kurukshetra. The grandsire Bhishma still holds the field \u2014 a white flame among the banners.",
       "cast_present": [
         "bhishma",
         "armies"
@@ -82,7 +82,7 @@
     {
       "id": "storm",
       "file": "plate-storm.jpg",
-      "beat_text": "His arrows fly like a river of light. The Pandava host cannot pass the grandsire.",
+      "beat_text": "His arrows fly like a river of light. No Pandava charge can pass the pitamaha.",
       "cast_present": [
         "bhishma",
         "armies"
@@ -110,10 +110,10 @@
     {
       "id": "counsel",
       "file": "plate-counsel.jpg",
-      "beat_text": "Krishna speaks to Arjuna: place Shikhandi before you \u2014 the vow will open the way.",
+      "beat_text": "Partha, he will not raise a shaft against Shikhandi \u2014 who was born Amba. Place that warrior before you, and the way will open.",
       "cast_present": [
-        "arjuna",
-        "krishna"
+        "krishna",
+        "arjuna"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
@@ -138,10 +138,10 @@
     {
       "id": "shikhandi",
       "file": "plate-shikhandi.jpg",
-      "beat_text": "Shikhandi of Panchala walks to the front \u2014 a warrior the grandsire will not strike.",
+      "beat_text": "Shikhandi of Panchala \u2014 take the front. I will stand behind you with Gandiva.",
       "cast_present": [
         "shikhandi",
-        "bhishma"
+        "arjuna"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
@@ -150,7 +150,8 @@
         "Ornate lotus carved wooden frame on every plate",
         "Shikhandi: young Panchala warrior in teal-green armor, topknot, no gold crown, standing on the battlefield",
         "Bhishma facing them in silver-white armor, lowering his gaze",
-        "Equal human scale on the battlefield"
+        "Equal human scale on the battlefield",
+        "Exactly one Arjuna: gold crown, dark mustache, cream-white dhoti, quiver standing behind Shikhandi with Gandiva"
       ],
       "must_not_show": [
         "Photoreal",
@@ -163,12 +164,12 @@
         "durbar"
       ],
       "props": [],
-      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Battlefield. Young Panchala warrior Shikhandi in teal-green armor and topknot stands before Bhishma the Kuru grandsire: long white hair and warrior beard, silver-white armor, pale cream dhoti, Kuru diadem \u2014 a pitamaha warrior, never saffron guru robes. Equal scale, no gown, no palace hall. Ornate lotus frame. Not photoreal. No Drona."
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. Battlefield. Young Panchala warrior Shikhandi in teal-green armor and topknot stands before Bhishma the Kuru grandsire: long white hair and warrior beard, silver-white armor, pale cream dhoti, Kuru diadem \u2014 a pitamaha warrior, never saffron guru robes. Equal scale, no gown, no palace hall. Ornate lotus frame. Not photoreal. No Drona. Exactly one Arjuna: gold crown, dark mustache, cream-white dhoti, quiver stands behind Shikhandi with Gandiva."
     },
     {
       "id": "vow",
       "file": "plate-vow.jpg",
-      "beat_text": "Bhishma lowers his weapons. He will not raise a shaft against one born as Amba.",
+      "beat_text": "I know that form. I will not strike one born as Amba. Let my bow rest.",
       "cast_present": [
         "bhishma",
         "shikhandi"
@@ -196,7 +197,7 @@
     {
       "id": "arrows",
       "file": "plate-arrows.jpg",
-      "beat_text": "From behind that shield Arjuna looses Gandiva \u2014 and the grandsire does not answer.",
+      "beat_text": "He will not answer. Gandiva \u2014 now.",
       "cast_present": [
         "arjuna",
         "shikhandi",
@@ -225,7 +226,7 @@
     {
       "id": "fall",
       "file": "plate-fall.jpg",
-      "beat_text": "He falls as a great tree falls \u2014 slowly, and the earth receives a pitamaha.",
+      "beat_text": "Bhishma falls as a great tree falls \u2014 slowly \u2014 and the earth receives a pitamaha.",
       "cast_present": [
         "bhishma"
       ],
@@ -252,7 +253,7 @@
     {
       "id": "bed",
       "file": "plate-bed.jpg",
-      "beat_text": "Upon a bed of arrows he lies and watches the sun \u2014 waiting for the northern turn.",
+      "beat_text": "Lay me on these arrows. I will watch the sun, and I will not leave until it turns north.",
       "cast_present": [
         "bhishma"
       ],
@@ -279,9 +280,10 @@
     {
       "id": "wide-gold",
       "file": "plate-wide-gold.jpg",
-      "beat_text": "Thus the tenth day ended. The grandsire would not rise until the sun turned north.",
+      "beat_text": "Thus the tenth day ended. The grandsire waited upon his bed of arrows for the northern turn.",
       "cast_present": [
-        "bhishma"
+        "bhishma",
+        "armies"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,

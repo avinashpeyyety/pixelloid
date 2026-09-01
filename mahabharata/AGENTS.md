@@ -22,12 +22,20 @@ Before generating or shipping any plate:
 6. After stills land, write `logic-reviews/RR-gateC-visual.md` from `docs/GATE_C_TEMPLATE.md`
 7. Ship only on full PASS (bible + stills dimensions + visual quality vs Ep 10)
 
+## Mandatory dialogue-logic agent
+
+After any `script.js` beat/dialogue change:
+
+1. Run: `python3 tools/dialogue_review.py episodes/<id> --report`
+2. FAIL (speaker not on plate, contradictions, impossible knowledge, broken beat order, bible `beat_text` mismatch) **blocks ship**
+3. Fix the script and/or plate-bible — do **not** weaken `tools/dialogue_review.py`
+
 ## Ep 09 chariot + Arjuna (locked)
 
 - **Arjuna:** gold crown, dark mustache, cream-white dhoti, quiver — **never** Krishna’s flower garland, **never** a second Arjuna
 - **Krishna:** yellow pitambar, peacock feather, garland, **charioteer / reins**, no bow
 - **Sage / Drona:** forbidden on every Gita plate
-- **Imagine refs:** regenerate 3:2 locks; do not use Ep 09 `_locks/*.jpg` as the first `image_edit` input (they are 1280×720)
+- **Imagine refs:** Ep 09 `_locks/*.jpg` are now 3:2 / 1536×1024 (charioteer Krishna, not flute). Attach Ep 10 `field-master.jpg` + these locks. Never attach Ep 01 gold or Ep 10 figure plates (vow / arrows / Bhishma) unless those people are in this episode’s `cast`.
 
 ## Ep 02 apparatus (locked)
 

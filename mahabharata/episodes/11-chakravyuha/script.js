@@ -12,8 +12,8 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep11-gold-restyle",
-    note: "Kathavachak — orion when available; ep11-v1 is macOS Aman fallback",
+    cache: "ep11-orion",
+    note: "Kathavachak — grok-tts Orion (same pipeline as Ep 09/10)",
     base: "episodes/11-chakravyuha/audio/",
   },
   music: {

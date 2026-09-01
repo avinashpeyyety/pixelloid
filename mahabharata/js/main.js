@@ -1,6 +1,6 @@
 /**
  * Mahābhārata player — cinematic plate theater.
- * Painterly Imagine plates + Ken Burns / crossfade; voice + flute/tabla.
+ * Painterly Imagine plates + Ken Burns / crossfade; voice + raga underscore (tanpura; episode raga).
  * Loads episode from ?ep=01 … ?ep=11
  */
 const EP_LOADERS = {
@@ -119,6 +119,7 @@ class Kathavachak {
       }
       this._audio = null;
     }
+    drone.duck(false);
   }
 
   /**
@@ -147,10 +148,14 @@ class Kathavachak {
           // Do NOT fall back to browser TTS on autoplay policy if user already clicked Play
           // Only fall back when the resource is missing
         });
+        drone.duck(true);
       };
 
       a.onended = () => {
-        if (token === this._token) this._audio = null;
+        if (token === this._token) {
+          this._audio = null;
+          drone.duck(false);
+        }
       };
       a.onerror = () => {
         console.warn("[katha] Grok clip missing or blocked", url);
@@ -181,7 +186,11 @@ class Kathavachak {
     u.volume = 1;
     u.lang = "en-IN";
     if (this._fallbackVoice) u.voice = this._fallbackVoice;
+    u.onend = () => {
+      if (token === this._token) drone.duck(false);
+    };
     if (token !== this._token) return;
+    drone.duck(true);
     speechSynthesis.speak(u);
   }
 
@@ -216,12 +225,76 @@ const C = {
   skyDusk: "#6a3a4a",
 };
 
-// ── Flute + tabla ambient (Web Audio) ──────────────────────────
+// ── Raga underscore (Web Audio) ────────────────────────────────
 /**
- * Soft bansuri-like flute lines over a light tabla pulse.
- * Gentle, story-friendly — not heavy sitar/drone.
+ * Episode raga beds: tanpura floor + raga phrases + optional tabla.
+ * Kathavachak theater — not trailer brass, not licensed film music.
+ * Ep 09 Bhairav (no tabla), Ep 10 Darbari, Ep 11 Megh+Jhaptal;
+ * other episodes keep a default flute+tabla preset close to the old bed.
  */
-class FluteTablaBed {
+const RAGA_RATIOS = {
+  S: 1,
+  r: 16 / 15,
+  R: 9 / 8,
+  g: 6 / 5,
+  G: 5 / 4,
+  m: 4 / 3,
+  M: 45 / 32,
+  P: 3 / 2,
+  d: 8 / 5,
+  D: 5 / 3,
+  n: 9 / 5,
+  N: 15 / 8,
+};
+
+const RAGA_PRESETS = {
+  bhairav: {
+    Sa: 130.81, // C3 tanpura under male VO
+    fluteSa: 261.63, // C4 bansuri
+    degrees: ["S", "r", "G", "m", "P", "d", "N"],
+    tabla: "none",
+    voice: "bansuri",
+    bedLevel: 0.48,
+    duckLevel: 0.16,
+    tanpuraMs: 1100,
+  },
+  darbari: {
+    Sa: 110, // A2 mandra
+    fluteSa: 220,
+    degrees: ["S", "R", "g", "m", "P", "d", "n"],
+    tabla: "heartbeat",
+    voice: "bansuri",
+    andolan: "g",
+    bedLevel: 0.42,
+    duckLevel: 0.14,
+    tanpuraMs: 1300,
+  },
+  megh: {
+    Sa: 146.83, // D3
+    fluteSa: 293.66,
+    degrees: ["S", "R", "m", "P", "n"],
+    tabla: "jhaptal",
+    voice: "reed",
+    beat: 0.34,
+    bedLevel: 0.5,
+    duckLevel: 0.18,
+    tanpuraMs: 1000,
+  },
+  default: {
+    // eps 01–08 — keep close to old FluteTablaBed so they don't jump
+    Sa: 293.66,
+    fluteSa: 293.66,
+    degrees: ["S", "R", "G", "m", "P", "D", "N"],
+    tabla: "tintal-lite",
+    voice: "bansuri",
+    beat: 0.42,
+    bedLevel: 0.55,
+    duckLevel: 0.22,
+    tanpuraMs: 0, // old pad, not full tanpura cycle
+  },
+};
+
+class RagaBed {
   constructor() {
     this.ctx = null;
     this.master = null;
@@ -229,9 +302,26 @@ class FluteTablaBed {
     this.nodes = [];
     this.timers = [];
     this.on = false;
-    this.Sa = 293.66; // D4 — flute-friendly
+    this.preset = this._resolvePreset();
+    this.Sa = this.preset.Sa;
+    this.fluteSa = this.preset.fluteSa;
+    this.ratios = RAGA_RATIOS;
     this.scale = null;
-    this.beat = 0.42; // ~142 bpm feel, light
+    this.beat = this.preset.beat || 0.42;
+  }
+
+  _resolvePreset() {
+    const named = String(EPISODE.music?.raga || "").toLowerCase().trim();
+    const id = String(EPISODE.id || "").replace(/\D/g, "").padStart(2, "0");
+    let key = named;
+    if (!key) {
+      if (id === "09") key = "bhairav";
+      else if (id === "10") key = "darbari";
+      else if (id === "11") key = "megh";
+      else key = "default";
+    }
+    if (!RAGA_PRESETS[key]) key = "default";
+    return { key, ...RAGA_PRESETS[key] };
   }
 
   async ensure() {
@@ -241,7 +331,7 @@ class FluteTablaBed {
     this.master = this.ctx.createGain();
     this.master.gain.value = 0;
 
-    // Soft room for flute
+    // Soft room for flute / reed
     const delay = this.ctx.createDelay(1.0);
     delay.delayTime.value = 0.22;
     const fb = this.ctx.createGain();
@@ -259,20 +349,21 @@ class FluteTablaBed {
     this.wet.connect(delay);
     this.master.connect(this.ctx.destination);
 
-    const Sa = this.Sa;
-    // Soft raga-ish path: Sa Re Ga Ma Pa Dha Ni Sa
+    const Sa = this.fluteSa;
+    const r = this.ratios;
+    // Soft path used by the default lyrical phrases (same indices as old bed)
     this.scale = [
       Sa * 0.75,
       Sa,
-      Sa * (9 / 8),
-      Sa * (5 / 4),
-      Sa * (4 / 3),
-      Sa * (3 / 2),
-      Sa * (5 / 3),
-      Sa * (15 / 8),
+      Sa * r.R,
+      Sa * r.G,
+      Sa * r.m,
+      Sa * r.P,
+      Sa * r.D,
+      Sa * r.N,
       Sa * 2,
-      Sa * 2 * (9 / 8),
-      Sa * 2 * (5 / 4),
+      Sa * 2 * r.R,
+      Sa * 2 * r.G,
     ];
   }
 
@@ -281,7 +372,21 @@ class FluteTablaBed {
     return node;
   }
 
-  /** Quiet Sa–Pa air under the flute */
+  /**
+   * Ramp master under the kathavachak. No-op if music is off.
+   * @param {boolean} speaking
+   */
+  duck(speaking) {
+    if (!this.ctx || !this.on) return;
+    const t = this.ctx.currentTime;
+    const target = speaking ? this.preset.duckLevel : this.preset.bedLevel;
+    const dur = speaking ? 0.12 : 0.25;
+    this.master.gain.cancelScheduledValues(t);
+    this.master.gain.setValueAtTime(this.master.gain.value, t);
+    this.master.gain.linearRampToValueAtTime(target, t + dur);
+  }
+
+  /** Quiet Sa–Pa air under the flute (default preset only) */
   _startPad(t0) {
     const Sa = this.Sa;
     for (const [freq, amp] of [
@@ -300,10 +405,79 @@ class FluteTablaBed {
     }
   }
 
+  /** One tanpura pluck: decaying sine+triangle + short jawari noise */
+  _pluckTanpura(freq, when, amp) {
+    if (!this.ctx || !this.on) return;
+    const t = when;
+    const dur = 2.6;
+    const out = this._track(this.ctx.createGain());
+    out.gain.setValueAtTime(0, t);
+    out.gain.linearRampToValueAtTime(amp, t + 0.006);
+    out.gain.exponentialRampToValueAtTime(0.001, t + dur);
+    out.connect(this.wet);
+
+    const partials = [
+      ["sine", 0.72, 1],
+      ["triangle", 0.26, 1],
+      ["sine", 0.1, 2],
+    ];
+    for (const [type, level, ratio] of partials) {
+      const o = this._track(this.ctx.createOscillator());
+      const g = this._track(this.ctx.createGain());
+      o.type = type;
+      o.frequency.value = freq * ratio;
+      g.gain.value = level;
+      o.connect(g);
+      g.connect(out);
+      o.start(t);
+      o.stop(t + dur + 0.05);
+    }
+
+    const nlen = Math.max(1, Math.floor(this.ctx.sampleRate * 0.04));
+    const noiseBuf = this.ctx.createBuffer(1, nlen, this.ctx.sampleRate);
+    const data = noiseBuf.getChannelData(0);
+    for (let i = 0; i < data.length; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / data.length);
+    const noise = this._track(this.ctx.createBufferSource());
+    noise.buffer = noiseBuf;
+    const bp = this._track(this.ctx.createBiquadFilter());
+    bp.type = "bandpass";
+    bp.frequency.value = Math.min(freq * 6, 2400);
+    bp.Q.value = 1.4;
+    const ng = this._track(this.ctx.createGain());
+    ng.gain.setValueAtTime(amp * 0.2, t);
+    ng.gain.exponentialRampToValueAtTime(0.001, t + 0.035);
+    noise.connect(bp);
+    bp.connect(ng);
+    ng.connect(this.wet);
+    noise.start(t);
+    noise.stop(t + 0.05);
+  }
+
+  /** Classic Pa–S–S–s cycle. Quiet sacred floor. */
+  _scheduleTanpura() {
+    if (!this.on || !this.ctx) return;
+    const t0 = this.ctx.currentTime + 0.02;
+    const Sa = this.Sa;
+    const step = (this.preset.tanpuraMs || 1100) / 1000;
+    // Pa (3/2 * Sa/2), Sa, Sa, sa (2*Sa)
+    const notes = [
+      [0, Sa * (3 / 2) * 0.5, 0.02],
+      [1, Sa, 0.026],
+      [2, Sa, 0.022],
+      [3, Sa * 2, 0.016],
+    ];
+    for (const [i, freq, amp] of notes) {
+      this._pluckTanpura(freq, t0 + i * step, amp);
+    }
+    const waitMs = 4 * step * 1000 - 20;
+    this.timers.push(setTimeout(() => this._scheduleTanpura(), waitMs));
+  }
+
   /**
    * Bansuri-like tone: soft attack, breath noise, gentle vibrato, legato.
+   * andolan: slow wide vibrato (Darbari komal ga).
    */
-  flute(freq, when, { dur = 1.4, amp = 0.12, glide = 0 } = {}) {
+  flute(freq, when, { dur = 1.4, amp = 0.12, glide = 0, andolan = false } = {}) {
     if (!this.ctx || !this.on) return;
     const t = when;
     const out = this._track(this.ctx.createGain());
@@ -327,11 +501,17 @@ class FluteTablaBed {
       const f0 = freq * ratio;
       o.frequency.setValueAtTime(glide ? f0 * (1 - glide) : f0, t);
       if (glide) o.frequency.linearRampToValueAtTime(f0, t + Math.min(0.12, dur * 0.2));
-      // Vibrato
+      // Vibrato (or slow andolan)
       const lfo = this._track(this.ctx.createOscillator());
       const lg = this._track(this.ctx.createGain());
-      lfo.frequency.value = 4.8;
-      lg.gain.value = f0 * 0.004;
+      if (andolan) {
+        lfo.frequency.value = 1.35;
+        lg.gain.setValueAtTime(0, t);
+        lg.gain.linearRampToValueAtTime(f0 * 0.022, t + Math.min(0.35, dur * 0.3));
+      } else {
+        lfo.frequency.value = 4.8;
+        lg.gain.value = f0 * 0.004;
+      }
       lfo.connect(lg);
       lg.connect(o.frequency);
       lfo.start(t);
@@ -357,6 +537,68 @@ class FluteTablaBed {
     const ng = this._track(this.ctx.createGain());
     ng.gain.setValueAtTime(0, t);
     ng.gain.linearRampToValueAtTime(amp * 0.09, t + 0.08);
+    ng.gain.exponentialRampToValueAtTime(0.001, t + dur);
+    noise.connect(bp);
+    bp.connect(ng);
+    ng.connect(this.wet);
+    noise.start(t);
+    noise.stop(t + dur);
+  }
+
+  /**
+   * Shehnai-ish reed: odd partials, more noise, less pretty vibrato (Ep 11 Megh).
+   */
+  reed(freq, when, { dur = 1.4, amp = 0.1, glide = 0 } = {}) {
+    if (!this.ctx || !this.on) return;
+    const t = when;
+    const out = this._track(this.ctx.createGain());
+    out.gain.setValueAtTime(0, t);
+    out.gain.linearRampToValueAtTime(amp, t + 0.04);
+    out.gain.setValueAtTime(amp * 0.9, t + dur * 0.5);
+    out.gain.exponentialRampToValueAtTime(0.001, t + dur);
+    out.connect(this.wet);
+
+    const partials = [
+      [1, 0.55, "triangle"],
+      [3, 0.28, "sine"],
+      [5, 0.14, "triangle"],
+      [2, 0.08, "sine"],
+    ];
+    for (const [ratio, level, type] of partials) {
+      const o = this._track(this.ctx.createOscillator());
+      const g = this._track(this.ctx.createGain());
+      o.type = type;
+      const f0 = freq * ratio;
+      o.frequency.setValueAtTime(glide ? f0 * (1 - glide) : f0, t);
+      if (glide) o.frequency.linearRampToValueAtTime(f0, t + Math.min(0.1, dur * 0.18));
+      const lfo = this._track(this.ctx.createOscillator());
+      const lg = this._track(this.ctx.createGain());
+      lfo.frequency.value = 3.1;
+      lg.gain.value = f0 * 0.0026;
+      lfo.connect(lg);
+      lg.connect(o.frequency);
+      lfo.start(t);
+      lfo.stop(t + dur + 0.05);
+      g.gain.value = level;
+      o.connect(g);
+      g.connect(out);
+      o.start(t);
+      o.stop(t + dur + 0.05);
+    }
+
+    const nlen = Math.max(1, Math.floor(this.ctx.sampleRate * Math.min(dur, 2.5)));
+    const noiseBuf = this.ctx.createBuffer(1, nlen, this.ctx.sampleRate);
+    const data = noiseBuf.getChannelData(0);
+    for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
+    const noise = this._track(this.ctx.createBufferSource());
+    noise.buffer = noiseBuf;
+    const bp = this._track(this.ctx.createBiquadFilter());
+    bp.type = "bandpass";
+    bp.frequency.value = Math.min(freq * 2.6, 3200);
+    bp.Q.value = 0.7;
+    const ng = this._track(this.ctx.createGain());
+    ng.gain.setValueAtTime(0, t);
+    ng.gain.linearRampToValueAtTime(amp * 0.16, t + 0.05);
     ng.gain.exponentialRampToValueAtTime(0.001, t + dur);
     noise.connect(bp);
     bp.connect(ng);
@@ -448,11 +690,183 @@ class FluteTablaBed {
     this.timers.push(setTimeout(() => this._scheduleTablaLoop(), waitMs));
   }
 
+  /** Jhaptal 10 matras 2+3+2+3: Dhin Na | Dhin Dhin Na | Tin Na | Dhin Dhin Na */
+  _scheduleJhaptal() {
+    if (!this.on || !this.ctx) return;
+    const t0 = this.ctx.currentTime + 0.04;
+    const b = this.beat;
+    const pattern = [
+      [0, "dhin", 0.16],
+      [1, "na", 0.12],
+      [2, "dhin", 0.15],
+      [3, "dhin", 0.17],
+      [4, "na", 0.13],
+      [5, "tin", 0.14],
+      [6, "na", 0.11],
+      [7, "dhin", 0.16],
+      [8, "dhin", 0.18],
+      [9, "na", 0.13],
+    ];
+    for (const [beat, kind, amp] of pattern) {
+      this.tabla(kind, t0 + beat * b, amp * (0.85 + Math.random() * 0.2));
+    }
+    const waitMs = 10 * b * 1000 - 20;
+    this.timers.push(setTimeout(() => this._scheduleJhaptal(), waitMs));
+  }
+
+  /** Very sparse bayan — Darbari heartbeat */
+  _scheduleHeartbeat() {
+    if (!this.on || !this.ctx) return;
+    this.tabla("dha", this.ctx.currentTime + 0.02, 0.1);
+    const waitMs = (7.5 + Math.random() * 1.5) * 1000;
+    this.timers.push(setTimeout(() => this._scheduleHeartbeat(), waitMs));
+  }
+
+  _noteFreq(deg, oct = 0) {
+    const ratio = this.ratios[deg] ?? 1;
+    return this.fluteSa * ratio * (2 ** oct);
+  }
+
+  _playDegree(deg, oct, when, dur) {
+    const freq = this._noteFreq(deg, oct);
+    const andolan = this.preset.andolan === deg;
+    const amp = 0.06 + Math.random() * 0.04;
+    const glide = Math.random() > 0.55 ? 0.03 : 0;
+    const spec = { dur: dur * (0.9 + Math.random() * 0.2), amp, glide, andolan };
+    if (this.preset.voice === "reed") this.reed(freq, when, spec);
+    else this.flute(freq, when, spec);
+  }
+
+  _ragaPhrases() {
+    const key = this.preset.key;
+    if (key === "bhairav") {
+      // pakad-ish, slow
+      return [
+        [
+          [0, "S", 0, 1.4],
+          [1.5, "r", 0, 1.4],
+          [3.0, "G", 0, 1.5],
+          [4.6, "m", 0, 1.8],
+        ],
+        [
+          [0, "G", 0, 1.3],
+          [1.4, "m", 0, 1.2],
+          [2.7, "r", 0, 1.4],
+          [4.2, "S", 0, 1.8],
+        ],
+        [
+          [0, "P", 0, 1.4],
+          [1.5, "d", 0, 1.3],
+          [2.9, "N", 0, 1.4],
+          [4.4, "S", 1, 2.0],
+        ],
+        [
+          [0, "G", 0, 1.3],
+          [1.4, "m", 0, 1.3],
+          [2.8, "d", 0, 1.5],
+          [4.4, "P", 0, 1.8],
+        ],
+        [
+          [0, "N", 0, 1.1],
+          [1.2, "d", 0, 1.0],
+          [2.3, "P", 0, 1.1],
+          [3.5, "m", 0, 1.0],
+          [4.6, "G", 0, 1.1],
+          [5.8, "r", 0, 1.2],
+          [7.1, "S", 0, 1.8],
+        ],
+      ];
+    }
+    if (key === "darbari") {
+      // very slow, space between notes; andolan on g
+      return [
+        [
+          [0, "n", 0, 1.6],
+          [2.2, "S", 0, 1.8],
+          [4.5, "R", 0, 1.6],
+          [6.6, "g", 0, 2.4],
+        ],
+        [
+          [0, "g", 0, 2.6],
+          [3.2, "m", 0, 1.6],
+          [5.2, "R", 0, 1.6],
+          [7.2, "S", 0, 2.2],
+        ],
+        [
+          [0, "P", 0, 1.8],
+          [2.2, "d", 0, 1.6],
+          [4.2, "n", 0, 1.8],
+          [6.4, "S", 1, 2.2],
+        ],
+        [
+          [0, "S", 1, 1.8],
+          [2.2, "n", 0, 1.6],
+          [4.2, "d", 0, 1.8],
+          [6.4, "P", 0, 2.2],
+        ],
+      ];
+    }
+    if (key === "megh") {
+      // circling, not lyrical — walking the wheel
+      return [
+        [
+          [0, "S", 0, 0.9],
+          [0.85, "R", 0, 0.85],
+          [1.65, "m", 0, 0.9],
+          [2.5, "P", 0, 1.2],
+        ],
+        [
+          [0, "P", 0, 0.8],
+          [0.75, "n", 0, 0.75],
+          [1.45, "S", 1, 1.0],
+          [2.4, "n", 0, 0.8],
+          [3.15, "P", 0, 1.1],
+        ],
+        [
+          [0, "m", 0, 0.9],
+          [0.85, "R", 0, 0.9],
+          [1.7, "S", 0, 1.3],
+        ],
+        [
+          [0, "S", 0, 0.8],
+          [0.75, "m", 0, 0.8],
+          [1.5, "P", 0, 0.8],
+          [2.25, "n", 0, 0.85],
+          [3.05, "S", 1, 1.2],
+        ],
+      ];
+    }
+    return [];
+  }
+
+  _phraseGap() {
+    const key = this.preset.key;
+    if (key === "bhairav") return 2.5 + Math.random() * 2.5;
+    if (key === "darbari") return 4 + Math.random() * 3;
+    if (key === "megh") return 1.6 + Math.random() * 1.4;
+    return 1.2 + Math.random() * 2.0;
+  }
+
+  _scheduleRagaPhrase() {
+    if (!this.on || !this.ctx) return;
+    const t0 = this.ctx.currentTime + 0.08;
+    const phrases = this._ragaPhrases();
+    if (!phrases.length) return;
+    const phrase = phrases[(Math.random() * phrases.length) | 0];
+    let lastEnd = 0;
+    for (const [at, deg, oct, dur] of phrase) {
+      this._playDegree(deg, oct, t0 + at, dur);
+      lastEnd = Math.max(lastEnd, at + dur);
+    }
+    const waitMs = (lastEnd + this._phraseGap()) * 1000;
+    this.timers.push(setTimeout(() => this._scheduleRagaPhrase(), waitMs));
+  }
+
   _scheduleFlutePhrase() {
     if (!this.on || !this.ctx) return;
     const t0 = this.ctx.currentTime + 0.08;
     const sc = this.scale;
-    // Lyrical, unhurried flute lines
+    // Lyrical, unhurried flute lines (default / Bilawal-ish)
     const phrases = [
       [
         [0, 1, 1.1],
@@ -500,20 +914,50 @@ class FluteTablaBed {
     this.timers.push(setTimeout(() => this._scheduleFlutePhrase(), waitMs));
   }
 
+  _scheduleMelody() {
+    if (this.preset.key === "default") this._scheduleFlutePhrase();
+    else this._scheduleRagaPhrase();
+  }
+
   async start() {
     await this.ensure();
     if (this.ctx.state === "suspended") await this.ctx.resume();
     if (this.on) return;
     this.on = true;
     const t = this.ctx.currentTime;
-    this._startPad(t);
-    // Opening flute breath
-    this.flute(this.Sa, t + 0.2, { dur: 1.5, amp: 0.11, glide: 0.02 });
-    this.flute(this.Sa * 1.5, t + 1.5, { dur: 1.3, amp: 0.1, glide: 0.025 });
-    this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
-    this.timers.push(setTimeout(() => this._scheduleFlutePhrase(), 2200));
+    const p = this.preset;
+    const key = p.key;
+
+    if (p.tanpuraMs > 0) this._scheduleTanpura();
+    else this._startPad(t);
+
+    if (key === "darbari") {
+      // Low Sa only, long, quiet
+      this.flute(this.fluteSa, t + 0.35, { dur: 2.8, amp: 0.07, glide: 0.02 });
+    } else if (key === "default") {
+      this.flute(this.Sa, t + 0.2, { dur: 1.5, amp: 0.11, glide: 0.02 });
+      this.flute(this.Sa * 1.5, t + 1.5, { dur: 1.3, amp: 0.1, glide: 0.025 });
+    } else {
+      // Bhairav / Megh: one tonic breath (not a major-key arpeggio)
+      const tonic = (freq, when, opts) =>
+        p.voice === "reed" ? this.reed(freq, when, opts) : this.flute(freq, when, opts);
+      tonic(this.fluteSa, t + 0.35, { dur: 1.8, amp: 0.085, glide: 0.02 });
+    }
+
+    if (p.tabla === "heartbeat") {
+      this.timers.push(setTimeout(() => this._scheduleHeartbeat(), 1800));
+    } else if (p.tabla === "jhaptal") {
+      this.timers.push(setTimeout(() => this._scheduleJhaptal(), 480));
+    } else if (p.tabla === "tintal-lite") {
+      this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
+    }
+
+    const melodyDelay = key === "darbari" ? 4200 : key === "bhairav" ? 3200 : key === "megh" ? 2400 : 2200;
+    this.timers.push(setTimeout(() => this._scheduleMelody(), melodyDelay));
+
     this.master.gain.cancelScheduledValues(t);
-    this.master.gain.linearRampToValueAtTime(0.62, t + 0.8);
+    this.master.gain.setValueAtTime(this.master.gain.value, t);
+    this.master.gain.linearRampToValueAtTime(p.bedLevel, t + 0.8);
   }
 
   stop() {
@@ -543,8 +987,7 @@ class FluteTablaBed {
     return this.on;
   }
 }
-const drone = new FluteTablaBed();
-
+const drone = new RagaBed();
 
 
 // ── Canvas cinematic plates ────────────────────────────────────

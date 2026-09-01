@@ -16,6 +16,10 @@ export const EPISODE = {
     note: "Kathavachak — orion when available; ep11-v1 is macOS Aman fallback",
     base: "episodes/11-chakravyuha/audio/",
   },
+  music: {
+    raga: "megh",
+    note: "Megh + circling Jhaptal (the vyuha); reed color. Duck under Orion.",
+  },
   totalSec: 104,
   stills: {
     poster: "episodes/11-chakravyuha/stills/poster.jpg",

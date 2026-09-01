@@ -16,6 +16,10 @@ export const EPISODE = {
     note: "Grok TTS orion — deep heroic narration",
     base: "episodes/09-gita/audio/",
   },
+  music: {
+    raga: "bhairav",
+    note: "Dawn Bhairav tanpura + sparse bansuri; no tabla. Duck under Orion.",
+  },
   totalSec: 104,
   stills: {
     poster: "episodes/09-gita/stills/poster.jpg",

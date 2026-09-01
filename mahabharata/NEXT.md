@@ -16,3 +16,4 @@
 - [x] Ep 10 *The Fall of Bhishma* (tenth day, Shikhandi, bed of arrows)
 - [x] **Core art workflow = Ep 10 canvas.** STYLE / WORKFLOW / AGENTS / PANEL_LOGIC lock 3:2 1536×1024, carved cartouche, heroic medium. `logic_review.py` + `stills_review.py` block 720p / Ep01 gold on Ep 10+.
 - [x] Ep 11 *The Chakravyuha* (Drona Parva, thirteenth day, Abhimanyu)
+- [x] Ep 09–11 raga underscoring (Bhairav / Darbari / Megh+Jhaptal) in the player; duck under Orion

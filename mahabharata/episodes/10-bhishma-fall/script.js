@@ -20,6 +20,10 @@ export const EPISODE = {
     note: "Grok TTS Orion — 24 kHz / 128 kbps / no ID3, matching Ep 02–09",
     base: "episodes/10-bhishma-fall/audio/",
   },
+  music: {
+    raga: "darbari",
+    note: "Darbari Kanada mandra tanpura; sparse bansuri; heartbeat bayan. Duck under Orion.",
+  },
   totalSec: 104,
   stills: {
     poster: "episodes/10-bhishma-fall/stills/poster.jpg",

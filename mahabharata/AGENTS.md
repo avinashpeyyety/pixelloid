@@ -47,6 +47,10 @@ After any `script.js` beat/dialogue change:
 
 Comic painted mythology matching **Ep 10 field-master** — carved cartouche, 3:2, heroic medium — **not** photoreal, not mixed with 720p cinematic plates in one episode.
 
+## Player / craft
+
+- **Underscore:** Web Audio RagaBed in js/main.js. Ep 09 Bhairav (no tabla), Ep 10 Darbari, Ep 11 Megh+Jhaptal. Tanpura floor, duck under Orion. No cinematic trailer score, no licensed film music. Other episodes keep the default flute+tabla preset.
+
 ## Per-repo habit
 
 Implement **item 1** of `NEXT.md` only; capture daily + labboard after ship.

@@ -4,7 +4,7 @@
 
 ## Now
 
-- [ ] Mahābhārata Ep 11 (next beat — see `mahabharata/NEXT.md`)
+- [x] Mahābhārata Ep 11 restyle (Chakravyuha → Ep 09/10 gold cartouche)
 - [ ] Chocolate Dance: one more joke beat after the “graduation” loop
 - [ ] Optional: pause / speed controls on kids-grok playback bar
 

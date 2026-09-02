@@ -31,6 +31,7 @@ Open `episodes/10-bhishma-fall/stills/plate-vow.jpg` and `plate-arrows.jpg` besi
 | Camera | Named heroes fill the frame (heroic medium) | Tiny figures in a wide banner |
 | Line | Engraved armor, clear faces, Amar Chitra density | Soft airbrushed movie-still, empty sky |
 | Cast | Tokens match bible; no sage bleed | Drona / extra Arjuna / costume swap |
+| Krishna | Face/body match Ep 09 `_locks/krishna.jpg` (pitambar, peacock, garland, reins) | New Krishna, flute, bow, photoreal, child |
 
 ## Per plate
 
@@ -47,3 +48,4 @@ Open `episodes/10-bhishma-fall/stills/plate-vow.jpg` and `plate-arrows.jpg` besi
 - [ ] No graphic gore
 - [ ] No 16:9 / 720p plates
 - [ ] Eye-match to Ep 10 vow (density), not Ep 01 gold
+- [ ] Krishna (if present) eye-matches Ep 09 lock — not a drifted face

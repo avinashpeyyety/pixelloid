@@ -135,4 +135,16 @@ export const EPISODES = [
       "Drona arrays a wheel of war. Abhimanyu knows the way in — not the way out — and the thirteenth day darkens.",
     play: "play.html?ep=11",
   },
+  {
+    id: "12",
+    slug: "jayadratha-vadha",
+    title: "Jayadratha Falls",
+    sanskrit: "जयद्रथवधः",
+    chapter: "Drona Parva · fourteenth day",
+    duration: "~104s",
+    status: "live",
+    blurb:
+      "Arjuna vows Jayadratha dies before sunset. Krishna veils the sun — and the fourteenth day keeps its word.",
+    play: "play.html?ep=12",
+  },
 ];

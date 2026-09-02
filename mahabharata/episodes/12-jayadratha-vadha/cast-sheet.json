@@ -1,0 +1,36 @@
+{
+  "episode_id": "12",
+  "notes": "Drona Parva, fourteenth day. Jayadratha-vadha. Krishna is the Ep 09 look lock (charioteer, not flute). No gore: gold shaft-light, crowned head as a disc of light into the father’s lap. Drona is field commander on the wall plate only. Vriddhakshatra is an aged Sindhu king, not a saffron sage.",
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine smile, dusty-blue skin, dark eyes, serene, U-tilak — same face as Ep 09 lock",
+      "hair": "Dark curly hair, gold crown with one peacock feather",
+      "costume": "Yellow pitambar, flower garlands, gold jewelry, charioteer reins — never a flute, never a bow"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09–11",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland"
+    },
+    "jayadratha": {
+      "face": "Adult Sindhu king, proud mustache, hard gaze — same as Ep 11 gate",
+      "hair": "Dark hair under a jeweled royal crown",
+      "costume": "Jewel-tone crimson and gold Sindhu armor, shield — field king, not a forest abductor"
+    },
+    "drona": {
+      "face": "Aged acharya-warrior, noble lined face, long white beard and mustache (guru on the field, not a garden sage)",
+      "hair": "White hair in a saffron-bound topknot, rudraksha — no Kuru silver diadem of Bhishma",
+      "costume": "Saffron angavastram over pale gold-white armor, bow of the guru, cream dhoti"
+    },
+    "vriddhakshatra": {
+      "face": "Aged Sindhu king, lined noble face, white mustache and beard — a seated father-king, not Drona, not a sage",
+      "hair": "White hair under a jeweled Sindhu crown (not saffron topknot)",
+      "costume": "Crimson and gold royal robes, seated on a low throne — never saffron acharya robes, never a bow of the guru"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore"
+    }
+  }
+}

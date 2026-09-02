@@ -10,7 +10,7 @@
 7. Per-beat plates via image_edit (first image = that 3:2 master, never a 720p file)
 8. GATE C — python3 tools/stills_review.py episodes/<id>
           + visual report (docs/GATE_C_TEMPLATE.md) vs Ep 10 vow/arrows
-9. Grok TTS orion → audio/ (or tools/render_orion_voice.sh until Orion is available)
+9. Grok TTS Orion → audio/ (`tools/render_orion_voice.sh`) — named Hindustani raga in script.js, not default flute+tabla
 10. GATE D — final install check
 11. Registry live · commit · publish-pages
 ```
@@ -74,6 +74,7 @@ image_edit
 | Ep 10 `_locks/field-master.jpg` (style spine) | Ep 01 `stills/plate-wide-gold.jpg` |
 | This episode `_locks/*-master.jpg` | Ep 10 `plate-vow.jpg` / `plate-arrows.jpg` / fall / bed unless those heroes are in `cast` |
 | `_locks/<id>.jpg` for ids in this bible’s `cast` | Any `stills/plate-*.jpg` from another episode |
+| Ep 09 `_locks/krishna.jpg` when Krishna is in `cast` (look lock) | A newly invented Krishna face |
 | | Any 1280×720 file as the **first** `image_edit` input |
 
 ## Agents
@@ -98,6 +99,8 @@ python3 tools/stills_review.py episodes/<id>
 
 ## Style master
 
-**Image:** `episodes/10-bhishma-fall/stills/_locks/field-master.jpg`  
-**Eye check:** `episodes/10-bhishma-fall/stills/plate-vow.jpg`  
-Never photoreal. Never Ep 01 gold as an image. See `STYLE.md`.
+**Canvas / density:** `episodes/10-bhishma-fall/stills/_locks/field-master.jpg`  
+**Eye check (frame):** `episodes/10-bhishma-fall/stills/plate-vow.jpg`  
+**Krishna look lock:** `episodes/09-gita/stills/_locks/krishna.jpg`  
+**Krishna eye check:** `episodes/09-gita/stills/plate-counsel.jpg`  
+Never photoreal. Never Ep 01 gold as an image. Subsequent Krishnas match Ep 09. See `STYLE.md`.

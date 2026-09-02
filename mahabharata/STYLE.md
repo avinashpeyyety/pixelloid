@@ -28,7 +28,23 @@ Ken Burns `cover`-crops 3:2 into the 16:9 player. That is intended. Do **not** g
 | **Stage** | **Carved gold-and-lotus cartouche integrated into the painting** (oval / scalloped wood). Not four lotus stickers on a cream mat |
 | **Camera** | **Heroic medium** — named cast fills the frame. Distant ranks OK in the background only |
 | **Voice** | One kathavachak (Acharya tone) |
-| **Music** | Soft flute + light tabla under dialogue |
+| **Music** | Named Hindustani raga under Orion (never default flute+tabla on Ep 09+) |
+
+
+## Krishna look lock (canonical — Ep 09)
+
+Krishna looks right in Episode 09. That face and body is the series lock. Later episodes **match it**; they do not drift.
+
+| Spec | Rule |
+|------|------|
+| **Lock image** | `episodes/09-gita/stills/_locks/krishna.jpg` — attach whenever Krishna is in `cast` |
+| **Eye check** | `episodes/09-gita/stills/plate-counsel.jpg` |
+| **Canvas** | cream–saffron–gold carved cartouche, **1536×1024**, **3:2** |
+| **Face / body** | Dusty-blue skin, youthful divine adult, dark eyes, serene smile, U-tilak |
+| **Tokens** | Gold crown + **one peacock feather**, dark curly hair, yellow **pitambar**, **flower garlands**, gold jewelry, **reins / charioteer** |
+| **Forbidden** | Photoreal, flute, bow, child Krishna, second Krishna, sage robes |
+
+Do **not** restyle Ep 01–08. Enforced from Ep 12 on (`logic_review.py`).
 
 ## Do
 
@@ -47,6 +63,7 @@ Ken Burns `cover`-crops 3:2 into the 16:9 player. That is intended. Do **not** g
 - Tiny heroes in a wide landscape as the A-shot
 - Photoreal / live-action / 3D CGI people
 - Mix 720p-cinematic and 3:2-cartouche styles in one episode
+- Invent a new Krishna — always seed from the Ep 09 lock
 
 ## Fish’s Eye apparatus (Ep 02+ lock)
 
@@ -62,7 +79,7 @@ Ken Burns `cover`-crops 3:2 into the 16:9 player. That is intended. Do **not** g
 script → cast-sheet + plate-bible (canvas 3:2, prompt_prefix, scene_lock)
       → GATE A/B  python3 tools/logic_review.py episodes/<id>/plate-bible.json --report
       → Imagine scene master at 3:2 from Ep 10 field-master (style only)
-      → Imagine solo cast locks at 3:2
+      → Imagine solo cast locks at 3:2; Krishna lock = Ep 09 `_locks/krishna.jpg`
       → per-beat plates (image_edit from those locks — never from 720p)
       → GATE C  python3 tools/stills_review.py episodes/<id>
              + visual report vs Ep 10 vow/arrows

@@ -109,6 +109,8 @@ EP01_FIGURE_REF = re.compile(
     re.I,
 )
 EP10_FIELD_MASTER = "episodes/10-bhishma-fall/stills/_locks/field-master.jpg"
+EP09_KRISHNA_LOCK = "episodes/09-gita/stills/_locks/krishna.jpg"
+KRISHNA_LOOK_FROM_EP = 12  # Ep 09 is the source; Ep 10–11 already shipped
 FINISHED_PLATE_REF = re.compile(
     r"episodes/[^/]+/stills/plate-[^/]+\.jpe?g",
     re.I,
@@ -136,6 +138,13 @@ ARJUNA_BAN_ON_SELF = re.compile(
     r"\b(flower garland|vaijayanti|peacock feather)\b",
     re.I,
 )
+KRISHNA_TOKENS = {
+    "pitambar_or_yellow": re.compile(r"\b(pitambar|yellow)\b", re.I),
+    "peacock": re.compile(r"\bpeacock\b", re.I),
+    "garland": re.compile(r"\bgarlands?\b", re.I),
+    "charioteer_or_reins": re.compile(r"\b(charioteer|reins?)\b", re.I),
+}
+KRISHNA_BAN_ON_SELF = re.compile(r"\b(flute|murali|bansuri)\b", re.I)
 DUPLICATE_HERO = re.compile(
     r"\b(two|2|duplicate|extra|second|twin)\s+(arjuna|krishna)s?\b|"
     r"\b(arjuna|krishna).{0,20}\b(twice|again as a second)\b",
@@ -291,6 +300,37 @@ def check_cast_bleed(bible: dict) -> list[str]:
             fails.append(
                 f"cast lock ref {r} is not in this episode's cast "
                 f"(would bleed {name} into plates)"
+            )
+    return fails
+
+
+def check_krishna_lock(bible: dict) -> list[str]:
+    """Ep 12+: Krishna in cast requires the Ep 09 look lock as an Imagine ref."""
+    if episode_num(bible) < KRISHNA_LOOK_FROM_EP:
+        return []
+    if "krishna" not in (bible.get("cast") or {}):
+        return []
+    fails: list[str] = []
+    refs = " ".join(
+        [
+            bible.get("krishna_look_lock_ref") or "",
+            bible.get("quality_bar_ref") or "",
+            bible.get("scene_lock_ref") or "",
+            " ".join(bible.get("imagine_refs") or []),
+        ]
+    ).replace("\\", "/")
+    if EP09_KRISHNA_LOCK not in refs:
+        fails.append(
+            "Krishna look lock: imagine_refs (or krishna_look_lock_ref) must include "
+            f"{EP09_KRISHNA_LOCK} — Ep 09 face/body, not a new Krishna"
+        )
+    spec = (bible.get("cast") or {}).get("krishna") or {}
+    blob = " ".join(str(spec.get(k) or "") for k in ("face", "hair", "costume"))
+    for token, pat in KRISHNA_TOKENS.items():
+        if not pat.search(blob):
+            fails.append(
+                f"cast.krishna missing look-lock token `{token}` "
+                "(pitambar/yellow, peacock, garland, charioteer/reins)"
             )
     return fails
 
@@ -497,6 +537,24 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool, bible: dict
                     )
                     break
 
+    if (
+        episode_num(bible) >= KRISHNA_LOOK_FROM_EP
+        and "krishna" in present
+    ):
+        blob = f"{prompt} {must_show}"
+        for token, pat in KRISHNA_TOKENS.items():
+            if not pat.search(blob):
+                fails.append(
+                    f"{pid}: Krishna look lock missing `{token}` "
+                    "(pitambar/yellow, peacock, garland, charioteer/reins — match Ep 09)"
+                )
+        for m in KRISHNA_BAN_ON_SELF.finditer(blob):
+            if not _negated(blob, m.start()):
+                fails.append(f"{pid}: Krishna must not hold a flute (Ep 09 charioteer lock)")
+                break
+        if not re.search(r"\b(photoreal)\b", must_not, re.I):
+            fails.append(f"{pid}: must_not_show must forbid photoreal (Krishna look lock)")
+
     if DUPLICATE_HERO.search(field) and not _negated(field, 0):
         # only fail if not a negation
         m = DUPLICATE_HERO.search(field)
@@ -510,6 +568,7 @@ def review(bible: dict) -> tuple[bool, list[str]]:
     fails: list[str] = []
     fails += check_style(bible)
     fails += check_canvas_bar(bible)
+    fails += check_krishna_lock(bible)
     fails += check_cast(bible)
     fails += check_cast_bleed(bible)
     fails += check_apparatus(bible)

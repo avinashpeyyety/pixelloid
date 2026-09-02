@@ -71,6 +71,8 @@
 
 **Ep 09 Arjuna lock (canonical):** gold crown, dark mustache, cream-white dhoti, quiver on back, **no flower garland**, **no saffron sage robes**.
 
+**Ep 09 Krishna look lock (canonical — series STANDARD):** `episodes/09-gita/stills/_locks/krishna.jpg`. Dusty-blue skin, youthful divine adult, gold crown + one peacock feather, yellow pitambar, flower garlands, charioteer reins. Cream–saffron–gold cartouche 1536×1024. **Not photoreal. Not a flute. Not a bow.** Ep 12+ bibles that include `krishna` must list this lock in `imagine_refs`. Later Krishnas match this face/body; they do not drift.
+
 ### 4a. Absent-cast / sage bleed — **strict**
 
 | Check | Rule |
@@ -95,6 +97,7 @@ Charming painted comic, not photoreal. Premium linework.
 | Camera | `camera` requires **heroic medium** (named cast fills the frame) |
 | Prefix | `prompt_prefix` present and names 3:2, cartouche, heroic medium |
 | Quality bar image | `imagine_refs` or `quality_bar_ref` includes Ep 10 `field-master.jpg` |
+| Krishna (Ep 12+) | `imagine_refs` includes Ep 09 `_locks/krishna.jpg` whenever `krishna` is in `cast` |
 | Mood vs image | Palette may say cream–saffron–gold in **words**. Do **not** attach Ep01 `plate-wide-gold.jpg` |
 
 **GATE C (after stills):** `python3 tools/stills_review.py episodes/<id>` must PASS. Then fill `docs/GATE_C_TEMPLATE.md` by comparing to Ep 10 `plate-vow.jpg`. A lore-correct 1280×720 plate is still a **FAIL**.

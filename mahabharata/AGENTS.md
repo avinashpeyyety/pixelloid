@@ -2,13 +2,31 @@
 
 ## Before any Imagine call
 
-1. Read `STYLE.md` (canvas bar) and `docs/WORKFLOW.md` (art factory)
+1. Read `STYLE.md` (canvas bar + **Krishna look lock**) and `docs/WORKFLOW.md` (art factory)
 2. **Canvas:** `aspect_ratio: "3:2"`, minimum **1536×1024**. Never 1280×720 / 16:9
 3. **Style image ref:** `episodes/10-bhishma-fall/stills/_locks/field-master.jpg` plus this episode’s own `_locks/*-master.jpg`
-4. **Never attach** `episodes/01-birds-eye/stills/plate-wide-gold.jpg` (Drona bleed + 720p density collapse)
-5. **Never** single-image-edit a 720p lock — output inherits 720p. 720p files may only be extra refs on a multi-image edit whose **first** image is already 3:2 / ≥1536×1024
-6. Prepend bible `prompt_prefix`. Heroic medium, carved cartouche, named figures fill the frame
-7. After stills land: `python3 tools/stills_review.py episodes/<id>` — FAIL means delete and regenerate, not “good enough”
+4. **Krishna look lock (mandatory when Krishna is in `cast`):** attach `episodes/09-gita/stills/_locks/krishna.jpg` — that face and body. Do not invent a new Krishna.
+5. **Never attach** `episodes/01-birds-eye/stills/plate-wide-gold.jpg` (Drona bleed + 720p density collapse)
+6. **Never** single-image-edit a 720p lock — output inherits 720p. 720p files may only be extra refs on a multi-image edit whose **first** image is already 3:2 / ≥1536×1024
+7. Prepend bible `prompt_prefix`. Heroic medium, carved cartouche, named figures fill the frame
+8. After stills land: `python3 tools/stills_review.py episodes/<id>` — FAIL means delete and regenerate, not “good enough”
+
+## Krishna look lock (canonical — Ep 09)
+
+**This is the visual STANDARD.** Krishna looks right in Episode 09. Subsequent episodes match that Krishna. They do not drift.
+
+| | |
+|--|--|
+| **Lock image** | `episodes/09-gita/stills/_locks/krishna.jpg` |
+| **Eye check** | `episodes/09-gita/stills/plate-counsel.jpg` |
+| **Canvas** | cream–saffron–gold carved cartouche, **1536×1024**, aspect **3:2** |
+| **Style** | comic-painted mythology / Amar Chitra — **not photoreal** |
+
+**Tokens (every plate that lists `krishna`):** dusty-blue skin, youthful divine adult (never a child), dark eyes, serene smile, U-tilak, gold crown with **one peacock feather**, dark curly hair, yellow **pitambar**, **flower garlands**, gold kundala and jewelry, **charioteer holding reins**.
+
+**Forbidden on Krishna:** flute, bow, photoreal skin, a second Krishna, a child Krishna, saffron sage robes.
+
+Attach the Ep 09 lock whenever Krishna is in `cast_present`. Do not restyle Ep 01–08 to match; the lock applies from Ep 12 on (Ep 09 is the source; Ep 10–11 are already shipped).
 
 ## Mandatory panel-logic agent
 
@@ -18,9 +36,9 @@ Before generating or shipping any plate:
 2. Ensure episode has `cast-sheet.json` + `plate-bible.json` (start from `episodes/_template/plate-bible.json`)
 3. Run: `python3 tools/logic_review.py episodes/<id>/plate-bible.json --report`
 4. Fix FAILs in the bible — do **not** invent props to “fill” the frame
-5. Generate art from **scene master** (`_locks/*-master.jpg`) + **single-figure** cast locks
+5. Generate art from **scene master** (`_locks/*-master.jpg`) + **single-figure** cast locks + **Ep 09 Krishna lock** if he is in cast
 6. After stills land, write `logic-reviews/RR-gateC-visual.md` from `docs/GATE_C_TEMPLATE.md`
-7. Ship only on full PASS (bible + stills dimensions + visual quality vs Ep 10)
+7. Ship only on full PASS (bible + stills dimensions + visual quality vs Ep 10 canvas and Ep 09 Krishna)
 
 ## Mandatory dialogue-logic agent
 
@@ -33,9 +51,9 @@ After any `script.js` beat/dialogue change:
 ## Ep 09 chariot + Arjuna (locked)
 
 - **Arjuna:** gold crown, dark mustache, cream-white dhoti, quiver — **never** Krishna’s flower garland, **never** a second Arjuna
-- **Krishna:** yellow pitambar, peacock feather, garland, **charioteer / reins**, no bow
+- **Krishna:** see **Krishna look lock** above
 - **Sage / Drona:** forbidden on every Gita plate
-- **Imagine refs:** Ep 09 `_locks/*.jpg` are now 3:2 / 1536×1024 (charioteer Krishna, not flute). Attach Ep 10 `field-master.jpg` + these locks. Never attach Ep 01 gold or Ep 10 figure plates (vow / arrows / Bhishma) unless those people are in this episode’s `cast`.
+- **Imagine refs:** Ep 09 `_locks/*.jpg` are 3:2 / 1536×1024 (charioteer Krishna, not flute). Attach Ep 10 `field-master.jpg` + Ep 09 `krishna.jpg` when he is in cast. Never attach Ep 01 gold or Ep 10 figure plates (vow / arrows / Bhishma) unless those people are in this episode’s `cast`.
 
 ## Ep 02 apparatus (locked)
 
@@ -45,11 +63,12 @@ After any `script.js` beat/dialogue change:
 
 ## Style
 
-Comic painted mythology matching **Ep 10 field-master** — carved cartouche, 3:2, heroic medium — **not** photoreal, not mixed with 720p cinematic plates in one episode.
+Comic painted mythology matching **Ep 10 field-master** (canvas/density) and **Ep 09 Krishna** (his face and body) — carved cream–saffron–gold cartouche, 3:2, heroic medium — **not** photoreal, not mixed with 720p cinematic plates in one episode.
 
 ## Player / craft
 
-- **Underscore:** Web Audio RagaBed in js/main.js. Ep 09 Bhairav (no tabla), Ep 10 Darbari, Ep 11 Megh+Jhaptal. Tanpura floor, duck under Orion. No cinematic trailer score, no licensed film music. Other episodes keep the default flute+tabla preset.
+- **Voice:** Grok TTS **Orion** (24 kHz / 128 kbps). No Aman fallback on new episodes.
+- **Underscore:** Web Audio RagaBed in js/main.js. Named Hindustani raga per episode — Ep 09 Bhairav (no tabla), Ep 10 Darbari, Ep 11 Megh+Jhaptal, Ep 12 Marwa (sunset, no Pa, no tabla). Tanpura floor, duck under Orion. No cinematic trailer score, no licensed film music. **Do not regress new episodes to the default flute+tabla preset** (that preset is only for grandfathered Ep 01–08).
 
 ## Per-repo habit
 

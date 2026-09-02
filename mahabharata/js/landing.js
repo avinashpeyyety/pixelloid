@@ -1,4 +1,4 @@
-import { EPISODES } from "./episodes.js?v=ep11-chakravyuha";
+import { EPISODES } from "./episodes.js?v=ep12-orion";
 
 const grid = document.getElementById("ep-grid");
 if (grid) {

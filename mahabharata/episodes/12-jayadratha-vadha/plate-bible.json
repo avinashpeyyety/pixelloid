@@ -1,0 +1,431 @@
+{
+  "episode_id": "12",
+  "strict_hero_lock": "arjuna",
+  "title": "Jayadratha Falls",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold sacred hour; refined linework; Ep 10 field-master density; Krishna face/body locked to Ep 09",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/12-jayadratha-vadha/stills/_locks/field14-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/12-jayadratha-vadha/stills/_locks/field14-master.jpg",
+    "episodes/12-jayadratha-vadha/stills/_locks/arjuna.jpg",
+    "episodes/12-jayadratha-vadha/stills/_locks/jayadratha.jpg",
+    "episodes/12-jayadratha-vadha/stills/_locks/drona.jpg",
+    "episodes/12-jayadratha-vadha/stills/_locks/vriddhakshatra.jpg"
+  ],
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine smile, dusty-blue skin, dark eyes, serene, U-tilak — same face as Ep 09 lock",
+      "hair": "Dark curly hair, gold crown with one peacock feather",
+      "costume": "Yellow pitambar, flower garlands, gold jewelry, charioteer reins — never a flute, never a bow"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09–11",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland"
+    },
+    "jayadratha": {
+      "face": "Adult Sindhu king, proud mustache, hard gaze — same as Ep 11 gate",
+      "hair": "Dark hair under a jeweled royal crown",
+      "costume": "Jewel-tone crimson and gold Sindhu armor, shield — field king, not a forest abductor"
+    },
+    "drona": {
+      "face": "Aged acharya-warrior, noble lined face, long white beard and mustache (guru on the field, not a garden sage)",
+      "hair": "White hair in a saffron-bound topknot, rudraksha — no Kuru silver diadem of Bhishma",
+      "costume": "Saffron angavastram over pale gold-white armor, bow of the guru, cream dhoti"
+    },
+    "vriddhakshatra": {
+      "face": "Aged Sindhu king, lined noble face, white mustache and beard — a seated father-king, not Drona, not a sage",
+      "hair": "White hair under a jeweled Sindhu crown (not saffron topknot)",
+      "costume": "Crimson and gold royal robes, seated on a low throne — never saffron acharya robes, never a bow of the guru"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "Dawn of the fourteenth. Arjuna’s vow hangs over the field: Jayadratha dies before sunset, or I do.",
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva — no flower garland",
+        "Dawn Kurukshetra, two distant armies as tiny ranks only, cream-saffron sky"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Drona",
+        "white-bearded sage",
+        "Jayadratha",
+        "second Arjuna"
+      ],
+      "props": [
+        "chariot",
+        "reins",
+        "Gandiva",
+        "banners distant"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna and Krishna on the dawn chariot, cream-saffron-gold hour. Krishna dusty-blue skin, gold crown with one peacock feather, yellow pitambar, flower garlands, holding charioteer reins — match Ep 09 Krishna exactly. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva. Distant banners only. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore."
+    },
+    {
+      "id": "vow",
+      "file": "plate-vow.jpg",
+      "beat_text": "Krishna takes the reins. They drive into the host — the Sindhu king is hidden behind a wall of men.",
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Arjuna gold crown, dark mustache, cream-white dhoti, quiver — no flower garland",
+        "Krishna driving, reins taut, chariot plunging toward a wall of distant ranks"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Drona",
+        "white-bearded sage",
+        "Jayadratha",
+        "second Krishna"
+      ],
+      "props": [
+        "chariot",
+        "reins",
+        "Gandiva"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna as charioteer takes the reins; Arjuna beside him, cream-white dhoti, gold crown, dark mustache, quiver. Krishna dusty-blue, yellow pitambar, peacock feather, flower garlands, reins in both hands — Ep 09 look lock. They drive into a wall of distant warriors. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore."
+    },
+    {
+      "id": "wall",
+      "file": "plate-wall.jpg",
+      "beat_text": "Drona holds that wall. Jayadratha waits in the rear, beyond every gold shaft.",
+      "cast_present": [
+        "drona",
+        "jayadratha"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Drona acharya-warrior: white beard and mustache, saffron angavastram, pale gold-white armor, bow of the guru",
+        "Jayadratha Sindhu king in the rear: jeweled crown, crimson-gold armor, proud mustache",
+        "A living wall of distant ranks between them and the viewer"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Krishna",
+        "Arjuna",
+        "peacock feather on Drona"
+      ],
+      "props": [
+        "Drona's bow",
+        "Jayadratha's shield",
+        "ranks"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona the acharya-warrior holds a living wall of men, saffron angavastram over pale gold-white engraved armor, long white beard, saffron topknot, bow of the guru. Behind him Jayadratha the Sindhu king waits: jeweled royal crown, crimson-gold armor, proud mustache, shield. Not a garden sage. Not Krishna. Not Arjuna. Carved gold-and-lotus cartouche, cream-saffron-gold hour. Not photoreal. No gore."
+    },
+    {
+      "id": "hunt",
+      "file": "plate-hunt.jpg",
+      "beat_text": "Krishna cuts a path. Arjuna’s arrows clear the ranks — and still the king of Sindhu is not seen.",
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva drawn — no flower garland",
+        "Gold shafts as light, not blood; distant ranks parting"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Drona",
+        "white-bearded sage",
+        "Jayadratha"
+      ],
+      "props": [
+        "Gandiva",
+        "gold shafts",
+        "chariot",
+        "reins"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna charioteer (dusty-blue, yellow pitambar, peacock feather, flower garlands, reins — Ep 09 lock) cuts a path; Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva loosing gold shafts of light through parting distant ranks. No Jayadratha in frame. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore."
+    },
+    {
+      "id": "dusk",
+      "file": "plate-dusk.jpg",
+      "beat_text": "The sun leans west. The vow grows thin. Jayadratha still lives.",
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Arjuna gold crown, dark mustache, cream-white dhoti, looking west at a leaning saffron sun",
+        "Krishna calm at the reins, yellow pitambar, peacock feather, flower garlands"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Drona",
+        "white-bearded sage",
+        "Jayadratha"
+      ],
+      "props": [
+        "chariot",
+        "reins",
+        "leaning sun"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna and Krishna on the chariot as the sun leans west, cream-saffron dusk. Krishna dusty-blue, gold crown, one peacock feather, yellow pitambar, flower garlands, charioteer reins — Ep 09 look lock. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, gaze on the sun. Tension without gore. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No Jayadratha."
+    },
+    {
+      "id": "veil",
+      "file": "plate-veil.jpg",
+      "beat_text": "Krishna raises his disc. A false dusk covers the field — and Jayadratha comes forth to laugh.",
+      "cast_present": [
+        "krishna",
+        "arjuna",
+        "jayadratha"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Krishna raising a gold disc that veils the sun — false dusk, still cream-saffron-gold",
+        "Arjuna gold crown, dark mustache, cream-white dhoti, quiver",
+        "Jayadratha coming forth: jeweled crown, crimson-gold armor, proud laugh, not yet struck"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Drona",
+        "white-bearded sage",
+        "second Krishna",
+        "blood"
+      ],
+      "props": [
+        "sudarshana disc",
+        "reins",
+        "chariot",
+        "Jayadratha's shield"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna (dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer — Ep 09 lock) raises a gold disc that veils the sun; a false dusk. Arjuna gold crown, dark mustache, cream-white dhoti, quiver. Jayadratha the Sindhu king comes forth to laugh, jeweled crown, crimson-gold armor. No blood. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute."
+    },
+    {
+      "id": "reveal",
+      "file": "plate-reveal.jpg",
+      "beat_text": "The disc falls. The sun still stands. The Sindhu king is exposed.",
+      "cast_present": [
+        "arjuna",
+        "krishna",
+        "jayadratha"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Sun revealed again in cream-saffron sky; Krishna's disc lowered, reins in hand",
+        "Arjuna gold crown, dark mustache, cream-white dhoti, Gandiva raised",
+        "Jayadratha exposed, jeweled crown, crimson-gold armor, shock not gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Drona",
+        "white-bearded sage",
+        "severed head",
+        "blood"
+      ],
+      "props": [
+        "Gandiva",
+        "reins",
+        "sun",
+        "disc lowered"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna (Ep 09 lock: dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins) lowers the disc; the sun still stands. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva raised. Jayadratha exposed, jeweled crown, crimson-gold armor — shock, not wounds. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore."
+    },
+    {
+      "id": "shaft",
+      "file": "plate-shaft.jpg",
+      "beat_text": "Arjuna looses. The arrow carries the crowned head as gold light into his father’s lap.",
+      "cast_present": [
+        "arjuna",
+        "jayadratha",
+        "vriddhakshatra"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva loosing a gold shaft of light",
+        "Jayadratha's jeweled crown travelling as a disc of gold light — not a bloody severed neck",
+        "Vriddhakshatra: aged Sindhu father-king, white hair, jeweled crown, crimson-gold royal robes, seated, receiving the disc of light in his lap — not Drona, not a saffron sage"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Drona",
+        "white-bearded sage",
+        "Krishna",
+        "severed neck",
+        "blood spray",
+        "Drona as the father"
+      ],
+      "props": [
+        "Gandiva",
+        "gold shaft-light",
+        "Sindhu throne"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva loosing a gold shaft of light. The Sindhu king's jeweled crown travels as a disc of gold light into the lap of an aged father-king (Vriddhakshatra): white hair, jeweled Sindhu crown, crimson-gold royal robes, seated — not a saffron sage, not Drona. No blood, no severed neck, no gore. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No flute."
+    },
+    {
+      "id": "wide-gold",
+      "file": "plate-wide-gold.jpg",
+      "beat_text": "Thus the fourteenth day ends. Jayadratha falls — and a kept word outlives the sun.",
+      "cast_present": [
+        "arjuna",
+        "krishna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Arjuna gold crown, dark mustache, cream-white dhoti, quiver, bow at rest",
+        "True dusk cream-saffron-gold; vow kept, quiet field"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Drona",
+        "white-bearded sage",
+        "Jayadratha corpse",
+        "second Arjuna"
+      ],
+      "props": [
+        "chariot",
+        "reins",
+        "Gandiva at rest"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna and Krishna on the chariot at true dusk after the vow. Krishna dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins — Ep 09 look lock. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva at rest. Cream-saffron-gold quiet. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore. No corpse."
+    }
+  ]
+}

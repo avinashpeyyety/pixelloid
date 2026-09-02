@@ -8,7 +8,7 @@ Run first:
 python3 tools/stills_review.py episodes/01-birds-eye --require
 ```
 
-`stills_review` PASS — 14 JPEGs, 1536×1024 3:2. Poster is a copy of `plate-eye.jpg`.
+`stills_review` PASS — 14 jpegs, 1536×1024, 3:2.
 
 ## Canvas / factory
 
@@ -16,40 +16,37 @@ python3 tools/stills_review.py episodes/01-birds-eye --require
 |-------|--------|
 | Every still + lock ≥ 1536×1024, aspect ~3:2 | PASS |
 | No 1280×720 file used as first `image_edit` input | PASS |
-| Imagine refs = scene master + solo locks + Ep 10 `field-master.jpg` + Ep 09 Arjuna lock | PASS |
-| Every named face has `stills/_locks/<id>.jpg` (series 09/10 or local) | PASS (arjuna / drona / yudhishthira) |
-| Ep01 `plate-wide-gold.jpg` **not** attached as a ref | PASS |
+| Imagine refs = scene master + solo locks + Ep 10 `field-master.jpg` | PASS |
+| Every named face has `stills/_locks/<id>.jpg` (local youth for Arjuna/Yudhishthira; local Drona) | PASS |
+| Ep01 `plate-wide-gold.jpg` **not** attached as Imagine style ref | PASS |
 
 ## Quality vs Ep 10 bar
-
-Open `episodes/10-bhishma-fall/stills/plate-vow.jpg` and `plate-arrows.jpg` beside each new plate.
 
 | Check | Result |
 |-------|--------|
 | Frame | PASS — carved gold-and-lotus cartouche integrated |
 | Camera | PASS — named heroes fill the frame |
-| Line | PASS — painted comic, cream-saffron-gold, not photoreal |
-| Cast | PASS — Drona saffron/no gold crown; Arjuna Ep 09 tokens |
-| Krishna | n/a — not on this field |
-| Arjuna | PASS vs Ep 09 counsel/lock tokens: gold crown, dark mustache, cream-white dhoti, quiver; no gold cuirass, no peacock, no flower garland on archery plates |
-| Bhishma / Shikhandi | n/a |
-| Drift | PASS — same Drona/Arjuna tokens across regen plates |
-| Spatial aim | PASS after eye check (see per plate) |
+| Line | PASS — painted comic / Amar Chitra, not photoreal |
+| Cast | PASS — Drona only where listed; no Krishna; no peacock on Arjuna |
+| Spatial aim | PASS — bow, arrow, gaze, and far bird on one line (drona, arjuna-bow, eye, release) |
+| Distant bird (Ep 01) | PASS — high in the canopy, small in the frame, many metres away; not perched next to the archer |
+| Gurukul youth (Ep 01) | PASS — Arjuna/Yudhishthira are teenage princes, slighter/shorter than adult Drona; cream-white dhoti; simple circlet; no heavy mukut, no gold cuirass on the princes, no peacock, no Krishna garland. 09/10 used as palette/costume language only; local `_locks/arjuna.jpg` and `_locks/yudhishthira.jpg` are youth portraits, not Ep 09 battle-aged copies |
 | Lock file | PASS |
 
 ## Per plate
 
 | Plate | Cast | Canvas | Frame | Camera | Notes |
 |-------|------|--------|-------|--------|-------|
-| wide | Drona | PASS | PASS | PASS | Bird high in tree; extras' bows lowered; Drona saffron, no gold crown |
-| drona | Drona | PASS | PASS | PASS | Points UP at high bird; gaze/finger/bird on one line; bow at side not a horizontal miss; no extras aiming |
-| yudhishthira | Yudhishthira | PASS | PASS | PASS | Looks UP at the bird; bow at rest (beat is seeing tree/guru/brothers/bird, not tunnel-aim); simple diadem, cream dhoti |
-| aside | Drona | PASS | PASS | PASS | Dismissing a pupil; no drawn bows; Drona no gold crown |
-| arjuna-bow | Arjuna | PASS | PASS | PASS | **Spatial PASS** — elevated Gandiva, arrow/gaze/bird on one diagonal; Ep 09 costume (no cuirass, no garland) |
-| eye | Arjuna | PASS | PASS | PASS | **Spatial PASS** — arrow elevated at the bird's head; cream-white dhoti; extras not aiming |
-| loose | Drona | PASS | PASS | PASS | Command to shoot; finger/gaze on the high bird; extras not aiming |
-| release | Arjuna | PASS | PASS | PASS | **Spatial PASS** — loosed shaft + gold-dust path on one line to the bird's head; Ep 09 costume |
-| wide-gold | Drona + Arjuna | PASS | PASS | PASS | Embrace; Arjuna cream-white dhoti + gold crown + quiver, no cuirass; Drona no gold crown |
+| wide | Drona + distant youth princes | PASS | PASS | PASS | Tiny bird high in FAR canopy |
+| drona | Drona + youth pupils | PASS | PASS | PASS | Aim line to distant canopy bird |
+| yudhishthira | youth Yudhishthira | PASS | PASS | PASS | Youth; bird a small distant canopy mark |
+| aside | Drona dismissing a shorter pupil | PASS | PASS | PASS | Height: guru vs youth |
+| arjuna-bow | youth Arjuna | PASS | PASS | PASS | Cream dhoti, circlet; bow/gaze/FAR bird one line |
+| eye | youth Arjuna | PASS | PASS | PASS | Same youth; tiny far bird-head |
+| loose | Drona | PASS | PASS | PASS | Command beat |
+| release | youth Arjuna | PASS | PASS | PASS | Shaft line to far bird; gold dust; no gore |
+| wide-gold | Drona (taller) holds youth Arjuna | PASS | PASS | PASS | Obvious height gap; youth no cuirass |
+| poster | copy of eye | PASS | PASS | PASS | |
 
 ## Strict checks
 
@@ -57,10 +54,10 @@ Open `episodes/10-bhishma-fall/stills/plate-vow.jpg` and `plate-arrows.jpg` besi
 - [x] No Drona / saffron sage unless `cast_present`
 - [x] No graphic gore
 - [x] No 16:9 / 720p plates
-- [x] Eye-match to Ep 10 vow (density), not old 720p Ep 01 gold
-- [x] Krishna (if present) eye-matches Ep 09 lock — n/a
-- [x] Arjuna / Bhishma / Shikhandi (if present) eye-match Ep 09/10 locks
-- [x] No invented face; no missing lock; no jewelry/skin/crown/body-type drift
+- [x] Eye-match to Ep 10 vow (density), not Ep 01 gold as style ref
+- [x] Krishna not on this field
+- [x] **Gurukul youth PASS (eye check):** princes are not battle-aged Ep 09/10 adults
+- [x] **Distant bird PASS (eye check):** target is far/high/small in the canopy
+- [x] **Spatial aim PASS (eye check):** bow, arrow, gaze, and that far bird on one line
 - [x] Spoken line’s speaker and action are the figures/props on this still (GATE D)
-- [x] **Spatial aim:** if anyone aims at a bird/target, bow, arrow, gaze, and target are on one line — FAIL a horizontal miss under a high bird
-- [x] **Character lock:** each named face/body matches the Ep 09/10 (or local) lock on every plate — no jewelry/skin/crown/armor drift
+- [x] Character lock: youth identity stable across Arjuna plates; Drona adult throughout

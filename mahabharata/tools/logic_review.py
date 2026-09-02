@@ -355,6 +355,14 @@ def check_series_face_locks(bible: dict) -> list[str]:
     fails: list[str] = []
     refs = _imagine_ref_blob(bible)
     for cid in sorted(faces_on_plates(bible)):
+        if bible.get("age_register") == "gurukul_youth" and cid in ("arjuna", "yudhishthira"):
+            needle = f"_locks/{cid}.jpg"
+            if needle not in refs.lower():
+                fails.append(
+                    f"gurukul-youth: `{cid}` must use this episode's stills/_locks/{cid}.jpg "
+                    "(09/10 is palette/costume language only — do not paste battle-aged Ep 09 face)"
+                )
+            continue
         if cid in SERIES_FACE_LOCKS:
             lock = SERIES_FACE_LOCKS[cid]
             if lock not in refs:
@@ -583,6 +591,57 @@ def check_spatial_aim(bible: dict) -> list[str]:
                 f"{pid}: spatial FAIL — prompt/must_show must require bow, arrow, gaze, "
                 "and target on one line (no horizontal miss under a high bird)"
             )
+        dist = str(geom.get("target_distance") or "").lower()
+        if epn == 1 or bible.get("age_register") == "gurukul_youth":
+            if dist not in ("far", "distant", "high_distant"):
+                fails.append(
+                    f"{pid}: distance FAIL — aim_geometry.target_distance must be far/distant/high_distant "
+                    "(bird not next to the archer)"
+                )
+            if not re.search(
+                r"distant|far off|far (away|up)|high in the (tree|canopy)|small in (the )?(far |upper )?(frame|distance|canopy)|many metres",
+                blob,
+                re.I,
+            ):
+                fails.append(
+                    f"{pid}: distance FAIL — prompt/must_show must place the bird far/high/small in the canopy, "
+                    "not at arm's length"
+                )
+    return fails
+
+
+YOUTH_OK = re.compile(r"\b(youth|youths|young prince|teenage|teen|gurukul youth|boy-prince|adolescent)\b", re.I)
+ADULT_BATTLE_BAN = re.compile(
+    r"same face as Ep 09|battle-aged|adult warrior|Ep 09 lock face|heavy (adult )?mustache|battle bulk",
+    re.I,
+)
+
+
+def check_youth_princes(bible: dict) -> list[str]:
+    """Ep 01 gurukul: Pandavas are youths. 09/10 locks = palette only, not adult age."""
+    fails: list[str] = []
+    if episode_num(bible) != 1 and bible.get("age_register") != "gurukul_youth":
+        return fails
+    if bible.get("age_register") != "gurukul_youth":
+        fails.append("age_register must be gurukul_youth for the bird-eye gurukul (princes are youths, not Ep 09/10 adults)")
+    cast = bible.get("cast") or {}
+    for cid in ("arjuna", "yudhishthira"):
+        spec = cast.get(cid) or {}
+        blob = " ".join(str(spec.get(k) or "") for k in ("face", "hair", "costume"))
+        if not YOUTH_OK.search(blob):
+            fails.append(f"cast.{cid} must read as a gurukul youth (not battle-aged Ep 09/10 adult)")
+        if ADULT_BATTLE_BAN.search(blob) and not re.search(r"\bnot\b.{0,20}adult|\bnot\b.{0,20}battle", blob, re.I):
+            fails.append(f"cast.{cid} must not paste Ep 09/10 battle-aged face")
+    for plate in bible.get("plates") or []:
+        present = set(plate.get("cast_present") or [])
+        if not present.intersection({"arjuna", "yudhishthira"}):
+            continue
+        pid = plate.get("id") or "?"
+        field = f"{plate.get('prompt') or ''} {' '.join(plate.get('must_show') or [])}"
+        if not YOUTH_OK.search(field):
+            fails.append(f"{pid}: youth FAIL — prince on plate must be specified as gurukul youth, shorter/slighter than Drona")
+        if not re.search(r"shorter than Drona|slighter than Drona|not (an )?adult warrior|not battle-aged", field, re.I):
+            fails.append(f"{pid}: youth FAIL — prompt must say shorter/slighter than Drona, not an adult warrior")
     return fails
 
 
@@ -751,10 +810,15 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool, bible: dict
                 f"{pid}: must_not_show must forbid Drona / white-bearded sage "
                 "(not in cast_present)"
             )
-        for m in SAGE_PRESENT.finditer(prompt + " " + must_show):
-            if not _negated(prompt + " " + must_show, m.start()):
-                fails.append(f"{pid}: sage/Drona appears in positive spec but not in cast_present")
-                break
+        blob_pos = prompt + " " + must_show
+        for m in SAGE_PRESENT.finditer(blob_pos):
+            if _negated(blob_pos, m.start()):
+                continue
+            before = blob_pos[max(0, m.start() - 40) : m.start()]
+            if re.search(r"(shorter|slighter|smaller|younger)\s+than\s+$", before, re.I):
+                continue
+            fails.append(f"{pid}: sage/Drona appears in positive spec but not in cast_present")
+            break
 
     # Arjuna continuity — strict on episodes that set strict_hero_lock, and from Ep 12+
     bible = bible or {}
@@ -830,6 +894,7 @@ def review(bible: dict) -> tuple[bool, list[str]]:
     fails += check_cast_bleed(bible)
     fails += check_apparatus(bible)
     fails += check_spatial_aim(bible)
+    fails += check_youth_princes(bible)
     cast_ids = set((bible.get("cast") or {}).keys())
     apparatus_on = bool(bible.get("apparatus"))
     plates = bible.get("plates") or []

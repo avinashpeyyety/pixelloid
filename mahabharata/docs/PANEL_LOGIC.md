@@ -61,6 +61,12 @@ If a panel shows an archer aiming at a bird, fish, or any named target:
 
 GATE B encodes this in `logic_review.check_spatial_aim`. GATE C is the eye check on the still.
 
+### 2c. Gurukul youth + distant target (Ep 01 bird test) — **strict**
+
+Pāṇḍavas at Drona’s bird test are **youths**, not Kurukshetra adults. Ep 09/10 locks are **palette/costume language** (cream-white dhoti, no peacock on Arjuna) — do **not** paste battle-aged faces or adult bulk. Drona is the adult; princes are shorter/slighter.
+
+The bird is a **distant** lakṣya: high in the tree, small in the frame, many metres away. FAIL a bird perched next to the archer. Aim line still required.
+
 ### 3a. Aim geometry (aim beats)
 
 | Half | Direction | Meaning |

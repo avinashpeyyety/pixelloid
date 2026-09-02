@@ -58,5 +58,7 @@ Open `episodes/10-bhishma-fall/stills/plate-vow.jpg` and `plate-arrows.jpg` besi
 - [ ] Arjuna / Bhishma / Shikhandi (if present) eye-match Ep 09/10 locks
 - [ ] No invented face; no missing lock; no jewelry/skin/crown/body-type drift
 - [ ] Spoken line’s speaker and action are the figures/props on this still (GATE D)
-- [ ] **Spatial aim:** if anyone aims at a bird/target, bow, arrow, gaze, and target are on one line — FAIL a horizontal miss under a high bird
-- [ ] **Character lock:** each named face/body matches the Ep 09/10 (or local) lock on every plate — no jewelry/skin/crown/armor drift
+- [ ] **Spatial aim:** bow, arrow, gaze, and target on one line
+- [ ] **Distant bird (Ep 01):** target is far/high/small in the canopy — FAIL if perched next to the archer
+- [ ] **Gurukul youth (Ep 01):** Pandavas younger/slighter than Drona — FAIL battle-aged Ep 09/10 adult faces. 09/10 = palette/costume only
+- [ ] **Character lock:** jewelry/skin/crown/body type stable across plates in this episode

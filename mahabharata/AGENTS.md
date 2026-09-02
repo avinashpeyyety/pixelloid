@@ -52,7 +52,8 @@ Before generating or shipping any plate:
 5. Generate art from **scene master** (`_locks/*-master.jpg`) + **single-figure** cast locks + **Ep 09/10 series locks** for every named face that has one
 6. After stills land, write `logic-reviews/RR-gateC-visual.md` from `docs/GATE_C_TEMPLATE.md`
 7. Ship only on full PASS (bible + stills dimensions + visual quality vs Ep 10 canvas and Ep 09/10 character models + source gate)
-8. If a panel shows an archer aiming at a bird/target, bow, arrow, gaze, and target must line up — fail the plate if they don’t. Character locks from Ep 09/10 on every plate.
+8. If a panel shows an archer aiming at a bird/target, bow, arrow, gaze, and target must line up — fail the plate if they don’t.
+9. **Ep 01 gurukul:** princes are youths (shorter/slighter than Drona). Ep 09/10 locks = palette/costume only — do not paste battle-aged Arjuna/Yudhishthira. The bird is a distant high target, not next to the archer.
 
 ## Mandatory dialogue-logic agent
 

@@ -2,7 +2,7 @@
   "episode_id": "01",
   "strict_hero_lock": "arjuna",
   "title": "The Bird's Eye",
-  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Arjuna face locked to Ep 09",
+  "style_lock": "Premium painted comic / Amar Chitra; cream-saffron-gold cartouche; Ep 10 field-master density; Ep 09/10 is palette/costume language only — princes are gurukul YOUTHS, not battle-aged Ep 09/10 adults",
   "canvas": {
     "width": 1536,
     "height": 1024,
@@ -17,7 +17,6 @@
   "scene_lock_ref": "episodes/01-birds-eye/stills/_locks/garden-master.jpg",
   "imagine_refs": [
     "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
-    "episodes/09-gita/stills/_locks/arjuna.jpg",
     "episodes/01-birds-eye/stills/_locks/garden-master.jpg",
     "episodes/01-birds-eye/stills/_locks/drona.jpg",
     "episodes/01-birds-eye/stills/_locks/yudhishthira.jpg",
@@ -43,17 +42,17 @@
       "costume": "Saffron angavastram over pale cream dhoti, staff or bow of the guru"
     },
     "arjuna": {
-      "face": "Noble warrior prince, dark mustache, same face as Ep 09 lock",
-      "hair": "Gold crown over dark hair",
-      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland, never peacock"
+      "face": "Gurukul youth, teenage Pandava prince, slighter than Drona, smooth young face, light youthful mustache or none — NOT the battle-aged Ep 09 adult",
+      "hair": "Dark hair, simple gold youth-circlet (not a heavy battle mukut)",
+      "costume": "Cream-white dhoti, gold belt, quiver — never flower garland, never peacock, never gold cuirass"
     },
     "yudhishthira": {
-      "face": "Eldest Pandava king-in-training, calm noble face, modest mustache — distinct from Arjuna, never a second Arjuna",
-      "hair": "Dark hair, simple gold diadem (lighter than Arjuna’s heavy crown), no peacock feather",
-      "costume": "Cream-white royal dhoti, gold sash, no Gandiva, no flower garland"
+      "face": "Gurukul youth, eldest boy-prince, calm young face, modest or no mustache — distinct from Arjuna, NOT an adult king, not battle-aged",
+      "hair": "Dark hair, simple gold diadem, no peacock",
+      "costume": "Cream-white dhoti, gold sash, no Gandiva, no flower garland"
     },
     "armies": {
-      "face": "Fellow princes distant",
+      "face": "Fellow gurukul youths, distant, shorter than Drona",
       "hair": "Helmets or unbound youth",
       "costume": "Muted banners, equal human scale, no gore"
     }
@@ -75,7 +74,8 @@
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
         "Drona acharya-warrior: white beard and mustache, saffron angavastram, cream dhoti, heroic medium",
-        "Hastināpura garden, cream-saffron-gold, a small artisan bird high on a tree, distant princes only"
+        "Hastināpura garden, cream-saffron-gold, a small artisan bird high on a tree, distant princes only",
+        "Artisan bird far/high/small in the canopy, many metres away"
       ],
       "must_not_show": [
         "Photoreal",
@@ -96,7 +96,7 @@
         "artisan bird on a tree",
         "garden"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona the acharya-warrior in a Hastināpura garden, saffron angavastram, long white beard, saffron topknot. A small artisan bird sits high on a tree. Distant princes only. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Krishna. No flute. No gore.",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona the acharya-warrior in a Hastināpura garden, saffron angavastram, long white beard, saffron topknot. A small artisan bird sits high on a tree. Distant princes only. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Krishna. No flute. No gore. Small artisan bird FAR UP in the tree canopy, not next to anyone.",
       "sources": [
         {
           "work": "bori",
@@ -128,7 +128,8 @@
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
         "Drona acharya-warrior: white beard and mustache, saffron angavastram, pointing toward the bird in the tree",
-        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot"
+        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot",
+        "Artisan bird far/high/small in the canopy, many metres away, not next to the archer"
       ],
       "must_not_show": [
         "Photoreal",
@@ -149,7 +150,7 @@
         "bows",
         "artisan bird"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Drona, white beard and mustache, saffron angavastram, cream dhoti, pointing at a small artisan bird high in a tree. Bows ready. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No Arjuna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Drona has NO gold crown and is NOT Bhishma (no silver Kuru diadem).",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Drona, white beard and mustache, saffron angavastram, cream dhoti, pointing at a small artisan bird high in a tree. Bows ready. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No Arjuna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Drona has NO gold crown and is NOT Bhishma (no silver Kuru diadem). The artisan bird is FAR — high in the distant canopy, small in the frame, many metres away, NOT perched next to the archer. Bow, arrow, and gaze still on ONE line to that far bird.",
       "sources": [
         {
           "work": "bori",
@@ -169,7 +170,8 @@
         "target": "artisan_bird_in_tree",
         "bow_points_at_target": true,
         "gaze_at_target": true,
-        "note": "Drona points at the bird; any drawn bow in frame also points at the bird, not horizontally past it."
+        "note": "Drona points at the bird; any drawn bow in frame also points at the bird, not horizontally past it.",
+        "target_distance": "high_distant"
       },
       "requires_spatial_aim": true
     },
@@ -189,7 +191,8 @@
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
         "Yudhishthira eldest Pandava, simple gold diadem, cream-white royal dhoti, modest mustache, bow drawn, looking at more than the bird",
-        "tree and artisan bird visible"
+        "tree and artisan bird visible",
+        "Gurukul youth prince, slighter and shorter than Drona, not battle-aged adult"
       ],
       "must_not_show": [
         "Photoreal",
@@ -205,14 +208,17 @@
         "severed flesh",
         "Arjuna",
         "Drona as a second king",
-        "Bhishma"
+        "Bhishma",
+        "battle-aged Ep 09 Arjuna",
+        "adult warrior bulk",
+        "gold cuirass"
       ],
       "props": [
         "bow",
         "tree",
         "artisan bird"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Yudhishthira, eldest dharma-prince, simple gold diadem, cream-white royal dhoti, gold sash, modest mustache, bow drawn, eyes wide on tree and bird. Not Arjuna, no heavy crown, no Gandiva, no peacock, no flower garland. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Yudhishthira, eldest dharma-prince, simple gold diadem, cream-white royal dhoti, gold sash, modest mustache, bow drawn, eyes wide on tree and bird. Not Arjuna, no heavy crown, no Gandiva, no peacock, no flower garland. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore. Gurukul YOUTH prince: teenage, slighter and shorter than Drona, not an adult warrior, not battle-aged Ep 09/10 face. Cream-white dhoti palette (costume language from 09), simple youth circlet.",
       "sources": [
         {
           "work": "bori",
@@ -294,8 +300,10 @@
         "Heroic medium — named figures fill the frame",
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
-        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva drawn, no flower garland, no peacock",
-        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot"
+        "Gurukul youth Arjuna: simple gold diadem (not heavy battle mukut), light youthful mustache, cream-white dhoti, quiver, Gandiva drawn, no flower garland, no peacock",
+        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot",
+        "Gurukul youth prince, slighter and shorter than Drona, not battle-aged adult",
+        "Artisan bird far/high/small in the canopy, many metres away, not next to the archer"
       ],
       "must_not_show": [
         "Photoreal",
@@ -310,15 +318,17 @@
         "blood",
         "severed flesh",
         "Drona",
-        "Krishna",
         "flower garland on Arjuna",
-        "Bhishma"
+        "Bhishma",
+        "battle-aged Ep 09 Arjuna",
+        "adult warrior bulk",
+        "gold cuirass"
       ],
       "props": [
         "Gandiva",
         "drawn bow"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, gold belt, quiver on back, Gandiva drawn to the ear, waiting. No flower garland, no peacock feather. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Arjuna matches Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, NO gold cuirass, NO pearl pile, NO peacock.",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one GURUKUL YOUTH Arjuna: teenage prince, simple gold diadem, light youthful mustache or none, cream-white dhoti, gold belt, quiver on back, Gandiva drawn to the ear, waiting. No flower garland, no peacock feather. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Youth palette only from 09: cream-white dhoti, quiver, NO gold cuirass, NO pearl pile, NO peacock, NO heavy battle mukut. Gurukul YOUTH prince: teenage, slighter and shorter than Drona, not an adult warrior, not battle-aged Ep 09/10 face. Cream-white dhoti palette (costume language from 09), simple youth circlet. The artisan bird is FAR — high in the distant canopy, small in the frame, many metres away, NOT perched next to the archer. Bow, arrow, and gaze still on ONE line to that far bird.",
       "sources": [
         {
           "work": "bori",
@@ -338,7 +348,8 @@
         "target": "artisan_bird_in_tree",
         "bow_points_at_target": true,
         "gaze_at_target": true,
-        "note": "Drawn Gandiva, nocked arrow, eyes, and bird on one straight line."
+        "note": "Drawn Gandiva, nocked arrow, eyes, and bird on one straight line.",
+        "target_distance": "high_distant"
       },
       "requires_spatial_aim": true
     },
@@ -357,9 +368,11 @@
         "Heroic medium — named figures fill the frame",
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
-        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, aiming",
+        "Gurukul youth Arjuna: simple gold diadem (not heavy battle mukut), light youthful mustache, cream-white dhoti, quiver, aiming",
         "the artisan bird’s head as the only clear target",
-        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot"
+        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot",
+        "Gurukul youth prince, slighter and shorter than Drona, not battle-aged adult",
+        "Artisan bird far/high/small in the canopy, many metres away, not next to the archer"
       ],
       "must_not_show": [
         "Photoreal",
@@ -374,15 +387,17 @@
         "blood",
         "severed flesh",
         "Drona",
-        "Krishna",
         "flower garland on Arjuna",
-        "Bhishma"
+        "Bhishma",
+        "battle-aged Ep 09 Arjuna",
+        "adult warrior bulk",
+        "gold cuirass"
       ],
       "props": [
         "Gandiva",
         "bird head"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva aimed. The artisan bird’s head is the only clear mark. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Arjuna matches Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, NO gold cuirass, NO pearl pile, NO peacock.",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one GURUKUL YOUTH Arjuna: teenage prince, simple gold diadem, light youthful mustache or none, cream-white dhoti, quiver, Gandiva aimed. The artisan bird’s head is the only clear mark. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Youth palette only from 09: cream-white dhoti, quiver, NO gold cuirass, NO pearl pile, NO peacock, NO heavy battle mukut. Gurukul YOUTH prince: teenage, slighter and shorter than Drona, not an adult warrior, not battle-aged Ep 09/10 face. Cream-white dhoti palette (costume language from 09), simple youth circlet. The artisan bird is FAR — high in the distant canopy, small in the frame, many metres away, NOT perched next to the archer. Bow, arrow, and gaze still on ONE line to that far bird.",
       "sources": [
         {
           "work": "bori",
@@ -402,7 +417,8 @@
         "target": "bird_head",
         "bow_points_at_target": true,
         "gaze_at_target": true,
-        "note": "Arrow aimed at the bird’s head, not the trunk. Elevate the bow if the bird is high."
+        "note": "Arrow aimed at the bird’s head, not the trunk. Elevate the bow if the bird is high.",
+        "target_distance": "high_distant"
       },
       "requires_spatial_aim": true
     },
@@ -473,9 +489,11 @@
         "Heroic medium — named figures fill the frame",
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
-        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, after the loosed shaft",
+        "Gurukul youth Arjuna: simple gold diadem (not heavy battle mukut), light youthful mustache, cream-white dhoti, quiver, after the loosed shaft",
         "artisan bird’s head falling as gold dust — no blood, no viscera",
-        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot"
+        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot",
+        "Gurukul youth prince, slighter and shorter than Drona, not battle-aged adult",
+        "Artisan bird far/high/small in the canopy, many metres away, not next to the archer"
       ],
       "must_not_show": [
         "Photoreal",
@@ -490,15 +508,16 @@
         "blood",
         "severed flesh",
         "Drona",
-        "Krishna",
-        "blood",
-        "Bhishma"
+        "Bhishma",
+        "battle-aged Ep 09 Arjuna",
+        "adult warrior bulk",
+        "gold cuirass"
       ],
       "props": [
         "Gandiva",
         "gold-dust bird head"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva after the shot. The artisan bird’s head falls as gold dust and light — no blood, no viscera. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Arjuna matches Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, NO gold cuirass, NO pearl pile, NO peacock.",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one GURUKUL YOUTH Arjuna: teenage prince, simple gold diadem, light youthful mustache or none, cream-white dhoti, quiver, Gandiva after the shot. The artisan bird’s head falls as gold dust and light — no blood, no viscera. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Youth palette only from 09: cream-white dhoti, quiver, NO gold cuirass, NO pearl pile, NO peacock, NO heavy battle mukut. Gurukul YOUTH prince: teenage, slighter and shorter than Drona, not an adult warrior, not battle-aged Ep 09/10 face. Cream-white dhoti palette (costume language from 09), simple youth circlet. The artisan bird is FAR — high in the distant canopy, small in the frame, many metres away, NOT perched next to the archer. Bow, arrow, and gaze still on ONE line to that far bird.",
       "sources": [
         {
           "work": "bori",
@@ -518,7 +537,8 @@
         "target": "bird_head",
         "bow_points_at_target": true,
         "gaze_at_target": true,
-        "note": "The loosed shaft’s path meets the bird’s head; gold dust on that same line."
+        "note": "The loosed shaft’s path meets the bird’s head; gold dust on that same line.",
+        "target_distance": "high_distant"
       },
       "requires_spatial_aim": true
     },
@@ -539,7 +559,8 @@
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
         "Drona acharya-warrior: white beard and mustache, saffron angavastram, holding Arjuna",
-        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, no peacock, no flower garland"
+        "Gurukul youth Arjuna: simple gold diadem (not heavy battle mukut), light youthful mustache, cream-white dhoti, quiver, no peacock, no flower garland",
+        "Gurukul youth prince, slighter and shorter than Drona, not battle-aged adult"
       ],
       "must_not_show": [
         "Photoreal",
@@ -553,14 +574,16 @@
         "peacock feather on Arjuna",
         "blood",
         "severed flesh",
-        "Krishna",
         "Bhishma",
-        "second Arjuna"
+        "second Arjuna",
+        "battle-aged Ep 09 Arjuna",
+        "adult warrior bulk",
+        "gold cuirass"
       ],
       "props": [
         "embrace of guru and pupil"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona (white beard, saffron angavastram) holds Arjuna (Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver — no peacock, no flower garland). Garden, cream-saffron-gold. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No flute. No gore.",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona (white beard, saffron angavastram) holds GURUKUL YOUTH Arjuna (teenage, simple gold diadem, light youthful mustache or none, cream-white dhoti, quiver — no peacock, no flower garland), prince clearly shorter/slighter than adult Drona. Garden, cream-saffron-gold. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No flute. No gore. Gurukul YOUTH prince: teenage, slighter and shorter than Drona, not an adult warrior, not battle-aged Ep 09/10 face. Cream-white dhoti palette (costume language from 09), simple youth circlet.",
       "sources": [
         {
           "work": "bori",
@@ -577,5 +600,6 @@
       ]
     }
   ],
-  "spatial_rule": "If a panel shows an archer aiming at a bird (or any target), the bow, arrow, gaze, and target must line up. Fail the plate if they don’t."
+  "spatial_rule": "If a panel shows an archer aiming at a bird (or any target), the bow, arrow, gaze, and target must line up. Fail the plate if they don’t.",
+  "age_register": "gurukul_youth"
 }

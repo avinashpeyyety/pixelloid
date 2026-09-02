@@ -1,6 +1,7 @@
 {
   "episode_id": "01",
   "title": "The Bird's Eye",
+  "age_register": "gurukul_youth",
   "cast": {
     "drona": {
       "face": "Aged acharya-warrior, noble lined face, long white beard and mustache (guru in the garden, not a garden sage only)",
@@ -8,17 +9,17 @@
       "costume": "Saffron angavastram over pale cream dhoti, staff or bow of the guru"
     },
     "arjuna": {
-      "face": "Noble warrior prince, dark mustache, same face as Ep 09 lock",
-      "hair": "Gold crown over dark hair",
-      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland, never peacock"
+      "face": "Gurukul youth, teenage Pandava prince, slighter than Drona, smooth young face, light youthful mustache or none — NOT the battle-aged Ep 09 adult",
+      "hair": "Dark hair, simple gold youth-circlet (not a heavy battle mukut)",
+      "costume": "Cream-white dhoti, gold belt, quiver — never flower garland, never peacock, never gold cuirass"
     },
     "yudhishthira": {
-      "face": "Eldest Pandava king-in-training, calm noble face, modest mustache — distinct from Arjuna, never a second Arjuna",
-      "hair": "Dark hair, simple gold diadem (lighter than Arjuna’s heavy crown), no peacock feather",
-      "costume": "Cream-white royal dhoti, gold sash, no Gandiva, no flower garland"
+      "face": "Gurukul youth, eldest boy-prince, calm young face, modest or no mustache — distinct from Arjuna, NOT an adult king, not battle-aged",
+      "hair": "Dark hair, simple gold diadem, no peacock",
+      "costume": "Cream-white dhoti, gold sash, no Gandiva, no flower garland"
     },
     "armies": {
-      "face": "Fellow princes distant",
+      "face": "Fellow gurukul youths, distant, shorter than Drona",
       "hair": "Helmets or unbound youth",
       "costume": "Muted banners, equal human scale, no gore"
     }

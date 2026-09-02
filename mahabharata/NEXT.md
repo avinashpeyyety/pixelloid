@@ -1,11 +1,11 @@
 # NEXT — mahabharata (pixelloid)
 
 ## Now
-- [ ] Next parva beat after Ep 13 (Chief routes). Do not start unless routed. **Art factory = Ep 10 bar + Ep 09 Krishna look lock.** Do not restyle 01–08. Do not attach Ep 01 gold.
+- [ ] Rewrite **Episode 01 only** to the Ep 09/10 bar (1536×1024 cream–saffron–gold cartouche, 09/10 character models, Orion, named raga, GATE D dialogue–panel sync, BORI + Gita Press Gorakhpur + Ganguli source gate). Do not start 02–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+.
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate)
-- [ ] Optional: rebuild 01–09 stills onto the Ep 10 canvas (grandfathered until then)
+- [ ] After Ep 01 rewrite: 02–08 one episode per pass, then resume Ep 14
 
 ## Done
 - [x] Ep 01–06
@@ -22,3 +22,7 @@
 - [x] Ep 09–11 raga underscoring (Bhairav / Darbari / Megh+Jhaptal) in the player; duck under Orion
 - [x] Ep 12 *Jayadratha Falls* (Drona Parva, fourteenth day, sunset vow; Marwa; Orion)
 - [x] Ep 13 *Ghatotkacha* (Drona Parva, night of the fourteenth, Karna’s Shakti; Malkauns; Orion)
+- [ ] Ep 14 *The Fall of Drona* paused until gates + 01–08 rewrite (WIP on disk, not shipped)
+- [x] **Character-model bar = Ep 09 + Ep 10.** Krishna, Arjuna (09); Bhishma, Shikhandi (10). Enforced from Ep 12 in `logic_review.py` + GATE C.
+- [x] **GATE D sync:** speaker on plate, action visible, no Ken Burns over the wrong still.
+- [x] **Source gate:** ≥2 of BORI/Debroy, Gita Press Gorakhpur, K.M. Ganguli per beat; divergence → Gita Press + BORI overlap; never TV-only.

@@ -74,7 +74,10 @@ image_edit
 | Ep 10 `_locks/field-master.jpg` (style spine) | Ep 01 `stills/plate-wide-gold.jpg` |
 | This episode `_locks/*-master.jpg` | Ep 10 `plate-vow.jpg` / `plate-arrows.jpg` / fall / bed unless those heroes are in `cast` |
 | `_locks/<id>.jpg` for ids in this bible’s `cast` | Any `stills/plate-*.jpg` from another episode |
-| Ep 09 `_locks/krishna.jpg` when Krishna is in `cast` (look lock) | A newly invented Krishna face |
+| Ep 09 `_locks/krishna.jpg` when Krishna is on a plate | A newly invented Krishna face |
+| Ep 09 `_locks/arjuna.jpg` when Arjuna is on a plate | A newly invented Arjuna |
+| Ep 10 `_locks/bhishma.jpg` / `shikhandi.jpg` when those people are on a plate | Ep 10 figure *plates* unless those heroes are in `cast` |
+| This episode `_locks/<id>.jpg` for any other named face | Jewelry/skin/crown/body-type drift across plates |
 | | Any 1280×720 file as the **first** `image_edit` input |
 
 ## Agents
@@ -82,7 +85,7 @@ image_edit
 | Agent | Responsibility |
 |-------|----------------|
 | **writer** | Beats, dialogue, timing |
-| **panel-logic** | Lore, props, apparatus, cast, **canvas/frame/camera** — blocks ship on FAIL |
+| **panel-logic** | Lore, props, apparatus, cast, **canvas/frame/camera**, **09/10 face locks**, **source cites** — blocks ship on FAIL |
 | **art** | Imagine only after GATE B PASS; 3:2; Ep 10 field-master; no 720p first-input |
 | **voice** | Orion TTS matching beat text |
 | **ship** | Registry, NEXT, vault daily, Pages |
@@ -101,6 +104,8 @@ python3 tools/stills_review.py episodes/<id>
 
 **Canvas / density:** `episodes/10-bhishma-fall/stills/_locks/field-master.jpg`  
 **Eye check (frame):** `episodes/10-bhishma-fall/stills/plate-vow.jpg`  
+**Character-model bar:** Ep 09 Krishna + Arjuna; Ep 10 Bhishma + Shikhandi + field-master.  
 **Krishna look lock:** `episodes/09-gita/stills/_locks/krishna.jpg`  
 **Krishna eye check:** `episodes/09-gita/stills/plate-counsel.jpg`  
-Never photoreal. Never Ep 01 gold as an image. Subsequent Krishnas match Ep 09. See `STYLE.md`.
+**Sources:** each beat ≥2 of BORI/Debroy, Gita Press Gorakhpur, K.M. Ganguli.  
+Never photoreal. Never Ep 01 gold as an image. Subsequent faces match 09/10. See `STYLE.md`.

@@ -71,7 +71,16 @@
 
 **Ep 09 Arjuna lock (canonical):** gold crown, dark mustache, cream-white dhoti, quiver on back, **no flower garland**, **no saffron sage robes**.
 
-**Ep 09 Krishna look lock (canonical — series STANDARD):** `episodes/09-gita/stills/_locks/krishna.jpg`. Dusty-blue skin, youthful divine adult, gold crown + one peacock feather, yellow pitambar, flower garlands, charioteer reins. Cream–saffron–gold cartouche 1536×1024. **Not photoreal. Not a flute. Not a bow.** Ep 12+ bibles that include `krishna` must list this lock in `imagine_refs`. Later Krishnas match this face/body; they do not drift.
+**Ep 09/10 character-model bar (canonical — series STANDARD):**
+
+| Person | Lock |
+|--------|------|
+| Krishna | `episodes/09-gita/stills/_locks/krishna.jpg` (dusty-blue, pitambar, one peacock feather, garlands, reins; not a flute, not a bow, not photoreal) |
+| Arjuna | `episodes/09-gita/stills/_locks/arjuna.jpg` (gold crown, dark mustache, cream-white dhoti, quiver; no flower garland) |
+| Bhishma | `episodes/10-bhishma-fall/stills/_locks/bhishma.jpg` |
+| Shikhandi | `episodes/10-bhishma-fall/stills/_locks/shikhandi.jpg` |
+
+Ep 12+ bibles must list the matching 09/10 lock in `imagine_refs` for every named face on a plate. New faces need a local `_locks/<id>.jpg`. **FAIL GATE C** if a new face is invented, a lock is missing, or jewelry/skin/crown/body type drifts across plates. Do not restyle 01–08 until the queued rewrite (Episode 01 first).
 
 ### 4a. Absent-cast / sage bleed — **strict**
 
@@ -98,9 +107,21 @@ Charming painted comic, not photoreal. Premium linework.
 | Prefix | `prompt_prefix` present and names 3:2, cartouche, heroic medium |
 | Quality bar image | `imagine_refs` or `quality_bar_ref` includes Ep 10 `field-master.jpg` |
 | Krishna (Ep 12+) | `imagine_refs` includes Ep 09 `_locks/krishna.jpg` whenever `krishna` is in `cast` |
+| Arjuna / Bhishma / Shikhandi (Ep 12+) | `imagine_refs` includes the Ep 09/10 lock whenever that person is on a plate |
+| Sources (Ep 09+) | Each plate `sources` cites ≥2 of BORI/Debroy, Gita Press Gorakhpur, K.M. Ganguli |
 | Mood vs image | Palette may say cream–saffron–gold in **words**. Do **not** attach Ep01 `plate-wide-gold.jpg` |
 
-**GATE C (after stills):** `python3 tools/stills_review.py episodes/<id>` must PASS. Then fill `docs/GATE_C_TEMPLATE.md` by comparing to Ep 10 `plate-vow.jpg`. A lore-correct 1280×720 plate is still a **FAIL**.
+**GATE C (after stills):** `python3 tools/stills_review.py episodes/<id>` must PASS (canvas + named-face lock files). Then fill `docs/GATE_C_TEMPLATE.md` by comparing to Ep 10 `plate-vow.jpg` **and** the Ep 09/10 face locks. A lore-correct 1280×720 plate is still a **FAIL**. Missing lock or invented face is a **FAIL**.
+
+## Source gate (Ep 09+)
+
+Authoritative set (run **multiple**, not one):
+
+1. **BORI Critical Edition** and/or **Bibek Debroy’s BORI translation**
+2. **Gita Press, Gorakhpur** (Hindi/Sanskrit vulgate — living north-Indian recension)
+3. **Kisari Mohan Ganguli** as a third check
+
+Each plate must have `sources` citing **at least two** of these where they cover the event. Episode `source_block` names parva and records divergence. If vulgate vs CE diverge, pick the **Gita Press + BORI overlap** — do not silently follow a serial. **FAIL** if the beat exists in none of them, or only in TV/later fiction.
 
 ## Review output
 
@@ -112,6 +133,6 @@ Write `episodes/<ep>/logic-reviews/RR-NN-<stage>.md` with PASS/FAIL per plate.
 
 Spoken beats: `python3 tools/dialogue_review.py episodes/<id> --report`.
 
-FAIL if `t` is not strictly increasing, a spoken line has no speaker, the speaker is not in that plate’s `cast_present`, a non-omniscient speaker names someone not yet introduced, a speaker claims off-stage facts they could not know, or lines contradict an earlier vow/plan. Narrator / Kathavachak / Krishna are omniscient. `--strict-bible` (default) requires script `text` to match plate `beat_text`. FAIL blocks Imagine commit and publish.
+FAIL if `t` is not strictly increasing, a spoken line has no speaker, the speaker is not in that plate’s `cast_present`, the action named in the line is not on the plate, a silent plate-change would Ken Burns/crossfade the line over the wrong still, beats jump backward in bible order, a non-omniscient speaker names someone not yet introduced, a speaker claims off-stage facts they could not know, or lines contradict an earlier vow/plan. Narrator / Kathavachak / Krishna are omniscient. `--strict-bible` (default) requires script `text` to match plate `beat_text`. FAIL blocks Imagine commit and publish.
 
 Does not replace panel-logic (GATE A/B) or stills review (GATE C).

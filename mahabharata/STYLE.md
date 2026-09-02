@@ -31,6 +31,20 @@ Ken Burns `cover`-crops 3:2 into the 16:9 player. That is intended. Do **not** g
 | **Music** | Named Hindustani raga under Orion (never default flute+tabla on Ep 09+) |
 
 
+## Character-model bar (canonical — Ep 09 + Ep 10)
+
+Faces as they appear in Episodes 09 and 10 are the series lock. Later episodes **match them**; they do not drift. Same person cannot change jewelry, skin, crown, or body type across plates in one episode.
+
+| Person | Lock image |
+|--------|------------|
+| Krishna | `episodes/09-gita/stills/_locks/krishna.jpg` |
+| Arjuna | `episodes/09-gita/stills/_locks/arjuna.jpg` |
+| Bhishma | `episodes/10-bhishma-fall/stills/_locks/bhishma.jpg` |
+| Shikhandi | `episodes/10-bhishma-fall/stills/_locks/shikhandi.jpg` |
+| Canvas | `episodes/10-bhishma-fall/stills/_locks/field-master.jpg` |
+
+New named faces (Drona, Bhima, Karna, …) get a local `stills/_locks/<id>.jpg` seeded from the closest 09/10 model and kept identical across that episode.
+
 ## Krishna look lock (canonical — Ep 09)
 
 Krishna looks right in Episode 09. That face and body is the series lock. Later episodes **match it**; they do not drift.
@@ -44,7 +58,7 @@ Krishna looks right in Episode 09. That face and body is the series lock. Later 
 | **Tokens** | Gold crown + **one peacock feather**, dark curly hair, yellow **pitambar**, **flower garlands**, gold jewelry, **reins / charioteer** |
 | **Forbidden** | Photoreal, flute, bow, child Krishna, second Krishna, sage robes |
 
-Do **not** restyle Ep 01–08. Enforced from Ep 12 on (`logic_review.py`).
+Enforced from Ep 12 on (`logic_review.py`). Ep 01–08 rewrite is queued (Episode 01 first) — old 720p flow until then.
 
 ## Do
 
@@ -64,6 +78,8 @@ Do **not** restyle Ep 01–08. Enforced from Ep 12 on (`logic_review.py`).
 - Photoreal / live-action / 3D CGI people
 - Mix 720p-cinematic and 3:2-cartouche styles in one episode
 - Invent a new Krishna — always seed from the Ep 09 lock
+- Invent a new Arjuna / Bhishma / Shikhandi — seed from the Ep 09/10 locks
+- Let jewelry, skin, crown, or body type drift across plates of the same person
 
 ## Fish’s Eye apparatus (Ep 02+ lock)
 
@@ -79,7 +95,7 @@ Do **not** restyle Ep 01–08. Enforced from Ep 12 on (`logic_review.py`).
 script → cast-sheet + plate-bible (canvas 3:2, prompt_prefix, scene_lock)
       → GATE A/B  python3 tools/logic_review.py episodes/<id>/plate-bible.json --report
       → Imagine scene master at 3:2 from Ep 10 field-master (style only)
-      → Imagine solo cast locks at 3:2; Krishna lock = Ep 09 `_locks/krishna.jpg`
+      → Imagine solo cast locks at 3:2; series faces = Ep 09/10 locks (Krishna, Arjuna, Bhishma, Shikhandi)
       → per-beat plates (image_edit from those locks — never from 720p)
       → GATE C  python3 tools/stills_review.py episodes/<id>
              + visual report vs Ep 10 vow/arrows

@@ -110,7 +110,19 @@ EP01_FIGURE_REF = re.compile(
 )
 EP10_FIELD_MASTER = "episodes/10-bhishma-fall/stills/_locks/field-master.jpg"
 EP09_KRISHNA_LOCK = "episodes/09-gita/stills/_locks/krishna.jpg"
+EP09_ARJUNA_LOCK = "episodes/09-gita/stills/_locks/arjuna.jpg"
+EP10_BHISHMA_LOCK = "episodes/10-bhishma-fall/stills/_locks/bhishma.jpg"
+EP10_SHIKHANDI_LOCK = "episodes/10-bhishma-fall/stills/_locks/shikhandi.jpg"
 KRISHNA_LOOK_FROM_EP = 12  # Ep 09 is the source; Ep 10–11 already shipped
+CHARACTER_MODEL_FROM_EP = 12  # Ep 09/10 faces are the series bar; 01–08 rewrite queued (Ep 01 first)
+SOURCE_GATE_FROM_EP = 9  # 01–08 grandfathered until rewrite; 09+ must cite two authorities
+SERIES_FACE_LOCKS = {
+    "krishna": EP09_KRISHNA_LOCK,
+    "arjuna": EP09_ARJUNA_LOCK,
+    "bhishma": EP10_BHISHMA_LOCK,
+    "shikhandi": EP10_SHIKHANDI_LOCK,
+}
+GENERIC_CAST_IDS = {"armies", "army", "ranks", "host"}
 FINISHED_PLATE_REF = re.compile(
     r"episodes/[^/]+/stills/plate-[^/]+\.jpe?g",
     re.I,
@@ -145,6 +157,13 @@ KRISHNA_TOKENS = {
     "charioteer_or_reins": re.compile(r"\b(charioteer|reins?)\b", re.I),
 }
 KRISHNA_BAN_ON_SELF = re.compile(r"\b(flute|murali|bansuri)\b", re.I)
+BHISHMA_TOKENS = {
+    "aged_or_white": re.compile(r"\b(aged|elder|grandsire|pitamaha|white)\b", re.I),
+    "armor_or_bow": re.compile(r"\b(armor|armour|bow|shafts?)\b", re.I),
+}
+SHIKHANDI_TOKENS = {
+    "warrior": re.compile(r"\b(warrior|armor|armour|bow|chariot)\b", re.I),
+}
 DUPLICATE_HERO = re.compile(
     r"\b(two|2|duplicate|extra|second|twin)\s+(arjuna|krishna)s?\b|"
     r"\b(arjuna|krishna).{0,20}\b(twice|again as a second)\b",
@@ -304,6 +323,56 @@ def check_cast_bleed(bible: dict) -> list[str]:
     return fails
 
 
+def _imagine_ref_blob(bible: dict) -> str:
+    return " ".join(
+        [
+            bible.get("krishna_look_lock_ref") or "",
+            bible.get("quality_bar_ref") or "",
+            bible.get("scene_lock_ref") or "",
+            " ".join(bible.get("imagine_refs") or []),
+            " ".join((bible.get("character_lock_refs") or {}).values())
+            if isinstance(bible.get("character_lock_refs"), dict)
+            else " ".join(bible.get("character_lock_refs") or [])
+            if isinstance(bible.get("character_lock_refs"), list)
+            else "",
+        ]
+    ).replace("\\", "/")
+
+
+def faces_on_plates(bible: dict) -> set[str]:
+    faces: set[str] = set()
+    for p in bible.get("plates") or []:
+        for cid in p.get("cast_present") or []:
+            if cid not in GENERIC_CAST_IDS:
+                faces.add(cid)
+    return faces
+
+
+def check_series_face_locks(bible: dict) -> list[str]:
+    """Ep 12+: every named face on a plate must attach its Ep 09/10 lock, or a local lock if new."""
+    if episode_num(bible) < CHARACTER_MODEL_FROM_EP:
+        return []
+    fails: list[str] = []
+    refs = _imagine_ref_blob(bible)
+    for cid in sorted(faces_on_plates(bible)):
+        if cid in SERIES_FACE_LOCKS:
+            lock = SERIES_FACE_LOCKS[cid]
+            if lock not in refs:
+                fails.append(
+                    f"character-model lock: named face `{cid}` on a plate requires {lock} "
+                    "in imagine_refs (Ep 09/10 standard — do not invent a new face)"
+                )
+        else:
+            needle = f"_locks/{cid}.jpg"
+            if needle not in refs.lower() and needle.replace(".jpg", ".jpeg") not in refs.lower():
+                fails.append(
+                    f"character-model lock: named face `{cid}` has no Ep 09/10 still; "
+                    f"imagine_refs must include this episode's stills/_locks/{cid}.jpg "
+                    "(copy forward and keep jewelry/skin/crown/body type identical across plates)"
+                )
+    return fails
+
+
 def check_krishna_lock(bible: dict) -> list[str]:
     """Ep 12+: Krishna in cast requires the Ep 09 look lock as an Imagine ref."""
     if episode_num(bible) < KRISHNA_LOOK_FROM_EP:
@@ -332,6 +401,122 @@ def check_krishna_lock(bible: dict) -> list[str]:
                 f"cast.krishna missing look-lock token `{token}` "
                 "(pitambar/yellow, peacock, garland, charioteer/reins)"
             )
+    return fails
+
+
+SOURCE_FAMILIES = {
+    "bori": re.compile(r"\b(bori|debroy|critical edition)\b", re.I),
+    "gita_press": re.compile(r"\b(gita[\s_-]*press|gorakhpur)\b", re.I),
+    "ganguli": re.compile(r"\b(ganguli|kisari)\b", re.I),
+}
+TV_SOURCE_BAN = re.compile(
+    r"\b(tv serial|tv-only|star plus|starplus|b\.?r\.?\s*chopra|br chopra|"
+    r"only in (the )?serial|later fiction)\b",
+    re.I,
+)
+
+
+def _source_family(blob: str) -> str | None:
+    for fam, pat in SOURCE_FAMILIES.items():
+        if pat.search(blob or ""):
+            return fam
+    return None
+
+
+def _iter_source_entries(plate: dict, bible: dict) -> list[str]:
+    """Flatten plate + episode source records into text blobs."""
+    blobs: list[str] = []
+    raw = plate.get("sources")
+    if raw is None:
+        raw = plate.get("source_cites")
+    if isinstance(raw, dict):
+        for k, v in raw.items():
+            blobs.append(f"{k} {v}")
+    elif isinstance(raw, list):
+        for item in raw:
+            if isinstance(item, dict):
+                blobs.append(" ".join(str(item.get(k) or "") for k in ("work", "id", "cite", "ref", "family")))
+            else:
+                blobs.append(str(item))
+    elif isinstance(raw, str) and raw.strip():
+        blobs.append(raw)
+    block = bible.get("source_block") or bible.get("sources") or {}
+    if isinstance(block, dict):
+        for k in ("bori", "debroy", "gita_press", "ganguli"):
+            if block.get(k):
+                blobs.append(f"{k} {block.get(k)}")
+    return blobs
+
+
+def check_sources(bible: dict) -> list[str]:
+    """Ep 09+: each beat cites ≥2 of BORI/Debroy, Gita Press Gorakhpur, K.M. Ganguli."""
+    if episode_num(bible) < SOURCE_GATE_FROM_EP:
+        return []
+    fails: list[str] = []
+    block = bible.get("source_block")
+    if not isinstance(block, dict) or not block:
+        fails.append(
+            "source_block required: run the episode against BORI Critical Edition "
+            "(and/or Debroy), Gita Press Gorakhpur, and K.M. Ganguli. "
+            "Each beat cites at least two. TV/later fiction is not a source."
+        )
+    else:
+        blob = json.dumps(block)
+        if TV_SOURCE_BAN.search(blob):
+            fails.append(
+                "source_block: TV/serial/later fiction is not authoritative. "
+                "Cite BORI/Debroy, Gita Press Gorakhpur, and/or Ganguli."
+            )
+        diverg = (block.get("divergence") or block.get("source_divergence") or "").strip()
+        if diverg:
+            chosen = str(block.get("chosen") or block.get("pick") or "")
+            if not (
+                _source_family(chosen) == "gita_press"
+                or "gita" in chosen.lower()
+            ) or not (
+                "bori" in chosen.lower() or "debroy" in chosen.lower()
+            ):
+                fails.append(
+                    "source_block: when sources diverge (vulgate vs CE), record the divergence "
+                    "and pick the Gita Press + BORI overlap — do not silently follow a serial"
+                )
+
+    for plate in bible.get("plates") or []:
+        pid = plate.get("id") or "?"
+        entries = _iter_source_entries(plate, {"source_block": {}})
+        families: set[str] = set()
+        joined = " ".join(entries)
+        if TV_SOURCE_BAN.search(joined):
+            fails.append(
+                f"{pid}: TV/serial/later fiction is not a source. "
+                "Cite BORI/Debroy, Gita Press Gorakhpur, and/or Ganguli."
+            )
+        for entry in entries:
+            fam = _source_family(entry)
+            if fam:
+                families.add(fam)
+            cite = entry.strip()
+            # dict flattened to 'bori Drona 191' still counts; empty work with no cite fails below
+            if fam and len(cite) < 8:
+                fails.append(
+                    f"{pid}: source cite for `{fam}` is too thin — name parva/section "
+                    "(BORI/Debroy, Gita Press, or Ganguli)"
+                )
+        if len(families) < 2:
+            fails.append(
+                f"{pid}: each beat must cite at least two of BORI/Debroy, "
+                "Gita Press Gorakhpur, K.M. Ganguli (where they cover the event). "
+                f"found {sorted(families) or 'none'}"
+            )
+        diverg = (plate.get("source_divergence") or plate.get("divergence") or "").strip()
+        if diverg:
+            chosen = str(plate.get("chosen") or plate.get("pick") or "")
+            if "gita" not in chosen.lower() or not (
+                "bori" in chosen.lower() or "debroy" in chosen.lower()
+            ):
+                fails.append(
+                    f"{pid}: sources diverge — record it and pick Gita Press + BORI overlap"
+                )
     return fails
 
 
@@ -520,9 +705,13 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool, bible: dict
                 fails.append(f"{pid}: sage/Drona appears in positive spec but not in cast_present")
                 break
 
-    # Arjuna continuity — strict on episodes that set strict_hero_lock
+    # Arjuna continuity — strict on episodes that set strict_hero_lock, and from Ep 12+
     bible = bible or {}
-    strict = (bible.get("strict_hero_lock") or "") == "arjuna" or bible.get("episode_id") == "09"
+    strict = (
+        (bible.get("strict_hero_lock") or "") == "arjuna"
+        or bible.get("episode_id") == "09"
+        or episode_num(bible) >= CHARACTER_MODEL_FROM_EP
+    )
     if strict and "arjuna" in present:
         blob = f"{prompt} {must_show}"
         for token, pat in ARJUNA_TOKENS.items():
@@ -555,6 +744,21 @@ def check_plate(plate: dict, cast_ids: set[str], apparatus_on: bool, bible: dict
         if not re.search(r"\b(photoreal)\b", must_not, re.I):
             fails.append(f"{pid}: must_not_show must forbid photoreal (Krishna look lock)")
 
+    if episode_num(bible) >= CHARACTER_MODEL_FROM_EP and "bhishma" in present:
+        blob = f"{prompt} {must_show}"
+        for token, pat in BHISHMA_TOKENS.items():
+            if not pat.search(blob):
+                fails.append(
+                    f"{pid}: Bhishma model lock missing `{token}` (match Ep 10 _locks/bhishma.jpg)"
+                )
+    if episode_num(bible) >= CHARACTER_MODEL_FROM_EP and "shikhandi" in present:
+        blob = f"{prompt} {must_show}"
+        for token, pat in SHIKHANDI_TOKENS.items():
+            if not pat.search(blob):
+                fails.append(
+                    f"{pid}: Shikhandi model lock missing `{token}` (match Ep 10 _locks/shikhandi.jpg)"
+                )
+
     if DUPLICATE_HERO.search(field) and not _negated(field, 0):
         # only fail if not a negation
         m = DUPLICATE_HERO.search(field)
@@ -569,6 +773,8 @@ def review(bible: dict) -> tuple[bool, list[str]]:
     fails += check_style(bible)
     fails += check_canvas_bar(bible)
     fails += check_krishna_lock(bible)
+    fails += check_series_face_locks(bible)
+    fails += check_sources(bible)
     fails += check_cast(bible)
     fails += check_cast_bleed(bible)
     fails += check_apparatus(bible)

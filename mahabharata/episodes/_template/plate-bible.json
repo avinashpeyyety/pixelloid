@@ -51,7 +51,32 @@
         "tiny distant heroes as the A-shot"
       ],
       "props": [],
-      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. [locus + action]. Ornate carved lotus cartouche. Heroic medium. Not photoreal. No Drona."
+      "prompt": "Premium high-quality charming painted comic / Amar Chitra mythology. [locus + action]. Ornate carved lotus cartouche. Heroic medium. Not photoreal. No Drona.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE — parva/section"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur — parva/adhyaya"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli — parva/section"
+        }
+      ]
     }
-  ]
+  ],
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "",
+    "divergence": "",
+    "chosen": "",
+    "notes": "Cite at least two of BORI CE / Debroy, Gita Press Gorakhpur, K.M. Ganguli per beat. If vulgate vs CE diverge, record it and pick Gita Press + BORI overlap. Never TV/later fiction."
+  }
 }

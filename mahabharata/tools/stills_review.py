@@ -107,6 +107,36 @@ def ok_size(w: int, h: int) -> list[str]:
     return fails
 
 
+GENERIC_CAST_IDS = {"armies", "army", "ranks", "host"}
+CHARACTER_MODEL_FROM_EP = 12
+
+
+def check_named_face_locks(ep_dir: Path, n: int) -> list[str]:
+    """Ep 12+: every named face on a plate needs stills/_locks/<id>.jpg (no invented faces)."""
+    if n < CHARACTER_MODEL_FROM_EP:
+        return []
+    bible_path = ep_dir / "plate-bible.json"
+    if not bible_path.exists():
+        return []
+    bible = json.loads(bible_path.read_text(encoding="utf-8"))
+    faces: set[str] = set()
+    for p in bible.get("plates") or []:
+        for cid in p.get("cast_present") or []:
+            if cid not in GENERIC_CAST_IDS:
+                faces.add(cid)
+    locks = ep_dir / "stills" / "_locks"
+    fails: list[str] = []
+    for cid in sorted(faces):
+        path = locks / f"{cid}.jpg"
+        alt = locks / f"{cid}.jpeg"
+        if not path.exists() and not alt.exists():
+            fails.append(
+                f"missing character lock stills/_locks/{cid}.jpg "
+                "(named face on a plate — copy Ep 09/10 lock or seed a local lock; do not invent a face)"
+            )
+    return fails
+
+
 def review(ep_dir: Path) -> tuple[bool, list[str], int]:
     files = iter_stills(ep_dir)
     fails: list[str] = []
@@ -122,6 +152,8 @@ def review(ep_dir: Path) -> tuple[bool, list[str], int]:
             continue
         for reason in ok_size(w, h):
             fails.append(f"{rel}: {reason}")
+    n = episode_num_from_dir(ep_dir)
+    fails += check_named_face_locks(ep_dir, n)
     return len(fails) == 0, fails, len(files)
 
 

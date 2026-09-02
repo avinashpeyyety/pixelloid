@@ -30,6 +30,18 @@ SPEAKER_ALIASES: dict[str, str] = {
     "grandsire": "bhishma",
     "shikhandi": "shikhandi",
     "shikhandin": "shikhandi",
+    "yudhishthira": "yudhishthira",
+    "dharma-king": "yudhishthira",
+    "dharma king": "yudhishthira",
+    "bhima": "bhima",
+    "drona": "drona",
+    "dronacharya": "drona",
+    "dhrishtadyumna": "dhrishtadyumna",
+    "karna": "karna",
+    "ghatotkacha": "ghatotkacha",
+    "duryodhana": "duryodhana",
+    "jayadratha": "jayadratha",
+    "abhimanyu": "abhimanyu",
 }
 
 # Names that may appear in spoken text (intro / death tracking).
@@ -40,6 +52,16 @@ NAME_ALIASES: dict[str, list[str]] = {
     "bhishma": ["bhishma", "pitamaha", "grandsire"],
     "shikhandi": ["shikhandi", "shikhandin"],
     "amba": ["amba"],
+    "yudhishthira": ["yudhishthira"],
+    "bhima": ["bhima"],
+    "drona": ["drona", "dronacharya"],
+    "dhrishtadyumna": ["dhrishtadyumna"],
+    "karna": ["karna"],
+    "ghatotkacha": ["ghatotkacha"],
+    "duryodhana": ["duryodhana"],
+    "jayadratha": ["jayadratha"],
+    "abhimanyu": ["abhimanyu"],
+    "ashwatthama": ["ashwatthama"],
 }
 
 GENERIC_CAST = {"armies", "army", "ranks", "host"}
@@ -87,6 +109,21 @@ DEATH_RE = re.compile(
     r"\b(?:falls?|is slain|slain|dies|died|is killed|killed)\b",
     re.I,
 )
+
+# Concrete actions that must be visible on the plate the line plays over.
+ACTION_NOUNS = [
+    ("conch", re.compile(r"\bconch\b", re.I)),
+    ("yoga", re.compile(r"\byoga\b", re.I)),
+    ("elephant", re.compile(r"\belephant\b", re.I)),
+    ("bow", re.compile(r"\bbow\b", re.I)),
+    ("mace", re.compile(r"\bmace\b", re.I)),
+    ("sword", re.compile(r"\bsword\b", re.I)),
+    ("chariot", re.compile(r"\bchariot\b", re.I)),
+    ("reins", re.compile(r"\breins?\b", re.I)),
+    ("arrows", re.compile(r"\barrows?\b", re.I)),
+    ("shakti", re.compile(r"\bshakti\b", re.I)),
+    ("chakravyuha", re.compile(r"\bchakravyuha\b", re.I)),
+]
 
 
 def unescape_js_string(s: str) -> str:
@@ -363,6 +400,23 @@ def review(beats: list[dict], bible: dict, strict_bible: bool) -> list[str]:
                     f"{t_lab}: speaker `{who}` ({speaker_id}) is not in plate `{plate_id}` cast_present {sorted(present)}"
                 )
 
+        # --- 2b. Action in the line must be visible on this plate ---
+        if spoken and plate_id:
+            visible = " ".join(
+                [
+                    plate.get("beat_text") or "",
+                    plate.get("prompt") or "",
+                    " ".join(plate.get("must_show") or []),
+                    " ".join(plate.get("props") or []),
+                ]
+            )
+            for label, pat in ACTION_NOUNS:
+                if pat.search(text) and not pat.search(visible):
+                    fails.append(
+                        f"{t_lab}: spoken line names `{label}` but plate `{plate_id}` "
+                        "prompt/must_show/props/beat_text does not show it"
+                    )
+
         named = names_in_text(text) if spoken else set()
 
         # --- 3. Broken causality / intro order ---
@@ -451,6 +505,50 @@ def review(beats: list[dict], bible: dict, strict_bible: bool) -> list[str]:
             fallen |= names_that_die(text)
 
         seen_on_plate |= {c for c in present if c in named_cast or c in NAME_ALIASES}
+
+    # --- Ken Burns / crossfade: a spoken line must not play over a different still ---
+    for i, b in enumerate(beats):
+        if not is_spoken(b):
+            continue
+        plate_i = b.get("plate") or ""
+        t = b.get("t")
+        t_lab = f"t={t}" if t is not None else f"beat[{i}]"
+        for j in range(i + 1, len(beats)):
+            nxt = beats[j]
+            if is_spoken(nxt):
+                break
+            plate_j = nxt.get("plate") or ""
+            if plate_j and plate_i and plate_j != plate_i:
+                fails.append(
+                    f"{t_lab}: Ken Burns/crossfade would play this spoken line over plate "
+                    f"`{plate_j}` (silent plate change before the next spoken beat). "
+                    f"Keep still `{plate_i}` until the line ends."
+                )
+                break
+
+    # Causal: spoken beats should walk bible plates forward, not skip backward.
+    bible_order = [str(p.get("id")) for p in (bible.get("plates") or []) if p.get("id")]
+    index = {pid: n for n, pid in enumerate(bible_order)}
+    prev_idx: int | None = None
+    prev_pid = ""
+    for i, b in enumerate(beats):
+        if not is_spoken(b):
+            continue
+        pid = b.get("plate") or ""
+        if pid not in index:
+            continue
+        idx = index[pid]
+        t = b.get("t")
+        t_lab = f"t={t}" if t is not None else f"beat[{i}]"
+        if prev_idx is not None and idx < prev_idx - 0:
+            # Allow holding the same plate; fail only on a backward jump.
+            if idx < prev_idx:
+                fails.append(
+                    f"{t_lab}: beat jumps backward from plate `{prev_pid}` to `{pid}` "
+                    "(each spoken beat must follow the previous)"
+                )
+        prev_idx = idx
+        prev_pid = pid
 
     return fails
 

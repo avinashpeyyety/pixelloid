@@ -1,6 +1,6 @@
 /**
- * Episode 02 — The Fish's Eye (Draupadi’s Swayamvara)
- * Ceiling mirror + ground-pool fish; cinematic plates + Orion TTS + flute/tabla.
+ * Episode 02 — The Fish's Eye
+ * Ādi Parva · Draupadi’s swayamvara. Ep 09/10 canvas. Orion + Yaman.
  */
 export const EPISODE = {
   id: "02",
@@ -12,9 +12,13 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep02-v9-aim-hit",
-    note: "Grok TTS orion — v8 ceiling mirror + ground-pool fish",
+    cache: "ep02-orion",
+    note: "Grok TTS orion — 24 kHz / 128 kbps",
     base: "episodes/02-swayamvara/audio/",
+  },
+  music: {
+    raga: "yaman",
+    note: "Evening Yaman tanpura + sparse bansuri; no tabla. Duck under Orion.",
   },
   totalSec: 96,
   stills: {

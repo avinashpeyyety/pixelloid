@@ -232,7 +232,7 @@ const C = {
  * Episode raga beds: tanpura floor + raga phrases + optional tabla.
  * Kathavachak theater — not trailer brass, not licensed film music.
  * Ep 01 Bhupali (morning, no Ma/Ni), Ep 09 Bhairav, Ep 10 Darbari, Ep 11 Megh+Jhaptal, Ep 12 Marwa, Ep 13 Malkauns;
- * Unrewritten 02–08 keep a default flute+tabla preset. Do not use that preset on rewritten or new episodes.
+ * Ep 02 Yaman (evening Kalyan). Unrewritten 03–08 keep a default flute+tabla preset. Do not use that preset on rewritten or new episodes.
  */
 const RAGA_RATIOS = {
   S: 1,
@@ -316,6 +316,17 @@ const RAGA_PRESETS = {
     duckLevel: 0.15,
     tanpuraMs: 1200,
   },
+  yaman: {
+    // Evening Kalyan — tivra Ma. Sparse bansuri, no tabla.
+    Sa: 130.81, // C3
+    fluteSa: 261.63,
+    degrees: ["S", "R", "G", "M", "P", "D", "N"],
+    tabla: "none",
+    voice: "bansuri",
+    bedLevel: 0.46,
+    duckLevel: 0.15,
+    tanpuraMs: 1200,
+  },
   default: {
     // eps 01–08 — keep close to old FluteTablaBed so they don't jump
     Sa: 293.66,
@@ -352,6 +363,7 @@ class RagaBed {
     let key = named;
     if (!key) {
       if (id === "01") key = "bhupali";
+      else if (id === "02") key = "yaman";
       else if (id === "09") key = "bhairav";
       else if (id === "10") key = "darbari";
       else if (id === "11") key = "megh";
@@ -845,6 +857,33 @@ class RagaBed {
         ],
       ];
     }
+    if (key === "yaman") {
+      // evening Kalyan — S R G M P D N
+      return [
+        [
+          [0, "N", 0, 1.5],
+          [1.7, "R", 0, 1.4],
+          [3.3, "G", 0, 1.6],
+        ],
+        [
+          [0, "G", 0, 1.4],
+          [1.6, "M", 0, 1.5],
+          [3.3, "P", 0, 1.6],
+          [5.1, "N", 0, 1.6],
+        ],
+        [
+          [0, "P", 0, 1.5],
+          [1.7, "D", 0, 1.4],
+          [3.3, "N", 0, 1.5],
+          [5.0, "S", 1, 1.8],
+        ],
+        [
+          [0, "G", 0, 1.5],
+          [1.7, "R", 0, 1.4],
+          [3.3, "S", 0, 1.8],
+        ],
+      ];
+    }
     if (key === "bhupali") {
       // morning, no Ma no Ni — S R G P D
       return [
@@ -963,6 +1002,7 @@ class RagaBed {
     if (key === "darbari") return 4 + Math.random() * 3;
     if (key === "megh") return 1.6 + Math.random() * 1.4;
     if (key === "marwa") return 3.2 + Math.random() * 2.2;
+    if (key === "yaman") return 3.0 + Math.random() * 2.0;
     if (key === "bhupali") return 3.0 + Math.random() * 2.0;
     if (key === "malkauns") return 3.8 + Math.random() * 2.4;
     return 1.2 + Math.random() * 2.0;
@@ -1073,7 +1113,7 @@ class RagaBed {
       this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
     }
 
-    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "bhupali" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
+    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
     this.timers.push(setTimeout(() => this._scheduleMelody(), melodyDelay));
 
     this.master.gain.cancelScheduledValues(t);

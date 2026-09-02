@@ -1,167 +1,259 @@
 {
   "episode_id": "02",
+  "strict_hero_lock": "arjuna",
   "title": "The Fish's Eye",
-  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour; refined linework",
-  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 Drona figure plate)",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Arjuna and Krishna locked to Ep 09",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/02-swayamvara/stills/_locks/hall-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "episodes/02-swayamvara/stills/_locks/hall-master.jpg",
+    "episodes/02-swayamvara/stills/_locks/draupadi.jpg",
+    "episodes/02-swayamvara/stills/_locks/drupada.jpg",
+    "episodes/02-swayamvara/stills/_locks/krishna.jpg",
+    "episodes/02-swayamvara/stills/_locks/arjuna.jpg"
+  ],
   "photoreal_allowed": false,
-  "frame": "Ornate lotus carved wooden frame on every plate",
   "apparatus": {
-    "continuity_id": "matsya-ceiling-mirror-pool-fish-v8",
-    "target": "Live fish swimming in a circular ornamental pool set into the palace ground/floor",
-    "mirror": "Large ornamental circular mirror with gold frame mounted high under the palace ceiling \u2014 used only for aiming sight",
-    "mount": "Ceiling mirror fixed high under roof (large disc scale); no fish aquarium",
-    "height": "Mirror at true ceiling height top of hall; pool on the ground",
+    "ceiling_mirror": true,
+    "ground_pool_fish": true,
+    "continuity_id": "panchala-swayamvara-yantra-mirror-pool",
     "aim_geometry": {
-      "eyes": "Look UP into the ceiling mirror (sees the fish reflected)",
-      "arrow": "Aim DOWN at the real fish in the ground pool \u2014 hit the eye",
-      "forbidden": [
-        "Ceiling aquarium of fish",
-        "Shooting the mirror",
-        "Standing in the pool",
-        "Looking only at the pool without the mirror"
-      ]
+      "eyes": "Archer looks UP into the large ornamental ceiling mirror",
+      "arrow": "Arrow aims down at the fish eye in the ground pool",
+      "stance": "Archer stands on dry floor beside the pool, left side"
     },
-    "task": "Hit the eye of the fish in the ground pool while aiming by looking into the ceiling mirror",
+    "note": "Studio visual of the BORI/Ganguli sky-yantra: ornamental mirror high under the roof; fish in the ground pool. Archer looks UP into the mirror and shoots the fish eye in the pool. No ceiling aquarium.",
     "forbidden": [
-      "Glass aquarium / fish tank on the ceiling",
-      "Fish hanging dry on a pole",
-      "Women standing giant-sized on the court floor in durbar",
-      "Maids instead of princesses on balconies"
+      "ceiling aquarium",
+      "fish tank"
+    ]
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
     ],
-    "size_lock_ref": "episodes/02-swayamvara/stills/plate-challenge.jpg"
+    "parva": "Ādi Parva · Svayaṃvara · Draupadī’s lakṣya contest",
+    "divergence": "BORI CE Ādi 176 and Ganguli CLXXXVII describe a stiff bow and a sky-yantra with a mark (lakṣya); they do not name a pool-fish. The series visual lock (AGENTS.md) reads that yantra as a ceiling mirror + ground-pool fish. BORI 179: kings fail to string; Arjuna as brahmin strings, five arrows, target falls pierced. Karna-insult / Draupadī refusing a sūta is later/vulgate colour, not BORI 179 — do not use it.",
+    "chosen": "Gita Press Gorakhpur + BORI overlap: the contest itself — stiff bow, yantra-lakṣya, princes fail, Arjuna in brahmin guise hits the mark, Draupadī’s white varamāla. Visual apparatus follows the series lock (mirror + pool fish).",
+    "notes": "Not TV. Krishna and Balarāma attend (Ganguli CLXXXVIII). Women of the court on upper mansions/balconies, not among princes on the floor."
   },
   "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, dusty-blue skin, dark eyes, serene smile, U-tilak — Ep 09 lock",
+      "hair": "Dark curly hair, gold crown with one peacock feather",
+      "costume": "Yellow pitambar, flower garlands, gold kundala, no flute, no bow, not a child"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09 lock — even in brahmin guise",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver, Gandiva — never flower garland, never peacock, never Krishna’s pitambar"
+    },
     "draupadi": {
-      "face": "Young woman, warm brown skin, large dark eyes, soft brows, small bindi",
-      "hair": "Long black wavy hair, gold maang tikka + small crown",
-      "costume": "Deep red silk sari with gold border, gold jewelry, veil optional"
+      "face": "Young Panchala princess, luminous noble face, dark eyes — not a second Arjuna, not Krishna",
+      "hair": "Long dark hair with gold ornaments, no peacock feather",
+      "costume": "Deep red-and-gold silk, palace jewelry, white wedding garland in hand when the beat requires it"
     },
-    "princess": {
-      "face": "Young royal women, comic painted style",
-      "hair": "Ornate hair and jewelry",
-      "costume": "Rich silk saris, crowns \u2014 princesses only, never maids"
+    "drupada": {
+      "face": "Aged Panchala king, noble lined face, dark-grey beard — not Bhishma’s silver diadem, not Drona’s saffron guru",
+      "hair": "Grey-black hair, gold royal crown of Panchala",
+      "costume": "Indigo-and-gold royal angavastram, no saffron acharya cloth"
     },
-    "arjuna_brahmin": {
-      "face": "Young man, oval face, dark eyes, thin dark mustache, calm focus",
-      "hair": "Black curly topknot, no peacock, no jeweled crown",
-      "costume": "Plain cream-white brahmin dhoti and cloth"
-    },
-    "arjuna_revealed": {
-      "face": "Same face as arjuna_brahmin",
-      "hair": "Same topknot or light diadem, no peacock",
-      "costume": "White with optional soft gold accents"
-    },
-    "king_suitor": {
-      "face": "Adult warrior princes, comic line weight",
-      "hair": "Crowns or turbans, mustaches",
-      "costume": "Jewel-tone silks"
-    },
-    "king_drupada": {
-      "face": "Mature king, regal mustache and beard",
-      "hair": "Crown",
-      "costume": "Royal white and gold on throne"
-    },
-    "courtiers": {
-      "face": "Background male comic silhouettes",
-      "hair": "Turbans",
-      "costume": "Muted court dress"
+    "armies": {
+      "face": "Kings and princes on the hall floor",
+      "hair": "Crowns and helmets",
+      "costume": "Muted banners, equal human scale; women only on balconies behind curtains"
     }
   },
   "plates": [
     {
       "id": "wide",
       "file": "plate-wide.jpg",
-      "beat_text": "In the court of King Drupada, suitors gather for Draupadi\u2019s swayamvara.",
+      "beat_text": "In the court of King Drupada, suitors gather for Draupadi’s swayamvara.",
       "cast_present": [
-        "king_drupada",
-        "king_suitor",
-        "draupadi",
-        "princess"
+        "drupada",
+        "krishna"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium high-quality painted comic Amar Chitra durbar",
-        "King on center throne; princes/suitors ONLY on the hall floor seated both sides \u2014 equal natural human scale",
-        "ALL women and princesses ONLY on upper balconies left and right \u2014 none standing on the court floor",
-        "Princesses behind curtains/jali, shyly peering out",
-        "No giant women, no maids, no fish apparatus"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna matching Ep 09 lock: dusty-blue, U-tilak, gold crown with one peacock feather, yellow pitambar, flower garlands",
+        "Drupada aged Panchala king, gold royal crown, indigo-gold, not Bhishma, not Drona",
+        "Panchala durbar, cream-saffron-gold, king on throne, each prince and suitor on the hall floor",
+        "ALL women and princesses ONLY on upper balconies (none on hall floor); princesses peer from behind curtains and jali",
+        "no giant figures"
       ],
       "must_not_show": [
-        "Women standing on the court floor among princes",
-        "Giant princesses in the hall aisle",
-        "Maids or servants",
-        "Sitting on terrace railing",
-        "Fish tank or mirror apparatus",
-        "Photoreal or crude low quality",
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "ceiling aquarium",
+        "fish tank",
+        "women standing on the court floor",
+        "giant women in the hall",
         "Drona",
-        "white-bearded sage"
+        "flute on Krishna",
+        "child Krishna",
+        "blood",
+        "Draupadi on the court floor",
+        "Arjuna as the A-shot",
+        "Drona",
+        "Bhishma"
       ],
       "props": [
-        "throne",
-        "carpets",
-        "balcony curtains"
+        "durbar",
+        "balconies"
       ],
-      "prompt": "Premium high-quality painted comic Amar Chitra regal Indian palace durbar. Eye-level balanced perspective, ALL figures equal natural human scale \u2014 no giants. CENTER: King Drupada on golden throne. HALL FLOOR ONLY: adult suitor princes seated in neat rows left and right \u2014 NO women on the floor. UPPER BALCONIES left and right only: Draupadi and other PRINCESSES in rich silk saris and jewelry behind heavy sheer curtains, shyly peering through gaps \u2014 not on railings, not standing in the court. Ornate lotus frame, cream-saffron-gold light. No fish, no mirror apparatus. Polished refined linework."
+      "prompt": "Premium painted comic Amar Chitra. Panchala swayamvara durbar. Heroic medium: King Drupada (aged, gold royal crown, indigo-gold, NOT Bhishma, NOT Drona) on the throne, and Krishna as guest (Ep 09 lock: dusty-blue skin, U-tilak, gold crown with ONE peacock feather, yellow pitambar, flower garlands, no flute). Each prince and suitor stands on the hall floor only. ALL women and princesses ONLY on upper balconies; princesses peer from behind curtains and jali — never on the court floor. No giant figures. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Arjuna. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.176–179 — svayaṃvara: stiff bow, yantra-lakṣya, kings fail, Arjuna as brahmin hits, Draupadī’s varamāla"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva, Svayaṃvara-parva (vulgate; same contest: bow, yantra, Arjuna’s hit, garland)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Swayamvara Parva, Sections CLXXXVII–CXC (machinery in the sky; mark; Arjuna strings and shoots)"
+        }
+      ]
     },
     {
       "id": "challenge",
       "file": "plate-challenge.jpg",
-      "beat_text": "The test is set: a mirror high above; the fish waits in the pool. Hit its eye by looking only into the mirror.",
-      "cast_present": [],
+      "beat_text": "The test is set: a great mirror hangs high under the roof. The fish waits in the pool below. Hit its eye — by looking only into the mirror.",
+      "cast_present": [
+        "drupada"
+      ],
       "has_fish_apparatus": true,
       "is_aim_beat": false,
       "must_show": [
         "Premium painted comic quality",
-        "LARGE circular ornamental gold-framed MIRROR high under the palace ceiling top center",
-        "Circular ground pool with live fish swimming in the water",
-        "Contest bow on floor pedestal beside pool",
-        "Mirror reflects the pool/fish; no aquarium"
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Large ornamental mirror high under the roof",
+        "Fish in a ground pool (not a ceiling aquarium)",
+        "Drupada aged Panchala king presenting the test"
       ],
       "must_not_show": [
-        "Ceiling aquarium or fish tank",
-        "Fish only in hanging glass",
-        "Small hand mirror",
         "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "ceiling aquarium",
+        "fish tank",
+        "women standing on the court floor",
+        "giant women in the hall",
         "Drona",
-        "white-bearded sage"
+        "flute on Krishna",
+        "child Krishna",
+        "blood",
+        "women on the court floor",
+        "Arjuna",
+        "Krishna as a second king"
       ],
       "props": [
         "ceiling mirror",
-        "ground pool with fish",
-        "bow"
+        "ground pool",
+        "fish"
       ],
-      "prompt": "Premium high-quality painted comic hall. LARGE circular ornamental gold-framed MIRROR fixed high under the ceiling (top center, wide disc). On the ground: circular ornamental pool with a golden fish swimming in the water. Mirror above can show the fish. Contest bow on a stone pedestal on dry floor. No aquarium, no fish tank on ceiling. Tall palace, cream-saffron-gold light, lotus frame, refined Amar Chitra quality."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: King Drupada presents the test. A large ornamental MIRROR hangs high under the roof. A FISH waits in the GROUND POOL. No ceiling aquarium, no fish tank. Hall floor = men only. Carved gold-and-lotus cartouche. Not photoreal. No Arjuna. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.176–179 — svayaṃvara: stiff bow, yantra-lakṣya, kings fail, Arjuna as brahmin hits, Draupadī’s varamāla"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva, Svayaṃvara-parva (vulgate; same contest: bow, yantra, Arjuna’s hit, garland)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Swayamvara Parva, Sections CLXXXVII–CXC (machinery in the sky; mark; Arjuna strings and shoots)"
+        }
+      ]
     },
     {
       "id": "kings",
       "file": "plate-kings.jpg",
       "beat_text": "Prince after prince fails. The great bow will not yield to pride alone.",
       "cast_present": [
-        "king_suitor"
+        "drupada"
       ],
-      "has_fish_apparatus": true,
+      "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
         "Premium painted comic quality",
-        "Princes fail with bow on dry floor",
-        "LARGE ceiling mirror high under roof",
-        "Ground pool with fish swimming",
-        "Same apparatus as challenge"
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Princes failing with the great stiff bow",
+        "Drupada watching",
+        "Hall floor men only"
       ],
       "must_not_show": [
-        "Ceiling aquarium",
         "Photoreal",
-        "Women on floor",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "ceiling aquarium",
+        "fish tank",
+        "women standing on the court floor",
+        "giant women in the hall",
         "Drona",
-        "white-bearded sage"
+        "flute on Krishna",
+        "child Krishna",
+        "blood",
+        "Draupadi on the court floor",
+        "Arjuna stringing the bow",
+        "women among princes"
       ],
       "props": [
-        "bow",
-        "ceiling mirror",
-        "pool with fish"
+        "stiff bow"
       ],
-      "prompt": "Premium painted comic. Adult princes fail to string the contest bow on the hall floor. Behind: LARGE gold-framed circular MIRROR high on the ceiling; circular ground pool with swimming fish. No aquarium. Lotus frame, refined quality."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: princes fail to string the great stiff bow. Drupada watches. Hall floor = men only; women only on distant balconies. Carved gold-and-lotus cartouche. Not photoreal. No Arjuna as victor yet. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.176–179 — svayaṃvara: stiff bow, yantra-lakṣya, kings fail, Arjuna as brahmin hits, Draupadī’s varamāla"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva, Svayaṃvara-parva (vulgate; same contest: bow, yantra, Arjuna’s hit, garland)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Swayamvara Parva, Sections CLXXXVII–CXC (machinery in the sky; mark; Arjuna strings and shoots)"
+        }
+      ]
     },
     {
       "id": "draupadi",
@@ -173,117 +265,228 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium painted comic portrait of Draupadi with garland",
-        "Royal princess quality, no maid"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Draupadi young Panchala princess, long dark hair, deep red-and-gold silk, white wedding garland in hand",
+        "On a balcony / upper mansion, not among princes on the floor",
+        "not a durbar floor shot — balcony portrait only"
       ],
       "must_not_show": [
-        "Bow next to her",
         "Photoreal",
-        "Maids",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "ceiling aquarium",
+        "fish tank",
+        "women standing on the court floor",
+        "giant women in the hall",
         "Drona",
-        "white-bearded sage"
+        "flute on Krishna",
+        "child Krishna",
+        "blood",
+        "Arjuna",
+        "Krishna",
+        "women on the hall floor",
+        "Gandiva"
       ],
       "props": [
-        "garland"
+        "white varamala"
       ],
-      "prompt": "Premium high-quality painted comic medium portrait of Princess Draupadi in deep red gold sari, long black hair, holding flower garland, calm. Soft palace arches. Lotus frame. Amar Chitra refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Draupadi, young Panchala princess, long dark hair, gold ornaments, deep red-and-gold silk, white wedding garland in her hands, waiting on a balcony — NOT on the court floor among princes. Not a durbar floor shot. Not Arjuna, not Krishna, no peacock feather. Carved gold-and-lotus cartouche. Not photoreal. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.176–179 — svayaṃvara: stiff bow, yantra-lakṣya, kings fail, Arjuna as brahmin hits, Draupadī’s varamāla"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva, Svayaṃvara-parva (vulgate; same contest: bow, yantra, Arjuna’s hit, garland)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Swayamvara Parva, Sections CLXXXVII–CXC (machinery in the sky; mark; Arjuna strings and shoots)"
+        }
+      ]
     },
     {
       "id": "brahmin",
       "file": "plate-brahmin.jpg",
-      "beat_text": "Then a young brahmin steps forward \u2014 quiet, steady. None yet know him as Arjuna.",
+      "beat_text": "Then a young brahmin steps forward — quiet, steady. None yet know him as Arjuna.",
       "cast_present": [
-        "arjuna_brahmin"
+        "arjuna"
       ],
-      "has_fish_apparatus": true,
+      "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Young brahmin Arjuna white dhoti topknot mustache reaches for bow",
-        "LARGE ceiling mirror high under roof",
-        "Ground pool with fish"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, stepping forward as the unknown youth",
+        "No flower garland, no peacock"
       ],
       "must_not_show": [
-        "Peacock",
-        "Ceiling aquarium",
-        "Sage required",
         "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "ceiling aquarium",
+        "fish tank",
+        "women standing on the court floor",
+        "giant women in the hall",
         "Drona",
-        "white-bearded sage"
+        "flute on Krishna",
+        "child Krishna",
+        "blood",
+        "Krishna",
+        "Draupadi on the floor",
+        "Drona",
+        "flower garland on Arjuna"
       ],
       "props": [
-        "bow",
-        "ceiling mirror",
-        "pool"
+        "Gandiva unstrung"
       ],
-      "prompt": "Premium painted comic. Young brahmin (black topknot, thin mustache, white dhoti) reaches for contest bow on pedestal. Hall shows LARGE gold-framed ceiling MIRROR high under roof and ground pool with swimming fish. No peacock, no aquarium. Lotus frame, refined quality."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, gold belt, quiver, stepping forward quietly (the court still sees a brahmin youth). No flower garland, no peacock, not Krishna. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.176–179 — svayaṃvara: stiff bow, yantra-lakṣya, kings fail, Arjuna as brahmin hits, Draupadī’s varamāla"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva, Svayaṃvara-parva (vulgate; same contest: bow, yantra, Arjuna’s hit, garland)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Swayamvara Parva, Sections CLXXXVII–CXC (machinery in the sky; mark; Arjuna strings and shoots)"
+        }
+      ]
     },
     {
       "id": "aim",
       "file": "plate-aim.jpg",
-      "beat_text": "He strings the bow, looks into the high mirror, and finds the eye in the pool.",
+      "beat_text": "He strings the bow, looks up into the high mirror, and finds the eye in the pool.",
       "cast_present": [
-        "arjuna_brahmin"
+        "arjuna"
       ],
       "has_fish_apparatus": true,
       "is_aim_beat": true,
       "must_show": [
-        "Premium high-quality painted comic",
-        "Arjuna on LEFT dry floor BESIDE the pool \u2014 never in the water",
-        "LARGE circular gold-framed MIRROR high under ceiling top center",
-        "Ground pool with fish swimming \u2014 real target",
-        "Eyes looking UP into the ceiling mirror",
-        "Bow drawn, arrow aimed DOWN at the fish eye in the pool"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva strung",
+        "Large ornamental mirror high under the roof (ceiling disc scale)",
+        "Eyes looking UP into the high ceiling mirror",
+        "Fish in the ground pool; arrow aimed at the pool fish by the mirrored sight",
+        "Archer on dry floor beside the pool, left side — not standing in the water"
       ],
       "must_not_show": [
-        "Standing in the pool",
-        "Ceiling aquarium",
-        "Arrow aimed at the mirror",
-        "Shooting upward at a tank of fish",
-        "Photoreal or crude quality",
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "ceiling aquarium",
+        "fish tank",
+        "women standing on the court floor",
+        "giant women in the hall",
         "Drona",
-        "white-bearded sage"
+        "flute on Krishna",
+        "child Krishna",
+        "blood",
+        "Krishna",
+        "Draupadi as A-shot",
+        "eyes looking down only at the pool without the mirror",
+        "ceiling aquarium"
       ],
       "props": [
-        "bow",
-        "arrow",
+        "Gandiva",
         "ceiling mirror",
-        "pool with fish"
+        "ground pool fish"
       ],
-      "prompt": "Premium high-quality painted comic Amar Chitra. Arjuna LEFT on dry stone floor beside the circular ground pool (never in water), white dhoti, topknot, mustache. LARGE ornamental gold-framed circular MIRROR high under ceiling top center. Fish swims in the ground pool. AIM GEOMETRY: his eyes look UP into the ceiling mirror; his bow is drawn with arrow aimed DOWN at the fish eye in the pool. Mirror reflects the fish. Refined polished quality, lotus frame. No aquarium."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva STRUNG. He stands on the dry floor beside the pool (left side), looks UP into the large ornamental ceiling MIRROR and aims the arrow down at the FISH EYE in the GROUND POOL. No ceiling aquarium. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.176–179 — svayaṃvara: stiff bow, yantra-lakṣya, kings fail, Arjuna as brahmin hits, Draupadī’s varamāla"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva, Svayaṃvara-parva (vulgate; same contest: bow, yantra, Arjuna’s hit, garland)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Swayamvara Parva, Sections CLXXXVII–CXC (machinery in the sky; mark; Arjuna strings and shoots)"
+        }
+      ]
     },
     {
       "id": "hit",
       "file": "plate-hit.jpg",
-      "beat_text": "The arrow flies. The fish in the pool is struck. The court falls silent \u2014 then roars.",
+      "beat_text": "The arrow flies. The fish in the pool is struck. The court falls silent — then roars.",
       "cast_present": [
-        "arjuna_brahmin",
-        "courtiers"
+        "arjuna"
       ],
       "has_fish_apparatus": true,
       "is_aim_beat": false,
       "must_show": [
-        "Premium high-quality painted comic",
-        "Arjuna on left side dry floor",
-        "Arrow from archer's left side hits the fish eye IN THE GROUND POOL",
-        "LARGE ceiling mirror still high above",
-        "Splash in pool where fish is hit"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Arjuna matching Ep 09 lock after the loosed shaft",
+        "Large ornamental mirror high under the roof (ceiling disc scale)",
+        "Arrow from the archer's side into the pool; hit the fish eye in the ground pool as gold light, no gore",
+        "Ceiling mirror still high"
       ],
       "must_not_show": [
-        "Fish hanging from ceiling",
-        "Arrow from opposite side of Arjuna",
-        "Crude low quality",
-        "Standing in pool",
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "ceiling aquarium",
+        "fish tank",
+        "women standing on the court floor",
+        "giant women in the hall",
         "Drona",
-        "white-bearded sage"
+        "flute on Krishna",
+        "child Krishna",
+        "blood",
+        "Krishna",
+        "blood",
+        "viscera",
+        "ceiling aquarium"
       ],
       "props": [
-        "arrow",
-        "pool fish",
-        "ceiling mirror",
-        "bow"
+        "Gandiva",
+        "struck pool fish"
       ],
-      "prompt": "Premium high-quality painted comic. Arjuna LEFT celebrating. LARGE gold-framed circular MIRROR high under the ceiling. Circular ground pool: arrow from Arjuna's left has struck the fish eye in the pool \u2014 splash. No fish hanging above. Same-side arrow path. Refined Amar Chitra quality, lotus frame."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, after the shot. Arrow from the archer's left side hits the FISH EYE in the GROUND POOL as gold light — no blood, no viscera. Large ornamental ceiling mirror still high. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.176–179 — svayaṃvara: stiff bow, yantra-lakṣya, kings fail, Arjuna as brahmin hits, Draupadī’s varamāla"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva, Svayaṃvara-parva (vulgate; same contest: bow, yantra, Arjuna’s hit, garland)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Swayamvara Parva, Sections CLXXXVII–CXC (machinery in the sky; mark; Arjuna strings and shoots)"
+        }
+      ]
     },
     {
       "id": "garland",
@@ -291,55 +494,112 @@
       "beat_text": "Draupadi places the garland on his neck. The prize is won by skill, not boast.",
       "cast_present": [
         "draupadi",
-        "arjuna_revealed"
+        "arjuna"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Same Draupadi and Arjuna faces, garland moment"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Draupadi placing the white varamala on Arjuna’s neck",
+        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, no peacock"
       ],
       "must_not_show": [
-        "Peacock",
         "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "ceiling aquarium",
+        "fish tank",
+        "women standing on the court floor",
+        "giant women in the hall",
         "Drona",
-        "white-bearded sage"
+        "flute on Krishna",
+        "child Krishna",
+        "blood",
+        "Krishna as a third groom",
+        "Drona",
+        "women mob on the floor"
       ],
       "props": [
-        "garland"
+        "white varamala"
       ],
-      "prompt": "Premium painted comic. Draupadi places garland on Arjuna (white dhoti, mustache, topknot, no peacock). Soft palace, warm light, lotus frame, refined quality."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Draupadi (red-gold silk, long dark hair) places the white wedding garland on Arjuna (Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver — no peacock, no flower garland of Krishna). Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.176–179 — svayaṃvara: stiff bow, yantra-lakṣya, kings fail, Arjuna as brahmin hits, Draupadī’s varamāla"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva, Svayaṃvara-parva (vulgate; same contest: bow, yantra, Arjuna’s hit, garland)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Swayamvara Parva, Sections CLXXXVII–CXC (machinery in the sky; mark; Arjuna strings and shoots)"
+        }
+      ]
     },
     {
       "id": "wide-gold",
       "file": "plate-wide-gold.jpg",
       "beat_text": "Once more Arjuna proves the lesson of the garden: see only what must be hit.",
       "cast_present": [
-        "draupadi",
-        "arjuna_revealed",
-        "courtiers"
+        "arjuna",
+        "krishna"
       ],
-      "has_fish_apparatus": true,
+      "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality closing plate",
-        "Arjuna and Draupadi together with garland",
-        "LARGE ceiling mirror and ground pool with fish still in hall for continuity"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver",
+        "Krishna matching Ep 09 lock: dusty-blue, U-tilak, gold crown with one peacock feather, yellow pitambar, flower garlands, no flute"
       ],
       "must_not_show": [
-        "Ceiling aquarium",
         "Photoreal",
-        "Peacock",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "ceiling aquarium",
+        "fish tank",
+        "women standing on the court floor",
+        "giant women in the hall",
         "Drona",
-        "white-bearded sage"
+        "flute on Krishna",
+        "child Krishna",
+        "blood",
+        "Drona",
+        "Bhishma",
+        "second Arjuna",
+        "child Krishna"
       ],
       "props": [
-        "garland",
-        "ceiling mirror",
-        "pool"
+        "hall after the contest"
       ],
-      "prompt": "Premium painted comic closing gold plate. Arjuna and Draupadi after victory. Behind: LARGE ceiling gold-framed MIRROR and ground pool (fish continuity). No aquarium. Warm cream-saffron-gold, lotus frame, refined quality."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna (Ep 09 lock) and Krishna as guest (Ep 09 lock: dusty-blue, U-tilak, one peacock feather, yellow pitambar, flower garlands, NO flute). Cream-saffron-gold hall. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.176–179 — svayaṃvara: stiff bow, yantra-lakṣya, kings fail, Arjuna as brahmin hits, Draupadī’s varamāla"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva, Svayaṃvara-parva (vulgate; same contest: bow, yantra, Arjuna’s hit, garland)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Swayamvara Parva, Sections CLXXXVII–CXC (machinery in the sky; mark; Arjuna strings and shoots)"
+        }
+      ]
     }
-  ],
-  "scene_lock_ref": ""
+  ]
 }

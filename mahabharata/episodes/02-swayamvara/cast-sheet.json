@@ -1,36 +1,31 @@
 {
   "episode_id": "02",
-  "notes": "Lock faces/costumes for all Ep02 plates. Arjuna is disguised as brahmin until garland moment (still same face).",
+  "title": "The Fish's Eye",
   "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, dusty-blue skin, dark eyes, serene smile, U-tilak — Ep 09 lock",
+      "hair": "Dark curly hair, gold crown with one peacock feather",
+      "costume": "Yellow pitambar, flower garlands, gold kundala, no flute, no bow, not a child"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09 lock — even in brahmin guise",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver, Gandiva — never flower garland, never peacock, never Krishna’s pitambar"
+    },
     "draupadi": {
-      "face": "Young woman, warm brown skin, large dark eyes, soft brows, gentle smile, small bindi",
-      "hair": "Long black wavy hair over left shoulder, simple gold maang tikka + small crown",
-      "costume": "Deep red / vermillion silk sari with gold border, gold blouse, pearl and gold jewelry, holding white-and-red flower garland when waiting",
-      "style": "Painted comic charm matching Ep01 gold master — not photoreal"
+      "face": "Young Panchala princess, luminous noble face, dark eyes — not a second Arjuna, not Krishna",
+      "hair": "Long dark hair with gold ornaments, no peacock feather",
+      "costume": "Deep red-and-gold silk, palace jewelry, white wedding garland in hand when the beat requires it"
     },
-    "arjuna_brahmin": {
-      "face": "Same young man as Ep01 Arjuna face language: oval face, dark eyes, thin dark mustache, focused calm expression",
-      "hair": "Black curly hair in simple topknot, NO peacock feather, NO jeweled crown while disguised",
-      "costume": "Plain cream-white dhoti and upper cloth (brahmin guise), simple sacred thread optional, bare chest with minimal gold",
-      "style": "Painted comic charm matching Ep01 gold master — not photoreal"
+    "drupada": {
+      "face": "Aged Panchala king, noble lined face, dark-grey beard — not Bhishma’s silver diadem, not Drona’s saffron guru",
+      "hair": "Grey-black hair, gold royal crown of Panchala",
+      "costume": "Indigo-and-gold royal angavastram, no saffron acharya cloth"
     },
-    "arjuna_revealed": {
-      "face": "Same face as arjuna_brahmin (continuity lock)",
-      "hair": "Same topknot or light golden diadem only after reveal — still NO peacock feather",
-      "costume": "May keep white for continuity at garland; optional soft gold accents — never photoreal",
-      "style": "Painted comic charm matching Ep01 gold master — not photoreal"
-    },
-    "king_suitor": {
-      "face": "Adult warrior princes, varied but same comic line weight as Ep01 princes",
-      "hair": "Crowns or turbans, curly dark hair, warrior mustaches (not cartoon kids)",
-      "costume": "Jewel-tone silks: blue, red, green, gold sashes — Amar Chitra, not CGI",
-      "style": "Painted comic charm matching Ep01 gold master — not photoreal"
-    },
-    "courtiers": {
-      "face": "Background men, simplified comic silhouettes",
-      "hair": "Turbans",
-      "costume": "Muted saffron, teal, cream court dress",
-      "style": "Painted comic charm — never photoreal close-ups"
+    "armies": {
+      "face": "Kings and princes on the hall floor",
+      "hair": "Crowns and helmets",
+      "costume": "Muted banners, equal human scale; women only on balconies behind curtains"
     }
   }
 }

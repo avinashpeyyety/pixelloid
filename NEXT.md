@@ -4,6 +4,7 @@
 
 ## Now
 
+- [x] Mahābhārata Ep 02 *The Fish's Eye* rewrite (09/10 bar, Yaman, Orion, sources)
 - [x] Mahābhārata Ep 01 *The Bird's Eye* rewrite (09/10 bar, Bhupali, Orion, sources)
 - [x] Mahābhārata Ep 11 restyle (Chakravyuha → Ep 09/10 gold cartouche)
 - [ ] Chocolate Dance: one more joke beat after the “graduation” loop

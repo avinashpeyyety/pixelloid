@@ -1,13 +1,14 @@
 # NEXT — mahabharata (pixelloid)
 
 ## Now
-- [ ] Rewrite **Episode 02** to the Ep 09/10 bar (one episode per pass). Do not start 03–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+.
+- [ ] Rewrite **Episode 03** to the Ep 09/10 bar (one episode per pass). Do not start 04–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+.
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate)
 - [ ] After each 02–08 rewrite: one episode per pass, then resume Ep 14
 
 ## Done
+- [x] Ep 02 *The Fish's Eye* rewrite (09/10 bar, Yaman, Orion, sources)
 - [x] Ep 01 *The Bird's Eye* rewrite (09/10 bar, Bhupali, Orion, sources)
 - [x] Ep 01–06
 - [x] Ep 07 *Jayadratha*

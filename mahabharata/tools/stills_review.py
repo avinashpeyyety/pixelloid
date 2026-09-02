@@ -108,7 +108,7 @@ def ok_size(w: int, h: int) -> list[str]:
 
 
 GENERIC_CAST_IDS = {"armies", "army", "ranks", "host"}
-CHARACTER_MODEL_FROM_EP = 12
+CHARACTER_MODEL_FROM_EP = 1
 
 
 def check_named_face_locks(ep_dir: Path, n: int) -> list[str]:

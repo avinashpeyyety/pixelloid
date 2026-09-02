@@ -114,8 +114,8 @@ EP09_ARJUNA_LOCK = "episodes/09-gita/stills/_locks/arjuna.jpg"
 EP10_BHISHMA_LOCK = "episodes/10-bhishma-fall/stills/_locks/bhishma.jpg"
 EP10_SHIKHANDI_LOCK = "episodes/10-bhishma-fall/stills/_locks/shikhandi.jpg"
 KRISHNA_LOOK_FROM_EP = 12  # Ep 09 is the source; Ep 10–11 already shipped
-CHARACTER_MODEL_FROM_EP = 12  # Ep 09/10 faces are the series bar; 01–08 rewrite queued (Ep 01 first)
-SOURCE_GATE_FROM_EP = 9  # 01–08 grandfathered until rewrite; 09+ must cite two authorities
+CHARACTER_MODEL_FROM_EP = 1  # rewritten episodes (01 first) must use Ep 09/10 series faces
+SOURCE_GATE_FROM_EP = 1  # rewritten 01+ must cite ≥2 of BORI/Debroy, Gita Press, Ganguli
 SERIES_FACE_LOCKS = {
     "krishna": EP09_KRISHNA_LOCK,
     "arjuna": EP09_ARJUNA_LOCK,

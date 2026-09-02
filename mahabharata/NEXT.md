@@ -1,13 +1,14 @@
 # NEXT — mahabharata (pixelloid)
 
 ## Now
-- [ ] Rewrite **Episode 01 only** to the Ep 09/10 bar (1536×1024 cream–saffron–gold cartouche, 09/10 character models, Orion, named raga, GATE D dialogue–panel sync, BORI + Gita Press Gorakhpur + Ganguli source gate). Do not start 02–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+.
+- [ ] Rewrite **Episode 02** to the Ep 09/10 bar (one episode per pass). Do not start 03–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+.
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate)
-- [ ] After Ep 01 rewrite: 02–08 one episode per pass, then resume Ep 14
+- [ ] After each 02–08 rewrite: one episode per pass, then resume Ep 14
 
 ## Done
+- [x] Ep 01 *The Bird's Eye* rewrite (09/10 bar, Bhupali, Orion, sources)
 - [x] Ep 01–06
 - [x] Ep 07 *Jayadratha*
 - [x] Ep 08 *The Peace Embassy*

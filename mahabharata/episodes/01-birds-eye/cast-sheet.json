@@ -1,0 +1,26 @@
+{
+  "episode_id": "01",
+  "title": "The Bird's Eye",
+  "cast": {
+    "drona": {
+      "face": "Aged acharya-warrior, noble lined face, long white beard and mustache (guru in the garden, not a garden sage only)",
+      "hair": "White hair in a saffron-bound topknot, rudraksha — no Kuru silver diadem of Bhishma",
+      "costume": "Saffron angavastram over pale cream dhoti, staff or bow of the guru"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09 lock",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland, never peacock"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king-in-training, calm noble face, modest mustache — distinct from Arjuna, never a second Arjuna",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna’s heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti, gold sash, no Gandiva, no flower garland"
+    },
+    "armies": {
+      "face": "Fellow princes distant",
+      "hair": "Helmets or unbound youth",
+      "costume": "Muted banners, equal human scale, no gore"
+    }
+  }
+}

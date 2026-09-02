@@ -1,0 +1,544 @@
+{
+  "episode_id": "01",
+  "strict_hero_lock": "arjuna",
+  "title": "The Bird's Eye",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Arjuna face locked to Ep 09",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/01-birds-eye/stills/_locks/garden-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "episodes/01-birds-eye/stills/_locks/garden-master.jpg",
+    "episodes/01-birds-eye/stills/_locks/drona.jpg",
+    "episodes/01-birds-eye/stills/_locks/yudhishthira.jpg",
+    "episodes/01-birds-eye/stills/_locks/arjuna.jpg"
+  ],
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Ādi Parva · Sambhava · Drona's bhāsa-lakṣya test",
+    "divergence": "BORI CE places the bird-target in Ādi 1.123 (with Ekalavya in the same adhyāya). Gita Press Gorakhpur numbers the same event Ādi adhyāya 133. Ganguli’s vulgate English is Sambhava Sections CXXXIV–CXXXV. The trial itself agrees: artisan’s bird on a tree; Yudhishthira sees tree/guru/brothers/bird; Arjuna sees only the bird, then only its head; Drona says shoot.",
+    "chosen": "Gita Press Gorakhpur + BORI overlap: the bhāsa-lakṣya trial as told in both. Debroy Vol. 1 translates BORI 1.123.",
+    "notes": "Not TV. Not a living-bird hunt. Artificial bird (bhāsa) as target. No Krishna on this field."
+  },
+  "cast": {
+    "drona": {
+      "face": "Aged acharya-warrior, noble lined face, long white beard and mustache (guru in the garden, not a garden sage only)",
+      "hair": "White hair in a saffron-bound topknot, rudraksha — no Kuru silver diadem of Bhishma",
+      "costume": "Saffron angavastram over pale cream dhoti, staff or bow of the guru"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09 lock",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland, never peacock"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king-in-training, calm noble face, modest mustache — distinct from Arjuna, never a second Arjuna",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna’s heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti, gold sash, no Gandiva, no flower garland"
+    },
+    "armies": {
+      "face": "Fellow princes distant",
+      "hair": "Helmets or unbound youth",
+      "costume": "Muted banners, equal human scale, no gore"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "In Hastināpura’s garden Drona tests the princes. An artisan’s bird sits high on a tree.",
+      "cast_present": [
+        "drona"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Drona acharya-warrior: white beard and mustache, saffron angavastram, cream dhoti, heroic medium",
+        "Hastināpura garden, cream-saffron-gold, a small artisan bird high on a tree, distant princes only"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Krishna",
+        "peacock feather on Arjuna",
+        "blood",
+        "severed flesh",
+        "Arjuna as the A-shot",
+        "Bhishma"
+      ],
+      "props": [
+        "artisan bird on a tree",
+        "garden"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona the acharya-warrior in a Hastināpura garden, saffron angavastram, long white beard, saffron topknot. A small artisan bird sits high on a tree. Distant princes only. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.123 — bhāsa-lakṣya (artificial bird on the tree)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva adhyāya 133 — Arjuna sees only the bhāsa"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
+        }
+      ]
+    },
+    {
+      "id": "drona",
+      "file": "plate-drona.jpg",
+      "beat_text": "Take your bows. Aim at that bird. When I give the word, cut off its head.",
+      "cast_present": [
+        "drona"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Drona acharya-warrior: white beard and mustache, saffron angavastram, pointing toward the bird in the tree"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Krishna",
+        "peacock feather on Arjuna",
+        "blood",
+        "severed flesh",
+        "Arjuna",
+        "Bhishma"
+      ],
+      "props": [
+        "bows",
+        "artisan bird"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Drona, white beard and mustache, saffron angavastram, cream dhoti, pointing at a small artisan bird high in a tree. Bows ready. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No Arjuna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.123 — bhāsa-lakṣya (artificial bird on the tree)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva adhyāya 133 — Arjuna sees only the bhāsa"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
+        }
+      ]
+    },
+    {
+      "id": "yudhishthira",
+      "file": "plate-yudhishthira.jpg",
+      "beat_text": "I see the tree. I see you. I see my brothers. I see the bird.",
+      "cast_present": [
+        "yudhishthira"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Yudhishthira eldest Pandava, simple gold diadem, cream-white royal dhoti, modest mustache, bow drawn, looking at more than the bird",
+        "tree and artisan bird visible"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Krishna",
+        "peacock feather on Arjuna",
+        "blood",
+        "severed flesh",
+        "Arjuna",
+        "Drona as a second king",
+        "Bhishma"
+      ],
+      "props": [
+        "bow",
+        "tree",
+        "artisan bird"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Yudhishthira, eldest dharma-prince, simple gold diadem, cream-white royal dhoti, gold sash, modest mustache, bow drawn, eyes wide on tree and bird. Not Arjuna, no heavy crown, no Gandiva, no peacock, no flower garland. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.123 — bhāsa-lakṣya (artificial bird on the tree)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva adhyāya 133 — Arjuna sees only the bhāsa"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
+        }
+      ]
+    },
+    {
+      "id": "aside",
+      "file": "plate-aside.jpg",
+      "beat_text": "This is not for you. Stand apart.",
+      "cast_present": [
+        "drona"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Drona acharya-warrior: white beard and mustache, saffron angavastram, dismissing with a hand"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Krishna",
+        "peacock feather on Arjuna",
+        "blood",
+        "severed flesh",
+        "Arjuna",
+        "Bhishma"
+      ],
+      "props": [
+        "raised hand"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Drona, white beard and mustache, saffron angavastram, cream dhoti, hand raised dismissing a pupil. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No Arjuna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.123 — bhāsa-lakṣya (artificial bird on the tree)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva adhyāya 133 — Arjuna sees only the bhāsa"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
+        }
+      ]
+    },
+    {
+      "id": "arjuna-bow",
+      "file": "plate-arjuna-bow.jpg",
+      "beat_text": "Then Arjuna stands with the bow drawn — waiting for the order.",
+      "cast_present": [
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva drawn, no flower garland, no peacock"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Krishna",
+        "peacock feather on Arjuna",
+        "blood",
+        "severed flesh",
+        "Drona",
+        "Krishna",
+        "flower garland on Arjuna",
+        "Bhishma"
+      ],
+      "props": [
+        "Gandiva",
+        "drawn bow"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, gold belt, quiver on back, Gandiva drawn to the ear, waiting. No flower garland, no peacock feather. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.123 — bhāsa-lakṣya (artificial bird on the tree)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva adhyāya 133 — Arjuna sees only the bhāsa"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
+        }
+      ]
+    },
+    {
+      "id": "eye",
+      "file": "plate-eye.jpg",
+      "beat_text": "I see only the head of the bird, Acharya. Not the tree. Not you.",
+      "cast_present": [
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, aiming",
+        "the artisan bird’s head as the only clear target"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Krishna",
+        "peacock feather on Arjuna",
+        "blood",
+        "severed flesh",
+        "Drona",
+        "Krishna",
+        "flower garland on Arjuna",
+        "Bhishma"
+      ],
+      "props": [
+        "Gandiva",
+        "bird head"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva aimed. The artisan bird’s head is the only clear mark. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.123 — bhāsa-lakṣya (artificial bird on the tree)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva adhyāya 133 — Arjuna sees only the bhāsa"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
+        }
+      ]
+    },
+    {
+      "id": "loose",
+      "file": "plate-loose.jpg",
+      "beat_text": "Shoot.",
+      "cast_present": [
+        "drona"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Drona acharya-warrior: white beard and mustache, saffron angavastram, command on the lips"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Krishna",
+        "peacock feather on Arjuna",
+        "blood",
+        "severed flesh",
+        "Arjuna",
+        "Bhishma",
+        "Krishna"
+      ],
+      "props": [
+        "raised command hand"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Drona, white beard and mustache, saffron angavastram, cream dhoti, giving the command to shoot. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No Arjuna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.123 — bhāsa-lakṣya (artificial bird on the tree)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva adhyāya 133 — Arjuna sees only the bhāsa"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
+        }
+      ]
+    },
+    {
+      "id": "release",
+      "file": "plate-release.jpg",
+      "beat_text": "The shaft takes the bird’s head. Gold dust on the grass — no blood.",
+      "cast_present": [
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, after the loosed shaft",
+        "artisan bird’s head falling as gold dust — no blood, no viscera"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Krishna",
+        "peacock feather on Arjuna",
+        "blood",
+        "severed flesh",
+        "Drona",
+        "Krishna",
+        "blood",
+        "Bhishma"
+      ],
+      "props": [
+        "Gandiva",
+        "gold-dust bird head"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva after the shot. The artisan bird’s head falls as gold dust and light — no blood, no viscera. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.123 — bhāsa-lakṣya (artificial bird on the tree)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva adhyāya 133 — Arjuna sees only the bhāsa"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
+        }
+      ]
+    },
+    {
+      "id": "wide-gold",
+      "file": "plate-wide-gold.jpg",
+      "beat_text": "Drona holds him close. The aim is one thought.",
+      "cast_present": [
+        "drona",
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Drona acharya-warrior: white beard and mustache, saffron angavastram, holding Arjuna",
+        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, no peacock, no flower garland"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "Krishna",
+        "peacock feather on Arjuna",
+        "blood",
+        "severed flesh",
+        "Krishna",
+        "Bhishma",
+        "second Arjuna"
+      ],
+      "props": [
+        "embrace of guru and pupil"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona (white beard, saffron angavastram) holds Arjuna (Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver — no peacock, no flower garland). Garden, cream-saffron-gold. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva 1.123 — bhāsa-lakṣya (artificial bird on the tree)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva adhyāya 133 — Arjuna sees only the bhāsa"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
+        }
+      ]
+    }
+  ]
+}

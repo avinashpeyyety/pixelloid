@@ -147,4 +147,16 @@ export const EPISODES = [
       "Arjuna vows Jayadratha dies before sunset. Krishna veils the sun — and the fourteenth day keeps its word.",
     play: "play.html?ep=12",
   },
+  {
+    id: "13",
+    slug: "ghatotkacha",
+    title: "Ghatotkacha",
+    sanskrit: "घटोत्कचः",
+    chapter: "Drona Parva · night of the fourteenth",
+    duration: "~104s",
+    status: "live",
+    blurb:
+      "Night after Jayadratha. Ghatotkacha darkens the field — and Karna spends the dart that was kept for Arjuna.",
+    play: "play.html?ep=13",
+  },
 ];

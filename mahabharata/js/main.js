@@ -16,6 +16,7 @@ const EP_LOADERS = {
   "10": () => import("../episodes/10-bhishma-fall/script.js"),
   "11": () => import("../episodes/11-chakravyuha/script.js"),
   "12": () => import("../episodes/12-jayadratha-vadha/script.js"),
+  "13": () => import("../episodes/13-ghatotkacha/script.js"),
 };
 
 const _epParam = String(new URLSearchParams(location.search).get("ep") || "01").replace(/\D/g, "") || "01";
@@ -230,7 +231,7 @@ const C = {
 /**
  * Episode raga beds: tanpura floor + raga phrases + optional tabla.
  * Kathavachak theater — not trailer brass, not licensed film music.
- * Ep 09 Bhairav (no tabla), Ep 10 Darbari, Ep 11 Megh+Jhaptal, Ep 12 Marwa (sunset, no Pa);
+ * Ep 09 Bhairav, Ep 10 Darbari, Ep 11 Megh+Jhaptal, Ep 12 Marwa, Ep 13 Malkauns (midnight, no Re/Pa);
  * Ep 01–08 keep a default flute+tabla preset. Do not use that preset on new episodes.
  */
 const RAGA_RATIOS = {
@@ -292,6 +293,18 @@ const RAGA_PRESETS = {
     duckLevel: 0.15,
     tanpuraMs: 1200,
   },
+  malkauns: {
+    // Midnight raga — no Re, no Pa. Deep bansuri, no tabla.
+    Sa: 110, // A2
+    fluteSa: 220,
+    degrees: ["S", "g", "m", "d", "n"],
+    tabla: "none",
+    voice: "bansuri",
+    andolan: "g",
+    bedLevel: 0.44,
+    duckLevel: 0.14,
+    tanpuraMs: 1400,
+  },
   default: {
     // eps 01–08 — keep close to old FluteTablaBed so they don't jump
     Sa: 293.66,
@@ -331,6 +344,7 @@ class RagaBed {
       else if (id === "10") key = "darbari";
       else if (id === "11") key = "megh";
       else if (id === "12") key = "marwa";
+      else if (id === "13") key = "malkauns";
       else key = "default";
     }
     if (!RAGA_PRESETS[key]) key = "default";
@@ -819,6 +833,32 @@ class RagaBed {
         ],
       ];
     }
+    if (key === "malkauns") {
+      // midnight, no Re no Pa — S g m d n
+      return [
+        [
+          [0, "S", 0, 1.8],
+          [2.0, "g", 0, 2.2],
+          [4.4, "m", 0, 1.8],
+        ],
+        [
+          [0, "m", 0, 1.6],
+          [1.8, "d", 0, 1.8],
+          [3.8, "n", 0, 1.6],
+          [5.6, "S", 1, 2.0],
+        ],
+        [
+          [0, "n", 0, 1.8],
+          [2.0, "d", 0, 1.6],
+          [3.8, "m", 0, 1.8],
+          [5.8, "g", 0, 2.2],
+        ],
+        [
+          [0, "g", 0, 2.4],
+          [2.8, "S", 0, 2.0],
+        ],
+      ];
+    }
     if (key === "marwa") {
       // sunset, no Pa — N r G / D N S
       return [
@@ -884,6 +924,7 @@ class RagaBed {
     if (key === "darbari") return 4 + Math.random() * 3;
     if (key === "megh") return 1.6 + Math.random() * 1.4;
     if (key === "marwa") return 3.2 + Math.random() * 2.2;
+    if (key === "malkauns") return 3.8 + Math.random() * 2.4;
     return 1.2 + Math.random() * 2.0;
   }
 
@@ -992,7 +1033,7 @@ class RagaBed {
       this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
     }
 
-    const melodyDelay = key === "darbari" ? 4200 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
+    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
     this.timers.push(setTimeout(() => this._scheduleMelody(), melodyDelay));
 
     this.master.gain.cancelScheduledValues(t);

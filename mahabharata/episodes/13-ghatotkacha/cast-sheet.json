@@ -1,0 +1,36 @@
+{
+  "episode_id": "13",
+  "notes": "Drona Parva, night of the fourteenth. Ghatotkacha is an adult rakshasa-kshatriya prince (heroic medium, Amar Chitra maharathi) — never a child, never a horror demon. No gore: gold Shakti-light, mountain-fall of light. Karna has already given away kavacha-kundala; he holds Vijaya and the one-use Vasavi dart. Krishna is the Ep 09 look lock (charioteer, not flute).",
+  "cast": {
+    "ghatotkacha": {
+      "face": "Adult rakshasa-kshatriya prince, broad noble face, dark mustache, fierce dark eyes — never a child, never a horror mask",
+      "hair": "Dark hair, small gold diadem (not Arjuna’s heavy crown, not Krishna’s peacock)",
+      "costume": "Storm-indigo and gold engraved armor, cream sash, mace — equal human scale, heroic medium fill, never flower garland, never saffron sage robes"
+    },
+    "karna": {
+      "face": "Adult king of Anga, proud mustache, sun-warmed skin, resolute eyes — distinct from Arjuna",
+      "hair": "Dark hair, jeweled Anga diadem (not Arjuna’s heavy crown, not peacock feather)",
+      "costume": "Deep gold and crimson engraved armor, Vijaya bow, the Vasavi dart as a gold spear of light — never flower garland, never Krishna pitambar, no divine kavacha"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava king, proud mustache, fierce gaze",
+      "hair": "Dark hair under a jeweled Kuru crown",
+      "costume": "Jewel-tone gold and saffron Kaurava armor, mace — field king, not a sage"
+    },
+    "krishna": {
+      "face": "Youthful divine smile, dusty-blue skin, dark eyes, serene, U-tilak — same face as Ep 09 lock",
+      "hair": "Dark curly hair, gold crown with one peacock feather",
+      "costume": "Yellow pitambar, flower garlands, gold jewelry, charioteer reins — never a flute, never a bow"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09–12",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted night banners, equal human scale, no gore"
+    }
+  }
+}

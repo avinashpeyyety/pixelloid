@@ -1,7 +1,7 @@
 # NEXT — mahabharata (pixelloid)
 
 ## Now
-- [ ] Next parva beat after Ep 12 (Chief routes). Do not start unless routed. **Art factory = Ep 10 bar + Ep 09 Krishna look lock.** Do not restyle 01–08. Do not attach Ep 01 gold.
+- [ ] Next parva beat after Ep 13 (Chief routes). Do not start unless routed. **Art factory = Ep 10 bar + Ep 09 Krishna look lock.** Do not restyle 01–08. Do not attach Ep 01 gold.
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate)
@@ -21,3 +21,4 @@
 - [x] Hub: drop phad/flute-tabla lead; featured plate = Ep 11 gold cartouche 1536×1024
 - [x] Ep 09–11 raga underscoring (Bhairav / Darbari / Megh+Jhaptal) in the player; duck under Orion
 - [x] Ep 12 *Jayadratha Falls* (Drona Parva, fourteenth day, sunset vow; Marwa; Orion)
+- [x] Ep 13 *Ghatotkacha* (Drona Parva, night of the fourteenth, Karna’s Shakti; Malkauns; Orion)

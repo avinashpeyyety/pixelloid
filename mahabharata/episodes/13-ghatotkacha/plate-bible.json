@@ -1,0 +1,441 @@
+{
+  "episode_id": "13",
+  "strict_hero_lock": "arjuna",
+  "title": "Ghatotkacha",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; night indigo-gold locus; refined linework; Ep 10 field-master density; Krishna face/body locked to Ep 09",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold cartouche. Night locus may be indigo sky and gold moon INSIDE the painting. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic night (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/13-ghatotkacha/stills/_locks/night-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/13-ghatotkacha/stills/_locks/night-master.jpg",
+    "episodes/13-ghatotkacha/stills/_locks/ghatotkacha.jpg",
+    "episodes/13-ghatotkacha/stills/_locks/karna.jpg",
+    "episodes/13-ghatotkacha/stills/_locks/duryodhana.jpg",
+    "episodes/13-ghatotkacha/stills/_locks/arjuna.jpg"
+  ],
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "ghatotkacha": {
+      "face": "Adult rakshasa-kshatriya prince, broad noble face, dark mustache, fierce dark eyes — never a child, never a horror mask",
+      "hair": "Dark hair, small gold diadem (not Arjuna’s heavy crown, not Krishna’s peacock)",
+      "costume": "Storm-indigo and gold engraved armor, cream sash, mace — equal human scale, heroic medium fill, never flower garland, never saffron sage robes"
+    },
+    "karna": {
+      "face": "Adult king of Anga, proud mustache, sun-warmed skin, resolute eyes — distinct from Arjuna",
+      "hair": "Dark hair, jeweled Anga diadem (not Arjuna’s heavy crown, not peacock feather)",
+      "costume": "Deep gold and crimson engraved armor, Vijaya bow, the Vasavi dart as a gold spear of light — never flower garland, never Krishna pitambar, no divine kavacha"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava king, proud mustache, fierce gaze",
+      "hair": "Dark hair under a jeweled Kuru crown",
+      "costume": "Jewel-tone gold and saffron Kaurava armor, mace — field king, not a sage"
+    },
+    "krishna": {
+      "face": "Youthful divine smile, dusty-blue skin, dark eyes, serene, U-tilak — same face as Ep 09 lock",
+      "hair": "Dark curly hair, gold crown with one peacock feather",
+      "costume": "Yellow pitambar, flower garlands, gold jewelry, charioteer reins — never a flute, never a bow"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09–12",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted night banners, equal human scale, no gore"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "Night after the vow. Bhima’s son Ghatotkacha darkens the field — a rakshasa-prince grown for this hour.",
+      "cast_present": [
+        "ghatotkacha"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold cartouche; night indigo-gold hour inside",
+        "Ghatotkacha adult rakshasa-kshatriya prince: dark mustache, small gold diadem, storm-indigo and gold engraved armor, mace, heroic medium, never a child",
+        "Night Kurukshetra inside the gold cartouche: indigo sky, gold moon, distant ranks only"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ghatotkacha",
+        "horror demon",
+        "Drona",
+        "white-bearded sage",
+        "Krishna",
+        "Arjuna",
+        "Karna",
+        "second Ghatotkacha"
+      ],
+      "props": [
+        "mace",
+        "night banners",
+        "gold moon"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Ghatotkacha, adult rakshasa-kshatriya prince of Bhima, dark mustache, small gold diadem, storm-indigo and gold engraved armor, cream sash, mace, filling the frame. Never a child, never a horror demon, equal human scale. Night field inside a carved gold-and-lotus cartouche, indigo sky, gold moon, distant ranks only. Cream-saffron-gold frame. Not photoreal. No Drona. No Krishna. No flute. No gore."
+    },
+    {
+      "id": "plea",
+      "file": "plate-plea.jpg",
+      "beat_text": "Duryodhana finds Karna: the night is eating the host — use the dart, or we are lost.",
+      "cast_present": [
+        "duryodhana",
+        "karna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold cartouche; night indigo-gold hour inside",
+        "Duryodhana: jeweled Kuru crown, gold-saffron Kaurava armor, mace, proud mustache",
+        "Karna: Anga diadem, deep gold-crimson armor, Vijaya bow, the unused gold dart at his side — distinct from Arjuna, no peacock, no flower garland"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ghatotkacha",
+        "horror demon",
+        "Drona",
+        "white-bearded sage",
+        "Krishna",
+        "Arjuna",
+        "Ghatotkacha",
+        "peacock feather on Karna"
+      ],
+      "props": [
+        "Vijaya",
+        "Vasavi dart",
+        "mace"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Duryodhana the Kaurava king in jeweled crown and gold-saffron armor pleads with Karna at night. Karna: adult king of Anga, proud mustache, jeweled Anga diadem, deep gold and crimson engraved armor, Vijaya bow, a gold spear-dart of light unused at his side. Not Arjuna, no peacock feather, no flower garland, no divine kavacha. Carved gold-and-lotus cartouche, indigo night inside. Not photoreal. No Drona. No Krishna. No Ghatotkacha. No flute. No gore."
+    },
+    {
+      "id": "storm",
+      "file": "plate-storm.jpg",
+      "beat_text": "Illusions wheel over the Kauravas: elephants of mist, a storm of banners — no blood.",
+      "cast_present": [
+        "ghatotkacha"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold cartouche; night indigo-gold hour inside",
+        "Ghatotkacha adult rakshasa-prince, dark mustache, storm-indigo gold armor, mace raised, never a child",
+        "Illusions as mist-elephants and wheeling gold banners, not gore, not horror"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ghatotkacha",
+        "horror demon",
+        "Drona",
+        "white-bearded sage",
+        "Krishna",
+        "Karna",
+        "blood",
+        "horror viscera"
+      ],
+      "props": [
+        "mace",
+        "mist elephants",
+        "banners"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Ghatotkacha adult rakshasa-kshatriya prince, dark mustache, small gold diadem, storm-indigo and gold armor, mace raised. Behind him illusions: elephants of mist, a storm of gold banners wheeling — no blood, no viscera. Never a child, never a horror demon. Carved gold-and-lotus cartouche, indigo-gold night. Not photoreal. No Drona. No Krishna. No flute. No gore."
+    },
+    {
+      "id": "counsel",
+      "file": "plate-counsel.jpg",
+      "beat_text": "Krishna, calm at the reins, knows the dart that was kept for Arjuna.",
+      "cast_present": [
+        "krishna",
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold cartouche; night indigo-gold hour inside",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva — no flower garland",
+        "Night chariot, indigo sky, gold moon; Krishna holds reins, calm"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ghatotkacha",
+        "horror demon",
+        "Drona",
+        "white-bearded sage",
+        "Ghatotkacha",
+        "Karna",
+        "second Krishna"
+      ],
+      "props": [
+        "chariot",
+        "reins",
+        "Gandiva"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna as charioteer at night, dusty-blue skin, gold crown with one peacock feather, yellow pitambar, flower garlands, holding charioteer reins — match Ep 09 Krishna exactly. Arjuna beside him, gold crown, dark mustache, cream-white dhoti, quiver, Gandiva. Calm knowing. Carved gold-and-lotus cartouche, indigo-gold night. Not photoreal. No Drona. No flute. No gore. No Ghatotkacha."
+    },
+    {
+      "id": "dart",
+      "file": "plate-dart.jpg",
+      "beat_text": "Karna lifts the Vasavi Shakti — one bolt, given by Indra, never twice.",
+      "cast_present": [
+        "karna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold cartouche; night indigo-gold hour inside",
+        "Karna adult king of Anga, proud mustache, Anga diadem, deep gold-crimson armor, lifting a gold spear-dart of light",
+        "Heroic medium, the Shakti as sacred gold lightning, not gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ghatotkacha",
+        "horror demon",
+        "Drona",
+        "white-bearded sage",
+        "Krishna",
+        "Arjuna",
+        "Ghatotkacha",
+        "peacock feather"
+      ],
+      "props": [
+        "Vasavi Shakti",
+        "Vijaya"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Karna, king of Anga, proud mustache, jeweled Anga diadem, deep gold and crimson engraved armor, lifting the Vasavi Shakti as a gold spear of light. Not Arjuna, no peacock, no flower garland, no kavacha. Carved gold-and-lotus cartouche, indigo night. Not photoreal. No Drona. No Krishna. No Ghatotkacha. No flute. No gore."
+    },
+    {
+      "id": "loose",
+      "file": "plate-loose.jpg",
+      "beat_text": "He looses. A single gold shaft of light finds the rakshasa-prince.",
+      "cast_present": [
+        "karna",
+        "ghatotkacha"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold cartouche; night indigo-gold hour inside",
+        "Karna loosing the gold Shakti-light, Anga diadem, gold-crimson armor, proud mustache",
+        "Ghatotkacha adult rakshasa-prince receiving the gold shaft as light, not a wound — never a child"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ghatotkacha",
+        "horror demon",
+        "Drona",
+        "white-bearded sage",
+        "Krishna",
+        "blood",
+        "severed body"
+      ],
+      "props": [
+        "Vasavi Shakti gold light"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Karna looses a single gold shaft of Shakti-light; Ghatotkacha the adult rakshasa-prince stands in the path of the light. Karna: Anga diadem, gold-crimson armor, proud mustache. Ghatotkacha: dark mustache, storm-indigo armor, never a child. The dart is light, not blood. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore."
+    },
+    {
+      "id": "fall",
+      "file": "plate-fall.jpg",
+      "beat_text": "Ghatotkacha falls as a mountain falls — and the night thins.",
+      "cast_present": [
+        "ghatotkacha"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold cartouche; night indigo-gold hour inside",
+        "Ghatotkacha adult rakshasa-prince falling as a mountain of gold-indigo light, composed, not gore",
+        "Night thinning toward cream-saffron; carved cartouche holds the fall"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ghatotkacha",
+        "horror demon",
+        "Drona",
+        "white-bearded sage",
+        "Krishna",
+        "Karna",
+        "corpse horror",
+        "blood"
+      ],
+      "props": [
+        "gold-indigo light",
+        "mace falling"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Ghatotkacha the adult rakshasa-kshatriya prince falls as a mountain of gold-indigo light falls — composed, mythic, not a corpse, no blood, never a child. Storm-indigo armor, dark mustache, small gold diadem. Night thinning inside a carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore."
+    },
+    {
+      "id": "hush",
+      "file": "plate-hush.jpg",
+      "beat_text": "The dart is spent. Arjuna lives. The fourteenth night keeps a deeper vow.",
+      "cast_present": [
+        "krishna",
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold cartouche; night indigo-gold hour inside",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Arjuna gold crown, dark mustache, cream-white dhoti, quiver — alive, bow at rest",
+        "Quiet night chariot after the dart; Krishna calm at the reins"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ghatotkacha",
+        "horror demon",
+        "Drona",
+        "white-bearded sage",
+        "Ghatotkacha",
+        "Karna",
+        "second Arjuna"
+      ],
+      "props": [
+        "chariot",
+        "reins",
+        "Gandiva at rest"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna (Ep 09 lock: dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins) and Arjuna (gold crown, dark mustache, cream-white dhoti, quiver, Gandiva at rest) on the night chariot after the dart is spent. Quiet. Alive. Carved gold-and-lotus cartouche, indigo thinning to cream-saffron. Not photoreal. No Drona. No flute. No gore. No Ghatotkacha."
+    },
+    {
+      "id": "wide-gold",
+      "file": "plate-wide-gold.jpg",
+      "beat_text": "Thus Karna’s greatest weapon is gone — and morning will come for Drona.",
+      "cast_present": [
+        "krishna",
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold cartouche; night indigo-gold hour inside",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Arjuna gold crown, dark mustache, cream-white dhoti, quiver",
+        "Hint of dawn cream-saffron at the cartouche edge; night spent"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ghatotkacha",
+        "horror demon",
+        "Drona",
+        "white-bearded sage",
+        "Ghatotkacha corpse",
+        "Karna",
+        "Drona on the chariot"
+      ],
+      "props": [
+        "chariot",
+        "reins",
+        "dawn edge"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna and Arjuna on the chariot at the edge of night toward cream-saffron dawn. Krishna dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins — Ep 09 look lock. Arjuna gold crown, dark mustache, cream-white dhoti, quiver. Carved gold-and-lotus cartouche. Not photoreal. No Drona in the chariot. No flute. No gore. No corpse."
+    }
+  ]
+}

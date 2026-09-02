@@ -535,6 +535,57 @@ def check_cast(bible: dict) -> list[str]:
     return fails
 
 
+AIM_VERB = re.compile(
+    r"\b(aim|aims|aiming|shoot|shot|arrow|bow drawn|strings the bow|"
+    r"looks up into|points? (at|toward)|cut off its head)\b",
+    re.I,
+)
+AIM_TARGET = re.compile(
+    r"\b(bird|fish|target|lakṣya|laksya|head of the bird|the bird’s head|mark)\b",
+    re.I,
+)
+SPATIAL_LINE = re.compile(
+    r"one (straight )?line|line up|lined up|points? (at|toward) the (bird|target|head|fish)|"
+    r"same line as the (bird|arrow|target)|bow.{0,40}(bird|target)|arrow.{0,40}(bird|target)",
+    re.I,
+)
+
+
+def check_spatial_aim(bible: dict) -> list[str]:
+    """Common-sense: if someone aims at a target, bow, arrow, gaze, and target line up."""
+    fails: list[str] = []
+    epn = episode_num(bible)
+    for plate in bible.get("plates") or []:
+        pid = plate.get("id") or "?"
+        geom = plate.get("aim_geometry") or {}
+        text = plate.get("beat_text") or ""
+        auto = epn == 1 and bool(AIM_VERB.search(text) and AIM_TARGET.search(text))
+        needs = bool(geom) or auto or bool(plate.get("requires_spatial_aim"))
+        if not needs:
+            continue
+        if not (geom.get("archer") or "").strip():
+            fails.append(f"{pid}: spatial FAIL — aim_geometry.archer required")
+        if not (geom.get("target") or "").strip():
+            fails.append(f"{pid}: spatial FAIL — aim_geometry.target required")
+        if geom.get("bow_points_at_target") is not True:
+            fails.append(
+                f"{pid}: spatial FAIL — bow/arrow must point at the target "
+                "(aim_geometry.bow_points_at_target: true)"
+            )
+        if geom.get("gaze_at_target") is not True:
+            fails.append(
+                f"{pid}: spatial FAIL — gaze must meet the target "
+                "(aim_geometry.gaze_at_target: true)"
+            )
+        blob = f"{plate.get('prompt') or ''} {' '.join(plate.get('must_show') or [])}"
+        if not SPATIAL_LINE.search(blob):
+            fails.append(
+                f"{pid}: spatial FAIL — prompt/must_show must require bow, arrow, gaze, "
+                "and target on one line (no horizontal miss under a high bird)"
+            )
+    return fails
+
+
 def check_apparatus(bible: dict) -> list[str]:
     fails = []
     app = bible.get("apparatus") or {}
@@ -778,6 +829,7 @@ def review(bible: dict) -> tuple[bool, list[str]]:
     fails += check_cast(bible)
     fails += check_cast_bleed(bible)
     fails += check_apparatus(bible)
+    fails += check_spatial_aim(bible)
     cast_ids = set((bible.get("cast") or {}).keys())
     apparatus_on = bool(bible.get("apparatus"))
     plates = bible.get("plates") or []

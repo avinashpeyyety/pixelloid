@@ -127,7 +127,8 @@
         "Heroic medium — named figures fill the frame",
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
-        "Drona acharya-warrior: white beard and mustache, saffron angavastram, pointing toward the bird in the tree"
+        "Drona acharya-warrior: white beard and mustache, saffron angavastram, pointing toward the bird in the tree",
+        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot"
       ],
       "must_not_show": [
         "Photoreal",
@@ -148,7 +149,7 @@
         "bows",
         "artisan bird"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Drona, white beard and mustache, saffron angavastram, cream dhoti, pointing at a small artisan bird high in a tree. Bows ready. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No Arjuna. No flute. No gore.",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Drona, white beard and mustache, saffron angavastram, cream dhoti, pointing at a small artisan bird high in a tree. Bows ready. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No Arjuna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Drona has NO gold crown and is NOT Bhishma (no silver Kuru diadem).",
       "sources": [
         {
           "work": "bori",
@@ -162,7 +163,15 @@
           "work": "ganguli",
           "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
         }
-      ]
+      ],
+      "aim_geometry": {
+        "archer": "drona",
+        "target": "artisan_bird_in_tree",
+        "bow_points_at_target": true,
+        "gaze_at_target": true,
+        "note": "Drona points at the bird; any drawn bow in frame also points at the bird, not horizontally past it."
+      },
+      "requires_spatial_aim": true
     },
     {
       "id": "yudhishthira",
@@ -285,7 +294,8 @@
         "Heroic medium — named figures fill the frame",
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
-        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva drawn, no flower garland, no peacock"
+        "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva drawn, no flower garland, no peacock",
+        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot"
       ],
       "must_not_show": [
         "Photoreal",
@@ -308,7 +318,7 @@
         "Gandiva",
         "drawn bow"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, gold belt, quiver on back, Gandiva drawn to the ear, waiting. No flower garland, no peacock feather. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, gold belt, quiver on back, Gandiva drawn to the ear, waiting. No flower garland, no peacock feather. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Arjuna matches Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, NO gold cuirass, NO pearl pile, NO peacock.",
       "sources": [
         {
           "work": "bori",
@@ -322,7 +332,15 @@
           "work": "ganguli",
           "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
         }
-      ]
+      ],
+      "aim_geometry": {
+        "archer": "arjuna",
+        "target": "artisan_bird_in_tree",
+        "bow_points_at_target": true,
+        "gaze_at_target": true,
+        "note": "Drawn Gandiva, nocked arrow, eyes, and bird on one straight line."
+      },
+      "requires_spatial_aim": true
     },
     {
       "id": "eye",
@@ -340,7 +358,8 @@
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
         "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, aiming",
-        "the artisan bird’s head as the only clear target"
+        "the artisan bird’s head as the only clear target",
+        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot"
       ],
       "must_not_show": [
         "Photoreal",
@@ -363,7 +382,7 @@
         "Gandiva",
         "bird head"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva aimed. The artisan bird’s head is the only clear mark. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva aimed. The artisan bird’s head is the only clear mark. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Arjuna matches Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, NO gold cuirass, NO pearl pile, NO peacock.",
       "sources": [
         {
           "work": "bori",
@@ -377,7 +396,15 @@
           "work": "ganguli",
           "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
         }
-      ]
+      ],
+      "aim_geometry": {
+        "archer": "arjuna",
+        "target": "bird_head",
+        "bow_points_at_target": true,
+        "gaze_at_target": true,
+        "note": "Arrow aimed at the bird’s head, not the trunk. Elevate the bow if the bird is high."
+      },
+      "requires_spatial_aim": true
     },
     {
       "id": "loose",
@@ -447,7 +474,8 @@
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
         "Arjuna matching Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, after the loosed shaft",
-        "artisan bird’s head falling as gold dust — no blood, no viscera"
+        "artisan bird’s head falling as gold dust — no blood, no viscera",
+        "Bow/arrow/gaze and the bird on one straight line — bird not above a horizontal shot"
       ],
       "must_not_show": [
         "Photoreal",
@@ -470,7 +498,7 @@
         "Gandiva",
         "gold-dust bird head"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva after the shot. The artisan bird’s head falls as gold dust and light — no blood, no viscera. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva after the shot. The artisan bird’s head falls as gold dust and light — no blood, no viscera. No flower garland, no peacock. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore. Bow, nocked arrow, gaze, and the artisan bird are on ONE straight line. If the bird is high in the tree, the bow is elevated — never a horizontal shot under the bird. No other archer aiming past the bird. Arjuna matches Ep 09 lock: gold crown, dark mustache, cream-white dhoti, quiver, NO gold cuirass, NO pearl pile, NO peacock.",
       "sources": [
         {
           "work": "bori",
@@ -484,7 +512,15 @@
           "work": "ganguli",
           "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
         }
-      ]
+      ],
+      "aim_geometry": {
+        "archer": "arjuna",
+        "target": "bird_head",
+        "bow_points_at_target": true,
+        "gaze_at_target": true,
+        "note": "The loosed shaft’s path meets the bird’s head; gold dust on that same line."
+      },
+      "requires_spatial_aim": true
     },
     {
       "id": "wide-gold",
@@ -540,5 +576,6 @@
         }
       ]
     }
-  ]
+  ],
+  "spatial_rule": "If a panel shows an archer aiming at a bird (or any target), the bow, arrow, gaze, and target must line up. Fail the plate if they don’t."
 }

@@ -49,6 +49,18 @@
 4. **Size:** Mirror is a **large ceiling disc** (same scale continuity as challenge lock) — not a hand mirror  
 5. **Forbidden:** Ceiling aquarium/tank of fish; fish only in a hanging vessel; shooting the mirror; standing in the pool  
 
+### 2b. Common-sense spatial aim (all episodes) — **strict**
+
+If a panel shows an archer aiming at a bird, fish, or any named target:
+
+| Must line up | FAIL if |
+|--------------|--------|
+| Bow, nocked arrow, gaze, and target on **one straight line** | Arrow aimed horizontally while the bird/target sits higher in a tree |
+| Elevate the bow when the target is high | Background extras aiming past the target |
+| `aim_geometry` on the plate (`archer`, `target`, `bow_points_at_target`, `gaze_at_target`) | Missing geometry on an aim/shoot beat |
+
+GATE B encodes this in `logic_review.check_spatial_aim`. GATE C is the eye check on the still.
+
 ### 3a. Aim geometry (aim beats)
 
 | Half | Direction | Meaning |

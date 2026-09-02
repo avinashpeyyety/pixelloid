@@ -36,6 +36,7 @@ Open `episodes/10-bhishma-fall/stills/plate-vow.jpg` and `plate-arrows.jpg` besi
 | Arjuna | Match Ep 09 `_locks/arjuna.jpg` (crown, mustache, cream-white, quiver) | New Arjuna, peacock, flower garland |
 | Bhishma / Shikhandi | Match Ep 10 locks when on the plate | Invented face |
 | Drift | Same person, same jewelry/skin/crown/body type on every plate | Costume/face morph mid-episode |
+| Spatial aim | Bow, arrow, gaze, and named target on one line | Arrow horizontal while bird/target sits higher/aside |
 | Lock file | Named face has `_locks/<id>.jpg` | Invented extra hero, missing lock |
 
 ## Per plate
@@ -57,3 +58,5 @@ Open `episodes/10-bhishma-fall/stills/plate-vow.jpg` and `plate-arrows.jpg` besi
 - [ ] Arjuna / Bhishma / Shikhandi (if present) eye-match Ep 09/10 locks
 - [ ] No invented face; no missing lock; no jewelry/skin/crown/body-type drift
 - [ ] Spoken line’s speaker and action are the figures/props on this still (GATE D)
+- [ ] **Spatial aim:** if anyone aims at a bird/target, bow, arrow, gaze, and target are on one line — FAIL a horizontal miss under a high bird
+- [ ] **Character lock:** each named face/body matches the Ep 09/10 (or local) lock on every plate — no jewelry/skin/crown/armor drift

@@ -48,6 +48,7 @@ Production apps for asset pipelines — see [`TOOLING.md`](TOOLING.md).
 | **Blender** | 3D / previs / export for Cosmos & Mahābhārata |
 | **REAPER** | Mix TTS + music beds before shipping audio |
 | **SketchUp 2026** | Stage / set / architecture blocking |
+| **GeoLibre** | GIS / maps / spatial tools |
 
 Scratch projects: `_studio/{reaper,blender,sketchup}/` (gitignored except `.gitkeep`).
 

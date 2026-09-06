@@ -7,6 +7,7 @@ Installed on **MacBook Air** for offline production. Browser shows still ship as
 | **Blender** | `/Applications/Blender.app` · CLI `blender` | **Primary 3D renderer** for Mahābhārata (and Cosmos); maps Grok Imagine key panels into scenes; export renders/glTF under episode `renders/` or `_studio` |
 | **REAPER** | `/Applications/REAPER.app` | DAW for score, ambience, SFX; mix Orion TTS + Hindustani beds before dropping stems under `episodes/…/audio/` or kids-grok assets |
 | **SketchUp 2026** | `/Applications/SketchUp 2026/SketchUp.app` | Sets, stages, architecture blocking (Chocolate Dance stage, Cosmic pads, Mahābhārata loci); export reference images or geometry for Blender / plate prompts |
+| **GeoLibre** | `/Applications/GeoLibre Desktop.app` | Open-source GIS (MapLibre / geoprocessing) — maps, layers, spatial SQL; useful for Cosmos pad geography, location research, and any map-backed Pixelloid locus |
 
 ## Suggested pipelines
 
@@ -33,12 +34,13 @@ Installed on **MacBook Air** for offline production. Browser shows still ship as
 ```bash
 open -a Blender
 open -a REAPER
-open -a "SketchUp"   # or: open "/Applications/SketchUp 2026/SketchUp.app"
+open -a "SketchUp"
+open -a "GeoLibre Desktop"   # or: open "/Applications/SketchUp 2026/SketchUp.app"
 ```
 
 ## Studio scratch (optional)
 
 ```bash
-mkdir -p pixelloid/_studio/{reaper,blender,sketchup}
+mkdir -p pixelloid/_studio/{reaper,blender,sketchup,geolibre}
 # Add _studio/ to .gitignore if projects are large / proprietary
 ```

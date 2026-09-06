@@ -1,7 +1,7 @@
 # NEXT — mahabharata (pixelloid)
 
 ## Now
-- [ ] Ep 11: hybrid player cut using `renders/beat-*.png` (or glTF) while keeping Orion/Megh
+- [x] Ep 11: player uses Blender `renders/beat-*.png` (Ken Burns on 3D proxies; Orion/Megh kept)
 - [ ] Pilot one beat in **3D**: Imagine key panel → Blender camera/set → `renders/` proxy (document path; keep GATE C)
 - [ ] Rewrite **Episode 03** to the Ep 09/10 bar (one episode per pass). Do not start 04–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+.
 

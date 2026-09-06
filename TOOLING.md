@@ -35,7 +35,8 @@ Installed on **MacBook Air** for offline production. Browser shows still ship as
 open -a Blender
 open -a REAPER
 open -a "SketchUp"
-open -a "GeoLibre Desktop"   # or: open "/Applications/SketchUp 2026/SketchUp.app"
+open -a "GeoLibre Desktop"
+# SketchUp: open "/Applications/SketchUp 2026/SketchUp.app"
 ```
 
 ## Studio scratch (optional)

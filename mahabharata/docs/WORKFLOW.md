@@ -1,23 +1,40 @@
 # Mahābhārata episode workflow
 
+**North star:** each episode is a **3D render** (Blender on MacBook Air) whose **key imagination panels** come from the **Grok Imagine API** — same Ep 09/10 art bar (3:2 · ≥1536×1024 · carved cartouche · character locks). Ken Burns on flat plates is the **legacy** player path until the 3D player ships.
+
 ```
 1. Script (episodes/<id>/script.js beats)
 2. GATE D-dialogue — python3 tools/dialogue_review.py episodes/<id> --report
 3. Cast sheet + plate bible (copy episodes/_template/plate-bible.json)
 4. GATE A/B — python3 tools/logic_review.py episodes/<id>/plate-bible.json --report
-5. Scene master at 3:2 / ≥1536×1024 (Imagine; style-ref = Ep 10 field-master only)
-6. Solo cast locks at the same canvas
-7. Per-beat plates via image_edit (first image = that 3:2 master, never a 720p file)
-8. GATE C — python3 tools/stills_review.py episodes/<id>
+5. Key Imagine panels (Grok Imagine API) — scene master, cast locks, beat keyframes
+6. GATE C — python3 tools/stills_review.py episodes/<id>
           + visual report (docs/GATE_C_TEMPLATE.md) vs Ep 10 vow/arrows
-9. Grok TTS Orion → audio/ (`tools/render_orion_voice.sh`) — named Hindustani raga in script.js, not default flute+tabla
-10. GATE D — final install check
-11. Registry live · commit · publish-pages
+7. 3D block — SketchUp (optional architecture/stage) → Blender scene under
+   pixelloid/_studio/blender/mahabharata/<id>/ (or episodes/<id>/blender/)
+8. Map Imagine panels into 3D — camera boards, set dressings, hero billboards /
+   plane textures / environment plates (panel = locked art; geometry = motion)
+9. Blender render — shot layout matching script beats; export stills or video
+   proxies into episodes/<id>/renders/ (git LFS or publish-only; see TOOLING.md)
+10. Grok TTS Orion → audio/ (`tools/render_orion_voice.sh`) — named Hindustani
+    raga in script.js; optional REAPER stem mix
+11. GATE D — final install check (speaker on panel, action visible, 3D cut matches beat)
+12. Registry live · commit · publish-pages
 ```
 
-FAIL at 2, 4, 8, or 10 **blocks** Imagine commit and publish.
+FAIL at 2, 4, 6, or 11 **blocks** Imagine commit, 3D ship, and publish.
 
-## Art — how to hit the Ep 10 bar
+## Dual output (transition)
+
+| Layer | Source of truth | Notes |
+|-------|-----------------|-------|
+| **Key panels** | Grok Imagine API | Unchanged bar: locks, 3:2, GATE C. Stored under `episodes/<id>/stills/` |
+| **Motion / space** | Blender 3D | Primary for new work. Imagine panels are **key art**, not the only pixels on screen |
+| **Legacy player** | 2D Canvas Ken Burns | Still live on github.io until `play.html` consumes 3D / hybrid cuts |
+
+Do **not** treat Blender output as a silent replacement for GATE C panels. Every named face on a hero panel still passes Imagine locks.
+
+## Art — how to hit the Ep 10 bar (Imagine)
 
 Read `STYLE.md` before any `image_gen` / `image_edit`.
 
@@ -25,15 +42,16 @@ Read `STYLE.md` before any `image_gen` / `image_edit`.
 
 Those plates are 1280×720 16:9 `image_edit`s of Ep 01 `plate-wide-gold.jpg` (thin lotus-mat, wide establishing). Ep 10 was generated native **1536×1024 3:2** with a carved cartouche and heroic medium shots. Output size follows the first input image. **Never start from 720p.**
 
-### Preferred factory
+### Preferred factory (key panels)
 
 | Step | Who | Why |
 |------|-----|-----|
-| New **scene master** + first **cast locks** | grok.com Imagine (human beauty pass) *or* Grok Build `image_gen` with `aspect_ratio: "3:2"` | Needs an eye; first canvas sets every later plate |
-| Beat plates | Grok Build `image_edit` | Consistency from locks |
+| New **scene master** + first **cast locks** | grok.com Imagine (human beauty pass) *or* Grok Build / Imagine API `image_gen` with `aspect_ratio: "3:2"` | Needs an eye; first canvas sets every later panel |
+| Beat **key panels** | Imagine API `image_edit` | Consistency from locks |
 | Dimension gate | `stills_review.py` | If it is 1280×720, discard and redo |
+| **3D scene** | Blender (+ optional SketchUp block) | Camera + set motion around locked panels |
 
-If Build returns 720p: **do not ship**. Regenerate with `3:2` and a 1536×1024 first ref (Ep 10 `field-master.jpg` or the new scene master).
+If Imagine returns 720p: **do not ship**. Regenerate with `3:2` and a 1536×1024 first ref (Ep 10 `field-master.jpg` or the new scene master).
 
 ### Imagine calls
 
@@ -58,7 +76,7 @@ image_edit
 
 Prior 720p locks (Ep 09 Arjuna, etc.) may be a **later** image in a multi-image edit only. First image = 3:2 master.
 
-**Beat plate:**
+**Beat key panel** (hero imagination still for this beat):
 
 ```
 image_edit
@@ -80,14 +98,25 @@ image_edit
 | This episode `_locks/<id>.jpg` for any other named face | Jewelry/skin/crown/body-type drift across plates |
 | | Any 1280×720 file as the **first** `image_edit` input |
 
+## 3D — Blender (Air)
+
+See monorepo [`TOOLING.md`](../../TOOLING.md).
+
+1. **Block** (optional): SketchUp for architecture / stage → import or rebuild in Blender.
+2. **Scene:** one Blender file per episode under `_studio/blender/mahabharata/<id>/` (scratch) or `episodes/<id>/blender/` if small enough to track.
+3. **Panel mapping:** assign GATE C–passed Imagine key panels as camera boards, backdrop planes, or hero cards timed to `script.js` beats. Geometry and camera do the move; panels stay on-bar.
+4. **Render:** match beat timing; export proxies to `episodes/<id>/renders/`. Prefer proxies in gitignore / LFS; ship only what the web player needs.
+5. **Hybrid cut:** until the 3D player is live, stills from the Blender camera may feed the legacy Ken Burns player **only if** they still satisfy GATE C dimensions when used as plates — otherwise keep Imagine plates in the 2D player and treat 3D as offline / preview.
+
 ## Agents
 
 | Agent | Responsibility |
 |-------|----------------|
 | **writer** | Beats, dialogue, timing |
 | **panel-logic** | Lore, props, apparatus, cast, **canvas/frame/camera**, **09/10 face locks**, **source cites** — blocks ship on FAIL |
-| **art** | Imagine only after GATE B PASS; 3:2; Ep 10 field-master; no 720p first-input |
-| **voice** | Orion TTS matching beat text |
+| **art** | Imagine API key panels only after GATE B PASS; 3:2; Ep 10 field-master; no 720p first-input |
+| **3d** | Blender scene + panel mapping after GATE C PASS; SketchUp block optional |
+| **voice** | Orion TTS matching beat text; REAPER mix optional |
 | **ship** | Registry, NEXT, vault daily, Pages |
 
 ## Tools
@@ -96,6 +125,8 @@ image_edit
 python3 tools/dialogue_review.py episodes/<id> --report
 python3 tools/logic_review.py episodes/<id>/plate-bible.json --report
 python3 tools/stills_review.py episodes/<id>
+open -a Blender
+# optional: open "/Applications/SketchUp 2026/SketchUp.app"
 ```
 
 - Human / model visual pass — open stills, fill `logic-reviews/RR-gateC-visual.md` from `docs/GATE_C_TEMPLATE.md`
@@ -109,7 +140,3 @@ python3 tools/stills_review.py episodes/<id>
 **Krishna eye check:** `episodes/09-gita/stills/plate-counsel.jpg`  
 **Sources:** each beat ≥2 of BORI/Debroy, Gita Press Gorakhpur, K.M. Ganguli.  
 Never photoreal. Never Ep 01 gold as an image. Subsequent faces match 09/10. See `STYLE.md`.
-
-## Optional desktop tooling (Air)
-
-See monorepo [`TOOLING.md`](../../TOOLING.md): **REAPER** for stem mixes after Orion TTS; **Blender** / **SketchUp** for previs only — they do not bypass GATE C / Imagine plate bar.

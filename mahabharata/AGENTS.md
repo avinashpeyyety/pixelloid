@@ -1,5 +1,7 @@
 # mahabharata — agent rules
 
+**Pipeline north star:** **3D Blender render** + **Grok Imagine API key panels** (Ep 09/10 bar). Full steps in `docs/WORKFLOW.md`. Imagine locks/GATE C still gate every hero face; Blender does not bypass them. Live site may still use the 2D Ken Burns player during the transition.
+
 ## Before any Imagine call
 
 1. Read `STYLE.md` (canvas bar + **Ep 09/10 character-model bar**) and `docs/WORKFLOW.md` (art factory)

@@ -18,6 +18,7 @@
 - [ ] Chocolate Dance: stage lighting pulse on beat
 
 ## Curiosity / explore
+- [ ] Mahābhārata: 3D player / hybrid cut consuming Blender renders + Imagine key panels
 
 - [ ] First REAPER bounce into a Mahābhārata episode audio/ stem (document path in TOOLING.md)
 - [ ] SketchUp stage block for Chocolate Dance → reference still for lighting beat

@@ -2,19 +2,22 @@
 
 **Live:** https://avinashpeyyety.github.io/pixelloid/mahabharata/
 
-Episodic browser theater: **write script → Imagine plates → animate**.  
-**2D Canvas** (no build). Painterly cinematic plates with crossfade + Ken Burns.
+Episodic itihāsa theater: **write script → Grok Imagine key panels → Blender 3D render → voice**.  
+**Target:** 3D scenes on MacBook Air (Blender) with **key imagination panels** from the Grok Imagine API.  
+**Live player today:** 2D Canvas Ken Burns on Imagine plates (legacy) until the 3D/hybrid player ships — see [`docs/WORKFLOW.md`](docs/WORKFLOW.md).
 
 ## Visual language
 
 | Layer | Choice |
 |-------|--------|
-| **Plates** | Grok Imagine keyframes — **Ep 10 bar:** 1536×1024 **3:2**, carved cartouche, heroic medium |
-| **Motion** | Crossfade + slow zoom/pan per beat |
+| **Key panels** | Grok Imagine API — **Ep 10 bar:** 1536×1024 **3:2**, carved cartouche, heroic medium |
+| **Space / motion** | **Blender 3D** (optional SketchUp block) — cameras & sets; panels as locked key art |
+| **Legacy motion** | Crossfade + Ken Burns on plates (current github.io player) |
 | **Voice** | **Grok TTS** (`orion` — deep heroic male) pre-rendered → `episodes/…/audio/` |
-| **Music** | Soft bansuri-like flute + light tabla (Web Audio) |
+| **Music** | Named Hindustani raga in script + optional REAPER mix; Web Audio fallback |
 
-**Art bible:** [`STYLE.md`](STYLE.md) — style spine is Ep 10 `field-master.jpg`, **not** Ep 01 gold.
+**Art bible:** [`STYLE.md`](STYLE.md) — style spine is Ep 10 `field-master.jpg`, **not** Ep 01 gold.  
+**Desktop tooling:** monorepo [`TOOLING.md`](../TOOLING.md).
 
 ## Episodes
 

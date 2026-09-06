@@ -1,6 +1,7 @@
 # NEXT — mahabharata (pixelloid)
 
 ## Now
+- [ ] Ep 11: hybrid player cut using `renders/beat-*.png` (or glTF) while keeping Orion/Megh
 - [ ] Pilot one beat in **3D**: Imagine key panel → Blender camera/set → `renders/` proxy (document path; keep GATE C)
 - [ ] Rewrite **Episode 03** to the Ep 09/10 bar (one episode per pass). Do not start 04–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+.
 
@@ -9,6 +10,7 @@
 - [ ] After each 02–08 rewrite: one episode per pass, then resume Ep 14
 
 ## Done
+- [x] Ep 11 reimagine scaffold: GATE C panels + blender-map + Blender scene/renders (3D+Imagine workflow)
 - [x] Workflow north star: Blender 3D + Grok Imagine key panels (`docs/WORKFLOW.md`, README, AGENTS, TOOLING)
 - [x] Ep 02 *The Fish's Eye* rewrite (09/10 bar, Yaman, Orion, sources)
 - [x] Ep 01 *The Bird's Eye* rewrite (09/10 bar, Bhupali, Orion, sources)

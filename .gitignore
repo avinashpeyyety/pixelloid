@@ -28,3 +28,6 @@ mahabharata/.factory/
 # Desktop DAW / DCC project scratch (exports go into subprojects)
 _studio/**
 !_studio/**/.gitkeep
+
+# Ep 11 Blender proxies (regenerate: blender --python .../build_ep11_scene.py)
+mahabharata/episodes/11-chakravyuha/renders/*.png

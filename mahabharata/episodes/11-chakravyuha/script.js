@@ -7,7 +7,7 @@ export const EPISODE = {
   slug: "chakravyuha",
   title: "The Chakravyuha",
   subtitle: "Thirteenth day of Kurukshetra",
-  style: "cinematic-plates",
+  style: "imagine-panels-blender-3d", // key panels Imagine; motion target Blender — Ken Burns legacy until hybrid player
   stillsDir: "episodes/11-chakravyuha/stills/",
   voice: {
     provider: "grok-tts",

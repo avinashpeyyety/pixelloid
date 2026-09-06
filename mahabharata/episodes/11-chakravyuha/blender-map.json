@@ -1,0 +1,26 @@
+{
+  "episode_id": "11",
+  "slug": "chakravyuha",
+  "pipeline": "imagine-key-panels + blender-3d",
+  "stills_dir": "episodes/11-chakravyuha/stills/",
+  "blender_dir": "episodes/11-chakravyuha/blender/",
+  "renders_dir": "episodes/11-chakravyuha/renders/",
+  "gate_c": "PASS (stills_review 1536×1024 3:2)",
+  "scene": {
+    "units": "meters",
+    "ground": "dusty Kurukshetra plane",
+    "hero_scale": "Amar Chitra maharathi — Abhimanyu adult warrior proportions",
+    "notes": "Imagine panels are locked key art on hero planes / camera boards. Geometry + camera provide motion. Do not invent faces in Blender materials."
+  },
+  "beats": [
+    {"t": 0, "plate": "wide", "file": "plate-wide.jpg", "camera": "establishing_high", "use": "environment_backplate", "focus": "field after Bhishma; Drona command distant"},
+    {"t": 12, "plate": "vyuha", "file": "plate-vyuha.jpg", "camera": "overhead_wheel", "use": "environment_backplate", "focus": "chakravyuha rings as living mandala"},
+    {"t": 24, "plate": "counsel", "file": "plate-counsel.jpg", "camera": "medium_pandava", "use": "hero_plane", "focus": "Abhimanyu vows — I know the way in"},
+    {"t": 36, "plate": "enter", "file": "plate-enter.jpg", "camera": "chase_into_rings", "use": "hero_plane", "focus": "Abhimanyu chariot entering spinning rings"},
+    {"t": 48, "plate": "gate", "file": "plate-gate.jpg", "camera": "rim_gate", "use": "hero_plane", "focus": "Jayadratha living gate vs four brothers"},
+    {"t": 60, "plate": "storm", "file": "plate-storm.jpg", "camera": "inside_orbit", "use": "hero_plane", "focus": "Abhimanyu storm of gold shafts"},
+    {"t": 72, "plate": "wheel", "file": "plate-wheel.jpg", "camera": "close_last_weapon", "use": "hero_plane", "focus": "chariot wheel as last weapon"},
+    {"t": 84, "plate": "dusk", "file": "plate-dusk.jpg", "camera": "fall_wide", "use": "hero_plane", "focus": "young tree falls — thirteenth day darkens"},
+    {"t": 95, "plate": "wide-gold", "file": "plate-wide-gold.jpg", "camera": "dusk_vow", "use": "hero_plane", "focus": "Arjuna vow — Jayadratha dies tomorrow"}
+  ]
+}

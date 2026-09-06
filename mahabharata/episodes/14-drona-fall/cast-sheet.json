@@ -1,0 +1,41 @@
+{
+  "episode_id": "14",
+  "notes": "Drona Parva, fifteenth day. No gore: elephant as gold dust; Drona stilled in yoga as gold light. Ashwatthama the son is OFF-FIELD (never a child, never shown). The named elephant is a war-elephant prop. Krishna is the Ep 09 look lock. Yudhishthira is the dharma-king, not Arjuna.",
+  "cast": {
+    "drona": {
+      "face": "Aged acharya-warrior, noble lined face, long white beard and mustache (guru on the field, not a garden sage)",
+      "hair": "White hair in a saffron-bound topknot, rudraksha — no Kuru silver diadem of Bhishma",
+      "costume": "Saffron angavastram over pale gold-white armor, bow of the guru, cream dhoti"
+    },
+    "krishna": {
+      "face": "Youthful divine smile, dusty-blue skin, dark eyes, serene, U-tilak — same face as Ep 09 lock",
+      "hair": "Dark curly hair, gold crown with one peacock feather",
+      "costume": "Yellow pitambar, flower garlands, gold jewelry, charioteer reins — never a flute, never a bow"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna, never a second Arjuna",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna’s heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti, gold sash, no Gandiva, no flower garland"
+    },
+    "bhima": {
+      "face": "Adult Pandava, broad noble face, full dark mustache, fierce dark eyes — never a child",
+      "hair": "Dark hair, gold warrior circlet (not Arjuna’s crown, not peacock)",
+      "costume": "Deep gold and leaf-green engraved armor, great mace — equal human scale, never saffron sage robes"
+    },
+    "dhrishtadyumna": {
+      "face": "Adult Panchala prince, dark mustache, determined eyes — distinct from Arjuna, never a child",
+      "hair": "Dark hair, Panchala diadem (not Arjuna’s heavy crown, not peacock)",
+      "costume": "Indigo-gold Panchala armor, sword of light — never flower garland, never saffron sage robes"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09–13",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore"
+    }
+  }
+}

@@ -1,0 +1,437 @@
+{
+  "episode_id": "14",
+  "strict_hero_lock": "arjuna",
+  "title": "The Fall of Drona",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Krishna face/body locked to Ep 09",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/14-drona-fall/stills/_locks/dawn15-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/14-drona-fall/stills/_locks/dawn15-master.jpg",
+    "episodes/14-drona-fall/stills/_locks/drona.jpg",
+    "episodes/14-drona-fall/stills/_locks/yudhishthira.jpg",
+    "episodes/14-drona-fall/stills/_locks/bhima.jpg",
+    "episodes/14-drona-fall/stills/_locks/dhrishtadyumna.jpg"
+  ],
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "drona": {
+      "face": "Aged acharya-warrior, noble lined face, long white beard and mustache (guru on the field, not a garden sage)",
+      "hair": "White hair in a saffron-bound topknot, rudraksha — no Kuru silver diadem of Bhishma",
+      "costume": "Saffron angavastram over pale gold-white armor, bow of the guru, cream dhoti"
+    },
+    "krishna": {
+      "face": "Youthful divine smile, dusty-blue skin, dark eyes, serene, U-tilak — same face as Ep 09 lock",
+      "hair": "Dark curly hair, gold crown with one peacock feather",
+      "costume": "Yellow pitambar, flower garlands, gold jewelry, charioteer reins — never a flute, never a bow"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna, never a second Arjuna",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna’s heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti, gold sash, no Gandiva, no flower garland"
+    },
+    "bhima": {
+      "face": "Adult Pandava, broad noble face, full dark mustache, fierce dark eyes — never a child",
+      "hair": "Dark hair, gold warrior circlet (not Arjuna’s crown, not peacock)",
+      "costume": "Deep gold and leaf-green engraved armor, great mace — equal human scale, never saffron sage robes"
+    },
+    "dhrishtadyumna": {
+      "face": "Adult Panchala prince, dark mustache, determined eyes — distinct from Arjuna, never a child",
+      "hair": "Dark hair, Panchala diadem (not Arjuna’s heavy crown, not peacock)",
+      "costume": "Indigo-gold Panchala armor, sword of light — never flower garland, never saffron sage robes"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09–13",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "Dawn of the fifteenth. Drona holds the field like a second sun.",
+      "cast_present": [
+        "drona"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Drona acharya-warrior: white beard and mustache, saffron angavastram, pale gold-white armor, bow of the guru, heroic medium",
+        "Dawn Kurukshetra, cream-saffron-gold, distant ranks only"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ashwatthama",
+        "Ashwatthama the man",
+        "severed neck",
+        "Krishna",
+        "Arjuna",
+        "Bhima"
+      ],
+      "props": [
+        "bow of the guru",
+        "dawn banners"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona the acharya-warrior holds the dawn field, saffron angavastram over pale gold-white engraved armor, long white beard, saffron topknot, bow of the guru. Not a garden sage. Cream-saffron-gold hour, carved gold-and-lotus cartouche. Distant ranks only. Not photoreal. No Krishna. No flute. No gore."
+    },
+    {
+      "id": "counsel",
+      "file": "plate-counsel.jpg",
+      "beat_text": "Krishna says: he will not fall while he believes his son lives.",
+      "cast_present": [
+        "krishna",
+        "yudhishthira",
+        "bhima"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Yudhishthira: simple gold diadem, cream-white royal dhoti, calm, no Gandiva, no peacock",
+        "Bhima: broad adult, dark mustache, gold circlet, leaf-green gold armor, mace — never a child"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ashwatthama",
+        "Ashwatthama the man",
+        "severed neck",
+        "Drona",
+        "white-bearded sage",
+        "Arjuna",
+        "second Krishna",
+        "Ghatotkacha"
+      ],
+      "props": [
+        "chariot",
+        "reins",
+        "mace"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium, exactly three named adults: Krishna as charioteer (dusty-blue skin, yellow pitambar, gold crown with one peacock feather, flower garlands, reins — Ep 09 lock); Yudhishthira the eldest king with modest mustache, simple gold diadem, cream-white royal dhoti, gold sash — NOT Arjuna, no heavy crown, no Gandiva, no white prince robe; Bhima adult with dark mustache, leaf-green gold armor, great mace, never a child. No Arjuna. No English text. No speech bubble. No letters. Carved gold-and-lotus cartouche, cream-saffron-gold dawn. Not photoreal. No Drona. No flute. No gore."
+    },
+    {
+      "id": "elephant",
+      "file": "plate-elephant.jpg",
+      "beat_text": "Bhima slays an elephant named Ashwatthama — a great beast of gold dust, no blood.",
+      "cast_present": [
+        "bhima"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Bhima adult Pandava, dark mustache, mace, leaf-green gold armor, never a child",
+        "A war-elephant collapsing as gold dust and saffron banners — named Ashwatthama in the beat, not a man, no gore"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ashwatthama",
+        "Ashwatthama the man",
+        "severed neck",
+        "Drona",
+        "white-bearded sage",
+        "Krishna",
+        "Drona",
+        "human Ashwatthama",
+        "blood"
+      ],
+      "props": [
+        "mace",
+        "war elephant of gold dust"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Bhima the adult Pandava, dark mustache, gold circlet, leaf-green gold armor, great mace. A war-elephant named Ashwatthama collapses as gold dust and light — not a man, no blood, no viscera. Never a child. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore."
+    },
+    {
+      "id": "dharma",
+      "file": "plate-dharma.jpg",
+      "beat_text": "Yudhishthira must speak. Dharma tightens on the king who does not lie.",
+      "cast_present": [
+        "yudhishthira"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Yudhishthira eldest Pandava king, simple gold diadem, cream-white royal dhoti, calm grave face, no Gandiva, no peacock, no flower garland"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ashwatthama",
+        "Ashwatthama the man",
+        "severed neck",
+        "Drona",
+        "white-bearded sage",
+        "Arjuna",
+        "Krishna",
+        "Bhima as a second king"
+      ],
+      "props": [
+        "simple diadem"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Yudhishthira, eldest dharma-king, simple gold diadem, cream-white royal dhoti, gold sash, modest mustache, grave calm. Not Arjuna, no heavy crown, no Gandiva, no peacock, no flower garland. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore."
+    },
+    {
+      "id": "conch",
+      "file": "plate-conch.jpg",
+      "beat_text": "Ashwatthama is dead, he says — and the elephant is lost under Krishna’s conch.",
+      "cast_present": [
+        "yudhishthira",
+        "krishna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Yudhishthira speaking, simple gold diadem, cream-white dhoti",
+        "Krishna raising a gold conch (Panchajanya), still holding reins, Ep 09 face"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ashwatthama",
+        "Ashwatthama the man",
+        "severed neck",
+        "Drona",
+        "white-bearded sage",
+        "Drona on the chariot",
+        "human Ashwatthama",
+        "Arjuna"
+      ],
+      "props": [
+        "Panchajanya conch",
+        "reins"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Yudhishthira (modest mustache, simple gold diadem, cream-white dhoti) speaking; Krishna (Ep 09 lock: dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins) raising a gold-white conch Panchajanya to his lips. No English text, no letters, no speech bubble, no word LISTEN. No Arjuna. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore."
+    },
+    {
+      "id": "yoga",
+      "file": "plate-yoga.jpg",
+      "beat_text": "Drona’s bow falls. He sits in yoga on the field.",
+      "cast_present": [
+        "drona"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Drona seated in yoga, saffron angavastram, white beard, eyes turning inward, bow of the guru lying on the earth"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ashwatthama",
+        "Ashwatthama the man",
+        "severed neck",
+        "Krishna",
+        "blood",
+        "corpse"
+      ],
+      "props": [
+        "fallen bow",
+        "yoga seat"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: EXACTLY ONE Drona. The acharya-warrior sits in yoga on the field, saffron angavastram over pale gold-white armor, long white beard, saffron topknot, eyes inward. His guru-bow lies on the earth beside him. Do not draw a second Drona. Do not draw a reclining body. Do not draw a corpse. Alive in yoga, composed. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Krishna. No flute. No gore. No blood."
+    },
+    {
+      "id": "prince",
+      "file": "plate-prince.jpg",
+      "beat_text": "Dhrishtadyumna comes forth — the son born for this hour.",
+      "cast_present": [
+        "dhrishtadyumna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Dhrishtadyumna adult Panchala prince, dark mustache, indigo-gold armor, sword of light, Panchala diadem, never a child, not Arjuna"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ashwatthama",
+        "Ashwatthama the man",
+        "severed neck",
+        "Drona",
+        "white-bearded sage",
+        "Arjuna",
+        "Krishna",
+        "peacock feather"
+      ],
+      "props": [
+        "sword of light"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Dhrishtadyumna, adult Panchala prince, dark mustache, Panchala diadem, indigo-gold engraved armor, sword as gold light. Never a child, not Arjuna, no peacock, no flower garland. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore."
+    },
+    {
+      "id": "still",
+      "file": "plate-still.jpg",
+      "beat_text": "The guru is stilled as gold light — no blood, only a vow kept.",
+      "cast_present": [
+        "drona",
+        "dhrishtadyumna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Drona in yoga, stilled as a figure of gold light, saffron, white beard — not a severed body",
+        "Dhrishtadyumna adult Panchala prince, sword of gold light, dark mustache, never a child"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ashwatthama",
+        "Ashwatthama the man",
+        "severed neck",
+        "Krishna",
+        "severed head",
+        "blood spray",
+        "corpse horror"
+      ],
+      "props": [
+        "sword of gold light",
+        "yoga"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona seated in yoga becomes gold light; Dhrishtadyumna the adult Panchala prince holds a sword of gold light. No blood, no severed neck, no corpse. Drona: white beard, saffron. Dhrishtadyumna: dark mustache, indigo-gold, never a child. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No flute. No gore."
+    },
+    {
+      "id": "wide-gold",
+      "file": "plate-wide-gold.jpg",
+      "beat_text": "Thus Drona falls. A son not on this field will hear it.",
+      "cast_present": [
+        "krishna",
+        "yudhishthira"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Yudhishthira simple gold diadem, cream-white dhoti, grave",
+        "Quiet cream-saffron field after the guru; no corpse"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ashwatthama",
+        "Ashwatthama the man",
+        "severed neck",
+        "Drona",
+        "white-bearded sage",
+        "Drona corpse",
+        "human Ashwatthama",
+        "Arjuna"
+      ],
+      "props": [
+        "chariot",
+        "reins"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: EXACTLY two adult men. Krishna (Ep 09 lock: dusty-blue youthful divine adult, yellow pitambar, gold crown with one peacock feather, flower garlands, charioteer reins). Yudhishthira the eldest Pandava dharma-king: male, modest dark mustache, simple gold diadem, cream-white royal dhoti, gold sash, grave — NOT a woman, not a goddess, not Arjuna, no Gandiva, no peacock. Quiet cream-saffron field after the guru's hour. No corpse. No English text. Carved gold-and-lotus cartouche. Not photoreal. No flute. No gore."
+    }
+  ]
+}

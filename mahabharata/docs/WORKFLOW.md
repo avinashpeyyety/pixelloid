@@ -109,3 +109,7 @@ python3 tools/stills_review.py episodes/<id>
 **Krishna eye check:** `episodes/09-gita/stills/plate-counsel.jpg`  
 **Sources:** each beat ≥2 of BORI/Debroy, Gita Press Gorakhpur, K.M. Ganguli.  
 Never photoreal. Never Ep 01 gold as an image. Subsequent faces match 09/10. See `STYLE.md`.
+
+## Optional desktop tooling (Air)
+
+See monorepo [`TOOLING.md`](../../TOOLING.md): **REAPER** for stem mixes after Orion TTS; **Blender** / **SketchUp** for previs only — they do not bypass GATE C / Imagine plate bar.

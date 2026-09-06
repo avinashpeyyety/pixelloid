@@ -38,3 +38,16 @@ ai-lab-vault/scripts/publish-pages.sh pixelloid
 # cosmos-only (syncs lab cosmos/ first):
 ai-lab-vault/scripts/publish-pages.sh cosmos
 ```
+
+## Desktop tooling (MacBook Air)
+
+Production apps for asset pipelines — see [`TOOLING.md`](TOOLING.md).
+
+| App | Use |
+|-----|-----|
+| **Blender** | 3D / previs / export for Cosmos & Mahābhārata |
+| **REAPER** | Mix TTS + music beds before shipping audio |
+| **SketchUp 2026** | Stage / set / architecture blocking |
+
+Scratch projects: `_studio/{reaper,blender,sketchup}/` (gitignored except `.gitkeep`).
+

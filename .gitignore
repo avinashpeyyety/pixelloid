@@ -24,3 +24,7 @@ credentials/
 
 
 mahabharata/.factory/
+
+# Desktop DAW / DCC project scratch (exports go into subprojects)
+_studio/**
+!_studio/**/.gitkeep

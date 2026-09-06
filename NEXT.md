@@ -19,6 +19,10 @@
 
 ## Curiosity / explore
 
+- [ ] First REAPER bounce into a Mahābhārata episode audio/ stem (document path in TOOLING.md)
+- [ ] SketchUp stage block for Chocolate Dance → reference still for lighting beat
+- [ ] Blender previs pass for one Cosmos pad / stack shot (export still only)
+
 - [ ] Shared Three.js HUD chips with cosmos
 - [ ] 30s silent WebM for README
 

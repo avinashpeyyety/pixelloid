@@ -7,8 +7,9 @@ Installed on **MacBook Air** for offline production. Browser shows still ship as
 | **Blender** | `/Applications/Blender.app` · CLI `blender` | **Primary 3D renderer** for Mahābhārata (and Cosmos); maps Grok Imagine key panels into scenes; export renders/glTF under episode `renders/` or `_studio` |
 | **REAPER** | `/Applications/REAPER.app` | DAW for score, ambience, SFX; mix Orion TTS + Hindustani beds before dropping stems under `episodes/…/audio/` or kids-grok assets |
 | **SketchUp 2026** | `/Applications/SketchUp 2026/SketchUp.app` | Sets, stages, architecture blocking (Chocolate Dance stage, Cosmic pads, Mahābhārata loci); export reference images or geometry for Blender / plate prompts |
+| **FreeCAD** | `/Applications/FreeCAD.app` | **Default mechanical CAD / rendering** — parametric Part Design, assemblies, STEP/FCStd; prefer this for machine parts, fixtures, and mechanical previs before Blender |
+| **Onshape CAD** | `/Applications/Onshape CAD.app` (launcher) · https://cad.onshape.com | **Secondary** cloud CAD — only when a **free-plan-eligible** Onshape workflow fits (e.g. public/edu/hobby docs). Not the default mechanical path; export STEP back to FreeCAD/Blender |
 | **GeoLibre** | `/Applications/GeoLibre Desktop.app` | Open-source GIS (MapLibre / geoprocessing) — maps, layers, spatial SQL; useful for Cosmos pad geography, location research, and any map-backed Pixelloid locus |
-| **Onshape CAD** | `/Applications/Onshape CAD.app` (launcher) · https://cad.onshape.com | Cloud-native parametric CAD (browser). No official Mac install — toolbox launcher opens Chrome app-mode. Export STEP/Parasolid for Blender / SketchUp handoff |
 
 ## Suggested pipelines
 
@@ -34,6 +35,7 @@ Installed on **MacBook Air** for offline production. Browser shows still ship as
 
 ```bash
 open -a Blender
+open -a FreeCAD
 open -a REAPER
 open -a "SketchUp"
 open -a "GeoLibre Desktop"
@@ -44,11 +46,23 @@ open "/Applications/Onshape CAD.app"   # or: open https://cad.onshape.com
 ## Studio scratch (optional)
 
 ```bash
-mkdir -p pixelloid/_studio/{reaper,blender,sketchup,geolibre,onshape}
+mkdir -p pixelloid/_studio/{reaper,blender,sketchup,freecad,geolibre,onshape}
 # Add _studio/ to .gitignore if projects are large / proprietary
 ```
 
 
-### Onshape (browser CAD)
 
-Onshape has **no native Mac desktop app**. The toolbox entry is a thin launcher to `https://cad.onshape.com` (Chrome `--app` when available). Sign in with your PTC/Onshape account on first use. Prefer STEP/Parasolid exports into `_studio/onshape/` or Blender imports for Pixelloid/3D handoff.
+
+## Mechanical CAD policy
+
+| Priority | Tool | When |
+|----------|------|------|
+| **Default** | **FreeCAD** | All mechanical modelling / rendering / STEP work on Air unless a free Onshape case applies |
+| **Secondary** | **Onshape** | Only specific cases that fit Onshape’s **free** plan (public/edu/hobby constraints). Prefer FreeCAD for private proprietary parts |
+| **Downstream** | **Blender** | Lookdev / animation after CAD export (STEP/mesh), not primary mechanical design |
+
+Do not default new mechanical work to Onshape. If Onshape is used, export STEP into `_studio/freecad/` or Blender and keep FreeCAD as the local source of truth when possible.
+
+### Onshape (browser CAD — secondary)
+
+Onshape has **no native Mac desktop app**. Launcher → `https://cad.onshape.com`. Use **only** when free-plan terms fit the document. Otherwise use **FreeCAD**. Export STEP for FreeCAD/Blender handoff.

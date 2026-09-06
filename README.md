@@ -48,8 +48,9 @@ Production apps for asset pipelines — see [`TOOLING.md`](TOOLING.md).
 | **Blender** | 3D / previs / export for Cosmos & Mahābhārata |
 | **REAPER** | Mix TTS + music beds before shipping audio |
 | **SketchUp 2026** | Stage / set / architecture blocking |
+| **FreeCAD** | **Default** mechanical CAD / STEP |
 | **GeoLibre** | GIS / maps / spatial tools |
-| **Onshape CAD** | Cloud parametric CAD (browser launcher) |
+| **Onshape CAD** | Secondary cloud CAD (free-plan cases only) |
 
 Scratch projects: `_studio/{reaper,blender,sketchup}/` (gitignored except `.gitkeep`).
 

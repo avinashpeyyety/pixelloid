@@ -1,11 +1,11 @@
-# Ep 11 reimagine — 3D + Imagine (2026-09-06)
+# Ep 11 reimagine — 3D + Imagine
 
-## Status
-- **Imagine key panels:** `stills/` GATE C PASS (locked art + `_locks/`).
-- **3D:** `blender-map.json` + `blender/ep11_chakravyuha.blend` + `renders/beat-*.png`.
-- **Player (live):** `script.js` loads plates from **`renders/`** (Blender camera proxies). Orion / Megh unchanged. Hub poster still uses `stills/poster.jpg`.
+## Status (2026-09-06 hotfix)
+- **Live player:** GATE C Imagine panels in `stills/` (`plate-*.jpg`). Cache `ep11-stills-hotfix-v2`.
+- **Blender:** `blender-map.json` + `blender/ep11_chakravyuha.blend` + `renders/beat-*.png` are **offline preview only**. Do not point `script.js` at `renders/` until a player-plate QA gate passes (one panel per camera, framed full-bleed, cast matches beat text).
+- **Why:** The first Blender flip showed greybox floor/rings/billboards that missed art or framed wrong panels vs narration.
 
-## Regenerate renders
+## Regenerate offline renders (preview only)
 ```bash
 "/Applications/Blender.app/Contents/MacOS/Blender" --background \
   --python mahabharata/episodes/11-chakravyuha/blender/build_ep11_scene.py

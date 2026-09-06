@@ -6,13 +6,13 @@ export const EPISODE = {
   id: "11",
   slug: "chakravyuha",
   title: "The Chakravyuha",
-  subtitle: "Thirteenth day of Kurukshetra · Blender 3D + Imagine panels",
-  style: "imagine-panels-blender-3d", // key panels Imagine; motion target Blender — Ken Burns legacy until hybrid player
-  stillsDir: "episodes/11-chakravyuha/renders/",
+  subtitle: "Thirteenth day of Kurukshetra",
+  style: "imagine-panels", // GATE C stills live; Blender renders/ offline until real 3D gate
+  stillsDir: "episodes/11-chakravyuha/stills/",
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep11-blender-3d-v1",
+    cache: "ep11-stills-hotfix-v2",
     note: "Kathavachak — grok-tts Orion (same pipeline as Ep 09/10)",
     base: "episodes/11-chakravyuha/audio/",
   },
@@ -25,16 +25,16 @@ export const EPISODE = {
     poster: "episodes/11-chakravyuha/stills/poster.jpg",
   },
   plates: {
-    // Blender 3D proxies (Imagine panels mapped into scene cameras)
-    wide: "beat-00-wide.png",
-    vyuha: "beat-12-vyuha.png",
-    counsel: "beat-24-counsel.png",
-    enter: "beat-36-enter.png",
-    gate: "beat-48-gate.png",
-    storm: "beat-60-storm.png",
-    wheel: "beat-72-wheel.png",
-    dusk: "beat-84-dusk.png",
-    "wide-gold": "beat-95-wide-gold.png",
+    // GATE C Imagine stills (Blender renders/ offline until a real 3D gate passes)
+    wide: "plate-wide.jpg",
+    vyuha: "plate-vyuha.jpg",
+    counsel: "plate-counsel.jpg",
+    enter: "plate-enter.jpg",
+    gate: "plate-gate.jpg",
+    storm: "plate-storm.jpg",
+    wheel: "plate-wheel.jpg",
+    dusk: "plate-dusk.jpg",
+    "wide-gold": "plate-wide-gold.jpg",
   },
   end: {
     title: "End of Episode 11",

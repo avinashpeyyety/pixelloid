@@ -12,7 +12,7 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep01-orion",
+    cache: "ep01-consistency-20260912",
     note: "Grok TTS orion — 24 kHz / 128 kbps",
     base: "episodes/01-birds-eye/audio/",
   },

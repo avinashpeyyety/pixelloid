@@ -38,18 +38,18 @@
   "cast": {
     "drona": {
       "face": "Aged acharya-warrior, noble lined face, long white beard and mustache (guru in the garden, not a garden sage only)",
-      "hair": "White hair in a saffron-bound topknot, rudraksha — no Kuru silver diadem of Bhishma",
-      "costume": "Saffron angavastram over pale cream dhoti, staff or bow of the guru"
+      "hair": "White hair in a saffron-bound topknot, rudraksha — no Kuru silver diadem of Bhishma; hair itself white (not dark under the cloth)",
+      "costume": "Saffron angavastram over pale cream dhoti, staff or bow of the guru — NEVER gold kavacha/breastplate, NEVER Bhishma silver diadem, NEVER Kuru battle armor (Bhishma bleed)"
     },
     "arjuna": {
       "face": "Gurukul youth, teenage Pandava prince, slighter than Drona, smooth young face, light youthful mustache or none — NOT the battle-aged Ep 09 adult",
       "hair": "Dark hair, simple gold youth-circlet (not a heavy battle mukut)",
-      "costume": "Cream-white dhoti, gold belt, quiver — never flower garland, never peacock, never gold cuirass"
+      "costume": "Cream-white dhoti, gold belt, quiver with consistent strap language (leather or simple cord — not gold X pectoral bands that appear/disappear), never flower garland, never peacock, never gold cuirass"
     },
     "yudhishthira": {
       "face": "Gurukul youth, eldest boy-prince, calm young face, modest or no mustache — distinct from Arjuna, NOT an adult king, not battle-aged",
       "hair": "Dark hair, simple gold diadem, no peacock",
-      "costume": "Cream-white dhoti, gold sash, no Gandiva, no flower garland"
+      "costume": "Cream-white dhoti, gold sash, bare chest or shoulder-drape — NEVER long-sleeved white tunic; no Gandiva, no flower garland"
     },
     "armies": {
       "face": "Fellow gurukul youths, distant, shorter than Drona",
@@ -63,7 +63,8 @@
       "file": "plate-wide.jpg",
       "beat_text": "In Hastināpura’s garden Drona tests the princes. An artisan’s bird sits high on a tree.",
       "cast_present": [
-        "drona"
+        "drona",
+        "armies"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
@@ -110,14 +111,16 @@
           "work": "ganguli",
           "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
         }
-      ]
+      ],
+      "audit_notes": "2026-09-12 regen: Drona saffron/cream, white hair, no gold kavacha."
     },
     {
       "id": "drona",
       "file": "plate-drona.jpg",
       "beat_text": "Take your bows. Aim at that bird. When I give the word, cut off its head.",
       "cast_present": [
-        "drona"
+        "drona",
+        "armies"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
@@ -173,14 +176,17 @@
         "note": "Drona points at the bird; any drawn bow in frame also points at the bird, not horizontally past it.",
         "target_distance": "high_distant"
       },
-      "requires_spatial_aim": true
+      "requires_spatial_aim": true,
+      "audit_notes": "2026-09-12 regen: Drona saffron/cream, white hair, no gold kavacha."
     },
     {
       "id": "yudhishthira",
       "file": "plate-yudhishthira.jpg",
       "beat_text": "I see the tree. I see you. I see my brothers. I see the bird.",
       "cast_present": [
-        "yudhishthira"
+        "yudhishthira",
+        "drona",
+        "armies"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
@@ -192,7 +198,8 @@
         "Cream-saffron-gold sacred hour",
         "Yudhishthira eldest Pandava, simple gold diadem, cream-white royal dhoti, modest mustache, bow drawn, looking at more than the bird",
         "tree and artisan bird visible",
-        "Gurukul youth prince, slighter and shorter than Drona, not battle-aged adult"
+        "Gurukul youth prince, slighter and shorter than Drona, not battle-aged adult",
+        "Adult Drona visible mid-ground (saffron/cream, no kavacha) so spoken \"I see you\" addresses the guru on this plate"
       ],
       "must_not_show": [
         "Photoreal",
@@ -207,7 +214,6 @@
         "blood",
         "severed flesh",
         "Arjuna",
-        "Drona as a second king",
         "Bhishma",
         "battle-aged Ep 09 Arjuna",
         "adult warrior bulk",
@@ -232,14 +238,16 @@
           "work": "ganguli",
           "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
         }
-      ]
+      ],
+      "audit_notes": "2026-09-12 regen: Drona mid-ground present for \"I see you\"; Yudhishthira cream-dhoti lock."
     },
     {
       "id": "aside",
       "file": "plate-aside.jpg",
       "beat_text": "This is not for you. Stand apart.",
       "cast_present": [
-        "drona"
+        "drona",
+        "yudhishthira"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
@@ -249,7 +257,8 @@
         "Heroic medium — named figures fill the frame",
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
-        "Drona acharya-warrior: white beard and mustache, saffron angavastram, dismissing with a hand"
+        "Drona acharya-warrior: white beard and mustache, saffron angavastram over cream dhoti (NO gold kavacha), dismissing with a hand",
+        "Gurukul youth Yudhishthira being dismissed: teenage boy-prince, shorter/slighter than Drona, cream-white dhoti and gold sash matching his lock — NOT a long-sleeve white tunic, not an adult warrior"
       ],
       "must_not_show": [
         "Photoreal",
@@ -264,12 +273,17 @@
         "blood",
         "severed flesh",
         "Arjuna",
-        "Bhishma"
+        "Bhishma",
+        "gold kavacha on Drona",
+        "Bhishma silver diadem",
+        "long-sleeve white tunic on Yudhishthira",
+        "adult warrior bulk on the dismissed prince"
       ],
       "props": [
-        "raised hand"
+        "raised hand",
+        "bow held by youth"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Drona, white beard and mustache, saffron angavastram, cream dhoti, hand raised dismissing a pupil. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No Arjuna. No flute. No gore.",
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Drona, white beard and mustache, saffron-bound white-hair topknot, saffron angavastram over cream dhoti, NO gold kavacha, hand raised dismissing exactly one GURUKUL YOUTH Yudhishthira — teenage boy-prince, shorter/slighter than Drona, not an adult warrior, cream-white dhoti and gold sash (not a long-sleeve tunic), simple gold diadem. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No Arjuna. No flute. No gore. No Bhishma armor.",
       "sources": [
         {
           "work": "bori",
@@ -283,7 +297,8 @@
           "work": "ganguli",
           "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
         }
-      ]
+      ],
+      "audit_notes": "2026-09-12 regen: Drona no kavacha; Yudhishthira cream-dhoti/diadem (not tunic)."
     },
     {
       "id": "arjuna-bow",
@@ -351,7 +366,8 @@
         "note": "Drawn Gandiva, nocked arrow, eyes, and bird on one straight line.",
         "target_distance": "high_distant"
       },
-      "requires_spatial_aim": true
+      "requires_spatial_aim": true,
+      "audit_notes": "Closest to youth lock; keep as Arjuna wardrobe target."
     },
     {
       "id": "eye",
@@ -420,7 +436,8 @@
         "note": "Arrow aimed at the bird’s head, not the trunk. Elevate the bow if the bird is high.",
         "target_distance": "high_distant"
       },
-      "requires_spatial_aim": true
+      "requires_spatial_aim": true,
+      "audit_notes": "2026-09-12 regen: leather chest straps + wood bow matching arjuna-bow; no gold X pectoral."
     },
     {
       "id": "loose",
@@ -472,7 +489,8 @@
           "work": "ganguli",
           "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
         }
-      ]
+      ],
+      "audit_notes": "2026-09-12 regen: Drona saffron/cream, white hair, no gold kavacha."
     },
     {
       "id": "release",
@@ -540,7 +558,8 @@
         "note": "The loosed shaft’s path meets the bird’s head; gold dust on that same line.",
         "target_distance": "high_distant"
       },
-      "requires_spatial_aim": true
+      "requires_spatial_aim": true,
+      "audit_notes": "Leather X straps OK vs eye plate gold bands — unify with arjuna-bow."
     },
     {
       "id": "wide-gold",
@@ -597,7 +616,8 @@
           "work": "ganguli",
           "cite": "K.M. Ganguli, Ādi Parva, Sambhava, Sections CXXXIV–CXXXV"
         }
-      ]
+      ],
+      "audit_notes": "2026-09-12 regen: Drona saffron/cream, white hair, no gold kavacha."
     }
   ],
   "spatial_rule": "If a panel shows an archer aiming at a bird (or any target), the bow, arrow, gaze, and target must line up. Fail the plate if they don’t.",

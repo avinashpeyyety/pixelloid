@@ -2,7 +2,7 @@
 
 Status: PASS
 
-Run first:
+Date: 2026-09-12 (America/Chicago) — character-consistency Imagine regen on Air.
 
 ```bash
 python3 tools/stills_review.py episodes/01-birds-eye --require
@@ -17,35 +17,32 @@ python3 tools/stills_review.py episodes/01-birds-eye --require
 | Every still + lock ≥ 1536×1024, aspect ~3:2 | PASS |
 | No 1280×720 file used as first `image_edit` input | PASS |
 | Imagine refs = scene master + solo locks + Ep 10 `field-master.jpg` | PASS |
-| Every named face has `stills/_locks/<id>.jpg` (local youth for Arjuna/Yudhishthira; local Drona) | PASS |
-| Ep01 `plate-wide-gold.jpg` **not** attached as Imagine style ref | PASS |
+| Every named face has `stills/_locks/<id>.jpg` | PASS |
+| Ep01 `plate-wide-gold.jpg` **not** attached as Imagine style ref | PASS (retired as ref; plate regen’d from garden-master + locks) |
 
-## Quality vs Ep 10 bar
+## Audit C1–C5 eye-check (2026-09-12)
 
-| Check | Result |
-|-------|--------|
-| Frame | PASS — carved gold-and-lotus cartouche integrated |
-| Camera | PASS — named heroes fill the frame |
-| Line | PASS — painted comic / Amar Chitra, not photoreal |
-| Cast | PASS — Drona only where listed; no Krishna; no peacock on Arjuna |
-| Spatial aim | PASS — bow, arrow, gaze, and far bird on one line (drona, arjuna-bow, eye, release) |
-| Distant bird (Ep 01) | PASS — high in the canopy, small in the frame, many metres away; not perched next to the archer |
-| Gurukul youth (Ep 01) | PASS — Arjuna/Yudhishthira are teenage princes, slighter/shorter than adult Drona; cream-white dhoti; simple circlet; no heavy mukut, no gold cuirass on the princes, no peacock, no Krishna garland. 09/10 used as palette/costume language only; local `_locks/arjuna.jpg` and `_locks/yudhishthira.jpg` are youth portraits, not Ep 09 battle-aged copies |
-| Lock file | PASS |
+| ID | Issue | Result after regen |
+|----|-------|--------------------|
+| C1 | Drona gold kavacha / Bhishma bleed on lock, wide, aside, loose, wide-gold | **PASS** — saffron angavastram over cream dhoti; white hair; no breastplate |
+| C2 | `plate-drona` dark hair under topknot | **PASS** — white hair matches lock |
+| C3 | Aside youth in white long-sleeve tunic ≠ Yudhishthira | **PASS** — cream-white dhoti, gold diadem/sash; shorter than Drona |
+| C4 | Yudhishthira line “I see you” but Drona absent | **PASS** — adult Drona mid-ground on plate; bible `cast_present` includes `drona`; TTS line kept |
+| C5 | `eye`/poster gold X pectoral vs leather on arjuna-bow | **PASS** — leather quiver straps + woodier bow; poster copied from eye |
 
 ## Per plate
 
 | Plate | Cast | Canvas | Frame | Camera | Notes |
 |-------|------|--------|-------|--------|-------|
-| wide | Drona + distant youth princes | PASS | PASS | PASS | Tiny bird high in FAR canopy |
-| drona | Drona + youth pupils | PASS | PASS | PASS | Aim line to distant canopy bird |
-| yudhishthira | youth Yudhishthira | PASS | PASS | PASS | Youth; bird a small distant canopy mark |
-| aside | Drona dismissing a shorter pupil | PASS | PASS | PASS | Height: guru vs youth |
-| arjuna-bow | youth Arjuna | PASS | PASS | PASS | Cream dhoti, circlet; bow/gaze/FAR bird one line |
-| eye | youth Arjuna | PASS | PASS | PASS | Same youth; tiny far bird-head |
-| loose | Drona | PASS | PASS | PASS | Command beat |
-| release | youth Arjuna | PASS | PASS | PASS | Shaft line to far bird; gold dust; no gore |
-| wide-gold | Drona (taller) holds youth Arjuna | PASS | PASS | PASS | Obvious height gap; youth no cuirass |
+| wide | Drona + distant youth | PASS | PASS | PASS | No kavacha |
+| drona | Drona + youth pupils | PASS | PASS | PASS | White hair; saffron/cream; aim line |
+| yudhishthira | Yudhishthira + Drona + brothers | PASS | PASS | PASS | Guru visible for “I see you” |
+| aside | Drona + Yudhishthira | PASS | PASS | PASS | Cream-dhoti youth; no tunic |
+| arjuna-bow | youth Arjuna | PASS | PASS | PASS | Wardrobe target (unchanged) |
+| eye | youth Arjuna | PASS | PASS | PASS | Leather straps; matches bow plate |
+| loose | Drona | PASS | PASS | PASS | Command; no kavacha |
+| release | youth Arjuna | PASS | PASS | PASS | Leather straps OK (kept) |
+| wide-gold | Drona + youth Arjuna | PASS | PASS | PASS | No kavacha; height gap; not used as Imagine ref |
 | poster | copy of eye | PASS | PASS | PASS | |
 
 ## Strict checks
@@ -54,10 +51,7 @@ python3 tools/stills_review.py episodes/01-birds-eye --require
 - [x] No Drona / saffron sage unless `cast_present`
 - [x] No graphic gore
 - [x] No 16:9 / 720p plates
-- [x] Eye-match to Ep 10 vow (density), not Ep 01 gold as style ref
 - [x] Krishna not on this field
-- [x] **Gurukul youth PASS (eye check):** princes are not battle-aged Ep 09/10 adults
-- [x] **Distant bird PASS (eye check):** target is far/high/small in the canopy
-- [x] **Spatial aim PASS (eye check):** bow, arrow, gaze, and that far bird on one line
-- [x] Spoken line’s speaker and action are the figures/props on this still (GATE D)
-- [x] Character lock: youth identity stable across Arjuna plates; Drona adult throughout
+- [x] C1–C5 character consistency PASS (eye check)
+- [x] Spoken line’s speaker and action visible (GATE D PASS)
+- [x] Character lock: Drona adult saffron/cream throughout; youth princes; Arjuna strap language unified on eye/poster

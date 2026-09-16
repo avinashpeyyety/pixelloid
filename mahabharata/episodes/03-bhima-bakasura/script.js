@@ -1,6 +1,11 @@
 /**
  * Episode 03 — Bhima and Bakasura
- * Ekachakra · the rakshasa’s due · cinematic plates + Orion TTS + flute/tabla.
+ * Ādi Parva · Vaka-vadha (Bakāsuravadha) · Ekacakrā
+ *
+ * Voice: provider grok-tts / voice_id orion (target pipeline).
+ * Cache plan ep03-09-10-bar — DO NOT re-render audio this pass (Imagine/TTS blocked).
+ * Existing orion-*.mp3 remain live until a future Orion pass.
+ * Music: named Hindustani raga Malkauns under Orion (never default flute+tabla).
  */
 export const EPISODE = {
   id: "03",
@@ -12,9 +17,13 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep03-v1",
-    note: "Grok TTS orion — deep heroic narration",
+    cache: "ep03-09-10-bar",
+    note: "Grok TTS Orion — cache plan ep03-09-10-bar; audio not re-rendered this scaffold pass",
     base: "episodes/03-bhima-bakasura/audio/",
+  },
+  music: {
+    raga: "malkauns",
+    note: "Malkauns mandra tanpura; sparse deep bansuri; soft bayan under clash. Duck under Orion. Not default flute+tabla.",
   },
   totalSec: 100,
   stills: {
@@ -104,7 +113,7 @@ export const EPISODE = {
       panY: -0.03,
       audio: "orion-05.mp3",
       who: "Narrator",
-      text: "He sits and eats every last morsel — then waits for the monster who would claim him.",
+      text: "In the forest he eats the rakshasa’s due himself — then waits for Bakasura to come.",
     },
     {
       t: 64,

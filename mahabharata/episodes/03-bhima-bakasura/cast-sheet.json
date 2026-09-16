@@ -1,31 +1,98 @@
 {
   "episode_id": "03",
-  "notes": "Bhima continuity lock — large powerful build, not photoreal. Bakasura fearsome but comic-mythology, not gore.",
+  "title": "Bhima and Bakasura",
+  "notes": "Ep 09/10 bar tokens. Comic mythology Amar Chitra — never photoreal. Bhima continuity: largest Pandava, saffron-yellow dhoti, thick mustache, topknot, no peacock. Bakasura fierce but stylized, no gore. Local locks under stills/_locks/ must be regenerated at 1536×1024 (current bhima/bakasura locks are 720p archive).",
   "cast": {
     "bhima": {
-      "face": "Young adult warrior, broad jaw, dark eyes, thick dark mustache, confident calm expression",
-      "hair": "Black curly hair in warrior topknot, no peacock feather",
-      "costume": "Saffron-yellow or cream dhoti with gold border, bare powerful chest, simple armbands — largest of the Pandavas"
+      "tokens": [
+        "largest Pandava",
+        "broad jaw",
+        "thick dark mustache",
+        "black warrior topknot",
+        "saffron-yellow dhoti gold border",
+        "bare powerful chest",
+        "simple armbands",
+        "confident calm"
+      ],
+      "face": "Young adult Pandava warrior, broad jaw, dark eyes, thick dark mustache, confident calm — comic mythology, not photoreal",
+      "hair": "Black curly warrior topknot — no peacock feather, no Ep 09 Arjuna gold battle mukut",
+      "costume": "Saffron-yellow dhoti with gold border, bare powerful chest, simple armbands — largest of the Pandavas",
+      "forbid": [
+        "photoreal",
+        "peacock feather",
+        "gold battle mukut",
+        "tiny weak frame",
+        "Krishna pitambar"
+      ]
     },
     "bakasura": {
-      "face": "Rakshasa: large, fierce but stylized comic features, not photoreal horror",
-      "hair": "Wild dark hair, optional small horns or topknot",
-      "costume": "Dark forest greens and browns, ragged warrior cloth, large stature towering over trees"
+      "tokens": [
+        "stylized rakshasa Vaka",
+        "fierce comic features",
+        "wild dark hair",
+        "dark forest cloth",
+        "towering comic scale",
+        "not gore"
+      ],
+      "face": "Rakshasa (Vaka): large, fierce but stylized comic features — not photoreal horror",
+      "hair": "Wild dark hair, optional small horns or rough topknot",
+      "costume": "Dark forest greens and browns, ragged warrior cloth, towering stature still equal comic mythology scale",
+      "forbid": [
+        "photoreal horror",
+        "heavy gore",
+        "blood splatter",
+        "CGI monster"
+      ]
     },
     "kunti": {
-      "face": "Mature noble mother, warm brown skin, serene resolve",
-      "hair": "Dark hair with simple gold ornaments",
-      "costume": "Saffron or cream sari with gold border"
+      "tokens": [
+        "noble mother",
+        "serene resolve",
+        "saffron or cream sari",
+        "simple gold ornaments"
+      ],
+      "face": "Mature noble mother, warm brown skin, serene resolve — painted comic, not photoreal",
+      "hair": "Dark hair with simple gold ornaments — no peacock",
+      "costume": "Saffron or cream sari with gold border",
+      "forbid": [
+        "photoreal",
+        "peacock",
+        "battle armor"
+      ]
     },
     "brahmin_father": {
-      "face": "Middle-aged brahmin, distressed",
+      "tokens": [
+        "middle-aged brahmin",
+        "dignified grief",
+        "white cotton",
+        "simple topknot",
+        "light beard"
+      ],
+      "face": "Middle-aged brahmin householder, distressed but dignified — comic mythology",
       "hair": "Simple topknot, light beard",
-      "costume": "White cotton dhoti and upper cloth"
+      "costume": "White cotton dhoti and upper cloth",
+      "forbid": [
+        "photoreal",
+        "saffron acharya robes of Drona",
+        "Kuru silver diadem"
+      ]
     },
     "townsfolk": {
-      "face": "Background comic villagers",
-      "hair": "Turbans or simple hair",
-      "costume": "Muted village dress"
+      "tokens": [
+        "Ekachakra villagers",
+        "turbans",
+        "muted village dress",
+        "equal human scale",
+        "worried or grateful"
+      ],
+      "face": "Background comic villagers — not photoreal portraits",
+      "hair": "Turbans or simple village hair",
+      "costume": "Muted village dress, equal natural human scale",
+      "forbid": [
+        "photoreal",
+        "modern clothes",
+        "giant scale mismatch"
+      ]
     }
   }
 }

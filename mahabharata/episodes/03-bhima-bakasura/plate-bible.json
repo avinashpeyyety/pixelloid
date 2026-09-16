@@ -1,68 +1,128 @@
 {
   "episode_id": "03",
+  "strict_hero_lock": "bhima",
   "title": "Bhima and Bakasura",
-  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour; refined linework",
-  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 Drona figure plate)",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour at Ekachakra; carved cartouche; Ep 10 field-master density; refined linework",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg; do not attach this episode's plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/03-bhima-bakasura/stills/_locks/ekachakra-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/03-bhima-bakasura/stills/_locks/ekachakra-master.jpg",
+    "episodes/03-bhima-bakasura/stills/_locks/bhima.jpg",
+    "episodes/03-bhima-bakasura/stills/_locks/bakasura.jpg",
+    "episodes/03-bhima-bakasura/stills/_locks/kunti.jpg",
+    "episodes/03-bhima-bakasura/stills/_locks/brahmin_father.jpg",
+    "episodes/03-bhima-bakasura/stills/_locks/townsfolk.jpg"
+  ],
   "photoreal_allowed": false,
-  "frame": "Ornate lotus carved wooden frame on every plate",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / vow) — not a thin rectangular sticker on a cream mat",
   "apparatus": {},
+  "stills_status": {
+    "bar": "1536×1024 3:2 Ep 09/10",
+    "current": "720p / 1280×720 archive — DO NOT single-image-edit; regenerate native 3:2",
+    "binaries_untouched": true,
+    "imagine": "blocked on Auto-review until approved — no Imagine/TTS this pass",
+    "next": "regen ekachakra-master + solo locks (bhima, bakasura, kunti, brahmin_father, townsfolk) then all 9 plates"
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Ādi Parva · Vaka-vadha (Bakāsuravadha) · Ekacakrā",
+    "divergence": "BORI CE places Vaka-vadha in Ādi ~1.147–1.151 (Debroy Vol. 1). Ganguli’s vulgate English is Vaka-vadha Parva Sections CLVII–CLXVI. Gita Press Gorakhpur tells the same Bakāsuravadha arc under its Ādi adhyāya numbering. The beats agree: Pandavas live incognito in a brāhmaṇa’s house at Ekacakrā; Vaka’s due is a cart of food plus one human; the lot falls on their host; Kunti sends Bhīma; Bhīma eats the food and kills Vaka; the town is freed.",
+    "chosen": "Gita Press Gorakhpur + BORI overlap: the Vaka-vadha itself as told in both. Debroy Vol. 1 translates BORI Ādi ~1.147–1.151. Ganguli CLVII–CLXVI for English beat map.",
+    "notes": "Not TV. Comic-mythology Bakasura (no gore). Never attach Ep01 plate-wide-gold or this episode’s plate-wide-gold as Imagine refs."
+  },
   "cast": {
     "bhima": {
-      "face": "Young adult warrior, broad jaw, dark eyes, thick dark mustache, confident calm",
-      "hair": "Black curly topknot, no peacock",
-      "costume": "Saffron-yellow dhoti with gold border, powerful bare chest, armbands"
+      "face": "Young adult Pandava warrior, broad jaw, dark eyes, thick dark mustache, confident calm — comic mythology, not photoreal",
+      "hair": "Black curly warrior topknot — no peacock feather, no gold battle mukut of Ep 09 Arjuna",
+      "costume": "Saffron-yellow dhoti with gold border, powerful bare chest, simple armbands — largest of the Pandavas"
     },
     "bakasura": {
-      "face": "Stylized rakshasa, fierce comic mythology not gore",
-      "hair": "Wild dark hair",
-      "costume": "Dark forest cloth, towering build"
+      "face": "Stylized rakshasa (Vaka): fierce comic-mythology features, not photoreal horror or gore",
+      "hair": "Wild dark hair, optional small horns or rough topknot",
+      "costume": "Dark forest greens and browns, ragged warrior cloth, towering build still equal comic scale"
     },
     "kunti": {
-      "face": "Noble mother, serene resolve",
-      "hair": "Dark hair, simple gold",
-      "costume": "Saffron or cream sari"
+      "face": "Mature noble mother, warm brown skin, serene resolve — comic painted, not photoreal",
+      "hair": "Dark hair with simple gold ornaments — no peacock",
+      "costume": "Saffron or cream sari with gold border"
     },
     "brahmin_father": {
-      "face": "Middle-aged brahmin, grief",
-      "hair": "Topknot, light beard",
-      "costume": "White cotton"
+      "face": "Middle-aged brahmin householder, grief and dignity — comic mythology",
+      "hair": "Simple topknot, light beard",
+      "costume": "White cotton dhoti and upper cloth"
     },
     "townsfolk": {
-      "face": "Background villagers",
-      "hair": "Turbans",
-      "costume": "Muted village dress"
+      "face": "Background comic villagers of Ekachakra — worried or grateful, not photoreal",
+      "hair": "Turbans or simple village hair",
+      "costume": "Muted village dress, equal natural human scale"
     }
   },
   "plates": [
     {
       "id": "wide",
       "file": "plate-wide.jpg",
-      "beat_text": "In the town of Ekachakra the Pandavas live in secret \u2014 and a shadow hangs over every home.",
+      "beat_text": "In the town of Ekachakra the Pandavas live in secret — and a shadow hangs over every home.",
       "cast_present": [
         "townsfolk"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium high-quality painted comic Amar Chitra village at golden hour",
-        "Quiet Indian town Ekachakra with thatched and tiled homes, peepal, distant hills",
-        "Subtle sense of unease \u2014 empty street or worried townsfolk at doorways",
-        "Equal natural human scale",
-        "Ornate lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Quiet Indian town Ekachakra: thatched and tiled homes, peepal, distant forest hills",
+        "Worried townsfolk at doorways — equal natural scale, subtle unease"
       ],
       "must_not_show": [
         "Photoreal",
-        "Gore",
-        "Giant scale mismatch",
-        "Modern buildings",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "Modern buildings",
+        "Giant scale mismatch",
+        "Bhima as A-shot",
+        "Bakasura"
       ],
       "props": [
         "village street",
         "peepal tree"
       ],
-      "prompt": "Premium high-quality painted comic Amar Chitra mythology. Wide establishing view of the ancient Indian town of Ekachakra at cream-saffron golden hour. Thatched and low brick houses, peepal tree, distant forest hills. A few worried townsfolk at doorways \u2014 equal natural scale. Soft shadow of fear over a peaceful town. Ornate lotus wooden frame. Refined linework matching Ep01 gold master, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium establishing Ekachakra at cream-saffron golden hour. Thatched and low brick houses, peepal tree, distant forest hills. Worried townsfolk at doorways — equal natural scale, quiet fear over a peaceful town. Carved gold-and-lotus cartouche integrated into the painting. Native 3:2 1536×1024. Not photoreal. No Drona. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva ~1.147–1.151 (Vaka-vadha) — Debroy Vol. 1; beat: arrival / residence"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva Bakāsuravadha — arrival / residence"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Vaka-vadha Parva CLVII–CLXVI — arrival / residence"
+        }
+      ],
+      "audit_notes": "2026-09-16 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until Imagine regen."
     },
     {
       "id": "terror",
@@ -75,22 +135,47 @@
       "is_aim_beat": false,
       "must_show": [
         "Premium painted comic quality",
-        "Towering stylized rakshasa Bakasura in forest clearing \u2014 fierce but not gory photoreal horror",
-        "Sense of demand and menace, empty food cart nearby optional",
-        "Lotus frame, gold hour forest"
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Towering stylized rakshasa Bakasura (Vaka) in a forest clearing — fierce comic mythology, not gore",
+        "Sense of demand and menace; optional empty food cart nearby"
       ],
       "must_not_show": [
-        "Photoreal gore",
-        "Blood splatter heavy",
-        "Modern elements",
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "Blood splatter heavy",
+        "Photoreal horror",
+        "Bhima",
+        "Modern elements"
       ],
       "props": [
         "forest",
         "optional cart"
       ],
-      "prompt": "Premium high-quality painted comic Amar Chitra. Giant stylized rakshasa Bakasura stands in a golden-hour forest clearing \u2014 large, fierce, comic-mythology design not photoreal horror or gore. Dark green-brown cloth, wild hair. Menace and power. Ornate lotus frame, cream-saffron light. Match Ep01 gold master style."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: giant stylized rakshasa Bakasura (Vaka) in a golden-hour forest clearing — large, fierce, comic-mythology design not photoreal horror. Dark green-brown cloth, wild hair. Menace and power. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Not photoreal. No Drona. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva ~1.147–1.151 (Vaka-vadha) — Debroy Vol. 1; beat: Vaka’s due"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva Bakāsuravadha — Vaka’s due"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Vaka-vadha Parva CLVII–CLXVI — Vaka’s due"
+        }
+      ],
+      "audit_notes": "2026-09-16 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until Imagine regen."
     },
     {
       "id": "family",
@@ -103,21 +188,47 @@
       "is_aim_beat": false,
       "must_show": [
         "Premium painted comic quality",
-        "Brahmin family in a simple cottage interior, grief and fear",
-        "Warm lamp light, equal scale, dignified sorrow not melodrama",
-        "Lotus frame"
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Brahmin father in white cotton as A-shot in a simple cottage interior — dignified grief when the lot falls",
+        "Warm lamp light, equal scale, sorrow not melodrama"
       ],
       "must_not_show": [
         "Photoreal",
-        "Gore",
-        "Comedy",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "Comedy",
+        "Gore",
+        "Bhima",
+        "Bakasura"
       ],
       "props": [
-        "cottage interior"
+        "cottage interior",
+        "lamp"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Simple brahmin cottage interior at evening. Father in white, mother and children grieving \u2014 dignified sorrow when the lot falls to them. Warm cream-gold lamp light. Equal natural scale. Ornate lotus frame, refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: simple brahmin cottage at evening. Brahmin father in white cotton — dignified sorrow when the lot falls to his house. Warm cream-gold lamp light. Equal natural scale. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Not photoreal. No Drona.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva ~1.147–1.151 (Vaka-vadha) — Debroy Vol. 1; beat: host household’s turn"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva Bakāsuravadha — host household’s turn"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Vaka-vadha Parva CLVII–CLXVI — host household’s turn"
+        }
+      ],
+      "audit_notes": "2026-09-16 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until Imagine regen."
     },
     {
       "id": "kunti",
@@ -130,23 +241,47 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
         "Mother Kunti in saffron/cream sari speaking with resolve",
-        "Bhima beside her \u2014 large powerful young warrior, saffron-yellow dhoti, thick mustache, topknot, calm strength",
-        "Same character lock for Bhima",
-        "Lotus frame"
+        "Bhima beside her — largest young Pandava: saffron-yellow dhoti, thick dark mustache, black topknot, calm strength (same face lock every plate)"
       ],
       "must_not_show": [
         "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
         "Peacock feather on Bhima",
         "Weak or tiny Bhima",
-        "Drona",
-        "white-bearded sage"
+        "Bakasura",
+        "Gold battle mukut on Bhima"
       ],
       "props": [
         "simple home"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Mother Kunti in cream-saffron sari places a hand of blessing or resolve. Beside her stands Bhima: largest young Pandava warrior, broad shoulders, thick dark mustache, black topknot, saffron-yellow dhoti with gold border, calm noble strength. Cottage interior, warm light. Ornate lotus frame. Refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Mother Kunti in cream-saffron sari with resolve. Beside her Bhima — largest young Pandava, broad shoulders, thick dark mustache, black topknot, saffron-yellow dhoti with gold border, calm noble strength. Cottage interior, warm light. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Same Bhima lock. Not photoreal. No peacock on Bhima. No Drona.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva ~1.147–1.151 (Vaka-vadha) — Debroy Vol. 1; beat: Kunti offers Bhima"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva Bakāsuravadha — Kunti offers Bhima"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Vaka-vadha Parva CLVII–CLXVI — Kunti offers Bhima"
+        }
+      ],
+      "audit_notes": "2026-09-16 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until Imagine regen."
     },
     {
       "id": "cart",
@@ -158,56 +293,106 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Bhima driving or walking with a wooden cart loaded with food pots toward forest path",
-        "Same Bhima face and build as kunti plate",
-        "Golden hour road, lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Bhima with a wooden cart loaded with food pots on the path toward the forest",
+        "Same Bhima face and build lock: saffron-yellow dhoti, thick mustache, topknot"
       ],
       "must_not_show": [
         "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
         "Modern cart",
         "Peacock",
-        "Drona",
-        "white-bearded sage"
+        "Bakasura as A-shot",
+        "Oxen photoreal CGI"
       ],
       "props": [
         "wooden cart",
         "food pots"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Powerful Bhima in saffron-yellow dhoti, thick mustache, topknot, drives a wooden ox-cart or pulls a cart stacked with food pots and vessels along a golden-hour path toward dark forest. Calm mountain strength. Ornate lotus frame. Same character design, refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: powerful Bhima in saffron-yellow dhoti, thick mustache, topknot, drives or guides a wooden cart stacked with food pots along a golden-hour path toward dark forest. Calm mountain strength. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Same Bhima lock. Not photoreal. No Drona.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva ~1.147–1.151 (Vaka-vadha) — Debroy Vol. 1; beat: Bhima sets out with the food"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva Bakāsuravadha — Bhima sets out with the food"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Vaka-vadha Parva CLVII–CLXVI — Bhima sets out with the food"
+        }
+      ],
+      "audit_notes": "2026-09-16 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until Imagine regen."
     },
     {
       "id": "feast",
       "file": "plate-feast.jpg",
-      "beat_text": "He sits and eats every last morsel \u2014 then waits for the monster who would claim him.",
+      "beat_text": "In the forest he eats the rakshasa’s due himself — then waits for Bakasura to come.",
       "cast_present": [
         "bhima"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Bhima seated among empty pots and trays, having finished the feast, waiting calmly",
-        "Forest clearing golden light",
-        "Same Bhima lock"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Bhima seated among emptied pots and trays in a forest clearing, feast finished, waiting calmly",
+        "Same Bhima lock: saffron dhoti, mustache, topknot"
       ],
       "must_not_show": [
-        "Gross eating gore",
         "Photoreal",
-        "Messy comedy vomit",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "Gross eating gore",
+        "Messy comedy vomit",
+        "Bakasura already grappling",
+        "Photoreal food mess"
       ],
       "props": [
         "pots",
         "trays"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Bhima sits in a forest clearing among emptied clay pots and food trays, last of the feast done, relaxed powerful posture waiting. Saffron-yellow dhoti, thick mustache, topknot. Golden hour. Ornate lotus frame. Refined charming style, not photoreal, not gross."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Bhima sits in a forest clearing among emptied clay pots and food trays — the rakshasa’s due eaten, relaxed powerful posture waiting. Saffron-yellow dhoti, thick mustache, topknot. Golden hour. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Same Bhima lock. Not photoreal, not gross. No Drona.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva ~1.147–1.151 (Vaka-vadha) — Debroy Vol. 1; beat: Bhima eats Vaka’s food and calls him"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva Bakāsuravadha — Bhima eats Vaka’s food and calls him"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Vaka-vadha Parva CLVII–CLXVI — Bhima eats Vaka’s food and calls him"
+        }
+      ],
+      "audit_notes": "2026-09-16 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until Imagine regen."
     },
     {
       "id": "clash",
       "file": "plate-clash.jpg",
-      "beat_text": "Bakasura comes roaring. Bhima meets him with bare hands and a warrior\u2019s joy.",
+      "beat_text": "Bakasura comes roaring. Bhima meets him with bare hands and a warrior’s joy.",
       "cast_present": [
         "bhima",
         "bakasura"
@@ -215,23 +400,47 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Dynamic clash: Bhima grappling or striking Bakasura",
-        "Both full figures, equal comic mythology style, Bakasura larger but not photoreal monster CGI",
-        "Forest battlefield, dramatic golden light",
-        "Same Bhima face lock"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Dynamic clash: Bhima grappling or striking Bakasura with bare hands",
+        "Both full figures, comic mythology; Bakasura larger but not photoreal CGI monster; same Bhima face lock"
       ],
       "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
         "Heavy blood gore",
         "Photoreal horror",
         "Dismemberment",
-        "Drona",
-        "white-bearded sage"
+        "Peacock on Bhima"
       ],
       "props": [
         "forest"
       ],
-      "prompt": "Premium painted comic Amar Chitra action plate. Bhima (saffron dhoti, thick mustache, topknot, powerful build) clashes bare-handed with towering stylized rakshasa Bakasura in a forest clearing. Dramatic dynamic poses, warrior energy. Stylized not gory \u2014 no heavy blood or photoreal horror. Ornate lotus frame, cream-saffron-gold light, refined quality."
+      "prompt": "Premium painted comic Amar Chitra action plate. Heroic medium: Bhima (saffron dhoti, thick mustache, topknot, powerful build) clashes bare-handed with towering stylized rakshasa Bakasura in a forest clearing. Dramatic dynamic poses, warrior energy. Stylized not gory — no heavy blood or photoreal horror. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Same Bhima lock. No Drona.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva ~1.147–1.151 (Vaka-vadha) — Debroy Vol. 1; beat: tree-weapon / grapple fight"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva Bakāsuravadha — tree-weapon / grapple fight"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Vaka-vadha Parva CLVII–CLXVI — tree-weapon / grapple fight"
+        }
+      ],
+      "audit_notes": "2026-09-16 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until Imagine regen."
     },
     {
       "id": "victory",
@@ -244,22 +453,47 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Bhima standing composed and victorious; Bakasura defeated on the ground (tasteful, not gory)",
-        "Same character locks",
-        "Clearing after battle, lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Bhima standing composed and victorious; Bakasura defeated on the ground (tasteful collapse, not gory)",
+        "Same character locks for Bhima and Bakasura"
       ],
       "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
         "Gore",
         "Photoreal corpses",
         "Ecstatic silly pose",
-        "Drona",
-        "white-bearded sage"
+        "Blood pool"
       ],
       "props": [
         "forest clearing"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Bhima stands composed and princely after victory \u2014 calm strength, saffron dhoti, mustache, topknot. Stylized Bakasura defeated on the ground (tasteful collapse, no gore). Forest clearing golden light. Ornate lotus frame. Refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Bhima stands composed and princely after victory — calm strength, saffron dhoti, mustache, topknot. Stylized Bakasura defeated on the ground (tasteful collapse, no gore). Forest clearing golden light. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Same locks. Not photoreal. No Drona.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva ~1.147–1.151 (Vaka-vadha) — Debroy Vol. 1; beat: Vaka slain"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva Bakāsuravadha — Vaka slain"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Vaka-vadha Parva CLVII–CLXVI — Vaka slain"
+        }
+      ],
+      "audit_notes": "2026-09-16 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until Imagine regen."
     },
     {
       "id": "wide-gold",
@@ -272,23 +506,47 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality gold closing mood like Ep01 wide-gold",
-        "Bhima returning or standing before grateful townsfolk of Ekachakra",
-        "Warm cream-saffron-gold peace",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Warm cream-saffron-gold closing mood; Bhima before grateful Ekachakra townsfolk",
+        "Same Bhima lock; peace after terror; equal natural scale"
       ],
       "must_not_show": [
-        "Gore",
         "Photoreal",
-        "Giant scale errors",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "Gore",
+        "Giant scale errors",
+        "Attach this plate as Imagine ref later",
+        "Bakasura standing alive"
       ],
       "props": [
         "village path"
       ],
-      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold hour like Ep01 plate-wide-gold. Bhima (powerful, saffron dhoti, mustache) walks or stands as grateful Ekachakra townsfolk bow in relief. Peace after terror. Ornate lotus frame. Refined charming quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra closing plate. Heroic medium: warm cream-saffron-gold hour. Bhima (powerful, saffron dhoti, mustache, topknot) stands as grateful Ekachakra townsfolk bow in relief. Peace after terror. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Same Bhima lock. Not photoreal. No Drona. Never use this finished plate as an Imagine style ref.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Ādi Parva ~1.147–1.151 (Vaka-vadha) — Debroy Vol. 1; beat: town relieved; feast of gratitude"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Ādi Parva Bakāsuravadha — town relieved; feast of gratitude"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Ādi Parva, Vaka-vadha Parva CLVII–CLXVI — town relieved; feast of gratitude"
+        }
+      ],
+      "audit_notes": "2026-09-16 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until Imagine regen."
     }
-  ],
-  "scene_lock_ref": ""
+  ]
 }

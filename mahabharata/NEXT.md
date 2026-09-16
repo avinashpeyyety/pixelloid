@@ -1,13 +1,14 @@
 # NEXT — mahabharata (pixelloid)
 
 ## Now
+- [ ] **Active sprint board:** [`docs/SPRINT_PLAN.md`](docs/SPRINT_PLAN.md) — Track A (improvements) + Track B (Ep 15+ factory). Studio lead; Chief one ticket/cycle.
 - [x] Ep 11: player uses Blender `renders/beat-*.png` (Ken Burns on 3D proxies; Orion/Megh kept)
-- [ ] Pilot one beat in **3D**: Imagine key panel → Blender camera/set → `renders/` proxy (document path; keep GATE C)
-- [ ] Rewrite **Episode 03** to the Ep 09/10 bar (one episode per pass). Do not start 04–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+.
+- [ ] Pilot one beat in **3D**: Imagine key panel → Blender camera/set → `renders/` proxy (document path; keep GATE C) — see SPRINT_PLAN Track A3 / Week 2
+- [ ] Rewrite **Episode 03** to the Ep 09/10 bar (one episode per pass). Do not start 04–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+. — SPRINT_PLAN Track A1 / Week 1–2
 
 ## Curiosity / explore
-- [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate)
-- [ ] After each 02–08 rewrite: one episode per pass, then resume Ep 14
+- [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate) — SPRINT_PLAN Track A4
+- [ ] After each 02–08 rewrite: one episode per pass, then resume Ep 14 — SPRINT_PLAN Track A2 / A5
 
 ## Done
 - [x] Ep 11 reimagine scaffold: GATE C panels + blender-map + Blender scene/renders (3D+Imagine workflow)

@@ -74,3 +74,11 @@ Cadence rule: Chief picks **≤1** in-flight ticket; prefer S; split M. Do not p
 - Shipping Ep 14
 - Full 3D player / hybrid cut (Curiosity in NEXT — pilot beat only)
 - Unrelated pixelloid (Chocolate Dance, kids-grok) unless Pulse flags breakage
+
+## Studio refine (2026-09-16)
+
+- Ep 03 stills+locks currently all 1280×720 → must full regen to 3:2 ≥1536×1024; never use Ep01 plate-wide-gold as Imagine ref
+- Source gate ≥2 of BORI/Debroy, Gita Press, Ganguli per beat
+- Style spine: Ep10 field-master; Krishna lock Ep09; new faces local 3:2 locks
+- Ep01 consistency already shipped (`50316c7`); active A1 = Ep03
+- Track B deliverable: [`PIPELINE_CHECKLIST.md`](PIPELINE_CHECKLIST.md)

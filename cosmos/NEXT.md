@@ -5,20 +5,23 @@
 
 ## Now
 
-- [ ] Polish launch camera: ease cuts at staging / SECO so the stack never leaves frame
-- [ ] Site detail: short ground fog + floodlight beams only in pad-local phase
-- [ ] Mobile body picker (solar list hidden &lt;560px)
+- [ ] **Continuous plan of record:** [`docs/SPRINT_PLAN.md`](docs/SPRINT_PLAN.md) — weekly loop (audit → one visual + one content + one info item → publish Pages → measure → log). Studio (pixelloid lane). Pulse keeps Cosmos in Command Next until In flight. Does **not** steal Mahābhārata In-flight unless Avinash parallelizes.
+- [ ] **Cycle 1** — Polish launch camera: ease cuts at staging / SECO so the stack never leaves frame (SPRINT_PLAN theme 1)
+- [ ] **Cycle 1** — Site detail: short ground fog + floodlight beams only in pad-local phase
+- [ ] **Cycle 2** — Mobile body picker (solar list hidden &lt;560px)
 
 ## Later
 
-- [ ] Optional NASA day/night textures when offline assets allowed
-- [ ] More missions: Shuttle final, Artemis I, Electron
-- [ ] LEO: Hubble + one Starlink shell as clean toggles
-- [ ] Embed mode (`?embed=1`) · screenshot export
+- [ ] **Cycle 3** — Info HUD v1 (distance, period, temp, discovery-year facts; schematic vs to-scale chip)
+- [ ] Optional NASA day/night textures when offline assets allowed — SPRINT_PLAN theme 4
+- [ ] More missions: Shuttle final, Artemis I, Electron — SPRINT_PLAN theme 5
+- [ ] LEO: Hubble + one Starlink shell as clean toggles — SPRINT_PLAN theme 6
+- [ ] Star lifecycle info overlays on scrub — SPRINT_PLAN theme 7
+- [ ] Embed mode (`?embed=1`) · screenshot export — SPRINT_PLAN theme 8
 
 ## Curiosity / explore
 
-- [ ] True site azimuths baked into ascent heading
+- [ ] True site azimuths baked into ascent heading — SPRINT_PLAN theme 9
 - [ ] Optional audio whoosh / ignition toggle
 
 ## Done
@@ -28,3 +31,4 @@
 - [x] LEO as its own mode
 - [x] **Ship under Pixelloid monorepo** → github.io/pixelloid/cosmos/
 - [x] **Star lifecycle** time scrub (Stars / **T**) — mass fork PN→WD vs SN→NS/BH
+- [x] **Sprint 0** — continuous-improvement plan of record (`docs/SPRINT_PLAN.md`)

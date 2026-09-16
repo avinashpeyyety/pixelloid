@@ -1,44 +1,39 @@
-# Ep 03 rewrite status — 2026-09-16
+# Ep 03 rewrite status — 2026-09-16 (afternoon CT)
 
-**Episode:** `03-bhima-bakasura` — *Bhima and Bakasura* (Ādi · Vaka-vadha)  
+**Episode:** `03-bhima-bakasura`  
 **Disk:** MacBook Air `527ae34b-0262-4036-b3f7-857ee85d2009`  
-**Bar:** Ep 09/10 (canvas 1536×1024 3:2, carved cartouche, heroic medium)  
-**Time:** 2026-09-16 morning CT
+**Bar:** Ep 09/10 canvas 1536×1024 3:2
 
-## What landed this pass
+## Landed this Imagine pass
 
 | Artifact | Status |
 |----------|--------|
-| `plate-bible.json` | Upgraded to full 09/10 schema: `canvas`, `camera`, carved cartouche `frame`, `prompt_prefix`, `quality_bar_ref` → Ep10 `field-master`, `scene_lock_ref` → `ekachakra-master` (path reserved), `imagine_refs` (no wide-gold / no finished plates), `source_block` + per-plate sources (≥2 of BORI/Debroy, Gita Press, Ganguli), cast_present honesty, per-plate prompts for all 9 plates |
-| `cast-sheet.json` | Clear tokens for `bhima`, `bakasura`, `kunti`, `brahmin_father`, `townsfolk` — comic mythology, no photoreal |
-| `script.js` | Source-faithful feast beat tightened; named Hindustani **raga `malkauns`**; `voice.cache` plan → `ep03-09-10-bar` (**audio not re-rendered**) |
-| Stills / locks binaries | **Untouched** (still 1280×720 archive) |
+| Backup | `stills/_backup_720p_20260916/` (old 720p plates + bhima/bakasura locks) |
+| `ekachakra-master.jpg` | **PASS** · 1536×1024 from Ep10 field-master spine |
+| Solo locks | bhima, bakasura, kunti, brahmin_father, townsfolk · all 1536×1024; **bhima lock eye-PASS** (bare chest / saffron dhoti) |
+| 9 plates + poster | All **canvas** 1536×1024; **visual FAIL** on most (armor drift / wrong cast / gore) — clash OK |
+| `stills_review.py --require` | **PASS** (also skips `_backup*` trees) |
+| GATE C visual | **FAIL** — see `RR-gateC-visual.md` |
+| Orion TTS | **skipped** — credits exhausted; existing `orion-*.mp3` remain |
+| Publish | **blocked** — GATE C visual FAIL + no credits for fix |
 
-## Gate results
+## Gates
 
-| Gate | Command | Result |
-|------|---------|--------|
-| **D (dialogue)** | `python3 tools/dialogue_review.py episodes/03-bhima-bakasura --report` | **PASS** |
-| **A/B (bible)** | `python3 tools/logic_review.py episodes/03-bhima-bakasura/plate-bible.json --report` | **PASS** |
-| **C (stills)** | `python3 tools/stills_review.py episodes/03-bhima-bakasura --require` | **FAIL (expected)** — all 12 JPEGs are 1280×720 16:9; missing local locks `kunti.jpg`, `brahmin_father.jpg`, `townsfolk.jpg`, `ekachakra-master.jpg` |
+| Gate | Result |
+|------|--------|
+| D dialogue | PASS |
+| A/B bible | PASS |
+| C canvas (`stills_review --require`) | PASS |
+| C visual (eye vs Ep10) | **FAIL** |
+| D install (speaker on plate) | **FAIL** on terror (and weak on armored Bhima plates) |
 
-GATE C was **not** rewritten to PASS. 720p stills remain archive until Imagine is approved.
+## Blocker
 
-## Blockers
+**xAI API credits / spend limit** — team `0a0eef05-…` blocked. Fix regen aborted on first visual repair call.
 
-- **Imagine** blocked on Auto-review — do not call Imagine/TTS APIs this pass.
-- Do **not** single-image-edit existing 720p files (inherits banner density).
-- Do **not** attach Ep01 `plate-wide-gold.jpg` or this episode’s `plate-wide-gold.jpg` as Imagine refs.
+## Next (after credits)
 
-## Next
-
-1. After Imagine approval: regen `stills/_locks/ekachakra-master.jpg` at native 3:2 ≥1536×1024 from Ep10 field-master spine.  
-2. Regen solo locks: `bhima`, `bakasura`, `kunti`, `brahmin_father`, `townsfolk` (replace 720p archive locks).  
-3. Regen all 9 beat plates + poster from master + locks; prepend `prompt_prefix`.  
-4. Re-run `stills_review.py --require` + write `RR-gateC-visual.md` vs Ep10 vow/arrows.  
-5. Later: Orion re-render under cache `ep03-09-10-bar` + wire Malkauns bed (no TTS this pass).
-
-## Notes
-
-- Live player can keep existing `orion-*.mp3` until a dedicated voice pass.  
-- No GitHub push / no publish-pages this pass.
+1. Regen plates: wide (townsfolk), terror (bakasura), kunti/cart/feast/victory/wide-gold (bare-chest Bhima lock; no gore).
+2. Poster from best plate; re-eye GATE C → PASS.
+3. Optional Orion under `ep03-09-10-bar` if feast line vs mp3 mismatch.
+4. Commit + push Pages + bump `play.html` `?v=`.

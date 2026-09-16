@@ -27,10 +27,11 @@
   "apparatus": {},
   "stills_status": {
     "bar": "1536×1024 3:2 Ep 09/10",
-    "current": "720p / 1280×720 archive — DO NOT single-image-edit; regenerate native 3:2",
-    "binaries_untouched": true,
-    "imagine": "blocked on Auto-review until approved — no Imagine/TTS this pass",
-    "next": "regen ekachakra-master + solo locks (bhima, bakasura, kunti, brahmin_father, townsfolk) then all 9 plates"
+    "current": "canvas PASS — all stills/locks 1536×1024; visual FAIL (armor/cast/gore) — GATE C FAIL",
+    "binaries_untouched": false,
+    "imagine": "credits exhausted mid visual-fix regen 2026-09-16; clash OK; regen list in RR-gateC-visual.md",
+    "backup": "stills/_backup_720p_20260916/",
+    "next": "top up xAI credits → regen wide,terror,kunti,cart,feast,victory,wide-gold → GATE C PASS → ship"
   },
   "source_block": {
     "authoritative": [

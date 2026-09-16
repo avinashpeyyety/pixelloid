@@ -89,6 +89,8 @@ def iter_stills(ep_dir: Path) -> list[Path]:
         return []
     files: list[Path] = []
     for p in sorted(stills.rglob("*")):
+        if any(part.startswith("_backup") for part in p.parts):
+            continue
         if p.suffix.lower() in {".jpg", ".jpeg"} and p.is_file():
             files.append(p)
     return files

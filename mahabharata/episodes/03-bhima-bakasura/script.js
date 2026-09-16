@@ -3,8 +3,8 @@
  * Ādi Parva · Vaka-vadha (Bakāsuravadha) · Ekacakrā
  *
  * Voice: provider grok-tts / voice_id orion (target pipeline).
- * Cache plan ep03-09-10-bar — DO NOT re-render audio this pass (Imagine/TTS blocked).
- * Existing orion-*.mp3 remain live until a future Orion pass.
+ * Cache plan ep03-09-10-bar — Orion not re-rendered 2026-09-16 (xAI credits exhausted after stills pass).
+ * Existing orion-*.mp3 remain live until credits + voice pass.
  * Music: named Hindustani raga Malkauns under Orion (never default flute+tabla).
  */
 export const EPISODE = {
@@ -18,7 +18,7 @@ export const EPISODE = {
     provider: "grok-tts",
     voice_id: "orion",
     cache: "ep03-09-10-bar",
-    note: "Grok TTS Orion — cache plan ep03-09-10-bar; audio not re-rendered this scaffold pass",
+    note: "Grok TTS Orion — cache ep03-09-10-bar; audio not re-rendered (credits); stills canvas@bar visual FAIL",
     base: "episodes/03-bhima-bakasura/audio/",
   },
   music: {

@@ -30,7 +30,7 @@ Codify the 12-step WORKFLOW as a **repeatable pipeline for Ep 15+** (and any gre
 | 2 | GATE D dialogue | `dialogue_review.py … --report` PASS | Studio |
 | 3 | Cast sheet + plate bible | from `episodes/_template/plate-bible.json` | Studio |
 | 4 | GATE A/B | `logic_review.py … --report` PASS | Studio |
-| 5 | Imagine key panels | scene master, cast locks, beat keys — STYLE / WORKFLOW bar | Studio |
+| 5 | Imagine key panels | scene master, cast locks, beat keys — STYLE / WORKFLOW bar; **API or SuperGrok consumer → import** (`CONSUMER_IMAGINE_IMPORT.md`) | Studio |
 | 6 | GATE C | `stills_review.py` + visual report from `GATE_C_TEMPLATE.md` | Studio |
 | 7 | 3D block | SketchUp optional → Blender under `_studio/blender/mahabharata/<id>/` or `episodes/<id>/blender/` | Studio |
 | 8 | Map panels | Imagine panels → camera boards / planes / dressings | Studio |
@@ -82,3 +82,4 @@ Cadence rule: Chief picks **≤1** in-flight ticket; prefer S; split M. Do not p
 - Style spine: Ep10 field-master; Krishna lock Ep09; new faces local 3:2 locks
 - Ep01 consistency already shipped (`50316c7`); active A1 = Ep03
 - Track B deliverable: [`PIPELINE_CHECKLIST.md`](PIPELINE_CHECKLIST.md)
+- **Consumer Imagine import (tooling):** when team API credits are blocked, beat plates may ship via SuperGrok browser Imagine → `stills/_inbox/consumer-imagine/` → `tools/import_consumer_stills.py`. GATE C bar unchanged. See [`CONSUMER_IMAGINE_IMPORT.md`](CONSUMER_IMAGINE_IMPORT.md). Does not demote Ep03 ship priority — unlocks regen without waiting on API top-up.

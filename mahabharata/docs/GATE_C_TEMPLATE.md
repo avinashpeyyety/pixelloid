@@ -21,6 +21,8 @@ python3 tools/stills_review.py episodes/<id>
 | Imagine refs = scene master + solo locks + Ep 10 `field-master.jpg` + Ep 09/10 face locks | |
 | Every named face has `stills/_locks/<id>.jpg` (series 09/10 or local) | |
 | Ep01 `plate-wide-gold.jpg` **not** attached | |
+| Source path noted (Imagine API **or** SuperGrok consumer import) | |
+| No visible Grok / xAI watermark on plates or locks (consumer imports) | |
 
 ## Quality vs Ep 10 bar
 
@@ -53,6 +55,7 @@ Open `episodes/10-bhishma-fall/stills/plate-vow.jpg` and `plate-arrows.jpg` besi
 - [ ] No Drona / saffron sage unless `cast_present`
 - [ ] No graphic gore
 - [ ] No 16:9 / 720p plates
+- [ ] **Watermark eye-check (consumer import):** no Grok / xAI logo or “Made with Grok” overlay in corners or margins — script heuristic is not enough; open each plate
 - [ ] Eye-match to Ep 10 vow (density), not Ep 01 gold
 - [ ] Krishna (if present) eye-matches Ep 09 lock — not a drifted face
 - [ ] Arjuna / Bhishma / Shikhandi (if present) eye-match Ep 09/10 locks

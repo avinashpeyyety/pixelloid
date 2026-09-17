@@ -33,13 +33,13 @@ Printable Studio factory checklist derived from [`WORKFLOW.md`](WORKFLOW.md) and
 ## 5. Imagine key panels
 
 - [ ] **Owner:** Studio
-- **Command/path:** Create the scene master at `episodes/<id>/stills/_locks/<scene>-master.jpg`, solo cast locks at `episodes/<id>/stills/_locks/<cast-id>.jpg`, and beat keys at `episodes/<id>/stills/plate-<beat>.jpg`; generate native 3:2 at ≥1536×1024 following `STYLE.md` and `WORKFLOW.md`.
+- **Command/path:** Create the scene master at `episodes/<id>/stills/_locks/<scene>-master.jpg`, solo cast locks at `episodes/<id>/stills/_locks/<cast-id>.jpg`, and beat keys at `episodes/<id>/stills/plate-<beat>.jpg`; generate native 3:2 at ≥1536×1024 following `STYLE.md` and `WORKFLOW.md`. **Path A:** Imagine API `image_edit` / `image_gen`. **Path B (no team API credits):** SuperGrok consumer Imagine on grok.com → drop downloads in `episodes/<id>/stills/_inbox/consumer-imagine/` → `python3 tools/import_consumer_stills.py <id>` (see `docs/CONSUMER_IMAGINE_IMPORT.md`). Scene master / locks still prefer a beauty pass on grok.com or API. Never Ep01 `plate-wide-gold` as ref; no 720p.
 - **PASS artifacts:** `episodes/<id>/stills/_locks/<scene>-master.jpg`; `episodes/<id>/stills/_locks/<cast-id>.jpg`; `episodes/<id>/stills/plate-<beat>.jpg`
 
 ## 6. GATE C — stills + visual
 
 - [ ] **Owner:** Studio
-- **Command/path:** `python3 tools/stills_review.py episodes/<id> --require`; copy `docs/GATE_C_TEMPLATE.md` to `episodes/<id>/logic-reviews/RR-gateC-visual.md` and complete the visual comparison against the Ep 10 bar.
+- **Command/path:** `python3 tools/stills_review.py episodes/<id> --require`; copy `docs/GATE_C_TEMPLATE.md` to `episodes/<id>/logic-reviews/RR-gateC-visual.md` and complete the visual comparison against the Ep 10 bar (include watermark eye-check for consumer imports).
 - **PASS artifact:** `episodes/<id>/logic-reviews/RR-gateC-visual.md` with `Status: PASS`
 
 ## 7. 3D block

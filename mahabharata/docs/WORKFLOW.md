@@ -1,13 +1,13 @@
 # Mahābhārata episode workflow
 
-**North star:** each episode is a **3D render** (Blender on MacBook Air) whose **key imagination panels** come from the **Grok Imagine API** — same Ep 09/10 art bar (3:2 · ≥1536×1024 · carved cartouche · character locks). Ken Burns on flat plates is the **legacy** player path until the 3D player ships.
+**North star:** each episode is a **3D render** (Blender on MacBook Air) whose **key imagination panels** come from **Grok Imagine** — either the **Imagine API** (`image_edit` / `image_gen`) **or** **SuperGrok consumer Imagine** (browser on grok.com) → import — same Ep 09/10 art bar (3:2 · ≥1536×1024 · carved cartouche · character locks). Ken Burns on flat plates is the **legacy** player path until the 3D player ships.
 
 ```
 1. Script (episodes/<id>/script.js beats)
 2. GATE D-dialogue — python3 tools/dialogue_review.py episodes/<id> --report
 3. Cast sheet + plate bible (copy episodes/_template/plate-bible.json)
 4. GATE A/B — python3 tools/logic_review.py episodes/<id>/plate-bible.json --report
-5. Key Imagine panels (Grok Imagine API) — scene master, cast locks, beat keyframes
+5. Key Imagine panels (Imagine API **or** SuperGrok consumer → import) — scene master, cast locks, beat keyframes
 6. GATE C — python3 tools/stills_review.py episodes/<id>
           + visual report (docs/GATE_C_TEMPLATE.md) vs Ep 10 vow/arrows
 7. 3D block — SketchUp (optional architecture/stage) → Blender scene under
@@ -28,7 +28,7 @@ FAIL at 2, 4, 6, or 11 **blocks** Imagine commit, 3D ship, and publish.
 
 | Layer | Source of truth | Notes |
 |-------|-----------------|-------|
-| **Key panels** | Grok Imagine API | Unchanged bar: locks, 3:2, GATE C. Stored under `episodes/<id>/stills/` |
+| **Key panels** | Grok Imagine API **or** SuperGrok consumer → `tools/import_consumer_stills.py` | Unchanged GATE C bar: locks, 3:2 ≥1536×1024, no 720p, never Ep01 `plate-wide-gold` as ref. Stored under `episodes/<id>/stills/` |
 | **Motion / space** | Blender 3D | Primary for new work. Imagine panels are **key art**, not the only pixels on screen |
 | **Legacy player** | 2D Canvas Ken Burns | Still live on github.io until `play.html` consumes 3D / hybrid cuts |
 
@@ -47,7 +47,7 @@ Those plates are 1280×720 16:9 `image_edit`s of Ep 01 `plate-wide-gold.jpg` (th
 | Step | Who | Why |
 |------|-----|-----|
 | New **scene master** + first **cast locks** | grok.com Imagine (human beauty pass) *or* Grok Build / Imagine API `image_gen` with `aspect_ratio: "3:2"` | Needs an eye; first canvas sets every later panel |
-| Beat **key panels** | Imagine API `image_edit` | Consistency from locks |
+| Beat **key panels** | Imagine API `image_edit` **or** SuperGrok consumer Imagine (browser) → import | Consistency from locks; consumer path when team API credits are blocked |
 | Dimension gate | `stills_review.py` | If it is 1280×720, discard and redo |
 | **3D scene** | Blender (+ optional SketchUp block) | Camera + set motion around locked panels |
 
@@ -85,6 +85,23 @@ image_edit
   prompt: {prompt_prefix} + plate.prompt  (describe what changes; keep frame/camera)
 ```
 
+### Consumer / browser Imagine (no API key)
+
+When `XAI_API_KEY` team credits are blocked (`team_blocked`), generate beat plates on **grok.com Imagine** with the same lock refs, download, drop into:
+
+```
+episodes/<id>/stills/_inbox/consumer-imagine/
+```
+
+Then:
+
+```bash
+python3 tools/import_consumer_stills.py <id>
+# optional: --map plate-to-filename.json  --force  --dry-run
+```
+
+Operator card: [`CONSUMER_IMAGINE_IMPORT.md`](CONSUMER_IMAGINE_IMPORT.md). **GATE C bar unchanged** — dimensions, visual report, no 720p, never Ep01 gold as ref. Eye-check for Grok watermarks (script heuristic + manual checkbox in `GATE_C_TEMPLATE.md`). Scene master / first cast locks still prefer a beauty pass on grok.com or the API.
+
 ### Legal Imagine refs
 
 | Allowed | Forbidden |
@@ -114,7 +131,7 @@ See monorepo [`TOOLING.md`](../../TOOLING.md).
 |-------|----------------|
 | **writer** | Beats, dialogue, timing |
 | **panel-logic** | Lore, props, apparatus, cast, **canvas/frame/camera**, **09/10 face locks**, **source cites** — blocks ship on FAIL |
-| **art** | Imagine API key panels only after GATE B PASS; 3:2; Ep 10 field-master; no 720p first-input |
+| **art** | Imagine API **or** consumer import key panels only after GATE B PASS; 3:2; Ep 10 field-master; no 720p first-input |
 | **3d** | Blender scene + panel mapping after GATE C PASS; SketchUp block optional |
 | **voice** | Orion TTS matching beat text; REAPER mix optional |
 | **ship** | Registry, NEXT, vault daily, Pages |
@@ -124,11 +141,13 @@ See monorepo [`TOOLING.md`](../../TOOLING.md).
 ```bash
 python3 tools/dialogue_review.py episodes/<id> --report
 python3 tools/logic_review.py episodes/<id>/plate-bible.json --report
+python3 tools/import_consumer_stills.py <id>   # after SuperGrok browser downloads land in stills/_inbox/consumer-imagine/
 python3 tools/stills_review.py episodes/<id>
 open -a Blender
 # optional: open "/Applications/SketchUp 2026/SketchUp.app"
 ```
 
+- Consumer Imagine operator card — `docs/CONSUMER_IMAGINE_IMPORT.md`
 - Human / model visual pass — open stills, fill `logic-reviews/RR-gateC-visual.md` from `docs/GATE_C_TEMPLATE.md`
 
 ## Style master

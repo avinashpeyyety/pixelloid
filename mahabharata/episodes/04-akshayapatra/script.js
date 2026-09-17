@@ -1,6 +1,11 @@
 /**
  * Episode 04 — Durvasa and the Akshayapatra
- * Vana Parva · the inexhaustible vessel · cinematic plates + Orion TTS + flute/tabla.
+ * Vana Parva · Akṣayapātra · Durvāsā’s visit
+ *
+ * Voice: provider grok-tts / voice_id orion (target pipeline).
+ * Cache plan ep04-09-10-bar — Orion not re-rendered 2026-09-16 (Imagine team_blocked; no TTS this pass).
+ * Existing orion-*.mp3 remain live until credits + voice pass.
+ * Music: named Hindustani raga Yaman under Orion (never default flute+tabla).
  */
 export const EPISODE = {
   id: "04",
@@ -12,9 +17,13 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep04-v2-vessel",
-    note: "Grok TTS orion — deep heroic narration",
+    cache: "ep04-09-10-bar",
+    note: "Grok TTS Orion — cache ep04-09-10-bar; audio not re-rendered (team_blocked); stills 720p archive",
     base: "episodes/04-akshayapatra/audio/",
+  },
+  music: {
+    raga: "yaman",
+    note: "Yaman evening tanpura; soft bansuri phrases; light theka ducked under Orion. Not default flute+tabla.",
   },
   totalSec: 100,
   stills: {

@@ -1,31 +1,101 @@
 {
   "episode_id": "04",
-  "notes": "Vana Parva forest exile. Continuity: Draupadi face lock, Krishna blue-saffron comic charm, Durvasa ascetic sage.",
+  "title": "The Akshayapatra",
+  "notes": "Ep 09/10 bar tokens. Comic mythology Amar Chitra — never photoreal. Draupadi continuity: deep red-rose sari, calm dignity, exile-simple gold. Krishna = Ep 09 lock (pitambar, peacock, garland). Durvasa fierce but stylized. Local locks under stills/_locks/ must be regenerated at 1536×1024 (current locks are 720p archive; krishna lock 912×1136). Prop: akshayapatra bowl lock stills/_locks/akshayapatra.jpg.",
   "cast": {
     "draupadi": {
-      "face": "Young woman, warm brown skin, large dark eyes, soft brows, small bindi, calm dignity",
-      "hair": "Long black wavy hair, simple gold ornaments (exile-simple, still royal)",
-      "costume": "Deep red or forest-rose sari with gold border, modest exile jewelry"
+      "tokens": [
+        "warm brown skin",
+        "large dark eyes",
+        "small bindi",
+        "long black wavy hair",
+        "deep red-rose sari gold border",
+        "exile-simple gold ornaments",
+        "calm dignity"
+      ],
+      "face": "Young woman, warm brown skin, large dark eyes, soft brows, small bindi, calm dignity — painted comic, not photoreal",
+      "hair": "Long black wavy hair, simple gold ornaments — no peacock",
+      "costume": "Deep red or forest-rose sari with gold border, modest exile jewelry",
+      "forbid": [
+        "photoreal",
+        "palace excess jewelry",
+        "peacock",
+        "battle armor"
+      ]
     },
     "krishna": {
-      "face": "Youthful divine smile, dark eyes, serene playfulness",
-      "hair": "Dark curly hair, peacock feather optional subtle, peacock-crown light",
-      "costume": "Indigo-blue skin tone stylized comic OR warm brown with yellow pitambar dhoti — prefer yellow pitambar + dark blue upper cloth, flute optional, charming not photoreal"
+      "tokens": [
+        "youthful divine smile",
+        "dark curly hair",
+        "peacock feather",
+        "yellow pitambar",
+        "flower garland",
+        "Ep 09 face lock"
+      ],
+      "face": "Youthful divine smile, dark eyes, serene playfulness — same face as Ep 09",
+      "hair": "Dark curly hair, peacock feather",
+      "costume": "Yellow pitambar dhoti, flower garland — charming comic, not photoreal CGI blue",
+      "forbid": [
+        "photoreal",
+        "flute as primary A-prop",
+        "dark horror Krishna",
+        "modern dress"
+      ]
     },
     "durvasa": {
-      "face": "Fierce ascetic sage, intense eyes, lean face, short temper energy but comic style",
+      "tokens": [
+        "fierce ascetic",
+        "intense eyes",
+        "matted topknot",
+        "grey-white beard",
+        "saffron robes",
+        "rudraksha",
+        "staff"
+      ],
+      "face": "Fierce ascetic sage, intense eyes, lean face, grey-white beard — comic mythology, not photoreal horror",
       "hair": "Matted topknot, grey-white wild beard",
-      "costume": "Saffron/ruddy bark-cloth or saffron robes, rudraksha beads, staff"
+      "costume": "Saffron robes, rudraksha beads, staff",
+      "forbid": [
+        "photoreal horror",
+        "Drona archery guru pose",
+        "saffron acharya of Ep01 training",
+        "gore"
+      ]
     },
     "yudhishthira": {
-      "face": "Gentle eldest Pandava, light mustache, composed",
+      "tokens": [
+        "gentle eldest Pandava",
+        "light mustache",
+        "simple topknot",
+        "cream exile dhoti",
+        "composed"
+      ],
+      "face": "Gentle eldest Pandava, light mustache, composed — comic mythology",
       "hair": "Simple topknot",
-      "costume": "Cream dhoti, modest exile dress"
+      "costume": "Cream dhoti, modest exile dress",
+      "forbid": [
+        "photoreal",
+        "crown of Hastinapura court",
+        "battle armor"
+      ]
     },
     "disciples": {
-      "face": "Background ascetic students, comic silhouettes",
+      "tokens": [
+        "background ascetics",
+        "topknots",
+        "saffron or cream",
+        "equal human scale",
+        "hungry then content"
+      ],
+      "face": "Background comic ascetic students — not photoreal portraits",
       "hair": "Topknots",
-      "costume": "Saffron or cream bark-cloth"
+      "costume": "Saffron or cream bark-cloth, equal natural human scale",
+      "forbid": [
+        "photoreal",
+        "modern clothes",
+        "giant scale mismatch",
+        "Drona"
+      ]
     }
   }
 }

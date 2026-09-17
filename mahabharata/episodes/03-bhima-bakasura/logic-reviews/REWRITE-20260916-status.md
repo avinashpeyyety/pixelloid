@@ -1,21 +1,21 @@
-# Ep 03 rewrite status — 2026-09-16 (afternoon CT)
+# Ep 03 rewrite status — 2026-09-16 (evening CT)
 
 **Episode:** `03-bhima-bakasura`  
 **Disk:** MacBook Air `527ae34b-0262-4036-b3f7-857ee85d2009`  
-**Bar:** Ep 09/10 canvas 1536×1024 3:2
+**Bar:** Ep 09/10 canvas ≥1536×1024 3:2
 
-## Landed this Imagine pass
+## Landed — SuperGrok consumer import (evening)
 
 | Artifact | Status |
 |----------|--------|
-| Backup | `stills/_backup_720p_20260916/` (old 720p plates + bhima/bakasura locks) |
-| `ekachakra-master.jpg` | **PASS** · 1536×1024 from Ep10 field-master spine |
-| Solo locks | bhima, bakasura, kunti, brahmin_father, townsfolk · all 1536×1024; **bhima lock eye-PASS** (bare chest / saffron dhoti) |
-| 9 plates + poster | All **canvas** 1536×1024; **visual FAIL** on most (armor drift / wrong cast / gore) — clash OK |
-| `stills_review.py --require` | **PASS** (also skips `_backup*` trees) |
-| GATE C visual | **FAIL** — see `RR-gateC-visual.md` |
-| Orion TTS | **skipped** — credits exhausted; existing `orion-*.mp3` remain |
-| Publish | **blocked** — GATE C visual FAIL + no credits for fix |
+| Backup | `stills/_backup_720p_20260916/` (old 720p plates + prior locks) |
+| `ekachakra-master.jpg` + solo locks | **PASS** @ bar; bhima lock eye-PASS (bare chest / saffron dhoti) |
+| Regen plates | wide, terror, kunti, cart, feast, victory, wide-gold — imported 1728×1152 from `_inbox/consumer-imagine/` |
+| Clash / family / poster | **untouched** (clash already eye-PASS) |
+| `stills_review.py --require` | **PASS** (23 JPEGs) |
+| GATE C visual | **PASS** — see `RR-gateC-visual.md` |
+| Orion TTS | existing `orion-*.mp3` remain (API credits still blocked) |
+| Publish | **not done this pass** — no push / no publish-pages |
 
 ## Gates
 
@@ -24,16 +24,16 @@
 | D dialogue | PASS |
 | A/B bible | PASS |
 | C canvas (`stills_review --require`) | PASS |
-| C visual (eye vs Ep10) | **FAIL** |
-| D install (speaker on plate) | **FAIL** on terror (and weak on armored Bhima plates) |
+| C visual (eye vs Ep10 + locks) | **PASS** |
+| D install (speaker on plate) | terror now Bakasura — re-check on install |
 
-## Blocker
+## Notes
 
-**xAI API credits / spend limit** — team `0a0eef05-…` blocked. Fix regen aborted on first visual repair call.
+- Import used `--allow-watermark` for C2PA `Grok Imagine` metadata; **no visible** watermark on eye-check.
+- Prior FAIL causes cleared: no Bhima gold breastplate; Bakasura reads rakshasa (not armored human); no gore; wide = townsfolk only (no sage bleed).
 
-## Next (after credits)
+## Next (operator)
 
-1. Regen plates: wide (townsfolk), terror (bakasura), kunti/cart/feast/victory/wide-gold (bare-chest Bhima lock; no gore).
-2. Poster from best plate; re-eye GATE C → PASS.
-3. Optional Orion under `ep03-09-10-bar` if feast line vs mp3 mismatch.
-4. Commit + push Pages + bump `play.html` `?v=`.
+1. Optional: refresh poster from clash or new victory.
+2. GATE D install check + Orion if needed.
+3. Commit already local if done; **push / publish-pages** only when operator requests.

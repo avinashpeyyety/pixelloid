@@ -1,31 +1,68 @@
 {
   "episode_id": "06",
+  "strict_hero_lock": "arjuna",
   "title": "The Kirata",
-  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cool Himalayan gold-hour with blue peaks; refined linework",
-  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 Drona figure plate)",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cool Himalayan cream-saffron-gold hour with blue peaks and pine mist; carved cartouche; Ep 10 field-master density; refined linework",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant peaks only in the background",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined linework, cool Himalayan cream-saffron-gold hour and blue peak mist. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg; do not attach this episode's plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/06-kirata/stills/_locks/mountain-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/06-kirata/stills/_locks/mountain-master.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "episodes/06-kirata/stills/_locks/arjuna.jpg",
+    "episodes/06-kirata/stills/_locks/kirata.jpg",
+    "episodes/06-kirata/stills/_locks/shiva.jpg",
+    "episodes/06-kirata/stills/_locks/boar.jpg"
+  ],
   "photoreal_allowed": false,
-  "frame": "Ornate lotus carved wooden frame on every plate",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / vow) — not a thin rectangular sticker on a cream mat",
   "apparatus": {},
+  "stills_status": {
+    "bar": "1536×1024 3:2 Ep 09/10",
+    "current": "720p / 1280×720 archive locks + plates — DO NOT single-image-edit; regenerate native 3:2",
+    "binaries_untouched": true,
+    "imagine": "No Imagine API this pass — SuperGrok consumer drop list in logic-reviews/REWRITE-20260917-ep06-status.md",
+    "next": "regen mountain-master + solo locks (arjuna, kirata, shiva, boar) then all 9 plates + poster via stills/_inbox/consumer-imagine/"
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Vana Parva · Kirātārjunīya (Arjuna’s penance · Shiva as kirata · Pāśupatāstra)",
+    "divergence": "BORI CE / Debroy place Arjuna’s Himalayan penance, the boar, the kirata duel, Shiva’s reveal, and the gift of the Pāśupata in Vana (Kirātārjunīya arc). Ganguli’s vulgate English maps the same beats under Vana Parva Kirata / Arjuna-and-Mahadeva sections. Gita Press Gorakhpur tells the same Kirātārjunīya under its Vana numbering. Beats agree: penance → boar → honor dispute → duel → humility → Shiva reveal → Pāśupata gift.",
+    "chosen": "Gita Press Gorakhpur + BORI overlap for the Kirātārjunīya itself. Debroy for BORI beat map. Ganguli for English duel/reveal wording.",
+    "notes": "Not TV. Comic-mythology Shiva (luminous blessing, not horror). Never attach Ep01 plate-wide-gold or this episode’s plate-wide-gold as Imagine refs. Arjuna: Ep 09 face family; cream ascetic dhoti; no peacock; no gold breastplate."
+  },
   "cast": {
     "arjuna": {
-      "face": "Young warrior, thin dark mustache, focused calm",
-      "hair": "Black topknot, no peacock",
-      "costume": "Cream ascetic/simple dhoti, bow when armed"
+      "face": "Young archer, thin dark mustache, focused calm — same face family as Ep 09 lock, comic mythology",
+      "hair": "Black warrior topknot — no peacock feather in penance (topknot, not battle crown)",
+      "costume": "Cream ascetic / exile dhoti — not gold battle armor; bow and quiver when fighting"
     },
     "kirata": {
-      "face": "Rugged hunter, fierce comic eyes",
-      "hair": "Wild dark hair",
-      "costume": "Leaf-hide mountain hunter dress, bow"
+      "face": "Rugged mountain hunter, strong jaw, fierce comic eyes — charming mythology, not photoreal",
+      "hair": "Wild dark hair or simple hunter topknot",
+      "costume": "Leaf-and-hide mountain hunter dress, bow — disguise of Shiva until reveal"
     },
     "shiva": {
-      "face": "Divine serene, soft third-eye glow optional",
-      "hair": "Jata with crescent",
-      "costume": "Tiger skin or white, rudraksha, trident, luminous aura"
+      "face": "Divine serene fierce beauty, soft third-eye glow optional, calm blessing smile — not horror",
+      "hair": "Jata matted locks with crescent moon; Ganga soft stream optional",
+      "costume": "Tiger skin or white ash, rudraksha, trident, luminous cream-gold aura"
     },
     "boar": {
-      "face": "Stylized wild boar",
+      "face": "Stylized wild boar, fierce comic mythology",
       "hair": "Bristles",
-      "costume": "Forest beast"
+      "costume": "Forest beast — not gore"
     }
   },
   "plates": [
@@ -39,51 +76,112 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium painted comic Himalayan peaks and pine path",
-        "Lone Arjuna climbing or walking into mountains",
-        "Cool blue-gold hour, lotus frame",
-        "NOT Ep01 garden bird scene"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cool Himalayan cream-saffron-gold hour with blue peaks and pine mist",
+        "Lone Arjuna climbing a pine mountain path toward snow peaks",
+        "Arjuna: cream ascetic/exile dhoti, black warrior topknot, thin dark mustache — Ep 09 face family, no peacock, no gold armor",
+        "Equal natural human scale; epic solitude"
       ],
       "must_not_show": [
         "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "Bird eye training",
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "CGI monster horror",
+        "peacock feather on Arjuna",
         "Palace",
-        "white-bearded sage"
+        "gold battle breastplate on Arjuna",
+        "Modern props",
+        "Bird eye training",
+        "Drona teaching",
+        "Five Pandavas as A-shot"
       ],
       "props": [
         "mountains",
-        "path"
+        "path",
+        "bow"
       ],
-      "prompt": "Premium high-quality painted comic Amar Chitra. Wide Himalayan landscape: snow peaks, pine forests, golden hour mist. Lone young warrior Arjuna in simple cream dhoti and topknot climbs a mountain path with bow. Epic solitude. Ornate lotus frame. Match Ep01 gold comic style language NOT the bird-garden training scene. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: cool Himalayan gold-hour with blue snow peaks and pine mist. Lone young warrior Arjuna in cream ascetic dhoti and black topknot climbs a mountain path with bow — Ep 09 face family, thin dark mustache, no peacock, no gold armor. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Epic solitude. Not photoreal. No Drona. No palace.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Kirātārjunīya / Arjuna’s penance & Pāśupata (Debroy) — beat: Arjuna climbs alone into the Himalaya for weapons of heaven / penance for Mahadeva"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva Kirātārjunīya — beat: Arjuna climbs alone into the Himalaya for weapons of heaven / penance for Mahadeva"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Kirata / Arjuna-Shiva sections — beat: Arjuna climbs alone into the Himalaya for weapons of heaven / penance for Mahadeva"
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "penance",
       "file": "plate-penance.jpg",
-      "beat_text": "There he stands in fierce penance \u2014 still as stone, mind fixed on Mahadeva.",
+      "beat_text": "There he stands in fierce penance — still as stone, mind fixed on Mahadeva.",
       "cast_present": [
         "arjuna"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Arjuna in tapas: standing on one leg or arms raised / still meditation on mountain ledge",
-        "Same Arjuna face lock, no peacock",
-        "Snow peaks, lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cool Himalayan cream-saffron-gold hour with blue peaks and pine mist",
+        "Arjuna in tapas on a rocky mountain ledge — standing still / arms raised / one-leg optional",
+        "Same Arjuna face lock: cream dhoti, topknot, thin mustache — no peacock",
+        "Bow set aside; soft divine light from above"
       ],
       "must_not_show": [
         "Photoreal",
-        "Comedy",
-        "Peacock feather",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "CGI monster horror",
+        "peacock feather on Arjuna",
+        "Palace",
+        "gold battle breastplate on Arjuna",
+        "Modern props",
+        "Comedy",
+        "Battle armor",
+        "Kirata already revealed as Shiva"
       ],
       "props": [
         "mountain ledge",
         "bow set aside"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Arjuna in fierce mountain penance on a rocky ledge \u2014 still posture, thin mustache, black topknot, cream dhoti, mind fixed upward. Snow peaks and pines behind. Soft divine light. Ornate lotus frame. Same character lock, refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna in fierce mountain penance on a rocky ledge — still posture, thin dark mustache, black topknot, cream ascetic dhoti, mind fixed upward. Snow peaks and pines behind; soft divine light. Bow set aside. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Ep 09 face family. Not photoreal. No peacock. No Drona.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Kirātārjunīya / Arjuna’s penance & Pāśupata (Debroy) — beat: fierce tapas / penance on Himalaya with mind fixed on Mahadeva"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva Kirātārjunīya — beat: fierce tapas / penance on Himalaya with mind fixed on Mahadeva"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Kirata / Arjuna-Shiva sections — beat: fierce tapas / penance on Himalaya with mind fixed on Mahadeva"
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "boar",
@@ -96,23 +194,54 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Wild boar charging; Arjuna drawing bow; second arrow path or hunter presence suggested",
-        "Dynamic forest action, not gore",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cool Himalayan cream-saffron-gold hour with blue peaks and pine mist",
+        "Stylized wild boar charging through pines",
+        "Arjuna drawing bow; second arrow path or kirata presence suggested off-frame",
+        "Dynamic forest action — stylized, not gore",
+        "Arjuna lock: thin dark mustache, black warrior topknot, cream-white ascetic dhoti — Ep 09 face family, no peacock, no gold armor"
       ],
       "must_not_show": [
-        "Heavy blood gore",
         "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "CGI monster horror",
+        "peacock feather on Arjuna",
+        "Palace",
+        "gold battle breastplate on Arjuna",
+        "Modern props",
+        "Heavy blood gore",
+        "Photoreal animal carcass"
       ],
       "props": [
         "boar",
         "bows",
         "pines"
       ],
-      "prompt": "Premium painted comic Amar Chitra action. Fierce stylized wild boar charges through pine forest. Arjuna draws bow; a second arrow from off-frame or hunter side flies too. Dynamic golden-cool mountain light. Ornate lotus frame. Stylized not photoreal, not gory."
+      "prompt": "Premium painted comic Amar Chitra action. Heroic medium pine forest: fierce stylized wild boar charges. Arjuna draws bow; a second arrow from off-frame hunter side flies too. Cool gold mountain light. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Stylized not photoreal, not gory. No Drona. Arjuna: thin dark mustache, black warrior topknot, cream-white ascetic dhoti — Ep 09 face family.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Kirātārjunīya / Arjuna’s penance & Pāśupata (Debroy) — beat: demon-boar / wild boar charge; Arjuna and kirata shoot together"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva Kirātārjunīya — beat: demon-boar / wild boar charge; Arjuna and kirata shoot together"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Kirata / Arjuna-Shiva sections — beat: demon-boar / wild boar charge; Arjuna and kirata shoot together"
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "hunter",
@@ -125,27 +254,58 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Kirata hunter and Arjuna face each other over the fallen boar",
-        "Dispute of honor, equal pride",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cool Himalayan cream-saffron-gold hour with blue peaks and pine mist",
+        "Kirata hunter (leaf-hide mountain dress, bow) and Arjuna face each other over the fallen boar",
+        "Dispute of honor — equal pride, not comedy slapstick",
+        "Arjuna cream dhoti / topknot; kirata rugged comic hunter — not yet luminous Shiva"
       ],
       "must_not_show": [
         "Photoreal",
-        "Gore pile",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "CGI monster horror",
+        "peacock feather on Arjuna",
+        "Palace",
+        "gold battle breastplate on Arjuna",
+        "Modern props",
+        "Gore pile",
+        "Shiva already revealed",
+        "Cruel humiliation"
       ],
       "props": [
         "boar",
         "bows"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Mountain clearing: rugged kirata hunter in leaf-hide dress with bow faces young Arjuna over a fallen boar. Argument of who shot first \u2014 proud stance both. Cool gold pine light. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium mountain clearing: rugged kirata hunter in leaf-hide dress with bow faces young Arjuna over a fallen boar. Argument of who shot first — proud stance both. Cool gold pine light. Arjuna: cream dhoti, topknot, thin mustache, no gold armor. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Not photoreal. Kirata not yet divine reveal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Kirātārjunīya / Arjuna’s penance & Pāśupata (Debroy) — beat: kirata claims the kill; dispute of the shot’s honor"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva Kirātārjunīya — beat: kirata claims the kill; dispute of the shot’s honor"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Kirata / Arjuna-Shiva sections — beat: kirata claims the kill; dispute of the shot’s honor"
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "duel",
       "file": "plate-duel.jpg",
-      "beat_text": "Bow meets bow. The kirata matches Arjuna blow for blow \u2014 and the forest shakes.",
+      "beat_text": "Bow meets bow. The kirata matches Arjuna blow for blow — and the forest shakes.",
       "cast_present": [
         "arjuna",
         "kirata"
@@ -153,26 +313,58 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Dynamic duel: Arjuna and kirata with bows clashing",
-        "Equal power, forest mountains",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cool Himalayan cream-saffron-gold hour with blue peaks and pine mist",
+        "Dynamic duel: Arjuna and kirata with bows clashing — matched strength",
+        "Mountain forest shakes; flying leaves; heroic medium fills frame",
+        "Equal power — not one-sided beatdown",
+        "Arjuna lock: thin dark mustache, black warrior topknot, cream-white ascetic dhoti — Ep 09 face family, no peacock, no gold armor"
       ],
       "must_not_show": [
-        "Heavy gore",
         "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "CGI monster horror",
+        "peacock feather on Arjuna",
+        "Palace",
+        "gold battle breastplate on Arjuna",
+        "Modern props",
+        "Heavy gore",
+        "Shiva trident already",
+        "Tiny distant fighters"
       ],
       "props": [
         "bows"
       ],
-      "prompt": "Premium painted comic Amar Chitra action duel. Arjuna and the kirata hunter clash with bows in mountain forest \u2014 matched strength, dramatic poses, flying leaves. Cool gold light. Ornate lotus frame. Stylized energy not gore, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra action duel. Heroic medium: Arjuna and the kirata hunter clash with bows in mountain forest — matched strength, dramatic poses, flying leaves. Cool gold light. Arjuna cream dhoti, topknot, no gold armor. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Stylized energy not gore, not photoreal. Arjuna: thin dark mustache — Ep 09 face family.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Kirātārjunīya / Arjuna’s penance & Pāśupata (Debroy) — beat: bow duel; kirata matches Arjuna blow for blow"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva Kirātārjunīya — beat: bow duel; kirata matches Arjuna blow for blow"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Kirata / Arjuna-Shiva sections — beat: bow duel; kirata matches Arjuna blow for blow"
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "equal",
       "file": "plate-equal.jpg",
-      "beat_text": "Arjuna\u2019s strength fails against an equal. He falls, astonished, at a hunter\u2019s feet.",
+      "beat_text": "Arjuna’s strength fails against an equal. He falls, astonished, at a hunter’s feet.",
       "cast_present": [
         "arjuna",
         "kirata"
@@ -180,22 +372,53 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cool Himalayan cream-saffron-gold hour with blue peaks and pine mist",
         "Arjuna kneeling or fallen astonished before standing kirata",
-        "Moment of humility",
-        "Lotus frame"
+        "Moment of humility and wonder — dignified, not cruel humiliation comedy",
+        "Same face locks; mountain clearing",
+        "Arjuna lock: thin dark mustache, black warrior topknot, cream-white ascetic dhoti — Ep 09 face family, no peacock, no gold armor"
       ],
       "must_not_show": [
-        "Gore",
         "Photoreal",
-        "Cruel humiliation comedy",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "CGI monster horror",
+        "peacock feather on Arjuna",
+        "Palace",
+        "gold battle breastplate on Arjuna",
+        "Modern props",
+        "Gore",
+        "Cruel humiliation comedy",
+        "Shiva already full form"
       ],
       "props": [
         "bows"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Arjuna kneels astonished on mountain ground before the proud kirata hunter who still stands with bow. Wonder and humility. Soft gold light through pines. Ornate lotus frame. Dignified, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna kneels astonished on mountain ground before the proud kirata hunter who still stands with bow. Wonder and humility. Soft gold light through pines. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Dignified, not photoreal, not comedy. Arjuna: thin dark mustache, black warrior topknot, cream-white ascetic dhoti — Ep 09 face family.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Kirātārjunīya / Arjuna’s penance & Pāśupata (Debroy) — beat: Arjuna fails against an equal; humility before the hunter"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva Kirātārjunīya — beat: Arjuna fails against an equal; humility before the hunter"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Kirata / Arjuna-Shiva sections — beat: Arjuna fails against an equal; humility before the hunter"
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "reveal",
@@ -208,23 +431,55 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Divine reveal: Shiva luminous with jata, crescent, trident, aura replacing hunter",
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cool Himalayan cream-saffron-gold hour with blue peaks and pine mist",
+        "Divine reveal: Shiva luminous with jata, crescent, trident, cream-gold aura replacing hunter",
         "Arjuna in awe / pranam",
-        "Lotus frame, sacred light"
+        "Sacred light — charming comic mythology, not horror demon",
+        "Arjuna lock: thin dark mustache, black warrior topknot, cream-white ascetic dhoti — Ep 09 face family, no peacock, no gold armor"
       ],
       "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "CGI monster horror",
+        "peacock feather on Arjuna",
+        "Palace",
+        "gold battle breastplate on Arjuna",
+        "Modern props",
         "Horror demon",
         "Photoreal CGI",
         "Gore",
-        "Drona",
-        "white-bearded sage"
+        "Kirata still fully disguised as A-shot"
       ],
       "props": [
         "trident",
         "mountain"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Divine revelation: the hunter becomes Lord Shiva \u2014 jata matted locks, crescent moon, soft third-eye glow, trident, luminous cream-gold aura, serene smile. Arjuna bows in awe. Mountain forest radiant. Ornate lotus frame. Sacred charming not photoreal horror."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium divine revelation: the hunter becomes Lord Shiva — jata matted locks, crescent moon, soft third-eye glow, trident, luminous cream-gold aura, serene smile. Arjuna bows in awe. Mountain forest radiant. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Sacred charming not photoreal horror. Arjuna: thin dark mustache, black warrior topknot — Ep 09 face family.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Kirātārjunīya / Arjuna’s penance & Pāśupata (Debroy) — beat: kirata reveals as Shiva; luminous blessing smile"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva Kirātārjunīya — beat: kirata reveals as Shiva; luminous blessing smile"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Kirata / Arjuna-Shiva sections — beat: kirata reveals as Shiva; luminous blessing smile"
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "gift",
@@ -237,21 +492,52 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cool Himalayan cream-saffron-gold hour with blue peaks and pine mist",
         "Shiva blessing Arjuna; glowing divine weapon or arrow of light (Pashupatastra)",
-        "Composed gift moment",
-        "Lotus frame"
+        "Composed gift moment — Arjuna receives with bowed head",
+        "Same Shiva + Arjuna locks; mountain sacred light"
       ],
       "must_not_show": [
-        "Gore",
         "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "CGI monster horror",
+        "peacock feather on Arjuna",
+        "Palace",
+        "gold battle breastplate on Arjuna",
+        "Modern props",
+        "Gore",
+        "Nuclear blast CGI",
+        "Wrong weapon plaque text"
       ],
       "props": [
         "divine weapon light"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Lord Shiva places a glowing divine weapon or arrow of light into Arjuna\u2019s hands \u2014 Pashupatastra gift. Arjuna receives with bowed head, thin mustache, topknot. Soft sacred gold light on mountain. Ornate lotus frame. Refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Lord Shiva places a glowing divine weapon or arrow of light into Arjuna’s hands — Pashupatastra gift. Arjuna receives with bowed head, thin mustache, topknot, cream dhoti. Soft sacred gold light on mountain. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Refined quality, not photoreal. No contaminating plaque text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Kirātārjunīya / Arjuna’s penance & Pāśupata (Debroy) — beat: Mahadeva grants the Pāśupatāstra for courage and devotion"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva Kirātārjunīya — beat: Mahadeva grants the Pāśupatāstra for courage and devotion"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Kirata / Arjuna-Shiva sections — beat: Mahadeva grants the Pāśupatāstra for courage and devotion"
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "wide-gold",
@@ -264,23 +550,55 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality gold closing mood like Ep01 wide-gold",
-        "Arjuna blessed on mountain peak, soft Shiva presence or afterglow",
-        "Warm cream-saffron-gold Himalayan peace",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cool Himalayan cream-saffron-gold hour with blue peaks and pine mist",
+        "Warm cream-saffron-gold Himalayan closing peace — Arjuna blessed on peak",
+        "Soft Shiva presence or afterglow; bow readable",
+        "Ornate cartouche; NO plaque / EP / FIELD-MASTER contaminating text",
+        "Arjuna lock: thin dark mustache, black warrior topknot, cream-white ascetic dhoti — Ep 09 face family, no peacock, no gold armor"
       ],
       "must_not_show": [
         "Photoreal",
-        "Dark war scene",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Ep01 plate-wide-gold as style",
+        "CGI monster horror",
+        "peacock feather on Arjuna",
+        "Palace",
+        "gold battle breastplate on Arjuna",
+        "Modern props",
+        "Dark war scene",
+        "Ep01 Drona figure",
+        "Contaminating plaque text",
+        "Attach Ep01 plate-wide-gold as ref"
       ],
       "props": [
         "peaks",
         "bow"
       ],
-      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold Himalayan peak peace like Ep01 plate-wide-gold mood. Arjuna stands renewed with bow, soft divine afterglow of Shiva\u2019s blessing. Ornate lotus frame. Refined charming quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold Himalayan peak peace. Arjuna stands renewed with bow; soft divine afterglow of Shiva’s blessing. Carved gold-and-lotus cartouche integrated into the painting — no plaque text, no EP caption. Native 3:2 1536×1024. Refined charming quality, not photoreal. Never Ep01 Drona garden. Arjuna: thin dark mustache, black warrior topknot — Ep 09 face family.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Kirātārjunīya / Arjuna’s penance & Pāśupata (Debroy) — beat: closing blessing — Pāśupata given; archer renewed"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva Kirātārjunīya — beat: closing blessing — Pāśupata given; archer renewed"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Kirata / Arjuna-Shiva sections — beat: closing blessing — Pāśupata given; archer renewed"
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     }
-  ],
-  "scene_lock_ref": ""
+  ]
 }

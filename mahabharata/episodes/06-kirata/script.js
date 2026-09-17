@@ -1,6 +1,9 @@
 /**
  * Episode 06 — The Kirata
  * Vana Parva · Arjuna’s penance · Shiva as the hunter · Pashupatastra
+ * Rewrite scaffold 2026-09-17: Ep 09/10 bar (bible/script only; stills untouched).
+ * Music: named Hindustani raga Bhairav under Orion (never default flute+tabla).
+ * Cache plan ep06-09-10-bar — DO NOT re-render audio this pass (no Orion / no Imagine API).
  */
 export const EPISODE = {
   id: "06",
@@ -12,9 +15,13 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep06-v1",
-    note: "Grok TTS orion — deep heroic narration",
+    cache: "ep06-09-10-bar",
+    note: "Grok TTS Orion — cache plan ep06-09-10-bar; audio not re-rendered this scaffold pass",
     base: "episodes/06-kirata/audio/",
+  },
+  music: {
+    raga: "bhairav",
+    note: "Bhairav mandra tanpura; sparse bansuri; no tabla. Himalayan penance / Mahadeva reveal. Duck under Orion. Not default flute+tabla.",
   },
   totalSec: 102,
   stills: {

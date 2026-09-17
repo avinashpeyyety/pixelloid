@@ -1,31 +1,107 @@
 {
   "episode_id": "05",
-  "notes": "Vana Parva. Yudhishthira calm eldest. Brothers fallen at lake. Yaksha = luminous spirit, later revealed as Dharma.",
+  "title": "Yaksha Prashna",
+  "notes": "Ep 09/10 bar tokens. Comic mythology Amar Chitra — never photoreal. Vana Parva lake ordeal. Yudhishthira calm eldest; yaksha = luminous spirit later revealed as Dharma. Local locks under stills/_locks/ must be regenerated at 1536×1024 (current archive is 720p / wrong-aspect).",
   "cast": {
     "yudhishthira": {
-      "face": "Gentle eldest Pandava, light dark mustache, composed wise eyes, serene resolve",
-      "hair": "Black hair simple topknot, no peacock",
-      "costume": "Cream or soft gold dhoti, modest exile dress, simple sacred thread"
+      "tokens": [
+        "eldest Pandava",
+        "light dark mustache",
+        "composed wise eyes",
+        "serene resolve",
+        "black simple topknot",
+        "cream exile dhoti",
+        "sacred thread",
+        "no peacock"
+      ],
+      "face": "Gentle eldest Pandava, light dark mustache, composed wise eyes, serene resolve — comic mythology, not photoreal",
+      "hair": "Black hair simple topknot — no peacock feather, no gold battle mukut",
+      "costume": "Cream or soft gold exile dhoti, modest dress, simple sacred thread",
+      "forbid": [
+        "photoreal",
+        "peacock feather",
+        "gold battle mukut",
+        "Krishna pitambar",
+        "hysterical melodrama"
+      ]
     },
     "bhima": {
-      "face": "Powerful younger brother, thick dark mustache, broad face",
-      "hair": "Black topknot",
-      "costume": "Saffron-yellow dhoti, large build"
+      "tokens": [
+        "largest Pandava",
+        "broad jaw",
+        "thick dark mustache",
+        "black warrior topknot",
+        "saffron-yellow dhoti gold border",
+        "bare powerful chest"
+      ],
+      "face": "Powerful younger brother, broad jaw, thick dark mustache — comic mythology",
+      "hair": "Black warrior topknot — no peacock",
+      "costume": "Saffron-yellow dhoti with gold border, bare powerful chest",
+      "forbid": [
+        "photoreal",
+        "peacock feather",
+        "tiny weak frame",
+        "gold battle mukut"
+      ]
     },
     "arjuna": {
-      "face": "Young archer, thin dark mustache, focused",
-      "hair": "Black topknot, no peacock in exile",
-      "costume": "Cream or indigo-trim dhoti"
+      "tokens": [
+        "young archer",
+        "thin dark mustache",
+        "focused calm",
+        "black warrior topknot",
+        "cream-white exile dhoti",
+        "Ep 09 face family",
+        "no peacock"
+      ],
+      "face": "Young archer, thin dark mustache, focused calm — same face family as Ep 09 lock, comic mythology",
+      "hair": "Black warrior topknot — no peacock feather in exile",
+      "costume": "Cream-white exile dhoti with optional indigo trim — not gold battle armor",
+      "forbid": [
+        "photoreal",
+        "peacock feather",
+        "Ep 09 gold battle mukut",
+        "gold armor",
+        "flower garland"
+      ]
     },
     "nakula_sahadeva": {
-      "face": "Younger twins, gentle features, light mustaches",
-      "hair": "Topknots",
-      "costume": "Cream exile dress"
+      "tokens": [
+        "younger twins",
+        "gentle features",
+        "light mustaches",
+        "simple topknots",
+        "cream exile dress",
+        "equal human scale"
+      ],
+      "face": "Younger twins, gentle features, light mustaches — comic mythology",
+      "hair": "Simple topknots",
+      "costume": "Cream exile dress",
+      "forbid": [
+        "photoreal",
+        "giant scale mismatch",
+        "battle armor"
+      ]
     },
     "yaksha": {
-      "face": "Luminous spirit face, stern calm, not gory monster — comic mythology ethereal",
-      "hair": "Crown of light or wild pale hair",
-      "costume": "Glowing pale gold and mist-white robes, semi-divine presence over water"
+      "tokens": [
+        "luminous spirit",
+        "stern calm face",
+        "ethereal comic mythology",
+        "pale gold mist-white robes",
+        "semi-divine over water",
+        "not gore"
+      ],
+      "face": "Luminous spirit face, stern calm — ethereal comic mythology, not gory monster",
+      "hair": "Crown of light or wild pale hair / mist",
+      "costume": "Glowing pale gold and mist-white robes, semi-divine presence over water",
+      "forbid": [
+        "photoreal horror",
+        "heavy gore",
+        "CGI monster",
+        "tiny unreadable figure",
+        "Krishna blue pitambar"
+      ]
     }
   }
 }

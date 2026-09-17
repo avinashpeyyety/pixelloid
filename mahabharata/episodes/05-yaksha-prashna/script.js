@@ -1,6 +1,11 @@
 /**
  * Episode 05 — Yaksha Prashna
- * Vana Parva · the lake of questions · cinematic plates + Orion TTS + flute/tabla.
+ * Vana Parva · Yakṣa-praśna (lake ordeal) · Dharma tests Yudhiṣṭhira
+ *
+ * Voice: provider grok-tts / voice_id orion (target pipeline).
+ * Cache plan ep05-09-10-bar — DO NOT re-render audio this pass (no Orion / no Imagine API).
+ * Existing orion-*.mp3 remain live until a future Orion pass.
+ * Music: named Hindustani raga Bhairav under Orion (never default flute+tabla).
  */
 export const EPISODE = {
   id: "05",
@@ -12,9 +17,13 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep05-v1",
-    note: "Grok TTS orion — deep heroic narration",
+    cache: "ep05-09-10-bar",
+    note: "Grok TTS Orion — cache plan ep05-09-10-bar; audio not re-rendered this scaffold pass",
     base: "episodes/05-yaksha-prashna/audio/",
+  },
+  music: {
+    raga: "bhairav",
+    note: "Bhairav mandra tanpura; sparse bansuri; no tabla. Sacred lake / dharma questions. Duck under Orion. Not default flute+tabla.",
   },
   totalSec: 102,
   stills: {
@@ -64,7 +73,7 @@ export const EPISODE = {
       panY: -0.02,
       audio: "orion-01.mp3",
       who: "Narrator",
-      text: "Thirst burns their throats. Yudhishthira sends his brothers one by one to find water.",
+      text: "Thirst burns. Yudhishthira sends his brothers one by one to seek water.",
     },
     {
       t: 20,
@@ -84,7 +93,7 @@ export const EPISODE = {
       panY: 0,
       audio: "orion-03.mp3",
       who: "Narrator",
-      text: "A voice warns: answer my questions, or do not drink. They drink. One by one they fall.",
+      text: "A voice warns: answer first, or do not drink. They drink. One by one they fall.",
     },
     {
       t: 42,
@@ -114,7 +123,7 @@ export const EPISODE = {
       panY: -0.02,
       audio: "orion-06.mp3",
       who: "Narrator",
-      text: "What is heavier than earth? What is higher than heaven? Yudhishthira answers with dharma’s calm.",
+      text: "What is heavier than earth? Mother. Higher than heaven? Father. Yudhishthira answers without fear.",
     },
     {
       t: 78,
@@ -124,7 +133,7 @@ export const EPISODE = {
       panY: 0,
       audio: "orion-07.mp3",
       who: "Narrator",
-      text: "Pleased, the yaksha restores the brothers. It is Dharma himself, testing his son.",
+      text: "Asked whom to revive first, he names Nakula — equal love for both mothers. The yaksha is Dharma himself.",
     },
     {
       t: 90,

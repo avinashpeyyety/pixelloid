@@ -1,9 +1,9 @@
 /**
  * Episode 06 — The Kirata
  * Vana Parva · Arjuna’s penance · Shiva as the hunter · Pashupatastra
- * Rewrite scaffold 2026-09-17: Ep 09/10 bar (bible/script only; stills untouched).
+ * Rewrite 2026-09-17: Ep 09/10 bar; SuperGrok stills GATE C PASS.
  * Music: named Hindustani raga Bhairav under Orion (never default flute+tabla).
- * Cache plan ep06-09-10-bar — DO NOT re-render audio this pass (no Orion / no Imagine API).
+ * Cache ep06-supergrok-20260917 — plate cache bump; audio not re-rendered this pass.
  */
 export const EPISODE = {
   id: "06",
@@ -15,8 +15,8 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep06-09-10-bar",
-    note: "Grok TTS Orion — cache plan ep06-09-10-bar; audio not re-rendered this scaffold pass",
+    cache: "ep06-supergrok-20260917",
+    note: "Grok TTS Orion — cache ep06-supergrok-20260917; audio not re-rendered this stills ship",
     base: "episodes/06-kirata/audio/",
   },
   music: {

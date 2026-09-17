@@ -3,7 +3,7 @@
  * Vana Parva · Yakṣa-praśna (lake ordeal) · Dharma tests Yudhiṣṭhira
  *
  * Voice: provider grok-tts / voice_id orion (target pipeline).
- * Cache plan ep05-09-10-bar — DO NOT re-render audio this pass (no Orion / no Imagine API).
+ * Cache plan ep05-supergrok-20260917 — DO NOT re-render audio this pass (no Orion / no Imagine API).
  * Existing orion-*.mp3 remain live until a future Orion pass.
  * Music: named Hindustani raga Bhairav under Orion (never default flute+tabla).
  */
@@ -17,8 +17,8 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep05-09-10-bar",
-    note: "Grok TTS Orion — cache plan ep05-09-10-bar; audio not re-rendered this scaffold pass",
+    cache: "ep05-supergrok-20260917",
+    note: "Grok TTS Orion — cache plan ep05-supergrok-20260917; audio not re-rendered this scaffold pass",
     base: "episodes/05-yaksha-prashna/audio/",
   },
   music: {

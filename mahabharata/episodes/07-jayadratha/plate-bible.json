@@ -1,36 +1,74 @@
 {
   "episode_id": "07",
+  "strict_hero_lock": "draupadi",
   "title": "Jayadratha",
-  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold forest hour; refined linework",
-  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 Drona figure plate)",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold forest hermitage hour; carved cartouche; Ep 10 field-master density; refined linework; tasteful abduction without gore or sexualization",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, forest hermitage only in the background",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined linework, warm cream-saffron-gold forest hermitage hour. Tasteful drama — no gore, no sexualization. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg; do not attach this episode's plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/07-jayadratha/stills/_locks/hermitage-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/07-jayadratha/stills/_locks/hermitage-master.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "episodes/07-jayadratha/stills/_locks/draupadi.jpg",
+    "episodes/07-jayadratha/stills/_locks/jayadratha.jpg",
+    "episodes/07-jayadratha/stills/_locks/bhima.jpg",
+    "episodes/07-jayadratha/stills/_locks/arjuna.jpg",
+    "episodes/07-jayadratha/stills/_locks/yudhishthira.jpg"
+  ],
   "photoreal_allowed": false,
-  "frame": "Ornate lotus carved wooden frame on every plate",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / vow) — not a thin rectangular sticker on a cream mat",
   "apparatus": {},
+  "stills_status": {
+    "bar": "1536×1024 3:2 Ep 09/10",
+    "current": "720p / 1280×720 archive locks + plates — DO NOT single-image-edit; regenerate native 3:2",
+    "binaries_untouched": true,
+    "imagine": "No Imagine API this pass — SuperGrok consumer drop list in logic-reviews/REWRITE-20260917-ep07-status.md",
+    "next": "regen hermitage-master + solo locks (draupadi, jayadratha, bhima, arjuna, yudhishthira) then all 9 plates + poster via stills/_inbox/consumer-imagine/"
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Vana Parva · Jayadratha’s abduction of Draupadi · Pandava pursuit · hard mercy",
+    "divergence": "BORI CE / Debroy place Jayadratha’s sighting of Draupadi at the hermitage, the abduction, the brothers’ chase, Bhima’s fury, and Yudhishthira’s hard mercy (Jayadratha spared, shamed) in Vana. Ganguli’s vulgate English maps the same beats under Vana Parva Jayadratha sections. Gita Press Gorakhpur tells the same abduction–pursuit–mercy arc under its Vana numbering. Beats agree: alone → sighting → soft words → seize → cry → chase → catch → mercy → quiet resolve. Humiliation details (e.g. head-shaving) vary by recension; this episode keeps tasteful shame without gore.",
+    "chosen": "Gita Press Gorakhpur + BORI overlap for the abduction–pursuit–mercy itself. Debroy for BORI beat map. Ganguli for English chase/mercy wording.",
+    "notes": "Not TV. Comic-mythology only — distress without sexualization or gore. Never attach Ep01 plate-wide-gold or this episode’s plate-wide-gold as Imagine refs. Draupadi: deep red sari, dignity. Arjuna: Ep 09 face family; cream exile dhoti; no peacock."
+  },
   "cast": {
     "draupadi": {
-      "face": "Young woman, warm brown skin, large dark eyes, bindi, dignity",
-      "hair": "Long black wavy hair",
-      "costume": "Deep red sari gold border"
+      "face": "Young woman, warm brown skin, large dark eyes, bindi, resolute dignity — comic mythology, not photoreal",
+      "hair": "Long black wavy hair, exile braid or loose waves",
+      "costume": "Deep red sari with gold border, modest exile jewelry — never sexualized"
     },
     "jayadratha": {
-      "face": "Adult king, mustache, proud",
-      "hair": "Crown or turban",
-      "costume": "Jewel-tone royal silks"
+      "face": "Adult Sindhu king, dark mustache, proud then fearful — comic mythology",
+      "hair": "Crown or royal turban",
+      "costume": "Jewel-tone royal silks, Sindhu king — not gore makeup"
     },
     "bhima": {
-      "face": "Powerful, thick mustache",
-      "hair": "Black topknot",
-      "costume": "Saffron dhoti"
+      "face": "Powerful warrior, thick dark mustache, fierce resolve — comic mythology",
+      "hair": "Black warrior topknot — no peacock",
+      "costume": "Saffron-yellow dhoti with gold border, bare powerful chest"
     },
     "arjuna": {
-      "face": "Young archer, thin mustache",
-      "hair": "Black topknot",
-      "costume": "Cream dhoti, bow"
+      "face": "Young archer, thin dark mustache, focused calm — same face family as Ep 09 lock, comic mythology",
+      "hair": "Black warrior topknot — no peacock feather in exile",
+      "costume": "Cream exile dhoti, bow and quiver — not gold battle armor"
     },
     "yudhishthira": {
-      "face": "Gentle eldest, composed",
-      "hair": "Simple topknot",
-      "costume": "Cream dhoti"
+      "face": "Gentle eldest Pandava, light dark mustache, composed wise eyes — comic mythology",
+      "hair": "Simple topknot — no peacock, no gold battle mukut",
+      "costume": "Cream exile dhoti, modest dress, simple sacred thread"
     }
   },
   "plates": [
@@ -44,26 +82,57 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium painted comic forest hermitage exile camp",
-        "Quiet thatch huts, peepal, Draupadi near hermitage",
-        "Pandavas absent hunting implied",
-        "Ornate lotus frame \u2014 not bird training scene"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Forest hermitage exile camp — thatch huts, peepal, cream-saffron-gold hour",
+        "Draupadi alone near hermitage, calm queenly dignity in deep red sari",
+        "Brothers absent hunting (implied empty camp)"
       ],
       "must_not_show": [
         "Photoreal",
-        "Drona bird scene",
-        "Gore",
-        "white-bearded sage"
+        "Graphic gore",
+        "Sexual violence imagery",
+        "Sexualized pose or camera",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
+        "Drona",
+        "white-bearded sage",
+        "peacock feather on Arjuna in exile",
+        "gold battle armor on exile Pandavas",
+        "plaque text or title lettering in frame",
+        "CGI horror monster"
       ],
       "props": [
-        "hermitage"
+        "hermitage",
+        "peepal"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Forest hermitage of the Pandavas in exile, golden hour. Thatch huts, peepal tree. Draupadi in red sari near the camp, alone and calm. Brothers away hunting. Ornate lotus frame. Not photoreal. Not Drona bird training."
+      "prompt": "Premium Amar Chitra / painted-comic. Forest hermitage of the Pandavas in exile, cream-saffron-gold hour. Thatch huts, peepal tree. Draupadi in deep red sari with gold border near the camp, alone and calm — queenly dignity. Brothers away hunting. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Not photoreal. Not Drona bird training.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Jayadratha-Draupadi abduction / Pandava pursuit (Debroy) — beat: While the Pandavas hunt, Draupadi keeps the forest hermitage alone."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva · Jayadratha abduction of Draupadi — beat: While the Pandavas hunt, Draupadi keeps the forest hermitage alone."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Jayadratha sections — beat: While the Pandavas hunt, Draupadi keeps the forest hermitage alone."
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "alone",
       "file": "plate-alone.jpg",
-      "beat_text": "Jayadratha, king of Sindhu, rides past and sees her \u2014 and desire turns to crime.",
+      "beat_text": "Jayadratha, king of Sindhu, rides past and sees her — and desire turns to crime.",
       "cast_present": [
         "draupadi",
         "jayadratha"
@@ -71,22 +140,52 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Jayadratha on chariot or horseback spotting Draupadi at hermitage",
-        "Tasteful: predatory gaze without sexualization",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Jayadratha on chariot or horseback on forest road spotting Draupadi",
+        "Tasteful predatory gaze — narrative tension without sexualization",
+        "Hermitage visible; cream-saffron forest light"
       ],
       "must_not_show": [
         "Photoreal",
-        "Sexualized pose",
-        "Gore",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "Sexualized pose or camera",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "peacock feather on Arjuna in exile",
+        "gold battle armor on exile Pandavas",
+        "plaque text or title lettering in frame",
+        "CGI horror monster"
       ],
       "props": [
-        "chariot"
+        "chariot",
+        "forest road"
       ],
-      "prompt": "Premium painted comic Amar Chitra. King Jayadratha in royal silks on a chariot on forest road, looking toward Draupadi at the hermitage. Narrative tension, dignified not sexualized. Golden hour forest. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium Amar Chitra / painted-comic. King Jayadratha in jewel-tone royal silks on a chariot on a forest road, looking toward Draupadi at the hermitage. Narrative tension, dignified not sexualized. Cream-saffron-gold hour. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Jayadratha-Draupadi abduction / Pandava pursuit (Debroy) — beat: Jayadratha, king of Sindhu, rides past and sees her — and desire turns to crime."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva · Jayadratha abduction of Draupadi — beat: Jayadratha, king of Sindhu, rides past and sees her — and desire turns to crime."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Jayadratha sections — beat: Jayadratha, king of Sindhu, rides past and sees her — and desire turns to crime."
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "approach",
@@ -99,23 +198,56 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Conversation: Jayadratha speaking, Draupadi standing proud and reserved",
-        "Equal scale, lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Two-shot conversation: Jayadratha false courtesy, Draupadi standing proud and reserved",
+        "Equal human scale; hermitage background",
+        "Draupadi deep red sari; Jayadratha royal silks"
       ],
       "must_not_show": [
         "Photoreal",
-        "Sexualization",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "Sexualized pose or camera",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "peacock feather on Arjuna in exile",
+        "gold battle armor on exile Pandavas",
+        "plaque text or title lettering in frame",
+        "CGI horror monster"
       ],
-      "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Jayadratha greets Draupadi with false courtesy; she stands proud in red sari, queenly dignity. Hermitage background. Ornate lotus frame. Not photoreal."
+      "props": [
+        "hermitage"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic. Jayadratha greets Draupadi with false courtesy; she stands proud in deep red sari, queenly exile dignity. Hermitage background. Equal scale heroic medium. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Not photoreal. Not sexualized.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Jayadratha-Draupadi abduction / Pandava pursuit (Debroy) — beat: He greets her with soft words. She answers with the dignity of a queen in exile."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva · Jayadratha abduction of Draupadi — beat: He greets her with soft words. She answers with the dignity of a queen in exile."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Jayadratha sections — beat: He greets her with soft words. She answers with the dignity of a queen in exile."
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "seize",
       "file": "plate-seize.jpg",
-      "beat_text": "When soft words fail, his men seize her chariot and carry Draupadi away.",
+      "beat_text": "When soft words fail, his men seize her and drive the chariot away.",
       "cast_present": [
         "draupadi",
         "jayadratha"
@@ -123,22 +255,52 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Tasteful abduction: Draupadi forced onto chariot, distress without gore or sexualization",
-        "Jayadratha commanding",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Tasteful abduction: Draupadi forced onto chariot, distress and resistance",
+        "Jayadratha commanding; NO gore, NO sexualization",
+        "Forest road motion"
       ],
       "must_not_show": [
-        "Gore",
-        "Sexual violence imagery",
         "Photoreal",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "Sexualized pose or camera",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "peacock feather on Arjuna in exile",
+        "gold battle armor on exile Pandavas",
+        "plaque text or title lettering in frame",
+        "CGI horror monster"
       ],
       "props": [
-        "chariot"
+        "chariot",
+        "forest road"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Tasteful dramatic moment: soldiers guide Draupadi onto a chariot as Jayadratha commands \u2014 distress and resistance, NO gore, NO sexualization. Forest road. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium Amar Chitra / painted-comic. Tasteful dramatic abduction: soldiers guide resistant Draupadi onto a chariot as Jayadratha commands — distress without gore or sexualization. Forest road, cream-saffron light. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Jayadratha-Draupadi abduction / Pandava pursuit (Debroy) — beat: When soft words fail, his men seize her and drive the chariot away."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva · Jayadratha abduction of Draupadi — beat: When soft words fail, his men seize her and drive the chariot away."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Jayadratha sections — beat: When soft words fail, his men seize her and drive the chariot away."
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "cry",
@@ -152,25 +314,58 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Pandava brothers hunting, suddenly alert turning toward sound",
-        "Forest, lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Pandava brothers in forest hunt — Bhima, Arjuna, Yudhishthira",
+        "Heads turn sharply toward a distant cry; alarm and resolve",
+        "Bows; golden forest light",
+        "Arjuna lock: thin dark mustache, black warrior topknot, cream-white exile dhoti — Ep 09 face family, no peacock, no gold armor"
       ],
       "must_not_show": [
         "Photoreal",
-        "Gore",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "Sexualized pose or camera",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "peacock feather on Arjuna in exile",
+        "gold battle armor on exile Pandavas",
+        "plaque text or title lettering in frame",
+        "CGI horror monster"
       ],
       "props": [
-        "bows"
+        "bows",
+        "forest"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Pandava brothers in forest hunt \u2014 Bhima, Arjuna, Yudhishthira \u2014 heads turn sharply toward a distant cry. Alarm and resolve. Golden forest light. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium Amar Chitra / painted-comic. Pandava brothers hunting in the forest — Bhima (saffron), Arjuna with thin dark mustache, black warrior topknot, cream-white exile dhoti and bow (Ep 09 face family), Yudhishthira (cream) — heads turn sharply toward a distant cry. Alarm and resolve. Golden forest light. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Jayadratha-Draupadi abduction / Pandava pursuit (Debroy) — beat: Her cry reaches the forest. The brothers hear it and turn from the hunt."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva · Jayadratha abduction of Draupadi — beat: Her cry reaches the forest. The brothers hear it and turn from the hunt."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Jayadratha sections — beat: Her cry reaches the forest. The brothers hear it and turn from the hunt."
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "chase",
       "file": "plate-chase.jpg",
-      "beat_text": "Arjuna and Bhima lead the chase \u2014 dust and arrows on the forest road.",
+      "beat_text": "Arjuna and Bhima lead the chase — dust and arrows on the forest road.",
       "cast_present": [
         "arjuna",
         "bhima"
@@ -178,26 +373,59 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Dynamic chase: Arjuna and Bhima pursuing chariot on forest road",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Dynamic chase: Arjuna and Bhima pursuing chariot on dusty forest road",
+        "Motion, dust, bows — action comic mythology not gore",
+        "Jayadratha chariot ahead implied",
+        "Arjuna lock: thin dark mustache, black warrior topknot, cream-white exile dhoti — Ep 09 face family, no peacock, no gold armor"
       ],
       "must_not_show": [
         "Photoreal",
-        "Heavy gore",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "Sexualized pose or camera",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "peacock feather on Arjuna in exile",
+        "gold battle armor on exile Pandavas",
+        "plaque text or title lettering in frame",
+        "CGI horror monster"
       ],
       "props": [
         "chariot",
-        "bow"
+        "bow",
+        "dust"
       ],
-      "prompt": "Premium painted comic Amar Chitra action. Arjuna and powerful Bhima chase Jayadratha\u2019s chariot along a dusty forest road. Dynamic motion, golden light. Ornate lotus frame. Not photoreal, not gory."
+      "prompt": "Premium Amar Chitra / painted-comic action. Arjuna (thin dark mustache, black warrior topknot, cream-white exile dhoti, bow — Ep 09 face family) and powerful Bhima chase Jayadratha’s chariot along a dusty forest road. Dynamic motion, cream-saffron-gold light. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Not photoreal, not gory.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Jayadratha-Draupadi abduction / Pandava pursuit (Debroy) — beat: Arjuna and Bhima lead the chase — dust and arrows on the forest road."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva · Jayadratha abduction of Draupadi — beat: Arjuna and Bhima lead the chase — dust and arrows on the forest road."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Jayadratha sections — beat: Arjuna and Bhima lead the chase — dust and arrows on the forest road."
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "catch",
       "file": "plate-catch.jpg",
-      "beat_text": "They overtake Jayadratha. Bhima would end him; Draupadi\u2019s honor is restored.",
+      "beat_text": "They overtake Jayadratha. Bhima would end him; Draupadi stands free.",
       "cast_present": [
         "bhima",
         "jayadratha",
@@ -207,24 +435,57 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Confrontation: Bhima seizes or threatens Jayadratha; Draupadi free",
-        "Tasteful victory, no gore",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Confrontation: Bhima seizes or threatens Jayadratha",
+        "Draupadi free and proud beside the stopped chariot",
+        "Tasteful victory — no gore, no sexualization",
+        "Arjuna lock: thin dark mustache, black warrior topknot, cream-white exile dhoti — Ep 09 face family, no peacock, no gold armor"
       ],
       "must_not_show": [
-        "Gore",
         "Photoreal",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "Sexualized pose or camera",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "peacock feather on Arjuna in exile",
+        "gold battle armor on exile Pandavas",
+        "plaque text or title lettering in frame",
+        "CGI horror monster"
       ],
-      "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Pandavas overtake the chariot. Bhima grabs Jayadratha; Draupadi stands free and proud. Dramatic but not gory. Forest road. Ornate lotus frame. Not photoreal."
+      "props": [
+        "chariot"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic. Pandavas overtake the chariot. Bhima grabs Jayadratha; Draupadi stands free and proud; Arjuna ready with bow — thin dark mustache, black warrior topknot, cream-white exile dhoti (Ep 09 face family). Dramatic but not gory. Forest road. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Jayadratha-Draupadi abduction / Pandava pursuit (Debroy) — beat: They overtake Jayadratha. Bhima would end him; Draupadi stands free."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva · Jayadratha abduction of Draupadi — beat: They overtake Jayadratha. Bhima would end him; Draupadi stands free."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Jayadratha sections — beat: They overtake Jayadratha. Bhima would end him; Draupadi stands free."
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "mercy",
       "file": "plate-mercy.jpg",
-      "beat_text": "Yudhishthira grants a hard mercy \u2014 Jayadratha lives, shamed, and rides home.",
+      "beat_text": "Yudhishthira grants a hard mercy — Jayadratha lives, shamed, and rides home.",
       "cast_present": [
         "yudhishthira",
         "jayadratha",
@@ -233,23 +494,56 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Yudhishthira judging; Jayadratha humbled; Draupadi present",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Yudhishthira judging with raised hand of hard mercy",
+        "Jayadratha humbled — kneeling or bowed, shamed",
+        "Draupadi present with composed dignity"
       ],
       "must_not_show": [
-        "Gore",
         "Photoreal",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "Sexualized pose or camera",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "peacock feather on Arjuna in exile",
+        "gold battle armor on exile Pandavas",
+        "plaque text or title lettering in frame",
+        "CGI horror monster"
       ],
-      "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Yudhishthira raises a hand of judgment granting hard mercy. Jayadratha kneels or bows shamed. Draupadi watches with composure. Forest clearing. Ornate lotus frame. Not photoreal."
+      "props": [
+        "forest clearing"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic. Yudhishthira raises a hand of judgment granting hard mercy. Jayadratha kneels or bows, shamed. Draupadi watches with composure. Forest clearing, cream-saffron light. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Not photoreal. Not gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Jayadratha-Draupadi abduction / Pandava pursuit (Debroy) — beat: Yudhishthira grants a hard mercy — Jayadratha lives, shamed, and rides home."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva · Jayadratha abduction of Draupadi — beat: Yudhishthira grants a hard mercy — Jayadratha lives, shamed, and rides home."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Jayadratha sections — beat: Yudhishthira grants a hard mercy — Jayadratha lives, shamed, and rides home."
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     },
     {
       "id": "wide-gold",
       "file": "plate-wide-gold.jpg",
-      "beat_text": "The forest is quiet again \u2014 but every insult of exile will be paid in war.",
+      "beat_text": "The forest is quiet again — but every insult of exile will be paid in war.",
       "cast_present": [
         "draupadi",
         "yudhishthira",
@@ -259,21 +553,54 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality gold closing like Ep01 wide-gold mood",
-        "Family reunited at hermitage, quiet resolve",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Warm cream-saffron-gold closing hermitage reunion",
+        "Family reunited in quiet resolve — peace with steel underneath",
+        "No plaque text or title lettering",
+        "Arjuna lock: thin dark mustache, black warrior topknot, cream-white exile dhoti — Ep 09 face family, no peacock, no gold armor"
       ],
       "must_not_show": [
         "Photoreal",
-        "Gore",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "Sexualized pose or camera",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "peacock feather on Arjuna in exile",
+        "gold battle armor on exile Pandavas",
+        "plaque text or title lettering in frame",
+        "CGI horror monster",
+        "Ep01 gold plaque lettering",
+        "title text in image"
       ],
       "props": [
         "hermitage"
       ],
-      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold hermitage. Pandavas and Draupadi reunited in quiet resolve after the ordeal. Peace with steel underneath. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium Amar Chitra / painted-comic closing plate. Warm cream-saffron-gold hermitage. Pandavas and Draupadi reunited in quiet resolve after the ordeal — Arjuna with thin dark mustache, black warrior topknot, cream-white exile dhoti (Ep 09 face family). Peace with steel underneath. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Not photoreal. No plaque text. Not Ep01 Drona gold plaque.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Vana Parva · Jayadratha-Draupadi abduction / Pandava pursuit (Debroy) — beat: The forest is quiet again — but every insult of exile will be paid in war."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Vana Parva · Jayadratha abduction of Draupadi — beat: The forest is quiet again — but every insult of exile will be paid in war."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Jayadratha sections — beat: The forest is quiet again — but every insult of exile will be paid in war."
+        }
+      ],
+      "audit_notes": "2026-09-17 rewrite scaffold: bible at Ep 09/10 schema; stills remain 720p archive until SuperGrok/Imagine regen."
     }
-  ],
-  "scene_lock_ref": ""
+  ]
 }

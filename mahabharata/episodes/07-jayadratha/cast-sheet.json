@@ -1,31 +1,31 @@
 {
   "episode_id": "07",
-  "notes": "Vana Parva. Tasteful abduction — distress without gore/sexualization. Draupadi dignified.",
+  "notes": "Vana Parva abduction. Draupadi dignified — distress without gore/sexualization. Jayadratha proud then shamed. Comic mythology only. Arjuna Ep 09 face family; no peacock / no gold armor. Local locks under stills/_locks/ must be regenerated at 1536×1024 (current archive is 720p).",
   "cast": {
     "draupadi": {
-      "face": "Young woman, warm brown skin, large dark eyes, bindi, resolute dignity",
-      "hair": "Long black wavy hair",
-      "costume": "Deep red sari with gold border, exile jewelry"
+      "face": "Young woman, warm brown skin, large dark eyes, bindi, resolute dignity — comic mythology, not photoreal",
+      "hair": "Long black wavy hair, exile braid or loose waves",
+      "costume": "Deep red sari with gold border, modest exile jewelry — never sexualized"
     },
     "jayadratha": {
-      "face": "Adult king, mustache, proud then fearful",
-      "hair": "Crown or turban",
-      "costume": "Royal jewel-tone silks, Sindhu king"
+      "face": "Adult Sindhu king, dark mustache, proud then fearful — comic mythology",
+      "hair": "Crown or royal turban",
+      "costume": "Jewel-tone royal silks, Sindhu king — not gore makeup"
     },
     "bhima": {
-      "face": "Powerful warrior, thick mustache",
-      "hair": "Black topknot",
-      "costume": "Saffron dhoti"
+      "face": "Powerful warrior, thick dark mustache, fierce resolve — comic mythology",
+      "hair": "Black warrior topknot — no peacock",
+      "costume": "Saffron-yellow dhoti with gold border, bare powerful chest"
     },
     "arjuna": {
-      "face": "Young archer, thin mustache",
-      "hair": "Black topknot no peacock",
-      "costume": "Cream dhoti, bow"
+      "face": "Young archer, thin dark mustache, focused calm — same face family as Ep 09 lock, comic mythology",
+      "hair": "Black warrior topknot — no peacock feather in exile",
+      "costume": "Cream exile dhoti, bow and quiver — not gold battle armor"
     },
     "yudhishthira": {
-      "face": "Gentle eldest, composed",
-      "hair": "Simple topknot",
-      "costume": "Cream exile dhoti"
+      "face": "Gentle eldest Pandava, light dark mustache, composed wise eyes — comic mythology",
+      "hair": "Simple topknot — no peacock, no gold battle mukut",
+      "costume": "Cream exile dhoti, modest dress, simple sacred thread"
     }
   }
 }

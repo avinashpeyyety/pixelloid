@@ -1,6 +1,9 @@
 /**
  * Episode 07 — Jayadratha
- * Vana Parva · Draupadi’s abduction · the Pandavas’ pursuit
+ * Vana Parva · Draupadi’s abduction · the Pandavas’ pursuit · hard mercy
+ * Rewrite scaffold 2026-09-17: Ep 09/10 bar (bible/script only; stills untouched).
+ * Music: named Hindustani raga Bhairavi under Orion (never default flute+tabla).
+ * Cache plan ep07-09-10-bar — DO NOT re-render audio this pass (no Orion / no Imagine API).
  */
 export const EPISODE = {
   id: "07",
@@ -12,9 +15,13 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep07-v1",
-    note: "Grok TTS orion — deep heroic narration",
+    cache: "ep07-09-10-bar",
+    note: "Grok TTS Orion — cache plan ep07-09-10-bar; audio not re-rendered this scaffold pass",
     base: "episodes/07-jayadratha/audio/",
+  },
+  music: {
+    raga: "bhairavi",
+    note: "Bhairavi mandra tanpura; sparse bansuri; no tabla. Draupadi dignity / forest ordeal / hard mercy. Duck under Orion. Not default flute+tabla.",
   },
   totalSec: 100,
   stills: {
@@ -84,7 +91,7 @@ export const EPISODE = {
       panY: -0.03,
       audio: "orion-03.mp3",
       who: "Narrator",
-      text: "When soft words fail, his men seize her chariot and carry Draupadi away.",
+      text: "When soft words fail, his men seize her and drive the chariot away.",
     },
     {
       t: 42,
@@ -114,7 +121,7 @@ export const EPISODE = {
       panY: -0.02,
       audio: "orion-06.mp3",
       who: "Narrator",
-      text: "They overtake Jayadratha. Bhima would end him; Draupadi’s honor is restored.",
+      text: "They overtake Jayadratha. Bhima would end him; Draupadi stands free.",
     },
     {
       t: 76,

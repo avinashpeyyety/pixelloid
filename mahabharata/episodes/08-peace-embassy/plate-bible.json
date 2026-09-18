@@ -1,43 +1,76 @@
 {
   "episode_id": "08",
+  "strict_hero_lock": "krishna",
   "title": "The Peace Embassy",
-  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold palace hour; refined linework",
-  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 Drona figure plate)",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold palace / plain hour; carved cartouche; Ep 10 field-master density; refined linework; Krishna Ep 09 lock (pitambar, peacock, garland); cosmic form tasteful comic radiance not horror",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, sabha or camp only in the background",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined linework, warm cream-saffron-gold palace or plain hour. Krishna matches Ep 09 lock: yellow pitambar, peacock feather, flower garland. Cosmic form = tasteful comic radiance, not horror. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg; do not attach this episode's plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/08-peace-embassy/stills/_locks/sabha-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/08-peace-embassy/stills/_locks/sabha-master.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/08-peace-embassy/stills/_locks/krishna.jpg",
+    "episodes/08-peace-embassy/stills/_locks/duryodhana.jpg",
+    "episodes/08-peace-embassy/stills/_locks/dhritarashtra.jpg",
+    "episodes/08-peace-embassy/stills/_locks/yudhishthira.jpg"
+  ],
   "photoreal_allowed": false,
-  "frame": "Ornate lotus carved wooden frame on every plate",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / vow) — not a thin rectangular sticker on a cream mat",
   "apparatus": {},
+  "stills_status": {
+    "bar": "1536×1024 3:2 Ep 09/10",
+    "current": "720p / 1280×720 archive locks + plates — DO NOT single-image-edit; regenerate native 3:2",
+    "binaries_untouched": true,
+    "imagine": "No Imagine API this pass — SuperGrok consumer drop list in logic-reviews/REWRITE-20260917-ep08-status.md",
+    "next": "regen sabha-master + solo locks (krishna, duryodhana, dhritarashtra, yudhishthira) then all 9 plates + poster via stills/_inbox/consumer-imagine/"
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Udyoga Parva · Krishna’s peace embassy to Hastinapura · five villages · refusal · cosmic form · road to war",
+    "divergence": "BORI CE / Debroy place Krishna’s embassy, the five-village offer, Duryodhana’s refusal, the plot to seize Krishna, and the cosmic-form revelation in Udyoga. Ganguli’s vulgate English maps the same sabha beats. Gita Press Gorakhpur tells the same embassy–offer–refusal–form arc under its Udyoga numbering. Beats agree: camps → mission → journey → court → offer → refuse → form → return → closing resolve. Exact wording of the ‘needle’s point’ refusal varies by recension; this episode keeps the hard refusal without gore.",
+    "chosen": "Gita Press Gorakhpur + BORI overlap for the embassy–refusal–form itself. Debroy for BORI beat map. Ganguli for English sabha wording.",
+    "notes": "Not TV. Comic-mythology only. Krishna face/body = Ep 09 lock (pitambar, peacock, garland). Cosmic form = tasteful radiance, not horror. Never attach Ep01 plate-wide-gold or this episode’s plate-wide-gold as Imagine refs."
+  },
   "cast": {
     "krishna": {
-      "face": "Youthful divine smile, dark eyes",
-      "hair": "Dark curly hair",
-      "costume": "Yellow pitambar, garland"
+      "face": "Youthful divine smile, dark eyes — same face family as Ep 09 lock, comic mythology, not photoreal",
+      "hair": "Dark curly hair with peacock feather",
+      "costume": "Yellow pitambar dhoti, flower garland, charming comic — not flute-primary, not new face"
     },
     "duryodhana": {
-      "face": "Proud prince, fierce mustache",
-      "hair": "Crown",
-      "costume": "Jewel-tone royal dress"
+      "face": "Proud adult Kuru prince, fierce mustache, arrogant eyes — comic mythology",
+      "hair": "Crown or royal mukut",
+      "costume": "Deep jewel-tone royal dress, gold accents — not gore makeup"
     },
     "dhritarashtra": {
-      "face": "Elderly blind king, white beard",
-      "hair": "White with crown",
-      "costume": "Royal white gold"
+      "face": "Elderly blind king, white beard, troubled — comic mythology",
+      "hair": "White hair with crown",
+      "costume": "Royal white and gold robes on throne"
     },
     "yudhishthira": {
-      "face": "Gentle eldest",
-      "hair": "Topknot",
-      "costume": "Cream dress"
-    },
-    "courtiers": {
-      "face": "Background",
-      "hair": "Turbans",
-      "costume": "Muted court"
+      "face": "Gentle eldest Pandava, light dark mustache, composed wise eyes — comic mythology",
+      "hair": "Simple topknot — no peacock",
+      "costume": "Cream royal/exile dress, modest jewelry"
     }
   },
   "plates": [
     {
       "id": "wide",
       "file": "plate-wide.jpg",
-      "beat_text": "The years of exile end. Armies gather \u2014 and one last chance for peace remains.",
+      "beat_text": "The years of exile end. Armies gather — and one last chance for peace remains.",
       "cast_present": [
         "yudhishthira",
         "krishna"
@@ -45,6 +78,10 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Premium painted comic: camps and banners on plains, sense of coming war",
         "Soft gold hour, lotus frame",
         "Not photoreal"
@@ -53,18 +90,45 @@
         "Photoreal",
         "Gore battle yet",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "new Krishna face drifted from Ep 09 lock"
       ],
       "props": [
         "banners",
         "tents"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Wide plain at golden hour: Pandava camp tents and banners, armies gathering in soft distance. Krishna and Yudhishthira small or mid figures discussing. Sense of last chance before war. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Wide plain at golden hour: Pandava camp tents and banners, armies gathering in soft distance. Krishna and Yudhishthira small or mid figures discussing. Sense of last chance before war. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Krishna: yellow pitambar, peacock feather, flower garland — Ep 09 lock family. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Udyoga Parva · Krishna’s embassy to Hastinapura (Debroy) — beat: The years of exile end. Armies gather — and one last chance for peace remains."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Udyoga Parva · peace embassy / sabha — beat: The years of exile end. Armies gather — and one last chance for peace remains."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Udyoga Parva, Krishna’s mission sections — beat: The years of exile end. Armies gather — and one last chance for peace remains."
+        }
+      ]
     },
     {
       "id": "mission",
       "file": "plate-mission.jpg",
-      "beat_text": "Krishna takes the Pandavas\u2019 plea to Hastinapura: five villages, and no war.",
+      "beat_text": "Krishna takes the Pandavas’ plea to Hastinapura: five villages, and no war.",
       "cast_present": [
         "krishna",
         "yudhishthira"
@@ -72,6 +136,10 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Premium quality",
         "Krishna accepting mission from Yudhishthira",
         "Lotus frame"
@@ -79,10 +147,37 @@
       "must_not_show": [
         "Photoreal",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "new Krishna face drifted from Ep 09 lock"
       ],
       "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Yudhishthira requests Krishna to go as peace envoy; Krishna in yellow pitambar accepts with calm smile. Camp tent interior. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Yudhishthira requests Krishna to go as peace envoy; Krishna in yellow pitambar accepts with calm smile. Camp tent interior. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Udyoga Parva · Krishna’s embassy to Hastinapura (Debroy) — beat: Krishna takes the Pandavas’ plea to Hastinapura: five villages, and no war."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Udyoga Parva · peace embassy / sabha — beat: Krishna takes the Pandavas’ plea to Hastinapura: five villages, and no war."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Udyoga Parva, Krishna’s mission sections — beat: Krishna takes the Pandavas’ plea to Hastinapura: five villages, and no war."
+        }
+      ]
     },
     {
       "id": "journey",
@@ -94,6 +189,10 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Premium quality",
         "Krishna on chariot toward distant city of Hastinapura",
         "Lotus frame"
@@ -101,26 +200,56 @@
       "must_not_show": [
         "Photoreal",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "new Krishna face drifted from Ep 09 lock"
       ],
       "props": [
         "chariot",
         "city silhouette"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Krishna in yellow pitambar rides a chariot on a royal road toward a distant golden palace city of Hastinapura. Peaceful but purposeful. Cream-saffron sky. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Krishna in yellow pitambar rides a chariot on a royal road toward a distant golden palace city of Hastinapura. Peaceful but purposeful. Cream-saffron sky. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Udyoga Parva · Krishna’s embassy to Hastinapura (Debroy) — beat: He rides toward the city of the Kurus as messenger, friend, and witness of dharma."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Udyoga Parva · peace embassy / sabha — beat: He rides toward the city of the Kurus as messenger, friend, and witness of dharma."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Udyoga Parva, Krishna’s mission sections — beat: He rides toward the city of the Kurus as messenger, friend, and witness of dharma."
+        }
+      ]
     },
     {
       "id": "court",
       "file": "plate-court.jpg",
-      "beat_text": "In the great sabha Dhritarashtra sits blind; Duryodhana\u2019s pride fills the hall.",
+      "beat_text": "In the great sabha Dhritarashtra sits blind; Duryodhana’s pride fills the hall.",
       "cast_present": [
         "dhritarashtra",
-        "duryodhana",
-        "courtiers"
+        "duryodhana"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Premium quality regal Kuru sabha hall",
         "Blind king Dhritarashtra on throne; Duryodhana proud among seated princes",
         "Equal natural human scale, men of the court only",
@@ -130,13 +259,40 @@
         "Photoreal",
         "Giant scale mismatch",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "new Krishna face drifted from Ep 09 lock"
       ],
       "props": [
         "throne",
         "sabha pillars"
       ],
-      "prompt": "Premium painted comic Amar Chitra regal sabha. Blind elderly king Dhritarashtra on throne. Proud Duryodhana in jewel tones among seated princes. Grand pillars, equal natural human scale. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra regal sabha. Blind elderly king Dhritarashtra on throne. Proud Duryodhana in jewel tones among seated princes. Grand pillars, equal natural human scale. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Udyoga Parva · Krishna’s embassy to Hastinapura (Debroy) — beat: In the great sabha Dhritarashtra sits blind; Duryodhana’s pride fills the hall."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Udyoga Parva · peace embassy / sabha — beat: In the great sabha Dhritarashtra sits blind; Duryodhana’s pride fills the hall."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Udyoga Parva, Krishna’s mission sections — beat: In the great sabha Dhritarashtra sits blind; Duryodhana’s pride fills the hall."
+        }
+      ]
     },
     {
       "id": "offer",
@@ -150,6 +306,10 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Premium quality",
         "Krishna speaking peace in sabha with open hand gesture",
         "King and Duryodhana listening",
@@ -158,15 +318,42 @@
       "must_not_show": [
         "Photoreal",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "new Krishna face drifted from Ep 09 lock"
       ],
       "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Krishna stands in the Kuru sabha offering peace with open hand. Dhritarashtra on throne; Duryodhana scowls. Golden court light. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Krishna stands in the Kuru sabha offering peace with open hand. Dhritarashtra on throne; Duryodhana scowls. Golden court light. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Krishna: yellow pitambar, peacock feather, flower garland — Ep 09 lock family. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Udyoga Parva · Krishna’s embassy to Hastinapura (Debroy) — beat: Krishna offers peace: five villages for the sons of Pandu. Nothing more is asked."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Udyoga Parva · peace embassy / sabha — beat: Krishna offers peace: five villages for the sons of Pandu. Nothing more is asked."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Udyoga Parva, Krishna’s mission sections — beat: Krishna offers peace: five villages for the sons of Pandu. Nothing more is asked."
+        }
+      ]
     },
     {
       "id": "refuse",
       "file": "plate-refuse.jpg",
-      "beat_text": "Duryodhana refuses. He will not give land enough to drive a needle\u2019s point.",
+      "beat_text": "Duryodhana refuses. He will not give land enough to drive a needle’s point.",
       "cast_present": [
         "duryodhana",
         "krishna"
@@ -174,33 +361,68 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Premium quality",
         "Duryodhana refusing angrily; Krishna calm",
-        "Lotus frame"
+        "Lotus frame",
+        "Muted background sabha courtiers (anonymous — no named lock)"
       ],
       "must_not_show": [
         "Photoreal",
         "Gore",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "new Krishna face drifted from Ep 09 lock"
       ],
       "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Duryodhana stands defiant refusing Krishna\u2019s offer; Krishna remains serene. Court tension. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Duryodhana stands defiant refusing Krishna’s offer; Krishna remains serene. Court tension. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Krishna: yellow pitambar, peacock feather, flower garland — Ep 09 lock family. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Udyoga Parva · Krishna’s embassy to Hastinapura (Debroy) — beat: Duryodhana refuses. He will not give land enough to drive a needle’s point."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Udyoga Parva · peace embassy / sabha — beat: Duryodhana refuses. He will not give land enough to drive a needle’s point."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Udyoga Parva, Krishna’s mission sections — beat: Duryodhana refuses. He will not give land enough to drive a needle’s point."
+        }
+      ]
     },
     {
       "id": "form",
       "file": "plate-form.jpg",
-      "beat_text": "When they plot to seize him, Krishna shows a fraction of his cosmic form \u2014 and the hall trembles.",
+      "beat_text": "When they plot to seize him, Krishna shows a fraction of his cosmic form — and the hall trembles.",
       "cast_present": [
         "krishna",
-        "duryodhana",
-        "courtiers"
+        "duryodhana"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Premium quality",
-        "Tasteful Vishvarupa-lite: Krishna radiant multi-armed or cosmic glow filling sabha \u2014 charming comic not horror CGI",
+        "Tasteful Vishvarupa-lite: Krishna radiant multi-armed or cosmic glow filling sabha — charming comic not horror CGI",
         "Courtiers awed",
         "Lotus frame"
       ],
@@ -208,10 +430,38 @@
         "Horror gore",
         "Photoreal CGI nightmare",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Photoreal",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "new Krishna face drifted from Ep 09 lock"
       ],
       "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Krishna reveals a tasteful cosmic form in the sabha \u2014 radiant many-armed divine presence with soft gold light filling the hall. Courtiers and Duryodhana shield their eyes in awe. Sacred charming mythic style, NOT horror CGI. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Krishna reveals a tasteful cosmic form in the sabha — radiant many-armed divine presence with soft gold light filling the hall. Courtiers and Duryodhana shield their eyes in awe. Sacred charming mythic style, NOT horror CGI. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Krishna: yellow pitambar, peacock feather, flower garland — Ep 09 lock family. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Udyoga Parva · Krishna’s embassy to Hastinapura (Debroy) — beat: When they plot to seize him, Krishna shows a fraction of his cosmic form — and the hall trembles."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Udyoga Parva · peace embassy / sabha — beat: When they plot to seize him, Krishna shows a fraction of his cosmic form — and the hall trembles."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Udyoga Parva, Krishna’s mission sections — beat: When they plot to seize him, Krishna shows a fraction of his cosmic form — and the hall trembles."
+        }
+      ]
     },
     {
       "id": "war",
@@ -224,6 +474,10 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Premium quality",
         "Krishna returns to Pandava camp; solemn faces",
         "Lotus frame"
@@ -231,23 +485,54 @@
       "must_not_show": [
         "Photoreal",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "new Krishna face drifted from Ep 09 lock"
       ],
       "props": [
         "camp"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Krishna returns to the Pandava camp at dusk; Yudhishthira and brothers receive the failed peace with solemn resolve. Soft gold-violet light. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Krishna returns to the Pandava camp at dusk; Yudhishthira and brothers receive the failed peace with solemn resolve. Soft gold-violet light. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Krishna: yellow pitambar, peacock feather, flower garland — Ep 09 lock family. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Udyoga Parva · Krishna’s embassy to Hastinapura (Debroy) — beat: He returns to the Pandavas. Peace has failed. The road to Kurukshetra is open."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Udyoga Parva · peace embassy / sabha — beat: He returns to the Pandavas. Peace has failed. The road to Kurukshetra is open."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Udyoga Parva, Krishna’s mission sections — beat: He returns to the Pandavas. Peace has failed. The road to Kurukshetra is open."
+        }
+      ]
     },
     {
       "id": "wide-gold",
       "file": "plate-wide-gold.jpg",
-      "beat_text": "Thus the last word of peace was spoken \u2014 and the age turned toward battle.",
+      "beat_text": "Thus the last word of peace was spoken — and the age turned toward battle.",
       "cast_present": [
         "krishna"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Premium quality gold closing mood like Ep01 wide-gold",
         "Krishna silhouette or calm figure before dawn plains of destiny",
         "Lotus frame"
@@ -256,11 +541,37 @@
         "Photoreal",
         "Gore",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "new Krishna face drifted from Ep 09 lock"
       ],
       "props": [],
-      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold plains at dawn; Krishna stands calmly facing the horizon of coming war. Quiet epic. Ornate lotus frame. Match Ep01 gold mood. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold plains at dawn; Krishna stands calmly facing the horizon of coming war. Quiet epic. Carved gold-and-lotus cartouche. Heroic medium. Native 3:2 1536×1024. Match Ep01 gold mood. Krishna: yellow pitambar, peacock feather, flower garland — Ep 09 lock family. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Udyoga Parva · Krishna’s embassy to Hastinapura (Debroy) — beat: Thus the last word of peace was spoken — and the age turned toward battle."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Udyoga Parva · peace embassy / sabha — beat: Thus the last word of peace was spoken — and the age turned toward battle."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Udyoga Parva, Krishna’s mission sections — beat: Thus the last word of peace was spoken — and the age turned toward battle."
+        }
+      ]
     }
-  ],
-  "scene_lock_ref": ""
+  ]
 }

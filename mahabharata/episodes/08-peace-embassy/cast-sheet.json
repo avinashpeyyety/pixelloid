@@ -1,31 +1,26 @@
 {
   "episode_id": "08",
-  "notes": "Udyoga Parva. Krishna messenger. Cosmic form tasteful comic radiance not horror.",
+  "notes": "Udyoga Parva embassy. Krishna Ep 09 lock family (pitambar, peacock, garland). Cosmic form tasteful comic radiance not horror. Comic mythology only. Local locks under stills/_locks/ must be regenerated at 1536×1024 (current archive is 720p / wrong-aspect krishna).",
   "cast": {
     "krishna": {
-      "face": "Youthful divine smile, dark eyes",
-      "hair": "Dark curly hair, optional peacock feather",
-      "costume": "Yellow pitambar dhoti, garland, charming comic"
+      "face": "Youthful divine smile, dark eyes — same face family as Ep 09 lock, comic mythology, not photoreal",
+      "hair": "Dark curly hair with peacock feather",
+      "costume": "Yellow pitambar dhoti, flower garland, charming comic — not flute-primary, not new face"
     },
     "duryodhana": {
-      "face": "Proud adult prince, fierce mustache, arrogant eyes",
-      "hair": "Crown",
-      "costume": "Deep jewel tones, gold armor accents"
+      "face": "Proud adult Kuru prince, fierce mustache, arrogant eyes — comic mythology",
+      "hair": "Crown or royal mukut",
+      "costume": "Deep jewel-tone royal dress, gold accents — not gore makeup"
     },
     "dhritarashtra": {
-      "face": "Elderly blind king, white beard, troubled",
-      "hair": "White hair crown",
+      "face": "Elderly blind king, white beard, troubled — comic mythology",
+      "hair": "White hair with crown",
       "costume": "Royal white and gold robes on throne"
     },
     "yudhishthira": {
-      "face": "Gentle eldest Pandava",
-      "hair": "Topknot",
-      "costume": "Cream royal exile dress"
-    },
-    "courtiers": {
-      "face": "Background sabha figures",
-      "hair": "Turbans",
-      "costume": "Muted court dress"
+      "face": "Gentle eldest Pandava, light dark mustache, composed wise eyes — comic mythology",
+      "hair": "Simple topknot — no peacock",
+      "costume": "Cream royal/exile dress, modest jewelry"
     }
   }
 }

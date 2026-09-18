@@ -1,6 +1,9 @@
 /**
  * Episode 08 — The Peace Embassy
- * Udyoga Parva · Krishna goes to Hastinapura
+ * Udyoga Parva · Krishna’s embassy to Hastinapura · five villages · refusal · form
+ * Rewrite scaffold 2026-09-17: Ep 09/10 bar (bible/script only; stills untouched).
+ * Music: named Hindustani raga Yaman under Orion (never default flute+tabla).
+ * Cache plan ep08-09-10-bar — DO NOT re-render audio this pass (no Orion / no Imagine API).
  */
 export const EPISODE = {
   id: "08",
@@ -12,9 +15,13 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep08-v1",
-    note: "Grok TTS orion — deep heroic narration",
+    cache: "ep08-09-10-bar",
+    note: "Grok TTS Orion — cache plan ep08-09-10-bar; audio not re-rendered this scaffold pass",
     base: "episodes/08-peace-embassy/audio/",
+  },
+  music: {
+    raga: "yaman",
+    note: "Yaman mandra tanpura; sparse bansuri; no tabla. Evening peace embassy / sabha resolve. Duck under Orion. Not default flute+tabla.",
   },
   totalSec: 102,
   stills: {
@@ -34,8 +41,8 @@ export const EPISODE = {
   end: {
     title: "End of Episode 08",
     line: "When peace is refused, dharma takes the field.",
-    next: "index.html",
-    nextLabel: "All episodes",
+    next: "play.html?ep=09",
+    nextLabel: "Play Episode 09",
   },
   palette: {
     cloth: "#c4a06a",

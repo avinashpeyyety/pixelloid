@@ -1,9 +1,9 @@
 /**
  * Episode 07 — Jayadratha
  * Vana Parva · Draupadi’s abduction · the Pandavas’ pursuit · hard mercy
- * Rewrite scaffold 2026-09-17: Ep 09/10 bar (bible/script only; stills untouched).
+ * Rewrite 2026-09-17: Ep 09/10 bar; SuperGrok stills GATE C PASS.
  * Music: named Hindustani raga Bhairavi under Orion (never default flute+tabla).
- * Cache plan ep07-09-10-bar — DO NOT re-render audio this pass (no Orion / no Imagine API).
+ * Cache ep07-supergrok-20260917 — plate cache bump; audio not re-rendered this pass.
  */
 export const EPISODE = {
   id: "07",
@@ -15,8 +15,8 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep07-09-10-bar",
-    note: "Grok TTS Orion — cache plan ep07-09-10-bar; audio not re-rendered this scaffold pass",
+    cache: "ep07-supergrok-20260917",
+    note: "Grok TTS Orion — cache ep07-supergrok-20260917; audio not re-rendered this stills ship",
     base: "episodes/07-jayadratha/audio/",
   },
   music: {

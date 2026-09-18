@@ -1,6 +1,9 @@
 /**
  * Episode 09 — The Bhagavad Gita
  * Bhishma Parva · Kurukshetra opens; Krishna’s teaching to Arjuna
+ * Rewrite 2026-09-18: Ep 09/10 bar scaffold (bible sources + inbox); stills already ≥1536×1024 GATE C PASS — no regen required.
+ * Music: named Hindustani raga Bhairav under Orion (never default flute+tabla).
+ * Cache ep09-09-10-bar — plan only; audio not re-rendered this pass.
  */
 export const EPISODE = {
   id: "09",
@@ -12,13 +15,13 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep09-v1",
-    note: "Grok TTS orion — deep heroic narration",
+    cache: "ep09-09-10-bar",
+    note: "Grok TTS Orion — cache ep09-09-10-bar plan; audio not re-rendered this scaffold pass",
     base: "episodes/09-gita/audio/",
   },
   music: {
     raga: "bhairav",
-    note: "Dawn Bhairav tanpura + sparse bansuri; no tabla. Duck under Orion.",
+    note: "Bhairav mandra tanpura; sparse bansuri; no tabla. Dawn Kurukshetra sacred hour. Duck under Orion. Not default flute+tabla.",
   },
   totalSec: 104,
   stills: {
@@ -38,8 +41,8 @@ export const EPISODE = {
   end: {
     title: "End of Episode 09",
     line: "When the bow is lifted again, the song of dharma has begun.",
-    next: "index.html",
-    nextLabel: "All episodes",
+    next: "play.html?ep=10",
+    nextLabel: "Play Episode 10",
   },
   palette: {
     cloth: "#c4a06a",

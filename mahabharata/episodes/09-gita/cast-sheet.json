@@ -1,16 +1,16 @@
 {
   "episode_id": "09",
-  "notes": "Bhishma Parva opening. Krishna charioteer + teacher. Vishvarupa tasteful comic radiance not horror. No gore battle focus — sacred teaching on the field.",
+  "notes": "Bhishma Parva opening / Bhagavad Gita. Krishna charioteer + teacher (pitambar, peacock, garland, reins — never flute-primary). Arjuna gold crown lock (dark mustache, cream-white dhoti, quiver, Gandiva — never flower garland). Vishvarupa tasteful comic radiance not horror. No gore battle focus — sacred teaching on the field. Locks already ≥1536×1024 on disk (historic quality bar).",
   "cast": {
     "krishna": {
-      "face": "Youthful divine smile, dark eyes, serene",
-      "hair": "Dark curly hair, optional peacock feather",
-      "costume": "Yellow pitambar dhoti, garland, charioteer posture"
+      "face": "Youthful divine smile, dark eyes, serene — same face every plate, comic mythology, not photoreal",
+      "hair": "Dark curly hair, peacock feather",
+      "costume": "Yellow pitambar dhoti, flower garland, charioteer reins — never flute-primary, never bow"
     },
     "arjuna": {
-      "face": "Noble young warrior prince, expressive eyes (grief then resolve)",
-      "hair": "Dark hair, warrior topknot / crown optional",
-      "costume": "White and gold armor accents, bow Gandiva"
+      "face": "Noble warrior prince, dark mustache, expressive eyes (grief then resolve) — same face every plate",
+      "hair": "Gold crown over dark hair (lock — not loose un-crowned hair)",
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland, never peacock"
     },
     "armies": {
       "face": "Background warriors distant",
@@ -20,7 +20,7 @@
     "chariot": {
       "face": "n/a prop",
       "hair": "n/a",
-      "costume": "White horses, ornate Pandava chariot with Krishna as driver"
+      "costume": "White horses, ornate Pandava chariot with Krishna as driver — scene continuity across plates"
     }
   }
 }

@@ -2,7 +2,7 @@
   "episode_id": "09",
   "strict_hero_lock": "arjuna",
   "title": "The Bhagavad Gita",
-  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold sacred hour on Kurukshetra; refined linework",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold sacred hour on Kurukshetra; carved cartouche; Ep 10 field-master density; refined linework; Arjuna gold crown lock; Krishna pitambar charioteer; Vishvarupa tasteful comic radiance not horror",
   "canvas": {
     "width": 1536,
     "height": 1024,
@@ -24,19 +24,19 @@
   "apparatus": {},
   "cast": {
     "krishna": {
-      "face": "Youthful divine smile, dark eyes",
+      "face": "Youthful divine smile, dark eyes — same face every plate, comic mythology, not photoreal",
       "hair": "Dark curly hair, peacock feather optional",
-      "costume": "Yellow pitambar, peacock feather, garland, charioteer reins — never a flute, never a bow"
+      "costume": "Yellow pitambar, peacock feather, flower garland, charioteer reins — never a flute as primary prop, never a bow"
     },
     "arjuna": {
-      "face": "Noble warrior prince, dark mustache, same face every plate",
+      "face": "Noble warrior prince, dark mustache, same face every plate — comic mythology",
       "hair": "Gold crown over dark hair (lock — not loose un-crowned hair)",
-      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland"
+      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland, never peacock"
     },
     "armies": {
-      "face": "Distant ranks",
+      "face": "Distant ranks only",
       "hair": "Helmets",
-      "costume": "Muted banners and spears"
+      "costume": "Muted banners and spears — equal human scale, soft background"
     }
   },
   "plates": [
@@ -50,23 +50,54 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Premium painted comic: vast battlefield Kurukshetra at dawn, two armies facing",
         "Banners and ranks, equal natural human scale, no gore focus",
-        "Ornate lotus frame",
         "Not photoreal"
       ],
       "must_not_show": [
         "Photoreal",
         "Graphic gore",
-        "Giant scale mismatch",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
-        "white-bearded sage"
+        "white-bearded sage",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "second Arjuna",
+        "flower garland on Arjuna",
+        "broken bow",
+        "Giant scale mismatch"
       ],
       "props": [
         "banners",
         "chariots distant"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Wide dawn view of Kurukshetra: two great armies facing across a dusty sacred plain, banners saffron and gold, distant chariots. Epic quiet before war. Equal human scale. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Wide dawn view of Kurukshetra: two great armies facing across a dusty sacred plain, banners saffron and gold, distant chariots. Epic quiet before war. Equal human scale. Carved gold-and-lotus cartouche integrated. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Bhishma Parva · Bhagavad Gita opening (Debroy) — beat: On the field of Kurukshetra two oceans of men stand ready — kin against kin."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Bhishma Parva / Śrīmad Bhagavad Gītā — beat: On the field of Kurukshetra two oceans of men stand ready — kin against kin."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Bhishma Parva, Bhagavad Gita sections — beat: On the field of Kurukshetra two oceans of men stand ready — kin against kin."
+        }
+      ]
     },
     {
       "id": "field",
@@ -79,25 +110,54 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Chariot with white horses; Krishna as charioteer; one Arjuna standing with bow",
         "Arjuna gold crown, dark mustache, cream-white dhoti, quiver",
-        "Armies soft in background",
-        "Lotus frame"
+        "Armies soft in background"
       ],
       "must_not_show": [
         "Photoreal",
-        "Gore",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
         "white-bearded sage",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
         "second Arjuna",
-        "flower garland on Arjuna"
+        "flower garland on Arjuna",
+        "broken bow",
+        "Gore"
       ],
       "props": [
         "chariot",
         "Gandiva bow"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Ornate two-horse chariot between two armies. Krishna in yellow pitambar holds the reins as charioteer. Exactly one Arjuna: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva bow, looking toward the ranks. No Drona, no sage. Soft cream-saffron light. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Ornate two-horse chariot between two armies. Krishna in yellow pitambar holds the reins as charioteer. Exactly one Arjuna: gold crown, dark mustache, cream-white dhoti, quiver, Gandiva bow, looking toward the ranks. No Drona, no sage. Soft cream-saffron light. Carved gold-and-lotus cartouche integrated. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Bhishma Parva · Bhagavad Gita opening (Debroy) — beat: Arjuna asks Krishna to drive between the armies, that he may see whom he must face."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Bhishma Parva / Śrīmad Bhagavad Gītā — beat: Arjuna asks Krishna to drive between the armies, that he may see whom he must face."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Bhishma Parva, Bhagavad Gita sections — beat: Arjuna asks Krishna to drive between the armies, that he may see whom he must face."
+        }
+      ]
     },
     {
       "id": "despair",
@@ -110,25 +170,53 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Same Arjuna lock: gold crown, dark mustache, cream-white dhoti, quiver",
         "One Arjuna grief-stricken on chariot; intact Gandiva slipping from his hands",
-        "Krishna still charioteer with reins",
-        "Lotus frame"
+        "Krishna still charioteer with reins"
       ],
       "must_not_show": [
         "Photoreal",
-        "Gore battle close-up",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
         "white-bearded sage",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
         "second Arjuna",
         "flower garland on Arjuna",
-        "broken bow"
+        "broken bow",
+        "Gore battle close-up"
       ],
       "props": [
         "Gandiva bow lowered"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — slumps in grief; intact Gandiva slips from his hands. Krishna in yellow pitambar holds the reins. No Drona, no sage, no second warrior. Soft golden dust light. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — slumps in grief; intact Gandiva slips from his hands. Krishna in yellow pitambar holds the reins. No Drona, no sage, no second warrior. Soft golden dust light. Carved gold-and-lotus cartouche integrated. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Bhishma Parva · Bhagavad Gita opening (Debroy) — beat: He sees teachers, cousins, friends — and his bow Gandiva slips from his hands."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Bhishma Parva / Śrīmad Bhagavad Gītā — beat: He sees teachers, cousins, friends — and his bow Gandiva slips from his hands."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Bhishma Parva, Bhagavad Gita sections — beat: He sees teachers, cousins, friends — and his bow Gandiva slips from his hands."
+        }
+      ]
     },
     {
       "id": "counsel",
@@ -141,23 +229,52 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Same Arjuna lock: gold crown, dark mustache, cream-white dhoti, quiver",
         "Krishna turned toward Arjuna teaching calmly; Arjuna listening in grief",
-        "Chariot setting",
-        "Lotus frame"
+        "Chariot setting"
       ],
       "must_not_show": [
         "Photoreal",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
         "white-bearded sage",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
         "second Arjuna",
-        "flower garland on Arjuna"
+        "flower garland on Arjuna",
+        "broken bow"
       ],
       "props": [
         "chariot"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna in yellow pitambar turns with serene smile, speaking, reins in one hand. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — sits grieving but listening. No Drona, no sage. Soft sacred gold light. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna in yellow pitambar turns with serene smile, speaking, reins in one hand. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — sits grieving but listening. No Drona, no sage. Soft sacred gold light. Carved gold-and-lotus cartouche integrated. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Bhishma Parva · Bhagavad Gita opening (Debroy) — beat: Grief shakes the great archer. Krishna, calm as the sky, begins to speak."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Bhishma Parva / Śrīmad Bhagavad Gītā — beat: Grief shakes the great archer. Krishna, calm as the sky, begins to speak."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Bhishma Parva, Bhagavad Gita sections — beat: Grief shakes the great archer. Krishna, calm as the sky, begins to speak."
+        }
+      ]
     },
     {
       "id": "dharma",
@@ -170,22 +287,51 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Same Arjuna lock: gold crown, dark mustache, cream-white dhoti, quiver",
         "Teaching moment: Krishna gesturing with calm authority; Arjuna attentive",
-        "Subtle soft glow of wisdom, not full cosmic form yet",
-        "Lotus frame"
+        "Subtle soft glow of wisdom, not full cosmic form yet"
       ],
       "must_not_show": [
         "Photoreal",
-        "Horror",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
         "white-bearded sage",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
         "second Arjuna",
-        "flower garland on Arjuna"
+        "flower garland on Arjuna",
+        "broken bow",
+        "Horror"
       ],
       "props": [],
-      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna teaches with open hand of dharma and a gentle halo. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — looks up with understanding. No Drona, no sage, no third warrior. Cream-saffron sacred palette. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna teaches with open hand of dharma and a gentle halo. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — looks up with understanding. No Drona, no sage, no third warrior. Cream-saffron sacred palette. Carved gold-and-lotus cartouche integrated. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Bhishma Parva · Bhagavad Gita opening (Debroy) — beat: He teaches of the soul that is never slain, of duty without clinging to fruit."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Bhishma Parva / Śrīmad Bhagavad Gītā — beat: He teaches of the soul that is never slain, of duty without clinging to fruit."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Bhishma Parva, Bhagavad Gita sections — beat: He teaches of the soul that is never slain, of duty without clinging to fruit."
+        }
+      ]
     },
     {
       "id": "form",
@@ -198,24 +344,55 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Same Arjuna lock: gold crown, dark mustache, cream-white dhoti, quiver",
         "Tasteful Vishvarupa: Krishna radiant multi-armed cosmic form of light on chariot — charming comic sacred awe NOT horror CGI",
-        "Arjuna awed with hands joined",
-        "Lotus frame"
+        "Arjuna awed with hands joined"
       ],
       "must_not_show": [
-        "Horror gore",
-        "Photoreal CGI nightmare",
-        "Graphic death imagery",
+        "Photoreal",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
         "white-bearded sage",
-        "second Arjuna"
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "second Arjuna",
+        "flower garland on Arjuna",
+        "broken bow",
+        "Horror gore",
+        "Photoreal CGI nightmare",
+        "Graphic death imagery"
       ],
       "props": [
         "chariot"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna reveals a tasteful cosmic Vishvarupa above the chariot — many-armed radiant gold light, charming mythic style. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — kneels in awe with joined hands. No Drona, no sage. NOT horror CGI. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna reveals a tasteful cosmic Vishvarupa above the chariot — many-armed radiant gold light, charming mythic style. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — kneels in awe with joined hands. No Drona, no sage. NOT horror CGI. Carved gold-and-lotus cartouche integrated. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Bhishma Parva · Bhagavad Gita opening (Debroy) — beat: At Arjuna’s prayer he shows the cosmic form — a universe of light upon the chariot."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Bhishma Parva / Śrīmad Bhagavad Gītā — beat: At Arjuna’s prayer he shows the cosmic form — a universe of light upon the chariot."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Bhishma Parva, Bhagavad Gita sections — beat: At Arjuna’s prayer he shows the cosmic form — a universe of light upon the chariot."
+        }
+      ]
     },
     {
       "id": "resolve",
@@ -228,23 +405,52 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Same Arjuna lock: gold crown, dark mustache, cream-white dhoti, quiver",
-        "Arjuna standing resolved, lifting Gandiva; Krishna smiling as charioteer",
-        "Lotus frame"
+        "Arjuna standing resolved, lifting Gandiva; Krishna smiling as charioteer"
       ],
       "must_not_show": [
         "Photoreal",
-        "Gore",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
         "white-bearded sage",
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
         "second Arjuna",
-        "flower garland on Arjuna"
+        "flower garland on Arjuna",
+        "broken bow",
+        "Gore"
       ],
       "props": [
         "Gandiva raised"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — stands firm lifting Gandiva ready (not overhead like a trophy). Krishna in yellow pitambar holds reins. No Drona, no sage. Soft gold hour. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — stands firm lifting Gandiva ready (not overhead like a trophy). Krishna in yellow pitambar holds reins. No Drona, no sage. Soft gold hour. Carved gold-and-lotus cartouche integrated. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Bhishma Parva · Bhagavad Gita opening (Debroy) — beat: Doubt falls away. Arjuna takes up his bow again, mind steady in dharma."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Bhishma Parva / Śrīmad Bhagavad Gītā — beat: Doubt falls away. Arjuna takes up his bow again, mind steady in dharma."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Bhishma Parva, Bhagavad Gita sections — beat: Doubt falls away. Arjuna takes up his bow again, mind steady in dharma."
+        }
+      ]
     },
     {
       "id": "conch",
@@ -258,24 +464,54 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Same Arjuna lock: gold crown, dark mustache, cream-white dhoti, quiver",
         "Krishna sounding conch; Arjuna ready with bow; banners and armies responding",
-        "Epic opening of war without graphic gore",
-        "Lotus frame"
+        "Epic opening of war without graphic gore"
       ],
       "must_not_show": [
         "Photoreal",
-        "Gore",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
         "white-bearded sage",
-        "second Arjuna"
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "second Arjuna",
+        "flower garland on Arjuna",
+        "broken bow",
+        "Gore"
       ],
       "props": [
         "conch shell",
         "banners"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna sounds the Panchajanya conch. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — ready with bow. No Drona, no sage. Soft gold rings of sound. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Same two-horse chariot. Krishna sounds the Panchajanya conch. Exactly one Arjuna — gold crown, dark mustache, cream-white dhoti, quiver — ready with bow. No Drona, no sage. Soft gold rings of sound. Carved gold-and-lotus cartouche integrated. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Bhishma Parva · Bhagavad Gita opening (Debroy) — beat: Conches sound across the field. The song is sung — and the war of ages begins."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Bhishma Parva / Śrīmad Bhagavad Gītā — beat: Conches sound across the field. The song is sung — and the war of ages begins."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Bhishma Parva, Bhagavad Gita sections — beat: Conches sound across the field. The song is sung — and the war of ages begins."
+        }
+      ]
     },
     {
       "id": "wide-gold",
@@ -288,22 +524,71 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
+        "Native 3:2 1536×1024",
+        "Heroic medium — named figures fill the frame",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Premium painted comic quality",
         "Premium quality gold closing mood",
         "Same Arjuna lock: gold crown, dark mustache, cream-white dhoti",
-        "Chariot silhouette or calm Krishna-Arjuna before golden field",
-        "Lotus frame"
+        "Chariot silhouette or calm Krishna-Arjuna before golden field"
       ],
       "must_not_show": [
         "Photoreal",
-        "Gore",
+        "Graphic gore",
+        "Sexual violence imagery",
+        "16:9 banner",
+        "1280×720",
+        "Tiny distant heroes",
+        "Thin sticker border on cream mat",
+        "Four corner lotuses on cream mat only",
+        "Ep01 plate-wide-gold as style ref",
         "Drona",
         "white-bearded sage",
-        "second Arjuna"
+        "Drona as primary speaker unless cast_present",
+        "plaque text or title lettering in frame",
+        "CGI horror cosmic form",
+        "Krishna with flute as primary prop",
+        "second Arjuna",
+        "flower garland on Arjuna",
+        "broken bow",
+        "Gore"
       ],
       "props": [
         "chariot silhouette"
       ],
-      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold Kurukshetra dawn; same two-horse chariot with Krishna charioteer and one crowned Arjuna small against a luminous sky. No Drona, no sage. Quiet epic light before the storm. Ornate lotus frame. Not photoreal."
+      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold Kurukshetra dawn; same two-horse chariot with Krishna charioteer and one crowned Arjuna small against a luminous sky. No Drona, no sage. Quiet epic light before the storm. Carved gold-and-lotus cartouche integrated. Heroic medium. Native 3:2 1536×1024. Not photoreal.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Bhishma Parva · Bhagavad Gita opening (Debroy) — beat: Thus on Kurukshetra the Bhagavad Gita was spoken — light before the storm."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Bhishma Parva / Śrīmad Bhagavad Gītā — beat: Thus on Kurukshetra the Bhagavad Gita was spoken — light before the storm."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Bhishma Parva, Bhagavad Gita sections — beat: Thus on Kurukshetra the Bhagavad Gita was spoken — light before the storm."
+        }
+      ]
     }
-  ]
+  ],
+  "stills_status": {
+    "bar": "1536×1024 3:2 Ep 09/10",
+    "current": "1536×1024 already on disk (historic quality-bar episode; Aug 2025 restyle to Ep10 bar)",
+    "binaries_untouched": true,
+    "imagine": "No SuperGrok regen required this pass — dims already ≥1536×1024; GATE C PASS",
+    "next": "Chief may skip stills remaster; optional quality eye-pass only if cartouche/cast drift found"
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Bhishma Parva · Bhagavad Gita · Kurukshetra opens · Arjuna’s despair · Krishna’s teaching · Vishvarupa · resolve · conches",
+    "divergence": "BORI CE / Debroy place the Bhagavad Gita dialogue at the opening of Bhishma Parva (Arjuna’s despondency, teaching of the eternal self / karma-yoga, the cosmic form, Arjuna’s resolve, sounding of conches). Ganguli’s vulgate English maps the same chariot beats (Sanjaya’s report). Gita Press Gorakhpur prints the Gita text under Bhishma with the same arc. Beats agree: armies → chariot between ranks → Gandiva slips → counsel → dharma teaching → Vishvarupa → resolve → conches → closing light. Exact śloka numbering varies by recension; this episode keeps the sacred teaching without gore battle focus.",
+    "chosen": "Gita Press Gorakhpur + BORI/Debroy for the Gita beat map. Ganguli for English chariot / teaching wording.",
+    "notes": "Not TV. Comic-mythology only. Arjuna = gold crown, dark mustache, cream-white dhoti, quiver, Gandiva. Krishna = yellow pitambar, peacock optional, garland, charioteer reins — never flute-primary, never bow. Vishvarupa = tasteful comic radiance, not horror CGI. Never attach Ep01 plate-wide-gold as Imagine ref. No Drona / white-bearded sage unless cast_present."
+  }
 }

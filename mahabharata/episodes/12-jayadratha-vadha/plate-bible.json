@@ -18,11 +18,13 @@
   "imagine_refs": [
     "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
     "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
     "episodes/12-jayadratha-vadha/stills/_locks/field14-master.jpg",
     "episodes/12-jayadratha-vadha/stills/_locks/arjuna.jpg",
     "episodes/12-jayadratha-vadha/stills/_locks/jayadratha.jpg",
     "episodes/12-jayadratha-vadha/stills/_locks/drona.jpg",
-    "episodes/12-jayadratha-vadha/stills/_locks/vriddhakshatra.jpg"
+    "episodes/12-jayadratha-vadha/stills/_locks/vriddhakshatra.jpg",
+    "episodes/12-jayadratha-vadha/stills/_locks/krishna.jpg"
   ],
   "photoreal_allowed": false,
   "apparatus": {},
@@ -62,7 +64,7 @@
     {
       "id": "wide",
       "file": "plate-wide.jpg",
-      "beat_text": "Dawn of the fourteenth. Arjuna’s vow hangs over the field: Jayadratha dies before sunset, or I do.",
+      "beat_text": "Dawn of the fourteenth. Arjuna has sworn: Jayadratha dies before sunset — or Arjuna enters the fire.",
       "cast_present": [
         "arjuna",
         "krishna"
@@ -98,7 +100,21 @@
         "Gandiva",
         "banners distant"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna and Krishna on the dawn chariot, cream-saffron-gold hour. Krishna dusty-blue skin, gold crown with one peacock feather, yellow pitambar, flower garlands, holding charioteer reins — match Ep 09 Krishna exactly. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva. Distant banners only. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna and Krishna on the dawn chariot, cream-saffron-gold hour. Krishna dusty-blue skin, gold crown with one peacock feather, yellow pitambar, flower garlands, holding charioteer reins — match Ep 09 Krishna exactly. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva. Distant banners only. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Jayadratha-vadha / fourteenth day (Debroy) — beat: Dawn of the fourteenth. Arjuna has sworn: Jayadratha dies before sunset — or Arjuna enters the fire."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Jayadratha-vadha — beat: Dawn of the fourteenth. Arjuna has sworn: Jayadratha dies before sunset — or Arjuna enters the fire."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Jayadratha sections — beat: Dawn of the fourteenth. Arjuna has sworn: Jayadratha dies before sunset — or Arjuna enters the fire."
+        }
+      ]
     },
     {
       "id": "vow",
@@ -138,7 +154,21 @@
         "reins",
         "Gandiva"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna as charioteer takes the reins; Arjuna beside him, cream-white dhoti, gold crown, dark mustache, quiver. Krishna dusty-blue, yellow pitambar, peacock feather, flower garlands, reins in both hands — Ep 09 look lock. They drive into a wall of distant warriors. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna as charioteer takes the reins; Arjuna beside him, cream-white dhoti, gold crown, dark mustache, quiver. Krishna dusty-blue, yellow pitambar, peacock feather, flower garlands, reins in both hands — Ep 09 look lock. They drive into a wall of distant warriors. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Jayadratha-vadha / fourteenth day (Debroy) — beat: Krishna takes the reins. They drive into the host — the Sindhu king is hidden behind a wall of men."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Jayadratha-vadha — beat: Krishna takes the reins. They drive into the host — the Sindhu king is hidden behind a wall of men."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Jayadratha sections — beat: Krishna takes the reins. They drive into the host — the Sindhu king is hidden behind a wall of men."
+        }
+      ]
     },
     {
       "id": "wall",
@@ -177,7 +207,21 @@
         "Jayadratha's shield",
         "ranks"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona the acharya-warrior holds a living wall of men, saffron angavastram over pale gold-white engraved armor, long white beard, saffron topknot, bow of the guru. Behind him Jayadratha the Sindhu king waits: jeweled royal crown, crimson-gold armor, proud mustache, shield. Not a garden sage. Not Krishna. Not Arjuna. Carved gold-and-lotus cartouche, cream-saffron-gold hour. Not photoreal. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona the acharya-warrior holds a living wall of men, saffron angavastram over pale gold-white engraved armor, long white beard, saffron topknot, bow of the guru. Behind him Jayadratha the Sindhu king waits: jeweled royal crown, crimson-gold armor, proud mustache, shield. Not a garden sage. Not Krishna. Not Arjuna. Carved gold-and-lotus cartouche, cream-saffron-gold hour. Not photoreal. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Jayadratha-vadha / fourteenth day (Debroy) — beat: Drona holds that wall. Jayadratha waits in the rear, beyond every gold shaft."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Jayadratha-vadha — beat: Drona holds that wall. Jayadratha waits in the rear, beyond every gold shaft."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Jayadratha sections — beat: Drona holds that wall. Jayadratha waits in the rear, beyond every gold shaft."
+        }
+      ]
     },
     {
       "id": "hunt",
@@ -217,7 +261,21 @@
         "chariot",
         "reins"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna charioteer (dusty-blue, yellow pitambar, peacock feather, flower garlands, reins — Ep 09 lock) cuts a path; Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva loosing gold shafts of light through parting distant ranks. No Jayadratha in frame. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna charioteer (dusty-blue, yellow pitambar, peacock feather, flower garlands, reins — Ep 09 lock) cuts a path; Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva loosing gold shafts of light through parting distant ranks. No Jayadratha in frame. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Jayadratha-vadha / fourteenth day (Debroy) — beat: Krishna cuts a path. Arjuna’s arrows clear the ranks — and still the king of Sindhu is not seen."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Jayadratha-vadha — beat: Krishna cuts a path. Arjuna’s arrows clear the ranks — and still the king of Sindhu is not seen."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Jayadratha sections — beat: Krishna cuts a path. Arjuna’s arrows clear the ranks — and still the king of Sindhu is not seen."
+        }
+      ]
     },
     {
       "id": "dusk",
@@ -256,12 +314,26 @@
         "reins",
         "leaning sun"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna and Krishna on the chariot as the sun leans west, cream-saffron dusk. Krishna dusty-blue, gold crown, one peacock feather, yellow pitambar, flower garlands, charioteer reins — Ep 09 look lock. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, gaze on the sun. Tension without gore. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No Jayadratha."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna and Krishna on the chariot as the sun leans west, cream-saffron dusk. Krishna dusty-blue, gold crown, one peacock feather, yellow pitambar, flower garlands, charioteer reins — Ep 09 look lock. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, gaze on the sun. Tension without gore. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No Jayadratha.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Jayadratha-vadha / fourteenth day (Debroy) — beat: The sun leans west. The vow grows thin. Jayadratha still lives."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Jayadratha-vadha — beat: The sun leans west. The vow grows thin. Jayadratha still lives."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Jayadratha sections — beat: The sun leans west. The vow grows thin. Jayadratha still lives."
+        }
+      ]
     },
     {
       "id": "veil",
       "file": "plate-veil.jpg",
-      "beat_text": "Krishna raises his disc. A false dusk covers the field — and Jayadratha comes forth to laugh.",
+      "beat_text": "Krishna veils the sun. A false dusk covers the field — and Jayadratha steps out, sure the day is done.",
       "cast_present": [
         "krishna",
         "arjuna",
@@ -276,9 +348,9 @@
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
         "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
-        "Krishna raising a gold disc that veils the sun — false dusk, still cream-saffron-gold",
+        "Krishna raising a gold disc that veils the sun — false dusk (the field thinks sunset has come)",
         "Arjuna gold crown, dark mustache, cream-white dhoti, quiver",
-        "Jayadratha coming forth: jeweled crown, crimson-gold armor, proud laugh, not yet struck"
+        "Jayadratha coming forth sure the vow failed: jeweled crown, crimson-gold armor, proud laugh, not yet struck"
       ],
       "must_not_show": [
         "Photoreal",
@@ -299,12 +371,26 @@
         "chariot",
         "Jayadratha's shield"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna (dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer — Ep 09 lock) raises a gold disc that veils the sun; a false dusk. Arjuna gold crown, dark mustache, cream-white dhoti, quiver. Jayadratha the Sindhu king comes forth to laugh, jeweled crown, crimson-gold armor. No blood. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna (dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer — Ep 09 lock) raises a gold disc that veils the sun; a false dusk so the field thinks sunset has come. Arjuna gold crown, dark mustache, cream-white dhoti, quiver. Jayadratha the Sindhu king steps forth sure the vow has failed, jeweled crown, crimson-gold armor — laughing, not yet struck. No blood. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Jayadratha-vadha / fourteenth day (Debroy) — beat: Krishna veils the sun. A false dusk covers the field — and Jayadratha steps out, sure the day is done."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Jayadratha-vadha — beat: Krishna veils the sun. A false dusk covers the field — and Jayadratha steps out, sure the day is done."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Jayadratha sections — beat: Krishna veils the sun. A false dusk covers the field — and Jayadratha steps out, sure the day is done."
+        }
+      ]
     },
     {
       "id": "reveal",
       "file": "plate-reveal.jpg",
-      "beat_text": "The disc falls. The sun still stands. The Sindhu king is exposed.",
+      "beat_text": "The veil lifts. The sun still stands. The Sindhu king is exposed.",
       "cast_present": [
         "arjuna",
         "krishna",
@@ -319,7 +405,7 @@
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
         "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
-        "Sun revealed again in cream-saffron sky; Krishna's disc lowered, reins in hand",
+        "False dusk ends: sun revealed again in cream-saffron sky; Krishna’s disc lowered, reins in hand",
         "Arjuna gold crown, dark mustache, cream-white dhoti, Gandiva raised",
         "Jayadratha exposed, jeweled crown, crimson-gold armor, shock not gore"
       ],
@@ -342,12 +428,26 @@
         "sun",
         "disc lowered"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna (Ep 09 lock: dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins) lowers the disc; the sun still stands. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva raised. Jayadratha exposed, jeweled crown, crimson-gold armor — shock, not wounds. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna (Ep 09 lock: dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins) lowers the disc; the false dusk ends and the sun still stands. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva raised. Jayadratha exposed, jeweled crown, crimson-gold armor — shock, not wounds. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Jayadratha-vadha / fourteenth day (Debroy) — beat: The veil lifts. The sun still stands. The Sindhu king is exposed."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Jayadratha-vadha — beat: The veil lifts. The sun still stands. The Sindhu king is exposed."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Jayadratha sections — beat: The veil lifts. The sun still stands. The Sindhu king is exposed."
+        }
+      ]
     },
     {
       "id": "shaft",
       "file": "plate-shaft.jpg",
-      "beat_text": "Arjuna looses. The arrow carries the crowned head as gold light into his father’s lap.",
+      "beat_text": "Arjuna looses. Gold light carries the crowned head into his father’s lap.",
       "cast_present": [
         "arjuna",
         "jayadratha",
@@ -385,12 +485,26 @@
         "gold shaft-light",
         "Sindhu throne"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva loosing a gold shaft of light. The Sindhu king's jeweled crown travels as a disc of gold light into the lap of an aged father-king (Vriddhakshatra): white hair, jeweled Sindhu crown, crimson-gold royal robes, seated — not a saffron sage, not Drona. No blood, no severed neck, no gore. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No flute."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva loosing a gold shaft of light. The Sindhu king’s jeweled crown travels as a disc of gold light into the lap of aged father-king Vriddhakshatra: white hair, jeweled Sindhu crown, crimson-gold royal robes, seated — not a saffron sage, not Drona. No blood, no severed neck, no gore. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No flute.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Jayadratha-vadha / fourteenth day (Debroy) — beat: Arjuna looses. Gold light carries the crowned head into his father’s lap."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Jayadratha-vadha — beat: Arjuna looses. Gold light carries the crowned head into his father’s lap."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Jayadratha sections — beat: Arjuna looses. Gold light carries the crowned head into his father’s lap."
+        }
+      ]
     },
     {
       "id": "wide-gold",
       "file": "plate-wide-gold.jpg",
-      "beat_text": "Thus the fourteenth day ends. Jayadratha falls — and a kept word outlives the sun.",
+      "beat_text": "Thus the fourteenth day ends. The vow is kept — and Jayadratha falls with the true dusk.",
       "cast_present": [
         "arjuna",
         "krishna"
@@ -425,7 +539,38 @@
         "reins",
         "Gandiva at rest"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna and Krishna on the chariot at true dusk after the vow. Krishna dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins — Ep 09 look lock. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva at rest. Cream-saffron-gold quiet. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore. No corpse."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Arjuna and Krishna on the chariot at true dusk after the vow. Krishna dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins — Ep 09 look lock. Arjuna gold crown, dark mustache, cream-white dhoti, quiver, Gandiva at rest. Cream-saffron-gold quiet. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore. No corpse.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Jayadratha-vadha / fourteenth day (Debroy) — beat: Thus the fourteenth day ends. The vow is kept — and Jayadratha falls with the true dusk."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Jayadratha-vadha — beat: Thus the fourteenth day ends. The vow is kept — and Jayadratha falls with the true dusk."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Jayadratha sections — beat: Thus the fourteenth day ends. The vow is kept — and Jayadratha falls with the true dusk."
+        }
+      ]
     }
-  ]
+  ],
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Drona Parva · fourteenth day · Arjuna’s vow · Jayadratha-vadha · false dusk · Vriddhakshatra",
+    "divergence": "BORI CE / Debroy place Arjuna’s vow to slay Jayadratha before sunset (or enter fire), Drona’s protective array, the day-long hunt, Krishna’s sun-veiling stratagem, Jayadratha’s exposure, and the head carried to Vriddhakshatra in Drona Parva (Jayadratha-vadha). Ganguli’s vulgate English maps the same vow–wall–false dusk–kill beats. Gita Press Gorakhpur tells the same fourteenth-day arc under its Drona numbering. Beats agree: vow → wall → hunt → leaning sun → false dusk → reveal → shaft → kept word. Exact wording of the sun-illusion (disc / maya) varies by recension; this episode keeps Krishna’s false dusk as educational cause→effect without gore.",
+    "chosen": "Gita Press Gorakhpur + BORI/Debroy overlap for the vow–false-dusk–vadha itself. Ganguli for English hunt / exposure wording.",
+    "notes": "Not TV. Comic-mythology only. No gore: gold shaft-light; crowned head as disc of light into the father’s lap. Krishna = Ep 09 look lock (charioteer, not flute). Drona on wall plate only. Vriddhakshatra ≠ Drona. Never attach Ep01 plate-wide-gold or this episode’s plate-wide-gold as Imagine refs. Stills binaries untouched this logic pass — GATE C not re-run."
+  },
+  "stills_status": {
+    "bar": "1536×1024 3:2 Ep 09/10",
+    "binaries_untouched": true,
+    "imagine": "No SuperGrok / Imagine this pass — logic + sources only",
+    "next": "GATE C visual reports left as-is; stills untouched this pass — C not re-run."
+  }
 }

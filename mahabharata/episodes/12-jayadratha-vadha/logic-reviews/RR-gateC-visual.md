@@ -52,3 +52,9 @@ python3 tools/stills_review.py episodes/12-jayadratha-vadha --require
 - [x] No 16:9 / 720p plates
 - [x] Eye-match to Ep 10 vow (density), not Ep 01 gold
 - [x] Krishna (if present) eye-matches Ep 09 lock — not a drifted face
+
+---
+
+## 2026-09-18 logic pass note
+
+stills untouched this pass — C not re-run.

@@ -1,6 +1,7 @@
 /**
  * Episode 12 — Jayadratha Falls
  * Drona Parva · fourteenth day; Arjuna’s vow; the false dusk
+ * Logic pass: vow → wall → false dusk → kill (BORI/Debroy + Gita Press + Ganguli)
  */
 export const EPISODE = {
   id: "12",
@@ -13,7 +14,7 @@ export const EPISODE = {
     provider: "grok-tts",
     voice_id: "orion",
     cache: "ep12-orion",
-    note: "Kathavachak — grok-tts Orion (same pipeline as Ep 09–11)",
+    note: "Kathavachak — grok-tts Orion (same pipeline as Ep 09–11). Audio may lag script until Orion re-render.",
     base: "episodes/12-jayadratha-vadha/audio/",
   },
   music: {
@@ -58,7 +59,7 @@ export const EPISODE = {
       panY: 0,
       audio: "orion-00.mp3",
       who: "Narrator",
-      text: "Dawn of the fourteenth. Arjuna’s vow hangs over the field: Jayadratha dies before sunset, or I do.",
+      text: "Dawn of the fourteenth. Arjuna has sworn: Jayadratha dies before sunset — or Arjuna enters the fire.",
     },
     {
       t: 12,
@@ -108,7 +109,7 @@ export const EPISODE = {
       panY: -0.04,
       audio: "orion-05.mp3",
       who: "Narrator",
-      text: "Krishna raises his disc. A false dusk covers the field — and Jayadratha comes forth to laugh.",
+      text: "Krishna veils the sun. A false dusk covers the field — and Jayadratha steps out, sure the day is done.",
     },
     {
       t: 72,
@@ -118,7 +119,7 @@ export const EPISODE = {
       panY: -0.02,
       audio: "orion-06.mp3",
       who: "Narrator",
-      text: "The disc falls. The sun still stands. The Sindhu king is exposed.",
+      text: "The veil lifts. The sun still stands. The Sindhu king is exposed.",
     },
     {
       t: 84,
@@ -128,7 +129,7 @@ export const EPISODE = {
       panY: 0.02,
       audio: "orion-07.mp3",
       who: "Narrator",
-      text: "Arjuna looses. The arrow carries the crowned head as gold light into his father’s lap.",
+      text: "Arjuna looses. Gold light carries the crowned head into his father’s lap.",
     },
     {
       t: 95,
@@ -138,7 +139,7 @@ export const EPISODE = {
       panY: 0.02,
       audio: "orion-08.mp3",
       who: "Narrator",
-      text: "Thus the fourteenth day ends. Jayadratha falls — and a kept word outlives the sun.",
+      text: "Thus the fourteenth day ends. The vow is kept — and Jayadratha falls with the true dusk.",
     },
     {
       t: 102,

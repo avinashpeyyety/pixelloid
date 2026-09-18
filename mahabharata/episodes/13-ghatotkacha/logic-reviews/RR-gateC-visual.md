@@ -36,3 +36,9 @@ python3 tools/stills_review.py episodes/13-ghatotkacha --require
 - [x] No 16:9 / 720p
 - [x] Krishna eye-matches Ep 09 lock on Krishna plates
 - [x] Ghatotkacha is an adult warrior prince
+
+---
+
+## 2026-09-18 logic pass note
+
+stills untouched this pass — C not re-run.

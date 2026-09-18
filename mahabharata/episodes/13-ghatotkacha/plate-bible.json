@@ -18,11 +18,13 @@
   "imagine_refs": [
     "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
     "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
     "episodes/13-ghatotkacha/stills/_locks/night-master.jpg",
     "episodes/13-ghatotkacha/stills/_locks/ghatotkacha.jpg",
     "episodes/13-ghatotkacha/stills/_locks/karna.jpg",
     "episodes/13-ghatotkacha/stills/_locks/duryodhana.jpg",
-    "episodes/13-ghatotkacha/stills/_locks/arjuna.jpg"
+    "episodes/13-ghatotkacha/stills/_locks/arjuna.jpg",
+    "episodes/13-ghatotkacha/stills/_locks/krishna.jpg"
   ],
   "photoreal_allowed": false,
   "apparatus": {},
@@ -62,7 +64,7 @@
     {
       "id": "wide",
       "file": "plate-wide.jpg",
-      "beat_text": "Night after the vow. Bhima’s son Ghatotkacha darkens the field — a rakshasa-prince grown for this hour.",
+      "beat_text": "Night after the vow. The Pandavas need relief — Krishna turns to Bhima’s son Ghatotkacha.",
       "cast_present": [
         "ghatotkacha"
       ],
@@ -74,7 +76,7 @@
         "Heroic medium — named figures fill the frame",
         "Native 3:2 1536×1024",
         "Cream-saffron-gold cartouche; night indigo-gold hour inside",
-        "Ghatotkacha adult rakshasa-kshatriya prince: dark mustache, small gold diadem, storm-indigo and gold engraved armor, mace, heroic medium, never a child",
+        "Ghatotkacha adult rakshasa-kshatriya prince: dark mustache, small gold diadem, storm-indigo and gold engraved armor, mace, heroic medium, never a child — called for night relief",
         "Night Kurukshetra inside the gold cartouche: indigo sky, gold moon, distant ranks only"
       ],
       "must_not_show": [
@@ -99,55 +101,26 @@
         "night banners",
         "gold moon"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Ghatotkacha, adult rakshasa-kshatriya prince of Bhima, dark mustache, small gold diadem, storm-indigo and gold engraved armor, cream sash, mace, filling the frame. Never a child, never a horror demon, equal human scale. Night field inside a carved gold-and-lotus cartouche, indigo sky, gold moon, distant ranks only. Cream-saffron-gold frame. Not photoreal. No Drona. No Krishna. No flute. No gore."
-    },
-    {
-      "id": "plea",
-      "file": "plate-plea.jpg",
-      "beat_text": "Duryodhana finds Karna: the night is eating the host — use the dart, or we are lost.",
-      "cast_present": [
-        "duryodhana",
-        "karna"
-      ],
-      "has_fish_apparatus": false,
-      "is_aim_beat": false,
-      "must_show": [
-        "Premium painted comic quality",
-        "Carved gold-and-lotus cartouche integrated into the painting",
-        "Heroic medium — named figures fill the frame",
-        "Native 3:2 1536×1024",
-        "Cream-saffron-gold cartouche; night indigo-gold hour inside",
-        "Duryodhana: jeweled Kuru crown, gold-saffron Kaurava armor, mace, proud mustache",
-        "Karna: Anga diadem, deep gold-crimson armor, Vijaya bow, the unused gold dart at his side — distinct from Arjuna, no peacock, no flower garland"
-      ],
-      "must_not_show": [
-        "Photoreal",
-        "Graphic gore",
-        "16:9 banner",
-        "thin lotus sticker on cream mat",
-        "tiny distant heroes as the A-shot",
-        "flute",
-        "child Krishna",
-        "child Ghatotkacha",
-        "horror demon",
-        "Drona",
-        "white-bearded sage",
-        "Krishna",
-        "Arjuna",
-        "Ghatotkacha",
-        "peacock feather on Karna"
-      ],
-      "props": [
-        "Vijaya",
-        "Vasavi dart",
-        "mace"
-      ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Duryodhana the Kaurava king in jeweled crown and gold-saffron armor pleads with Karna at night. Karna: adult king of Anga, proud mustache, jeweled Anga diadem, deep gold and crimson engraved armor, Vijaya bow, a gold spear-dart of light unused at his side. Not Arjuna, no peacock feather, no flower garland, no divine kavacha. Carved gold-and-lotus cartouche, indigo night inside. Not photoreal. No Drona. No Krishna. No Ghatotkacha. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Ghatotkacha, adult rakshasa-kshatriya prince of Bhima, dark mustache, small gold diadem, storm-indigo and gold engraved armor, cream sash, mace, filling the frame — called for night relief. Never a child, never a horror demon, equal human scale. Night field inside a carved gold-and-lotus cartouche, indigo sky, gold moon, distant ranks only. Cream-saffron-gold frame. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Ghatotkacha-vadha / night of the fourteenth (Debroy) — beat: Night after the vow. The Pandavas need relief — Krishna turns to Bhima’s son Ghatotkacha."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Ghatotkacha / Vasavi Shakti — beat: Night after the vow. The Pandavas need relief — Krishna turns to Bhima’s son Ghatotkacha."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Ghatotkacha sections — beat: Night after the vow. The Pandavas need relief — Krishna turns to Bhima’s son Ghatotkacha."
+        }
+      ]
     },
     {
       "id": "storm",
       "file": "plate-storm.jpg",
-      "beat_text": "Illusions wheel over the Kauravas: elephants of mist, a storm of banners — no blood.",
+      "beat_text": "Unleashed at night, Ghatotkacha storms the Kauravas: elephants of mist, a storm of banners — no blood.",
       "cast_present": [
         "ghatotkacha"
       ],
@@ -184,12 +157,83 @@
         "mist elephants",
         "banners"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Ghatotkacha adult rakshasa-kshatriya prince, dark mustache, small gold diadem, storm-indigo and gold armor, mace raised. Behind him illusions: elephants of mist, a storm of gold banners wheeling — no blood, no viscera. Never a child, never a horror demon. Carved gold-and-lotus cartouche, indigo-gold night. Not photoreal. No Drona. No Krishna. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Ghatotkacha adult rakshasa-kshatriya prince, dark mustache, small gold diadem, storm-indigo and gold armor, mace raised. Behind him illusions: elephants of mist, a storm of gold banners wheeling — no blood, no viscera. Never a child, never a horror demon. Carved gold-and-lotus cartouche, indigo-gold night. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Ghatotkacha-vadha / night of the fourteenth (Debroy) — beat: Unleashed at night, Ghatotkacha storms the Kauravas: elephants of mist, a storm of banners — no blood."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Ghatotkacha / Vasavi Shakti — beat: Unleashed at night, Ghatotkacha storms the Kauravas: elephants of mist, a storm of banners — no blood."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Ghatotkacha sections — beat: Unleashed at night, Ghatotkacha storms the Kauravas: elephants of mist, a storm of banners — no blood."
+        }
+      ]
+    },
+    {
+      "id": "plea",
+      "file": "plate-plea.jpg",
+      "beat_text": "Duryodhana finds Karna: the night is eating the host — use Indra’s dart, or we are lost.",
+      "cast_present": [
+        "duryodhana",
+        "karna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold cartouche; night indigo-gold hour inside",
+        "Duryodhana: jeweled Kuru crown, gold-saffron Kaurava armor, mace, proud mustache — pleading after the night storm",
+        "Karna: Anga diadem, deep gold-crimson armor, Vijaya bow, the unused Vasavi Shakti (Indra’s one-use gold dart) at his side — distinct from Arjuna, no peacock, no flower garland"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ghatotkacha",
+        "horror demon",
+        "Drona",
+        "white-bearded sage",
+        "Krishna",
+        "Arjuna",
+        "Ghatotkacha",
+        "peacock feather on Karna"
+      ],
+      "props": [
+        "Vijaya",
+        "Vasavi dart",
+        "mace"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Duryodhana the Kaurava king in jeweled crown and gold-saffron armor pleads with Karna at night after Ghatotkacha’s storm. Karna: adult king of Anga, proud mustache, jeweled Anga diadem, deep gold and crimson engraved armor, Vijaya bow, Indra’s gold spear-dart of light still unused at his side. Not Arjuna, no peacock feather, no flower garland, no divine kavacha. Carved gold-and-lotus cartouche, indigo night inside. Not photoreal. No Drona. No Krishna. No Ghatotkacha. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Ghatotkacha-vadha / night of the fourteenth (Debroy) — beat: Duryodhana finds Karna: the night is eating the host — use Indra’s dart, or we are lost."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Ghatotkacha / Vasavi Shakti — beat: Duryodhana finds Karna: the night is eating the host — use Indra’s dart, or we are lost."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Ghatotkacha sections — beat: Duryodhana finds Karna: the night is eating the host — use Indra’s dart, or we are lost."
+        }
+      ]
     },
     {
       "id": "counsel",
       "file": "plate-counsel.jpg",
-      "beat_text": "Krishna, calm at the reins, knows the dart that was kept for Arjuna.",
+      "beat_text": "Krishna, calm at the reins, knows that dart was kept for Arjuna.",
       "cast_present": [
         "krishna",
         "arjuna"
@@ -227,7 +271,21 @@
         "reins",
         "Gandiva"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna as charioteer at night, dusty-blue skin, gold crown with one peacock feather, yellow pitambar, flower garlands, holding charioteer reins — match Ep 09 Krishna exactly. Arjuna beside him, gold crown, dark mustache, cream-white dhoti, quiver, Gandiva. Calm knowing. Carved gold-and-lotus cartouche, indigo-gold night. Not photoreal. No Drona. No flute. No gore. No Ghatotkacha."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna as charioteer at night, dusty-blue skin, gold crown with one peacock feather, yellow pitambar, flower garlands, holding charioteer reins — match Ep 09 Krishna exactly. Arjuna beside him, gold crown, dark mustache, cream-white dhoti, quiver, Gandiva. Calm knowing. Carved gold-and-lotus cartouche, indigo-gold night. Not photoreal. No Drona. No flute. No gore. No Ghatotkacha.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Ghatotkacha-vadha / night of the fourteenth (Debroy) — beat: Krishna, calm at the reins, knows that dart was kept for Arjuna."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Ghatotkacha / Vasavi Shakti — beat: Krishna, calm at the reins, knows that dart was kept for Arjuna."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Ghatotkacha sections — beat: Krishna, calm at the reins, knows that dart was kept for Arjuna."
+        }
+      ]
     },
     {
       "id": "dart",
@@ -244,7 +302,7 @@
         "Heroic medium — named figures fill the frame",
         "Native 3:2 1536×1024",
         "Cream-saffron-gold cartouche; night indigo-gold hour inside",
-        "Karna adult king of Anga, proud mustache, Anga diadem, deep gold-crimson armor, lifting a gold spear-dart of light",
+        "Karna adult king of Anga, proud mustache, Anga diadem, deep gold-crimson armor, lifting the Vasavi Shakti — Indra’s one-use gold spear of light (never twice)",
         "Heroic medium, the Shakti as sacred gold lightning, not gore"
       ],
       "must_not_show": [
@@ -268,7 +326,21 @@
         "Vasavi Shakti",
         "Vijaya"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Karna, king of Anga, proud mustache, jeweled Anga diadem, deep gold and crimson engraved armor, lifting the Vasavi Shakti as a gold spear of light. Not Arjuna, no peacock, no flower garland, no kavacha. Carved gold-and-lotus cartouche, indigo night. Not photoreal. No Drona. No Krishna. No Ghatotkacha. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Karna, king of Anga, proud mustache, jeweled Anga diadem, deep gold and crimson engraved armor, lifting the Vasavi Shakti — Indra’s one-use gold spear of light, never twice. Not Arjuna, no peacock, no flower garland, no kavacha. Carved gold-and-lotus cartouche, indigo night. Not photoreal. No Drona. No Krishna. No Ghatotkacha. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Ghatotkacha-vadha / night of the fourteenth (Debroy) — beat: Karna lifts the Vasavi Shakti — one bolt, given by Indra, never twice."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Ghatotkacha / Vasavi Shakti — beat: Karna lifts the Vasavi Shakti — one bolt, given by Indra, never twice."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Ghatotkacha sections — beat: Karna lifts the Vasavi Shakti — one bolt, given by Indra, never twice."
+        }
+      ]
     },
     {
       "id": "loose",
@@ -308,7 +380,21 @@
       "props": [
         "Vasavi Shakti gold light"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Karna looses a single gold shaft of Shakti-light; Ghatotkacha the adult rakshasa-prince stands in the path of the light. Karna: Anga diadem, gold-crimson armor, proud mustache. Ghatotkacha: dark mustache, storm-indigo armor, never a child. The dart is light, not blood. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Karna looses a single gold shaft of Shakti-light; Ghatotkacha the adult rakshasa-prince stands in the path of the light. Karna: Anga diadem, gold-crimson armor, proud mustache. Ghatotkacha: dark mustache, storm-indigo armor, never a child. The dart is light, not blood. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Ghatotkacha-vadha / night of the fourteenth (Debroy) — beat: He looses. A single gold shaft of light finds the rakshasa-prince."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Ghatotkacha / Vasavi Shakti — beat: He looses. A single gold shaft of light finds the rakshasa-prince."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Ghatotkacha sections — beat: He looses. A single gold shaft of light finds the rakshasa-prince."
+        }
+      ]
     },
     {
       "id": "fall",
@@ -349,12 +435,26 @@
         "gold-indigo light",
         "mace falling"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Ghatotkacha the adult rakshasa-kshatriya prince falls as a mountain of gold-indigo light falls — composed, mythic, not a corpse, no blood, never a child. Storm-indigo armor, dark mustache, small gold diadem. Night thinning inside a carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Ghatotkacha the adult rakshasa-kshatriya prince falls as a mountain of gold-indigo light falls — composed, mythic, not a corpse, no blood, never a child. Storm-indigo armor, dark mustache, small gold diadem. Night thinning inside a carved gold-and-lotus cartouche. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Ghatotkacha-vadha / night of the fourteenth (Debroy) — beat: Ghatotkacha falls as a mountain falls — and the night thins."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Ghatotkacha / Vasavi Shakti — beat: Ghatotkacha falls as a mountain falls — and the night thins."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Ghatotkacha sections — beat: Ghatotkacha falls as a mountain falls — and the night thins."
+        }
+      ]
     },
     {
       "id": "hush",
       "file": "plate-hush.jpg",
-      "beat_text": "The dart is spent. Arjuna lives. The fourteenth night keeps a deeper vow.",
+      "beat_text": "The Shakti is spent. Arjuna lives. Ghatotkacha’s fall bought that life.",
       "cast_present": [
         "krishna",
         "arjuna"
@@ -368,8 +468,8 @@
         "Native 3:2 1536×1024",
         "Cream-saffron-gold cartouche; night indigo-gold hour inside",
         "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
-        "Arjuna gold crown, dark mustache, cream-white dhoti, quiver — alive, bow at rest",
-        "Quiet night chariot after the dart; Krishna calm at the reins"
+        "Arjuna gold crown, dark mustache, cream-white dhoti, quiver — alive because the Shakti was spent on Ghatotkacha",
+        "Quiet night chariot after the one-use dart; Krishna calm at the reins"
       ],
       "must_not_show": [
         "Photoreal",
@@ -392,7 +492,21 @@
         "reins",
         "Gandiva at rest"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna (Ep 09 lock: dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins) and Arjuna (gold crown, dark mustache, cream-white dhoti, quiver, Gandiva at rest) on the night chariot after the dart is spent. Quiet. Alive. Carved gold-and-lotus cartouche, indigo thinning to cream-saffron. Not photoreal. No Drona. No flute. No gore. No Ghatotkacha."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna (Ep 09 lock: dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins) and Arjuna (gold crown, dark mustache, cream-white dhoti, quiver, Gandiva at rest) on the night chariot after the one-use Shakti is spent — Arjuna lives because Ghatotkacha took the dart. Quiet. Alive. Carved gold-and-lotus cartouche, indigo thinning to cream-saffron. Not photoreal. No Drona. No flute. No gore. No Ghatotkacha.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Ghatotkacha-vadha / night of the fourteenth (Debroy) — beat: The Shakti is spent. Arjuna lives. Ghatotkacha’s fall bought that life."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Ghatotkacha / Vasavi Shakti — beat: The Shakti is spent. Arjuna lives. Ghatotkacha’s fall bought that life."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Ghatotkacha sections — beat: The Shakti is spent. Arjuna lives. Ghatotkacha’s fall bought that life."
+        }
+      ]
     },
     {
       "id": "wide-gold",
@@ -435,7 +549,38 @@
         "reins",
         "dawn edge"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna and Arjuna on the chariot at the edge of night toward cream-saffron dawn. Krishna dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins — Ep 09 look lock. Arjuna gold crown, dark mustache, cream-white dhoti, quiver. Carved gold-and-lotus cartouche. Not photoreal. No Drona in the chariot. No flute. No gore. No corpse."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Krishna and Arjuna on the chariot at the edge of night toward cream-saffron dawn. Krishna dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins — Ep 09 look lock. Arjuna gold crown, dark mustache, cream-white dhoti, quiver. Carved gold-and-lotus cartouche. Not photoreal. No Drona in the chariot. No flute. No gore. No corpse.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Drona Parva · Ghatotkacha-vadha / night of the fourteenth (Debroy) — beat: Thus Karna’s greatest weapon is gone — and morning will come for Drona."
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur Drona Parva · Ghatotkacha / Vasavi Shakti — beat: Thus Karna’s greatest weapon is gone — and morning will come for Drona."
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Ghatotkacha sections — beat: Thus Karna’s greatest weapon is gone — and morning will come for Drona."
+        }
+      ]
     }
-  ]
+  ],
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Drona Parva · night of the fourteenth · Ghatotkacha-vadha · Vasavi Shakti",
+    "divergence": "BORI CE / Debroy place the night battle after Jayadratha’s fall, Ghatotkacha’s night prowess, the storm of illusions against the Kauravas, Duryodhana’s plea, Karna’s use of Indra’s one-shot Vasavi Shakti (kept for Arjuna), and Ghatotkacha’s fall in Drona Parva (Ghatotkacha-vadha). Ganguli’s vulgate English maps the same night-storm–Shakti–fall beats. Gita Press Gorakhpur tells the same fourteenth-night arc under its Drona numbering. Beats agree: night relief → Ghatotkacha unleashed → storm → plea → Shakti → fall → Arjuna spared. Exact maya catalogue varies by recension; this episode keeps educational cause→effect without gore.",
+    "chosen": "Gita Press Gorakhpur + BORI/Debroy overlap for the night storm and Shakti spend. Ganguli for English Ghatotkacha / Karna wording.",
+    "notes": "Not TV. Comic-mythology only. Ghatotkacha = adult rakshasa-kshatriya prince (never child, never horror). No gore: gold Shakti-light; mountain-fall of light. Shakti = one-use celestial spear from Indra, saved for Arjuna. Karna has already given away kavacha-kundala. Krishna = Ep 09 look lock. Never attach Ep01 plate-wide-gold or this episode’s plate-wide-gold as Imagine refs. Stills binaries untouched this logic pass — GATE C not re-run. Plate ids not renamed; script beat order reordered so storm precedes the Kaurava plea."
+  },
+  "stills_status": {
+    "bar": "1536×1024 3:2 Ep 09/10",
+    "binaries_untouched": true,
+    "imagine": "No SuperGrok / Imagine this pass — logic + sources only",
+    "next": "GATE C visual reports left as-is; stills untouched this pass — C not re-run."
+  }
 }

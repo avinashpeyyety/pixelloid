@@ -1,6 +1,8 @@
 /**
  * Episode 13 — Ghatotkacha
  * Drona Parva · night of the fourteenth; Karna’s Shakti
+ * Logic pass: night relief → storm → plea → Shakti → fall (BORI/Debroy + Gita Press + Ganguli)
+ * Plate ids unchanged; beat order places storm before the Kaurava plea.
  */
 export const EPISODE = {
   id: "13",
@@ -13,7 +15,7 @@ export const EPISODE = {
     provider: "grok-tts",
     voice_id: "orion",
     cache: "ep13-orion",
-    note: "Kathavachak — grok-tts Orion (same pipeline as Ep 09–12)",
+    note: "Kathavachak — grok-tts Orion (same pipeline as Ep 09–12). Audio may lag script until Orion re-render.",
     base: "episodes/13-ghatotkacha/audio/",
   },
   music: {
@@ -58,27 +60,27 @@ export const EPISODE = {
       panY: 0,
       audio: "orion-00.mp3",
       who: "Narrator",
-      text: "Night after the vow. Bhima’s son Ghatotkacha darkens the field — a rakshasa-prince grown for this hour.",
+      text: "Night after the vow. The Pandavas need relief — Krishna turns to Bhima’s son Ghatotkacha.",
     },
     {
       t: 12,
-      plate: "plea",
-      zoom: 1.14,
-      panX: 0.02,
-      panY: -0.02,
-      audio: "orion-01.mp3",
-      who: "Narrator",
-      text: "Duryodhana finds Karna: the night is eating the host — use the dart, or we are lost.",
-    },
-    {
-      t: 24,
       plate: "storm",
       zoom: 1.12,
       panX: -0.02,
       panY: -0.02,
+      audio: "orion-01.mp3",
+      who: "Narrator",
+      text: "Unleashed at night, Ghatotkacha storms the Kauravas: elephants of mist, a storm of banners — no blood.",
+    },
+    {
+      t: 24,
+      plate: "plea",
+      zoom: 1.14,
+      panX: 0.02,
+      panY: -0.02,
       audio: "orion-02.mp3",
       who: "Narrator",
-      text: "Illusions wheel over the Kauravas: elephants of mist, a storm of banners — no blood.",
+      text: "Duryodhana finds Karna: the night is eating the host — use Indra’s dart, or we are lost.",
     },
     {
       t: 36,
@@ -88,7 +90,7 @@ export const EPISODE = {
       panY: -0.02,
       audio: "orion-03.mp3",
       who: "Narrator",
-      text: "Krishna, calm at the reins, knows the dart that was kept for Arjuna.",
+      text: "Krishna, calm at the reins, knows that dart was kept for Arjuna.",
     },
     {
       t: 48,
@@ -128,7 +130,7 @@ export const EPISODE = {
       panY: -0.02,
       audio: "orion-07.mp3",
       who: "Narrator",
-      text: "The dart is spent. Arjuna lives. The fourteenth night keeps a deeper vow.",
+      text: "The Shakti is spent. Arjuna lives. Ghatotkacha’s fall bought that life.",
     },
     {
       t: 95,

@@ -28,10 +28,10 @@
   "apparatus": {},
   "stills_status": {
     "bar": "1536×1024 3:2 Ep 09/10",
-    "current": "720p / 1280×720 archive locks + plates — DO NOT single-image-edit; regenerate native 3:2",
-    "binaries_untouched": true,
-    "imagine": "No Imagine API this pass — SuperGrok consumer drop list in logic-reviews/REWRITE-20260917-ep08-status.md",
-    "next": "regen sabha-master + solo locks (krishna, duryodhana, dhritarashtra, yudhishthira) then all 9 plates + poster via stills/_inbox/consumer-imagine/"
+    "current": "1728×1152 SuperGrok consumer import 2026-09-18 (krishna lock 1536×1024 Ep09 seed)",
+    "binaries_untouched": false,
+    "imagine": "SuperGrok consumer → stills/_inbox/consumer-imagine/; GATE C PASS",
+    "next": "Ship Pages; scaffold Ep09 rewrite next"
   },
   "source_block": {
     "authoritative": [

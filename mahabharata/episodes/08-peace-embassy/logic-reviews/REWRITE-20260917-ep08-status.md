@@ -70,3 +70,8 @@ Bar: **≥1536×1024 · ~3:2 · carved cartouche**. Attach Ep10 `field-master` +
 2. Regen all 9 beat plates + poster; drop in `_inbox/consumer-imagine/`; import.  
 3. Re-run `stills_review.py --require` + write `RR-gateC-visual.md`.  
 4. Later: Orion re-render under cache `ep08-09-10-bar` + wire Yaman bed.
+
+
+## GATE C (2026-09-18)
+
+**PASS** — SuperGrok consumer import + stills_review --require. Poster = plate-offer (3:2). Ship Pages.

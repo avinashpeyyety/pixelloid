@@ -1,9 +1,9 @@
 /**
  * Episode 08 — The Peace Embassy
  * Udyoga Parva · Krishna’s embassy to Hastinapura · five villages · refusal · form
- * Rewrite scaffold 2026-09-17: Ep 09/10 bar (bible/script only; stills untouched).
+ * Rewrite 2026-09-18: Ep 09/10 bar; SuperGrok stills GATE C PASS.
  * Music: named Hindustani raga Yaman under Orion (never default flute+tabla).
- * Cache plan ep08-09-10-bar — DO NOT re-render audio this pass (no Orion / no Imagine API).
+ * Cache ep08-supergrok-20260918 — plate cache bump; audio not re-rendered this pass.
  */
 export const EPISODE = {
   id: "08",
@@ -15,8 +15,8 @@ export const EPISODE = {
   voice: {
     provider: "grok-tts",
     voice_id: "orion",
-    cache: "ep08-09-10-bar",
-    note: "Grok TTS Orion — cache plan ep08-09-10-bar; audio not re-rendered this scaffold pass",
+    cache: "ep08-supergrok-20260918",
+    note: "Grok TTS Orion — cache ep08-supergrok-20260918; audio not re-rendered this stills ship",
     base: "episodes/08-peace-embassy/audio/",
   },
   music: {

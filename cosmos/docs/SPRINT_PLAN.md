@@ -100,7 +100,7 @@ Stage name + short note on scrub; no overlay facts (T_eff, radius, fusion stage,
 **Now**
 
 - ~~Launch camera: ease cuts at staging / SECO~~ **shipped** (Cycle 1 lead).
-- Site detail: short ground fog + floodlight beams only in pad-local phase.
+- ~~Site detail: short ground fog + floodlight beams only in pad-local phase~~ **shipped** (Cycle 2).
 - Mobile body picker (solar list hidden `<560px`).
 
 **Later**
@@ -120,7 +120,7 @@ Stage name + short note on scrub; no overlay facts (T_eff, radius, fusion stage,
 | Debt | Notes |
 |------|--------|
 | Launch camera | **Done (Cycle 1 lead):** eased pad→chase→orbit + staging/SECO dual-stage framing (`buildLaunchCamHint`); adaptive follow in `main.js`. |
-| Pad atmosphere | No pad-local fog or floodlight beams; global `FogExp2` only. |
+| Pad atmosphere | **Done (Cycle 2):** siteStage ground fog discs + 4 additive flood beams; fades with `localUntil` / pad theater blend — does not hijack scene `FogExp2`. |
 | Materials | Color/emissive spheres; no NASA PBR textures. Earth globe is “hyper-clear” but not photometric. |
 | Bloom | UnrealBloomPass always on; strengths per mode (solar 0.55, earth 0.28, LEO 0.32, stars 0.72) — tasteful pass still needed. |
 | Mobile | `.hud-left` (body list) `display:none` below 560px **with no replacement picker**. `.hud-right` (detail panel) hidden below 900px — **info vanishes on tablet/phone**. |
@@ -166,19 +166,24 @@ Use these unless Avinash reorders.
 
 ### Cycle 1 — Launch theater (camera + pad)
 
-- **A:** Ease camera cuts at staging / SECO; keep the stack in frame; pad-local ground fog + floodlight beams **only** while the vehicle is on/near the pad.
-- **B:** Named narrative beats on the existing missions (liftoff, staging, SECO, insertion) — no new vehicles yet.
-- **C:** Ascent HUD: altitude, velocity, phase name; one-line “schematic trajectory, not a guidance solution.”
+- **A:** Ease camera cuts at staging / SECO; keep the stack in frame; ~~pad-local ground fog + floodlight beams~~ → **Cycle 2**.
+- **B:** Named narrative beats on the existing missions (liftoff, staging, SECO, insertion) — no new vehicles yet. *(labels shipped in Cycle 1 lead)*
+- **C:** Ascent HUD: altitude, velocity, phase name; one-line “schematic trajectory, not a guidance solution.” *(waits)*
 - **Measure:** desktop + phone launch of STS-1 and Falcon RTLS; stack never leaves frame; FPS note.
 
-### Cycle 2 — Mobile body picker
+### Cycle 2 — Pad atmosphere *(shipped 2026-09-21)*
+
+- **A:** Pad-local ground fog + floodlight beams only while vehicle on/near pad; fade out after `localUntil`.
+- **B / C:** deferred (ascent HUD waits; Forge parked).
+
+### Cycle 3 — Mobile body picker
 
 - **A:** Replacement picker below 560px (sheet / segmented control / search). Do not just un-hide the desktop list.
 - **B:** Picker groups: planets · dwarf · comets (same catalog, denser chrome).
 - **C:** Selected body keeps a one-line fact when the detail panel is hidden (`<900px`).
 - **Measure:** iPhone-width pass; body list reachable; no overlap with Earth/Stars bars.
 
-### Cycle 3 — Info HUD v1
+### Cycle 4 — Info HUD v1
 
 - **A:** Ops-instrument typography; no new decoration. Detail panel usable at tablet width (don’t leave facts only on desktop).
 - **B:** Fill missing facts for Sol + 8 planets + Pluto (temp, discovery/flyby as fits).
@@ -217,5 +222,6 @@ Use these unless Avinash reorders.
 
 | Date | Cycle | What | Git |
 |------|-------|------|-----|
-| 2026-09-21 | **1 lead** | **A** Launch camera polish: ease pad→chase through staging/SECO; dual-stage framing; adaptive `followLaunchCam`. **B** companion: HUD labels `Staging · MECO` / `SECO · Second stage`. Pad fog + ascent HUD left for next ships. | *(this commit)* |
+| 2026-09-21 | **2** | **A** Pad-local ground fog (soft discs on siteStage) + 4 additive floodlight beams; intensity gated by `localUntil` / pad theater blend — no scene `FogExp2` hijack. Ascent HUD waits. | *(this commit)* |
+| 2026-09-21 | **1 lead** | **A** Launch camera polish: ease pad→chase through staging/SECO; dual-stage framing; adaptive `followLaunchCam`. **B** companion: HUD labels `Staging · MECO` / `SECO · Second stage`. Pad fog + ascent HUD left for next ships. | fdd3116 |
 | 2026-09-16 | **0** | Plan of record created. Baseline inventory + 9-theme backlog. No product code. | *(this commit)* |

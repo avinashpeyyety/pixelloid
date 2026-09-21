@@ -845,6 +845,117 @@ function makeShuttle() {
   return root;
 }
 
+
+/** Soft radial alpha for pad-local ground fog (not scene.fog). */
+function makeSoftRadialTexture(size = 128) {
+  const c = document.createElement("canvas");
+  c.width = c.height = size;
+  const ctx = c.getContext("2d");
+  const g = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+  g.addColorStop(0, "rgba(210,220,232,0.65)");
+  g.addColorStop(0.4, "rgba(170,185,205,0.28)");
+  g.addColorStop(1, "rgba(100,120,145,0)");
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, size, size);
+  const tex = new THREE.CanvasTexture(c);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return tex;
+}
+
+/**
+ * Pad-local atmosphere: short ground fog discs + a few floodlight beams.
+ * Parent under siteStage; intensity driven by pad-local phase (localUntil).
+ */
+function makePadAtmosphere() {
+  const root = new THREE.Group();
+  root.name = "pad-atmosphere";
+  const fogTex = makeSoftRadialTexture(128);
+  const fogMats = [];
+  const beamMats = [];
+
+  const fogMat = new THREE.MeshBasicMaterial({
+    map: fogTex,
+    color: 0xd8e2ec,
+    transparent: true,
+    opacity: 0.5,
+    depthWrite: false,
+    side: THREE.DoubleSide,
+  });
+  fogMats.push(fogMat);
+  const fog = new THREE.Mesh(new THREE.CircleGeometry(3.3, 40), fogMat);
+  fog.rotation.x = -Math.PI / 2;
+  fog.position.y = 0.15;
+  fog.renderOrder = 2;
+  root.add(fog);
+
+  const fogMat2 = fogMat.clone();
+  fogMat2.opacity = 0.26;
+  fogMats.push(fogMat2);
+  const fog2 = new THREE.Mesh(new THREE.CircleGeometry(2.5, 32), fogMat2);
+  fog2.rotation.x = -Math.PI / 2;
+  fog2.position.y = 0.38;
+  fog2.renderOrder = 2;
+  root.add(fog2);
+
+  // Beam length in local pad units (cylinder along +Y, open-ended)
+  const beamLen = 2.15;
+  const lampSpots = [
+    [-1.6, 1.85, 1.2],
+    [1.6, 1.85, 1.2],
+    [-1.55, 1.7, -1.15],
+    [1.55, 1.7, -1.15],
+  ];
+  const aim = new THREE.Vector3(0, 0.12, 0);
+  for (const [lx, ly, lz] of lampSpots) {
+    const geo = new THREE.CylinderGeometry(0.025, 0.68, beamLen, 12, 1, true);
+    const mat = new THREE.MeshBasicMaterial({
+      color: 0xfff1d6,
+      transparent: true,
+      opacity: 0.13,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+      side: THREE.DoubleSide,
+    });
+    beamMats.push(mat);
+    const beam = new THREE.Mesh(geo, mat);
+    const from = new THREE.Vector3(lx, ly, lz);
+    const dir = aim.clone().sub(from);
+    const len = Math.max(0.5, dir.length());
+    const unit = dir.clone().normalize();
+    beam.scale.set(1, len / beamLen, 1);
+    beam.position.copy(from).addScaledVector(unit, len * 0.5);
+    beam.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), unit);
+    root.add(beam);
+  }
+
+  root.userData.fogMats = fogMats;
+  root.userData.beamMats = beamMats;
+  root.userData.baseFog = [0.5, 0.26];
+  root.userData.baseBeam = 0.13;
+  root.visible = false;
+  return root;
+}
+
+/** @param {number} intensity 0–1; fades with pad→chase localBlend */
+function setPadAtmosphere(api, intensity) {
+  const atmo = api.padAtmosphere;
+  if (!atmo) return;
+  const k = clamp01(intensity);
+  if (k < 0.02) {
+    atmo.visible = false;
+    return;
+  }
+  atmo.visible = true;
+  const bases = atmo.userData.baseFog;
+  atmo.userData.fogMats.forEach((m, i) => {
+    m.opacity = (bases[i] ?? bases[0]) * k;
+  });
+  const bb = atmo.userData.baseBeam;
+  atmo.userData.beamMats.forEach((m) => {
+    m.opacity = bb * k;
+  });
+}
+
 function makePadComplex() {
   const g = new THREE.Group();
   // Concrete apron
@@ -877,19 +988,25 @@ function makePadComplex() {
     beam.position.set(0.55, 0.6 + i * 0.7, 0);
     g.add(beam);
   }
-  // Floodlights
-  for (const s of [-1, 1]) {
+  // Floodlight poles (front + rear) — beams live in padAtmosphere
+  const lampPosts = [
+    [1.6, 1.2, 1.8, 1.85],
+    [-1.6, 1.2, 1.8, 1.85],
+    [1.55, -1.15, 1.6, 1.7],
+    [-1.55, -1.15, 1.6, 1.7],
+  ];
+  for (const [x, z, poleH, lampY] of lampPosts) {
     const pole = new THREE.Mesh(
-      new THREE.CylinderGeometry(0.04, 0.05, 1.8, 8),
+      new THREE.CylinderGeometry(0.04, 0.05, poleH, 8),
       mat(0x475569)
     );
-    pole.position.set(s * 1.6, 0.9, 1.2);
+    pole.position.set(x, poleH * 0.5, z);
     g.add(pole);
     const lamp = new THREE.Mesh(
-      new THREE.SphereGeometry(0.1, 10, 10),
+      new THREE.SphereGeometry(0.09, 10, 10),
       new THREE.MeshBasicMaterial({ color: 0xfff7ed })
     );
-    lamp.position.set(s * 1.6, 1.85, 1.2);
+    lamp.position.set(x, lampY, z);
     g.add(lamp);
   }
   // Chopsticks (Starbase style, used when needed)
@@ -1003,6 +1120,8 @@ export function createEarthTheater() {
   root.add(siteStage);
   const pad = makePadComplex();
   siteStage.add(pad);
+  const padAtmosphere = makePadAtmosphere();
+  siteStage.add(padAtmosphere);
 
   // Vehicles
   const vehicles = {
@@ -1069,6 +1188,7 @@ export function createEarthTheater() {
     siteMarkers,
     siteStage,
     pad,
+    padAtmosphere,
     vehicles,
     trajGroup,
     issRing,
@@ -1138,6 +1258,7 @@ export function setEarthMode(api, mode) {
 
   if (mode === "surface") {
     hideVehicles(api);
+    setPadAtmosphere(api, 0);
     clearTraj(api);
     api.activeMission = null;
     api.launchPlaying = false;
@@ -1150,6 +1271,7 @@ export function setEarthMode(api, mode) {
     }
   } else if (mode === "leo") {
     hideVehicles(api);
+    setPadAtmosphere(api, 0);
     clearTraj(api);
     api.siteStage.visible = false;
     api.markers.visible = false;
@@ -1179,8 +1301,9 @@ export function selectSite(api, siteId) {
   // Scale stage so rocket is readable (~local theater)
   api.siteStage.scale.setScalar(0.42);
 
-  // Park vehicle on pad
+  // Park vehicle on pad — pad-local fog/beams on while on/near pad
   hideVehicles(api);
+  setPadAtmosphere(api, 1);
   api.phaseLabel = `${entry.site.name} — pick a mission`;
   return entry.site;
 }
@@ -1319,6 +1442,9 @@ export function updateEarthTheater(api, dt, opts = {}) {
 
   if (api.mode === "site" && api.activeMission) {
     animateLaunch(api, api.launchT);
+  } else if (api.mode === "site") {
+    // Site selected, vehicle on/near pad — keep pad-local atmosphere
+    setPadAtmosphere(api, 1);
   }
 
   return { phaseLabel: api.phaseLabel };
@@ -1346,6 +1472,12 @@ function animateLaunch(api, t) {
 
   // Switch: early flight in site-local frame (readable), then world frame
   const localUntil = 0.18;
+  // Pad fog/beams: full early, fade with camera localBlend, off after pad-local phase
+  const padAtmo =
+    t < localUntil
+      ? 1 - smootherstep(clamp01((t - 0.06) / Math.max(1e-6, localUntil - 0.06)))
+      : 0;
+  setPadAtmosphere(api, padAtmo);
   hideVehicles(api);
 
   if (t < localUntil) {

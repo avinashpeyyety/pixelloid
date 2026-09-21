@@ -6,12 +6,11 @@
 ## Now
 
 - [ ] **Continuous plan of record:** [`docs/SPRINT_PLAN.md`](docs/SPRINT_PLAN.md) — weekly loop (audit → one visual + one content + one info item → publish Pages → measure → log). Studio (pixelloid lane). Pulse keeps Cosmos in Command Next until In flight. Does **not** steal Mahābhārata In-flight unless Avinash parallelizes.
-- [ ] **Cycle 1** — Site detail: short ground fog + floodlight beams only in pad-local phase
-- [ ] **Cycle 2** — Mobile body picker (solar list hidden &lt;560px)
+- [ ] **Cycle 3** — Mobile body picker (solar list hidden &lt;560px)
+- [ ] **Cycle 4** — Info HUD v1 (distance, period, temp, discovery-year facts; schematic vs to-scale chip)
 
 ## Later
 
-- [ ] **Cycle 3** — Info HUD v1 (distance, period, temp, discovery-year facts; schematic vs to-scale chip)
 - [ ] Optional NASA day/night textures when offline assets allowed — SPRINT_PLAN theme 4
 - [ ] More missions: Shuttle final, Artemis I, Electron — SPRINT_PLAN theme 5
 - [ ] LEO: Hubble + one Starlink shell as clean toggles — SPRINT_PLAN theme 6
@@ -25,6 +24,7 @@
 
 ## Done
 
+- [x] **Cycle 2** — Pad-local ground fog + floodlight beams (siteStage only; fades with `localUntil` / pad theater blend)
 - [x] **Cycle 1 lead** — Launch camera ease through staging/SECO (`buildLaunchCamHint` + adaptive follow)
 - [x] Three.js solar + comets + moons + LEO v1
 - [x] Earth surface separate from solar; site zoom + modern launch sequences

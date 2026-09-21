@@ -222,7 +222,7 @@ Use these unless Avinash reorders.
 
 | Date | Cycle | What | Git |
 |------|-------|------|-----|
-| 2026-09-21 | **1 C** | **C** Ascent HUD: ALT/VEL readouts + phase (`phaseLabel`) during Earth launch; schematic chip (“schematic trajectory, not a guidance solution.”); hide after insertion / when not launching. Ops-dense chrome, mobile-aware. | *(this commit)* |
+| 2026-09-21 | **1 C** | **C** Ascent HUD: ALT/VEL readouts + phase (`phaseLabel`) during Earth launch; schematic chip (“schematic trajectory, not a guidance solution.”); hide after insertion / when not launching. Ops-dense chrome, mobile-aware. | d8263f1 |
 | 2026-09-21 | **2** | **A** Pad-local ground fog (soft discs on siteStage) + 4 additive floodlight beams; intensity gated by `localUntil` / pad theater blend — no scene `FogExp2` hijack. Ascent HUD waits. | 21c4041 |
 | 2026-09-21 | **1 lead** | **A** Launch camera polish: ease pad→chase through staging/SECO; dual-stage framing; adaptive `followLaunchCam`. **B** companion: HUD labels `Staging · MECO` / `SECO · Second stage`. Pad fog + ascent HUD left for next ships. | fdd3116 |
 | 2026-09-16 | **0** | Plan of record created. Baseline inventory + 9-theme backlog. No product code. | *(this commit)* |

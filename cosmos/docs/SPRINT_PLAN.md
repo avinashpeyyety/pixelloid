@@ -146,7 +146,7 @@ Each theme is a **cycle-sized** slice, not a year-long epic. A cycle may take on
 
 | # | Theme | Lead pillar | Companion (min) |
 |---|--------|-------------|-----------------|
-| **1** | Launch theater camera + pad atmosphere (NEXT Now) | A visual | B: staging/SECO beat labels · C: altitude/velocity readout during ascent |
+| **1** | Launch theater camera + pad atmosphere | A visual | B: staging/SECO beat labels · C: altitude/velocity readout during ascent — **shipped** |
 | **2** | Mobile body picker | A visual / UX | C: keep one-line body fact visible when list is a sheet |
 | **3** | Info HUD v1 (distance, period, temp, discovery-year style facts per body) | C info | A: HUD chrome density, not bigger panels |
 | **4** | Texture / lighting pass (solar + Earth) | A visual | C: texture credit + “not photometric” if maps are artistic |
@@ -168,13 +168,13 @@ Use these unless Avinash reorders.
 
 - **A:** Ease camera cuts at staging / SECO; keep the stack in frame; ~~pad-local ground fog + floodlight beams~~ → **Cycle 2**.
 - **B:** Named narrative beats on the existing missions (liftoff, staging, SECO, insertion) — no new vehicles yet. *(labels shipped in Cycle 1 lead)*
-- **C:** Ascent HUD: altitude, velocity, phase name; one-line “schematic trajectory, not a guidance solution.” *(waits)*
+- **C:** Ascent HUD: altitude, velocity, phase name; one-line “schematic trajectory, not a guidance solution.” *(shipped 2026-09-21)*
 - **Measure:** desktop + phone launch of STS-1 and Falcon RTLS; stack never leaves frame; FPS note.
 
 ### Cycle 2 — Pad atmosphere *(shipped 2026-09-21)*
 
 - **A:** Pad-local ground fog + floodlight beams only while vehicle on/near pad; fade out after `localUntil`.
-- **B / C:** deferred (ascent HUD waits; Forge parked).
+- **B / C:** deferred at ship time (ascent HUD → Cycle 1 C leftover; Forge parked).
 
 ### Cycle 3 — Mobile body picker
 
@@ -222,6 +222,7 @@ Use these unless Avinash reorders.
 
 | Date | Cycle | What | Git |
 |------|-------|------|-----|
-| 2026-09-21 | **2** | **A** Pad-local ground fog (soft discs on siteStage) + 4 additive floodlight beams; intensity gated by `localUntil` / pad theater blend — no scene `FogExp2` hijack. Ascent HUD waits. | *(this commit)* |
+| 2026-09-21 | **1 C** | **C** Ascent HUD: ALT/VEL readouts + phase (`phaseLabel`) during Earth launch; schematic chip (“schematic trajectory, not a guidance solution.”); hide after insertion / when not launching. Ops-dense chrome, mobile-aware. | d8263f1 |
+| 2026-09-21 | **2** | **A** Pad-local ground fog (soft discs on siteStage) + 4 additive floodlight beams; intensity gated by `localUntil` / pad theater blend — no scene `FogExp2` hijack. Ascent HUD waits. | 21c4041 |
 | 2026-09-21 | **1 lead** | **A** Launch camera polish: ease pad→chase through staging/SECO; dual-stage framing; adaptive `followLaunchCam`. **B** companion: HUD labels `Staging · MECO` / `SECO · Second stage`. Pad fog + ascent HUD left for next ships. | fdd3116 |
 | 2026-09-16 | **0** | Plan of record created. Baseline inventory + 9-theme backlog. No product code. | *(this commit)* |

@@ -24,6 +24,7 @@
 
 ## Done
 
+- [x] **Cycle 1 C** — Ascent HUD: altitude / velocity / phase + schematic chip during launch (hides after insertion)
 - [x] **Cycle 2** — Pad-local ground fog + floodlight beams (siteStage only; fades with `localUntil` / pad theater blend)
 - [x] **Cycle 1 lead** — Launch camera ease through staging/SECO (`buildLaunchCamHint` + adaptive follow)
 - [x] Three.js solar + comets + moons + LEO v1

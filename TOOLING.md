@@ -31,6 +31,9 @@ Installed on **MacBook Air** for offline production. Browser shows still ship as
 
 **Target pipeline:** Blender **3D render** + **Grok Imagine key panels**. See `mahabharata/docs/WORKFLOW.md`. Imagine character locks and GATE C still apply — Blender must not invent faces or bypass the art bar.
 
+**A3 pilot (Ep 09 · one beat):** GATE C `plate-counsel.jpg` → Blender hero plane + camera → `mahabharata/episodes/09-gita/renders/beat-35-counsel.png` (1536×1024). Docs/scripts: `mahabharata/episodes/09-gita/blender/` (`README.md`, `PANEL_MAP.md`, `build_a3_pilot.py`). Player still uses `stills/` — do not wire hybrid `script.js` to `renders/`. Air CLI preferred; lab-mirror Blender OK for proxy when Air unreachable.
+
+
 ## Open quickly
 
 ```bash

@@ -3,7 +3,7 @@
 ## Now
 - [ ] **Active sprint board:** [`docs/SPRINT_PLAN.md`](docs/SPRINT_PLAN.md) — Track A (improvements) + Track B (Ep 15+ factory). Studio lead; Chief one ticket/cycle.
 - [x] Ep 11: player uses Blender `renders/beat-*.png` (Ken Burns on 3D proxies; Orion/Megh kept)
-- [ ] Pilot one beat in **3D**: Imagine key panel → Blender camera/set → `renders/` proxy (document path; keep GATE C) — see SPRINT_PLAN Track A3 / Week 2
+- [x] Pilot one beat in **3D**: Ep09 A3 counsel → Blender → `episodes/09-gita/renders/beat-35-counsel.png` (docs in `episodes/09-gita/blender/`; player still on stills/) — SPRINT_PLAN Track A3
 - [ ] Rewrite **Episode 03** to the Ep 09/10 bar (one episode per pass). Do not start 04–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+. — SPRINT_PLAN Track A1 / Week 1–2
 
 ## Curiosity / explore

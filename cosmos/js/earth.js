@@ -1394,10 +1394,54 @@ function sampleAscentWorld(t, pad, up, east, mission) {
   return pad.clone().add(up.clone().multiplyScalar(h)).add(east.clone().multiplyScalar(down));
 }
 
+
+/** Schematic HUD numbers — visual path is exaggerated; values are illustrative only. */
+function schematicAscentTelemetry(t, mission) {
+  const u = clamp01(t);
+  const beyond = !!mission?.beyond;
+  let altKm;
+  if (u < 0.12) {
+    altKm = smootherstep(u / 0.12) * 4.2;
+  } else if (u < 0.38) {
+    const v = (u - 0.12) / 0.26;
+    altKm = 4.2 + smootherstep(v) * 68;
+  } else if (u < 0.55) {
+    const v = (u - 0.38) / 0.17;
+    altKm = 72 + smootherstep(v) * 130;
+  } else if (u < 0.75) {
+    const v = (u - 0.55) / 0.2;
+    altKm = beyond ? 202 + smootherstep(v) * 800 : 202 + smootherstep(v) * 210;
+  } else {
+    altKm = beyond ? 1000 + (u - 0.75) * 4000 : 410 + (u - 0.75) * 40;
+  }
+
+  let velKms;
+  if (u < 0.02) velKms = 0;
+  else if (u < 0.38) velKms = smootherstep(u / 0.38) * 2.4;
+  else if (u < 0.55) {
+    const v = (u - 0.38) / 0.17;
+    velKms = 2.4 + smootherstep(v) * 5.1;
+  } else if (u < 0.75) {
+    const v = (u - 0.55) / 0.2;
+    velKms = beyond ? 7.5 + smootherstep(v) * 3.5 : 7.5 + smootherstep(v) * 0.28;
+  } else {
+    velKms = beyond ? 10.9 : 7.67;
+  }
+  return { altKm, velKms };
+}
+
+/** Visible through ascent / insertion; hidden after insertion and when not launching. */
+function buildAscentHud(api, t) {
+  if (api.mode !== "site" || !api.activeMission) return { visible: false };
+  if (t >= 0.75) return { visible: false };
+  const { altKm, velKms } = schematicAscentTelemetry(t, api.activeMission);
+  return { visible: true, altKm, velKms };
+}
+
 // ─── Per-frame update ──────────────────────────────────────────
 
 /**
- * @returns {{ phaseLabel: string, cameraHint?: object }}
+ * @returns {{ phaseLabel: string, cameraHint?: object, ascentHud?: { visible: boolean, altKm?: number, velKms?: number } }}
  */
 export function updateEarthTheater(api, dt, opts = {}) {
   const { autoPlay = true } = opts;
@@ -1425,7 +1469,7 @@ export function updateEarthTheater(api, dt, opts = {}) {
     api.vehicles.iss.visible = true;
     api.vehicles.iss.scale.setScalar(0.55);
     api.phaseLabel = "ISS · 51.6° · LEO";
-    return { phaseLabel: api.phaseLabel };
+    return { phaseLabel: api.phaseLabel, ascentHud: { visible: false } };
   }
 
   // Launch animation
@@ -1437,17 +1481,25 @@ export function updateEarthTheater(api, dt, opts = {}) {
       api.launchPlaying = false;
       api.phaseLabel = "Mission complete · scrub or pick another";
     }
-    return { phaseLabel: api.phaseLabel, cameraHint: hint };
+    return {
+      phaseLabel: api.phaseLabel,
+      cameraHint: hint,
+      ascentHud: buildAscentHud(api, api.launchT),
+    };
   }
 
   if (api.mode === "site" && api.activeMission) {
     animateLaunch(api, api.launchT);
+    return {
+      phaseLabel: api.phaseLabel,
+      ascentHud: buildAscentHud(api, api.launchT),
+    };
   } else if (api.mode === "site") {
     // Site selected, vehicle on/near pad — keep pad-local atmosphere
     setPadAtmosphere(api, 1);
   }
 
-  return { phaseLabel: api.phaseLabel };
+  return { phaseLabel: api.phaseLabel, ascentHud: { visible: false } };
 }
 
 function animateLaunch(api, t) {

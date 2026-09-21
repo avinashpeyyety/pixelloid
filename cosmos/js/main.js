@@ -343,6 +343,36 @@ function enterEarthMode() {
   applyCameraFrame(getSurfaceCameraFrame());
   buildEarthSitesUI();
   updateDetailEarth();
+  syncAscentHud({ visible: false });
+}
+
+
+function formatAscentAlt(km) {
+  if (km == null || Number.isNaN(km)) return "—";
+  if (km < 10) return `${km.toFixed(1)} km`;
+  if (km < 1000) return `${Math.round(km)} km`;
+  return `${(km / 1000).toFixed(2)} Mm`;
+}
+
+function formatAscentVel(kms) {
+  if (kms == null || Number.isNaN(kms)) return "—";
+  return `${kms.toFixed(2)} km/s`;
+}
+
+/** Toggle ascent readout + schematic chip; phase stays on #earth-phase. */
+function syncAscentHud(ascentHud) {
+  const panel = $("ascent-hud");
+  const bar = $("earth-bar");
+  if (!panel) return;
+  const show = !!(ascentHud && ascentHud.visible);
+  panel.classList.toggle("hidden", !show);
+  panel.setAttribute("aria-hidden", show ? "false" : "true");
+  bar?.classList.toggle("is-ascent", show);
+  if (!show) return;
+  const alt = $("ascent-alt");
+  const vel = $("ascent-vel");
+  if (alt) alt.textContent = formatAscentAlt(ascentHud.altKm);
+  if (vel) vel.textContent = formatAscentVel(ascentHud.velKms);
 }
 
 function enterLeoMode() {
@@ -379,6 +409,7 @@ function enterLeoMode() {
     .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`)
     .join("");
   $("earth-phase").textContent = "Low Earth Orbit";
+  syncAscentHud({ visible: false });
 }
 
 
@@ -472,6 +503,7 @@ function onStartMission(missionId) {
   buildEarthMissionsUI(mission.siteId);
   $("earth-caption").textContent = `${mission.date} · ${mission.blurb}`;
   $("earth-phase").textContent = "T−0 · Ignition";
+  syncAscentHud({ visible: true, altKm: 0, velKms: 0 });
   detailName.textContent = mission.name;
   detailType.textContent = "Launch sequence";
   detailBlurb.textContent = mission.blurb;
@@ -1548,10 +1580,11 @@ function animate() {
     const stage = updateStarLifecycle(starLife, dt);
     syncLifecycleHud(stage);
   } else if (state.viewMode !== "solar" && earthTheater) {
-    const { phaseLabel, cameraHint } = updateEarthTheater(earthTheater, dt, {
+    const { phaseLabel, cameraHint, ascentHud } = updateEarthTheater(earthTheater, dt, {
       autoPlay: state.playing,
     });
     if (phaseLabel && $("earth-phase")) $("earth-phase").textContent = phaseLabel;
+    syncAscentHud(ascentHud);
     if (cameraHint && state.followLaunchCam && earthTheater.activeMission && !camTween) {
       // Adaptive ease: catch up faster when lagging (staging/SECO jumps) so stack stays framed,
       // but keep a soft exponential when already close — never a hard cut.

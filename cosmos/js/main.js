@@ -1553,8 +1553,13 @@ function animate() {
     });
     if (phaseLabel && $("earth-phase")) $("earth-phase").textContent = phaseLabel;
     if (cameraHint && state.followLaunchCam && earthTheater.activeMission && !camTween) {
-      camera.position.lerp(cameraHint.position, 1 - Math.pow(0.02, dt));
-      controls.target.lerp(cameraHint.target, 1 - Math.pow(0.02, dt));
+      // Adaptive ease: catch up faster when lagging (staging/SECO jumps) so stack stays framed,
+      // but keep a soft exponential when already close — never a hard cut.
+      const lag = camera.position.distanceTo(cameraHint.position);
+      const base = lag > 4 ? 1e-5 : lag > 1.5 ? 0.001 : lag > 0.4 ? 0.008 : 0.02;
+      const alpha = 1 - Math.pow(base, dt);
+      camera.position.lerp(cameraHint.position, alpha);
+      controls.target.lerp(cameraHint.target, alpha);
       if (cameraHint.minDist != null) controls.minDistance = cameraHint.minDist;
       if (cameraHint.maxDist != null) controls.maxDistance = cameraHint.maxDist;
     }

@@ -99,7 +99,7 @@ Stage name + short note on scrub; no overlay facts (T_eff, radius, fusion stage,
 
 **Now**
 
-- Launch camera: ease cuts at staging / SECO so the stack never leaves frame.
+- ~~Launch camera: ease cuts at staging / SECO~~ **shipped** (Cycle 1 lead).
 - Site detail: short ground fog + floodlight beams only in pad-local phase.
 - Mobile body picker (solar list hidden `<560px`).
 
@@ -119,7 +119,7 @@ Stage name + short note on scrub; no overlay facts (T_eff, radius, fusion stage,
 
 | Debt | Notes |
 |------|--------|
-| Launch camera | Hard cuts at staging/SECO; stack can leave frame. Follow-cam exists (`followLaunchCam`) but needs easing. |
+| Launch camera | **Done (Cycle 1 lead):** eased pad→chase→orbit + staging/SECO dual-stage framing (`buildLaunchCamHint`); adaptive follow in `main.js`. |
 | Pad atmosphere | No pad-local fog or floodlight beams; global `FogExp2` only. |
 | Materials | Color/emissive spheres; no NASA PBR textures. Earth globe is “hyper-clear” but not photometric. |
 | Bloom | UnrealBloomPass always on; strengths per mode (solar 0.55, earth 0.28, LEO 0.32, stars 0.72) — tasteful pass still needed. |
@@ -217,4 +217,5 @@ Use these unless Avinash reorders.
 
 | Date | Cycle | What | Git |
 |------|-------|------|-----|
+| 2026-09-21 | **1 lead** | **A** Launch camera polish: ease pad→chase through staging/SECO; dual-stage framing; adaptive `followLaunchCam`. **B** companion: HUD labels `Staging · MECO` / `SECO · Second stage`. Pad fog + ascent HUD left for next ships. | *(this commit)* |
 | 2026-09-16 | **0** | Plan of record created. Baseline inventory + 9-theme backlog. No product code. | *(this commit)* |

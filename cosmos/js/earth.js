@@ -1334,12 +1334,12 @@ function animateLaunch(api, t) {
   const shipOnly = api.vehicles.shipOnly;
 
   // Prefer world-space animation for clarity after liftoff leaves the tower
-  // Phase labels
+  // Phase labels (staging / SECO named so HUD beats are readable)
   if (t < 0.02) api.phaseLabel = "T−0 · Ignition";
   else if (t < 0.12) api.phaseLabel = "Liftoff";
   else if (t < 0.28) api.phaseLabel = "Max-Q · Ascent";
-  else if (t < 0.38) api.phaseLabel = "MECO · Stage separation";
-  else if (t < 0.55) api.phaseLabel = "Second stage · to orbit";
+  else if (t < 0.38) api.phaseLabel = "Staging · MECO";
+  else if (t < 0.55) api.phaseLabel = "SECO · Second stage";
   else if (t < 0.75) api.phaseLabel = mission.beyond ? "Beyond LEO" : "Orbital insertion";
   else if (t < 0.9) api.phaseLabel = mission.vehicle === "starship" ? "Booster return / catch" : "On orbit";
   else api.phaseLabel = "Mission complete";
@@ -1363,14 +1363,23 @@ function animateLaunch(api, t) {
     // smoke at pad
     api.smoke.visible = true;
     updateSmoke(api, u);
-    // camera hint: stay near pad looking up
-    const camPos = padWorld
+    // Camera: ease pad theater → ascent follow (no hard cut at localUntil)
+    const craftWorld = padWorld.clone().add(up.clone().multiplyScalar(h));
+    const faceEarly = up
       .clone()
-      .add(up.clone().multiplyScalar(2.2 + h * 0.15))
-      .add(east.clone().multiplyScalar(-3.5))
-      .add(new THREE.Vector3(0, 1, 0).cross(up).normalize().multiplyScalar(2.5));
-    const look = padWorld.clone().add(up.clone().multiplyScalar(h * 0.5 + 0.5));
-    return { position: camPos, target: look, minDist: 0.5, maxDist: 80 };
+      .multiplyScalar(1 - u * 0.2)
+      .add(east.clone().multiplyScalar(u * 0.25))
+      .normalize();
+    return buildLaunchCamHint({
+      t,
+      padWorld,
+      up,
+      east,
+      face: faceEarly,
+      focus: craftWorld,
+      companion: null,
+      localBlend: 1 - smootherstep(clamp01((t - 0.06) / Math.max(1e-6, localUntil - 0.06))),
+    });
   }
 
   // World-space ascent
@@ -1453,26 +1462,86 @@ function animateLaunch(api, t) {
     setPlume(vehicle, false);
   }
 
-  // Camera follows vehicle
-  const camPos = vehicle.position
-    .clone()
-    .add(up.clone().multiplyScalar(1.2))
-    .add(east.clone().multiplyScalar(-2.8 - t * 2))
-    .add(face.clone().multiplyScalar(-1.5));
-  // Pull back as we get higher
-  if (t > 0.4) {
-    const pull = smootherstep((t - 0.4) / 0.4);
-    camPos.lerp(
-      vehicle.position.clone().normalize().multiplyScalar(EARTH_R * (2.2 + pull * 1.5)),
-      pull
-    );
+  // Camera: follow ascending stack; during staging/SECO frame both stages then ease to upper
+  let focus = vehicle.position.clone();
+  let companion = null;
+  if (mission.vehicle === "falcon9" && t >= 0.32 && upper.visible) {
+    companion = upper.position.clone();
+    // Sep window: look between stages so the stack never leaves frame, then ease to upper
+    const sepU = smootherstep(clamp01((t - 0.32) / 0.2));
+    const mid = focus.clone().lerp(companion, 0.45);
+    focus = mid.clone().lerp(companion, sepU);
+  } else if (mission.vehicle === "starship" && t >= 0.3 && shipOnly.visible) {
+    companion = shipOnly.position.clone();
+    const sepU = smootherstep(clamp01((t - 0.3) / 0.22));
+    const mid = focus.clone().lerp(companion, 0.45);
+    focus = mid.clone().lerp(companion, sepU);
   }
-  return {
-    position: camPos,
-    target: vehicle.position.clone(),
-    minDist: 0.3,
-    maxDist: EARTH_R * 25,
-  };
+
+  // Pad→chase blend already reaches 0 by localUntil; stay on chase thereafter
+  return buildLaunchCamHint({
+    t,
+    padWorld,
+    up,
+    east,
+    face,
+    focus,
+    companion,
+    localBlend: 0,
+  });
+}
+
+/**
+ * Continuous launch follow-cam. Blends pad theater → chase → orbital pullback.
+ * When companion (separating stage) is set, pulls back so both stay in frame.
+ */
+function buildLaunchCamHint({ t, padWorld, up, east, face, focus, companion, localBlend }) {
+  const north = new THREE.Vector3(0, 1, 0).cross(up).normalize();
+  const alt = Math.max(0, focus.clone().sub(padWorld).dot(up));
+
+  // Pad-local theater (readable ignition / early liftoff)
+  const padCam = padWorld
+    .clone()
+    .add(up.clone().multiplyScalar(2.2 + alt * 0.15))
+    .add(east.clone().multiplyScalar(-3.5))
+    .add(north.clone().multiplyScalar(2.5));
+  const padLook = padWorld.clone().add(up.clone().multiplyScalar(alt * 0.5 + 0.5));
+
+  // Chase offset behind / beside the stack
+  let chaseBack = 1.5;
+  let chaseSide = 2.8 + t * 2;
+  let chaseUp = 1.2;
+  if (companion) {
+    const sepDist = focus.distanceTo(companion);
+    // Pull back with stage separation so neither stage leaves frame
+    const frame = smootherstep(clamp01(sepDist / 2.5));
+    chaseBack += 1.2 + frame * 3.5;
+    chaseSide += 0.8 + frame * 2.2;
+    chaseUp += 0.4 + frame * 1.2;
+  }
+
+  const chaseCam = focus
+    .clone()
+    .add(up.clone().multiplyScalar(chaseUp))
+    .add(east.clone().multiplyScalar(-chaseSide))
+    .add(face.clone().multiplyScalar(-chaseBack));
+
+  // Ease orbital pullback (no hard cut past t=0.4)
+  const pull = smootherstep(clamp01((t - 0.38) / 0.45));
+  if (pull > 0) {
+    const orbitCam = focus.clone().normalize().multiplyScalar(EARTH_R * (2.0 + pull * 1.8));
+    chaseCam.lerp(orbitCam, pull);
+  }
+
+  const lb = clamp01(localBlend);
+  const camPos = chaseCam.clone().lerp(padCam, lb);
+  const look = focus.clone().lerp(padLook, lb);
+
+  // Widen distance clamps during staging / high altitude so OrbitControls can't clip the stack
+  const stagingWiden = companion ? 1 : 0;
+  const minDist = lerp(0.45, 0.8, stagingWiden);
+  const maxDist = EARTH_R * (18 + pull * 10 + stagingWiden * 4);
+  return { position: camPos, target: look, minDist, maxDist };
 }
 
 function ensureWorldVehicle(api, vehicle) {

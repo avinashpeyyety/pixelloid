@@ -10,11 +10,15 @@ if (grid) {
       el.href = ep.play + (ep.play.includes("?") ? "&" : "?") + "auto=1";
       el.setAttribute("aria-label", `Play Episode ${ep.id}: ${ep.title}`);
     }
-    const thumb = `episodes/${ep.id}-${ep.slug}/stills/thumb.jpg`;
+    const base = `episodes/${ep.id}-${ep.slug}/stills/`;
     el.innerHTML = `
       <div class="ep-thumb">
-        <img src="${thumb}" alt="" loading="lazy" decoding="async" width="640" height="360"
-             onerror="this.closest('.ep-thumb').classList.add('no-img')" />
+        <picture>
+          <source type="image/webp" srcset="${base}thumb@2x.webp 1280w" sizes="(max-width: 640px) 100vw, 420px" />
+          <img src="${base}thumb.jpg" srcset="${base}thumb.jpg 640w, ${base}thumb@2x.jpg 1280w"
+               sizes="(max-width: 640px) 100vw, 420px" alt="" loading="lazy" decoding="async" width="1280" height="720"
+               onerror="this.closest('.ep-thumb').classList.add('no-img')" />
+        </picture>
         <span class="ep-thumb-num">EP ${ep.id}</span>
         ${ep.duration ? `<span class="ep-thumb-dur">${ep.duration}</span>` : ""}
         ${live

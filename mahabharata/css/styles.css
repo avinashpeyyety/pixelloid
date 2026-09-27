@@ -901,3 +901,7 @@ body.player.idle { cursor: none; }
   body.player .controls-row { order: 1; }
   body.player .dialogue { bottom: calc(84px + var(--safe-b)); }
 }
+
+/* HD thumbnails */
+.ep-thumb picture { display: block; width: 100%; height: 100%; }
+.ep-thumb img { will-change: transform; backface-visibility: hidden; }

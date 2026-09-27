@@ -927,3 +927,8 @@ a.ep-card:hover .ep-play,
 a.ep-card:focus-visible .ep-play { background: rgba(232, 168, 56, 0.92); }
 a.ep-card:hover .ep-play path,
 a.ep-card:focus-visible .ep-play path { fill: #1a0e06; }
+/* keep faces clear: play button sits bottom-left */
+.ep-play { left: 12px; top: auto; bottom: 12px; width: 44px; height: 44px; transform: none; }
+.ep-play svg { width: 20px; height: 20px; margin-left: 2px; }
+a.ep-card:hover .ep-play,
+a.ep-card:focus-visible .ep-play { transform: scale(1.1); }

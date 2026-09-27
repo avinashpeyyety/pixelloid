@@ -932,3 +932,10 @@ a.ep-card:focus-visible .ep-play path { fill: #1a0e06; }
 .ep-play svg { width: 20px; height: 20px; margin-left: 2px; }
 a.ep-card:hover .ep-play,
 a.ep-card:focus-visible .ep-play { transform: scale(1.1); }
+
+/* video export mode */
+body.player.clean .player-top,
+body.player.clean .player-bottom,
+body.player.clean .sound-hint { display: none !important; }
+body.player.clean { cursor: none; }
+body.player.clean .dialogue { bottom: calc(40px + var(--safe-b)); }

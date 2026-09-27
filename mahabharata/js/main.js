@@ -1555,6 +1555,8 @@ setTimeout(() => loader?.classList.add("done"), 1200);
 
 const params = new URLSearchParams(location.search);
 document.body.classList.add("paused");
+// ?clean=1 hides all player chrome (used for video export)
+if (params.get("clean") === "1") document.body.classList.add("clean");
 if (params.get("auto") === "1") btnPlay.click();
 wake();
 

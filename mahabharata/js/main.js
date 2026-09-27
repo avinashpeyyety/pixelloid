@@ -147,6 +147,7 @@ class Kathavachak {
         if (token !== this._token) return;
         a.play().catch((err) => {
           console.warn("[katha] Grok clip play failed", url, err);
+          if (err && err.name === "NotAllowedError") window.dispatchEvent(new Event("pix-audio-blocked"));
           // Do NOT fall back to browser TTS on autoplay policy if user already clicked Play
           // Only fall back when the resource is missing
         });
@@ -1350,6 +1351,8 @@ function frame(now) {
       ended = true;
       katha.stop();
       btnPlay.textContent = "Play";
+      document.body.classList.add("paused");
+      document.body.classList.remove("idle");
       endCard.classList.add("show");
       dialogueEl.classList.add("hidden");
     }
@@ -1428,17 +1431,74 @@ function syncVoiceBtn() {
   btnVoice.setAttribute("aria-pressed", katha.on ? "true" : "false");
 }
 
+/** Start music without letting a gesture-blocked AudioContext stall playback. */
+function startDroneSafe() {
+  drone
+    .start()
+    .then(() => {
+      btnMute.textContent = "Music ✓";
+    })
+    .catch(() => {});
+  setTimeout(() => {
+    if (playing && drone.ctx && drone.ctx.state === "suspended") showSoundHint();
+  }, 700);
+}
+
+// ── Sound unlock hint (browsers that block audio without a tap on this page) ──
+let soundHint = null;
+function showSoundHint() {
+  if (soundHint || !playing) return;
+  soundHint = document.createElement("button");
+  soundHint.type = "button";
+  soundHint.className = "sound-hint";
+  soundHint.textContent = "🔇 Tap for sound";
+  document.body.appendChild(soundHint);
+  const unlock = async (e) => {
+    window.removeEventListener("pointerdown", unlock, true);
+    window.removeEventListener("keydown", unlock, true);
+    if (e.target === btnPlay) {
+      soundHint?.remove();
+      soundHint = null;
+      return;
+    }
+    soundHint?.remove();
+    soundHint = null;
+    try {
+      if (drone.ctx && drone.ctx.state === "suspended") await drone.ctx.resume();
+      await drone.start();
+      btnMute.textContent = "Music ✓";
+    } catch {
+      /* ok */
+    }
+    if (playing) {
+      const b = EPISODE.beats[lastBeatIdx] || EPISODE.beats[0];
+      if (b?.text || b?.audio) katha.speak(b.who || "Narrator", b.text || "", { audio: b.audio });
+    }
+  };
+  window.addEventListener("pointerdown", unlock, true);
+  window.addEventListener("keydown", unlock, true);
+}
+window.addEventListener("pix-audio-blocked", showSoundHint);
+
+// ── Auto-hide chrome while playing ──
+let idleTimer = 0;
+function wake() {
+  document.body.classList.remove("idle");
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => {
+    if (playing && !document.querySelector(".player-bottom:hover, .player-top:hover")) document.body.classList.add("idle");
+  }, 2500);
+}
+["pointermove", "pointerdown", "keydown", "touchstart"].forEach((ev) => window.addEventListener(ev, wake, { passive: true }));
+
 btnPlay.addEventListener("click", async () => {
   if (ended) resetPlay();
   playing = !playing;
   btnPlay.textContent = playing ? "Pause" : "Play";
+  document.body.classList.toggle("paused", !playing);
+  wake();
   if (playing) {
-    try {
-      await drone.start();
-      btnMute.textContent = "Music ✓";
-    } catch {
-      /* autoplay */
-    }
+    startDroneSafe();
     const b = EPISODE.beats[lastBeatIdx] || EPISODE.beats[0];
     if (b?.text || b?.audio) katha.speak(b.who || "Narrator", b.text || "", { audio: b.audio });
   } else {
@@ -1450,12 +1510,9 @@ btnRestart.addEventListener("click", async () => {
   resetPlay();
   playing = true;
   btnPlay.textContent = "Pause";
-  try {
-    await drone.start();
-    btnMute.textContent = "Music ✓";
-  } catch {
-    /* ok */
-  }
+  document.body.classList.remove("paused");
+  wake();
+  startDroneSafe();
   const b = EPISODE.beats[0];
   if (b?.text || b?.audio) katha.speak(b.who || "Narrator", b.text || "", { audio: b.audio });
   lastBeatIdx = 0;
@@ -1497,4 +1554,14 @@ requestAnimationFrame(frame);
 setTimeout(() => loader?.classList.add("done"), 1200);
 
 const params = new URLSearchParams(location.search);
+document.body.classList.add("paused");
 if (params.get("auto") === "1") btnPlay.click();
+wake();
+
+// Space toggles play
+window.addEventListener("keydown", (e) => {
+  if (e.code === "Space" && !(e.target instanceof HTMLButtonElement)) {
+    e.preventDefault();
+    btnPlay.click();
+  }
+});

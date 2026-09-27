@@ -7,7 +7,7 @@ if (grid) {
     const el = document.createElement(live ? "a" : "div");
     el.className = `ep-card${live ? "" : " planned"}`;
     if (live) {
-      el.href = ep.play;
+      el.href = ep.play + (ep.play.includes("?") ? "&" : "?") + "auto=1";
       el.setAttribute("aria-label", `Play Episode ${ep.id}: ${ep.title}`);
     }
     const thumb = `episodes/${ep.id}-${ep.slug}/stills/thumb.jpg`;

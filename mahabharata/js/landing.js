@@ -22,7 +22,7 @@ if (grid) {
         <span class="ep-thumb-num">EP ${ep.id}</span>
         ${ep.duration ? `<span class="ep-thumb-dur">${ep.duration}</span>` : ""}
         ${live
-          ? `<span class="ep-play" aria-hidden="true"><svg viewBox="0 0 68 48"><path class="ep-play-bg" d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.3.3 34 .3 34 .3s-21.3 0-26.5 1.4a8.5 8.5 0 0 0-6 6C.1 12.9.1 24 .1 24s0 11.1 1.4 16.3a8.5 8.5 0 0 0 6 6C12.7 47.7 34 47.7 34 47.7s21.3 0 26.5-1.4a8.5 8.5 0 0 0 6-6c1.4-5.2 1.4-16.3 1.4-16.3s0-11.1-1.4-16.3z"/><path class="ep-play-tri" d="M27 34V14l18 10z"/></svg></span>`
+          ? `<span class="ep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>`
           : `<span class="ep-soon">Coming soon</span>`}
       </div>
       <div class="ep-body">

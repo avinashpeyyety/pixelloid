@@ -16,7 +16,7 @@ Priority order (from NEXT / WORKFLOW). **One episode per pass.** Do **not** star
 | **A2** | Continue **01–08 rewrite ladder** after 03 (next: 04, then 05…) | Studio | Same bar as A1, **one ep per pass**. Ep 01–02 already Done at 09/10 bar. |
 | **A3** | **3D pilot**: one beat Imagine key panel → Blender camera/set → `renders/` proxy; document path; **keep GATE C** | Studio | One beat documented; GATE C–passed panel mapped; Blender proxy in `episodes/<id>/renders/`; path noted (TOOLING / episode README). Hybrid player not required this sprint. |
 | **A4** | Tighten **Ep 10 Arjuna lock** (cream-white dhoti; no gold armor / peacock on arrows plate) | Studio | Curiosity polish — lock + affected plates re-GATE C; no drift vs Krishna/Bhishma bars. |
-| **A5** | **Ep 14 remains paused** until 01–08 are one show with 09+ | Chief | No new Ep 14 ship tickets while ladder incomplete. WIP on disk stays WIP. |
+| **A5** | ~~Ep 14 remains paused until 01–08 are one show with 09+~~ **Lifted 2026-09-29 by Avinash for Ep 14 only.** Ep 14 is an active ship ticket (Studio). Hold still applies to Ep 15+ until the ladder is done. | Studio | Ep 14 GATE A/B/C/D PASS + Orion audio → registry live. Status 2026-09-29: A/B/D PASS; GATE C FAIL pending SuperGrok drops (`episodes/14-drona-fall/logic-reviews/SUPERGROK-DROP-LIST.md`); TTS blocked on xAI team credits. |
 
 ---
 
@@ -56,7 +56,7 @@ Produce a short checklist under `docs/` (or expand this file’s Track B table i
 | **Week 1** | Ep 03 rewrite **start** + pipeline checklist | **[M]** Ep 03: script → GATE D → cast/bible → GATE A/B → start Imagine keys (Studio). **[S]** Codify Track B checklist doc from WORKFLOW (Studio). |
 | **Week 2** | Finish Ep 03 gates + 3D pilot beat | **[M]** Ep 03: finish Imagine → GATE C → Orion/raga → GATE D → registry path (Studio). **[S]** 3D pilot: one beat panel → Blender → `renders/` proxy + doc; keep GATE C (Studio). |
 
-Cadence rule: Chief picks **≤1** in-flight ticket; prefer S; split M. Do not parallelize A1 with A2. A3 may follow Ep 03 GATE C or run as the Week-2 S after Ep 03 M lands. A4 is curiosity after A1–A3 pressure is clear. A5 is a hard hold.
+Cadence rule: Chief picks **≤1** in-flight ticket; prefer S; split M. Do not parallelize A1 with A2. A3 may follow Ep 03 GATE C or run as the Week-2 S after Ep 03 M lands. A4 is curiosity after A1–A3 pressure is clear. A5 hold lifted for Ep 14 only (2026-09-29).
 
 ---
 
@@ -71,7 +71,7 @@ Cadence rule: Chief picks **≤1** in-flight ticket; prefer S; split M. Do not p
 ## Out of scope this sprint
 
 - Starting Ep 04–08 rewrite in the same pass as Ep 03
-- Shipping Ep 14
+- ~~Shipping Ep 14~~ (in scope from 2026-09-29 — Avinash override)
 - Full 3D player / hybrid cut (Curiosity in NEXT — pilot beat only)
 - Unrelated pixelloid (Chocolate Dance, kids-grok) unless Pulse flags breakage
 

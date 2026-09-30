@@ -2,7 +2,7 @@
 Status: PASS
 Reviewer: panel-logic agent (tools/logic_review.py)
 
-Plates: 9
+Plates: 11
 
 ## Result
 All automated checks passed.

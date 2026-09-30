@@ -34,6 +34,9 @@ Episodic itihāsa theater: **write script → Grok Imagine key panels → Blende
 | 09 | **The Bhagavad Gita** — Kurukshetra opens | Live |
 | 10 | **The Fall of Bhishma** — tenth day, bed of arrows | Live |
 | 11 | **The Chakravyuha** — Abhimanyu, thirteenth day | Live |
+| 12 | **Jayadratha Falls** — fourteenth day, sunset vow | Live |
+| 13 | **Ghatotkacha** — night of the fourteenth, Karna’s Shakti | Live |
+| 14 | **The Fall of Drona** — fifteenth day, the half-truth | Live |
 
 ## Local
 

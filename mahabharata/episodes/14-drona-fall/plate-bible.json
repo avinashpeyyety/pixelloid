@@ -18,11 +18,14 @@
   "imagine_refs": [
     "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
     "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
     "episodes/14-drona-fall/stills/_locks/dawn15-master.jpg",
     "episodes/14-drona-fall/stills/_locks/drona.jpg",
     "episodes/14-drona-fall/stills/_locks/yudhishthira.jpg",
     "episodes/14-drona-fall/stills/_locks/bhima.jpg",
-    "episodes/14-drona-fall/stills/_locks/dhrishtadyumna.jpg"
+    "episodes/14-drona-fall/stills/_locks/dhrishtadyumna.jpg",
+    "episodes/14-drona-fall/stills/_locks/arjuna.jpg",
+    "episodes/14-drona-fall/stills/_locks/krishna.jpg"
   ],
   "photoreal_allowed": false,
   "apparatus": {},
@@ -40,7 +43,7 @@
     "yudhishthira": {
       "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna, never a second Arjuna",
       "hair": "Dark hair, simple gold diadem (lighter than Arjuna’s heavy crown), no peacock feather",
-      "costume": "Cream-white royal dhoti, gold sash, no Gandiva, no flower garland"
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor (Ep 14 canon = plate-counsel / plate-conch), no Gandiva, no flower garland"
     },
     "bhima": {
       "face": "Adult Pandava, broad noble face, full dark mustache, fierce dark eyes — never a child",
@@ -53,9 +56,9 @@
       "costume": "Indigo-gold Panchala armor, sword of light — never flower garland, never saffron sage robes"
     },
     "arjuna": {
-      "face": "Noble warrior prince, dark mustache, same face as Ep 09–13",
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09 lock (episodes/09-gita/stills/_locks/arjuna.jpg)",
       "hair": "Gold crown over dark hair",
-      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland"
+      "costume": "Cream-white dhoti and cream angavastram, gold belt, quiver on back, Gandiva — no gold chest armor, no peacock feather, never flower garland"
     },
     "armies": {
       "face": "Background warriors distant",
@@ -67,7 +70,7 @@
     {
       "id": "wide",
       "file": "plate-wide.jpg",
-      "beat_text": "Dawn of the fifteenth. Drona holds the field like a second sun.",
+      "beat_text": "Dawn of the fifteenth day. Drona burns through the Pandava ranks — no one can stand before the guru.",
       "cast_present": [
         "drona"
       ],
@@ -95,18 +98,34 @@
         "severed neck",
         "Krishna",
         "Arjuna",
-        "Bhima"
+        "Bhima",
+        "English text or plaques",
+        "modern props"
       ],
       "props": [
         "bow of the guru",
         "dawn banners"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona the acharya-warrior holds the dawn field, saffron angavastram over pale gold-white engraved armor, long white beard, saffron topknot, bow of the guru. Not a garden sage. Cream-saffron-gold hour, carved gold-and-lotus cartouche. Distant ranks only. Not photoreal. No Krishna. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona the acharya-warrior holds the dawn field, saffron angavastram over pale gold-white engraved armor, long white beard, saffron topknot, bow of the guru. Not a garden sage. Cream-saffron-gold hour, carved gold-and-lotus cartouche. Distant ranks only. Not photoreal. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Drona-vadha upaparva) — fifteenth day; Drona's Brahma-weapon and slaughter of Panchalas, Pandava host routed"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Drona-vadha) — Drona unstoppable on the fifteenth"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Drona-vadha sections — Drona's fury on the fifteenth day (§190)"
+        }
+      ]
     },
     {
       "id": "counsel",
       "file": "plate-counsel.jpg",
-      "beat_text": "Krishna says: he will not fall while he believes his son lives.",
+      "beat_text": "Krishna counsels: armed, he cannot be beaten — but he will lay down his bow if he believes his son Ashwatthama is dead.",
       "cast_present": [
         "krishna",
         "yudhishthira",
@@ -139,19 +158,35 @@
         "white-bearded sage",
         "Arjuna",
         "second Krishna",
-        "Ghatotkacha"
+        "Ghatotkacha",
+        "English text or plaques",
+        "modern props"
       ],
       "props": [
         "chariot",
         "reins",
         "mace"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium, exactly three named adults: Krishna as charioteer (dusty-blue skin, yellow pitambar, gold crown with one peacock feather, flower garlands, reins — Ep 09 lock); Yudhishthira the eldest king with modest mustache, simple gold diadem, cream-white royal dhoti, gold sash — NOT Arjuna, no heavy crown, no Gandiva, no white prince robe; Bhima adult with dark mustache, leaf-green gold armor, great mace, never a child. No Arjuna. No English text. No speech bubble. No letters. Carved gold-and-lotus cartouche, cream-saffron-gold dawn. Not photoreal. No Drona. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium, exactly three named adults: Krishna as charioteer (dusty-blue skin, yellow pitambar, gold crown with one peacock feather, flower garlands, reins — Ep 09 lock); Yudhishthira the eldest king with modest mustache, simple gold diadem, cream-white royal dhoti, gold sash — NOT Arjuna, no heavy crown, no Gandiva, no white prince robe; Bhima adult with dark mustache, leaf-green gold armor, great mace, never a child. No Arjuna. No English text. No speech bubble. No letters. Carved gold-and-lotus cartouche, cream-saffron-gold dawn. Not photoreal. No Drona. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Drona-vadha upaparva) — Krishna tells the Pandavas Drona cannot be vanquished in arms; he will cease if told Ashvatthama is slain"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Drona-vadha) — Krishna's upaya: the news of Ashvatthama"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Drona-vadha sections — Krishna's counsel to Yudhishthira (§190)"
+        }
+      ]
     },
     {
       "id": "elephant",
       "file": "plate-elephant.jpg",
-      "beat_text": "Bhima slays an elephant named Ashwatthama — a great beast of gold dust, no blood.",
+      "beat_text": "So Bhima slays a great war-elephant named Ashwatthama — a beast, not the son.",
       "cast_present": [
         "bhima"
       ],
@@ -182,18 +217,34 @@
         "Krishna",
         "Drona",
         "human Ashwatthama",
-        "blood"
+        "blood",
+        "English text or plaques",
+        "modern props"
       ],
       "props": [
         "mace",
         "war elephant of gold dust"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Bhima the adult Pandava, dark mustache, gold circlet, leaf-green gold armor, great mace. A war-elephant named Ashwatthama collapses as gold dust and light — not a man, no blood, no viscera. Never a child. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Bhima the adult Pandava, dark mustache, gold circlet, leaf-green gold armor, great mace. A war-elephant named Ashwatthama collapses as gold dust and light — not a man, no blood, no viscera. Never a child. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Drona-vadha upaparva) — Bhima slays the elephant Ashvatthama of the Malava king Indravarman, then cries 'Ashvatthama is slain'"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Drona-vadha) — Bhima kills the elephant Ashvatthama"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Drona-vadha sections — Bhima slays the elephant named Aswatthaman (§190)"
+        }
+      ]
     },
     {
       "id": "dharma",
       "file": "plate-dharma.jpg",
-      "beat_text": "Yudhishthira must speak. Dharma tightens on the king who does not lie.",
+      "beat_text": "Drona doubts Bhima's cry. He asks Yudhishthira, who has never lied — and dharma tightens on the king.",
       "cast_present": [
         "yudhishthira"
       ],
@@ -205,7 +256,7 @@
         "Heroic medium — named figures fill the frame",
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
-        "Yudhishthira eldest Pandava king, simple gold diadem, cream-white royal dhoti, calm grave face, no Gandiva, no peacock, no flower garland"
+        "Yudhishthira: Eldest Pandava dharma-king: modest dark mustache, simple gold diadem, cream-white royal dhoti and cream angavastram, gold sash, bare-armed with gold armlets — no gold chest armor, no heavy crown, no Gandiva, no peacock, no flower garland; calm grave face, torn by the question"
       ],
       "must_not_show": [
         "Photoreal",
@@ -222,17 +273,33 @@
         "white-bearded sage",
         "Arjuna",
         "Krishna",
-        "Bhima as a second king"
+        "Bhima as a second king",
+        "English text or plaques",
+        "modern props"
       ],
       "props": [
         "simple diadem"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Yudhishthira, eldest dharma-king, simple gold diadem, cream-white royal dhoti, gold sash, modest mustache, grave calm. Not Arjuna, no heavy crown, no Gandiva, no peacock, no flower garland. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Yudhishthira, eldest dharma-king, modest mustache, simple gold diadem, cream-white royal dhoti and cream angavastram, gold sash, gold armlets, bare-armed — no gold chest armor. Grave, torn face: he has been asked a question he cannot answer truthfully. Not Arjuna, no heavy crown, no Gandiva, no peacock, no flower garland. Dawn field, distant ranks. Carved gold-and-lotus cartouche, cream-saffron-gold. No English text. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Drona-vadha upaparva) — Drona disbelieves Bhima and asks Yudhishthira, trusting his truthfulness"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Drona-vadha) — Drona turns to the truthful Yudhishthira"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Drona-vadha sections — Drona asks Yudhishthira, knowing he would not lie (§190)"
+        }
+      ]
     },
     {
       "id": "conch",
       "file": "plate-conch.jpg",
-      "beat_text": "Ashwatthama is dead, he says — and the elephant is lost under Krishna’s conch.",
+      "beat_text": "“Ashwatthama is dead,” he says aloud — and “the elephant” he mutters, lost under the roar of conches.",
       "cast_present": [
         "yudhishthira",
         "krishna"
@@ -264,18 +331,93 @@
         "white-bearded sage",
         "Drona on the chariot",
         "human Ashwatthama",
-        "Arjuna"
+        "Arjuna",
+        "English text or plaques",
+        "modern props"
       ],
       "props": [
         "Panchajanya conch",
         "reins"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Yudhishthira (modest mustache, simple gold diadem, cream-white dhoti) speaking; Krishna (Ep 09 lock: dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins) raising a gold-white conch Panchajanya to his lips. No English text, no letters, no speech bubble, no word LISTEN. No Arjuna. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Yudhishthira (modest mustache, simple gold diadem, cream-white dhoti) speaking; Krishna (Ep 09 lock: dusty-blue, yellow pitambar, peacock feather, flower garlands, charioteer reins) raising a gold-white conch Panchajanya to his lips. No English text, no letters, no speech bubble, no word LISTEN. No Arjuna. Carved gold-and-lotus cartouche. Not photoreal. No Drona. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Drona-vadha upaparva) — Yudhishthira says 'Ashvatthama is slain' aloud and 'the elephant' indistinctly"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Drona-vadha) — 'naro va kunjaro va' — the word elephant unheard amid conches and drums"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Drona-vadha sections — Yudhishthira adds 'the elephant' indistinctly (§190)"
+        }
+      ]
+    },
+    {
+      "id": "wheel",
+      "file": "plate-wheel.jpg",
+      "cast_present": [
+        "yudhishthira"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Yudhishthira: Eldest Pandava dharma-king: modest dark mustache, simple gold diadem, cream-white royal dhoti and cream angavastram, gold sash, bare-armed with gold armlets — no gold chest armor, no heavy crown, no Gandiva, no peacock, no flower garland; grave, eyes lowered, standing on his chariot",
+        "Low three-quarter view of his gold-and-ivory chariot: the wheels, which floated four fingers above the earth, now press into the dust — a thin gold glow fading from the rims",
+        "Unnamed charioteer only as a back-turned silhouette, not Krishna"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ashwatthama",
+        "Ashwatthama the man",
+        "severed neck",
+        "English text or plaques",
+        "modern props",
+        "Drona",
+        "white-bearded sage",
+        "Krishna",
+        "Arjuna",
+        "broken wheel",
+        "sinking into mud like Karna's"
+      ],
+      "props": [
+        "chariot wheels",
+        "dust"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium, low three-quarter angle: Yudhishthira the eldest dharma-king stands on his gold-and-ivory chariot, grave, eyes lowered — modest mustache, simple gold diadem, cream-white royal dhoti and cream angavastram, gold sash, no gold chest armor, no Gandiva, no peacock. The chariot wheels, which always floated four fingers above the earth, now touch and press the dust; a thin gold glow fades from the rims. Wheels intact (not broken, not mired in mud). Back-turned unnamed charioteer silhouette only. No Krishna, no Arjuna. Carved gold-and-lotus cartouche, cream-saffron-gold dawn. No English text. Not photoreal. No Drona. No flute. No gore.",
+      "beat_text": "At that half-truth, his chariot — which had always ridden four fingers above the earth — sinks. Its wheels touch the ground.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Drona-vadha upaparva) — Yudhishthira's chariot, which had stood four fingers above the ground, now touches the earth"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Drona-vadha) — the chariot of Yudhishthira descends to the earth"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Drona-vadha sections — his car, hitherto four fingers' breadth above the ground, touched the earth (§190)"
+        }
+      ]
     },
     {
       "id": "yoga",
       "file": "plate-yoga.jpg",
-      "beat_text": "Drona’s bow falls. He sits in yoga on the field.",
+      "beat_text": "Drona lays down his weapons. He sits in yoga, and turns his mind inward.",
       "cast_present": [
         "drona"
       ],
@@ -287,7 +429,7 @@
         "Heroic medium — named figures fill the frame",
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
-        "Drona seated in yoga, saffron angavastram, white beard, eyes turning inward, bow of the guru lying on the earth"
+        "Drona seated in yoga, saffron angavastram, white beard, eyes turning inward, weapons laid aside"
       ],
       "must_not_show": [
         "Photoreal",
@@ -302,18 +444,35 @@
         "severed neck",
         "Krishna",
         "blood",
-        "corpse"
+        "corpse",
+        "English text or plaques",
+        "modern props"
       ],
       "props": [
         "fallen bow",
         "yoga seat"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: EXACTLY ONE Drona. The acharya-warrior sits in yoga on the field, saffron angavastram over pale gold-white armor, long white beard, saffron topknot, eyes inward. His guru-bow lies on the earth beside him. Do not draw a second Drona. Do not draw a reclining body. Do not draw a corpse. Alive in yoga, composed. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Krishna. No flute. No gore. No blood."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: EXACTLY ONE Drona. The acharya-warrior sits in yoga on the field, saffron angavastram over pale gold-white armor, long white beard, saffron topknot, eyes inward. His guru-bow lies on the earth beside him. Do not draw a second Drona. Do not draw a reclining body. Do not draw a corpse. Alive in yoga, composed. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Krishna. No flute. No gore. No blood.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Drona-vadha upaparva) — Drona casts aside his weapons, sits in yoga, and fixes his mind on the Supreme"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Drona-vadha) — Drona abandons arms and enters yoga"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Drona-vadha sections — Drona casts off his weapons and sits in yoga (§192)"
+        }
+      ],
+      "notes": "Existing plate shows Drona unarmed in yoga; bow on earth not visible — acceptable for 'lays down his weapons' (weapons absent). Optional polish regen."
     },
     {
       "id": "prince",
       "file": "plate-prince.jpg",
-      "beat_text": "Dhrishtadyumna comes forth — the son born for this hour.",
+      "beat_text": "Dhrishtadyumna — born from Drupada's fire to end Drona — comes forth with his sword.",
       "cast_present": [
         "dhrishtadyumna"
       ],
@@ -342,17 +501,33 @@
         "white-bearded sage",
         "Arjuna",
         "Krishna",
-        "peacock feather"
+        "peacock feather",
+        "English text or plaques",
+        "modern props"
       ],
       "props": [
         "sword of light"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Dhrishtadyumna, adult Panchala prince, dark mustache, Panchala diadem, indigo-gold engraved armor, sword as gold light. Never a child, not Arjuna, no peacock, no flower garland. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Dhrishtadyumna, adult Panchala prince, dark mustache, Panchala diadem, indigo-gold engraved armor, sword as gold light. Never a child, not Arjuna, no peacock, no flower garland. Carved gold-and-lotus cartouche, cream-saffron-gold. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Drona-vadha upaparva) — Dhrishtadyumna, born of the sacrificial fire to slay Drona, rushes at him with sword drawn"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Drona-vadha) — Dhrishtadyumna, fire-born slayer of Drona"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Drona-vadha sections — Dhrishtadyumna leaps from his car, sword in hand (§192)"
+        }
+      ]
     },
     {
       "id": "still",
       "file": "plate-still.jpg",
-      "beat_text": "The guru is stilled as gold light — no blood, only a vow kept.",
+      "beat_text": "He strikes off the guru's head — but Drona's spirit had already risen as light, seen by only a few.",
       "cast_present": [
         "drona",
         "dhrishtadyumna"
@@ -382,18 +557,93 @@
         "Krishna",
         "severed head",
         "blood spray",
-        "corpse horror"
+        "corpse horror",
+        "English text or plaques",
+        "modern props"
       ],
       "props": [
         "sword of gold light",
         "yoga"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona seated in yoga becomes gold light; Dhrishtadyumna the adult Panchala prince holds a sword of gold light. No blood, no severed neck, no corpse. Drona: white beard, saffron. Dhrishtadyumna: dark mustache, indigo-gold, never a child. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Drona seated in yoga becomes gold light; Dhrishtadyumna the adult Panchala prince holds a sword of gold light. No blood, no severed neck, no corpse. Drona: white beard, saffron. Dhrishtadyumna: dark mustache, indigo-gold, never a child. Carved gold-and-lotus cartouche. Not photoreal. No Krishna. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Drona-vadha upaparva) — Dhrishtadyumna beheads Drona; Drona's soul had already ascended, seen only by five (incl. Arjuna, Krishna, Yudhishthira, Kripa, Sanjaya)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Drona-vadha) — Drona's spirit ascends before the stroke"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Drona-vadha sections — Dhrishtadyumna severs the head; Drona's soul had gone to heaven (§192)"
+        }
+      ]
+    },
+    {
+      "id": "grief",
+      "file": "plate-grief.jpg",
+      "cast_present": [
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Arjuna matching Ep 09 face lock: noble warrior prince, dark mustache, gold crown over dark hair, cream-white dhoti and cream angavastram, gold belt, quiver on back — no gold chest armor, no peacock feather, no flower garland",
+        "Gandiva lowered to the earth in one hand; the other hand raised open in protest; tears on his face; grief, not rage"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "flute",
+        "child Krishna",
+        "child Ashwatthama",
+        "Ashwatthama the man",
+        "severed neck",
+        "English text or plaques",
+        "modern props",
+        "Drona",
+        "white-bearded sage",
+        "Drona corpse",
+        "severed head",
+        "Krishna",
+        "second Arjuna",
+        "gold chest armor on Arjuna"
+      ],
+      "props": [
+        "Gandiva lowered",
+        "quiver"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: exactly one Arjuna, same face as the Ep 09 lock — noble warrior prince, dark mustache, gold crown over dark hair, cream-white dhoti and cream angavastram, gold belt, quiver on back; no gold chest armor, no peacock feather, no flower garland. Gandiva lowered to the dust in one hand, the other hand raised open in protest, tears on his cheeks — a disciple grieving his guru. Dawn field behind, distant ranks, smoke of gold light rising far off. No body, no head, no blood. Carved gold-and-lotus cartouche, cream-saffron-gold. No English text. Not photoreal. No Drona. No Krishna. No flute. No gore.",
+      "beat_text": "Arjuna had cried, “Bring him alive!” Now he weeps — and rebukes the lie that disarmed his teacher.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Drona-vadha upaparva) — Arjuna cried 'Bring the preceptor alive, do not slay him'; later rebukes Yudhishthira and Dhrishtadyumna"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Drona-vadha) — Arjuna's grief and protest over the guru's death"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Drona-vadha sections — Arjuna had shouted to take Drona alive; Arjuna's reproach (§192, §196)"
+        }
+      ]
     },
     {
       "id": "wide-gold",
       "file": "plate-wide-gold.jpg",
-      "beat_text": "Thus Drona falls. A son not on this field will hear it.",
+      "beat_text": "Thus Drona falls. Elsewhere on the field, his son hears it — and Ashwatthama's wrath is coming.",
       "cast_present": [
         "krishna",
         "yudhishthira"
@@ -407,8 +657,8 @@
         "Native 3:2 1536×1024",
         "Cream-saffron-gold sacred hour",
         "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
-        "Yudhishthira simple gold diadem, cream-white dhoti, grave",
-        "Quiet cream-saffron field after the guru; no corpse"
+        "Yudhishthira: Eldest Pandava dharma-king: modest dark mustache, simple gold diadem, cream-white royal dhoti and cream angavastram, gold sash, bare-armed with gold armlets — no gold chest armor, no heavy crown, no Gandiva, no peacock, no flower garland; standing grave on foot beside Krishna, NOT holding reins",
+        "Quiet cream-saffron field after the guru's hour; low sun; no corpse"
       ],
       "must_not_show": [
         "Photoreal",
@@ -425,13 +675,63 @@
         "white-bearded sage",
         "Drona corpse",
         "human Ashwatthama",
-        "Arjuna"
+        "Arjuna",
+        "English text or plaques",
+        "modern props"
       ],
       "props": [
-        "chariot",
-        "reins"
+        "reins",
+        "retreating banners"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Heroic medium: EXACTLY two adult men. Krishna (Ep 09 lock: dusty-blue youthful divine adult, yellow pitambar, gold crown with one peacock feather, flower garlands, charioteer reins). Yudhishthira the eldest Pandava dharma-king: male, modest dark mustache, simple gold diadem, cream-white royal dhoti, gold sash, grave — NOT a woman, not a goddess, not Arjuna, no Gandiva, no peacock. Quiet cream-saffron field after the guru's hour. No corpse. No English text. Carved gold-and-lotus cartouche. Not photoreal. No flute. No gore."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: EXACTLY two adult men standing on the quiet field at low sun. Krishna the charioteer (Ep 09 lock: dusty-blue youthful divine adult, yellow pitambar, gold crown with one peacock feather, flower garlands, reins in one hand). Yudhishthira the eldest Pandava dharma-king beside him on foot, grave: modest dark mustache, simple gold diadem, cream-white royal dhoti and cream angavastram, gold sash — no gold chest armor, no reins in his hands, not a woman, not Arjuna, no Gandiva, no peacock. Kaurava banners retreating far off. No corpse. No English text. Carved gold-and-lotus cartouche. Not photoreal. No flute. No gore.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Drona-vadha upaparva) — Kaurava host flees; Ashvatthama, elsewhere on the field, learns of his father's death (Narayanastra follows)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Drona-vadha) — Ashvatthama hears of Drona's fall"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva, Drona-vadha sections — Aswatthaman learns of his sire's death (§193)"
+        }
+      ]
     }
-  ]
+  ],
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Drona Parva · fifteenth day · Drona-vadha upaparva",
+    "bori": "BORI CE Drona Parva (Drona-vadha), Debroy translation vol. 6–7: Drona's slaughter on the fifteenth; Krishna's counsel; Bhima slays the elephant Ashvatthama (of Indravarman of Malava); Drona doubts and asks Yudhishthira; 'Ashvatthama is slain' aloud, 'the elephant' indistinctly; the chariot touches the earth; Drona casts aside arms and sits in yoga; Dhrishtadyumna beheads him while his soul has already ascended; Arjuna had cried to take him alive.",
+    "gita_press": "Gita Press Gorakhpur Mahabharata (Hindi, Drona Parva, Drona-vadha): same sequence; 'ashvatthama hatah — naro va kunjaro va', with the last words drowned by conches and drums.",
+    "ganguli": "K.M. Ganguli, Drona Parva §190–193 (vulgate): same sequence; car 'four fingers' breadth above the earth' touches the ground; Arjuna's reproach of Yudhishthira and Dhrishtadyumna follows (§196).",
+    "divergence": "Vulgate (Ganguli / Gita Press) popular rendering has the word 'elephant' drowned by conches and drums; BORI CE says only that Yudhishthira spoke 'elephant' indistinctly. Chapter numbers differ between CE and vulgate. Arjuna's formal rebuke of Yudhishthira sits in the Narayanastra-mokshana section right after.",
+    "chosen": "Gita Press + BORI/Debroy overlap: Yudhishthira mutters 'the elephant' indistinctly; conches are the battle's din (Krishna's conch on the plate) rather than a staged trick. Ganguli for English wording.",
+    "notes": "Not TV. Comic-mythology only; no gore — beheading told in narration, shown as gold light (plate-still). Ashwatthama the son is never shown; the elephant is a beast. Krishna = Ep 09 look lock; Arjuna = Ep 09 face, cream-white dhoti, no gold armor/peacock (A4 direction). Yudhishthira Ep 14 canon = cream-white royal dhoti (plate-counsel/conch). Never attach Ep01 plate-wide-gold or any finished plate as an Imagine ref."
+  },
+  "stills_status": {
+    "pass": [
+      "wide",
+      "counsel",
+      "elephant",
+      "conch",
+      "yoga",
+      "prince",
+      "still"
+    ],
+    "regen_required": [
+      "_locks/yudhishthira",
+      "_locks/arjuna",
+      "dharma",
+      "wheel",
+      "grief",
+      "wide-gold"
+    ],
+    "reason": "Yudhishthira costume drift (gold/bronze armor on dharma, wide-gold, lock vs cream dhoti on counsel/conch); wide-gold shows Yudhishthira holding reins beside Krishna; wheel + grief are new logic beats (chariot touches earth; Arjuna's protest). xAI Imagine API team_blocked 2026-09-29 → SuperGrok consumer drop list."
+  }
 }

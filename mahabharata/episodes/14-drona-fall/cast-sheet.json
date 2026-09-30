@@ -1,6 +1,6 @@
 {
   "episode_id": "14",
-  "notes": "Drona Parva, fifteenth day. No gore: elephant as gold dust; Drona stilled in yoga as gold light. Ashwatthama the son is OFF-FIELD (never a child, never shown). The named elephant is a war-elephant prop. Krishna is the Ep 09 look lock. Yudhishthira is the dharma-king, not Arjuna.",
+  "notes": "Drona Parva, fifteenth day. No gore: elephant as gold dust; beheading narrated, shown as Drona stilled in gold light. Ashwatthama the son is OFF-PLATE (elsewhere on the field; never shown, never a child). The named elephant is a war-elephant. Krishna = Ep 09 look lock. Arjuna = Ep 09 face lock, cream-white dhoti, no gold chest armor, no peacock. Yudhishthira Ep 14 canon = cream-white royal dhoti (plate-counsel / plate-conch), never a second Arjuna.",
   "cast": {
     "drona": {
       "face": "Aged acharya-warrior, noble lined face, long white beard and mustache (guru on the field, not a garden sage)",
@@ -15,7 +15,7 @@
     "yudhishthira": {
       "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna, never a second Arjuna",
       "hair": "Dark hair, simple gold diadem (lighter than Arjuna’s heavy crown), no peacock feather",
-      "costume": "Cream-white royal dhoti, gold sash, no Gandiva, no flower garland"
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor (Ep 14 canon = plate-counsel / plate-conch), no Gandiva, no flower garland"
     },
     "bhima": {
       "face": "Adult Pandava, broad noble face, full dark mustache, fierce dark eyes — never a child",
@@ -28,9 +28,9 @@
       "costume": "Indigo-gold Panchala armor, sword of light — never flower garland, never saffron sage robes"
     },
     "arjuna": {
-      "face": "Noble warrior prince, dark mustache, same face as Ep 09–13",
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09 lock (episodes/09-gita/stills/_locks/arjuna.jpg)",
       "hair": "Gold crown over dark hair",
-      "costume": "Cream-white dhoti, gold belt, quiver on back, Gandiva — never flower garland"
+      "costume": "Cream-white dhoti and cream angavastram, gold belt, quiver on back, Gandiva — no gold chest armor, no peacock feather, never flower garland"
     },
     "armies": {
       "face": "Background warriors distant",

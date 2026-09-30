@@ -159,4 +159,16 @@ export const EPISODES = [
       "Night after Jayadratha. Ghatotkacha darkens the field — and Karna spends the dart that was kept for Arjuna.",
     play: "play.html?ep=13",
   },
+  {
+    id: "14",
+    slug: "drona-fall",
+    title: "The Fall of Drona",
+    sanskrit: "द्रोणवधः",
+    chapter: "Drona Parva · fifteenth day",
+    duration: "~136s",
+    status: "live",
+    blurb:
+      "Drona cannot be beaten in arms. An elephant dies, a truthful king speaks half a truth — and the guru lays down his bow.",
+    play: "play.html?ep=14",
+  },
 ];

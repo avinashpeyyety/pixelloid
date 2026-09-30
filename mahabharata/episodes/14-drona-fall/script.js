@@ -1,6 +1,10 @@
 /**
  * Episode 14 — The Fall of Drona
- * Drona Parva · fifteenth day; the elephant; the guru sits
+ * Drona Parva · fifteenth day; the elephant; the half-truth; the guru sits
+ * Logic pass 2026-09-29: unstoppable Drona → Krishna's stratagem → elephant Ashwatthama →
+ * Drona asks Yudhishthira → half-truth ("the elephant" muttered) → chariot touches the earth →
+ * Drona lays down arms, yoga → Dhrishtadyumna → beheading as gold light → Arjuna's grief/protest.
+ * Sources: BORI CE/Debroy + Gita Press Gorakhpur + K.M. Ganguli (Drona Parva §190–196). See plate-bible source_block.
  */
 export const EPISODE = {
   id: "14",
@@ -18,9 +22,9 @@ export const EPISODE = {
   },
   music: {
     raga: "todi",
-    note: "Morning Todi tanpura + sparse bansuri; pathos, no tabla. Duck under Orion.",
+    note: "Miyan ki Todi — morning raga of pathos (komal Re/Ga/Dha, tivra Ma; Pa sparing). Tanpura + sparse bansuri, no tabla. Duck under Orion.",
   },
-  totalSec: 104,
+  totalSec: 136,
   stills: {
     poster: "episodes/14-drona-fall/stills/poster.jpg",
   },
@@ -30,14 +34,16 @@ export const EPISODE = {
     elephant: "plate-elephant.jpg",
     dharma: "plate-dharma.jpg",
     conch: "plate-conch.jpg",
+    wheel: "plate-wheel.jpg",
     yoga: "plate-yoga.jpg",
     prince: "plate-prince.jpg",
     still: "plate-still.jpg",
+    grief: "plate-grief.jpg",
     "wide-gold": "plate-wide-gold.jpg",
   },
   end: {
     title: "End of Episode 14",
-    line: "The guru is still. A son not on this field will hear it.",
+    line: "The guru is still. Elsewhere on the field, his son has heard.",
     next: "index.html",
     nextLabel: "All episodes",
   },
@@ -58,7 +64,7 @@ export const EPISODE = {
       panY: 0,
       audio: "orion-00.mp3",
       who: "Narrator",
-      text: "Dawn of the fifteenth. Drona holds the field like a second sun.",
+      text: "Dawn of the fifteenth day. Drona burns through the Pandava ranks — no one can stand before the guru.",
     },
     {
       t: 12,
@@ -68,7 +74,7 @@ export const EPISODE = {
       panY: -0.02,
       audio: "orion-01.mp3",
       who: "Narrator",
-      text: "Krishna says: he will not fall while he believes his son lives.",
+      text: "Krishna counsels: armed, he cannot be beaten — but he will lay down his bow if he believes his son Ashwatthama is dead.",
     },
     {
       t: 24,
@@ -78,7 +84,7 @@ export const EPISODE = {
       panY: -0.02,
       audio: "orion-02.mp3",
       who: "Narrator",
-      text: "Bhima slays an elephant named Ashwatthama — a great beast of gold dust, no blood.",
+      text: "So Bhima slays a great war-elephant named Ashwatthama — a beast, not the son.",
     },
     {
       t: 36,
@@ -88,7 +94,7 @@ export const EPISODE = {
       panY: -0.02,
       audio: "orion-03.mp3",
       who: "Narrator",
-      text: "Yudhishthira must speak. Dharma tightens on the king who does not lie.",
+      text: "Drona doubts Bhima’s cry. He asks Yudhishthira, who has never lied — and dharma tightens on the king.",
     },
     {
       t: 48,
@@ -98,50 +104,70 @@ export const EPISODE = {
       panY: -0.03,
       audio: "orion-04.mp3",
       who: "Narrator",
-      text: "Ashwatthama is dead, he says — and the elephant is lost under Krishna’s conch.",
+      text: "“Ashwatthama is dead,” he says aloud — and “the elephant” he mutters, lost under the roar of conches.",
     },
     {
       t: 60,
+      plate: "wheel",
+      zoom: 1.12,
+      panX: 0.02,
+      panY: 0.02,
+      audio: "orion-05.mp3",
+      who: "Narrator",
+      text: "At that half-truth, his chariot — which had always ridden four fingers above the earth — sinks. Its wheels touch the ground.",
+    },
+    {
+      t: 72,
       plate: "yoga",
       zoom: 1.14,
       panX: 0.02,
       panY: -0.02,
-      audio: "orion-05.mp3",
+      audio: "orion-06.mp3",
       who: "Narrator",
-      text: "Drona’s bow falls. He sits in yoga on the field.",
+      text: "Drona lays down his weapons. He sits in yoga, and turns his mind inward.",
     },
     {
-      t: 72,
+      t: 84,
       plate: "prince",
       zoom: 1.16,
       panX: -0.02,
       panY: -0.02,
-      audio: "orion-06.mp3",
+      audio: "orion-07.mp3",
       who: "Narrator",
-      text: "Dhrishtadyumna comes forth — the son born for this hour.",
+      text: "Dhrishtadyumna — born from Drupada’s fire to end Drona — comes forth with his sword.",
     },
     {
-      t: 84,
+      t: 96,
       plate: "still",
       zoom: 1.12,
       panX: 0.02,
       panY: 0.02,
-      audio: "orion-07.mp3",
+      audio: "orion-08.mp3",
       who: "Narrator",
-      text: "The guru is stilled as gold light — no blood, only a vow kept.",
+      text: "He strikes off the guru’s head — but Drona’s spirit had already risen as light, seen by only a few.",
     },
     {
-      t: 95,
+      t: 108,
+      plate: "grief",
+      zoom: 1.12,
+      panX: -0.02,
+      panY: -0.02,
+      audio: "orion-09.mp3",
+      who: "Narrator",
+      text: "Arjuna had cried, “Bring him alive!” Now he weeps — and rebukes the lie that disarmed his teacher.",
+    },
+    {
+      t: 120,
       plate: "wide-gold",
       zoom: 1.08,
       panX: 0,
       panY: 0.02,
-      audio: "orion-08.mp3",
+      audio: "orion-10.mp3",
       who: "Narrator",
-      text: "Thus Drona falls. A son not on this field will hear it.",
+      text: "Thus Drona falls. Elsewhere on the field, his son hears it — and Ashwatthama’s wrath is coming.",
     },
     {
-      t: 102,
+      t: 132,
       plate: "wide-gold",
       zoom: 1.02,
       panX: 0,

@@ -2,8 +2,8 @@
 Status: PASS
 Reviewer: dialogue-logic agent (tools/dialogue_review.py)
 
-Beats: 10
-Spoken: 9
+Beats: 12
+Spoken: 11
 
 ## Result
 All automated dialogue-logic checks passed.

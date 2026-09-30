@@ -4,11 +4,11 @@
 - [ ] **Active sprint board:** [`docs/SPRINT_PLAN.md`](docs/SPRINT_PLAN.md) — Track A (improvements) + Track B (Ep 15+ factory). Studio lead; Chief one ticket/cycle.
 - [x] Ep 11: player uses Blender `renders/beat-*.png` (Ken Burns on 3D proxies; Orion/Megh kept)
 - [x] Pilot one beat in **3D**: Ep09 A3 counsel → Blender → `episodes/09-gita/renders/beat-35-counsel.png` (docs in `episodes/09-gita/blender/`; player still on stills/) — SPRINT_PLAN Track A3
-- [ ] Rewrite **Episode 05** (*Yaksha Prashna*) to the Ep 09/10 bar (one episode per pass). Do not start 06–08 in the same pass. Ep 14 unpaused separately (WIP on `studio/ep14-drona-fall`, GATE C PASS; GATE D next) — SPRINT_PLAN Track A2
+- [ ] Rewrite **Episode 05** (*Yaksha Prashna*) to the Ep 09/10 bar (one episode per pass). Do not start 06–08 in the same pass. — SPRINT_PLAN Track A2
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate) — SPRINT_PLAN Track A4
-- [ ] Continue 05–08 rewrite ladder one episode per pass; Ep 14 advancing separately on its branch — SPRINT_PLAN Track A2
+- [ ] Continue 05–08 rewrite ladder one episode per pass — SPRINT_PLAN Track A2
 
 ## Done
 - [x] **Ep 04 *The Akshayapatra* rewrite** (09/10 bar, Yaman, Kokoro local orion-*, GATE D install + ship 2026-10-02)

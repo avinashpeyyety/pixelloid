@@ -1,7 +1,7 @@
 /**
  * Mahābhārata player — cinematic plate theater.
  * Painterly Imagine plates + Ken Burns / crossfade; voice + raga underscore (tanpura; episode raga).
- * Loads episode from ?ep=01 … ?ep=13
+ * Loads episode from ?ep=01 … ?ep=14
  */
 const EP_LOADERS = {
   "01": () => import("../episodes/01-birds-eye/script.js"),
@@ -17,6 +17,7 @@ const EP_LOADERS = {
   "11": () => import("../episodes/11-chakravyuha/script.js"),
   "12": () => import("../episodes/12-jayadratha-vadha/script.js"),
   "13": () => import("../episodes/13-ghatotkacha/script.js"),
+  "14": () => import("../episodes/14-drona-fall/script.js"),
 };
 
 const _epParam = String(new URLSearchParams(location.search).get("ep") || "01").replace(/\D/g, "") || "01";
@@ -232,7 +233,7 @@ const C = {
 /**
  * Episode raga beds: tanpura floor + raga phrases + optional tabla.
  * Kathavachak theater — not trailer brass, not licensed film music.
- * Ep 01 Bhupali (morning, no Ma/Ni), Ep 09 Bhairav, Ep 10 Darbari, Ep 11 Megh+Jhaptal, Ep 12 Marwa, Ep 13 Malkauns;
+ * Ep 01 Bhupali (morning, no Ma/Ni), Ep 09 Bhairav, Ep 10 Darbari, Ep 11 Megh+Jhaptal, Ep 12 Marwa, Ep 13 Malkauns, Ep 14 Miyan ki Todi;
  * Ep 02 Yaman (evening Kalyan). Unrewritten 03–08 keep a default flute+tabla preset. Do not use that preset on rewritten or new episodes.
  */
 const RAGA_RATIOS = {
@@ -306,6 +307,18 @@ const RAGA_PRESETS = {
     duckLevel: 0.14,
     tanpuraMs: 1400,
   },
+  todi: {
+    // Miyan ki Todi — morning pathos: komal Re/Ga/Dha, tivra Ma, Pa sparing. Sparse bansuri, no tabla.
+    Sa: 116.54, // A#2 — between Malkauns A2 and Marwa B2
+    fluteSa: 233.08,
+    degrees: ["S", "r", "g", "M", "P", "d", "N"],
+    tabla: "none",
+    voice: "bansuri",
+    andolan: "g",
+    bedLevel: 0.44,
+    duckLevel: 0.14,
+    tanpuraMs: 1300,
+  },
   bhupali: {
     // Morning pentatonic — no Ma, no Ni. Sparse bansuri, no tabla.
     Sa: 146.83, // D3
@@ -370,6 +383,7 @@ class RagaBed {
       else if (id === "11") key = "megh";
       else if (id === "12") key = "marwa";
       else if (id === "13") key = "malkauns";
+      else if (id === "14") key = "todi";
       else key = "default";
     }
     if (!RAGA_PRESETS[key]) key = "default";
@@ -938,6 +952,42 @@ class RagaBed {
         ],
       ];
     }
+    if (key === "todi") {
+      // Miyan ki Todi — r g r S / d N S / M d N S' ; Pa only touched
+      return [
+        [
+          [0, "d", -1, 1.6],
+          [1.8, "N", -1, 1.4],
+          [3.4, "S", 0, 1.6],
+          [5.2, "r", 0, 1.6],
+          [7.0, "g", 0, 2.4],
+        ],
+        [
+          [0, "g", 0, 2.2],
+          [2.4, "r", 0, 1.6],
+          [4.2, "S", 0, 2.0],
+        ],
+        [
+          [0, "r", 0, 1.4],
+          [1.6, "g", 0, 1.6],
+          [3.4, "M", 0, 1.6],
+          [5.2, "d", 0, 2.0],
+        ],
+        [
+          [0, "M", 0, 1.4],
+          [1.6, "d", 0, 1.5],
+          [3.3, "N", 0, 1.5],
+          [5.0, "S", 1, 2.2],
+        ],
+        [
+          [0, "d", 0, 1.6],
+          [1.8, "M", 0, 1.4],
+          [3.4, "g", 0, 1.8],
+          [5.4, "r", 0, 1.4],
+          [7.0, "S", 0, 2.2],
+        ],
+      ];
+    }
     if (key === "marwa") {
       // sunset, no Pa — N r G / D N S
       return [
@@ -1006,6 +1056,7 @@ class RagaBed {
     if (key === "yaman") return 3.0 + Math.random() * 2.0;
     if (key === "bhupali") return 3.0 + Math.random() * 2.0;
     if (key === "malkauns") return 3.8 + Math.random() * 2.4;
+    if (key === "todi") return 3.6 + Math.random() * 2.4;
     return 1.2 + Math.random() * 2.0;
   }
 
@@ -1114,7 +1165,7 @@ class RagaBed {
       this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
     }
 
-    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
+    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
     this.timers.push(setTimeout(() => this._scheduleMelody(), melodyDelay));
 
     this.master.gain.cancelScheduledValues(t);

@@ -1,4 +1,4 @@
-import { EPISODES } from "./episodes.js?v=ep-thumbs1";
+import { EPISODES } from "./episodes.js?v=ep14-20260929";
 
 const grid = document.getElementById("ep-grid");
 if (grid) {

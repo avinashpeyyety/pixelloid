@@ -16,8 +16,9 @@
    plane textures / environment plates (panel = locked art; geometry = motion)
 9. Blender render — shot layout matching script beats; export stills or video
    proxies into episodes/<id>/renders/ (git LFS or publish-only; see TOOLING.md)
-10. Grok TTS Orion → audio/ (`tools/render_orion_voice.sh`) — named Hindustani
-    raga in script.js; optional REAPER stem mix
+10. Local neural TTS → audio/ (`tools/render_local_voice.sh`, Kokoro-82M bm_george;
+    Orion API retired — see Voice below) — named Hindustani raga in script.js;
+    optional REAPER stem mix
 11. GATE D — final install check (speaker on panel, action visible, 3D cut matches beat)
 12. Registry live · commit · publish-pages
 ```
@@ -115,6 +116,24 @@ Operator card: [`CONSUMER_IMAGINE_IMPORT.md`](CONSUMER_IMAGINE_IMPORT.md). **GAT
 | This episode `_locks/<id>.jpg` for any other named face | Jewelry/skin/crown/body-type drift across plates |
 | | Any 1280×720 file as the **first** `image_edit` input |
 
+## Voice — local TTS (default since 2026-09-29)
+
+**Rule (Avinash, 2026-09-29):** use only the SuperGrok consumer subscription limits — **never call `api.x.ai` / Grok TTS Orion or any paid API.** `tools/render_orion_voice.{sh,py}` is **retired** (kept for history; do not run with `XAI_API_KEY`). The SuperGrok/X Premium+ OAuth tools that exist (grokcli, Hermes) still hit `api.x.ai/v1/tts`, so they are out too; grok.com read-aloud has no sanctioned scriptable interface.
+
+Default: **free local neural TTS**, no network at render time:
+
+```bash
+tools/render_local_voice.sh episodes/<id>                 # Kokoro-82M bm_george (default)
+tools/render_local_voice.sh episodes/<id> --dry-run       # show TTS input (respellings)
+tools/render_local_voice.sh episodes/<id> --engine piper --voice en_GB-alan-medium   # fallback
+```
+
+- Same interface and output as the Orion script: each beat's `audio` field (still `orion-NN.mp3` — the player reads `EPISODE.voice.base + beat.audio`), 24 kHz / 128 kbps / mono / no ID3, two-pass loudnorm to −16 LUFS (TP −1.5), edges trimmed.
+- Engines: **Kokoro-82M** (Apache-2.0, `kokoro-onnx`, models in `~/tts-models/kokoro/`, venv `~/kokoro-venv`) preferred; **Piper** (MIT) fallback. Setup commands are in the script docstring. Voice chosen on Ep 14 by comparing Kokoro bm_george/bm_lewis/am_onyx vs Piper ryan-high/alan/northern_english_male (Whisper intelligibility on Sanskrit names + grave narrator tone).
+- Sanskrit names: add respellings to `PRONOUNCE` in `tools/render_local_voice.py` — they change the **TTS input only**, never `script.js` display text.
+- Record engine/voice in `script.js` `voice` (`provider: "local-kokoro"`, `voice_id`, `note`) and bump `voice.cache` so browsers refetch.
+- Each clip must end before the next beat's `t` (beats are 12 s; keep ≥1 s margin); adjust beat `t` / `totalSec` only if a clip overruns.
+
 ## 3D — Blender (Air)
 
 See monorepo [`TOOLING.md`](../../TOOLING.md).
@@ -133,7 +152,7 @@ See monorepo [`TOOLING.md`](../../TOOLING.md).
 | **panel-logic** | Lore, props, apparatus, cast, **canvas/frame/camera**, **09/10 face locks**, **source cites** — blocks ship on FAIL |
 | **art** | Imagine API **or** consumer import key panels only after GATE B PASS; 3:2; Ep 10 field-master; no 720p first-input |
 | **3d** | Blender scene + panel mapping after GATE C PASS; SketchUp block optional |
-| **voice** | Orion TTS matching beat text; REAPER mix optional |
+| **voice** | Local TTS (`tools/render_local_voice.sh`, Kokoro) matching beat text — no paid API; REAPER mix optional |
 | **ship** | Registry, NEXT, vault daily, Pages |
 
 ## Tools
@@ -143,6 +162,7 @@ python3 tools/dialogue_review.py episodes/<id> --report
 python3 tools/logic_review.py episodes/<id>/plate-bible.json --report
 python3 tools/import_consumer_stills.py <id>   # after SuperGrok browser downloads land in stills/_inbox/consumer-imagine/
 python3 tools/stills_review.py episodes/<id>
+tools/render_local_voice.sh episodes/<id>      # narration (free local TTS; Orion API retired)
 open -a Blender
 # optional: open "/Applications/SketchUp 2026/SketchUp.app"
 ```

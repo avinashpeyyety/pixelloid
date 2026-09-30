@@ -84,7 +84,7 @@ Comic painted mythology matching **Ep 10 field-master** (canvas/density) and **E
 
 ## Player / craft
 
-- **Voice:** Grok TTS **Orion** (24 kHz / 128 kbps). No Aman fallback on new episodes.
+- **Voice:** free local TTS via `tools/render_local_voice.sh` (Kokoro-82M bm_george; 24 kHz / 128 kbps, −16 LUFS, `orion-NN.mp3` names). **Orion / api.x.ai TTS retired 2026-09-29** — SuperGrok subscription only, never a paid API. Ep 01–13 keep their Orion clips. No Aman fallback on new episodes.
 - **Underscore:** Web Audio RagaBed in js/main.js. Named Hindustani raga per episode — Ep 09 Bhairav (no tabla), Ep 10 Darbari, Ep 11 Megh+Jhaptal, Ep 12 Marwa (sunset, no Pa, no tabla). Tanpura floor, duck under Orion. No cinematic trailer score, no licensed film music. **Do not regress new episodes to the default flute+tabla preset** (that preset is only for grandfathered Ep 01–08).
 
 ## Per-repo habit

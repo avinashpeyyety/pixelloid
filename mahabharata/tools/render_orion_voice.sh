@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-# Render episode beat lines to Orion-fingerprint MP3s (24 kHz / 128 kbps / mono / no ID3).
-# Prefers Grok TTS Orion when $XAI_API_KEY is set; else macOS say.
-# Usage: tools/render_orion_voice.sh episodes/10-bhishma-fall
+# RETIRED 2026-09-29 (Avinash: SuperGrok consumer subscription only — never call api.x.ai /
+# Grok TTS Orion or any paid API). This wrapper now forwards to the free local TTS renderer,
+# which writes the same orion-NN.mp3 files/format. render_orion_voice.py is kept for history only.
+# Usage: tools/render_orion_voice.sh episodes/<id>
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-exec python3 "$ROOT/tools/render_orion_voice.py" "${1:-}"
+echo "render_orion_voice.sh: Orion API retired — using tools/render_local_voice.sh" >&2
+exec "$ROOT/tools/render_local_voice.sh" "$@"

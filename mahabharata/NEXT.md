@@ -30,7 +30,7 @@
 - [x] Ep 09–11 raga underscoring (Bhairav / Darbari / Megh+Jhaptal) in the player; duck under Orion
 - [x] Ep 12 *Jayadratha Falls* (Drona Parva, fourteenth day, sunset vow; Marwa; Orion)
 - [x] Ep 13 *Ghatotkacha* (Drona Parva, night of the fourteenth, Karna’s Shakti; Malkauns; Orion)
-- [ ] Ep 14 *The Fall of Drona* — unpaused separately; GATE C PASS on `studio/ep14-drona-fall` (WIP, not shipped); GATE D install next
+- [ ] Ep 14 *The Fall of Drona* — unpaused separately; GATE C PASS; audio done (Kokoro); GATE D install next
 - [x] **Character-model bar = Ep 09 + Ep 10.** Krishna, Arjuna (09); Bhishma, Shikhandi (10). Enforced from Ep 12 in `logic_review.py` + GATE C.
 - [x] **GATE D sync:** speaker on plate, action visible, no Ken Burns over the wrong still.
 - [x] **Source gate:** ≥2 of BORI/Debroy, Gita Press Gorakhpur, K.M. Ganguli per beat; divergence → Gita Press + BORI overlap; never TV-only.

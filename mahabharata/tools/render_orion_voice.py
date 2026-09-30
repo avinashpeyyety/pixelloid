@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# RETIRED 2026-09-29: do not run (calls paid api.x.ai). Use tools/render_local_voice.sh.
 """Render episode beat lines to Orion-fingerprint MP3s (24 kHz / 128 kbps / mono / no ID3).
 
 Prefer Grok TTS Orion when $XAI_API_KEY is set:

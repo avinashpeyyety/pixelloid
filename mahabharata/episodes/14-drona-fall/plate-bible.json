@@ -719,19 +719,18 @@
       "wide",
       "counsel",
       "elephant",
+      "dharma",
       "conch",
+      "wheel",
       "yoga",
       "prince",
-      "still"
-    ],
-    "regen_required": [
-      "_locks/yudhishthira",
-      "_locks/arjuna",
-      "dharma",
-      "wheel",
+      "still",
       "grief",
-      "wide-gold"
+      "wide-gold",
+      "_locks/yudhishthira",
+      "_locks/arjuna"
     ],
-    "reason": "Yudhishthira costume drift (gold/bronze armor on dharma, wide-gold, lock vs cream dhoti on counsel/conch); wide-gold shows Yudhishthira holding reins beside Krishna; wheel + grief are new logic beats (chariot touches earth; Arjuna's protest). xAI Imagine API team_blocked 2026-09-29 → SuperGrok consumer drop list."
+    "regen_required": [],
+    "notes": "2026-10-01 SuperGrok consumer import (C2PA metadata only, no visible watermark). Non-blocking: lock-arjuna partial gold cuirass; wheel gaze level/glow bright; grief Gandiva not lowered to dust. See logic-reviews/RR-gateC-visual.md."
   }
 }

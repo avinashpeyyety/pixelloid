@@ -1,48 +1,107 @@
 {
   "episode_id": "04",
+  "strict_hero_lock": "draupadi",
   "title": "The Akshayapatra",
-  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour; refined linework",
-  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 Drona figure plate)",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; warm cream-saffron-gold hour at the Vana exile hermitage; carved cartouche; Ep 10 field-master density; refined linework",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg; do not attach this episode's plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/04-akshayapatra/stills/_locks/hermitage-master.jpg",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/04-akshayapatra/stills/_locks/hermitage-master.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/04-akshayapatra/stills/_locks/draupadi.jpg",
+    "episodes/04-akshayapatra/stills/_locks/durvasa.jpg",
+    "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+    "episodes/04-akshayapatra/stills/_locks/yudhishthira.jpg",
+    "episodes/04-akshayapatra/stills/_locks/disciples.jpg",
+    "episodes/04-akshayapatra/stills/_locks/duryodhana.jpg"
+  ],
   "photoreal_allowed": false,
-  "frame": "Ornate lotus carved wooden frame on every plate",
-  "apparatus": {
-    "continuity_id": "akshayapatra-bowl-v2",
-    "note": "Not fish apparatus \u2014 prop continuity for the vessel only",
-    "vessel": "Golden wide circular ceremonial bowl, two curved side handles, short pedestal foot, lotus petal engraving, soft divine glow. Medium-large size. NEVER a U-ring, bangle, or plain cookpot.",
-    "size_lock_ref": "episodes/04-akshayapatra/stills/_locks/akshayapatra.jpg"
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / vow) — not a thin rectangular sticker on a cream mat",
+  "apparatus": {},
+  "stills_status": {
+    "bar": "1536×1024 3:2 Ep 09/10",
+    "current": "9 shipped plates + locks are SuperGrok 1728×1152 (afd2ac4, GATE C visual PASS).",
+    "pass": [
+      "wide",
+      "vessel",
+      "empty",
+      "arrival",
+      "prayer",
+      "krishna",
+      "grain",
+      "wide-gold"
+    ],
+    "regen_required": [
+      "boon (NEW plate — Duryodhana’s boon, the cause of the visit)",
+      "satisfied (must be the river: sated sages flee, never return to camp)"
+    ],
+    "optional_polish": [
+      "arrival: add Yudhishthira welcoming with joined palms"
+    ],
+    "locks": "duryodhana lock copied forward from Ep 08 (no regen needed).",
+    "audio": "Narration NOT re-rendered: all 10 beats changed text and a beat was added. Branch-only until voice pass (orion-00…09).",
+    "drop_list": "episodes/04-akshayapatra/logic-reviews/SUPERGROK-DROP-LIST.md"
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Vana (Āraṇyaka) Parva · Akṣayapātra (Aranyaka-parva 3.3) · Durvāsā-upākhyāna (Draupadīharaṇa-parva)",
+    "bori": "BORI CE Āraṇyaka Parva 3.1–3.3, Debroy vol. 3: brāhmaṇas follow the Pandavas into exile; Dhaumya teaches the Sūrya hymn; Sūrya gives Yudhishthira a copper vessel — the four kinds of food are inexhaustible until Draupadī has eaten. The Durvāsā visit is NOT in the constituted text (vulgate-only; CE apparatus), so Debroy has no chapter for beats boon→wide-gold.",
+    "gita_press": "Gita Press Gorakhpur Mahābhārata, Vana Parva: adhyāya 3 (Sūrya’s tāmra piṭhara; food ends when Pāñcālī eats, ślokas ~72–73, 84); Draupadīharaṇa-parva, Durvāsā-upākhyāna adhyāya 262 (Duryodhana hosts Durvāsā, sends him to Yudhiṣṭhira) and 263 (the visit, Draupadī’s prayer, Śrīkṛṣṇa eats the particle, the sages depart). Online digitisations number these one higher; colophon numbering used here.",
+    "ganguli": "K.M. Ganguli, Vana Parva: Aranyaka Parva Section III (copper vessel); Draupadi-harana Parva Section CCLX (Duryodhana’s boon: visit after the princess of Panchala has eaten) and Section CCLXI (Durvasa with ten thousand disciples; ablutions; Draupadi’s prayer; Krishna hungry; particle of rice and vegetable at the rim; sages sated in the stream flee; Bhima finds the bank empty; Krishna departs).",
+    "divergence": "(1) CE vs vulgate: BORI CE excludes the Durvāsā episode; Gita Press and Ganguli (vulgate) carry it in full and agree beat for beat. (2) Vessel: all three say copper (tāmra); the series paints burnished copper-gold (shipped lock) — stylisation only. (3) Washing: Ganguli says only that Draupadi had eaten and was resting; scouring on plate-empty is a gloss that changes no causality. (4) Ending: the earlier Ep04 cut said the sages ‘bless the Pandavas and turn back, content’ ‘far away’ — the texts have them sated in the nearby river and fleeing in fear of the Pandavas’ wrath (Durvasa recalls Ambarisha); rewrite follows the texts. (5) Earlier cut gave no cause for the visit; Duryodhana’s boon (Ganguli CCLX / Gita Press 262) is restored as its own beat.",
+    "chosen": "Gita Press + BORI overlap where the CE covers the event (exile, Sūrya’s vessel and its rule — Āraṇyaka 3.3 / Gita Press Vana 3); for the CE-absent Durvāsā episode, Gita Press Gorakhpur (Vana 262–263) as primary with Ganguli CCLX–CCLXI for English wording. Each beat cites ≥2 of the three; Durvāsā beats cite Gita Press + Ganguli and record the BORI gap explicitly.",
+    "notes": "Not TV. Comic-mythology Durvasa (fierce, never photoreal horror). Duryodhana in court dress (Ep 08 lock), never battle armor here. Krishna = Ep 09 look lock. Never attach Ep01 plate-wide-gold or any finished plate as an Imagine ref."
   },
   "cast": {
     "draupadi": {
-      "face": "Young woman, warm brown skin, large dark eyes, soft brows, small bindi",
-      "hair": "Long black wavy hair, simple gold",
-      "costume": "Deep red or rose sari with gold border"
+      "face": "Young woman, warm brown skin, large dark eyes, soft brows, small bindi, calm dignity — comic mythology, not photoreal",
+      "hair": "Long black wavy hair, simple gold ornaments (exile-simple, still royal)",
+      "costume": "Deep red or forest-rose sari with gold border, modest exile jewelry"
     },
     "krishna": {
-      "face": "Youthful divine smile, dark eyes",
-      "hair": "Dark curly hair",
-      "costume": "Yellow pitambar dhoti, blue upper cloth or garland, charming comic not photoreal"
+      "face": "Youthful divine smile, dark eyes, serene playfulness — same face as Ep 09 lock",
+      "hair": "Dark curly hair, peacock feather",
+      "costume": "Yellow pitambar dhoti, flower garland, gold jewelry — charming comic not photoreal; no flute as A-prop"
     },
     "durvasa": {
-      "face": "Fierce ascetic, intense eyes, grey-white beard",
-      "hair": "Matted topknot",
-      "costume": "Saffron robes, rudraksha, staff"
+      "face": "Fierce ascetic sage, intense eyes, lean face, grey-white beard — comic mythology short temper, not photoreal horror",
+      "hair": "Matted topknot, grey-white wild beard",
+      "costume": "Saffron robes, rudraksha beads, staff"
     },
     "yudhishthira": {
-      "face": "Gentle eldest Pandava",
+      "face": "Gentle eldest Pandava, light mustache, composed — comic mythology",
       "hair": "Simple topknot",
-      "costume": "Cream exile dhoti"
+      "costume": "Cream exile dhoti, modest dress"
     },
     "disciples": {
-      "face": "Background ascetics",
+      "face": "Background ascetic students, comic silhouettes — not photoreal portraits",
       "hair": "Topknots",
-      "costume": "Saffron or cream"
+      "costume": "Saffron or cream bark-cloth, equal natural human scale"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava heir, proud dark mustache, fierce calculating gaze — same face as Ep 08/13 lock",
+      "hair": "Dark hair under a jeweled Kuru crown / gold-trimmed royal turban-crown",
+      "costume": "Purple-and-gold royal robes, gold jewelry (court dress of Hastinapura during the exile years) — no battle armor, no mace raised"
     }
   },
   "plates": [
     {
       "id": "wide",
       "file": "plate-wide.jpg",
-      "beat_text": "In the forest of exile the Pandavas keep a simple camp \u2014 and one divine gift that never runs dry by day.",
+      "beat_text": "Twelve years of forest exile. The Pandavas live in a simple hermitage — yet every sage who comes to them is fed, and many come.",
       "cast_present": [
         "yudhishthira",
         "draupadi"
@@ -50,92 +109,234 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium painted comic Pandava VANA EXILE forest hermitage",
-        "Thatch huts, peepal, cooking fire, forest path \u2014 NOT Drona/bird training scene",
-        "Equal natural scale",
-        "Ornate lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Pandava VANA EXILE forest hermitage: thatch huts, peepal, cooking fire, forest path — NOT Drona/bird training",
+        "Yudhishthira and Draupadi at equal natural scale in simple exile dress"
       ],
       "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "Ep01 plate-wide-gold as style",
+        "white-bearded sage",
         "Drona teaching Arjuna",
         "Bird on branch as target",
         "Hastinapura palace garden",
-        "Photoreal",
-        "white-bearded sage"
+        "Durvasa",
+        "Krishna as A-shot"
       ],
       "props": [
         "hermitage huts",
-        "forest"
+        "forest",
+        "peepal"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Pandavas forest exile hermitage camp at golden hour: thatch huts, peepal, hearth, forest path. NO Drona, NO bow-bird training scene. Ornate lotus frame, refined quality."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Pandava forest-exile hermitage at cream-saffron golden hour — thatch huts, peepal, hearth, forest path. Yudhishthira in cream exile dhoti and Draupadi in deep red-rose sari, equal natural scale. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Not photoreal. No Drona. No archery school.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Āraṇyaka Parva 3.1–3.3 (Debroy vol. 3): the Pandavas enter the forest followed by brāhmaṇas; Yudhishthira grieves that he cannot feed them; Dhaumya counsels worship of Sūrya"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Vana Parva adhyāya 1–3: brāhmaṇas follow the Pandavas into exile; Yudhishthira’s care to feed them"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Aranyaka Parva Sections I–III: Brahmanas follow; Yudhishthira’s anxiety to feed them"
+        }
+      ],
+      "audit_notes": "2026-10-01 rewrite (logic + sources pass, Ep 14 standard): causal chain Surya's vessel rule → Duryodhana's boon → timed visit → prayer → Krishna's hunger → grain → sages full at the river and flee → trap closes on nothing."
     },
     {
       "id": "vessel",
       "file": "plate-vessel.jpg",
-      "beat_text": "The Akshayapatra: so long as Draupadi has not finished her meal, the vessel feeds every guest.",
+      "beat_text": "The Sun god gave Yudhishthira this vessel, the Akshayapatra. Whatever Draupadi cooks in it never runs out — until she, last of all, has eaten.",
       "cast_present": [
         "draupadi"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "SAME Akshayapatra lock: golden wide bowl, two curved handles, pedestal foot, lotus engraving",
         "Premium painted comic quality",
-        "Sacred golden Akshayapatra vessel glowing with divine abundance",
-        "Draupadi nearby or hands near vessel, food vessels and guests implied or soft",
-        "Warm holy light, lotus frame"
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "SAME Akshayapatra lock: golden wide ceremonial bowl, two curved side handles, short pedestal foot, lotus petal engraving, soft divine glow — NEVER a U-ring, bangle, or plain cookpot",
+        "Sacred golden Akshayapatra glowing with divine abundance",
+        "Draupadi nearby or hands near vessel; simple forest feast vessels soft around it"
       ],
       "must_not_show": [
         "Photoreal",
-        "Modern cookware",
-        "Empty cold kitchen only",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "Ep01 plate-wide-gold as style",
         "U-shaped gold ring vessel",
         "Different pot shape than lock",
         "Plain clay pot as akshayapatra",
-        "Drona",
-        "white-bearded sage"
+        "Modern cookware",
+        "white-bearded sage",
+        "Empty cold kitchen only",
+        "Durvasa",
+        "Krishna"
       ],
       "props": [
         "akshayapatra",
         "food bowls"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Hero plate of the sacred Akshayapatra \u2014 ornate golden inexhaustible food vessel glowing with soft divine light, steam and abundance of simple forest feast around it. Draupadi in red-rose sari nearby with calm grace. Hermitage interior golden hour. Ornate lotus frame. Refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium hero plate of the sacred Akshayapatra — ornate golden inexhaustible food vessel (wide circular bowl, two curved handles, pedestal foot, lotus engraving) glowing with soft divine light, steam and simple forest feast around it. Draupadi in deep red-rose sari with gold border, calm grace. Hermitage interior cream-saffron hour. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Not photoreal. No Drona.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE Āraṇyaka Parva 3.3 (Debroy vol. 3): Sūrya gives Yudhishthira a copper vessel (tāmra sthālī); the four kinds of food cooked are inexhaustible until Draupadī has eaten"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Vana Parva adhyāya 3 (ślokas ~72–73, 84): ‘gṛhṇīṣva piṭharaṃ tāmraṃ’ — food lasts while Pāñcālī has not eaten; once she eats, the day’s food is exhausted"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Aranyaka Parva Section III: ‘accept this copper-vessel’; after Draupadi has taken her meal the day’s food becomes exhausted"
+        }
+      ],
+      "audit_notes": "2026-10-01 rewrite (logic + sources pass, Ep 14 standard): causal chain Surya's vessel rule → Duryodhana's boon → timed visit → prayer → Krishna's hunger → grain → sages full at the river and flee → trap closes on nothing.",
+      "source_divergence": "Text: copper vessel (tāmra sthālī / tāmra piṭhara, BORI 3.3 + Gita Press 3.3 + Ganguli III). Series paints it burnished copper-gold with divine glow (shipped akshayapatra-bowl-v2 lock) — accepted stylisation, not a plot change.",
+      "chosen": "Gita Press + BORI overlap on the vessel rule (inexhaustible until Draupadī eats); keep the shipped copper-gold bowl lock; prompts say ‘burnished copper-gold’ on any future regen."
+    },
+    {
+      "id": "boon",
+      "file": "plate-boon.jpg",
+      "beat_text": "In Hastinapura, Duryodhana cannot bear their peace. He serves the short-tempered sage Durvasa until the sage offers a boon — then asks him to visit his cousins after Draupadi has eaten.",
+      "cast_present": [
+        "duryodhana",
+        "durvasa"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour light through carved Hastinapura pillars",
+        "Duryodhana (same lock: proud mustache, jeweled Kuru crown, purple-and-gold royal robes) bowing with joined palms, serving the sage like an attendant — a sly half-smile only the viewer sees",
+        "Durvasa (same lock: matted topknot, grey-white beard, saffron robes, rudraksha, staff) seated on a deer-skin on a low dais, one hand raised granting a boon",
+        "Food platters and water vessel of hospitality near the sage"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "Ep01 plate-wide-gold as style",
+        "Forest hermitage huts",
+        "Pandavas",
+        "Draupadi",
+        "Krishna",
+        "Akshayapatra",
+        "Duryodhana in battle armor or with mace raised",
+        "Text or speech bubbles"
+      ],
+      "props": [
+        "deer-skin seat",
+        "hospitality platters",
+        "staff"
+      ],
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium inside a Hastinapura palace hall of carved sandstone pillars, cream-saffron-gold light. Duryodhana — proud mustache, jeweled Kuru crown, purple-and-gold royal robes, same face as his lock — bows with joined palms, serving the fierce sage Durvasa like an attendant, a faint sly smile. Durvasa — matted topknot, grey-white beard, saffron robes, rudraksha, staff — sits on a deer-skin on a low dais, one hand raised granting a boon; platters of hospitality beside him. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Not photoreal. No Drona. No forest huts.",
+      "sources": [
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Vana Parva, Draupadīharaṇa-parva, Durvāsā-upākhyāna, adhyāya 262: Duryodhana satisfies Durvāsā with hospitality and sends him to Yudhiṣṭhira (colophon: dvāṣaṣṭyadhika-dviśatatamo ’dhyāyaḥ)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Draupadi-harana Parva, Section CCLX (260): Duryodhana, Karna and Duhshasana plot; Durvasa arrives with ten thousand disciples; Duryodhana serves him day and night; boon: visit Yudhishthira after the princess of Panchala has eaten and lies down to rest"
+        },
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy — NOT in the constituted Āraṇyaka text: the Durvāsā episode survives only in vulgate manuscripts (CE apparatus), so Debroy’s translation has no chapter for it; recorded as a gap, not a cite"
+        }
+      ],
+      "audit_notes": "2026-10-01 rewrite (logic + sources pass, Ep 14 standard): causal chain Surya's vessel rule → Duryodhana's boon → timed visit → prayer → Krishna's hunger → grain → sages full at the river and flee → trap closes on nothing.",
+      "scene_ref": "Hastinapura palace hall (NOT the hermitage) — style spine Ep10 field-master; faces from _locks/duryodhana.jpg + _locks/durvasa.jpg"
     },
     {
       "id": "empty",
       "file": "plate-empty.jpg",
-      "beat_text": "One evening the meal is done. Draupadi washes the vessel clean \u2014 and the day\u2019s grace is sealed.",
+      "beat_text": "So the sage comes late. Draupadi has fed everyone, eaten last, and set the vessel aside, scoured clean. Today’s food is gone.",
       "cast_present": [
         "draupadi"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "SAME Akshayapatra lock: golden wide bowl, two curved handles, pedestal foot, lotus engraving",
-        "Premium quality",
-        "Draupadi washing or setting down the clean empty Akshayapatra",
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "SAME Akshayapatra lock: golden wide ceremonial bowl, two curved side handles, short pedestal foot, lotus petal engraving, soft divine glow — NEVER a U-ring, bangle, or plain cookpot",
+        "Draupadi setting down or scouring the clean, empty Akshayapatra — the day’s food is over",
         "Quiet evening hermitage, meal finished mood",
         "Same Draupadi face lock"
       ],
       "must_not_show": [
         "Photoreal",
-        "Messy comedy",
-        "Palace kitchen",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "Ep01 plate-wide-gold as style",
         "U-shaped gold ring vessel",
         "Different pot shape than lock",
         "Plain clay pot as akshayapatra",
-        "Drona",
-        "white-bearded sage"
+        "Modern cookware",
+        "white-bearded sage",
+        "Messy comedy",
+        "Palace kitchen",
+        "Durvasa",
+        "Krishna"
       ],
       "props": [
         "empty vessel",
         "water pot"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Draupadi in red-rose sari gently washes or dries the golden Akshayapatra \u2014 it is empty and clean for the night. Soft evening hermitage light, quiet after meal. Ornate lotus frame. Same charming face design, refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Draupadi in deep red-rose sari gently washes or dries the golden Akshayapatra — empty and clean for the night (wide bowl, two curved handles, pedestal foot, lotus engraving). Soft evening hermitage light, quiet after meal. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Same charming face design. Not photoreal. No Drona.",
+      "sources": [
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Vana Parva, Draupadīharaṇa-parva, Durvāsā-upākhyāna, adhyāya 263: Draupadī has eaten; the Sun-given vessel holds nothing for the day"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Draupadi-harana Parva, Section CCLXI (261): Durvasa comes ‘having ascertained … that Krishna (Draupadi) was reposing herself after her meal’"
+        },
+        {
+          "work": "bori",
+          "cite": "BORI CE Āraṇyaka 3.3 (Debroy vol. 3): the vessel’s rule — exhausted once Draupadī has eaten (the mechanism the CE does carry)"
+        }
+      ],
+      "audit_notes": "2026-10-01 rewrite (logic + sources pass, Ep 14 standard): causal chain Surya's vessel rule → Duryodhana's boon → timed visit → prayer → Krishna's hunger → grain → sages full at the river and flee → trap closes on nothing.",
+      "source_divergence": "Text: copper vessel (tāmra sthālī / tāmra piṭhara, BORI 3.3 + Gita Press 3.3 + Ganguli III). Series paints it burnished copper-gold with divine glow (shipped akshayapatra-bowl-v2 lock) — accepted stylisation, not a plot change. Washing: Ganguli CCLXI says only that she had eaten and was resting; the scouring is a visual gloss (popular Hindi retelling) that does not change causality — the vessel’s day ends when she eats.",
+      "chosen": "Gita Press + BORI overlap on the vessel rule (inexhaustible until Draupadī eats); keep the shipped copper-gold bowl lock; prompts say ‘burnished copper-gold’ on any future regen."
     },
     {
       "id": "arrival",
       "file": "plate-arrival.jpg",
-      "beat_text": "Then comes sage Durvasa with a throng of hungry disciples \u2014 and the camp has nothing left to offer.",
+      "beat_text": "Then Durvasa arrives with ten thousand disciples. Yudhishthira welcomes them, and they go to bathe in the river, expecting a feast on their return.",
       "cast_present": [
         "durvasa",
         "disciples"
@@ -143,59 +344,115 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Sage Durvasa leading many saffron-clad disciples arriving at hermitage path",
-        "Intense ascetic energy, not photoreal horror",
-        "Forest path golden hour, lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Sage Durvasa leading many saffron-clad disciples arriving on hermitage path",
+        "Durvasa: fierce ascetic, intense eyes, grey-white beard, matted topknot, saffron robes, rudraksha, staff",
+        "Intense ascetic energy, comic mythology — not photoreal horror",
+        "Optional: Yudhishthira at the hut edge with joined palms in welcome (current plate passes without him)"
       ],
       "must_not_show": [
         "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "Ep01 plate-wide-gold as style",
         "Gore",
         "Tiny illegible crowd without Durvasa focus",
-        "Drona",
-        "white-bearded sage"
+        "Drona teaching archery",
+        "Ep01 gurukul bird scene",
+        "Draupadi as A-shot",
+        "Krishna",
+        "Akshayapatra feast abundance",
+        "River bathing (that is the satisfied plate)"
       ],
       "props": [
         "staff",
         "forest path"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Fierce ascetic sage Durvasa with matted topknot, grey-white beard, saffron robes and staff leads a throng of hungry disciples in saffron along a forest path toward a simple hermitage. Golden hour, dramatic arrival. Ornate lotus frame. Stylized comic not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: fierce ascetic sage Durvasa — matted topknot, grey-white beard, saffron robes, rudraksha, staff — leads a throng of hungry saffron disciples along a forest path toward a simple hermitage. Golden cream-saffron hour, dramatic arrival. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Stylized comic not photoreal. No Drona. No archery school.",
+      "sources": [
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Vana Parva, Draupadīharaṇa-parva, Durvāsā-upākhyāna, adhyāya 263: Durvāsā arrives with his ayuta (ten thousand) disciples; Yudhiṣṭhira’s welcome; the sages go to bathe"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Draupadi-harana Parva, Section CCLXI (261): Durvasa with ten thousand disciples; Yudhishthira welcomes him and asks him to return after his ablutions; the sages go into the stream"
+        },
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy — NOT in the constituted Āraṇyaka text: the Durvāsā episode survives only in vulgate manuscripts (CE apparatus), so Debroy’s translation has no chapter for it; recorded as a gap, not a cite"
+        }
+      ],
+      "audit_notes": "2026-10-01 rewrite (logic + sources pass, Ep 14 standard): causal chain Surya's vessel rule → Duryodhana's boon → timed visit → prayer → Krishna's hunger → grain → sages full at the river and flee → trap closes on nothing."
     },
     {
       "id": "prayer",
       "file": "plate-prayer.jpg",
-      "beat_text": "Draupadi\u2019s heart trembles. She prays to Krishna, the friend who never abandons the devoted.",
+      "beat_text": "There is nothing left to cook, and Durvasa’s curse is feared across the worlds. Draupadi turns to her one refuge — she prays to Krishna.",
       "cast_present": [
         "draupadi"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "SAME Akshayapatra lock: golden wide bowl, two curved handles, pedestal foot, lotus engraving",
-        "Premium quality",
-        "Draupadi in prayer or anxious devotion, hands joined or vessel nearby",
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Draupadi in prayer or anxious devotion, hands joined; vessel optional nearby",
         "Intimate hermitage moment, emotional but dignified",
-        "Lotus frame"
+        "Same Draupadi face lock"
       ],
       "must_not_show": [
         "Photoreal",
-        "Melodramatic distortion",
-        "Maids crowding",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "Ep01 plate-wide-gold as style",
         "U-shaped gold ring vessel",
         "Different pot shape than lock",
         "Plain clay pot as akshayapatra",
-        "Drona",
-        "white-bearded sage"
+        "Modern cookware",
+        "white-bearded sage",
+        "Melodramatic distortion",
+        "Maids crowding",
+        "Durvasa inside the hut as A-shot",
+        "Krishna already present"
       ],
       "props": [
         "akshayapatra optional"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Close-medium of Draupadi in red-rose sari, hands joined in prayer, eyes lifted in hope and fear. Soft hermitage interior, golden lamp light. Ornate lotus frame. Dignified emotion, refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Close-medium heroic: Draupadi in deep red-rose sari, hands joined in prayer, eyes lifted in hope and fear. Soft hermitage interior, golden lamp light. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Dignified emotion. Not photoreal. No Drona.",
+      "sources": [
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Vana Parva, Draupadīharaṇa-parva, Durvāsā-upākhyāna, adhyāya 263: Draupadī’s stuti to Śrīkṛṣṇa in her distress"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Draupadi-harana Parva, Section CCLXI (261): Draupadi, anxious about the food, prays to Krishna (Kesava) in a hymn"
+        },
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy — NOT in the constituted Āraṇyaka text: the Durvāsā episode survives only in vulgate manuscripts (CE apparatus), so Debroy’s translation has no chapter for it; recorded as a gap, not a cite"
+        }
+      ],
+      "audit_notes": "2026-10-01 rewrite (logic + sources pass, Ep 14 standard): causal chain Surya's vessel rule → Duryodhana's boon → timed visit → prayer → Krishna's hunger → grain → sages full at the river and flee → trap closes on nothing."
     },
     {
       "id": "krishna",
       "file": "plate-krishna.jpg",
-      "beat_text": "Krishna arrives, smiling as if the forest itself has exhaled.",
+      "beat_text": "Krishna comes at once — and before she can speak, he says he is hungry. “The vessel is empty,” Draupadi cries. “Bring it anyway,” he smiles.",
       "cast_present": [
         "krishna",
         "draupadi"
@@ -203,59 +460,116 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Krishna entering hermitage \u2014 yellow pitambar, charming divine smile, comic mythology style",
-        "Draupadi relieved or welcoming",
-        "Warm forest light, lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Krishna entering hermitage — yellow pitambar, peacock feather, flower garland, charming divine smile, comic mythology",
+        "Same Krishna face as Ep 09 lock",
+        "Draupadi relieved or welcoming"
       ],
       "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "Ep01 plate-wide-gold as style",
+        "white-bearded sage",
         "Photoreal blue CGI",
         "Dark horror Krishna",
         "Modern dress",
-        "Drona",
-        "white-bearded sage"
+        "Flute as A-prop (optional omit)",
+        "Durvasa",
+        "Chariot battle armor"
       ],
       "props": [
-        "garland optional"
+        "garland"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Lord Krishna arrives at the forest hermitage \u2014 youthful divine smile, dark curly hair, yellow pitambar dhoti and flower garland, charming mythology comic style not photoreal. Draupadi nearby soft relief. Golden cream-saffron light. Ornate lotus frame. Match Ep01 gold master language."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: Lord Krishna arrives at the forest hermitage — youthful divine smile, dark curly hair, peacock feather, yellow pitambar dhoti and flower garland, charming mythology comic style matching Ep 09 Krishna lock. Draupadi nearby in soft relief. Cream-saffron-gold light. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Not photoreal. No Drona. No Ep01 gold ref.",
+      "sources": [
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Vana Parva, Draupadīharaṇa-parva, Durvāsā-upākhyāna, adhyāya 263: Śrīkṛṣṇa appears, says he is hungry, and insists the vessel be brought"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Draupadi-harana Parva, Section CCLXI (261): Kesava comes at once and asks for food first; ‘The sun-given vessel remains full till I finish my meal … there is no food in it now’; ‘This is no time for jest … go thou quickly to fetch the vessel’"
+        },
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy — NOT in the constituted Āraṇyaka text: the Durvāsā episode survives only in vulgate manuscripts (CE apparatus), so Debroy’s translation has no chapter for it; recorded as a gap, not a cite"
+        }
+      ],
+      "audit_notes": "2026-10-01 rewrite (logic + sources pass, Ep 14 standard): causal chain Surya's vessel rule → Duryodhana's boon → timed visit → prayer → Krishna's hunger → grain → sages full at the river and flee → trap closes on nothing."
     },
     {
       "id": "grain",
       "file": "plate-grain.jpg",
-      "beat_text": "He finds a single grain of rice clinging to the vessel \u2014 and eats it with love.",
+      "beat_text": "On the rim he finds one grain of rice and a shred of leaf. He eats it: “May the Soul of the universe be satisfied.”",
       "cast_present": [
         "krishna"
       ],
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "SAME Akshayapatra lock: golden wide bowl, two curved handles, pedestal foot, lotus engraving",
-        "Premium quality",
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "SAME Akshayapatra lock: golden wide ceremonial bowl, two curved side handles, short pedestal foot, lotus petal engraving, soft divine glow — NEVER a U-ring, bangle, or plain cookpot",
         "Krishna holding or looking into the Akshayapatra, taking a single grain of rice",
         "Sacred intimate miracle moment, soft glow",
-        "Lotus frame"
+        "Same Ep 09 Krishna face lock — yellow pitambar, peacock, garland"
       ],
       "must_not_show": [
         "Photoreal",
-        "Huge feast on plate",
-        "Comedy mess",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "Ep01 plate-wide-gold as style",
         "U-shaped gold ring vessel",
         "Different pot shape than lock",
         "Plain clay pot as akshayapatra",
-        "Drona",
-        "white-bearded sage"
+        "Modern cookware",
+        "white-bearded sage",
+        "Huge feast on plate",
+        "Comedy mess",
+        "Durvasa",
+        "Draupadi crowding the A-shot"
       ],
       "props": [
         "akshayapatra",
         "single grain"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Intimate close of Krishna smiling, yellow pitambar, lifting a single glowing grain of rice from the clean golden Akshayapatra. Soft divine glow, hermitage warm light. Ornate lotus frame. Refined charming quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Intimate heroic close: Krishna smiling — yellow pitambar, peacock feather, garland — lifting a single glowing grain of rice from the clean golden Akshayapatra (wide bowl, two handles, pedestal, lotus engraving). Soft divine glow, hermitage warm light. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Match Ep 09 Krishna lock. Not photoreal. No Drona.",
+      "sources": [
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Vana Parva, Draupadīharaṇa-parva, Durvāsā-upākhyāna, adhyāya 263: Śrīkṛṣṇa eats the clinging śāka-anna particle so the Soul of all is satisfied"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Draupadi-harana Parva, Section CCLXI (261): he ‘saw a particle of rice and vegetable sticking at its rim’ and swallowed it — ‘May it please the god Hari, the soul of the Universe’"
+        },
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy — NOT in the constituted Āraṇyaka text: the Durvāsā episode survives only in vulgate manuscripts (CE apparatus), so Debroy’s translation has no chapter for it; recorded as a gap, not a cite"
+        }
+      ],
+      "audit_notes": "2026-10-01 rewrite (logic + sources pass, Ep 14 standard): causal chain Surya's vessel rule → Duryodhana's boon → timed visit → prayer → Krishna's hunger → grain → sages full at the river and flee → trap closes on nothing.",
+      "source_divergence": "Text: copper vessel (tāmra sthālī / tāmra piṭhara, BORI 3.3 + Gita Press 3.3 + Ganguli III). Series paints it burnished copper-gold with divine glow (shipped akshayapatra-bowl-v2 lock) — accepted stylisation, not a plot change.",
+      "chosen": "Gita Press + BORI overlap on the vessel rule (inexhaustible until Draupadī eats); keep the shipped copper-gold bowl lock; prompts say ‘burnished copper-gold’ on any future regen."
     },
     {
       "id": "satisfied",
       "file": "plate-satisfied.jpg",
-      "beat_text": "Far away, Durvasa and his disciples feel full. They bless the Pandavas and turn back, content.",
+      "beat_text": "In the river, Durvasa and his disciples suddenly feel full. Unable to eat the feast they asked for, and afraid of the Pandavas’ anger, they slip away.",
       "cast_present": [
         "durvasa",
         "disciples"
@@ -263,28 +577,63 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "Premium quality",
-        "Durvasa and disciples on forest path, content satisfied expressions, turning away peacefully",
-        "Soft relief mood, golden light",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "Durvasa and his saffron disciples in a forest RIVER (waist-deep / on the far bank) at afternoon gold — where they went to bathe",
+        "Hands on full bellies, startled sated faces; Durvasa glancing back uneasily toward the unseen hermitage",
+        "Disciples already wading to the far bank and slipping into the trees — leaving, NOT returning",
+        "Same Durvasa lock: matted topknot, grey-white beard, saffron, rudraksha, staff",
+        "Modest saffron dhotis and upper cloths (bathing, fully decent)"
       ],
       "must_not_show": [
-        "Anger still dominant",
         "Photoreal",
-        "Gore",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
         "Drona",
-        "white-bearded sage"
+        "Ep01 plate-wide-gold as style",
+        "Gore",
+        "Drona teaching",
+        "Draupadi",
+        "Krishna",
+        "Feast table as A-shot",
+        "Hermitage huts in frame (they never return to the camp)",
+        "Blessing gesture toward the hermitage",
+        "Durvasa walking into the camp",
+        "Anger still dominant",
+        "Nudity"
       ],
       "props": [
-        "forest path",
+        "river",
         "staff"
       ],
-      "prompt": "Premium painted comic Amar Chitra. Sage Durvasa and his saffron disciples pause on a forest path looking peacefully content and full, blessing the direction of the hermitage, turning to leave. Soft golden light, relief after hunger. Ornate lotus frame. Refined quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra. Heroic medium: a forest river at afternoon gold. Sage Durvasa — matted topknot, grey-white beard, saffron robes, rudraksha, staff, same lock — stands waist-deep, hand on his suddenly full belly, startled and uneasy, glancing back toward the unseen hermitage; his saffron disciples, sated, wade to the far bank and slip away into the trees. Modest saffron dhotis. No huts in frame, no blessing gesture. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Not photoreal. No Drona.",
+      "sources": [
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Vana Parva, Draupadīharaṇa-parva, Durvāsā-upākhyāna, adhyāya 263: the sages, sated in the river, depart without returning to the hermitage"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Draupadi-harana Parva, Section CCLXI (261): in the stream the sages find themselves full; Durvasa, remembering Ambarisha, fears the Pandavas’ wrath and the party flees without returning"
+        },
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy — NOT in the constituted Āraṇyaka text: the Durvāsā episode survives only in vulgate manuscripts (CE apparatus), so Debroy’s translation has no chapter for it; recorded as a gap, not a cite"
+        }
+      ],
+      "audit_notes": "2026-10-01 rewrite (logic + sources pass, Ep 14 standard): causal chain Surya's vessel rule → Duryodhana's boon → timed visit → prayer → Krishna's hunger → grain → sages full at the river and flee → trap closes on nothing.",
+      "source_divergence": "Old Ep04 script had the sages ‘bless the Pandavas and turn back, content’ — not in Ganguli CCLXI or Gita Press 263, where they are sated in the river and flee (Durvasa fearing the Pandavas’ wrath, recalling Ambarisha). Rewrite follows the text; plate must move to the river.",
+      "chosen": "Gita Press + Ganguli vulgate (BORI CE silent — episode not in constituted text): sated in the river, they flee without returning."
     },
     {
       "id": "wide-gold",
       "file": "plate-wide-gold.jpg",
-      "beat_text": "So grace filled what fear had emptied \u2014 and the forest remembered Krishna\u2019s name.",
+      "beat_text": "Bhima runs to call them to dinner, but the riverbank is empty. Duryodhana’s trap has closed on nothing — and Krishna smiles and takes his leave.",
       "cast_present": [
         "krishna",
         "draupadi",
@@ -293,28 +642,65 @@
       "has_fish_apparatus": false,
       "is_aim_beat": false,
       "must_show": [
-        "SAME Akshayapatra lock: golden wide bowl, two curved handles, pedestal foot, lotus engraving",
-        "Premium quality gold closing mood like Ep01 wide-gold",
-        "Peaceful hermitage after grace \u2014 Krishna and Pandavas soft gathering",
-        "Warm cream-saffron-gold hour",
-        "Lotus frame"
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Cream-saffron-gold sacred hour",
+        "SAME Akshayapatra lock: golden wide ceremonial bowl, two curved side handles, short pedestal foot, lotus petal engraving, soft divine glow — NEVER a U-ring, bangle, or plain cookpot (optional soft in frame)",
+        "Peaceful hermitage after the danger passes — Krishna with Yudhishthira and Draupadi in quiet relief before he takes his leave",
+        "Warm cream-saffron-gold closing mood (Ep 10 density — NOT Ep01 wide-gold crop)"
       ],
       "must_not_show": [
         "Photoreal",
-        "Dark storm mood",
-        "Giant scale errors",
+        "Graphic gore",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "Ep01 plate-wide-gold as style",
         "U-shaped gold ring vessel",
         "Different pot shape than lock",
         "Plain clay pot as akshayapatra",
-        "Drona",
-        "white-bearded sage"
+        "Modern cookware",
+        "white-bearded sage",
+        "Dark storm mood",
+        "Giant scale errors",
+        "Durvasa still angry",
+        "Ep01 plate-wide-gold as Imagine ref or style seed"
       ],
       "props": [
         "hermitage",
         "akshayapatra optional"
       ],
-      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold forest hermitage peace like Ep01 plate-wide-gold. Krishna with yellow pitambar among the Pandavas and Draupadi in quiet gratitude; soft light, peepal, simple huts. Ornate lotus frame. Refined charming quality, not photoreal."
+      "prompt": "Premium painted comic Amar Chitra closing plate. Warm cream-saffron-gold forest hermitage peace at Ep 10 field-master density — not Ep01 banner crop. Krishna in yellow pitambar with peacock and garland among Draupadi and Yudhishthira in quiet gratitude; soft light, peepal, simple huts; optional soft Akshayapatra glow. Carved gold-and-lotus cartouche. Native 3:2 1536×1024. Not photoreal. No Drona. Never attach Ep01 plate-wide-gold.",
+      "sources": [
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Vana Parva, Draupadīharaṇa-parva, Durvāsā-upākhyāna, adhyāya 263 (close): Bhīma finds no one; Śrīkṛṣṇa consoles the Pandavas and takes leave"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Vana Parva, Draupadi-harana Parva, Section CCLXI (261) (close): Bhima, sent by Krishna to invite the sages, finds the bank deserted; Krishna reassures the Pandavas and departs for Dvaraka"
+        },
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy — NOT in the constituted Āraṇyaka text: the Durvāsā episode survives only in vulgate manuscripts (CE apparatus), so Debroy’s translation has no chapter for it; recorded as a gap, not a cite"
+        }
+      ],
+      "audit_notes": "2026-10-01 rewrite (logic + sources pass, Ep 14 standard): causal chain Surya's vessel rule → Duryodhana's boon → timed visit → prayer → Krishna's hunger → grain → sages full at the river and flee → trap closes on nothing.",
+      "source_divergence": "Text: copper vessel (tāmra sthālī / tāmra piṭhara, BORI 3.3 + Gita Press 3.3 + Ganguli III). Series paints it burnished copper-gold with divine glow (shipped akshayapatra-bowl-v2 lock) — accepted stylisation, not a plot change.",
+      "chosen": "Gita Press + BORI overlap on the vessel rule (inexhaustible until Draupadī eats); keep the shipped copper-gold bowl lock; prompts say ‘burnished copper-gold’ on any future regen."
     }
   ],
-  "scene_lock_ref": ""
+  "prop_continuity": {
+    "continuity_id": "akshayapatra-bowl-v2",
+    "vessel": "Burnished copper-gold wide circular ceremonial bowl, two curved side handles, short pedestal foot, lotus petal engraving, soft divine glow. Medium-large. NEVER a U-ring, bangle, or plain cookpot. (Text: copper — see source_block.divergence.)",
+    "size_lock_ref": "episodes/04-akshayapatra/stills/_locks/akshayapatra.jpg"
+  },
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "character_lock_notes": {
+    "duryodhana": "episodes/04-akshayapatra/stills/_locks/duryodhana.jpg = byte copy of episodes/08-peace-embassy/stills/_locks/duryodhana.jpg (court dress, pre-war). Same face as Ep 08/13.",
+    "krishna": "Local _locks/krishna.jpg is the SuperGrok copy of the Ep 09 lock; Ep 09 file is the authority."
+  }
 }

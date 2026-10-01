@@ -5,6 +5,7 @@
 - [x] Ep 11: player uses Blender `renders/beat-*.png` (Ken Burns on 3D proxies; Orion/Megh kept)
 - [x] Pilot one beat in **3D**: Ep09 A3 counsel → Blender → `episodes/09-gita/renders/beat-35-counsel.png` (docs in `episodes/09-gita/blender/`; player still on stills/) — SPRINT_PLAN Track A3
 - [ ] Rewrite **Episode 03** to the Ep 09/10 bar (one episode per pass). Do not start 04–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+. — SPRINT_PLAN Track A1 / Week 1–2
+- [ ] **Ep 04 rewrite** (branch `studio/ep04-rewrite`, not live): script + bible + cast at Ep 14 logic/source standard — Duryodhana's boon beat added, ending fixed to the texts (sages sated in the river flee), source_block with BORI 3.3 / Gita Press Vana 3, 262–263 / Ganguli III, CCLX–CCLXI (Durvāsā episode is vulgate-only; BORI gap recorded). GATE D + A/B PASS 2026-10-01. **Blocking merge:** SuperGrok `plate-boon` (new) + `plate-satisfied` (river) per `episodes/04-akshayapatra/logic-reviews/SUPERGROK-DROP-LIST.md`; narration re-render orion-00…09 (free path) + retime. Live Ep 04 stays the afd2ac4 cut until then.
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate) — SPRINT_PLAN Track A4

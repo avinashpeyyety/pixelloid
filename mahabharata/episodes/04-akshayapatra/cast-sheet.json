@@ -1,31 +1,121 @@
 {
   "episode_id": "04",
-  "notes": "Vana Parva forest exile. Continuity: Draupadi face lock, Krishna blue-saffron comic charm, Durvasa ascetic sage.",
+  "title": "The Akshayapatra",
+  "notes": "Ep 04 rewrite 2026-10-01 (Ep 14 standard). Cause→effect: Sūrya’s vessel (rule: inexhaustible until Draupadi eats) → Duryodhana’s boon to Durvasa (visit after she has eaten) → Durvasa + ten thousand disciples arrive, go to bathe → Draupadi prays → Krishna hungry, eats the particle on the rim → sages sated in the river flee → trap closes on nothing. Comic mythology Amar Chitra — never photoreal. Draupadi deep red-rose sari, exile-simple gold. Krishna = Ep 09 lock. Durvasa fierce but stylized. Duryodhana = Ep 08 court lock (copied to stills/_locks/duryodhana.jpg). Locks are SuperGrok 1728×1152 (afd2ac4). Prop: akshayapatra bowl lock stills/_locks/akshayapatra.jpg — burnished copper-gold (text: copper).",
   "cast": {
     "draupadi": {
-      "face": "Young woman, warm brown skin, large dark eyes, soft brows, small bindi, calm dignity",
-      "hair": "Long black wavy hair, simple gold ornaments (exile-simple, still royal)",
-      "costume": "Deep red or forest-rose sari with gold border, modest exile jewelry"
+      "tokens": [
+        "warm brown skin",
+        "large dark eyes",
+        "small bindi",
+        "long black wavy hair",
+        "deep red-rose sari gold border",
+        "exile-simple gold ornaments",
+        "calm dignity"
+      ],
+      "face": "Young woman, warm brown skin, large dark eyes, soft brows, small bindi, calm dignity — painted comic, not photoreal",
+      "hair": "Long black wavy hair, simple gold ornaments — no peacock",
+      "costume": "Deep red or forest-rose sari with gold border, modest exile jewelry",
+      "forbid": [
+        "photoreal",
+        "palace excess jewelry",
+        "peacock",
+        "battle armor"
+      ]
     },
     "krishna": {
-      "face": "Youthful divine smile, dark eyes, serene playfulness",
-      "hair": "Dark curly hair, peacock feather optional subtle, peacock-crown light",
-      "costume": "Indigo-blue skin tone stylized comic OR warm brown with yellow pitambar dhoti — prefer yellow pitambar + dark blue upper cloth, flute optional, charming not photoreal"
+      "tokens": [
+        "youthful divine smile",
+        "dark curly hair",
+        "peacock feather",
+        "yellow pitambar",
+        "flower garland",
+        "Ep 09 face lock"
+      ],
+      "face": "Youthful divine smile, dark eyes, serene playfulness — same face as Ep 09",
+      "hair": "Dark curly hair, peacock feather",
+      "costume": "Yellow pitambar dhoti, flower garland — charming comic, not photoreal CGI blue",
+      "forbid": [
+        "photoreal",
+        "flute as primary A-prop",
+        "dark horror Krishna",
+        "modern dress"
+      ]
     },
     "durvasa": {
-      "face": "Fierce ascetic sage, intense eyes, lean face, short temper energy but comic style",
+      "tokens": [
+        "fierce ascetic",
+        "intense eyes",
+        "matted topknot",
+        "grey-white beard",
+        "saffron robes",
+        "rudraksha",
+        "staff",
+        "hungry on arrival, sated and uneasy in the river"
+      ],
+      "face": "Fierce ascetic sage, intense eyes, lean face, grey-white beard — comic mythology, not photoreal horror",
       "hair": "Matted topknot, grey-white wild beard",
-      "costume": "Saffron/ruddy bark-cloth or saffron robes, rudraksha beads, staff"
+      "costume": "Saffron robes, rudraksha beads, staff",
+      "forbid": [
+        "photoreal horror",
+        "Drona archery guru pose",
+        "saffron acharya of Ep01 training",
+        "gore"
+      ]
     },
     "yudhishthira": {
-      "face": "Gentle eldest Pandava, light mustache, composed",
+      "tokens": [
+        "gentle eldest Pandava",
+        "light mustache",
+        "simple topknot",
+        "cream exile dhoti",
+        "composed"
+      ],
+      "face": "Gentle eldest Pandava, light mustache, composed — comic mythology",
       "hair": "Simple topknot",
-      "costume": "Cream dhoti, modest exile dress"
+      "costume": "Cream dhoti, modest exile dress",
+      "forbid": [
+        "photoreal",
+        "crown of Hastinapura court",
+        "battle armor"
+      ]
     },
     "disciples": {
-      "face": "Background ascetic students, comic silhouettes",
+      "tokens": [
+        "background ascetics",
+        "topknots",
+        "saffron or cream",
+        "equal human scale",
+        "ten thousand (shown as a long file)",
+        "hungry on arrival, sated in the river"
+      ],
+      "face": "Background comic ascetic students — not photoreal portraits",
       "hair": "Topknots",
-      "costume": "Saffron or cream bark-cloth"
+      "costume": "Saffron or cream bark-cloth, equal natural human scale",
+      "forbid": [
+        "photoreal",
+        "modern clothes",
+        "giant scale mismatch",
+        "Drona"
+      ]
+    },
+    "duryodhana": {
+      "tokens": [
+        "proud dark mustache",
+        "jeweled Kuru crown",
+        "purple-and-gold royal robes",
+        "calculating gaze",
+        "Ep 08 face lock"
+      ],
+      "face": "Adult Kaurava heir, proud dark mustache, fierce calculating gaze — same face as Ep 08/13 lock",
+      "hair": "Dark hair under a jeweled Kuru crown / gold-trimmed royal turban-crown",
+      "costume": "Purple-and-gold royal robes, gold jewelry (court dress of Hastinapura during the exile years) — no battle armor, no mace raised",
+      "forbid": [
+        "photoreal",
+        "battle armor in this episode",
+        "mace raised",
+        "forest hermitage"
+      ]
     }
   }
 }

@@ -83,3 +83,7 @@ Cadence rule: Chief picks **≤1** in-flight ticket; prefer S; split M. Do not p
 - Ep01 consistency already shipped (`50316c7`); active A1 = Ep03
 - Track B deliverable: [`PIPELINE_CHECKLIST.md`](PIPELINE_CHECKLIST.md)
 - **Consumer Imagine import (tooling):** when team API credits are blocked, beat plates may ship via SuperGrok browser Imagine → `stills/_inbox/consumer-imagine/` → `tools/import_consumer_stills.py`. GATE C bar unchanged. See [`CONSUMER_IMAGINE_IMPORT.md`](CONSUMER_IMAGINE_IMPORT.md). Does not demote Ep03 ship priority — unlocks regen without waiting on API top-up.
+
+## Weekly tally
+
+- Week of 2026-09-29: shipped Ep 04 (09/10 rewrite)

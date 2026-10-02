@@ -4,14 +4,14 @@
 - [ ] **Active sprint board:** [`docs/SPRINT_PLAN.md`](docs/SPRINT_PLAN.md) — Track A (improvements) + Track B (Ep 15+ factory). Studio lead; Chief one ticket/cycle.
 - [x] Ep 11: player uses Blender `renders/beat-*.png` (Ken Burns on 3D proxies; Orion/Megh kept)
 - [x] Pilot one beat in **3D**: Ep09 A3 counsel → Blender → `episodes/09-gita/renders/beat-35-counsel.png` (docs in `episodes/09-gita/blender/`; player still on stills/) — SPRINT_PLAN Track A3
-- [ ] Rewrite **Episode 03** to the Ep 09/10 bar (one episode per pass). Do not start 04–08 in the same pass. Ep 14 paused until 01–08 are one show with 09+. — SPRINT_PLAN Track A1 / Week 1–2
-- [ ] **Ep 04 rewrite** (branch `studio/ep04-rewrite`, not live): script + bible + cast at Ep 14 logic/source standard — Duryodhana's boon beat added, ending fixed to the texts (sages sated in the river flee), source_block with BORI 3.3 / Gita Press Vana 3, 262–263 / Ganguli III, CCLX–CCLXI (Durvāsā episode is vulgate-only; BORI gap recorded). GATE D + A/B PASS 2026-10-01. **Blocking merge:** SuperGrok `plate-boon` (new) + `plate-satisfied` (river) per `episodes/04-akshayapatra/logic-reviews/SUPERGROK-DROP-LIST.md`; narration re-render orion-00…09 (free path) + retime. Live Ep 04 stays the afd2ac4 cut until then.
+- [ ] Rewrite **Episode 05** (*Yaksha Prashna*) to the Ep 09/10 bar (one episode per pass). Do not start 06–08 in the same pass. Ep 14 unpaused separately (WIP on `studio/ep14-drona-fall`, GATE C PASS; GATE D next) — SPRINT_PLAN Track A2
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate) — SPRINT_PLAN Track A4
-- [ ] After each 02–08 rewrite: one episode per pass, then resume Ep 14 — SPRINT_PLAN Track A2 / A5
+- [ ] Continue 05–08 rewrite ladder one episode per pass; Ep 14 advancing separately on its branch — SPRINT_PLAN Track A2
 
 ## Done
+- [x] **Ep 04 *The Akshayapatra* rewrite** (09/10 bar, Yaman, Kokoro local orion-*, GATE D install + ship 2026-10-02)
 - [x] Ep 11 reimagine scaffold: GATE C panels + blender-map + Blender scene/renders (3D+Imagine workflow)
 - [x] Workflow north star: Blender 3D + Grok Imagine key panels (`docs/WORKFLOW.md`, README, AGENTS, TOOLING)
 - [x] Ep 02 *The Fish's Eye* rewrite (09/10 bar, Yaman, Orion, sources)
@@ -30,7 +30,7 @@
 - [x] Ep 09–11 raga underscoring (Bhairav / Darbari / Megh+Jhaptal) in the player; duck under Orion
 - [x] Ep 12 *Jayadratha Falls* (Drona Parva, fourteenth day, sunset vow; Marwa; Orion)
 - [x] Ep 13 *Ghatotkacha* (Drona Parva, night of the fourteenth, Karna’s Shakti; Malkauns; Orion)
-- [ ] Ep 14 *The Fall of Drona* paused until gates + 01–08 rewrite (WIP on disk, not shipped)
+- [ ] Ep 14 *The Fall of Drona* — unpaused separately; GATE C PASS on `studio/ep14-drona-fall` (WIP, not shipped); GATE D install next
 - [x] **Character-model bar = Ep 09 + Ep 10.** Krishna, Arjuna (09); Bhishma, Shikhandi (10). Enforced from Ep 12 in `logic_review.py` + GATE C.
 - [x] **GATE D sync:** speaker on plate, action visible, no Ken Burns over the wrong still.
 - [x] **Source gate:** ≥2 of BORI/Debroy, Gita Press Gorakhpur, K.M. Ganguli per beat; divergence → Gita Press + BORI overlap; never TV-only.

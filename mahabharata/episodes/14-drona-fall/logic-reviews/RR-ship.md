@@ -16,7 +16,7 @@ Worktree: lab-mirror `/home/box/lab-mirror/ai-projects/pixelloid/mahabharata`
 ## Ship commit
 
 - Message: `mahabharata Ep14: GATE D install PASS + ship The Fall of Drona`
-- SHA: _(filled after commit)_
+- SHA: `b12ce82` (`b12ce82a31ccdebb41d1c03d98dc8f5a61d8c485`) — ship commit on `studio/ep14-drona-fall`
 - Author: `Chief <Avinashpeyyety@icloud.com>`
 - Not committed: `stills/_inbox/` (consumer Imagine drops; untracked)
 

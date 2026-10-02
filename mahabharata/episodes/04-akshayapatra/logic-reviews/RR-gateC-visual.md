@@ -1,97 +1,87 @@
-# Logic review — Ep 04 — GATE C (visual)
+# Logic review — Ep 04 (rewrite) — GATE C (visual)
 
-Status: **PASS**
-Reviewer: executor subagent (box lab-mirror)
-Time: 2026-09-17 ~10:40 CT
+Status: **PASS** (boon + satisfied accepted; optional arrival regen **rejected**, shipped arrival kept)
+Reviewer: executor subagent (box, worktree `studio/ep04-rewrite`)
+Time: 2026-10-02 ~09:45 CT
 
-Source: SuperGrok consumer Imagine → `stills/_inbox/consumer-imagine/` →
-`python3 tools/import_consumer_stills.py 04-akshayapatra --force --allow-watermark`
-(C2PA `softwareAgent: Grok Imagine` / byte heuristic WARN on some files; **no visible**
-Grok/xAI corner watermark or contaminating plaque text on eye-check).
+Supersedes the 2026-09-17 review (which passed the pre-rewrite cut with `satisfied` WEAK).
+Brief: `SUPERGROK-DROP-LIST.md` (2026-10-01).
 
-Wide-gold regen (this pass): clean `plate-wide-gold.jpg` re-dropped at
-`stills/_inbox/consumer-imagine/plate-wide-gold.jpg` (1728×1152), checksum
-`bde372a28f9ab6b5c17c26be7ad59703` (prior still was `a0ca52adc3c75c831565bfa623986304`).
-Imported with `--map` wide-gold only + `--force --allow-watermark`. Soft satisfied regen skipped.
+## Source / import
 
-Run first:
+SuperGrok consumer Imagine drops (1728×1152 JPEG) → `stills/_inbox/consumer-imagine/` (untracked, not committed).
 
-```bash
-python3 tools/stills_review.py episodes/04-akshayapatra --require
+| Drop | md5 | Imported? |
+|------|-----|-----------|
+| `plate-boon.jpg` (NEW) | `fe9b4420d9de2e9d051f170789ce5984` | **yes** → `stills/plate-boon.jpg` |
+| `plate-satisfied.jpg` (REPLACE) | `4c95b113a7c071fa2e99f8291acd09ae` | **yes** → `stills/plate-satisfied.jpg` (was `2bebbfc6…`) |
+| `plate-arrival.jpg` (optional) | `8d9a1700421dd4fc5b434e92193e4988` | **no**: fails visual (see below); shipped `plate-arrival.jpg` (`1c6cc1f6…`) unchanged |
+
+1. `python3 tools/import_consumer_stills.py 04-akshayapatra --force`: **FAIL** on all three, byte heuristic only
+   (`grok`/`Grok`/`GROK`). Every hit is inside the APP11 JUMBF **C2PA** manifest (bytes 2461–4100:
+   `softwareAgent: Grok Imagine`, `claim_generator_info: Grok Imagine`, self-signed cert CN `xAI Grok Imagine`).
+   No hit in the image data.
+2. Eye-check of all four corners (300 px crops) plus full frames: **no visible Grok / xAI mark**, no caption, plaque or text.
+3. `python3 tools/import_consumer_stills.py 04-akshayapatra --force --allow-watermark --map {boon, satisfied}`: OK, 2 files.
+
+## Dimension gate
+
+```
+$ python3 tools/stills_review.py episodes/04-akshayapatra --require
+PASS
+  19 jpegs  bar 1536×1024 3:2
 ```
 
-Result: **PASS** (34 JPEGs · bar ≥1536×1024 · ~3:2 · all stills/locks/poster at **1728×1152**).
-
-Locks landed in `stills/_locks/`: hermitage-master, draupadi, durvasa, krishna, yudhishthira, disciples, akshayapatra.
+(Main's tool failed on the 16:9 hub `thumb.jpg` / `thumb@2x.jpg`. Ported the `tools/stills_review.py` change from
+`studio/ep14-drona-fall`: skip `thumb*` + `_inbox`, plus a check that every bible plate exists on disk. `plate-boon.jpg` exists.)
 
 ## Canvas / factory
 
 | Check | Result |
 |-------|--------|
-| Every still + lock ≥ 1536×1024, aspect ~3:2 | **PASS** |
-| No 1280×720 file used as first `image_edit` input | **PASS** (720p replaced by import) |
-| Imagine refs = scene master + solo locks | **PASS** (consumer regen with locks in inbox) |
-| Every named face has `stills/_locks/<id>.jpg` | **PASS** (7 locks) |
-| Ep01 `plate-wide-gold.jpg` **not** attached | **PASS** |
-| Source path noted | **PASS** — SuperGrok consumer import |
-| No visible Grok / xAI watermark | **PASS** — C2PA byte WARN only; corners/margins clean |
+| Every still + lock ≥ 1536×1024, aspect ~3:2 | **PASS** (new plates 1728×1152) |
+| No 1280×720 file used as first input | **PASS** |
+| Refs = scene master / locks / Ep10 field-master (per drop list) | **PASS** (operator-reported; outputs match locks) |
+| Every named face has `stills/_locks/<id>.jpg` | **PASS** (duryodhana, durvasa, disciples, …) |
+| Ep01 `plate-wide-gold.jpg` not attached | **PASS** (no Ep01 gold palette/composition) |
+| Source path noted | **PASS**: SuperGrok consumer import |
+| No visible Grok / xAI watermark | **PASS**: C2PA metadata only |
 
-## Quality vs Ep 10 bar (eye-check)
+## Quality vs Ep 10 bar
 
-Opened Ep10 `plate-vow.jpg` beside new drops; locks for cast/vessel continuity.
+Compared side by side with Ep10 `plate-vow.jpg` and the Ep04 locks.
 
-| Check | Result | Notes |
-|-------|--------|-------|
-| Frame | **PASS** | Carved wood + lotus cartouche on all plates/locks |
-| Camera | **PASS** | Heroic medium / cast fills frame |
-| Line | **SOFT** | Polished cinematic paint (similar to Ep10 vow); not thin cream-mat |
-| Cast | **PASS** on most | Tokens match bible; vessel lock (wide bowl, 2 handles, lotus, pedestal) holds across vessel/empty/grain/poster |
-| Krishna | **PASS** | Pitambar, peacock, garland, blue skin; matches local `_locks/krishna.jpg` |
-| Drift | **PASS** | Draupadi red-rose sari + wavy hair stable; Durvasa saffron + white beard + staff stable |
-| Contaminating text | **PASS** | wide-gold plaque **"EP 10: FIELD-MASTER DENSITY"** cleared on regen |
+| Check | boon | satisfied |
+|-------|------|-----------|
+| Frame: carved gold-and-lotus cartouche as part of the painting | PASS | PASS |
+| Camera: heroic medium, figures fill frame | PASS | PASS |
+| Line: engraved detail, clear faces | PASS | PASS |
+| Cast: tokens match bible, no sage bleed | PASS | PASS |
+| Drift vs locks | PASS | PASS |
 
 ## Per plate
 
-| Plate | Cast | Canvas | Frame | Camera | Notes |
-|-------|------|--------|-------|--------|-------|
-| wide | **PASS** | PASS | PASS | PASS | Yudhishthira + Draupadi hermitage exile; thatch huts; no Drona/bird |
-| vessel | **PASS** | PASS | PASS | PASS | Draupadi + glowing Akshayapatra; lock vessel shape |
-| empty | **PASS** | PASS | PASS | PASS | Draupadi wiping clean empty bowl; evening hermitage |
-| arrival | **PASS** | PASS | PASS | PASS | Fierce Durvasa + saffron disciples on path to huts |
-| prayer | **PASS** | PASS | PASS | PASS | Draupadi anjali, lamp light, intimate devotion |
-| krishna | **PASS** | PASS | PASS | PASS | Krishna + Draupadi arrival at hermitage |
-| grain | **PASS** | PASS | PASS | PASS | Krishna + single glowing grain over lock vessel |
-| satisfied | **WEAK** | PASS | PASS | PASS | Durvasa addressing disciples (blessing hand) — calmer than arrival; optional regen later for clearer “content departure” |
-| wide-gold | **PASS** | PASS | PASS | PASS | Clean closing peace: Krishna + Draupadi + Yudhishthira + glowing vessel; ornate frame; **no** plaque / EP10 / FIELD-MASTER text |
-| poster | **PASS** | PASS | PASS | PASS | Draupadi holding glowing Akshayapatra at hermitage; no caption plaque |
-
-## Locks (eye)
-
-| Lock | Notes |
-|------|-------|
-| hermitage-master | **PASS** — thatch huts, banyan, chulha, golden hour |
-| draupadi | **PASS** — red sari, wavy hair, hermitage |
-| durvasa | **PASS** — fierce ascetic lock |
-| krishna | **PASS** — pitambar, peacock, garland (series face) |
-| yudhishthira | **PASS** — cream exile dhoti, topknot, hermitage |
-| disciples | **PASS** — saffron group |
-| akshayapatra | **PASS** — wide golden bowl, 2 handles, lotus face, pedestal, glow |
+| Plate | Verdict | Cast | Canvas | Frame | Camera | Notes |
+|-------|---------|------|--------|-------|--------|-------|
+| **boon** (NEW) | **PASS** | PASS | PASS | PASS | PASS | Pillared Hastinapura hall. **Duryodhana** matches `_locks/duryodhana.jpg` (purple-gold robes, jeweled purple-gold Kuru turban-crown, upturned mustache, pearls) and bows slightly with joined palms. **Durvasa** matches lock (white beard, grey topknot, saffron, rudraksha, staff), seated on a spotted deer-skin on a low stone dais, right palm raised granting the boon. Fruit platters for hospitality. No huts, no Pandavas, no armour. Durvasa's face is stern, which fits the "short-tempered" line. |
+| **satisfied** (REPLACE) | **PASS** | PASS | PASS | PASS | PASS | **River scene**: Durvasa waist-deep in a forest river at golden hour, hand on his suddenly full belly, startled and uneasy, glancing sideways. Saffron disciples wade away toward the tree line. **No huts** in frame. **No blessing gesture** (one hand on belly, one gripping the staff). Modest saffron dhotis. This fixes the old WEAK plate (blessing hand, wrong ending). |
+| arrival (optional regen) | **FAIL: not imported** | FAIL | PASS | PASS | PASS | (1) **Yudhishthira missing**, which was the only reason for this regen (no welcoming figure at the hut edge). (2) **Durvasa costume drift**: ornate gold armour plates (pauldron, breastplate, belt, tassets) over the saffron, against the ascetic `_locks/durvasa.jpg` and the drop list's no-armour bar. Kept the shipped `plate-arrival.jpg` (PASS on 2026-09-17; still matches beat 04 apart from Yudhishthira not being shown). |
+| wide, vessel, empty, prayer, krishna, grain, wide-gold, poster | PASS (unchanged) | | | | | Kept per drop list ("Keep (PASS vs rewritten bible)"). |
 
 ## Strict checks
 
-- [x] `stills_review.py` PASS
-- [x] No Drona / wrong sage on non-Durvasa plates
+- [x] `stills_review.py --require` PASS
+- [x] No Drona / wrong sage. Durvasa only where `cast_present`
 - [x] No graphic gore
-- [x] No 16:9 / 720p plates
-- [x] Watermark eye-check — no visible overlay; `--allow-watermark` for C2PA only
-- [x] **wide-gold free of contaminating text** — **PASS** (eye-check Read; no EP 10 / FIELD-MASTER / plaque)
-- [~] satisfied beat = content departure — **WEAK** (optional; not blocking)
-- [x] Krishna eye-matches lock
-- [x] Vessel continuity vs `_locks/akshayapatra.jpg`
-- [x] Character jewelry/skin/costume stable across plates
+- [x] No 16:9 / 720p plates (hub thumbs exempt by tool; not plates)
+- [x] Watermark eye-check: corners and margins clean on boon / satisfied / arrival; `--allow-watermark` for C2PA bytes only
+- [x] Duryodhana eye-matches `_locks/duryodhana.jpg` (= Ep08 lock)
+- [x] Durvasa eye-matches `_locks/durvasa.jpg` on boon + satisfied
+- [x] satisfied = river, sated, fleeing; no huts; no blessing (rewrite ending matches the texts)
+- [x] boon = Duryodhana serving Durvasa in Hastinapura (cause beat)
+- [x] GATE D sync: beat 02 text (Duryodhana serves Durvasa → boon) and beat 08 text (in the river… slip away) match plates
 
 ## Outcome
 
-**GATE C PASS.** Ship Ep04: bump `play.html` cache, commit SuperGrok stills + locks + this review, `git push origin main`.
-
-Soft follow-up (non-blocking): optional `plate-satisfied.jpg` regen for clearer “full / bless / turn back” mood.
+**GATE C PASS** for the Ep04 rewrite plate set.
+Optional follow-up (not blocking): regenerate `plate-arrival.jpg` with Yudhishthira at the hut edge in welcome and Durvasa in plain saffron (no armour).

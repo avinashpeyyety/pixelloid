@@ -7,8 +7,9 @@
  * vessel → eats the particle on the rim → sages sated in the river flee → Bhima finds the bank empty; trap closes on nothing.
  * Sources: BORI CE/Debroy Āraṇyaka 3.3 + Gita Press Gorakhpur Vana 3, 262–263 + K.M. Ganguli Vana III, CCLX–CCLXI.
  * Durvāsā episode is vulgate-only (not in BORI CE constituted text). See plate-bible source_block.
- * Audio: narration NOT re-rendered for this text (branch studio/ep04-rewrite) — orion-00…09 pending a voice pass.
- * Plates: boon (new) + satisfied (river) pending SuperGrok — see logic-reviews/SUPERGROK-DROP-LIST.md.
+ * Audio: orion-00…09 re-rendered 2026-10-02 with free local Kokoro-82M bm_george (tools/render_local_voice.sh, speed 0.9);
+ * beat t retimed from ffprobe (12 s grid, clip ends ≥1 s before next beat; overruns extend the slot).
+ * Plates: boon (new) + satisfied (river) imported from SuperGrok consumer Imagine 2026-10-02 — GATE C PASS (RR-gateC-visual.md).
  */
 export const EPISODE = {
   id: "04",
@@ -18,17 +19,17 @@ export const EPISODE = {
   style: "cinematic-plates",
   stillsDir: "episodes/04-akshayapatra/stills/",
   voice: {
-    provider: "grok-tts",
-    voice_id: "orion",
-    cache: "ep04-rewrite-20261001",
-    note: "Rewrite text — narration NOT yet re-rendered (no paid API). orion-00…08 are the old cut; orion-09 missing. Voice pass required before merge to main.",
+    provider: "local-kokoro",
+    voice_id: "bm_george",
+    cache: "ep04-local-20261002",
+    note: "Kathavachak — Kokoro-82M bm_george (free local, Apache-2.0, speed 0.9) via tools/render_local_voice.sh; no paid xAI API (SuperGrok-only rule). Files keep orion-NN.mp3 names/fingerprint (24 kHz / 128 kbps / mono / -16 LUFS).",
     base: "episodes/04-akshayapatra/audio/",
   },
   music: {
     raga: "yaman",
     note: "Yaman (evening Kalyan, tivra Ma) — devotional trust; tanpura + sparse bansuri, no tabla. Duck under narration. Replaces default flute+tabla.",
   },
-  totalSec: 128,
+  totalSec: 130,
   stills: {
     poster: "episodes/04-akshayapatra/stills/poster.jpg",
   },
@@ -90,7 +91,7 @@ export const EPISODE = {
       text: "In Hastinapura, Duryodhana cannot bear their peace. He serves the short-tempered sage Durvasa until the sage offers a boon — then asks him to visit his cousins after Draupadi has eaten.",
     },
     {
-      t: 39,
+      t: 40,
       plate: "empty",
       zoom: 1.12,
       panX: -0.02,
@@ -100,7 +101,7 @@ export const EPISODE = {
       text: "So the sage comes late. Draupadi has fed everyone, eaten last, and set the vessel aside, scoured clean. Today’s food is gone.",
     },
     {
-      t: 50,
+      t: 52,
       plate: "arrival",
       zoom: 1.1,
       panX: 0.04,
@@ -110,7 +111,7 @@ export const EPISODE = {
       text: "Then Durvasa arrives with ten thousand disciples. Yudhishthira welcomes them, and they go to bathe in the river, expecting a feast on their return.",
     },
     {
-      t: 62,
+      t: 65,
       plate: "prayer",
       zoom: 1.16,
       panX: 0,
@@ -120,7 +121,7 @@ export const EPISODE = {
       text: "There is nothing left to cook, and Durvasa’s curse is feared across the worlds. Draupadi turns to her one refuge — she prays to Krishna.",
     },
     {
-      t: 74,
+      t: 77,
       plate: "krishna",
       zoom: 1.12,
       panX: 0.03,
@@ -130,7 +131,7 @@ export const EPISODE = {
       text: "Krishna comes at once — and before she can speak, he says he is hungry. “The vessel is empty,” Draupadi cries. “Bring it anyway,” he smiles.",
     },
     {
-      t: 87,
+      t: 89,
       plate: "grain",
       zoom: 1.22,
       panX: 0.02,
@@ -140,7 +141,7 @@ export const EPISODE = {
       text: "On the rim he finds one grain of rice and a shred of leaf. He eats it: “May the Soul of the universe be satisfied.”",
     },
     {
-      t: 99,
+      t: 101,
       plate: "satisfied",
       zoom: 1.12,
       panX: -0.02,
@@ -150,7 +151,7 @@ export const EPISODE = {
       text: "In the river, Durvasa and his disciples suddenly feel full. Unable to eat the feast they asked for, and afraid of the Pandavas’ anger, they slip away.",
     },
     {
-      t: 112,
+      t: 114,
       plate: "wide-gold",
       zoom: 1.08,
       panX: 0,
@@ -160,7 +161,7 @@ export const EPISODE = {
       text: "Bhima runs to call them to dinner, but the riverbank is empty. Duryodhana’s trap has closed on nothing — and Krishna smiles and takes his leave.",
     },
     {
-      t: 125,
+      t: 126,
       plate: "wide-gold",
       zoom: 1.02,
       panX: 0,

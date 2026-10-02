@@ -16,7 +16,7 @@ Priority order (from NEXT / WORKFLOW). **One episode per pass.** Do **not** star
 | **A2** | Continue **01–08 rewrite ladder** after 03 (next: 04, then 05…) | Studio | Same bar as A1, **one ep per pass**. Ep 01–02 already Done at 09/10 bar. |
 | **A3** | **3D pilot**: one beat Imagine key panel → Blender camera/set → `renders/` proxy; document path; **keep GATE C** | Studio | One beat documented; GATE C–passed panel mapped; Blender proxy in `episodes/<id>/renders/`; path noted (TOOLING / episode README). Hybrid player not required this sprint. |
 | **A4** | Tighten **Ep 10 Arjuna lock** (cream-white dhoti; no gold armor / peacock on arrows plate) | Studio | Curiosity polish — lock + affected plates re-GATE C; no drift vs Krishna/Bhishma bars. |
-| **A5** | ~~Ep 14 remains paused until 01–08 are one show with 09+~~ **Lifted 2026-09-29 by Avinash for Ep 14 only.** Ep 14 is an active ship ticket (Studio). Hold still applies to Ep 15+ until the ladder is done. | Studio | Ep 14 GATE A/B/C/D PASS + Orion audio → registry live. Status 2026-09-29: A/B/D PASS; GATE C FAIL pending SuperGrok drops (`episodes/14-drona-fall/logic-reviews/SUPERGROK-DROP-LIST.md`); TTS blocked on xAI team credits. |
+| **A5** | ~~Ep 14 remains paused until 01–08 are one show with 09+~~ **Lifted 2026-09-29 by Avinash for Ep 14 only.** Ep 14 is an active ship ticket (Studio). Hold still applies to Ep 15+ until the ladder is done. | Studio | Ep 14 **SHIPPED** 2026-10-02 (GATE A/B/C/D PASS; Kokoro local; live on Pages). |
 
 ---
 
@@ -86,4 +86,4 @@ Cadence rule: Chief picks **≤1** in-flight ticket; prefer S; split M. Do not p
 
 ## Weekly tally
 
-- Week of 2026-09-29: shipped Ep 04 (09/10 rewrite)
+- Week of 2026-09-29: shipped Ep 04, Ep 14

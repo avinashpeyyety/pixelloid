@@ -89,7 +89,11 @@ def iter_stills(ep_dir: Path) -> list[Path]:
         return []
     files: list[Path] = []
     for p in sorted(stills.rglob("*")):
-        if any(part.startswith("_backup") for part in p.parts):
+        if any(part.startswith("_backup") or part == "_inbox" for part in p.parts):
+            continue
+        # Hub landing thumbnails (thumb.jpg / thumb@2x.jpg, 16:9 by design since 2026-09-27)
+        # are derived UI crops of passed plates, not Imagine key panels.
+        if p.name.lower().startswith("thumb"):
             continue
         if p.suffix.lower() in {".jpg", ".jpeg"} and p.is_file():
             files.append(p)
@@ -139,6 +143,20 @@ def check_named_face_locks(ep_dir: Path, n: int) -> list[str]:
     return fails
 
 
+def check_bible_plates_exist(ep_dir: Path) -> list[str]:
+    """Every plate in plate-bible.json must have its still on disk (no missing beats)."""
+    bible_path = ep_dir / "plate-bible.json"
+    if not bible_path.exists():
+        return []
+    bible = json.loads(bible_path.read_text(encoding="utf-8"))
+    fails: list[str] = []
+    for p in bible.get("plates") or []:
+        fn = p.get("file")
+        if fn and not (ep_dir / "stills" / fn).exists():
+            fails.append(f"missing plate stills/{fn} (bible plate `{p.get('id')}`)")
+    return fails
+
+
 def review(ep_dir: Path) -> tuple[bool, list[str], int]:
     files = iter_stills(ep_dir)
     fails: list[str] = []
@@ -156,6 +174,7 @@ def review(ep_dir: Path) -> tuple[bool, list[str], int]:
             fails.append(f"{rel}: {reason}")
     n = episode_num_from_dir(ep_dir)
     fails += check_named_face_locks(ep_dir, n)
+    fails += check_bible_plates_exist(ep_dir)
     return len(fails) == 0, fails, len(files)
 
 

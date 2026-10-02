@@ -16,7 +16,7 @@ Worktree: `/workspace/pix-ep04`
 ## Ship commit
 
 - Message: `mahabharata Ep04: GATE D install + ship 09/10 rewrite (Yaman, Kokoro, publish)`
-- SHA: `27887a8` (`27887a8181a8d14d8cbb25e94997cb2952373793`)
+- SHA: `130d153` (`130d1536330e655489cadf6b5147175de0683677`) — ship commit on `studio/ep04-rewrite`
 - Author: `Chief <Avinashpeyyety@icloud.com>`
 - Not committed: `stills/_inbox/` (consumer Imagine drops; untracked)
 

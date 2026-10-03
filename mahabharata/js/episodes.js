@@ -57,7 +57,7 @@ export const EPISODES = [
     title: "Yaksha Prashna",
     sanskrit: "यक्षप्रश्नः",
     chapter: "Vana Parva · the lake of questions",
-    duration: "~102s",
+    duration: "~110s",
     status: "live",
     blurb:
       "Thirst leads to a silent lake. Brothers fall; Yudhishthira answers the yaksha — and dharma restores them.",

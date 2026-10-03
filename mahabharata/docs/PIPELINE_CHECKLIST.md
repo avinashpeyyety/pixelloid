@@ -60,16 +60,16 @@ Printable Studio factory checklist derived from [`WORKFLOW.md`](WORKFLOW.md) and
 - **Command/path:** Render the shot layout from `episodes/<id>/blender/<id>.blend` (or the `_studio` scene) into `episodes/<id>/renders/`, matching `script.js` beats.
 - **PASS artifact:** `episodes/<id>/renders/<id>-proxy.mp4` (or per-shot `episodes/<id>/renders/<shot>.png`)
 
-## 10. Orion TTS + raga
+## 10. Local Kokoro TTS + raga
 
 - [ ] **Owner:** Studio
-- **Command/path:** `tools/render_orion_voice.sh episodes/<id>`; verify the named Hindustani raga in `episodes/<id>/script.js` and optionally mix stems in REAPER.
-- **PASS artifact:** `episodes/<id>/audio/<beat>.mp3` for every spoken beat
+- **Command/path:** `tools/render_local_voice.sh episodes/<id>` (Kokoro-82M **bm_george**, speed 0.9 — canonical in `config/narrator.json`). Verify the named Hindustani raga in `episodes/<id>/script.js`. Do **not** call paid Orion/`api.x.ai` unless Orion remaster is unblocked.
+- **PASS artifact:** `episodes/<id>/audio/<beat>.mp3` for every spoken beat; `voice.voice_id: "bm_george"` in script.js
 
 ## 11. GATE D — final install
 
 - [ ] **Owner:** Studio
-- **Command/path:** Review `episodes/<id>/script.js`, `episodes/<id>/stills/`, `episodes/<id>/audio/`, and `episodes/<id>/renders/`; confirm speaker on panel, action visible, and 3D cut matches each beat. Record at `episodes/<id>/logic-reviews/RR-gateD-install.md`.
+- **Command/path:** `python3 tools/install_review.py episodes/<id> --report` (FAIL if `voice_id` ≠ `bm_george`, missing plates/audio, or missing raga). Also confirm speaker on panel / action visible / 3D cut matches beat. Record at `episodes/<id>/logic-reviews/RR-gateD-install.md`.
 - **PASS artifact:** `episodes/<id>/logic-reviews/RR-gateD-install.md` with `Status: PASS`
 
 ## 12. Registry live · commit · publish

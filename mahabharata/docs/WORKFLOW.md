@@ -120,6 +120,8 @@ Operator card: [`CONSUMER_IMAGINE_IMPORT.md`](CONSUMER_IMAGINE_IMPORT.md). **GAT
 
 **Rule (Avinash, 2026-09-29):** use only the SuperGrok consumer subscription limits — **never call `api.x.ai` / Grok TTS Orion or any paid API.** `tools/render_orion_voice.{sh,py}` is **retired** (kept for history; do not run with `XAI_API_KEY`). The SuperGrok/X Premium+ OAuth tools that exist (grokcli, Hermes) still hit `api.x.ai/v1/tts`, so they are out too; grok.com read-aloud has no sanctioned scriptable interface.
 
+Canonical narrator (2026-10-03): **`bm_george`** — pinned in `config/narrator.json`. GATE D install (`tools/install_review.py`) **FAIL**s if `script.js` `voice.voice_id` differs. Orion remaster is queued separately (blocked on credits).
+
 Default: **free local neural TTS**, no network at render time:
 
 ```bash
@@ -162,6 +164,7 @@ python3 tools/dialogue_review.py episodes/<id> --report
 python3 tools/logic_review.py episodes/<id>/plate-bible.json --report
 python3 tools/import_consumer_stills.py <id>   # after SuperGrok browser downloads land in stills/_inbox/consumer-imagine/
 python3 tools/stills_review.py episodes/<id>
+python3 tools/install_review.py episodes/<id> --report   # GATE D install; FAIL if voice_id ≠ bm_george
 tools/render_local_voice.sh episodes/<id>      # narration (free local TTS; Orion API retired)
 open -a Blender
 # optional: open "/Applications/SketchUp 2026/SketchUp.app"

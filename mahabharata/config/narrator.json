@@ -1,0 +1,14 @@
+{
+  "canonical_voice_id": "bm_george",
+  "provider": "local-kokoro",
+  "engine": "kokoro-82M",
+  "speed": 0.9,
+  "render": "tools/render_local_voice.sh",
+  "policy": "Avinash 2026-10-03: default narrator for all new and rewritten episodes. GATE D install FAIL if script.js voice.voice_id differs. Never spend paid xAI API credits. Orion remaster is a separate queued ticket when credits are available.",
+  "orion_remaster": {
+    "status": "queued_blocked_on_credits",
+    "voice_id": "orion",
+    "order": ["14-drona-fall", "04-akshayapatra", "05-yaksha-prashna"],
+    "note": "Re-voice with Grok TTS orion when Avinash says credits available; keep timing aligned. Do not start until unblocked."
+  }
+}

@@ -2,10 +2,10 @@
  * Episode 05 — Yaksha Prashna
  * Vana Parva · Yakṣa-praśna (lake ordeal) · Dharma tests Yudhiṣṭhira
  *
- * Voice: provider grok-tts / voice_id orion (target pipeline).
- * Cache plan ep05-supergrok-20260917 — DO NOT re-render audio this pass (no Orion / no Imagine API).
- * Existing orion-*.mp3 remain live until a future Orion pass.
- * Music: named Hindustani raga Bhairav under Orion (never default flute+tabla).
+ * Audio: orion-00…08 re-rendered 2026-10-03 with free local Kokoro-82M bm_george
+ * (tools/render_local_voice.sh, speed 0.9); PRONOUNCE for Yudhishthira/Pandavas/yaksha/Nakula/Dharma.
+ * Beat t retimed from ffprobe (12 s grid; clip ends ≥1 s before next beat).
+ * Music: named Hindustani raga Bhairav (never default flute+tabla).
  */
 export const EPISODE = {
   id: "05",
@@ -15,17 +15,17 @@ export const EPISODE = {
   style: "cinematic-plates",
   stillsDir: "episodes/05-yaksha-prashna/stills/",
   voice: {
-    provider: "grok-tts",
-    voice_id: "orion",
-    cache: "ep05-supergrok-20260917",
-    note: "Grok TTS Orion — cache plan ep05-supergrok-20260917; audio not re-rendered this scaffold pass",
+    provider: "local-kokoro",
+    voice_id: "bm_george",
+    cache: "ep05-kokoro-20261003",
+    note: "Kathavachak — Kokoro-82M bm_george (free local, Apache-2.0, speed 0.9) via tools/render_local_voice.sh; no paid xAI API (SuperGrok-only rule). Files keep orion-NN.mp3 names/fingerprint (24 kHz / 128 kbps / mono / -16 LUFS).",
     base: "episodes/05-yaksha-prashna/audio/",
   },
   music: {
     raga: "bhairav",
     note: "Bhairav mandra tanpura; sparse bansuri; no tabla. Sacred lake / dharma questions. Duck under Orion. Not default flute+tabla.",
   },
-  totalSec: 102,
+  totalSec: 110,
   stills: {
     poster: "episodes/05-yaksha-prashna/stills/poster.jpg",
   },
@@ -66,7 +66,7 @@ export const EPISODE = {
       text: "Deep in the forest the Pandavas wander, weary from the long exile.",
     },
     {
-      t: 10,
+      t: 12,
       plate: "thirst",
       zoom: 1.1,
       panX: 0.03,
@@ -76,7 +76,7 @@ export const EPISODE = {
       text: "Thirst burns. Yudhishthira sends his brothers one by one to seek water.",
     },
     {
-      t: 20,
+      t: 24,
       plate: "lake",
       zoom: 1.12,
       panX: 0,
@@ -86,7 +86,7 @@ export const EPISODE = {
       text: "They find a still forest lake — clear as glass, and strangely silent.",
     },
     {
-      t: 30,
+      t: 36,
       plate: "fall",
       zoom: 1.14,
       panX: -0.02,
@@ -96,7 +96,7 @@ export const EPISODE = {
       text: "A voice warns: answer first, or do not drink. They drink. One by one they fall.",
     },
     {
-      t: 42,
+      t: 48,
       plate: "yudhi",
       zoom: 1.12,
       panX: 0.04,
@@ -106,7 +106,7 @@ export const EPISODE = {
       text: "Yudhishthira comes last, finds his brothers still as stone, and will not drink without leave.",
     },
     {
-      t: 54,
+      t: 60,
       plate: "yaksha",
       zoom: 1.16,
       panX: 0.02,
@@ -116,7 +116,7 @@ export const EPISODE = {
       text: "A yaksha appears upon the waters — luminous, stern, and endless with questions.",
     },
     {
-      t: 66,
+      t: 72,
       plate: "answers",
       zoom: 1.18,
       panX: 0,
@@ -126,7 +126,7 @@ export const EPISODE = {
       text: "What is heavier than earth? Mother. Higher than heaven? Father. Yudhishthira answers without fear.",
     },
     {
-      t: 78,
+      t: 84,
       plate: "rise",
       zoom: 1.12,
       panX: 0.03,
@@ -136,7 +136,7 @@ export const EPISODE = {
       text: "Asked whom to revive first, he names Nakula — equal love for both mothers. The yaksha is Dharma himself.",
     },
     {
-      t: 90,
+      t: 96,
       plate: "wide-gold",
       zoom: 1.08,
       panX: 0,
@@ -146,7 +146,7 @@ export const EPISODE = {
       text: "So the lake taught what the war would ask: strength without dharma is only thirst.",
     },
     {
-      t: 100,
+      t: 108,
       plate: "wide-gold",
       zoom: 1.02,
       panX: 0,

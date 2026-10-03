@@ -57,6 +57,15 @@ PRONOUNCE: dict[str, str] = {
     "Kurukshetra": "Kuru-kshetra",
     "Ghatotkacha": "Ghatot-kacha",
     "guru": "gooroo",
+    # Ep05 Yaksha Prashna (and shared Forest / Dharma names)
+    "Yudhishthira": "Yoo-dish-thira",
+    "Pandavas": "Paan-davas",
+    "Pandava": "Paan-dava",
+    "Yaksha": "Yak-sha",
+    "yaksha": "yak-sha",
+    "Nakula": "Na-kula",
+    "Sahadeva": "Saha-deva",
+    "Dharma": "Dhar-ma",
 }
 
 

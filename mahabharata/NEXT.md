@@ -5,6 +5,7 @@
 - [x] Ep 11: player uses Blender `renders/beat-*.png` (Ken Burns on 3D proxies; Orion/Megh kept)
 - [x] Pilot one beat in **3D**: Ep09 A3 counsel → Blender → `episodes/09-gita/renders/beat-35-counsel.png` (docs in `episodes/09-gita/blender/`; player still on stills/) — SPRINT_PLAN Track A3
 - [ ] Rewrite **Episode 05** (*Yaksha Prashna*) to the Ep 09/10 bar (one episode per pass). Do not start 06–08 in the same pass. — SPRINT_PLAN Track A2
+  - Status 2026-10-03: GATE A/B/C + GATE D-dialogue PASS; stills 1728×1152; **local Kokoro TTS done** (`ep05-kokoro-20261003`, bm_george, orion-00…08). Next: GATE D install + ship.
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate) — SPRINT_PLAN Track A4

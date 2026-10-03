@@ -19,7 +19,7 @@
 ## Publish
 
 - Message: `mahabharata Ep05: GATE D install PASS + ship Yaksha Prashna rewrite`
-- Commit: see merge commit on main (message: GATE D install PASS + ship Yaksha Prashna rewrite)
+- Commit: 09bc57c
 - Live: https://avinashpeyyety.github.io/pixelloid/mahabharata/play.html?ep=05
 - Hub: https://avinashpeyyety.github.io/pixelloid/mahabharata/
 

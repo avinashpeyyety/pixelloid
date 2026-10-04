@@ -78,6 +78,14 @@ PRONOUNCE: dict[str, str] = {
     "Jayadratha": "Ja-ya-dra-tha",
     "Draupadi": "Drau-pa-dee",
     "Sindhu": "Sin-dhoo",
+    # Ep08 The Peace Embassy (Udyoga Parva, Hastinapura sabha)
+    "Hastinapura": "Hus-tina-poora",
+    "Dhritarashtra": "Dhrita-raash-tra",
+    "Duryodhana": "Dur-yo-dhana",
+    "Pandu": "Paan-doo",
+    "Kurus": "Koo-roos",
+    "sabha": "sa-bhaa",
+    "dharma": "dhar-ma",
 }
 
 

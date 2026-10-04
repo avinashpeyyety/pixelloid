@@ -1,9 +1,12 @@
 /**
  * Episode 08 — The Peace Embassy
  * Udyoga Parva · Krishna’s embassy to Hastinapura · five villages · refusal · form
- * Rewrite 2026-09-18: Ep 09/10 bar; SuperGrok stills GATE C PASS.
- * Music: named Hindustani raga Yaman under Orion (never default flute+tabla).
- * Cache ep08-supergrok-20260918 — plate cache bump; audio not re-rendered this pass.
+ * Rewrite: Ep 09/10 bar; SuperGrok stills GATE C PASS (2026-09-18).
+ *
+ * Audio: orion-00…08 re-rendered 2026-10-04 with free local Kokoro-82M bm_george
+ * (tools/render_local_voice.sh, speed 0.9); PRONOUNCE for Hastinapura/Dhritarashtra/Duryodhana/Pandu/Kurus/sabha/dharma.
+ * Beat t retimed from ffprobe (12 s grid; clip ends ≥1 s before next beat).
+ * Music: named Hindustani raga Yaman (never default flute+tabla).
  */
 export const EPISODE = {
   id: "08",
@@ -13,17 +16,17 @@ export const EPISODE = {
   style: "cinematic-plates",
   stillsDir: "episodes/08-peace-embassy/stills/",
   voice: {
-    provider: "grok-tts",
-    voice_id: "orion",
-    cache: "ep08-supergrok-20260918",
-    note: "Grok TTS Orion — cache ep08-supergrok-20260918; audio not re-rendered this stills ship",
+    provider: "local-kokoro",
+    voice_id: "bm_george",
+    cache: "ep08-kokoro-20261004",
+    note: "Kathavachak — Kokoro-82M bm_george (free local, Apache-2.0, speed 0.9) via tools/render_local_voice.sh; no paid xAI API (SuperGrok-only rule). Files keep orion-NN.mp3 names/fingerprint (24 kHz / 128 kbps / mono / -16 LUFS).",
     base: "episodes/08-peace-embassy/audio/",
   },
   music: {
     raga: "yaman",
     note: "Yaman mandra tanpura; sparse bansuri; no tabla. Evening peace embassy / sabha resolve. Duck under Orion. Not default flute+tabla.",
   },
-  totalSec: 102,
+  totalSec: 110,
   stills: {
     poster: "episodes/08-peace-embassy/stills/poster.jpg",
   },
@@ -64,7 +67,7 @@ export const EPISODE = {
       text: "The years of exile end. Armies gather — and one last chance for peace remains.",
     },
     {
-      t: 10,
+      t: 12,
       plate: "mission",
       zoom: 1.12,
       panX: 0.02,
@@ -74,7 +77,7 @@ export const EPISODE = {
       text: "Krishna takes the Pandavas’ plea to Hastinapura: five villages, and no war.",
     },
     {
-      t: 22,
+      t: 24,
       plate: "journey",
       zoom: 1.1,
       panX: -0.03,
@@ -84,7 +87,7 @@ export const EPISODE = {
       text: "He rides toward the city of the Kurus as messenger, friend, and witness of dharma.",
     },
     {
-      t: 34,
+      t: 36,
       plate: "court",
       zoom: 1.14,
       panX: 0.03,
@@ -94,7 +97,7 @@ export const EPISODE = {
       text: "In the great sabha Dhritarashtra sits blind; Duryodhana’s pride fills the hall.",
     },
     {
-      t: 46,
+      t: 48,
       plate: "offer",
       zoom: 1.16,
       panX: 0,
@@ -104,7 +107,7 @@ export const EPISODE = {
       text: "Krishna offers peace: five villages for the sons of Pandu. Nothing more is asked.",
     },
     {
-      t: 58,
+      t: 60,
       plate: "refuse",
       zoom: 1.14,
       panX: 0.04,
@@ -114,7 +117,7 @@ export const EPISODE = {
       text: "Duryodhana refuses. He will not give land enough to drive a needle’s point.",
     },
     {
-      t: 70,
+      t: 72,
       plate: "form",
       zoom: 1.2,
       panX: 0.02,
@@ -124,7 +127,7 @@ export const EPISODE = {
       text: "When they plot to seize him, Krishna shows a fraction of his cosmic form — and the hall trembles.",
     },
     {
-      t: 82,
+      t: 84,
       plate: "war",
       zoom: 1.12,
       panX: -0.02,
@@ -134,7 +137,7 @@ export const EPISODE = {
       text: "He returns to the Pandavas. Peace has failed. The road to Kurukshetra is open.",
     },
     {
-      t: 92,
+      t: 96,
       plate: "wide-gold",
       zoom: 1.08,
       panX: 0,
@@ -144,7 +147,7 @@ export const EPISODE = {
       text: "Thus the last word of peace was spoken — and the age turned toward battle.",
     },
     {
-      t: 100,
+      t: 108,
       plate: "wide-gold",
       zoom: 1.02,
       panX: 0,

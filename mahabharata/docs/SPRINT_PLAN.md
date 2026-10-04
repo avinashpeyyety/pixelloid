@@ -13,7 +13,7 @@ Priority order (from NEXT / WORKFLOW). **One episode per pass.** Do **not** star
 | # | Work | Owner | Exit criteria |
 |---|------|-------|---------------|
 | **A1** | **Ep 03 rewrite** to Ep 09/10 bar | Studio (+ writer as needed) | Script + GATE D-dialogue PASS; cast/plate bible; GATE A/B PASS; Imagine keys 3:2 ≥1536×1024; GATE C PASS (visual vs Ep 10 vow/arrows per template); Orion + named raga; GATE D install; registry/publish path ready. **No** 04–08 started this pass. |
-| **A2** | Continue **01–08 rewrite ladder** after 03 | Studio | Same bar as A1, **one ep per pass**. Ep 01–04 + **Ep 05 SHIPPED** 2026-10-03 (09/10 bar, Bhairav, Kokoro bm_george). **Next: Ep 06**. |
+| **A2** | Continue **01–08 rewrite ladder** after 03 | Studio | Same bar as A1, **one ep per pass**. Ep 01–05 + **Ep 06 SHIPPED** 2026-10-03 (09/10 bar, Bhairav, Kokoro bm_george). **Next: Ep 07**. |
 | **A3** | **3D pilot**: one beat Imagine key panel → Blender camera/set → `renders/` proxy; document path; **keep GATE C** | Studio | One beat documented; GATE C–passed panel mapped; Blender proxy in `episodes/<id>/renders/`; path noted (TOOLING / episode README). Hybrid player not required this sprint. |
 | **A4** | Tighten **Ep 10 Arjuna lock** (cream-white dhoti; no gold armor / peacock on arrows plate) | Studio | Curiosity polish — lock + affected plates re-GATE C; no drift vs Krishna/Bhishma bars. |
 | **A5** | ~~Ep 14 remains paused until 01–08 are one show with 09+~~ **Lifted 2026-09-29 by Avinash for Ep 14 only.** Ep 14 is an active ship ticket (Studio). Hold still applies to Ep 15+ until the ladder is done. | Studio | Ep 14 **SHIPPED** 2026-10-02 (GATE A/B/C/D PASS; Kokoro local; live on Pages). |
@@ -93,11 +93,11 @@ Cadence rule: Chief picks **≤1** in-flight ticket; prefer S; split M. Do not p
 |-------|---------|------|
 | 1 | Ep 14 *The Fall of Drona* | Re-voice with Grok TTS `orion`; keep beat timing aligned |
 | 2 | Ep 04 *The Akshayapatra* rewrite | Same |
-| 3 | Ep 05 *Yaksha Prashna* (and later George episodes) | Same |
+| 3 | Ep 05 *Yaksha Prashna*, Ep 06 *The Kirata* (and later George episodes) | Same |
 
 Until then, canonical narrator is **Kokoro `bm_george`** (`config/narrator.json`, speed 0.9 via `tools/render_local_voice.sh`). GATE D install (`tools/install_review.py`) **FAIL**s if `voice.voice_id` differs. Never spend paid xAI API credits without explicit approval.
 
 ## Weekly tally
 
 - Week of 2026-09-29 (Mon–Sun CT): shipped Ep 04, Ep 14 — **2** (below ≥3 target)
-- Week of 2026-10-03 (Mon–Sun CT): shipped Ep 05 (*Yaksha Prashna*) — **1** so far (target ≥3; stretch 4). Next ladder: Ep 06.
+- Week of 2026-10-03 (Mon–Sun CT): shipped Ep 05 (*Yaksha Prashna*), Ep 06 (*The Kirata*) — **2** so far (target ≥3; stretch 4). Next ladder: Ep 07.

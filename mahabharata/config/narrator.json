@@ -8,7 +8,12 @@
   "orion_remaster": {
     "status": "queued_blocked_on_credits",
     "voice_id": "orion",
-    "order": ["14-drona-fall", "04-akshayapatra", "05-yaksha-prashna"],
+    "order": [
+      "14-drona-fall",
+      "04-akshayapatra",
+      "05-yaksha-prashna",
+      "06-kirata"
+    ],
     "note": "Re-voice with Grok TTS orion when Avinash says credits available; keep timing aligned. Do not start until unblocked."
   }
 }

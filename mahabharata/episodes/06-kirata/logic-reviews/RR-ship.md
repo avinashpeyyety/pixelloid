@@ -19,7 +19,7 @@
 ## Publish
 
 - Message: `mahabharata Ep06: GATE D install PASS + ship The Kirata rewrite`
-- Commit: PENDING
+- Commit: 5188e8a
 - Live: https://avinashpeyyety.github.io/pixelloid/mahabharata/play.html?ep=06
 - Hub: https://avinashpeyyety.github.io/pixelloid/mahabharata/
 

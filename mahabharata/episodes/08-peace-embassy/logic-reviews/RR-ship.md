@@ -19,7 +19,7 @@
 ## Publish
 
 - Message: `mahabharata Ep08: GATE D install PASS + ship The Peace Embassy rewrite`
-- Commit: (filled after commit)
+- Commit: 49efc09
 - Live: https://avinashpeyyety.github.io/pixelloid/mahabharata/play.html?ep=08
 - Hub: https://avinashpeyyety.github.io/pixelloid/mahabharata/
 

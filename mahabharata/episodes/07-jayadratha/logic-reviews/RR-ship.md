@@ -19,7 +19,7 @@
 ## Publish
 
 - Message: `mahabharata Ep07: GATE D install PASS + ship Jayadratha rewrite`
-- Commit: PENDING
+- Commit: 9febdd0
 - Live: https://avinashpeyyety.github.io/pixelloid/mahabharata/play.html?ep=07
 - Hub: https://avinashpeyyety.github.io/pixelloid/mahabharata/
 

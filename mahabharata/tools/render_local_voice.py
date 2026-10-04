@@ -66,6 +66,14 @@ PRONOUNCE: dict[str, str] = {
     "Nakula": "Na-kula",
     "Sahadeva": "Saha-deva",
     "Dharma": "Dhar-ma",
+    # Ep06 The Kirata (Himalaya / Shiva gift)
+    "Arjuna": "Ar-joona",
+    "Himalaya": "Him-aa-laya",
+    "Mahadeva": "Maha-deva",
+    "kirata": "ki-rah-ta",
+    "Kirata": "Ki-rah-ta",
+    "Pashupatastra": "Pa-shu-pa-taastra",
+    "Shiva": "Shee-va",
 }
 
 

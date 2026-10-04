@@ -1,9 +1,12 @@
 /**
  * Episode 06 — The Kirata
  * Vana Parva · Arjuna’s penance · Shiva as the hunter · Pashupatastra
- * Rewrite 2026-09-17: Ep 09/10 bar; SuperGrok stills GATE C PASS.
- * Music: named Hindustani raga Bhairav under Orion (never default flute+tabla).
- * Cache ep06-supergrok-20260917 — plate cache bump; audio not re-rendered this pass.
+ * Rewrite: Ep 09/10 bar; SuperGrok stills GATE C PASS (2026-09-17).
+ *
+ * Audio: orion-00…08 re-rendered 2026-10-03 with free local Kokoro-82M bm_george
+ * (tools/render_local_voice.sh, speed 0.9); PRONOUNCE for Arjuna/Himalaya/Mahadeva/kirata/Pashupatastra/Shiva.
+ * Beat t retimed from ffprobe (12 s grid; clip ends ≥1 s before next beat).
+ * Music: named Hindustani raga Bhairav (never default flute+tabla).
  */
 export const EPISODE = {
   id: "06",
@@ -13,17 +16,17 @@ export const EPISODE = {
   style: "cinematic-plates",
   stillsDir: "episodes/06-kirata/stills/",
   voice: {
-    provider: "grok-tts",
-    voice_id: "orion",
-    cache: "ep06-supergrok-20260917",
-    note: "Grok TTS Orion — cache ep06-supergrok-20260917; audio not re-rendered this stills ship",
+    provider: "local-kokoro",
+    voice_id: "bm_george",
+    cache: "ep06-kokoro-20261003",
+    note: "Kathavachak — Kokoro-82M bm_george (free local, Apache-2.0, speed 0.9) via tools/render_local_voice.sh; no paid xAI API (SuperGrok-only rule). Files keep orion-NN.mp3 names/fingerprint (24 kHz / 128 kbps / mono / -16 LUFS).",
     base: "episodes/06-kirata/audio/",
   },
   music: {
     raga: "bhairav",
     note: "Bhairav mandra tanpura; sparse bansuri; no tabla. Himalayan penance / Mahadeva reveal. Duck under Orion. Not default flute+tabla.",
   },
-  totalSec: 102,
+  totalSec: 110,
   stills: {
     poster: "episodes/06-kirata/stills/poster.jpg",
   },
@@ -64,7 +67,7 @@ export const EPISODE = {
       text: "To win the weapons of heaven, Arjuna climbs alone into the high Himalaya.",
     },
     {
-      t: 10,
+      t: 12,
       plate: "penance",
       zoom: 1.14,
       panX: 0.02,
@@ -74,7 +77,7 @@ export const EPISODE = {
       text: "There he stands in fierce penance — still as stone, mind fixed on Mahadeva.",
     },
     {
-      t: 22,
+      t: 24,
       plate: "boar",
       zoom: 1.12,
       panX: -0.03,
@@ -84,7 +87,7 @@ export const EPISODE = {
       text: "A terrible boar charges through the pines. Two arrows leave two bows at once.",
     },
     {
-      t: 34,
+      t: 36,
       plate: "hunter",
       zoom: 1.12,
       panX: 0.04,
@@ -94,7 +97,7 @@ export const EPISODE = {
       text: "A mountain hunter claims the kill. Arjuna will not yield the honor of the shot.",
     },
     {
-      t: 44,
+      t: 48,
       plate: "duel",
       zoom: 1.18,
       panX: 0.02,
@@ -104,7 +107,7 @@ export const EPISODE = {
       text: "Bow meets bow. The kirata matches Arjuna blow for blow — and the forest shakes.",
     },
     {
-      t: 56,
+      t: 60,
       plate: "equal",
       zoom: 1.16,
       panX: 0,
@@ -114,7 +117,7 @@ export const EPISODE = {
       text: "Arjuna’s strength fails against an equal. He falls, astonished, at a hunter’s feet.",
     },
     {
-      t: 68,
+      t: 72,
       plate: "reveal",
       zoom: 1.2,
       panX: 0.03,
@@ -124,7 +127,7 @@ export const EPISODE = {
       text: "Then the kirata shines with a thousand suns. It is Shiva, the Lord, smiling.",
     },
     {
-      t: 80,
+      t: 84,
       plate: "gift",
       zoom: 1.14,
       panX: 0.02,
@@ -134,7 +137,7 @@ export const EPISODE = {
       text: "Pleased by courage and devotion, Mahadeva grants the Pashupatastra.",
     },
     {
-      t: 90,
+      t: 96,
       plate: "wide-gold",
       zoom: 1.08,
       panX: 0,
@@ -144,7 +147,7 @@ export const EPISODE = {
       text: "So the archer who saw only the eye is given the weapon that ends the war of ages.",
     },
     {
-      t: 100,
+      t: 108,
       plate: "wide-gold",
       zoom: 1.02,
       panX: 0,

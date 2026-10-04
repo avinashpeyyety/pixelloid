@@ -74,6 +74,10 @@ PRONOUNCE: dict[str, str] = {
     "Kirata": "Ki-rah-ta",
     "Pashupatastra": "Pa-shu-pa-taastra",
     "Shiva": "Shee-va",
+    # Ep07 Jayadratha (forest abduction)
+    "Jayadratha": "Ja-ya-dra-tha",
+    "Draupadi": "Drau-pa-dee",
+    "Sindhu": "Sin-dhoo",
 }
 
 

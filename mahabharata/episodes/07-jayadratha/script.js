@@ -1,9 +1,12 @@
 /**
  * Episode 07 — Jayadratha
  * Vana Parva · Draupadi’s abduction · the Pandavas’ pursuit · hard mercy
- * Rewrite 2026-09-17: Ep 09/10 bar; SuperGrok stills GATE C PASS.
- * Music: named Hindustani raga Bhairavi under Orion (never default flute+tabla).
- * Cache ep07-supergrok-20260917 — plate cache bump; audio not re-rendered this pass.
+ * Rewrite: Ep 09/10 bar; SuperGrok stills GATE C PASS (2026-09-17).
+ *
+ * Audio: orion-00…08 re-rendered 2026-10-04 with free local Kokoro-82M bm_george
+ * (tools/render_local_voice.sh, speed 0.9); PRONOUNCE for Jayadratha/Draupadi/Sindhu/Bhima/Yudhishthira/Arjuna/Pandavas.
+ * Beat t retimed from ffprobe (12 s grid; clip ends ≥1 s before next beat).
+ * Music: named Hindustani raga Bhairavi (never default flute+tabla).
  */
 export const EPISODE = {
   id: "07",
@@ -13,17 +16,17 @@ export const EPISODE = {
   style: "cinematic-plates",
   stillsDir: "episodes/07-jayadratha/stills/",
   voice: {
-    provider: "grok-tts",
-    voice_id: "orion",
-    cache: "ep07-supergrok-20260917",
-    note: "Grok TTS Orion — cache ep07-supergrok-20260917; audio not re-rendered this stills ship",
+    provider: "local-kokoro",
+    voice_id: "bm_george",
+    cache: "ep07-kokoro-20261004",
+    note: "Kathavachak — Kokoro-82M bm_george (free local, Apache-2.0, speed 0.9) via tools/render_local_voice.sh; no paid xAI API (SuperGrok-only rule). Files keep orion-NN.mp3 names/fingerprint (24 kHz / 128 kbps / mono / -16 LUFS).",
     base: "episodes/07-jayadratha/audio/",
   },
   music: {
     raga: "bhairavi",
     note: "Bhairavi mandra tanpura; sparse bansuri; no tabla. Draupadi dignity / forest ordeal / hard mercy. Duck under Orion. Not default flute+tabla.",
   },
-  totalSec: 100,
+  totalSec: 110,
   stills: {
     poster: "episodes/07-jayadratha/stills/poster.jpg",
   },
@@ -64,7 +67,7 @@ export const EPISODE = {
       text: "While the Pandavas hunt, Draupadi keeps the forest hermitage alone.",
     },
     {
-      t: 10,
+      t: 12,
       plate: "alone",
       zoom: 1.12,
       panX: 0.02,
@@ -74,7 +77,7 @@ export const EPISODE = {
       text: "Jayadratha, king of Sindhu, rides past and sees her — and desire turns to crime.",
     },
     {
-      t: 20,
+      t: 24,
       plate: "approach",
       zoom: 1.1,
       panX: -0.03,
@@ -84,7 +87,7 @@ export const EPISODE = {
       text: "He greets her with soft words. She answers with the dignity of a queen in exile.",
     },
     {
-      t: 32,
+      t: 36,
       plate: "seize",
       zoom: 1.16,
       panX: 0.03,
@@ -94,7 +97,7 @@ export const EPISODE = {
       text: "When soft words fail, his men seize her and drive the chariot away.",
     },
     {
-      t: 42,
+      t: 48,
       plate: "cry",
       zoom: 1.14,
       panX: 0,
@@ -104,7 +107,7 @@ export const EPISODE = {
       text: "Her cry reaches the forest. The brothers hear it and turn from the hunt.",
     },
     {
-      t: 52,
+      t: 60,
       plate: "chase",
       zoom: 1.18,
       panX: 0.04,
@@ -114,7 +117,7 @@ export const EPISODE = {
       text: "Arjuna and Bhima lead the chase — dust and arrows on the forest road.",
     },
     {
-      t: 64,
+      t: 72,
       plate: "catch",
       zoom: 1.16,
       panX: 0.02,
@@ -124,7 +127,7 @@ export const EPISODE = {
       text: "They overtake Jayadratha. Bhima would end him; Draupadi stands free.",
     },
     {
-      t: 76,
+      t: 84,
       plate: "mercy",
       zoom: 1.12,
       panX: -0.02,
@@ -134,7 +137,7 @@ export const EPISODE = {
       text: "Yudhishthira grants a hard mercy — Jayadratha lives, shamed, and rides home.",
     },
     {
-      t: 88,
+      t: 96,
       plate: "wide-gold",
       zoom: 1.08,
       panX: 0,
@@ -144,7 +147,7 @@ export const EPISODE = {
       text: "The forest is quiet again — but every insult of exile will be paid in war.",
     },
     {
-      t: 98,
+      t: 108,
       plate: "wide-gold",
       zoom: 1.02,
       panX: 0,

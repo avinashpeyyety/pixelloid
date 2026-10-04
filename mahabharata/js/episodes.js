@@ -93,7 +93,7 @@ export const EPISODES = [
     title: "The Peace Embassy",
     sanskrit: "शान्तिदूतः",
     chapter: "Udyoga Parva · Krishna at Hastinapura",
-    duration: "~102s",
+    duration: "~110s",
     status: "live",
     blurb:
       "Krishna asks for five villages. Duryodhana refuses. Peace fails — and Kurukshetra draws near.",

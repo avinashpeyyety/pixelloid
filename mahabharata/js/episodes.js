@@ -81,7 +81,7 @@ export const EPISODES = [
     title: "Jayadratha",
     sanskrit: "जयद्रथः",
     chapter: "Vana Parva · the forest abduction",
-    duration: "~100s",
+    duration: "~110s",
     status: "live",
     blurb:
       "While the brothers hunt, Jayadratha seizes Draupadi — and the Pandavas turn the chase into justice.",

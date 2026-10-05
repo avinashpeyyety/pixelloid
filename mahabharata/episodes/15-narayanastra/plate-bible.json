@@ -1,0 +1,689 @@
+{
+  "episode_id": "15",
+  "strict_hero_lock": "arjuna",
+  "title": "The Narayana Weapon",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Krishna face/body locked to Ep 09",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/15-narayanastra/stills/_locks/afternoon15-master.jpg",
+  "scene_master_prompt": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The Kurukshetra field on the afternoon of the fifteenth day, empty foreground of trampled golden dust and a few abandoned chariot wheels upright (no bodies), distant ranks and banners on the horizon under a hot copper-saffron-gold sky with high smoke haze. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for figures to be placed later. No people in the foreground. Not photoreal. No Drona. No flute. No gore. No English text.",
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/15-narayanastra/stills/_locks/afternoon15-master.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "episodes/14-drona-fall/stills/_locks/arjuna.jpg",
+    "episodes/14-drona-fall/stills/_locks/yudhishthira.jpg",
+    "episodes/14-drona-fall/stills/_locks/bhima.jpg",
+    "episodes/13-ghatotkacha/stills/_locks/duryodhana.jpg",
+    "episodes/15-narayanastra/stills/_locks/ashwatthama.jpg"
+  ],
+  "character_lock_refs": {
+    "krishna": "episodes/09-gita/stills/_locks/krishna.jpg",
+    "arjuna": "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "yudhishthira": "episodes/14-drona-fall/stills/_locks/yudhishthira.jpg",
+    "bhima": "episodes/14-drona-fall/stills/_locks/bhima.jpg",
+    "duryodhana": "episodes/13-ghatotkacha/stills/_locks/duryodhana.jpg",
+    "ashwatthama": "episodes/15-narayanastra/stills/_locks/ashwatthama.jpg"
+  },
+  "local_lock_plan": {
+    "copy_forward": {
+      "krishna": "episodes/09-gita/stills/_locks/krishna.jpg",
+      "arjuna": "episodes/14-drona-fall/stills/_locks/arjuna.jpg (Ep 09 face, cream-white dhoti, no chest armor)",
+      "yudhishthira": "episodes/14-drona-fall/stills/_locks/yudhishthira.jpg",
+      "bhima": "episodes/14-drona-fall/stills/_locks/bhima.jpg",
+      "duryodhana": "episodes/13-ghatotkacha/stills/_locks/duryodhana.jpg"
+    },
+    "new": {
+      "afternoon15-master": "scene master — generate first (grok.com beauty pass)",
+      "ashwatthama": "new face — first appearance on a plate in the series; generate solo 3:2 lock from the scene master"
+    },
+    "note": "stills_review.py (GATE C) requires episodes/15-narayanastra/stills/_locks/<id>.jpg for every face on a plate; copy-forward locks are byte copies of the series locks above, not new art."
+  },
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "ashwatthama": {
+      "face": "Young adult Brahmin-warrior, son of the guru: noble lean face, dark mustache, intense dark eyes wet with grief and blazing with wrath; a luminous jewel (mani) set in the middle of his forehead — his one unmistakable token; never a child, never white-bearded",
+      "hair": "Dark hair tied back under a slim bronze-gold warrior band (no royal crown, no peacock feather, no saffron topknot)",
+      "costume": "Deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti, great bow; lion's-tail banner on his chariot — no saffron sage robes, no flower garland"
+    },
+    "krishna": {
+      "face": "Youthful divine smile, dusty-blue skin, dark eyes, serene, U-tilak — same face as Ep 09 lock",
+      "hair": "Dark curly hair, gold crown with one peacock feather",
+      "costume": "Yellow pitambar, flower garlands, gold jewelry, charioteer reins — never a flute, never a bow"
+    },
+    "arjuna": {
+      "face": "Noble warrior prince, dark mustache, same face as Ep 09 lock (episodes/09-gita/stills/_locks/arjuna.jpg)",
+      "hair": "Gold crown over dark hair",
+      "costume": "Cream-white dhoti and cream angavastram, gold belt, quiver on back, Gandiva — no gold chest armor, no peacock feather, never flower garland (Ep 14 lock / A4 direction)"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets, bow of the king — no gold chest armor (Ep 14 canon), no Gandiva, no flower garland"
+    },
+    "bhima": {
+      "face": "Adult Pandava, broad noble face, full dark mustache, fierce dark eyes — never a child",
+      "hair": "Dark hair, gold warrior circlet (not Arjuna's crown, not peacock)",
+      "costume": "Deep gold and leaf-green engraved armor, great gold-decked mace — equal human scale, never saffron sage robes"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava king, proud upswept mustache, fierce gaze (Ep 13 lock)",
+      "hair": "Dark hair under a tall jeweled Kuru crown",
+      "costume": "Jewel-tone gold Kaurava armor with saffron-orange cape, mace — field king, not a sage (distinct from Bhima's circlet and leaf-green armor)"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore, no bodies"
+    }
+  },
+  "plates": [
+    {
+      "id": "wide",
+      "file": "plate-wide.jpg",
+      "beat_text": "Afternoon of the fifteenth day. Ashwatthama, Drona’s son, hears how his father was tricked — and grief turns to fire.",
+      "cast_present": [
+        "ashwatthama"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Copper-saffron-gold afternoon of the fifteenth day (Ep 10 field-master palette)",
+        "Ashwatthama (this episode's lock): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, dark mustache, dark hair under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread, great bow — never white-bearded, never saffron sage robes",
+        "Ashwatthama alone on his chariot terrace, grief hardening into wrath: eyes wet but blazing, jaw set, bow gripped",
+        "Lion's-tail banner above his chariot; Kurukshetra afternoon haze, distant ranks only",
+        "His father is NOT shown — no body, no head, no bier"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "white beard on Ashwatthama",
+        "child Ashwatthama"
+      ],
+      "props": [
+        "great bow",
+        "lion's-tail banner",
+        "chariot terrace"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium: Ashwatthama, the guru's son, a young adult Brahmin-warrior with a luminous jewel set in the middle of his forehead, dark mustache, dark hair under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, great bow gripped in one fist. He stands on his chariot terrace under a lion's-tail banner, grief hardening into wrath — eyes wet but blazing. Copper-saffron-gold afternoon haze over Kurukshetra, distant ranks only. His father is not shown; no body. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No Arjuna. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Narayanastra-mokshana upaparva) — Ashvatthama, learning from Kripa how his father laid down arms on hearing the lie, blazes with grief and wrath"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Narayanastra-moksha parva) — Ashvatthama hears of Drona's death and the half-truth; his grief turns to anger"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva (Narayanastra-mokshana), §193–194 — Aswatthaman, hearing of his sire's slaughter by deceit, is filled with grief and wrath"
+        }
+      ]
+    },
+    {
+      "id": "invoke",
+      "file": "plate-invoke.jpg",
+      "beat_text": "He swears vengeance and calls up the Narayana weapon — once Narayana’s gift to his father, now passed to the son.",
+      "cast_present": [
+        "ashwatthama"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Copper-saffron-gold afternoon of the fifteenth day (Ep 10 field-master palette)",
+        "Ashwatthama (this episode's lock): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, dark mustache, dark hair under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread, great bow — never white-bearded, never saffron sage robes",
+        "Ashwatthama raises his great bow toward the sky, calling up the Narayana weapon",
+        "The copper sky above him begins to bloom with countless points of golden fire, not yet falling",
+        "Lion's-tail banner; the jewel on his forehead glows"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "white beard on Ashwatthama",
+        "child Ashwatthama"
+      ],
+      "props": [
+        "great bow",
+        "lion's-tail banner",
+        "points of golden fire in the sky"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, same Ashwatthama as the lock: young adult Brahmin-warrior, luminous jewel glowing in the middle of his forehead, dark mustache, deep maroon and bronze-gold engraved armor, white sacred thread. He stands on his chariot and lifts his great bow toward the heavens, swearing vengeance as he calls up the Narayana weapon: above him the copper-gold sky begins to bloom with countless points of golden fire, not yet falling. Lion's-tail banner streaming. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Narayanastra-mokshana upaparva) — Ashvatthama vows to destroy the Pandava host and tells Duryodhana of the Narayana weapon, given by Narayana to Drona and by Drona to his son; he invokes it"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Narayanastra-moksha parva) — the origin of the Narayanastra (Narayana's boon to Drona) and Ashvatthama's invocation"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva (Narayanastra-mokshana), §195–200 — Aswatthaman's vow; Narayana's gift to Drona; 'Drona's son, aiming at the host of the Pandavas, invoked the weapon called Narayana' (§200)"
+        }
+      ]
+    },
+    {
+      "id": "storm",
+      "file": "plate-storm.jpg",
+      "beat_text": "Arrows, discs and maces of fire fill the sky. The harder anyone fights, the fiercer it burns — and Yudhishthira despairs.",
+      "cast_present": [
+        "yudhishthira"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Copper-saffron-gold afternoon of the fifteenth day (Ep 10 field-master palette)",
+        "Yudhishthira (Ep 14 lock): modest dark mustache, simple gold diadem, cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor, no heavy crown, no Gandiva, no peacock",
+        "Sky over the Pandava host densely filled with blazing arrows, spinning razor-edged discs and fiery maces falling like golden rain",
+        "Yudhishthira on his chariot looking up in dismay, one hand lowered — the king despairs",
+        "Distant ranks only, shown as banners and silhouettes; no bodies, no blood"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Ashwatthama",
+        "Krishna",
+        "Arjuna",
+        "Bhima",
+        "Duryodhana"
+      ],
+      "props": [
+        "blazing arrows",
+        "spinning fire-discs",
+        "fiery maces",
+        "king's chariot"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium: Yudhishthira the eldest Pandava king (Ep 14 lock: modest dark mustache, simple gold diadem, cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor, no Gandiva, no peacock) stands on his chariot looking up in dismay. Above him the whole copper sky is filled with blazing arrows, spinning razor-edged discs of light and fiery maces falling like a rain of golden sparks toward distant Pandava banners. Grave, despairing face. No bodies, no blood. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Narayanastra-mokshana upaparva) — thousands of fiery arrows, iron balls, discs and maces fill the sky; the weapon grows wherever the Pandavas resist; Yudhishthira despairs and bids the troops withdraw"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Narayanastra-moksha parva) — the blazing weapons of the Narayanastra and Yudhishthira's despair"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva (Narayanastra-mokshana), §200 — 'innumerable maces, and discs … where the great car-warriors of the Pandavas contended … that weapon became exceedingly powerful'; Yudhishthira's lament"
+        }
+      ]
+    },
+    {
+      "id": "counsel",
+      "file": "plate-counsel.jpg",
+      "beat_text": "Lay down your weapons! Step down from your chariots! This weapon spares whoever stands unarmed on the earth.",
+      "cast_present": [
+        "krishna",
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Copper-saffron-gold afternoon of the fifteenth day (Ep 10 field-master palette)",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Arjuna matching Ep 09 face lock: gold crown, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back — no gold chest armor, no peacock feather, no flower garland",
+        "Krishna standing at the front of the chariot, one arm raised commanding the host, reins in the other hand",
+        "Arjuna beside him on the chariot, Gandiva lowered, listening",
+        "Fiery sky of the Narayana weapon behind them"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Ashwatthama",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "second Krishna",
+        "second Arjuna",
+        "gold chest armor on Arjuna"
+      ],
+      "props": [
+        "chariot",
+        "reins",
+        "Gandiva lowered",
+        "fire-filled sky"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly two adult men on one gold chariot. Krishna the charioteer (Ep 09 lock: dusty-blue youthful divine adult, serene, yellow pitambar, gold crown with one peacock feather, flower garlands, reins in one hand) stands at the chariot's front with his other arm raised high, commanding the whole host to lay down weapons and step down. Arjuna beside him (Ep 09 face: gold crown, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back; no gold chest armor; Gandiva lowered, not drawn) listens. Behind them the copper sky glitters with falling golden fire. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Narayanastra-mokshana upaparva) — Vasudeva stops the flight and tells all to throw down their weapons and alight from their vehicles: the weapon will not slay those who stand unarmed on the ground"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Narayanastra-moksha parva) — Shri Krishna's instruction to lay down arms and descend from chariots, elephants and horses"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva (Narayanastra-mokshana), §200 — 'Speedily lay down your weapons, all of you, and alight from your vehicles … If you stand weaponless on the earth, this weapon will not slay you'"
+        }
+      ]
+    },
+    {
+      "id": "surrender",
+      "file": "plate-surrender.jpg",
+      "beat_text": "Yudhishthira sets his bow on the earth. Arjuna vows that Gandiva will never be raised against this weapon.",
+      "cast_present": [
+        "yudhishthira",
+        "arjuna"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Copper-saffron-gold afternoon of the fifteenth day (Ep 10 field-master palette)",
+        "Yudhishthira (Ep 14 lock): modest dark mustache, simple gold diadem, cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor, no heavy crown, no Gandiva, no peacock",
+        "Arjuna matching Ep 09 face lock: gold crown, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back — no gold chest armor, no peacock feather, no flower garland",
+        "Yudhishthira, stepped down to the earth beside his chariot, bending to lay his bow on the dust",
+        "Arjuna on foot beside him holding Gandiva lowered, its tip resting on the earth, hand on heart in a vow",
+        "Golden fire passing harmlessly overhead"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Ashwatthama",
+        "Krishna",
+        "Bhima",
+        "Duryodhana",
+        "second Arjuna",
+        "gold chest armor on Arjuna"
+      ],
+      "props": [
+        "bow laid on the earth",
+        "Gandiva lowered to the earth",
+        "empty chariot"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly two adult men on foot. Yudhishthira the eldest king (Ep 14 lock: modest dark mustache, simple gold diadem, cream-white royal dhoti, gold sash, no gold chest armor) has stepped down from his chariot and bends to lay his bow on the dust. Arjuna beside him (Ep 09 face: gold crown, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back; no gold chest armor, no peacock) holds Gandiva lowered with its tip resting on the earth and his other hand on his heart in a vow. Golden fire streams harmlessly overhead. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Narayanastra-mokshana upaparva) — the Pandava warriors cast down their weapons; Arjuna answers Bhima that his vow forbids using Gandiva against the Narayana weapon"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Narayanastra-moksha parva) — Pandava host lays down arms; Arjuna's vow not to raise Gandiva against the Narayanastra"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva (Narayanastra-mokshana), §200 — warriors 'threw their weapons'; Arjuna: 'my Gandiva shall not be used against the Narayana weapon'"
+        }
+      ]
+    },
+    {
+      "id": "bhima",
+      "file": "plate-bhima.jpg",
+      "beat_text": "Only Bhima refuses. “I will answer it with my mace!” He charges — and all the fire gathers around him.",
+      "cast_present": [
+        "bhima"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Copper-saffron-gold afternoon of the fifteenth day (Ep 10 field-master palette)",
+        "Bhima (Ep 14 lock): broad adult, full dark mustache, gold warrior circlet, deep gold and leaf-green engraved armor — never a child",
+        "Bhima alone on his chariot, roaring defiance, great gold-decked mace raised high",
+        "All the golden fire of the weapon spiralling down and gathering around him alone, a ring of flame around his chariot",
+        "Bhima stays whole and heroic — no burns, no wounds"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Ashwatthama",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Duryodhana"
+      ],
+      "props": [
+        "great gold-decked mace",
+        "chariot",
+        "ring of golden fire"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium: Bhima the adult Pandava (Ep 14 lock: broad noble face, full dark mustache, gold warrior circlet, deep gold and leaf-green engraved armor) charges alone on his chariot, roaring defiance, his great gold-decked mace raised high in both hands. The weapon's golden fire spirals down out of the copper sky and gathers around him alone in a ring of flame. Bhima is whole and heroic — no burns, no wounds. Distant unarmed ranks only. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Narayanastra-mokshana upaparva) — Bhima refuses to lay down arms, vows to oppose the weapon with his gold-decked mace and rushes at Ashvatthama; the weapon's energy gathers upon him alone"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Narayanastra-moksha parva) — Bhimasena alone resists; the Narayanastra's fire envelops him"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva (Narayanastra-mokshana), §200 — 'None should lay down his weapons here … With this heavy mace of mine … I shall career in this battle'; 'that weapon … fell upon the head of Bhima'"
+        }
+      ]
+    },
+    {
+      "id": "pull",
+      "file": "plate-pull.jpg",
+      "beat_text": "Unarmed, Krishna and Arjuna run into the flames and pull Bhima down from his chariot, taking the mace from his hands.",
+      "cast_present": [
+        "krishna",
+        "arjuna",
+        "bhima"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Copper-saffron-gold afternoon of the fifteenth day (Ep 10 field-master palette)",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Arjuna matching Ep 09 face lock: gold crown, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back — no gold chest armor, no peacock feather, no flower garland",
+        "Bhima (Ep 14 lock): broad adult, full dark mustache, gold warrior circlet, deep gold and leaf-green engraved armor — never a child",
+        "Krishna and Arjuna, unarmed and on foot, inside the ring of golden fire, pulling Bhima down from his chariot by the arms",
+        "Bhima's mace being taken from his hands by Krishna",
+        "The fire does not burn Krishna and Arjuna"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Ashwatthama",
+        "Yudhishthira",
+        "Duryodhana",
+        "second Krishna",
+        "second Arjuna",
+        "gold chest armor on Arjuna"
+      ],
+      "props": [
+        "chariot",
+        "mace taken from Bhima",
+        "ring of golden fire"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly three adult men inside a ring of golden fire that does not burn them. Krishna the charioteer (Ep 09 lock: dusty-blue youthful divine adult, yellow pitambar, gold crown with one peacock feather, flower garlands; reins left on his own chariot) grips Bhima's arm and takes the gold-decked mace from his hands. Arjuna (Ep 09 face: gold crown, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back; no bow in hand) pulls Bhima down from his chariot by the other arm. Bhima (Ep 14 lock: broad adult, full dark mustache, gold circlet, deep gold and leaf-green armor) resists, roaring, one foot still on the chariot step. No wounds, no gore. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No flute. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Narayanastra-mokshana upaparva) — Krishna and Arjuna alight, enter the weapon's fire unharmed because unarmed, forcibly drag Bhima and his weapons down from his chariot"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Narayanastra-moksha parva) — Shri Krishna and Arjuna pull Bhimasena from his chariot and make him lay aside his weapons"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva (Narayanastra-mokshana), §201 — 'Nara and Narayana … began forcibly to drag Bhima and all his weapons … Krishna brought Bhima down from his car'"
+        }
+      ]
+    },
+    {
+      "id": "calm",
+      "file": "plate-calm.jpg",
+      "beat_text": "Disarmed and on the earth, Bhima is spared. The Narayana weapon fades, the sky clears, and a cool wind crosses the field.",
+      "cast_present": [
+        "krishna",
+        "bhima"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Copper-saffron-gold afternoon of the fifteenth day (Ep 10 field-master palette)",
+        "Krishna matching Ep 09 look lock: dusty-blue skin, youthful divine adult, gold crown with one peacock feather, yellow pitambar, flower garlands, charioteer reins",
+        "Bhima (Ep 14 lock): broad adult, full dark mustache, gold warrior circlet, deep gold and leaf-green engraved armor — never a child",
+        "Bhima standing on the earth, disarmed, his mace lying on the ground, chest heaving, anger cooling",
+        "Krishna beside him with a calming hand on his shoulder",
+        "The sky clearing from copper fire to soft gold, a cool wind lifting banners and cloth; birds returning"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Ashwatthama",
+        "Arjuna",
+        "Yudhishthira",
+        "Duryodhana",
+        "second Krishna"
+      ],
+      "props": [
+        "mace lying on the ground",
+        "clearing sky",
+        "wind-lifted banners"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly two adult men standing on the earth. Bhima (Ep 14 lock: broad adult, full dark mustache, gold circlet, deep gold and leaf-green armor) stands disarmed, his gold-decked mace lying on the ground at his feet, his anger cooling, shining like the morning sun. Krishna the charioteer beside him (Ep 09 lock: dusty-blue youthful divine adult, serene smile, yellow pitambar, gold crown with one peacock feather, flower garlands, reins looped at his waist) rests a calming hand on his shoulder. Above, the copper fire fades into a clear soft-gold sky; a cool wind lifts their cloth and distant banners; birds return. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Narayanastra-mokshana upaparva) — once Bhima is brought down and disarmed the weapon is pacified; the quarters clear and gentle winds blow"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Narayanastra-moksha parva) — the Narayanastra is stilled; the sky and directions clear"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva (Narayanastra-mokshana), §201 — 'all the points of the compass … became clear. Sweet breezes began to blow … Bhima … shone resplendent like the morning sun'"
+        }
+      ]
+    },
+    {
+      "id": "once",
+      "file": "plate-once.jpg",
+      "beat_text": "Duryodhana begs for it again. “It cannot be called twice,” Ashwatthama answers. “Called back, it would slay its caller.”",
+      "cast_present": [
+        "ashwatthama",
+        "duryodhana"
+      ],
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Copper-saffron-gold afternoon of the fifteenth day (Ep 10 field-master palette)",
+        "Ashwatthama (this episode's lock): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, dark mustache, dark hair under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread, great bow — never white-bearded, never saffron sage robes",
+        "Duryodhana (Ep 13 lock): proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor with saffron-orange cape — not Bhima",
+        "Duryodhana on foot beside Ashwatthama's chariot, hand stretched out, urging",
+        "Ashwatthama turning away, head lowered, bow resting, sighing — refusing",
+        "Clear late-afternoon sky; distant re-forming Pandava banners"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "white beard on Ashwatthama",
+        "child Ashwatthama"
+      ],
+      "props": [
+        "Ashwatthama's chariot",
+        "lion's-tail banner",
+        "great bow at rest"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly two adult men. Duryodhana the Kaurava king (Ep 13 lock: proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor with saffron-orange cape, mace at his side) stands beside a chariot with his hand stretched out, urging. Ashwatthama on the chariot (this episode's lock: young adult Brahmin-warrior, luminous jewel in his forehead, dark mustache, deep maroon and bronze-gold armor, white sacred thread) turns away, head lowered, his great bow at rest, sighing as he refuses. Lion's-tail banner hangs still. Clear late-afternoon gold sky, distant Pandava banners re-forming. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Drona Parva (Narayanastra-mokshana upaparva) — Duryodhana urges Ashvatthama to use the weapon again; he replies it cannot be brought back or used twice, for it would slay the one who recalls it"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Drona Parva (Narayanastra-moksha parva) — Ashvatthama: the Narayanastra cannot be used a second time"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Drona Parva (Narayanastra-mokshana), §201 — 'That weapon, O king, cannot be brought back. It cannot be used twice. If brought back, it will without doubt, slay the person calling it back'"
+        }
+      ]
+    }
+  ],
+  "poster": {
+    "file": "poster.jpg",
+    "cast_present": [
+      "krishna",
+      "arjuna"
+    ],
+    "prompt": "Premium painted comic Amar Chitra poster, in the style and palette of the attached Ep 10 field-master. Heroic medium: Krishna the charioteer (Ep 09 lock: dusty-blue youthful divine adult, yellow pitambar, gold crown with one peacock feather, flower garlands, reins in hand) and Arjuna (Ep 09 face: gold crown, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back, Gandiva lowered to the earth) stand on foot, calm and unarmed, beneath a vast copper sky raining golden arrows, discs and maces of the Narayana weapon that part around them. Strong central composition with clear headroom for a title. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Drona. No flute. No gore. No English text.",
+    "note": "Poster = Ep 15 thesis (surrender defeats the weapon). If a separate poster pass is cut, copy the GATE C-passed plate-counsel.jpg."
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Drona Parva · fifteenth day (afternoon) · Narayanastra-mokshana upaparva",
+    "bori": "BORI CE Drona Parva (Narayanastra-mokshana upaparva), Debroy translation vol. 6–7: Ashvatthama learns from Kripa how Drona laid down arms on the lie; vows vengeance; tells Duryodhana of the Narayana weapon (Narayana's boon to Drona, passed to his son); invokes it — arrows, iron balls, discs and maces of fire; it grows wherever it is resisted; Yudhishthira despairs; Krishna orders all to drop weapons and alight; Arjuna refuses to use Gandiva against it; Bhima alone resists with his mace and the weapon gathers on him; Krishna and Arjuna drag him down and disarm him; the weapon is pacified; Duryodhana asks again; Ashvatthama says it cannot be used twice.",
+    "gita_press": "Gita Press Gorakhpur Mahabharata (Hindi, Drona Parva, Narayanastra-moksha parva): same sequence — Ashvatthama's grief and vow, the Narayanastra, Shri Krishna's counsel to lay down arms and descend from vehicles, Bhimasena's resistance and forcible disarming, the weapon stilled, and its single use.",
+    "ganguli": "K.M. Ganguli, Drona Parva §193–201 (vulgate; Narayanastra-mokshana): Aswatthaman hears of his sire's death (§193); his vow and the weapon's origin (§195–196); Arjuna/Satyaki/Dhrishtadyumna quarrel (§197–199, omitted); invocation, Yudhishthira's lament, Vasudeva's counsel, Bhima's refusal, Arjuna's Gandiva vow (§200); Varuna weapon over Bhima, Krishna and Arjuna drag him down, pacification, 'cannot be used twice' (§201).",
+    "divergence": "Chapter numbers differ between BORI CE and the vulgate (Ganguli/Gita Press). Ganguli's vulgate has Arjuna also cover Bhima with the Varuna weapon before he and Krishna drag Bhima down; this detail is not depended on here (not narrated, not drawn). The Pandava quarrel (§197–199), the later Agneya weapon and Vyasa's Nara-Narayana teaching (§201–202) are omitted for length.",
+    "chosen": "Gita Press + BORI/Debroy overlap: the Narayanastra, Krishna's counsel to disarm and dismount, Bhima's resistance and forcible disarming by Krishna and Arjuna, the pacification, and the weapon's single use. Ganguli for English wording.",
+    "notes": "Not TV. Comic-mythology only; no gore — the weapon is golden fire in the sky; no bodies are shown or narrated. Drona is narrated only (never drawn). Ashwatthama = new 3:2 lock with the forehead jewel as his token. Krishna = Ep 09 look lock; Arjuna = Ep 09 face, cream-white dhoti, no gold armor/peacock (Ep 14 lock / A4). Yudhishthira and Bhima = Ep 14 locks; Duryodhana = Ep 13 lock. Never attach Ep01 plate-wide-gold or any finished plate as an Imagine ref. Bhima/Dushasana (Karna Parva) is not in this episode."
+  },
+  "stills_status": "not generated — PROMPTS.md prepared at stills/_inbox/consumer-imagine/PROMPTS.md (SuperGrok consumer path)"
+}

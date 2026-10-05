@@ -1,0 +1,43 @@
+{
+  "episode_id": "16",
+  "notes": "Karna Parva, night of the fifteenth day through dawn of the seventeenth — Karna takes command; Shalya becomes his charioteer. No gore, no bodies. Drona, Shiva, Brahma, Krishna, Arjuna and Yudhishthira are narrated only, never drawn. Karna = Ep 13 lock (adult king of Anga, jeweled Anga diadem with red gem, deep gold-crimson armor, crimson cape, Vijaya bow; kavacha already given away — no divine armor). Shalya is a NEW face (first on a plate in the series): mature king of Madra, dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold armor — a warrior-king, never a sage, never fully white-bearded. Duryodhana = Ep 13 lock (tall jeweled Kuru crown, saffron-orange cape — distinct from Karna's crimson). Ashwatthama = Ep 15 lock (forehead jewel). Karna's chariot: white horses the hue of cranes, white standard with elephant's-rope device. Two scene masters: camp16 (night camp) and dawn17 (sunrise field).",
+  "locks": {
+    "reuse": {
+      "karna": "episodes/13-ghatotkacha/stills/_locks/karna.jpg",
+      "duryodhana": "episodes/13-ghatotkacha/stills/_locks/duryodhana.jpg",
+      "ashwatthama": "episodes/15-narayanastra/stills/_locks/ashwatthama.jpg"
+    },
+    "new": {
+      "camp16-master": "episodes/16-karna-commander/stills/_locks/camp16-master.jpg",
+      "dawn17-master": "episodes/16-karna-commander/stills/_locks/dawn17-master.jpg",
+      "shalya": "episodes/16-karna-commander/stills/_locks/shalya.jpg"
+    }
+  },
+  "cast": {
+    "karna": {
+      "face": "Adult king of Anga, proud dark mustache, sun-warmed skin, resolute dark eyes — same face as the Ep 13 lock (episodes/13-ghatotkacha/stills/_locks/karna.jpg); distinct from Arjuna",
+      "hair": "Long dark hair under a tall jeweled gold Anga diadem with a red gem (not Arjuna's heavy crown, never a peacock feather)",
+      "costume": "Deep gold and crimson engraved armor, crimson cape, gold armlets, Vijaya bow (gold-backed great bow) — no divine kavacha / no glowing natural armor, never flower garland, never Krishna's pitambar. His chariot: white horses the hue of cranes, white standard bearing the elephant's-rope (hasti-kakshya) device"
+    },
+    "shalya": {
+      "face": "Mature king of Madra, maternal uncle of the Pandava twins: strong weathered face, thick dark mustache and short dark beard streaked with grey, proud heavy brows, fierce dark eyes — a seasoned warrior-king, never a sage, never fully white-bearded, never frail",
+      "hair": "Dark hair streaked with grey under a tall silver-and-gold Madra crown (no peacock feather, no saffron topknot)",
+      "costume": "Deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram, gold armlets; as charioteer he holds the golden reins and a charioteer's goad; his own banner is a golden ploughshare — never saffron sage robes, never flower garland"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava king, proud upswept mustache, fierce gaze (Ep 13 lock)",
+      "hair": "Dark hair under a tall jeweled Kuru crown",
+      "costume": "Jewel-tone gold Kaurava armor with saffron-orange cape, gold-decked mace — field king, not a sage (distinct from Karna's crimson armor and Anga diadem)"
+    },
+    "ashwatthama": {
+      "face": "Young adult Brahmin-warrior, the guru's son: noble lean face, dark mustache, intense dark eyes; a luminous jewel (mani) set in the middle of his forehead — his one unmistakable token (Ep 15 lock); never a child, never white-bearded",
+      "hair": "Dark hair tied back under a slim bronze-gold warrior band (no royal crown, no peacock feather, no saffron topknot)",
+      "costume": "Deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti, great bow — no saffron sage robes, no flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore, no bodies"
+    }
+  }
+}

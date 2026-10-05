@@ -36,10 +36,12 @@
 ## Publish
 
 - Message: `mahabharata Ep15: GATE D install PASS + ship The Narayana Weapon`
-- Commit: (filled after commit)
+- Commit: 6c413ed (`6c413edaba62f1c9a9ecd75613ccf8e71e69a3fa`) — fast-forward of `studio/ep15-narayanastra` into `main`; author `Chief <Avinashpeyyety@icloud.com>`
 - Pages: `.github/workflows/deploy-pages.yml` on push to `main`
 - Live: https://avinashpeyyety.github.io/pixelloid/mahabharata/play.html?ep=15
 - Hub: https://avinashpeyyety.github.io/pixelloid/mahabharata/
+- Pages run: Deploy to GitHub Pages #37351174707 — **success** (2026-10-05 12:48–12:49 CT)
+- Live verify (12:50 CT): `play.html?ep=15` 200; deployed `js/episodes.js` has Ep 15 (`play.html?ep=15`) 200; `js/main.js` has `EP_LOADERS["15"]`; `stills/plate-invoke.jpg` 200; `audio/orion-00.mp3` 200; `thumb@2x.webp` 200
 
 ## Notes
 

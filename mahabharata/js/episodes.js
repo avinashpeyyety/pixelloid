@@ -171,4 +171,16 @@ export const EPISODES = [
       "Drona cannot be beaten in arms. An elephant dies, a truthful king speaks half a truth — and the guru lays down his bow.",
     play: "play.html?ep=14",
   },
+  {
+    id: "15",
+    slug: "narayanastra",
+    title: "The Narayana Weapon",
+    sanskrit: "नारायणास्त्रम्",
+    chapter: "Drona Parva · fifteenth day, afternoon",
+    duration: "~112s",
+    status: "live",
+    blurb:
+      "Ashwatthama looses the Narayana weapon. Krishna’s counsel: lay down your arms — and the fire spares whoever stands unarmed.",
+    play: "play.html?ep=15",
+  },
 ];

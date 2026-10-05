@@ -100,4 +100,4 @@ Until then, canonical narrator is **Kokoro `bm_george`** (`config/narrator.json`
 ## Weekly tally
 
 - ISO week 2026-09-28 → 2026-10-04 (Mon–Sun CT): shipped Ep 04 (*The Akshayapatra*, 10-02), Ep 14 (*The Fall of Drona*, 10-02), Ep 05 (*Yaksha Prashna*, 10-03), Ep 06 (*The Kirata*, 10-03), Ep 07 (*Jayadratha*, 10-04), Ep 08 (*The Peace Embassy*, 10-04) — **6** (beats ≥3 target and stretch 4). 01–08 ladder complete. *(Corrected 2026-10-04: earlier lines split this one ISO week into "09-29" and "10-03" buckets.)*
-- ISO week 2026-10-05 → 2026-10-11: **0** so far (target ≥3; stretch 4). Next: Ep 15 (Track B).
+- ISO week 2026-10-05 → 2026-10-11: shipped Ep 15 (*The Narayana Weapon*, 10-05) — **1** so far (target ≥3; stretch 4). Next: Ep 16 (Karna as commander, Karna Parva; Track B).

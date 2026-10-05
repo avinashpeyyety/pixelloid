@@ -4,13 +4,14 @@
 - [ ] **Active sprint board:** [`docs/SPRINT_PLAN.md`](docs/SPRINT_PLAN.md) — Track A (improvements) + Track B (Ep 15+ factory). Studio lead; Chief one ticket/cycle.
 - [x] Ep 11: player uses Blender `renders/beat-*.png` (Ken Burns on 3D proxies; Orion/Megh kept)
 - [x] Pilot one beat in **3D**: Ep09 A3 counsel → Blender → `episodes/09-gita/renders/beat-35-counsel.png` (docs in `episodes/09-gita/blender/`; player still on stills/) — SPRINT_PLAN Track A3
-- [ ] **01–08 rewrite ladder DONE (2026-10-04).** Next: start **Ep 15** via the Track B pipeline ([`docs/PIPELINE_CHECKLIST.md`](docs/PIPELINE_CHECKLIST.md)): script → GATE D dialogue → cast/bible → GATE A/B → SuperGrok consumer Imagine keys → GATE C → Kokoro bm_george + named raga → GATE D install → ship. One episode at a time. — SPRINT_PLAN Track B
+- [ ] **Track B: Ep 16 (Karna as commander, Karna Parva)** via [`docs/PIPELINE_CHECKLIST.md`](docs/PIPELINE_CHECKLIST.md): script → GATE D dialogue → cast/bible → GATE A/B → SuperGrok consumer Imagine keys → GATE C → Kokoro bm_george + named raga → GATE D install → ship. One episode at a time. (01–08 ladder done 2026-10-04; Ep 15 shipped 2026-10-05.) — SPRINT_PLAN Track B
 - [ ] **Queued: Orion remaster (when xAI credits are available)** — re-voice Ep14, then Ep04 rewrite, then Ep05 (and later George episodes) with Grok TTS `orion`, keeping timing aligned. **Blocked on credits**; do not start until Avinash says credits available. Canonical narrator until then remains Kokoro `bm_george` (`config/narrator.json`; GATE D install enforces). — SPRINT_PLAN
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate) — SPRINT_PLAN Track A4
 
 ## Done
+- [x] **Ep 15 *The Narayana Weapon*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Shree; ship 2026-10-05, 6c413ed)
 - [x] **Ep 04 *The Akshayapatra* rewrite** (09/10 bar, Yaman, Kokoro local orion-*, GATE D install + ship 2026-10-02)
 - [x] **Ep 05 *Yaksha Prashna* rewrite** (09/10 bar, Bhairav, Kokoro local bm_george orion-00…08, GATE D install + ship 2026-10-03)
 - [x] **Ep 06 *The Kirata* rewrite** (09/10 bar, Bhairav, Kokoro local bm_george orion-00…08, GATE D install + ship 2026-10-03)

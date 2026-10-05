@@ -86,6 +86,9 @@ PRONOUNCE: dict[str, str] = {
     "Kurus": "Koo-roos",
     "sabha": "sa-bhaa",
     "dharma": "dhar-ma",
+    # Ep15 The Narayana Weapon (Drona Parva, fifteenth-day afternoon)
+    "Narayana": "Naa-raa-yana",
+    "Gandiva": "Gaan-deeva",
 }
 
 

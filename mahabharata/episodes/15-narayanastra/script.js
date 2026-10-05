@@ -9,6 +9,10 @@
  * Picks up Ep 14's closing line ("Ashwatthama's wrath is coming"); Karna Parva (Karna as commander) is Ep 16.
  * Sources: BORI CE/Debroy + Gita Press Gorakhpur + K.M. Ganguli (Drona Parva §193–201). See plate-bible source_block.
  * Family-friendly: no gore, no bodies; the weapon is shown as golden fire in the sky.
+ *
+ * Audio: orion-00…08 rendered 2026-10-05 with free local Kokoro-82M bm_george (tools/render_local_voice.sh,
+ * speed 0.9); PRONOUNCE adds Narayana/Gandiva. Longest clip 9.50 s — all fit the 12 s grid (≥1 s gap), no retime.
+ * Music: Raga Shree preset (js/main.js RAGA_PRESETS.shree) — never default flute+tabla.
  */
 export const EPISODE = {
   id: "15",
@@ -20,13 +24,13 @@ export const EPISODE = {
   voice: {
     provider: "local-kokoro",
     voice_id: "bm_george",
-    cache: "ep15-local-pending",
-    note: "Kathavachak — Kokoro-82M bm_george (free local, Apache-2.0) via tools/render_local_voice.sh, speed 0.9 (config/narrator.json). Not rendered yet — TTS after GATE C stills. No Orion / api.x.ai. Files keep orion-NN.mp3 names.",
+    cache: "ep15-kokoro-20261005",
+    note: "Kathavachak — Kokoro-82M bm_george (free local, Apache-2.0, speed 0.9) via tools/render_local_voice.sh; no paid xAI API (SuperGrok-only rule). Files keep orion-NN.mp3 names/fingerprint (24 kHz / 128 kbps / mono / -16 LUFS).",
     base: "episodes/15-narayanastra/audio/",
   },
   music: {
     raga: "shree",
-    note: "Raga Shree (Purvi thaat) — grave sunset raga of awe and surrender: komal Re (with andolan), tivra Ma, komal Dha; Ga and Dha light. Tanpura + sparse bansuri, no tabla. Duck under narration. NOTE: js/main.js RAGA_PRESETS has no `shree` key yet — add one before GATE D install or the player falls back to the grandfathered default preset.",
+    note: "Raga Shree (Purvi thaat) — grave sunset raga of awe and surrender: komal Re (with andolan), tivra Ma, komal Dha; Ga and Dha light. Tanpura + sparse bansuri, no tabla. Duck under narration. Player preset: js/main.js RAGA_PRESETS.shree (A2 mandra, andolan on komal Re, no tabla).",
   },
   totalSec: 112,
   stills: {

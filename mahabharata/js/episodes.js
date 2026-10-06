@@ -57,7 +57,7 @@ export const EPISODES = [
     title: "Yaksha Prashna",
     sanskrit: "यक्षप्रश्नः",
     chapter: "Vana Parva · the lake of questions",
-    duration: "~110s",
+    duration: "~102s",
     status: "live",
     blurb:
       "Thirst leads to a silent lake. Brothers fall; Yudhishthira answers the yaksha — and dharma restores them.",
@@ -69,7 +69,7 @@ export const EPISODES = [
     title: "The Kirata",
     sanskrit: "किरातार्जुनम्",
     chapter: "Vana Parva · Arjuna’s penance",
-    duration: "~110s",
+    duration: "~102s",
     status: "live",
     blurb:
       "In the Himalaya Arjuna meets a mountain hunter — and wins the Pashupatastra from Shiva himself.",
@@ -81,7 +81,7 @@ export const EPISODES = [
     title: "Jayadratha",
     sanskrit: "जयद्रथः",
     chapter: "Vana Parva · the forest abduction",
-    duration: "~110s",
+    duration: "~100s",
     status: "live",
     blurb:
       "While the brothers hunt, Jayadratha seizes Draupadi — and the Pandavas turn the chase into justice.",
@@ -93,7 +93,7 @@ export const EPISODES = [
     title: "The Peace Embassy",
     sanskrit: "शान्तिदूतः",
     chapter: "Udyoga Parva · Krishna at Hastinapura",
-    duration: "~110s",
+    duration: "~102s",
     status: "live",
     blurb:
       "Krishna asks for five villages. Duryodhana refuses. Peace fails — and Kurukshetra draws near.",

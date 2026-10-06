@@ -1,12 +1,10 @@
 /**
  * Episode 08 — The Peace Embassy
  * Udyoga Parva · Krishna’s embassy to Hastinapura · five villages · refusal · form
- * Rewrite: Ep 09/10 bar; SuperGrok stills GATE C PASS (2026-09-18).
- *
- * Audio: orion-00…08 re-rendered 2026-10-04 with free local Kokoro-82M bm_george
- * (tools/render_local_voice.sh, speed 0.9); PRONOUNCE for Hastinapura/Dhritarashtra/Duryodhana/Pandu/Kurus/sabha/dharma.
- * Beat t retimed from ffprobe (12 s grid; clip ends ≥1 s before next beat).
- * Music: named Hindustani raga Yaman (never default flute+tabla).
+ * Rewrite 2026-09-18: Ep 09/10 bar; SuperGrok stills GATE C PASS.
+ * Music: named Hindustani raga Yaman under Orion (never default flute+tabla).
+ * Narration: ORIGINAL Grok TTS Orion clips (orion-*.mp3), restored 2026-10-05 after the 2026-10 Kokoro re-voice
+ * replaced them by mistake. Never re-synthesize this episode's narration — any re-render reuses these files.
  */
 export const EPISODE = {
   id: "08",
@@ -16,17 +14,17 @@ export const EPISODE = {
   style: "cinematic-plates",
   stillsDir: "episodes/08-peace-embassy/stills/",
   voice: {
-    provider: "local-kokoro",
-    voice_id: "bm_george",
-    cache: "ep08-kokoro-20261004",
-    note: "Kathavachak — Kokoro-82M bm_george (free local, Apache-2.0, speed 0.9) via tools/render_local_voice.sh; no paid xAI API (SuperGrok-only rule). Files keep orion-NN.mp3 names/fingerprint (24 kHz / 128 kbps / mono / -16 LUFS).",
+    provider: "grok-tts",
+    voice_id: "orion",
+    cache: "ep08-orion-restore-20261005",
+    note: "Grok TTS Orion (original grok-tts clips, restored 2026-10-05 from git 9bc0435^ — do not re-synthesize; reuse these files on any re-render)",
     base: "episodes/08-peace-embassy/audio/",
   },
   music: {
     raga: "yaman",
     note: "Yaman mandra tanpura; sparse bansuri; no tabla. Evening peace embassy / sabha resolve. Duck under Orion. Not default flute+tabla.",
   },
-  totalSec: 110,
+  totalSec: 102,
   stills: {
     poster: "episodes/08-peace-embassy/stills/poster.jpg",
   },
@@ -67,7 +65,7 @@ export const EPISODE = {
       text: "The years of exile end. Armies gather — and one last chance for peace remains.",
     },
     {
-      t: 12,
+      t: 10,
       plate: "mission",
       zoom: 1.12,
       panX: 0.02,
@@ -77,7 +75,7 @@ export const EPISODE = {
       text: "Krishna takes the Pandavas’ plea to Hastinapura: five villages, and no war.",
     },
     {
-      t: 24,
+      t: 22,
       plate: "journey",
       zoom: 1.1,
       panX: -0.03,
@@ -87,7 +85,7 @@ export const EPISODE = {
       text: "He rides toward the city of the Kurus as messenger, friend, and witness of dharma.",
     },
     {
-      t: 36,
+      t: 34,
       plate: "court",
       zoom: 1.14,
       panX: 0.03,
@@ -97,7 +95,7 @@ export const EPISODE = {
       text: "In the great sabha Dhritarashtra sits blind; Duryodhana’s pride fills the hall.",
     },
     {
-      t: 48,
+      t: 46,
       plate: "offer",
       zoom: 1.16,
       panX: 0,
@@ -107,7 +105,7 @@ export const EPISODE = {
       text: "Krishna offers peace: five villages for the sons of Pandu. Nothing more is asked.",
     },
     {
-      t: 60,
+      t: 58,
       plate: "refuse",
       zoom: 1.14,
       panX: 0.04,
@@ -117,7 +115,7 @@ export const EPISODE = {
       text: "Duryodhana refuses. He will not give land enough to drive a needle’s point.",
     },
     {
-      t: 72,
+      t: 70,
       plate: "form",
       zoom: 1.2,
       panX: 0.02,
@@ -127,7 +125,7 @@ export const EPISODE = {
       text: "When they plot to seize him, Krishna shows a fraction of his cosmic form — and the hall trembles.",
     },
     {
-      t: 84,
+      t: 82,
       plate: "war",
       zoom: 1.12,
       panX: -0.02,
@@ -137,7 +135,7 @@ export const EPISODE = {
       text: "He returns to the Pandavas. Peace has failed. The road to Kurukshetra is open.",
     },
     {
-      t: 96,
+      t: 92,
       plate: "wide-gold",
       zoom: 1.08,
       panX: 0,
@@ -147,7 +145,7 @@ export const EPISODE = {
       text: "Thus the last word of peace was spoken — and the age turned toward battle.",
     },
     {
-      t: 108,
+      t: 100,
       plate: "wide-gold",
       zoom: 1.02,
       panX: 0,

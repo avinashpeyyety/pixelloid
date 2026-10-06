@@ -4,19 +4,29 @@
   "engine": "kokoro-82M",
   "speed": 0.9,
   "render": "tools/render_local_voice.sh",
-  "policy": "Avinash 2026-10-03: default narrator for all new and rewritten episodes. GATE D install FAIL if script.js voice.voice_id differs. Never spend paid xAI API credits. Orion remaster is a separate queued ticket when credits are available.",
+  "policy": "Avinash 2026-10-03: default narrator for NEW episodes (Ep 14+ greenfield). Never spend paid xAI API credits. 2026-10-05 fix: existing episodes keep the narration they shipped with — re-renders (resolution, plates, retime) MUST reuse the existing audio files and never re-synthesize voice. Episodes in orion_locked_episodes (01–03, 05–13) stay Grok TTS orion; Ep04/14/15 keep their existing bm_george audio until the orion_remaster ticket is unblocked; GATE D install FAILs if one of them is not voice_id orion, and FAILs any other episode whose voice_id differs from canonical_voice_id.",
   "orion_remaster": {
     "status": "queued_blocked_on_credits",
     "voice_id": "orion",
     "order": [
       "14-drona-fall",
       "04-akshayapatra",
-      "05-yaksha-prashna",
-      "06-kirata",
-      "07-jayadratha",
-      "08-peace-embassy",
       "15-narayanastra"
     ],
-    "note": "Re-voice with Grok TTS orion when Avinash says credits available; keep timing aligned. Do not start until unblocked."
-  }
+    "note": "Re-voice with Grok TTS orion when Avinash says credits available; keep timing aligned. Do not start until unblocked. Ep05–08 removed 2026-10-05: original Orion clips restored from git (fix/keep-orion-narration). Ep04 stays: its Oct 2026 rewrite text was only ever voiced by bm_george (Avinash 2026-10-05: keep the rewrite)."
+  },
+  "orion_locked_episodes": [
+    "01",
+    "02",
+    "03",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13"
+  ]
 }

@@ -1,11 +1,15 @@
 # NEXT — mahabharata (pixelloid)
 
+## Hard rules (2026-10-05, after Ep04–08 lost Orion; Ep05–08 restored)
+- **New-resolution re-render is COMPLETE — do not redo it.** Ep 01–02 restyled 2026-09-02; Ep 03–08 SuperGrok 1536×1024+/1728×1152 plates shipped 2026-09-16→18 (ad4bf2c, afd2ac4, 62513ab, 3944e6b, 48d25dd, fa536dd). Ep 09–15 were born at the bar. The "01–08 rewrite ladder" is closed; no sprint may pick an already-shipped episode back up as a "rewrite" without a ticket from Avinash naming the episode.
+- **Never re-synthesize narration for an existing episode.** Any re-render (plates, resolution, Blender, retime) reuses the episode's existing `audio/*.mp3`. Ep 01–03 and 05–13 are Orion-locked (`config/narrator.json` `orion_locked_episodes`; GATE D install FAILs otherwise). Ep 04 (Oct rewrite text), 14, 15 keep their existing Kokoro `bm_george` audio until the queued Orion remaster. Kokoro `bm_george` is only for NEW episodes. If new text truly needs new audio, stop and ask Avinash.
+
 ## Now
 - [ ] **Active sprint board:** [`docs/SPRINT_PLAN.md`](docs/SPRINT_PLAN.md) — Track A (improvements) + Track B (Ep 15+ factory). Studio lead; Chief one ticket/cycle.
 - [x] Ep 11: player uses Blender `renders/beat-*.png` (Ken Burns on 3D proxies; Orion/Megh kept)
 - [x] Pilot one beat in **3D**: Ep09 A3 counsel → Blender → `episodes/09-gita/renders/beat-35-counsel.png` (docs in `episodes/09-gita/blender/`; player still on stills/) — SPRINT_PLAN Track A3
 - [ ] **Track B: Ep 16 (Karna as commander, Karna Parva)** via [`docs/PIPELINE_CHECKLIST.md`](docs/PIPELINE_CHECKLIST.md): script → GATE D dialogue → cast/bible → GATE A/B → SuperGrok consumer Imagine keys → GATE C → Kokoro bm_george + named raga → GATE D install → ship. One episode at a time. (01–08 ladder done 2026-10-04; Ep 15 shipped 2026-10-05.) — SPRINT_PLAN Track B
-- [ ] **Queued: Orion remaster (when xAI credits are available)** — re-voice Ep14, then Ep04 rewrite, then Ep05 (and later George episodes) with Grok TTS `orion`, keeping timing aligned. **Blocked on credits**; do not start until Avinash says credits available. Canonical narrator until then remains Kokoro `bm_george` (`config/narrator.json`; GATE D install enforces). — SPRINT_PLAN
+- [ ] **Queued: Orion remaster (when xAI credits are available)** — re-voice **Ep14, then Ep04 (Oct rewrite text), then Ep15** (later George-only episodes) with Grok TTS `orion`, keeping timing aligned. **Blocked on credits**; do not start until Avinash says credits available. Ep05–08 are **not** in this queue any more: their original Orion clips were restored from git 2026-10-05 (`fix/keep-orion-narration`). Ep04 kept its October rewrite in George (Avinash 2026-10-05). Canonical narrator for NEW episodes remains Kokoro `bm_george` (`config/narrator.json`; GATE D install enforces). — SPRINT_PLAN
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate) — SPRINT_PLAN Track A4

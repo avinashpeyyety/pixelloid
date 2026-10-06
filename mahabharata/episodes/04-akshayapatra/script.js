@@ -1,15 +1,10 @@
 /**
- * Episode 04 — The Akshayapatra
- * Vana (Āraṇyaka) Parva · Sūrya's vessel; Durvāsā-upākhyāna (Draupadīharaṇa-parva)
- * Logic pass 2026-10-01 (Ep 14 standard): exile hermitage feeds every guest → Sūrya's vessel and its rule
- * (inexhaustible until Draupadi eats) → Duryodhana's boon: Durvasa to visit after she has eaten →
- * vessel spent → Durvasa + ten thousand arrive, go to bathe → Draupadi prays → Krishna, hungry, asks for the
- * vessel → eats the particle on the rim → sages sated in the river flee → Bhima finds the bank empty; trap closes on nothing.
- * Sources: BORI CE/Debroy Āraṇyaka 3.3 + Gita Press Gorakhpur Vana 3, 262–263 + K.M. Ganguli Vana III, CCLX–CCLXI.
- * Durvāsā episode is vulgate-only (not in BORI CE constituted text). See plate-bible source_block.
- * Audio: orion-00…09 re-rendered 2026-10-02 with free local Kokoro-82M bm_george (tools/render_local_voice.sh, speed 0.9);
- * beat t retimed from ffprobe (12 s grid, clip ends ≥1 s before next beat; overruns extend the slot).
- * Plates: boon (new) + satisfied (river) imported from SuperGrok consumer Imagine 2026-10-02 — GATE C PASS (RR-gateC-visual.md).
+ * Episode 04 — Durvasa and the Akshayapatra
+ * Vana Parva · the inexhaustible vessel · cinematic plates + Orion TTS.
+ * Restored 2026-10-05 (fix/keep-orion-narration): this is the 2026-09-17 SuperGrok new-res cut (afd2ac4) with its
+ * ORIGINAL Grok TTS Orion clips. The 2026-10-01/02 text rewrite (studio/ep04-rewrite, 476599a) was voiced with
+ * Kokoro bm_george and replaced Orion; it stays in history/branch. Raga Yaman kept from the rewrite (music only).
+ * Never re-synthesize this episode's narration — any re-render reuses audio/orion-*.mp3.
  */
 export const EPISODE = {
   id: "04",
@@ -19,24 +14,23 @@ export const EPISODE = {
   style: "cinematic-plates",
   stillsDir: "episodes/04-akshayapatra/stills/",
   voice: {
-    provider: "local-kokoro",
-    voice_id: "bm_george",
-    cache: "ep04-local-20261002",
-    note: "Kathavachak — Kokoro-82M bm_george (free local, Apache-2.0, speed 0.9) via tools/render_local_voice.sh; no paid xAI API (SuperGrok-only rule). Files keep orion-NN.mp3 names/fingerprint (24 kHz / 128 kbps / mono / -16 LUFS).",
+    provider: "grok-tts",
+    voice_id: "orion",
+    cache: "ep04-orion-restore-20261005",
+    note: "Grok TTS Orion (original grok-tts clips, restored 2026-10-05 from afd2ac4 — do not re-synthesize; reuse these files on any re-render)",
     base: "episodes/04-akshayapatra/audio/",
   },
   music: {
     raga: "yaman",
-    note: "Yaman (evening Kalyan, tivra Ma) — devotional trust; tanpura + sparse bansuri, no tabla. Duck under narration. Replaces default flute+tabla.",
+    note: "Yaman (evening Kalyan, tivra Ma) — devotional trust; tanpura + sparse bansuri, no tabla. Duck under Orion. Replaces default flute+tabla.",
   },
-  totalSec: 130,
+  totalSec: 100,
   stills: {
     poster: "episodes/04-akshayapatra/stills/poster.jpg",
   },
   plates: {
     wide: "plate-wide.jpg",
     vessel: "plate-vessel.jpg",
-    boon: "plate-boon.jpg",
     empty: "plate-empty.jpg",
     arrival: "plate-arrival.jpg",
     prayer: "plate-prayer.jpg",
@@ -68,100 +62,90 @@ export const EPISODE = {
       panY: 0,
       audio: "orion-00.mp3",
       who: "Narrator",
-      text: "Twelve years of forest exile. The Pandavas live in a simple hermitage — yet every sage who comes to them is fed, and many come.",
+      text: "In the forest of exile the Pandavas keep a simple camp — and one divine gift that never runs dry by day.",
     },
     {
-      t: 12,
+      t: 10,
       plate: "vessel",
       zoom: 1.14,
       panX: 0.02,
       panY: -0.02,
       audio: "orion-01.mp3",
       who: "Narrator",
-      text: "The Sun god gave Yudhishthira this vessel, the Akshayapatra. Whatever Draupadi cooks in it never runs out — until she, last of all, has eaten.",
+      text: "The Akshayapatra: so long as Draupadi has not finished her meal, the vessel feeds every guest.",
     },
     {
-      t: 24,
-      plate: "boon",
-      zoom: 1.1,
-      panX: -0.02,
-      panY: -0.02,
-      audio: "orion-02.mp3",
-      who: "Narrator",
-      text: "In Hastinapura, Duryodhana cannot bear their peace. He serves the short-tempered sage Durvasa until the sage offers a boon — then asks him to visit his cousins after Draupadi has eaten.",
-    },
-    {
-      t: 40,
+      t: 22,
       plate: "empty",
       zoom: 1.12,
       panX: -0.02,
       panY: 0,
-      audio: "orion-03.mp3",
+      audio: "orion-02.mp3",
       who: "Narrator",
-      text: "So the sage comes late. Draupadi has fed everyone, eaten last, and set the vessel aside, scoured clean. Today’s food is gone.",
+      text: "One evening the meal is done. Draupadi washes the vessel clean — and the day’s grace is sealed.",
     },
     {
-      t: 52,
+      t: 32,
       plate: "arrival",
       zoom: 1.1,
       panX: 0.04,
       panY: -0.02,
-      audio: "orion-04.mp3",
+      audio: "orion-03.mp3",
       who: "Narrator",
-      text: "Then Durvasa arrives with ten thousand disciples. Yudhishthira welcomes them, and they go to bathe in the river, expecting a feast on their return.",
+      text: "Then comes sage Durvasa with a throng of hungry disciples — and the camp has nothing left to offer.",
     },
     {
-      t: 65,
+      t: 44,
       plate: "prayer",
       zoom: 1.16,
       panX: 0,
       panY: -0.03,
-      audio: "orion-05.mp3",
+      audio: "orion-04.mp3",
       who: "Narrator",
-      text: "There is nothing left to cook, and Durvasa’s curse is feared across the worlds. Draupadi turns to her one refuge — she prays to Krishna.",
+      text: "Draupadi’s heart trembles. She prays to Krishna, the friend who never abandons the devoted.",
     },
     {
-      t: 77,
+      t: 54,
       plate: "krishna",
       zoom: 1.12,
       panX: 0.03,
       panY: 0,
-      audio: "orion-06.mp3",
+      audio: "orion-05.mp3",
       who: "Narrator",
-      text: "Krishna comes at once — and before she can speak, he says he is hungry. “The vessel is empty,” Draupadi cries. “Bring it anyway,” he smiles.",
+      text: "Krishna arrives, smiling as if the forest itself has exhaled.",
     },
     {
-      t: 89,
+      t: 64,
       plate: "grain",
       zoom: 1.22,
       panX: 0.02,
       panY: -0.04,
-      audio: "orion-07.mp3",
+      audio: "orion-06.mp3",
       who: "Narrator",
-      text: "On the rim he finds one grain of rice and a shred of leaf. He eats it: “May the Soul of the universe be satisfied.”",
+      text: "He finds a single grain of rice clinging to the vessel — and eats it with love.",
     },
     {
-      t: 101,
+      t: 76,
       plate: "satisfied",
       zoom: 1.12,
       panX: -0.02,
       panY: 0,
-      audio: "orion-08.mp3",
+      audio: "orion-07.mp3",
       who: "Narrator",
-      text: "In the river, Durvasa and his disciples suddenly feel full. Unable to eat the feast they asked for, and afraid of the Pandavas’ anger, they slip away.",
+      text: "Far away, Durvasa and his disciples feel full. They bless the Pandavas and turn back, content.",
     },
     {
-      t: 114,
+      t: 88,
       plate: "wide-gold",
       zoom: 1.08,
       panX: 0,
       panY: 0.02,
-      audio: "orion-09.mp3",
+      audio: "orion-08.mp3",
       who: "Narrator",
-      text: "Bhima runs to call them to dinner, but the riverbank is empty. Duryodhana’s trap has closed on nothing — and Krishna smiles and takes his leave.",
+      text: "So grace filled what fear had emptied — and the forest remembered Krishna’s name.",
     },
     {
-      t: 126,
+      t: 98,
       plate: "wide-gold",
       zoom: 1.02,
       panX: 0,

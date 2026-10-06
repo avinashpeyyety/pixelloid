@@ -45,7 +45,7 @@ export const EPISODES = [
     title: "The Akshayapatra",
     sanskrit: "अक्षयपात्रम्",
     chapter: "Vana Parva · Durvasa’s visit",
-    duration: "~130s",
+    duration: "~100s",
     status: "live",
     blurb:
       "When the vessel is empty and Durvasa arrives hungry, one grain of grace is enough — Krishna answers Draupadi’s prayer.",

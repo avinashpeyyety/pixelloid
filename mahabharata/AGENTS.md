@@ -26,7 +26,10 @@
 | **Shikhandi** | `episodes/10-bhishma-fall/stills/_locks/shikhandi.jpg` | Ep 10 shikhandi plate |
 | **Canvas / density** | `episodes/10-bhishma-fall/stills/_locks/field-master.jpg` | Ep 10 `plate-vow.jpg` |
 
-## Krishna look lock (canonical — Ep 09)
+## Krishna look lock (Ep 09 — superseded by Ep 04)
+
+> **SUPERSEDED 2026-10-05 (Avinash):** the canonical Krishna look is now **Ep 04**. See **`characters/krishna-lock.md`** (lock image `episodes/04-akshayapatra/stills/_locks/krishna.jpg`). Key tokens: pale silvery dusty-blue skin, long loose curls, a slim gold jeweled hair band with one peacock feather (no tall crown), and exactly two hands. Attach the Ep 04 lock instead of the Ep 09 lock. The Ep 09 text below stays as history.
+
 
 **This is the visual STANDARD for Krishna.** Subsequent episodes match that Krishna. They do not drift.
 

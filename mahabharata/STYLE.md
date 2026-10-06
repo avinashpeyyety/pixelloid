@@ -45,7 +45,10 @@ Faces as they appear in Episodes 09 and 10 are the series lock. Later episodes *
 
 New named faces (Drona, Bhima, Karna, …) get a local `stills/_locks/<id>.jpg` seeded from the closest 09/10 model and kept identical across that episode.
 
-## Krishna look lock (canonical — Ep 09)
+## Krishna look lock (Ep 09 — superseded by Ep 04)
+
+> **SUPERSEDED 2026-10-05 (Avinash):** the canonical Krishna look is now **Ep 04**. See **`characters/krishna-lock.md`** (lock image `episodes/04-akshayapatra/stills/_locks/krishna.jpg`). Key tokens: pale silvery dusty-blue skin, long loose curls, a slim gold jeweled hair band with one peacock feather (no tall crown), and exactly two hands. Attach the Ep 04 lock instead of the Ep 09 lock. The Ep 09 text below stays as history.
+
 
 Krishna looks right in Episode 09. That face and body is the series lock. Later episodes **match it**; they do not drift.
 

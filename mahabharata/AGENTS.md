@@ -41,7 +41,7 @@
 
 **Forbidden on Krishna:** flute, bow, photoreal skin, a second Krishna, a child Krishna, saffron sage robes.
 
-Attach the Ep 09 lock whenever Krishna is in `cast_present`. The lock applies from Ep 12 on (Ep 09 is the source; Ep 10–11 are already shipped). Ep 01–08 are the old 720p flow — rewrite is queued **Episode 01 first**, then 02–08, before new 14+ so the hub is one show.
+Attach the Ep 09 lock whenever Krishna is in `cast_present`. The lock applies from Ep 12 on (Ep 09 is the source; Ep 10–11 are already shipped). Ep 01–08 were rewritten to the 09/10 bar (01–02 on 2026-09-02, 03–08 on 2026-09-16→18) — **done; do not redo**.
 
 ## Mandatory panel-logic agent
 
@@ -84,7 +84,7 @@ Comic painted mythology matching **Ep 10 field-master** (canvas/density) and **E
 
 ## Player / craft
 
-- **Voice:** free local TTS via `tools/render_local_voice.sh` (Kokoro-82M bm_george; 24 kHz / 128 kbps, −16 LUFS, `orion-NN.mp3` names). **Orion / api.x.ai TTS retired 2026-09-29** — SuperGrok subscription only, never a paid API. Ep 01–13 keep their Orion clips. No Aman fallback on new episodes.
+- **Voice:** free local TTS via `tools/render_local_voice.sh` (Kokoro-82M bm_george; 24 kHz / 128 kbps, −16 LUFS, `orion-NN.mp3` names). **Orion / api.x.ai TTS retired 2026-09-29** — SuperGrok subscription only, never a paid API. Ep 01–03 and 05–13 keep their Orion clips (`config/narrator.json` `orion_locked_episodes`). Ep 04 (Oct 2026 rewrite), 14 and 15 stay Kokoro bm_george until the queued Orion remaster (only when Avinash unblocks credits). **Never re-synthesize narration for an existing episode** — re-renders (resolution, plates, Blender, retime) reuse the existing `audio/*.mp3`; Kokoro is for NEW episodes only. The new-resolution re-render of 01–08 is complete (2026-09-18); do not reopen shipped episodes without a ticket from Avinash. No Aman fallback on new episodes.
 - **Underscore:** Web Audio RagaBed in js/main.js. Named Hindustani raga per episode — Ep 09 Bhairav (no tabla), Ep 10 Darbari, Ep 11 Megh+Jhaptal, Ep 12 Marwa (sunset, no Pa, no tabla). Tanpura floor, duck under Orion. No cinematic trailer score, no licensed film music. **Do not regress new episodes to the default flute+tabla preset** (that preset is only for grandfathered Ep 01–08).
 
 ## Per-repo habit

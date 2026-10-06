@@ -8,7 +8,8 @@ Usage:
 Checks:
   - Every beat plate key resolves to an on-disk still
   - Every spoken beat has a non-empty audio file
-  - voice.voice_id matches config/narrator.json canonical_voice_id (bm_george)
+  - voice.voice_id matches config/narrator.json canonical_voice_id (bm_george) for new episodes;
+    orion_locked_episodes (Ep 01–03, 05–13) must stay voice_id orion (never re-voiced)
   - Named Hindustani raga present in script.js music.raga
 
 FAIL (exit 1) blocks ship. Writes logic-reviews/RR-gateD-install.md when --report.
@@ -106,10 +107,21 @@ def review(ep_dir: Path) -> tuple[bool, list[str], list[str], dict]:
     stills = ep_dir / "stills"
     audio_dir = ep_dir / "audio"
 
-    if data["voice_id"] != canonical:
+    ep_num = ep_dir.name.split("-", 1)[0]
+    orion_locked = set(cfg.get("orion_locked_episodes", []))
+    if ep_num in orion_locked:
+        # Existing Orion episodes keep their original Grok TTS clips forever.
+        # Never re-voice them (a re-render reuses audio/orion-*.mp3).
+        if data["voice_id"] != "orion":
+            fails.append(
+                f"Ep {ep_num} is orion-locked (config/narrator.json orion_locked_episodes) but "
+                f"voice_id={data['voice_id']!r}. Restore the original Orion clips from git; "
+                f"never re-synthesize narration for an existing episode."
+            )
+    elif data["voice_id"] != canonical:
         fails.append(
             f"voice_id={data['voice_id']!r} != canonical {canonical!r} "
-            f"(config/narrator.json). Pin bm_george for new/rewritten episodes."
+            f"(config/narrator.json). Pin bm_george for NEW / non-Orion-locked episodes; never re-voice an existing episode."
         )
     if not data["raga"]:
         fails.append("music.raga missing — name a Hindustani raga in script.js")
@@ -134,7 +146,7 @@ def review(ep_dir: Path) -> tuple[bool, list[str], list[str], dict]:
             warns.append(f"t={b['t']}: silent hold has audio {b['audio']} (ok if intentional)")
 
     ok = not fails
-    meta = {"canonical": canonical, **data, "cfg": cfg}
+    meta = {"canonical": ("orion" if ep_num in orion_locked else canonical), **data, "cfg": cfg}
     return ok, fails, warns, meta
 
 
@@ -186,7 +198,7 @@ def write_report(ep_dir: Path, ok: bool, fails: list[str], warns: list[str], met
         "",
         "## Strict checks",
         "",
-        f"- [{'x' if ok else ' '}] voice_id == canonical bm_george",
+        f"- [{'x' if ok else ' '}] voice_id == expected {meta.get('canonical')}",
         f"- [{'x' if ok else ' '}] No missing plate file for a script beat key",
         f"- [{'x' if ok else ' '}] No missing audio for narration beats",
         f"- [{'x' if meta.get('raga') else ' '}] Named Hindustani raga in episode module",

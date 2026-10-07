@@ -1,0 +1,42 @@
+{
+  "episode_id": "17",
+  "notes": "Karna Parva, seventeenth day — the Karna–Arjuna duel, the sunken chariot wheel and Karna's fall. No gore, no bodies, no severed head. Draupadi, Kunti, Surya, Indra, the Brahmin and Parashurama are narrated only, never drawn. Krishna = Ep 04 lock (official series reference, Avinash 2026-10-05): pale silvery dusty-blue skin, long loose curls, slim gold band with one peacock feather, white U-tilak, jasmine-rose garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands — Arjuna's charioteer. Arjuna = Ep 14/15 lock (Ep 09 face): gold crown until the serpent arrow takes it (beat crown), then hair bound with a white cloth. Karna = Ep 13 lock via Ep 16. Shalya = Ep 16 lock. Both chariots have white horses; Arjuna's banner bears the ape device, Karna's the elephant's rope. The Karna and Shalya locks are night portraits — every Ep 17 prompt forces afternoon daylight. One scene master: field17 (Kurukshetra afternoon).",
+  "locks": {
+    "reuse": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg",
+      "karna": "episodes/16-karna-commander/stills/_locks/karna.jpg",
+      "shalya": "episodes/16-karna-commander/stills/_locks/shalya.jpg"
+    },
+    "new": {
+      "field17-master": "episodes/17-karna-fall/stills/_locks/field17-master.jpg"
+    }
+  },
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; in this episode the charioteer of Arjuna, holding the reins — never a flute, never a bow, never a child"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes — Ep 09 face via the Ep 14/15 lock (episodes/09-gita/stills/_locks/arjuna.jpg lineage)",
+      "hair": "Tall gold crown until the serpent arrow (beat crown); from beat rebuke on, no crown — dark hair bound with a plain white cloth",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva; his chariot: white horses, banner with a small golden ape device; conch Devadatta — never flower garland, never peacock feather"
+    },
+    "karna": {
+      "face": "Adult king of Anga, proud dark mustache, sun-warmed skin, resolute dark eyes — Ep 13 lock via Ep 16 (episodes/16-karna-commander/stills/_locks/karna.jpg); distinct from Arjuna",
+      "hair": "Long dark hair under a tall jeweled gold Anga diadem with a red gem (never a peacock feather)",
+      "costume": "Deep gold and crimson engraved armor, crimson cape, gold armlets, gold-backed Vijaya bow — no divine kavacha, never flower garland, never Krishna's pitambar. His chariot: white horses the hue of cranes, white standard with the elephant's-rope device"
+    },
+    "shalya": {
+      "face": "Mature king of Madra: strong weathered face, thick dark mustache and short dark beard streaked with grey, fierce dark eyes (Ep 16 lock) — a warrior-king, never a sage, never fully white-bearded",
+      "hair": "Dark hair streaked with grey under a tall silver-and-gold Madra crown",
+      "costume": "Deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram, gold armlets; Karna's charioteer with the golden reins — never saffron sage robes, never flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore, no bodies"
+    }
+  }
+}

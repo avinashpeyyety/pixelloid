@@ -1,0 +1,889 @@
+{
+  "episode_id": "17",
+  "strict_hero_lock": "arjuna",
+  "title": "The Fall of Karna",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Krishna locked to the Ep 04 look (official reference), Arjuna to the Ep 09/14 lock, Karna to Ep 13, Shalya to Ep 16",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "krishna_visual_lock_ref": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+  "krishna_lock_note": "Avinash 2026-10-05: the Ep 04 Krishna is the official series reference and the operative visual lock for Ep 17 — byte-copied to episodes/17-karna-fall/stills/_locks/krishna.jpg and attached as the FIRST character ref (right after the scene master) on every Krishna plate in PROMPTS.md. krishna_look_lock_ref keeps the Ep 09 path only because tools/logic_review.py still checks for it (docs not yet updated to the Ep 04 rule).",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/17-karna-fall/stills/_locks/field17-master.jpg",
+  "scene_lock_refs": {
+    "field17-master": "episodes/17-karna-fall/stills/_locks/field17-master.jpg"
+  },
+  "scene_master_prompt": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The Kurukshetra battlefield on the afternoon of the seventeenth day: a wide open stretch of trampled golden dust in the foreground scored with chariot ruts, the two armies drawn back in a vast distant ring to watch, rows of small banners and parasols, a bright warm gold afternoon sun high in a hazy saffron-gold sky, long soft shadows. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for two great chariots to be placed later. No people in the foreground, no named figures. Bright daylight — NOT night: no moon, no stars, no torches. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no watermark.",
+  "scene_master_prompts": {
+    "field17-master": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The Kurukshetra battlefield on the afternoon of the seventeenth day: a wide open stretch of trampled golden dust in the foreground scored with chariot ruts, the two armies drawn back in a vast distant ring to watch, rows of small banners and parasols, a bright warm gold afternoon sun high in a hazy saffron-gold sky, long soft shadows. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for two great chariots to be placed later. No people in the foreground, no named figures. Bright daylight — NOT night: no moon, no stars, no torches. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no watermark."
+  },
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/17-karna-fall/stills/_locks/field17-master.jpg",
+    "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "episodes/17-karna-fall/stills/_locks/krishna.jpg",
+    "episodes/17-karna-fall/stills/_locks/arjuna.jpg",
+    "episodes/17-karna-fall/stills/_locks/karna.jpg",
+    "episodes/17-karna-fall/stills/_locks/shalya.jpg"
+  ],
+  "imagine_refs_note": "Gate-check list (lineage). The operative per-image attach order is in stills/_inbox/consumer-imagine/PROMPTS.md: scene master first, then the Ep 04 Krishna lock (on Krishna plates), then Arjuna / Karna / Shalya locks, then the Ep 10 field-master. The Ep 09 Krishna path is listed for the gate only and is NOT attached.",
+  "character_lock_refs": {
+    "krishna": "episodes/17-karna-fall/stills/_locks/krishna.jpg",
+    "arjuna": "episodes/17-karna-fall/stills/_locks/arjuna.jpg",
+    "karna": "episodes/17-karna-fall/stills/_locks/karna.jpg",
+    "shalya": "episodes/17-karna-fall/stills/_locks/shalya.jpg"
+  },
+  "local_lock_plan": {
+    "copy_forward": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg (byte copy; official Krishna reference per Avinash 2026-10-05 — silvery dusty-blue skin, curls, gold band + one peacock feather, U-tilak, jasmine-rose garland, saffron-yellow dhoti, crimson sash)",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg (byte copy; same file as Ep 14's — Ep 09 face lineage)",
+      "karna": "episodes/16-karna-commander/stills/_locks/karna.jpg (byte copy; same file as Ep 13's)",
+      "shalya": "episodes/16-karna-commander/stills/_locks/shalya.jpg (byte copy)"
+    },
+    "new": {
+      "field17-master": "scene master — Kurukshetra, afternoon of the seventeenth day (all nine plates + poster); generate first"
+    },
+    "not_needed": "No new character locks: every face (Krishna, Arjuna, Karna, Shalya) already has a series lock. Draupadi, Kunti, Surya, Indra, the Brahmin and Parashurama are narrated only, never drawn.",
+    "note": "stills_review.py (GATE C) requires episodes/17-karna-fall/stills/_locks/<id>.jpg for every face on a plate; these are byte copies, not new art. The Karna and Shalya locks are night portraits — every prompt forces afternoon daylight."
+  },
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; in this episode the charioteer of Arjuna, holding the reins — never a flute, never a bow, never a child"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes — Ep 09 face via the Ep 14/15 lock (episodes/09-gita/stills/_locks/arjuna.jpg lineage)",
+      "hair": "Tall gold crown until the serpent arrow (beat crown); from beat rebuke on, no crown — dark hair bound with a plain white cloth",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva; his chariot: white horses, banner with a small golden ape device; conch Devadatta — never flower garland, never peacock feather"
+    },
+    "karna": {
+      "face": "Adult king of Anga, proud dark mustache, sun-warmed skin, resolute dark eyes — Ep 13 lock via Ep 16 (episodes/16-karna-commander/stills/_locks/karna.jpg); distinct from Arjuna",
+      "hair": "Long dark hair under a tall jeweled gold Anga diadem with a red gem (never a peacock feather)",
+      "costume": "Deep gold and crimson engraved armor, crimson cape, gold armlets, gold-backed Vijaya bow — no divine kavacha, never flower garland, never Krishna's pitambar. His chariot: white horses the hue of cranes, white standard with the elephant's-rope device"
+    },
+    "shalya": {
+      "face": "Mature king of Madra: strong weathered face, thick dark mustache and short dark beard streaked with grey, fierce dark eyes (Ep 16 lock) — a warrior-king, never a sage, never fully white-bearded",
+      "hair": "Dark hair streaked with grey under a tall silver-and-gold Madra crown",
+      "costume": "Deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram, gold armlets; Karna's charioteer with the golden reins — never saffron sage robes, never flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore, no bodies"
+    }
+  },
+  "plates": [
+    {
+      "id": "meet",
+      "file": "plate-meet.jpg",
+      "beat_text": "Seventeenth day. Krishna drives Arjuna; Shalya drives Karna. The two great archers meet at last, and heaven itself takes sides.",
+      "cast_present": [
+        "krishna",
+        "arjuna",
+        "karna",
+        "shalya"
+      ],
+      "locus_master": "episodes/17-karna-fall/stills/_locks/field17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright afternoon daylight (this episode's field17 master); distant ranks drawn back in a ring to watch",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; the charioteer with the reins",
+        "Arjuna matching the Arjuna lock (Ep 09 face via the Ep 14 lock): gold crown, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back, Gandiva — no flower garland, no peacock feather",
+        "Karna (Ep 13 lock via Ep 16): proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow — no peacock feather, no divine kavacha; not Arjuna",
+        "Shalya (Ep 16 lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram — a warrior-king, never a sage",
+        "Two great chariots facing each other across the frame: on the left Krishna at the reins of Arjuna's chariot, white horses, a small golden ape device on its banner; on the right Shalya at the reins of Karna's chariot, white horses the hue of cranes, white standard with the elephant's-rope device",
+        "Arjuna and Karna stand tall behind their charioteers, great bows raised, eyes locked on each other",
+        "Heaven taking sides is narrated only — no gods drawn; a faint double glow in the sky at most"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "night sky, moon or stars",
+        "torches",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "Kunti",
+        "Draupadi",
+        "Indra",
+        "Surya as a figure",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "second Arjuna",
+        "flower garland on Arjuna",
+        "peacock feather on Arjuna",
+        "peacock feather on Karna",
+        "divine kavacha on Karna",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya"
+      ],
+      "props": [
+        "two chariots",
+        "white horses",
+        "ape-device banner",
+        "elephant's-rope standard",
+        "Gandiva",
+        "Vijaya bow",
+        "reins"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly four adult men on two great chariots facing each other across the Kurukshetra field. On the left, Krishna the charioteer (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather — not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; no flute, no bow) holds the reins of Arjuna's chariot, drawn by white horses under a banner with a small golden ape device; behind him stands Arjuna (match the attached Arjuna lock: noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, gold belt and armlets, quiver on his back, the great Gandiva bow; no flower garland, no peacock feather), Gandiva raised. On the right, Shalya, king of Madra (match the attached Shalya lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram) holds the reins of Karna's chariot, drawn by white horses the hue of cranes under a white standard with the elephant's-rope device; behind him stands Karna, king of Anga (match the attached Karna lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, gold-backed Vijaya bow; no peacock feather, no divine kavacha), Vijaya bow raised. The two archers' eyes are locked across the gap. Distant ranks drawn back in a vast ring to watch, banners only. No gods drawn. Bright afternoon daylight of the seventeenth day: warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches (the attached Karna and Shalya locks are night portraits; take only their faces, crowns and armor, never their night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.63 — after Vrishasena falls, Karna challenges Dhananjaya; the two chariots with white horses meet 'like two suns' (8.63.3–4); gods, gandharvas, nagas, sky and earth take opposite sides (8.63.31–33); Krishna and Shalya face each other as charioteers"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva adhyaya 87 (vulgate) — Karna–Arjuna dvairatha begins; divine portents and the beings taking sides"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §87 — 'Shakra himself said, \"Let Arjuna vanquish Karna.\" Surya, however, said, \"Let Karna vanquish Arjuna ... let my son Karna ... gain the victory\"'; 'The gods, the Danavas, the Gandharvas ... adopted opposite sides'; Karna's banner 'bearing the elephant's rope' and Partha's 'bearing the ape'"
+        }
+      ]
+    },
+    {
+      "id": "serpent",
+      "file": "plate-serpent.jpg",
+      "beat_text": "Karna fits his serpent-mouthed arrow. “It will miss — fit another,” Shalya warns. “Karna never aims twice,” he answers.",
+      "cast_present": [
+        "karna",
+        "shalya"
+      ],
+      "locus_master": "episodes/17-karna-fall/stills/_locks/field17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright afternoon daylight (field17 master)",
+        "Karna (Ep 13 lock via Ep 16): proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow — no peacock feather, no divine kavacha; not Arjuna",
+        "Shalya (Ep 16 lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram — a warrior-king, never a sage",
+        "Karna on his chariot draws his bow to the ear with one blazing arrow whose head is carved like a serpent's open mouth — an arrow, not a living snake",
+        "Bow, arrow and Karna's gaze on one straight line toward Arjuna, who is off-frame to the left (not drawn)",
+        "Shalya at the reins in front, half-turned back toward Karna, one hand raised in warning, the other gripping the golden reins",
+        "White horses the hue of cranes, white elephant's-rope standard",
+        "Only these two named figures; Arjuna and Krishna are NOT shown"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "night sky, moon or stars",
+        "torches",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "Kunti",
+        "Draupadi",
+        "Indra",
+        "Surya as a figure",
+        "peacock feather on Karna",
+        "divine kavacha on Karna",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya"
+      ],
+      "props": [
+        "Karna's chariot",
+        "serpent-mouthed arrow",
+        "Vijaya bow",
+        "golden reins",
+        "white horses",
+        "elephant's-rope standard"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men on one chariot. Karna, king of Anga (match the attached Karna lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, gold-backed Vijaya bow; no peacock feather, no divine kavacha) draws his bow to the ear with a single blazing arrow whose head is carved like a serpent's open mouth (an arrow, not a living snake); bow, arrow and his fierce gaze lie on one straight line toward his foe off-frame to the left. In front, Shalya, king of Madra (match the attached Shalya lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram) half-turns on the driver's seat, golden reins in one fist and his other hand raised in warning. White horses the hue of cranes, white elephant's-rope standard, distant ranks only. No Arjuna, no Krishna. Bright afternoon daylight of the seventeenth day: warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches (the attached Karna and Shalya locks are night portraits; take only their faces, crowns and armor, never their night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.66.5–9 — Karna fits the long-kept, sandal-dusted, serpent-mouthed arrow of Airavata's line; Shalya: 'This arrow will not reach his neck, Karna — aim carefully and fix another' (8.66.7); Karna: 'Karna does not fix an arrow twice, Shalya; men like me are not crooked' (8.66.8)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva adhyaya 90 (vulgate) — the sarpamukha shaft (Ashvasena within it), Shalya's advice and Karna's refusal to aim twice"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §90 — 'This arrow, O Karna, will not succeed in striking off Arjuna's head. Searching carefully, fix another arrow'; 'O Shalya, Karna never aimeth an arrow twice. Persons like us never become crooked warriors'"
+        }
+      ],
+      "aim_geometry": {
+        "archer": "karna",
+        "target": "Arjuna's head on the far chariot, off-frame left (not drawn)",
+        "bow_points_at_target": true,
+        "gaze_at_target": true,
+        "target_distance": "far"
+      }
+    },
+    {
+      "id": "crown",
+      "file": "plate-crown.jpg",
+      "beat_text": "Krishna presses the chariot into the earth with his feet. The horses kneel, and the arrow takes only Arjuna’s crown.",
+      "cast_present": [
+        "krishna",
+        "arjuna"
+      ],
+      "locus_master": "episodes/17-karna-fall/stills/_locks/field17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright afternoon daylight (field17 master)",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; the charioteer with the reins",
+        "Arjuna matching the Arjuna lock (Ep 09 face via the Ep 14 lock): gold crown, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back, Gandiva — no flower garland, no peacock feather",
+        "Krishna rises on the driver's seat and presses the chariot down with his feet; the chariot has sunk a cubit into the earth and the four white horses kneel",
+        "A blazing serpent-mouthed arrow strikes Arjuna's gold crown and knocks it from his head in a burst of golden sparks — Arjuna himself is unhurt and steady",
+        "Exactly two named figures on one chariot"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "night sky, moon or stars",
+        "torches",
+        "Karna",
+        "Shalya",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "Kunti",
+        "Draupadi",
+        "Indra",
+        "Surya as a figure",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "second Arjuna",
+        "flower garland on Arjuna",
+        "peacock feather on Arjuna"
+      ],
+      "props": [
+        "Arjuna's chariot sunk into the earth",
+        "kneeling white horses",
+        "reins",
+        "blazing serpent-mouthed arrow",
+        "Arjuna's gold crown flying off",
+        "Gandiva"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men on one chariot. Krishna the charioteer (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather — not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; no flute, no bow) rises on the driver's seat, reins in both hands, and presses the chariot down with his feet: the chariot has sunk a cubit into the earth and its four white horses kneel with bent forelegs. Behind him, Arjuna (match the attached Arjuna lock: noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, gold belt and armlets, quiver on his back, the great Gandiva bow; no flower garland, no peacock feather) stands steady with Gandiva as a blazing serpent-mouthed arrow streaks in and strikes his gold crown, knocking it from his head in a burst of golden sparks — his head and face unhurt. Bright afternoon daylight of the seventeenth day: warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Karna. No Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.66.10–19 — Madhava presses the chariot down with his feet; the horses sink to their knees; the arrow strikes the kirita, Indra's gift, which falls 'like the blazing sun from the western hill'; Arjuna binds his hair with a white cloth and stands unshaken (8.66.19)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva adhyaya 90 (vulgate) — Shri Krishna presses the chariot into the earth; the serpent-arrow carries off Arjuna's kirita"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §90 — Madhava 'pressed down with his feet that excellent car, causing it to sink about a cubit deep. At this, the steeds ... bending their knees, laid themselves down'; the shaft 'took away his diadem only'; 'Binding then his locks with a white cloth, Arjuna stood perfectly unmoved'"
+        }
+      ]
+    },
+    {
+      "id": "wheel",
+      "file": "plate-wheel.jpg",
+      "beat_text": "Then the earth swallows Karna’s wheel, as a Brahmin once cursed — and Parashurama’s Brahma weapon slips from his memory.",
+      "cast_present": [
+        "karna",
+        "shalya"
+      ],
+      "locus_master": "episodes/17-karna-fall/stills/_locks/field17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright afternoon daylight (field17 master)",
+        "Karna (Ep 13 lock via Ep 16): proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow — no peacock feather, no divine kavacha; not Arjuna",
+        "Shalya (Ep 16 lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram — a warrior-king, never a sage",
+        "Karna's chariot lurches and tilts: its left wheel is sinking deep into the earth, dust heaving around the rim",
+        "Karna staggers on the tilting chariot, Vijaya bow in one hand, the other hand pressed to his brow — straining to remember a weapon that will not come",
+        "Shalya hauls on the golden reins, the white horses straining",
+        "The Brahmin's curse and Parashurama are narrated only — not drawn",
+        "Only these two named figures"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "night sky, moon or stars",
+        "torches",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "Kunti",
+        "Draupadi",
+        "Indra",
+        "Surya as a figure",
+        "peacock feather on Karna",
+        "divine kavacha on Karna",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya"
+      ],
+      "props": [
+        "Karna's chariot",
+        "sinking left wheel",
+        "golden reins",
+        "white horses",
+        "Vijaya bow"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men on one tilting chariot. The earth is swallowing its left wheel — the rim sinking deep, dust heaving. Karna, king of Anga (match the attached Karna lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, gold-backed Vijaya bow; no peacock feather, no divine kavacha) staggers as the chariot lurches, Vijaya bow in one hand, the other hand pressed to his brow, straining to remember a weapon that will not come. In front, Shalya, king of Madra (match the attached Shalya lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram) hauls on the golden reins as the white horses strain. No Brahmin, no sage, no gods drawn. Bright afternoon daylight of the seventeenth day: warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches (the attached Karna and Shalya locks are night portraits; take only their faces, crowns and armor, never their night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.66.42 — 'his wheel fell into the earth'; the chariot reels through the Brahmin's curse, and the weapon obtained from Rama (Parashurama) does not come to his mind; 8.66.59 — the earth seizes the wheel; background: Karna tells Shalya of both curses at 8.29"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva adhyaya 90 (vulgate; colophon: Karna's chariot wheel stuck in the earth) — the Brahmana's curse and the forgotten Brahmastra of Bhargava"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §90 — 'the high brahmastra that the illustrious Bhargava had imparted unto him, escaped from his memory. And the earth also began to devour the left wheel of his car ... in consequence of the curse of that foremost of Brahmanas'; curses told to Shalya at §42"
+        }
+      ]
+    },
+    {
+      "id": "plea",
+      "file": "plate-plea.jpg",
+      "beat_text": "Karna leaps down to heave at the wheel. “Wait, Arjuna! You stand on a chariot — I stand on the ground.”",
+      "cast_present": [
+        "karna"
+      ],
+      "locus_master": "episodes/17-karna-fall/stills/_locks/field17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright afternoon daylight (field17 master)",
+        "Karna (Ep 13 lock via Ep 16): proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow — no peacock feather, no divine kavacha; not Arjuna",
+        "Karna has leapt down from his tilted chariot and stands in the dust, both hands gripping the rim of the sunken wheel, heaving it up",
+        "His face turned up and toward the left, calling out, eyes wet with tears of wrath",
+        "His Vijaya bow leaning against the chariot side",
+        "Only Karna among named figures; Arjuna and Krishna are narrated only, NOT shown; Shalya out of frame"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "night sky, moon or stars",
+        "torches",
+        "Krishna",
+        "Arjuna",
+        "Shalya",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "Kunti",
+        "Draupadi",
+        "Indra",
+        "Surya as a figure",
+        "peacock feather on Karna",
+        "divine kavacha on Karna"
+      ],
+      "props": [
+        "Karna's tilted chariot",
+        "sunken wheel",
+        "Vijaya bow leaning on the chariot"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult man on foot beside his tilted chariot. Karna, king of Anga (match the attached Karna lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, gold-backed Vijaya bow; no peacock feather, no divine kavacha) has leapt down into the dust and grips the rim of the deeply sunken wheel with both hands, heaving it upward with all his strength; his face is turned up toward an unseen foe off-frame left, calling out, eyes wet with tears of wrath. His Vijaya bow leans against the chariot side; white horses and the elephant's-rope standard behind. Nobody else in the frame. Bright afternoon daylight of the seventeenth day: warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches (the attached Karna and Shalya locks are night portraits; take only their faces, crowns and armor, never their night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. No Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.66.60–65 — weeping in wrath, Karna begs 'Wait a moment, Pandava'; warriors do not strike one in distress; 'You, standing on a chariot, should not slay me standing on the ground' (8.66.64)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva adhyaya 90 (vulgate) — Karna alights, seizes the sunken wheel and asks Arjuna to wait"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §90 — 'Quickly alighting then from his vehicle, he seized his sunken wheel with his two arms'; 'O Partha, O Partha, wait for a moment, that is, till I lift this sunken wheel ... I am on the earth while thou art on thy car'"
+        }
+      ]
+    },
+    {
+      "id": "rebuke",
+      "file": "plate-rebuke.jpg",
+      "beat_text": "Krishna answers: “Where was your dharma when Draupadi was dragged into the hall in a single cloth — and you laughed?”",
+      "cast_present": [
+        "krishna",
+        "arjuna"
+      ],
+      "locus_master": "episodes/17-karna-fall/stills/_locks/field17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright afternoon daylight (field17 master)",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; the charioteer with the reins",
+        "Arjuna matching the Arjuna lock (Ep 09 face via the Ep 14 lock), dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back, Gandiva — his gold crown is gone, hair bound with a white cloth (Karna Parva: after the serpent arrow) — no flower garland, no peacock feather",
+        "Krishna on the driver's seat, reins in one hand, the other hand raised and pointing ahead (toward Karna, off-frame), face grave and stern",
+        "Arjuna standing behind him with Gandiva, his face hardening with anger as he remembers",
+        "Draupadi and the hall are narrated only — not drawn",
+        "Exactly two named figures on one chariot"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "night sky, moon or stars",
+        "torches",
+        "Karna",
+        "Shalya",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "Kunti",
+        "Draupadi",
+        "Indra",
+        "Surya as a figure",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "second Arjuna",
+        "flower garland on Arjuna",
+        "peacock feather on Arjuna"
+      ],
+      "props": [
+        "Arjuna's chariot",
+        "reins",
+        "Gandiva",
+        "white horses"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men on one chariot. Krishna the charioteer (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather — not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; no flute, no bow) sits on the driver's seat with the reins in one hand and raises his other hand, pointing ahead toward a foe off-frame, his face grave and stern as he speaks. Behind him stands Arjuna (match the attached Arjuna lock — same face, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on his back, Gandiva bow — but his gold crown is gone: his dark hair is bound with a plain white cloth; no flower garland, no peacock feather), Gandiva in hand, his face hardening with anger as he remembers. White horses, distant ranks only. No woman, no hall, no gods drawn. Bright afternoon daylight of the seventeenth day: warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Karna. No Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.67.1–6 — Vasudeva: 'By good fortune you remember dharma now'; when Draupadi in a single garment was brought into the sabha, at the dice, when you laughed at Krishnaa — where was your dharma? Arjuna is filled with fury remembering it"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva adhyaya 91 (vulgate; colophon: Shri Krishna's warning to Karna and Karna's death) — 'where was your dharma then?'"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §91 — 'By good luck it is, O son of Radha, that thou rememberest virtue!'; 'had caused Draupadi, clad in a single piece of raiment, to be brought into the midst of the assembly'; 'Thou laughedest at Krishna while she stood in the midst of the assembly'"
+        }
+      ]
+    },
+    {
+      "id": "anjalika",
+      "file": "plate-anjalika.jpg",
+      "beat_text": "Karna fights on. Arjuna cuts down his standard, then draws the Anjalika arrow, bright as a sunbeam, and looses it.",
+      "cast_present": [
+        "krishna",
+        "arjuna"
+      ],
+      "locus_master": "episodes/17-karna-fall/stills/_locks/field17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright afternoon daylight (field17 master)",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; the charioteer with the reins",
+        "Arjuna matching the Arjuna lock (Ep 09 face via the Ep 14 lock), dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back, Gandiva — his gold crown is gone, hair bound with a white cloth (Karna Parva: after the serpent arrow) — no flower garland, no peacock feather",
+        "Arjuna draws Gandiva to the ear with the Anjalika arrow — a great arrow with a broad, gleaming, crescent-like head, blazing like a ray of the sun",
+        "Bow, arrow and Arjuna's gaze on one straight line toward Karna, far off-frame to the right (not drawn)",
+        "Krishna at the reins in front, steady, urging him on",
+        "Far in the distance a toppling white elephant's-rope standard — no figures",
+        "Exactly two named figures on one chariot"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "night sky, moon or stars",
+        "torches",
+        "Karna",
+        "Shalya",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "Kunti",
+        "Draupadi",
+        "Indra",
+        "Surya as a figure",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "second Arjuna",
+        "flower garland on Arjuna",
+        "peacock feather on Arjuna"
+      ],
+      "props": [
+        "Gandiva",
+        "Anjalika arrow",
+        "reins",
+        "white horses",
+        "distant falling elephant's-rope standard"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men on one chariot. Arjuna (match the attached Arjuna lock — same face, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on his back, Gandiva bow — but his gold crown is gone: his dark hair is bound with a plain white cloth; no flower garland, no peacock feather) draws Gandiva to the ear with the Anjalika arrow — a great arrow with a broad, gleaming crescent-like head that blazes like a ray of the sun; bow, arrow and his gaze lie on one straight line toward his foe far off-frame to the right. In front, Krishna the charioteer (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather — not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; no flute, no bow) holds the reins steady and turns his head, urging him on. Far in the distance a white elephant's-rope standard topples (no figures). Bright afternoon daylight of the seventeenth day: warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Karna. No Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.67.8–20 — Karna looses the Brahma weapon and strains to free his chariot; Arjuna counters, cuts down the elephant's-housing standard (8.67.12–15), takes the anjalika arrow 'like a supreme ray of the thousand-rayed sun' (8.67.16) and looses it on his oath of truth"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva adhyaya 91 (vulgate) — the standard felled; at Shri Krishna's word Arjuna looses the Anjalika"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §91 — 'Partha took out from his quiver an excellent Anjalika weapon that resembled the thunder of Indra ... possessed of the effulgence of the thousand-rayed Sun'; 'Drawing his bow Gandiva ... Let this shaft ... slay my enemy Karna by that Truth'"
+        }
+      ],
+      "aim_geometry": {
+        "archer": "arjuna",
+        "target": "Karna, far off-frame right (not drawn)",
+        "bow_points_at_target": true,
+        "gaze_at_target": true,
+        "target_distance": "far"
+      }
+    },
+    {
+      "id": "fall",
+      "file": "plate-fall.jpg",
+      "beat_text": "In the afternoon Karna, son of the Sun, falls. A radiant light rises from his body and climbs into the sky.",
+      "cast_present": [
+        "shalya"
+      ],
+      "locus_master": "episodes/17-karna-fall/stills/_locks/field17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field under the low late-afternoon sun (field17 master), deep gold-amber light",
+        "Shalya (Ep 16 lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram — a warrior-king, never a sage",
+        "Karna's chariot stands tilted on its sunken wheel; the warrior's place behind the driver's seat is empty",
+        "Shalya alone on the driver's seat, golden reins slack in his hands, looking up stunned",
+        "A tall radiant column of golden light rises from beside the chariot and climbs into the bright sky toward the sun",
+        "Karna's body is NOT shown — no body, no head, no blood; Arjuna and Krishna are not shown"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "night sky, moon or stars",
+        "torches",
+        "Krishna",
+        "Arjuna",
+        "Karna",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "Kunti",
+        "Draupadi",
+        "Indra",
+        "Surya as a figure",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya",
+        "Karna's body",
+        "Karna on the ground",
+        "a lying warrior"
+      ],
+      "props": [
+        "Karna's empty tilted chariot",
+        "sunken wheel",
+        "golden reins",
+        "white horses",
+        "rising column of golden light"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult man. Karna's chariot stands tilted on its sunken wheel, the warrior's place behind the driver's seat empty. Shalya, king of Madra (match the attached Shalya lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram) sits alone on the driver's seat, golden reins slack in his hands, looking up stunned. From beside the chariot a tall radiant column of golden light rises and climbs into the sky toward the sun. White horses standing still, heads bowed; distant ranks only. No body, no head, no blood. Low late-afternoon sun of the seventeenth day, deep gold-amber light and long shadows — still daytime, NOT night: no moon, no stars, no torches. (The attached Shalya lock is a night portrait; take only his face, crown and armor.) Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. Karna himself is not shown.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.67.24–33 — Karna falls; 'from the body of the fallen Karna a blazing radiance plunged into the sky' and all the warriors saw it (8.67.27); 'in the afternoon' the head of the suta's son fell (8.67.33)"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva adhyaya 91 (vulgate) — 'a radiance went out from Karna's fallen body, spread through the sky and merged into the orb of the sun'; Arjuna strikes 'in the afternoon' (aparahne)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §91 — 'the son of Indra cut off the head of Vaikartana in the afternoon'; 'Then from that body of the fallen Karna a light passing through the welkin penetrated the sun'; §90 calls him 'Surya's son, Karna'"
+        }
+      ]
+    },
+    {
+      "id": "conch",
+      "file": "plate-conch.jpg",
+      "beat_text": "Krishna and Arjuna blow their conchs. Arjuna does not know Karna was Kunti’s firstborn — his own elder brother. Krishna knows.",
+      "cast_present": [
+        "krishna",
+        "arjuna"
+      ],
+      "locus_master": "episodes/17-karna-fall/stills/_locks/field17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field under the low late-afternoon sun (field17 master), deep gold-amber light",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; the charioteer with the reins",
+        "Arjuna matching the Arjuna lock (Ep 09 face via the Ep 14 lock), dark mustache, cream-white dhoti and angavastram, gold belt, quiver on back, Gandiva — his gold crown is gone, hair bound with a white cloth (Karna Parva: after the serpent arrow) — no flower garland, no peacock feather",
+        "Arjuna lifts his conch Devadatta to his lips in victory, Gandiva lowered",
+        "Krishna, reins looped over the chariot rail, blows his conch Panchajanya with both hands — his eyes grave and knowing, turned toward the far field where Karna fell",
+        "Kunti and Karna are narrated only — not drawn",
+        "Exactly two named figures on one chariot"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "night sky, moon or stars",
+        "torches",
+        "Karna",
+        "Shalya",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "Kunti",
+        "Draupadi",
+        "Indra",
+        "Surya as a figure",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "second Arjuna",
+        "flower garland on Arjuna",
+        "peacock feather on Arjuna"
+      ],
+      "props": [
+        "two white conchs (Panchajanya, Devadatta)",
+        "reins looped on the chariot rail",
+        "Gandiva lowered",
+        "white horses"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men on one chariot. Arjuna (match the attached Arjuna lock — same face, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on his back, Gandiva bow — but his gold crown is gone: his dark hair is bound with a plain white cloth; no flower garland, no peacock feather) lifts his white conch Devadatta to his lips in victory, Gandiva lowered in his other hand. Beside him, Krishna the charioteer (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather — not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; no flute, no bow), the reins looped over the chariot rail, blows his white conch Panchajanya with both hands, his eyes grave and knowing, turned toward the far field. White horses, distant cheering ranks only. No body, no other named figures. Low late-afternoon sun of the seventeenth day, deep gold-amber light and long shadows — still daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Karna. No Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.68 — Arjuna's victory is proclaimed by Panchajanya and Devadatta; Udyoga Parva 5.138–139 — Krishna tells Karna he is Kunti's son, born before her marriage; Stri Parva 11.27 — only after the war does Kunti tell her sons that Karna was their eldest brother"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva adhyaya 91 (vulgate) — Shri Krishna and Arjuna, and the twins, blow their conchs; Udyoga Parva (Krishna–Karna samvada) and Stri Parva (Kunti's disclosure)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §91 — 'Krishna and Dhananjaya also, filled with delight ... blew their conchs'; Udyoga Parva §140 — Krishna to Karna: 'thou art ... the son of Kunti'; Stri Parva §27 — Kunti: 'He was your eldest brother'"
+        }
+      ]
+    }
+  ],
+  "poster": {
+    "file": "poster.jpg",
+    "cast_present": [
+      "karna",
+      "krishna",
+      "arjuna"
+    ],
+    "prompt": "Premium painted comic Amar Chitra poster, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult men. In the left foreground Karna, king of Anga (match the attached Karna lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, gold-backed Vijaya bow; no peacock feather, no divine kavacha) stands on foot in the dust, both hands gripping the rim of his deeply sunken chariot wheel, face turned up in defiance. On the right, on a chariot drawn by white horses, Krishna the charioteer (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather — not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; no flute, no bow) holds the reins, and behind him Arjuna (match the attached Arjuna lock — same face, dark mustache, cream-white dhoti and angavastram, gold belt, quiver on his back, Gandiva bow — but his gold crown is gone: his dark hair is bound with a plain white cloth; no flower garland, no peacock feather) draws Gandiva with a gleaming arrow, bow, arrow and gaze on one straight line toward Karna. Strong diagonal composition with clear headroom for a title. Bright afternoon daylight of the seventeenth day: warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches (the attached Karna and Shalya locks are night portraits; take only their faces, crowns and armor, never their night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark.",
+    "note": "Poster = Ep 17 thesis (the sunken wheel: Karna on the ground, Arjuna on the chariot, Krishna at the reins). If a separate poster pass is cut, copy the GATE C-passed plate-plea.jpg."
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Karna Parva · seventeenth day of Kurukshetra · the Karna–Arjuna dvairatha, the serpent-mouthed arrow, the sunken chariot wheel, Krishna's rebuke and Karna's fall (karna-vadha)",
+    "bori": "BORI CE Karna Parva, Debroy translation vol. 7: 8.63 the two chariots meet, beings take sides; 8.64–8.65 the duel (Ashvatthama's plea for peace, not depicted); 8.66.5–19 the serpent-mouthed arrow, Shalya's advice and 'Karna does not fix an arrow twice' (8.66.8), Krishna presses the chariot down, the crown falls, Arjuna binds his hair with a white cloth; 8.66.42 the wheel sinks through the Brahmin's curse and Rama's weapon is not recalled; 8.66.59–65 Karna's plea; 8.67.1–6 Vasudeva's rebuke; 8.67.12–20 the standard felled and the anjalika loosed; 8.67.24–33 Karna falls in the afternoon, his radiance enters the sky; 8.68 conchs and Shalya's return. Background: 8.29 the curses; Udyoga 5.138–139 Krishna tells Karna his birth; Stri 11.27 Kunti's disclosure.",
+    "gita_press": "Gita Press Gorakhpur Mahabharata (Hindi, Karna Parva, vulgate numbering = Ganguli): adhyaya 87 the meeting and the gods taking sides; adhyaya 90 the sarpamukha arrow, Shalya's advice, Krishna sinking the chariot, the kirita lost, the Brahmana's curse and the stuck wheel (colophon: Karna's chariot wheel caught in the earth); adhyaya 91 Shri Krishna's warning (where was dharma then?), the standard cut, the Anjalika, Karna's death in the afternoon (aparahne), his radiance merging into the sun's orb, and the conchs of Krishna and Arjuna.",
+    "ganguli": "K.M. Ganguli, Karna Parva §87 (meeting; Surya and Shakra take sides), §90 (serpent arrow; 'Karna never aimeth an arrow twice'; car pressed down a cubit; diadem lost; white cloth; Brahmana's curse; brahmastra forgotten; left wheel devoured; 'wait for a moment'), §91 (Krishna's rebuke; standard cut; Anjalika 'possessed of the effulgence of the thousand-rayed Sun'; 'cut off the head of Vaikartana in the afternoon'; 'a light passing through the welkin penetrated the sun'; conchs). Background: §42 the curses; Udyoga §140 Krishna's disclosure; Stri §27 Kunti's.",
+    "divergence": "Which wheel: the vulgate (Ganguli §90, Gita Press 90) has the earth devour the LEFT wheel; BORI CE 8.66.61 speaks of the wheel generically / the 'middle' — we narrate only 'Karna's wheel' and paint the near (left) wheel. Karna's radiance: CE 8.67.27 says it plunged into the sky; the vulgate says it entered the sun's orb — we narrate 'climbs into the sky' and only paint the light rising toward the sun, calling Karna 'son of the Sun' (both editions). Krishna's rebuke: the vulgate adds Abhimanyu's killing to the list; CE does not — we narrate only Draupadi in a single cloth and the laughter, which both carry. Omitted for length: Vrishasena's death (8.62), Ashvatthama's plea for peace (8.64), Bhima–Dushasana (8.61), the Ashvasena naga's second attempt, and the weapon-for-weapon exchanges after the wheel sinks. Karna's beheading is narrated as 'Karna falls' — no head, no body on any plate.",
+    "chosen": "Gita Press + BORI/Debroy overlap: the meeting with heaven taking sides, the serpent-mouthed arrow with Shalya's advice and Karna's refusal to aim twice, Krishna pressing the chariot down so the arrow takes only the crown, the wheel seized by the earth through the Brahmin's curse with Parashurama's weapon forgotten, Karna's plea, Krishna's rebuke over Draupadi, the standard cut and the Anjalika like a sunbeam, the fall in the afternoon with a light rising, and the victory conchs. Ganguli for English wording. Kunti's secret per Udyoga (Krishna knows) and Stri (Arjuna learns after the war).",
+    "notes": "Not TV. Comic-mythology only; no gore, no bodies, no severed head. Draupadi, Kunti, Surya, Indra, the cursing Brahmin and Parashurama are narrated only, never drawn. Krishna = Ep 04 lock (official, Avinash 2026-10-05); Arjuna = Ep 14/15 lock (crown until beat crown, white cloth after); Karna = Ep 13 lock via Ep 16; Shalya = Ep 16 lock. One new scene master (field17, afternoon daylight). Never attach Ep01 plate-wide-gold or any finished plate as an Imagine ref. Picks up Ep 16's end line; Shalya's command (eighteenth day) is Ep 18."
+  },
+  "stills_status": "not generated — PROMPTS.md prepared at stills/_inbox/consumer-imagine/PROMPTS.md (SuperGrok consumer path)"
+}

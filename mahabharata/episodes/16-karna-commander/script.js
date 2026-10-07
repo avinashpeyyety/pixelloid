@@ -16,7 +16,7 @@
  *
  * Audio: orion-00…08 rendered 2026-10-05 with free local Kokoro-82M bm_george (tools/render_local_voice.sh,
  * speed 0.9); PRONOUNCE adds Shalya/Madra/makara/Tripura/Brahma. Longest clip 10.58 s (orion-04) — all fit the
- * 12 s grid (≥1.4 s gap), no retime. Stills NOT generated yet (SuperGrok prompt pack in stills/_inbox/consumer-imagine/).
+ * 12 s grid (≥1.4 s gap), no retime. Stills: SuperGrok consumer import 2026-10-06 (2 masters + Shalya lock + 9 plates + poster, 1728×1152), GATE C PASS.
  * Music: Raga Adana preset (js/main.js RAGA_PRESETS.adana) — never default flute+tabla.
  */
 export const EPISODE = {

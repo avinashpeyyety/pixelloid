@@ -355,6 +355,18 @@ const RAGA_PRESETS = {
     duckLevel: 0.14,
     tanpuraMs: 1400,
   },
+  adana: {
+    // Adana (Asavari/Kafi family, Kanada anga) — heroic late-night cousin of Darbari: komal Ga/Dha/Ni, uttaranga-heavy,
+    // bold and brisk with NO slow andolan (that is Darbari's). Sparse bansuri, no tabla.
+    Sa: 138.59, // C#3 — a step above Bhairav/Yaman C3, brighter than Darbari's A2 mandra
+    fluteSa: 277.18,
+    degrees: ["S", "R", "g", "m", "P", "d", "n"],
+    tabla: "none",
+    voice: "bansuri",
+    bedLevel: 0.46,
+    duckLevel: 0.15,
+    tanpuraMs: 1100,
+  },
   default: {
     // eps 01–08 — keep close to old FluteTablaBed so they don't jump
     Sa: 293.66,
@@ -399,6 +411,7 @@ class RagaBed {
       else if (id === "13") key = "malkauns";
       else if (id === "14") key = "todi";
       else if (id === "15") key = "shree";
+      else if (id === "16") key = "adana";
       else key = "default";
     }
     if (!RAGA_PRESETS[key]) key = "default";

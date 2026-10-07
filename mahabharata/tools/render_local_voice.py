@@ -89,6 +89,12 @@ PRONOUNCE: dict[str, str] = {
     # Ep15 The Narayana Weapon (Drona Parva, fifteenth-day afternoon)
     "Narayana": "Naa-raa-yana",
     "Gandiva": "Gaan-deeva",
+    # Ep16 Karna Takes Command (Karna Parva, sixteenth/seventeenth day)
+    "Shalya": "Shull-ya",
+    "Madra": "Mud-ra",
+    "makara": "mucker-a",
+    "Tripura": "Tri-poora",
+    "Brahma": "Brah-maa",
 }
 
 

@@ -41,6 +41,14 @@ Codify the 12-step WORKFLOW as a **repeatable pipeline for Ep 15+** (and any gre
 
 **FAIL** at steps 2, 4, 6, or 11 **blocks** Imagine commit, 3D ship, and publish (same as WORKFLOW).
 
+### Track B status
+
+| Ep | Title | Branch | Status |
+|----|-------|--------|--------|
+| 15 | *The Narayana Weapon* | `studio/ep15-narayanastra` → `main` | **SHIPPED** 2026-10-05 |
+| 16 | *Karna Takes Command* (`16-karna-commander`, Karna Parva) | `studio/ep16-karna-commander` | **In progress, awaiting SuperGrok plates.** Steps 1–4 + 10 done (script, GATE D-dialogue PASS, cast/bible, GATE A/B PASS, Kokoro bm_george TTS, Raga Adana). Step 5 waits on Avinash's SuperGrok drop of 13 images (`stills/_inbox/consumer-imagine/PROMPTS.md`). Not registered in `js/episodes.js`. |
+| 17 | Karna–Arjuna duel / Karna's fall (planned) | — | Queued after Ep 16 ships |
+
 ### Pipeline checklist doc (factory deliverable)
 
 Produce a short checklist under `docs/` (or expand this file’s Track B table into a printable `PIPELINE_CHECKLIST.md`) so Ep 15+ runs the same sequence without re-deriving gates. Exit: every step has owner, command/path, and PASS artifact name.
@@ -102,4 +110,4 @@ Until then, canonical narrator for **new** episodes is **Kokoro `bm_george`** (`
 ## Weekly tally
 
 - ISO week 2026-09-28 → 2026-10-04 (Mon–Sun CT): shipped Ep 04 (*The Akshayapatra*, 10-02), Ep 14 (*The Fall of Drona*, 10-02), Ep 05 (*Yaksha Prashna*, 10-03), Ep 06 (*The Kirata*, 10-03), Ep 07 (*Jayadratha*, 10-04), Ep 08 (*The Peace Embassy*, 10-04) — **6** (beats ≥3 target and stretch 4). 01–08 ladder complete. *(Corrected 2026-10-04: earlier lines split this one ISO week into "09-29" and "10-03" buckets.)*
-- ISO week 2026-10-05 → 2026-10-11: shipped Ep 15 (*The Narayana Weapon*, 10-05) — **1** so far (target ≥3; stretch 4). Next: Ep 16 (Karna as commander, Karna Parva; Track B).
+- ISO week 2026-10-05 → 2026-10-11: shipped Ep 15 (*The Narayana Weapon*, 10-05) — **1** so far (target ≥3; stretch 4). Next: Ep 16 (Karna as commander, Karna Parva; Track B) — in progress on `studio/ep16-karna-commander`, awaiting SuperGrok plates.

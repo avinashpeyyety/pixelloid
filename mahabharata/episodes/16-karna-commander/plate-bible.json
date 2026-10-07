@@ -1,0 +1,743 @@
+{
+  "episode_id": "16",
+  "strict_hero_lock": "arjuna",
+  "title": "Karna Takes Command",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Karna face/body locked to Ep 13",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/16-karna-commander/stills/_locks/camp16-master.jpg",
+  "scene_lock_refs": {
+    "camp16-master": "episodes/16-karna-commander/stills/_locks/camp16-master.jpg",
+    "dawn17-master": "episodes/16-karna-commander/stills/_locks/dawn17-master.jpg"
+  },
+  "scene_master_prompt": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The Kaurava war-camp at the edge of Kurukshetra by night: rich striped war-tents, a carved consecration seat and golden water-jars under a canopy, a great empty chariot with white horses tethered nearby, torches and oil lamps casting warm saffron-gold light against an indigo night sky with stars, distant tent-lines and banners. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for figures to be placed later. No people in the foreground. Not photoreal. No Drona. No flute. No gore. No English text.",
+  "scene_master_prompts": {
+    "camp16-master": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The Kaurava war-camp at the edge of Kurukshetra by night: rich striped war-tents, a carved consecration seat and golden water-jars under a canopy, a great empty chariot with white horses tethered nearby, torches and oil lamps casting warm saffron-gold light against an indigo night sky with stars, distant tent-lines and banners. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for figures to be placed later. No people in the foreground. Not photoreal. No Drona. No flute. No gore. No English text.",
+    "dawn17-master": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The Kurukshetra field at sunrise: empty foreground of golden dust and wheel-ruts (no bodies), distant ranks and many banners on the horizon under a rose-saffron-gold sunrise sky with soft haze, a few birds high in the sky. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for a chariot and figures to be placed later. No people in the foreground. Not photoreal. No Drona. No flute. No gore. No English text."
+  },
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/16-karna-commander/stills/_locks/camp16-master.jpg",
+    "episodes/16-karna-commander/stills/_locks/dawn17-master.jpg",
+    "episodes/16-karna-commander/stills/_locks/karna.jpg",
+    "episodes/16-karna-commander/stills/_locks/duryodhana.jpg",
+    "episodes/16-karna-commander/stills/_locks/ashwatthama.jpg",
+    "episodes/16-karna-commander/stills/_locks/shalya.jpg"
+  ],
+  "character_lock_refs": {
+    "karna": "episodes/16-karna-commander/stills/_locks/karna.jpg",
+    "duryodhana": "episodes/16-karna-commander/stills/_locks/duryodhana.jpg",
+    "ashwatthama": "episodes/16-karna-commander/stills/_locks/ashwatthama.jpg",
+    "shalya": "episodes/16-karna-commander/stills/_locks/shalya.jpg"
+  },
+  "local_lock_plan": {
+    "copy_forward": {
+      "karna": "episodes/13-ghatotkacha/stills/_locks/karna.jpg (byte copy; Anga diadem, gold-crimson armor, crimson cape, Vijaya bow)",
+      "duryodhana": "episodes/13-ghatotkacha/stills/_locks/duryodhana.jpg (byte copy; same file as Ep 15's)",
+      "ashwatthama": "episodes/15-narayanastra/stills/_locks/ashwatthama.jpg (byte copy; forehead jewel)"
+    },
+    "new": {
+      "camp16-master": "scene master #1 — Kaurava camp by night (beats anoint, ask, outrage, tripura); generate first (grok.com beauty pass)",
+      "dawn17-master": "scene master #2 — Kurukshetra at sunrise (beats makara, reins, boast, crow, secret, poster)",
+      "shalya": "new face — first appearance on a plate in the series; generate solo 3:2 lock from the camp master"
+    },
+    "not_needed": "No Krishna, Arjuna, Yudhishthira or Bhima on any Ep 16 plate (narrated only), so their locks are not copied forward; Ep 17 (the duel) will need krishna (Ep 09) + arjuna (Ep 14/15).",
+    "note": "stills_review.py (GATE C) requires episodes/16-karna-commander/stills/_locks/<id>.jpg for every face on a plate; copy-forward locks are byte copies of the series locks above, not new art."
+  },
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "karna": {
+      "face": "Adult king of Anga, proud dark mustache, sun-warmed skin, resolute dark eyes — same face as the Ep 13 lock (episodes/13-ghatotkacha/stills/_locks/karna.jpg); distinct from Arjuna",
+      "hair": "Long dark hair under a tall jeweled gold Anga diadem with a red gem (not Arjuna's heavy crown, never a peacock feather)",
+      "costume": "Deep gold and crimson engraved armor, crimson cape, gold armlets, Vijaya bow (gold-backed great bow) — no divine kavacha / no glowing natural armor, never flower garland, never Krishna's pitambar. His chariot: white horses the hue of cranes, white standard bearing the elephant's-rope (hasti-kakshya) device"
+    },
+    "shalya": {
+      "face": "Mature king of Madra, maternal uncle of the Pandava twins: strong weathered face, thick dark mustache and short dark beard streaked with grey, proud heavy brows, fierce dark eyes — a seasoned warrior-king, never a sage, never fully white-bearded, never frail",
+      "hair": "Dark hair streaked with grey under a tall silver-and-gold Madra crown (no peacock feather, no saffron topknot)",
+      "costume": "Deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram, gold armlets; as charioteer he holds the golden reins and a charioteer's goad; his own banner is a golden ploughshare — never saffron sage robes, never flower garland"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava king, proud upswept mustache, fierce gaze (Ep 13 lock)",
+      "hair": "Dark hair under a tall jeweled Kuru crown",
+      "costume": "Jewel-tone gold Kaurava armor with saffron-orange cape, gold-decked mace — field king, not a sage (distinct from Karna's crimson armor and Anga diadem)"
+    },
+    "ashwatthama": {
+      "face": "Young adult Brahmin-warrior, the guru's son: noble lean face, dark mustache, intense dark eyes; a luminous jewel (mani) set in the middle of his forehead — his one unmistakable token (Ep 15 lock); never a child, never white-bearded",
+      "hair": "Dark hair tied back under a slim bronze-gold warrior band (no royal crown, no peacock feather, no saffron topknot)",
+      "costume": "Deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti, great bow — no saffron sage robes, no flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore, no bodies"
+    }
+  },
+  "plates": [
+    {
+      "id": "anoint",
+      "file": "plate-anoint.jpg",
+      "beat_text": "Night of the fifteenth day. Drona has fallen. At Ashwatthama’s word, Duryodhana anoints Karna commander of the Kaurava host.",
+      "cast_present": [
+        "karna",
+        "duryodhana",
+        "ashwatthama"
+      ],
+      "locus_master": "episodes/16-karna-commander/stills/_locks/camp16-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Torchlit Kaurava camp on the night after the battle (this episode's camp master): indigo night inside the cartouche, warm saffron-gold torch and lamp light",
+        "Karna (Ep 13 lock): adult king of Anga, proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow — no peacock feather, no divine kavacha, no flower garland; not Arjuna",
+        "Duryodhana (Ep 13 lock): proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor with saffron-orange cape, gold-decked mace — distinct from Karna",
+        "Ashwatthama (Ep 15 lock): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, dark mustache, slim bronze-gold band, deep maroon and bronze-gold armor, white sacred thread — never white-bearded",
+        "Karna seated on a consecration seat, being anointed commander: Duryodhana pours sanctified water over him from a golden jar",
+        "Ashwatthama stands beside them, hand raised in counsel — he proposed Karna",
+        "Lamps, golden and earthen water-jars, a few distant kings and Brahmins as small background figures",
+        "Karna radiant 'like a second sun' — a soft gold glow on him, not a halo of fire"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Shalya",
+        "peacock feather on Karna",
+        "divine kavacha on Karna",
+        "white beard on Ashwatthama",
+        "child Ashwatthama"
+      ],
+      "props": [
+        "golden consecration jar",
+        "sanctified water",
+        "consecration seat",
+        "lamps and torches"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly three adult men in the torchlit Kaurava camp at night. Karna, king of Anga (Ep 13 lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow resting beside him), sits on a carved consecration seat, head bowed, as Duryodhana the Kaurava king (Ep 13 lock: proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor, saffron-orange cape) pours sanctified water over him from a golden jar. Ashwatthama, the guru's son (Ep 15 lock: young adult Brahmin-warrior, luminous jewel in the middle of his forehead, dark mustache, deep maroon and bronze-gold armor, white sacred thread), stands beside them, one hand raised in counsel. Lamps and golden and earthen water-jars; distant kings as small background figures. Karna glows softly like a second sun. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No Arjuna. No Drona. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.6 (Karna-senapatya-abhisheka) — after Drona's fall the Kauravas take counsel at evening; Ashvatthama proposes Karna as senapati; Duryodhana consecrates him with sanctified water"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva (opening adhyayas, vulgate) — Ashvatthama's counsel and Karna's abhisheka as commander of the Kaurava army"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §10 — 'the preceptor's son ... said ... we shall install Karna ... in the command of the army'; Duryodhana and the kings install him 'with golden and earthen jars filled to the brim with water'"
+        }
+      ]
+    },
+    {
+      "id": "makara",
+      "file": "plate-makara.jpg",
+      "beat_text": "At sunrise Karna draws the host into the makara, the sea-beast array, himself at its snout. Dusk falls with no victory.",
+      "cast_present": [
+        "karna"
+      ],
+      "locus_master": "episodes/16-karna-commander/stills/_locks/dawn17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Kurukshetra field at dawn (this episode's dawn master): rose-saffron-gold sunrise haze, distant ranks and banners only",
+        "Karna (Ep 13 lock): adult king of Anga, proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow — no peacock feather, no divine kavacha, no flower garland; not Arjuna",
+        "Karna alone on his great chariot at the snout of the makara array, blowing his conch, Vijaya bow raised",
+        "Chariot: white horses the hue of cranes, white standard with the elephant's-rope device",
+        "Behind him, distant ranks drawn up in the long curving shape of a makara (sea-beast) — banners only, as a vast silhouette",
+        "Sixteenth-day sunrise; later dusk is narrated, not drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Shalya",
+        "Duryodhana",
+        "Ashwatthama",
+        "peacock feather on Karna",
+        "divine kavacha on Karna"
+      ],
+      "props": [
+        "Karna's chariot",
+        "white horses",
+        "white standard with elephant's-rope device",
+        "conch",
+        "Vijaya bow",
+        "makara-shaped distant array"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium: Karna, king of Anga (Ep 13 lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape), stands alone on his great chariot at the very snout of the Kaurava army, blowing a conch, Vijaya bow raised in his other hand. His chariot is drawn by white horses the hue of cranes under a white standard bearing the elephant's-rope device. Behind him the distant host is drawn up in the long curving shape of a makara, the sea-beast array — banners and silhouettes only. Rose-saffron-gold sunrise haze over Kurukshetra. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No Arjuna. No Drona. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.7 — at sunrise Karna appears in his chariot with white banner and forms the makara-vyuha, himself at its head; the sixteenth day's fighting (8.7–8.21) closes at sunset without a Kaurava victory"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva (vulgate) — Karna's makara-vyuha on the sixteenth day and the day's close"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §11 — 'Having arrayed the troops in the makara array ... In the tip of the beak of that makara ... was stationed Karna himself'; steeds 'of the hue of cranes', 'the device of the elephants' rope'; §30 — at sunset the Kauravas withdraw"
+        }
+      ]
+    },
+    {
+      "id": "ask",
+      "file": "plate-ask.jpg",
+      "beat_text": "That night Karna tells Duryodhana: “Arjuna has Krishna at his reins. Give me Shalya — his equal with horses — and I will win.”",
+      "cast_present": [
+        "karna",
+        "duryodhana"
+      ],
+      "locus_master": "episodes/16-karna-commander/stills/_locks/camp16-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Torchlit Kaurava camp on the night after the battle (this episode's camp master): indigo night inside the cartouche, warm saffron-gold torch and lamp light",
+        "Karna (Ep 13 lock): adult king of Anga, proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow — no peacock feather, no divine kavacha, no flower garland; not Arjuna",
+        "Duryodhana (Ep 13 lock): proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor with saffron-orange cape, gold-decked mace — distinct from Karna",
+        "Inside a torchlit Kaurava war-tent at night: Karna, intense and earnest, speaks to Duryodhana",
+        "Karna holds out a pair of golden chariot reins in one fist toward Duryodhana — asking for a charioteer",
+        "Duryodhana listening, leaning in, hopeful",
+        "Only these two named figures"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Shalya",
+        "Ashwatthama",
+        "peacock feather on Karna",
+        "divine kavacha on Karna"
+      ],
+      "props": [
+        "golden chariot reins in Karna's hand",
+        "war-tent lamps",
+        "Vijaya bow leaning on a stand"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly two adult men inside a torchlit Kaurava war-tent at night. Karna (Ep 13 lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape) speaks earnestly, holding out a pair of golden chariot reins in one fist toward Duryodhana — asking for a charioteer. Duryodhana the Kaurava king (Ep 13 lock: proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor, saffron-orange cape) leans in, listening, hope rising. Lamps glow; Vijaya bow leans on a stand. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No Arjuna. No Drona. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.22 — that night Karna weighs himself against Arjuna: his Vijaya bow is the equal, but Arjuna has Krishna as charioteer; he asks Duryodhana for Shalya, the equal of Krishna in horse-lore"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva (vulgate) — Karna to Duryodhana: Shri Krishna is Arjuna's sarathi; let Shalya be mine"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §31 — 'The holder of the reins (of his steeds) is he of Dasharha's race ... This Shalya, however ... is equal to Saurin. If he becomes my driver, victory will certainly be thine'"
+        }
+      ]
+    },
+    {
+      "id": "outrage",
+      "file": "plate-outrage.jpg",
+      "beat_text": "Duryodhana asks Shalya, king of Madra. Shalya flares in fury: “Shall a crowned king drive the chariot of a charioteer’s son?”",
+      "cast_present": [
+        "shalya",
+        "duryodhana"
+      ],
+      "locus_master": "episodes/16-karna-commander/stills/_locks/camp16-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Torchlit Kaurava camp on the night after the battle (this episode's camp master): indigo night inside the cartouche, warm saffron-gold torch and lamp light",
+        "Shalya (this episode's NEW lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram — a warrior-king, never a sage",
+        "Duryodhana (Ep 13 lock): proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor with saffron-orange cape, gold-decked mace — distinct from Karna",
+        "Shalya on his feet, brows drawn into three lines, eyes red with wrath, one arm flung out in refusal — about to leave",
+        "Duryodhana before him, hands joined, asking",
+        "Behind them in the torchlit camp stands Karna's empty chariot with white horses — the chariot Shalya refuses to drive",
+        "Only these two named figures"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Karna",
+        "Ashwatthama",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya"
+      ],
+      "props": [
+        "Karna's empty chariot in the background",
+        "torches",
+        "Shalya's mace twined with cords at his side"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly two adult men in the torchlit Kaurava camp at night. Shalya, king of Madra (this episode's lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram), rises in fury — brows drawn into three lines, eyes red with wrath, one arm flung out in refusal, his gold mace at his side. Duryodhana the Kaurava king (Ep 13 lock: proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor, saffron-orange cape) stands before him with joined hands, asking. Behind them, Karna's empty chariot with white horses waits in the torchlight. Nobody else in the foreground. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No Arjuna. No Drona. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.23 — Duryodhana asks Shalya to be Karna's sarathi; Shalya, angered, holds it an insult that a consecrated king should drive a suta's son, and threatens to leave"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva (vulgate) — Shalya's wrath at being asked to drive the chariot of a sutaputra"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §32 — 'Shalya became filled with rage. Contracting his brow into three lines ... rolling his large eyes red in wrath ... why dost thou appoint me to the office of driver ... for such a low-born person?'"
+        }
+      ]
+    },
+    {
+      "id": "tripura",
+      "file": "plate-tripura.jpg",
+      "beat_text": "Duryodhana tells him of Tripura: when Shiva rode to burn the three cities, Brahma himself held the reins. The driver is the greater.",
+      "cast_present": [
+        "duryodhana",
+        "shalya"
+      ],
+      "locus_master": "episodes/16-karna-commander/stills/_locks/camp16-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Torchlit Kaurava camp on the night after the battle (this episode's camp master): indigo night inside the cartouche, warm saffron-gold torch and lamp light",
+        "Duryodhana (Ep 13 lock): proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor with saffron-orange cape, gold-decked mace — distinct from Karna",
+        "Shalya (this episode's NEW lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram — a warrior-king, never a sage",
+        "Duryodhana bowing his head, offering a pair of golden reins to Shalya with both hands",
+        "Shalya listening, wrath cooling into proud consideration, hand on his chest",
+        "Night camp, lamps; Shiva, Brahma and the three cities are narrated only — not drawn",
+        "Only these two named figures"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Karna",
+        "Ashwatthama",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya",
+        "Shiva",
+        "Brahma",
+        "burning cities"
+      ],
+      "props": [
+        "golden reins offered in Duryodhana's hands",
+        "lamps"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly two adult men in the lamplit Kaurava camp at night. Duryodhana the Kaurava king (Ep 13 lock: proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor, saffron-orange cape) bows his head and offers a pair of golden chariot reins to Shalya with both hands, telling an ancient tale. Shalya, king of Madra (this episode's lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold armor), listens with one hand on his chest, his wrath cooling into proud consideration. No gods drawn; no cities drawn. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No Arjuna. No Drona. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.24–8.25 — Duryodhana narrates the burning of Tripura, where Brahma was Shiva's charioteer, and argues the driver must be greater than the warrior"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva (vulgate, Tripura-vadha akhyana) — Brahma as Rudra's sarathi at Tripura; Duryodhana's appeal to Shalya"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §33–35 — the three cities (§33); 'make him my driver who is superior to me' (§34); 'Even thus did ... Brahman act as driver ... The driver of the car, O hero, should be superior to the warrior on it' (§35)"
+        }
+      ]
+    },
+    {
+      "id": "reins",
+      "file": "plate-reins.jpg",
+      "beat_text": "Shalya agrees — on one condition: he may say whatever he likes to Karna. At dawn of the seventeenth day he takes the reins.",
+      "cast_present": [
+        "shalya",
+        "karna"
+      ],
+      "locus_master": "episodes/16-karna-commander/stills/_locks/dawn17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Kurukshetra field at dawn (this episode's dawn master): rose-saffron-gold sunrise haze, distant ranks and banners only",
+        "Shalya (this episode's NEW lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram — a warrior-king, never a sage",
+        "Karna (Ep 13 lock): adult king of Anga, proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow — no peacock feather, no divine kavacha, no flower garland; not Arjuna",
+        "Dawn of the seventeenth day: Shalya mounts the driver's seat of Karna's chariot and takes up the golden reins and goad",
+        "Karna stands behind him on the chariot with the Vijaya bow, cheerful and ready",
+        "White horses the hue of cranes, white standard with the elephant's-rope device",
+        "Only these two named figures"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya",
+        "peacock feather on Karna",
+        "divine kavacha on Karna"
+      ],
+      "props": [
+        "golden reins",
+        "charioteer's goad",
+        "Karna's chariot",
+        "white horses",
+        "white standard with elephant's-rope device"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly two adult men on one great chariot at dawn. Shalya, king of Madra (this episode's lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold armor), sits in the driver's seat at the front and gathers the golden reins and a charioteer's goad. Karna (Ep 13 lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson armor, crimson cape) stands tall behind him with the Vijaya bow, cheerful and ready. White horses the hue of cranes; white standard with the elephant's-rope device. Rose-saffron-gold sunrise over Kurukshetra, distant ranks only. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No Arjuna. No Drona. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.25–8.26 — Shalya accepts on condition that whatever he says to Karna, pleasing or not, be borne; at the next morning he mounts Karna's chariot as sarathi"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva (vulgate) — Shalya's condition that he may speak freely; Shalya becomes Karna's charioteer"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §35–36 — 'I will utter whatever words I may wish, in this one's presence' (§35); 'When the morning came ... Shalya, answering, \"So be it\" ascended the car' (§36)"
+        }
+      ]
+    },
+    {
+      "id": "boast",
+      "file": "plate-boast.jpg",
+      "beat_text": "Karna calls to the ranks: “Whoever shows me Arjuna shall have jewels, a hundred cows, and a chariot of gold!”",
+      "cast_present": [
+        "karna",
+        "shalya"
+      ],
+      "locus_master": "episodes/16-karna-commander/stills/_locks/dawn17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Kurukshetra field at dawn (this episode's dawn master): rose-saffron-gold sunrise haze, distant ranks and banners only",
+        "Karna (Ep 13 lock): adult king of Anga, proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow — no peacock feather, no divine kavacha, no flower garland; not Arjuna",
+        "Shalya (this episode's NEW lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram — a warrior-king, never a sage",
+        "Karna standing tall on the moving chariot, one arm flung out toward the ranks, calling his challenge",
+        "Shalya at the reins in front, driving, lips curled — not yet speaking",
+        "White horses at a canter, elephant's-rope standard streaming",
+        "Only these two named figures; Arjuna is NOT shown"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "peacock feather on Karna",
+        "divine kavacha on Karna",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya"
+      ],
+      "props": [
+        "Karna's chariot",
+        "golden reins",
+        "white horses",
+        "Vijaya bow"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly two adult men on one chariot rolling forward at dawn. Karna (Ep 13 lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson armor, crimson cape) stands tall, Vijaya bow in one hand, the other arm flung out toward the ranks as he calls out his challenge and promise of rewards. Shalya (this episode's lock: mature king of Madra, dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold armor) drives in front with the golden reins, lips curled in scorn. White horses at a canter, elephant's-rope standard streaming, distant ranks only. Rose-saffron-gold morning haze. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No Arjuna. No Drona. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.27 — as he advances Karna proclaims wealth, chariots, cattle and more for whoever shows him Arjuna"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva (vulgate) — Karna's proclamation of gifts to whoever points out Arjuna"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §38 — 'Unto him that will today point out ... Dhananjaya ... a cart-load of jewels and gems ... a century of kine ... another foremost of cars, made of gold'"
+        }
+      ]
+    },
+    {
+      "id": "crow",
+      "file": "plate-crow.jpg",
+      "beat_text": "Shalya laughs in scorn. “A crow once raced a swan across the sea — and had to be carried home by the swan.”",
+      "cast_present": [
+        "shalya",
+        "karna"
+      ],
+      "locus_master": "episodes/16-karna-commander/stills/_locks/dawn17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Kurukshetra field at dawn (this episode's dawn master): rose-saffron-gold sunrise haze, distant ranks and banners only",
+        "Shalya (this episode's NEW lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram — a warrior-king, never a sage",
+        "Karna (Ep 13 lock): adult king of Anga, proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow — no peacock feather, no divine kavacha, no flower garland; not Arjuna",
+        "Shalya half-turned on the driver's seat, laughing in scorn back at Karna, reins in his fists",
+        "Karna glaring down at him, jaw set, bow gripped",
+        "High in the dawn sky, a single white swan flies strong ahead of a small tired black crow — the parable as a quiet sign",
+        "Only these two named figures"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya",
+        "peacock feather on Karna",
+        "divine kavacha on Karna"
+      ],
+      "props": [
+        "golden reins",
+        "Karna's chariot",
+        "a white swan and a black crow high in the sky"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly two adult men on one chariot at dawn. Shalya (this episode's lock: mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold armor) half-turns on the driver's seat, golden reins in his fists, laughing in scorn back at Karna. Karna (Ep 13 lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson armor, crimson cape) glares down at him, jaw set, Vijaya bow gripped. High in the rose-gold dawn sky, a single white swan flies strong and far ahead of a small tired black crow. Distant ranks only. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No Arjuna. No Drona. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.27–8.28 — Shalya scorns Karna's boasts, then tells the crow and the swan: the crow, puffed up by scraps, races a swan over the ocean, falls exhausted and is carried back to land by the swan"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Karna Parva (vulgate, kaka-hamsa drishtanta) — Shalya's parable of the crow and the swan"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §38, §41 — 'the ruler of the Madras, laughing in scorn' (§38); the crow 'very much fatigued, suddenly fell down' upon the ocean and the swan bears him back to shore (§41)"
+        }
+      ]
+    },
+    {
+      "id": "secret",
+      "file": "plate-secret.jpg",
+      "beat_text": "Karna rides on; he knows who Krishna and Arjuna are. He does not know that Shalya once promised Yudhishthira to break his spirit.",
+      "cast_present": [
+        "karna",
+        "shalya"
+      ],
+      "locus_master": "episodes/16-karna-commander/stills/_locks/dawn17-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Kurukshetra field at dawn (this episode's dawn master): rose-saffron-gold sunrise haze, distant ranks and banners only",
+        "Karna (Ep 13 lock): adult king of Anga, proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape, Vijaya bow — no peacock feather, no divine kavacha, no flower garland; not Arjuna",
+        "Shalya (this episode's NEW lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram — a warrior-king, never a sage",
+        "The chariot surging forward into the morning: Karna in profile facing ahead, resolute, unbowed",
+        "Shalya at the reins casting a guarded sidelong glance back at him — a hidden purpose in his eyes",
+        "Yudhishthira, Krishna and Arjuna are narrated only — NOT shown",
+        "Only these two named figures"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "dead bodies or corpses",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "modern props",
+        "Krishna",
+        "Arjuna",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "peacock feather on Karna",
+        "divine kavacha on Karna",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya"
+      ],
+      "props": [
+        "Karna's chariot",
+        "golden reins",
+        "white horses",
+        "elephant's-rope standard"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached Ep 10 field-master. Heroic medium, exactly two adult men on one chariot surging forward into the morning. Karna (Ep 13 lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson armor, crimson cape, Vijaya bow) faces ahead in profile, resolute and unbowed. Shalya at the golden reins (this episode's lock: mature king of Madra, dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold armor) casts a guarded sidelong glance back at him, a hidden purpose in his eyes. White horses at full stride, elephant's-rope standard streaming, dust rising, distant ranks ahead. Rose-saffron-gold morning light. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No Arjuna. No Drona. No flute. No gore. No English text.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Karna Parva 8.29 — Karna: he knows Arjuna's might and Krishna's skill and will fight them regardless; Udyoga Parva 5.8 — Shalya's earlier promise to Yudhishthira to dishearten Karna (tejovadha) when he drives his chariot against Arjuna"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Udyoga Parva (Shalya's promise to Yudhishthira) and Karna Parva (Karna's reply to Shalya) — vulgate"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Karna Parva §42 — 'That which Vasudeva and Arjuna are is well-known to me ... I shall fearlessly fight with the two Krishnas'; Udyoga Parva §8 — 'thou must likewise so act that the Suta's son Karna may be dispirited'; Shalya: 'I shall certainly speak to him ... words contradictory and fraught with harm'"
+        }
+      ]
+    }
+  ],
+  "poster": {
+    "file": "poster.jpg",
+    "cast_present": [
+      "karna",
+      "shalya"
+    ],
+    "prompt": "Premium painted comic Amar Chitra poster, in the style and palette of the attached Ep 10 field-master. Heroic medium: Karna the commander (Ep 13 lock: proud dark mustache, sun-warmed skin, tall jeweled gold Anga diadem with a red gem, deep gold and crimson engraved armor, crimson cape) stands tall on his great chariot with the Vijaya bow raised, and Shalya, king of Madra (this episode's lock: mature warrior-king, dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold armor), sits at the golden reins in front, eyes turned sidelong. White horses the hue of cranes rear forward; elephant's-rope standard streams; rose-saffron-gold sunrise over Kurukshetra. Strong central composition with clear headroom for a title. Carved gold-and-lotus cartouche integrated into the painting. Not photoreal. No Krishna. No Arjuna. No Drona. No flute. No gore. No English text.",
+    "note": "Poster = Ep 16 thesis (the commander and the charioteer who wishes him to fail). If a separate poster pass is cut, copy the GATE C-passed plate-secret.jpg."
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Karna Parva · night of the fifteenth day through dawn of the seventeenth · Karna's consecration as senapati, the sixteenth day, and Shalya as Karna's charioteer (with the Udyoga Parva promise)",
+    "bori": "BORI CE Karna Parva, Debroy translation vol. 7: 8.6 Ashvatthama proposes Karna and Duryodhana consecrates him; 8.7 the makara-vyuha at sunrise, sixteenth-day fighting to 8.21; 8.22 Karna weighs himself against Arjuna and asks for Shalya; 8.23 Shalya's anger; 8.24 Tripura (Brahma as Shiva's charioteer); 8.25 Shalya accepts on condition his words be borne; 8.26 Shalya mounts the chariot; 8.27 Karna's proclamation of rewards and Shalya's rebuke; 8.28 the crow and the swan; 8.29 Karna knows Krishna and Arjuna, and his curses. Udyoga Parva 5.8: Yudhishthira asks and Shalya promises to dishearten Karna when he becomes his charioteer.",
+    "gita_press": "Gita Press Gorakhpur Mahabharata (Hindi, Karna Parva, vulgate numbering ≈ Ganguli): same sequence — Karna-abhisheka at Ashvatthama's counsel, makara-vyuha, Karna's request for Madraraj Shalya, Shalya's wrath, the Tripura-vadha akhyana, Shalya's condition, Karna's proclamation, the kaka-hamsa drishtanta, Karna's reply; Udyoga Parva — Shalya's promise to Yudhishthira.",
+    "ganguli": "K.M. Ganguli, Karna Parva §10–42 (vulgate): installation (§10); makara array (§11); sixteenth-day close (§30); Karna's request (§31); Shalya's wrath (§32); Tripura (§33–35); Shalya's condition (§35); Shalya mounts at morning (§36); proclamation and Shalya's scornful laugh (§38); Karna–Shalya exchanges (§39–40); crow and swan (§41); 'That which Vasudeva and Arjuna are is well-known to me' and the curses (§42). Udyoga Parva §8: Shalya's promise to Yudhishthira.",
+    "divergence": "Chapter numbers differ: BORI CE compresses the Karna–Shalya exchange into 8.22–8.30 while the vulgate (Ganguli, Gita Press) spreads it over §31–45. The vulgate's long catalogue of rewards (villages, damsels, elephants) is abridged in CE; we narrate only jewels, cows and a golden chariot, which both carry. The vulgate places the crow parable after an extra round of insults (§39–40); CE puts it at 8.28. The mutual insults of Madra and Anga customs (CE 8.27/8.30; Ganguli §40, §44–45) and Karna's two curses (8.29; §42) are omitted for length and left for Ep 17, where the sunken wheel pays them off. The sixteenth-day fighting (Ashvatthama–Arjuna, Bhima–Kshemadhurti and others) is not depicted.",
+    "chosen": "Gita Press + BORI/Debroy overlap: Ashvatthama's counsel and Karna's consecration, the makara-vyuha, Karna's request for Shalya, Shalya's anger, Tripura with Brahma as charioteer, Shalya's condition to speak freely, Karna's proclamation, the crow and swan, Karna's resolve, and Shalya's earlier promise to Yudhishthira. Ganguli for English wording.",
+    "notes": "Not TV. Comic-mythology only; no gore and no bodies. Drona is narrated only (dead), never drawn. Shiva, Brahma, Krishna, Arjuna and Yudhishthira are narrated only, never drawn. Karna = Ep 13 lock (copy-forward); Duryodhana = Ep 13 lock; Ashwatthama = Ep 15 lock; Shalya = NEW 3:2 lock (grey-streaked dark beard, silver-gold Madra crown, indigo-blue armor). Never attach Ep01 plate-wide-gold or any finished plate as an Imagine ref. The Karna–Arjuna duel, the chariot wheel, and Karna's fall are Ep 17; Bhima and Dushasana are not in this episode."
+  },
+  "stills_status": "not generated — PROMPTS.md prepared at stills/_inbox/consumer-imagine/PROMPTS.md (SuperGrok consumer path)"
+}

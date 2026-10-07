@@ -18,8 +18,8 @@
  * narrated only, never drawn. Krishna = Ep 04 lock (official reference).
  *
  * Audio: orion-00…08 rendered with free local Kokoro-82M bm_george (tools/render_local_voice.sh, speed 0.9);
- * see logic-reviews/RR-tts-kokoro.md. Stills: NOT generated — SuperGrok consumer prompt pack at
- * stills/_inbox/consumer-imagine/PROMPTS.md (1 scene master + 9 plates + poster).
+ * see logic-reviews/RR-tts-kokoro.md. Stills: SuperGrok consumer import 2026-10-07 (field17 master + 9 plates +
+ * poster, 1728×1152; meet v2, crown v2), GATE C PASS.
  * Music: Raga Multani preset (js/main.js RAGA_PRESETS.multani) — never default flute+tabla.
  */
 export const EPISODE = {

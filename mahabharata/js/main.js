@@ -368,6 +368,18 @@ const RAGA_PRESETS = {
     duckLevel: 0.15,
     tanpuraMs: 1100,
   },
+  multani: {
+    // Multani (Todi thaat) — grave late-afternoon (third prahar): komal Re/Ga/Dha, tivra Ma; Re and Dha skipped in the
+    // ascent (N S g M P N S'), touched only coming down (S' N d P M g r S); dwell on komal Ga and Pa. Sparse bansuri, no tabla.
+    Sa: 103.83, // G#2 mandra — grave, under male VO; distinct from Shree's A2 and Adana's C#3
+    fluteSa: 207.65,
+    degrees: ["S", "r", "g", "M", "P", "d", "N"],
+    tabla: "none",
+    voice: "bansuri",
+    bedLevel: 0.44,
+    duckLevel: 0.14,
+    tanpuraMs: 1400,
+  },
   default: {
     // eps 01–08 — keep close to old FluteTablaBed so they don't jump
     Sa: 293.66,
@@ -413,6 +425,7 @@ class RagaBed {
       else if (id === "14") key = "todi";
       else if (id === "15") key = "shree";
       else if (id === "16") key = "adana";
+      else if (id === "17") key = "multani";
       else key = "default";
     }
     if (!RAGA_PRESETS[key]) key = "default";
@@ -1077,6 +1090,41 @@ class RagaBed {
         ],
       ];
     }
+    if (key === "multani") {
+      // Multani — N S g M P / M g M P / P N S' / S' N d P / M g r S. Re and Dha only in descent.
+      return [
+        [
+          [0, "N", -1, 1.6],
+          [1.8, "S", 0, 1.6],
+          [3.6, "g", 0, 2.2],
+          [6.0, "M", 0, 1.4],
+          [7.6, "P", 0, 2.2],
+        ],
+        [
+          [0, "M", 0, 1.4],
+          [1.6, "g", 0, 2.0],
+          [3.8, "M", 0, 1.4],
+          [5.4, "P", 0, 2.2],
+        ],
+        [
+          [0, "P", 0, 1.6],
+          [1.8, "N", 0, 1.6],
+          [3.6, "S", 1, 2.4],
+        ],
+        [
+          [0, "S", 1, 1.8],
+          [2.0, "N", 0, 1.4],
+          [3.6, "d", 0, 1.2],
+          [5.0, "P", 0, 2.2],
+        ],
+        [
+          [0, "M", 0, 1.4],
+          [1.6, "g", 0, 2.0],
+          [3.8, "r", 0, 1.2],
+          [5.2, "S", 0, 2.4],
+        ],
+      ];
+    }
     if (key === "megh") {
       // circling, not lyrical — walking the wheel
       return [
@@ -1121,6 +1169,7 @@ class RagaBed {
     if (key === "malkauns") return 3.8 + Math.random() * 2.4;
     if (key === "todi") return 3.6 + Math.random() * 2.4;
     if (key === "shree") return 4.0 + Math.random() * 2.6;
+    if (key === "multani") return 4.0 + Math.random() * 2.6;
     return 1.2 + Math.random() * 2.0;
   }
 
@@ -1229,7 +1278,7 @@ class RagaBed {
       this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
     }
 
-    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
+    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "multani" ? 4000 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
     this.timers.push(setTimeout(() => this._scheduleMelody(), melodyDelay));
 
     this.master.gain.cancelScheduledValues(t);

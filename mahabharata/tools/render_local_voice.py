@@ -95,6 +95,10 @@ PRONOUNCE: dict[str, str] = {
     "makara": "mucker-a",
     "Tripura": "Tri-poora",
     "Brahma": "Brah-maa",
+    # Ep17 The Fall of Karna (Karna Parva, seventeenth day)
+    "Parashurama": "Para-shoo-raama",
+    "Anjalika": "Un-ja-lika",
+    "Kunti": "Koon-tee",
 }
 
 

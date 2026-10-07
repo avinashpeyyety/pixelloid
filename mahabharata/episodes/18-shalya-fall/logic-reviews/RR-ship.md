@@ -47,3 +47,10 @@
 
 - Narrator Kokoro `bm_george` (new episode). Not added to the Orion remaster queue — that queue is Avinash's call.
 - Next: Ep 19 (the lake and the Bhima–Duryodhana mace duel) — Track B.
+
+## Live verify (2026-10-07 ~18:40 CT)
+
+- Pages run: Deploy to GitHub Pages #37701925775 — **success** (head 70fa30d)
+- `play.html?ep=18` 200 with `main.js?v=ep18-20261007`; deployed `js/episodes.js` has Ep 18 and `js/main.js` has `EP_LOADERS["18"]`
+- 9 plates + poster + thumb + `orion-00…08.mp3` md5-identical to the repo; headless Chrome `play.html?ep=18&auto=1` renders the title and end card
+- Orion regression (live): Ep 05–08 `script.js` voice_id `orion`; all their `orion-*.mp3` md5-identical to the repo, which is unchanged from the Orion-restore commit e7dc13c

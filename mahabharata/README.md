@@ -38,6 +38,7 @@ Episodic itihāsa theater: **write script → Grok Imagine key panels → Blende
 | 13 | **Ghatotkacha** — night of the fourteenth, Karna’s Shakti | Live |
 | 14 | **The Fall of Drona** — fifteenth day, the half-truth | Live |
 | 15 | **The Narayana Weapon** — fifteenth day, Ashwatthama’s wrath | Live |
+| 16 | **Karna Takes Command** — sixteenth/seventeenth days, Shalya at the reins | Live |
 
 ## Local
 

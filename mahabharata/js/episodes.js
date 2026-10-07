@@ -183,4 +183,16 @@ export const EPISODES = [
       "Ashwatthama looses the Narayana weapon. Krishna’s counsel: lay down your arms — and the fire spares whoever stands unarmed.",
     play: "play.html?ep=15",
   },
+  {
+    id: "16",
+    slug: "karna-commander",
+    title: "Karna Takes Command",
+    sanskrit: "कर्णाभिषेकः",
+    chapter: "Karna Parva · sixteenth and seventeenth days",
+    duration: "~112s",
+    status: "live",
+    blurb:
+      "Drona has fallen. Karna leads the Kaurava host — and asks for one charioteer to match Krishna: proud Shalya, who takes the reins with scorn.",
+    play: "play.html?ep=16",
+  },
 ];

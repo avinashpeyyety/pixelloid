@@ -46,8 +46,8 @@ Codify the 12-step WORKFLOW as a **repeatable pipeline for Ep 15+** (and any gre
 | Ep | Title | Branch | Status |
 |----|-------|--------|--------|
 | 15 | *The Narayana Weapon* | `studio/ep15-narayanastra` → `main` | **SHIPPED** 2026-10-05 |
-| 16 | *Karna Takes Command* (`16-karna-commander`, Karna Parva) | `studio/ep16-karna-commander` | **In progress, awaiting SuperGrok plates.** Steps 1–4 + 10 done (script, GATE D-dialogue PASS, cast/bible, GATE A/B PASS, Kokoro bm_george TTS, Raga Adana). Step 5 waits on Avinash's SuperGrok drop of 13 images (`stills/_inbox/consumer-imagine/PROMPTS.md`). Not registered in `js/episodes.js`. |
-| 17 | Karna–Arjuna duel / Karna's fall (planned) | — | Queued after Ep 16 ships |
+| 16 | *Karna Takes Command* (`16-karna-commander`, Karna Parva) | `studio/ep16-karna-commander` → `main` | **SHIPPED** 2026-10-06 (GATE A/B/C/D PASS; Kokoro bm_george; Raga Adana; 7447b4b) |
+| 17 | Karna–Arjuna duel / sunken wheel / Karna's fall (Karna Parva, seventeenth day) | `studio/ep17-…` (to create) | **NEXT** — start at step 1 (script) |
 
 ### Pipeline checklist doc (factory deliverable)
 
@@ -110,4 +110,4 @@ Until then, canonical narrator for **new** episodes is **Kokoro `bm_george`** (`
 ## Weekly tally
 
 - ISO week 2026-09-28 → 2026-10-04 (Mon–Sun CT): shipped Ep 04 (*The Akshayapatra*, 10-02), Ep 14 (*The Fall of Drona*, 10-02), Ep 05 (*Yaksha Prashna*, 10-03), Ep 06 (*The Kirata*, 10-03), Ep 07 (*Jayadratha*, 10-04), Ep 08 (*The Peace Embassy*, 10-04) — **6** (beats ≥3 target and stretch 4). 01–08 ladder complete. *(Corrected 2026-10-04: earlier lines split this one ISO week into "09-29" and "10-03" buckets.)*
-- ISO week 2026-10-05 → 2026-10-11: shipped Ep 15 (*The Narayana Weapon*, 10-05) — **1** so far (target ≥3; stretch 4). Next: Ep 16 (Karna as commander, Karna Parva; Track B) — in progress on `studio/ep16-karna-commander`, awaiting SuperGrok plates.
+- ISO week 2026-10-05 → 2026-10-11: shipped Ep 15 (*The Narayana Weapon*, 10-05), Ep 16 (*Karna Takes Command*, 10-06) — **2** so far (target ≥3; stretch 4). Next: Ep 17 (Karna–Arjuna duel and Karna's fall, Karna Parva; Track B).

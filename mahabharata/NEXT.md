@@ -8,14 +8,14 @@
 - [ ] **Active sprint board:** [`docs/SPRINT_PLAN.md`](docs/SPRINT_PLAN.md) — Track A (improvements) + Track B (Ep 15+ factory). Studio lead; Chief one ticket/cycle.
 - [x] Ep 11: player uses Blender `renders/beat-*.png` (Ken Burns on 3D proxies; Orion/Megh kept)
 - [x] Pilot one beat in **3D**: Ep09 A3 counsel → Blender → `episodes/09-gita/renders/beat-35-counsel.png` (docs in `episodes/09-gita/blender/`; player still on stills/) — SPRINT_PLAN Track A3
-- [ ] **Track B: Ep 16 (Karna as commander, Karna Parva)** via [`docs/PIPELINE_CHECKLIST.md`](docs/PIPELINE_CHECKLIST.md): script → GATE D dialogue → cast/bible → GATE A/B → SuperGrok consumer Imagine keys → GATE C → Kokoro bm_george + named raga → GATE D install → ship. One episode at a time. (01–08 ladder done 2026-10-04; Ep 15 shipped 2026-10-05.) — SPRINT_PLAN Track B
-  - [ ] **Ep 16 *Karna Takes Command*** (`16-karna-commander`, branch `studio/ep16-karna-commander`) — **in progress, awaiting SuperGrok plates.** Done: script (9 spoken beats + hold, 112 s, Raga Adana), GATE D-dialogue PASS, cast/bible, GATE A/B PASS, Kokoro bm_george TTS orion-00…08, Adana player preset. Next: Avinash drops 13 images per `episodes/16-karna-commander/stills/_inbox/consumer-imagine/PROMPTS.md` (2 masters + Shalya lock + 9 plates + poster) → import → GATE C → GATE D install → registry → ship. Ep 17 = the Karna–Arjuna duel and Karna's fall.
+- [ ] **Track B: Ep 17 (the Karna–Arjuna duel, the sunken wheel and Karna's fall; Karna Parva, seventeenth day)** via [`docs/PIPELINE_CHECKLIST.md`](docs/PIPELINE_CHECKLIST.md): script → GATE D dialogue → cast/bible → GATE A/B → SuperGrok consumer Imagine keys → GATE C → Kokoro bm_george + named raga → GATE D install → ship. One episode at a time. Picks up Ep 16's end line ("Shalya holds the reins. Karna rides to meet Arjuna."). (01–08 ladder done 2026-10-04; Ep 15 shipped 2026-10-05; Ep 16 shipped 2026-10-06.) — SPRINT_PLAN Track B
 - [ ] **Queued: Orion remaster (when xAI credits are available)** — re-voice **Ep14, then Ep04 (Oct rewrite text), then Ep15** (later George-only episodes) with Grok TTS `orion`, keeping timing aligned. **Blocked on credits**; do not start until Avinash says credits available. Ep05–08 are **not** in this queue any more: their original Orion clips were restored from git 2026-10-05 (`fix/keep-orion-narration`). Ep04 kept its October rewrite in George (Avinash 2026-10-05). Canonical narrator for NEW episodes remains Kokoro `bm_george` (`config/narrator.json`; GATE D install enforces). — SPRINT_PLAN
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate) — SPRINT_PLAN Track A4
 
 ## Done
+- [x] **Ep 16 *Karna Takes Command*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Adana; SuperGrok consumer plates, outrage/secret v2; ship 2026-10-06, 7447b4b) — week of 10-05: 2 shipped (Ep 15, Ep 16; target ≥3)
 - [x] **Ep 15 *The Narayana Weapon*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Shree; ship 2026-10-05, 6c413ed)
 - [x] **Ep 04 *The Akshayapatra* rewrite** (09/10 bar, Yaman, Kokoro local orion-*, GATE D install + ship 2026-10-02)
 - [x] **Ep 05 *Yaksha Prashna* rewrite** (09/10 bar, Bhairav, Kokoro local bm_george orion-00…08, GATE D install + ship 2026-10-03)

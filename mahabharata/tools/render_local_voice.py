@@ -99,6 +99,9 @@ PRONOUNCE: dict[str, str] = {
     "Parashurama": "Para-shoo-raama",
     "Anjalika": "Un-ja-lika",
     "Kunti": "Koon-tee",
+    # Ep18 The Fall of Shalya (Shalya Parva, eighteenth day)
+    "Kripa": "Kri-pa",
+    "Shakuni": "Shaku-nee",
 }
 
 

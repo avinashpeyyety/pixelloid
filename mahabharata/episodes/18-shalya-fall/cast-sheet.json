@@ -1,0 +1,55 @@
+{
+  "episode_id": "18",
+  "notes": "Shalya Parva, eighteenth day — Shalya's command and fall, Shakuni's death, Duryodhana's flight to the lake. No gore, no bodies. Kripa, Sahadeva, Shakuni and Kritavarma are narrated only, never drawn. Krishna = Ep 04 lock (official series reference): pale silvery dusty-blue skin, long loose curls, slim gold band with one peacock feather, white U-tilak, jasmine-rose garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands. Yudhishthira and Bhima = Ep 14/15 locks; Shalya = Ep 16 lock; Duryodhana and Ashwatthama = Ep 16 locks. One new scene master (field18 daylight); camp18 is a byte copy of Ep 16's night camp.",
+  "locks": {
+    "reuse": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg",
+      "bhima": "episodes/15-narayanastra/stills/_locks/bhima.jpg",
+      "shalya": "episodes/16-karna-commander/stills/_locks/shalya.jpg",
+      "duryodhana": "episodes/16-karna-commander/stills/_locks/duryodhana.jpg",
+      "ashwatthama": "episodes/16-karna-commander/stills/_locks/ashwatthama.jpg",
+      "camp18-master": "episodes/16-karna-commander/stills/_locks/camp16-master.jpg"
+    },
+    "new": {
+      "field18-master": "episodes/18-shalya-fall/stills/_locks/field18-master.jpg"
+    }
+  },
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; Arjuna's charioteer (reins looped over one wrist), counsellor to Yudhishthira in this episode — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets, bow of the king; the gold-and-gem shakti dart on beats dart/fall — no gold chest armor, no Gandiva, no flower garland"
+    },
+    "bhima": {
+      "face": "Adult Pandava, broad noble face, full dark mustache, fierce dark eyes — never a child (Ep 14/15 lock)",
+      "hair": "Dark hair, gold warrior circlet (not Arjuna's crown, not peacock)",
+      "costume": "Deep gold and leaf-green engraved armor, great gold-decked mace — never saffron sage robes"
+    },
+    "shalya": {
+      "face": "Mature king of Madra: strong weathered face, thick dark mustache and short dark beard streaked with grey, fierce dark eyes (Ep 16 lock) — a warrior-king, never a sage, never fully white-bearded",
+      "hair": "Dark hair streaked with grey under a tall silver-and-gold Madra crown",
+      "costume": "Deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram, gold armlets; commander now, on his own chariot under the golden-ploughshare banner; mace, sword and round shield in the duels — never saffron sage robes, never flower garland"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava king, proud upswept mustache, fierce gaze (Ep 13 lock via Ep 16)",
+      "hair": "Dark hair under a tall jeweled Kuru crown",
+      "costume": "Jewel-tone gold Kaurava armor with saffron-orange cape, gold-decked mace — field king, not a sage"
+    },
+    "ashwatthama": {
+      "face": "Young adult Brahmin-warrior, the guru's son: noble lean face, dark mustache, intense dark eyes; a luminous jewel (mani) in the middle of his forehead (Ep 15 lock via Ep 16); never a child, never white-bearded",
+      "hair": "Dark hair tied back under a slim bronze-gold warrior band (no royal crown, no peacock feather)",
+      "costume": "Deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti, great bow — no saffron sage robes, no flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore, no bodies"
+    }
+  }
+}

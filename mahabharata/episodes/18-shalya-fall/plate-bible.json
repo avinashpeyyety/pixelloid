@@ -1,0 +1,867 @@
+{
+  "episode_id": "18",
+  "strict_hero_lock": "yudhishthira",
+  "title": "The Fall of Shalya",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Krishna locked to the Ep 04 look (official reference), Yudhishthira and Bhima to the Ep 14/15 locks, Shalya to Ep 16, Duryodhana to Ep 13 via Ep 16, Ashwatthama to Ep 15 via Ep 16",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "krishna_visual_lock_ref": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+  "krishna_lock_note": "Avinash 2026-10-05: the Ep 04 Krishna is the official series reference and the operative visual lock for Ep 18 — byte-copied to episodes/18-shalya-fall/stills/_locks/krishna.jpg and attached as the FIRST character ref (right after the scene master) on every Krishna image in PROMPTS.md. krishna_look_lock_ref keeps the Ep 09 path only because tools/logic_review.py still checks for it.",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/18-shalya-fall/stills/_locks/field18-master.jpg",
+  "scene_lock_refs": {
+    "field18-master": "episodes/18-shalya-fall/stills/_locks/field18-master.jpg",
+    "camp18-master": "episodes/18-shalya-fall/stills/_locks/camp18-master.jpg"
+  },
+  "scene_master_prompt": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The Kurukshetra battlefield on the morning of the eighteenth and last day: a wide open stretch of trampled golden dust in the foreground scored with chariot ruts, thinned armies in the far distance with fewer banners and parasols, a still lotus lake glinting at the far edge of the field, a bright warm gold sun climbing in a hazy saffron-gold sky, soft shadows. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for chariots and duelling warriors to be placed later. No people in the foreground, no named figures. Bright daylight — NOT night: no moon, no stars, no torches. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no watermark.",
+  "scene_master_prompts": {
+    "field18-master": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The Kurukshetra battlefield on the morning of the eighteenth and last day: a wide open stretch of trampled golden dust in the foreground scored with chariot ruts, thinned armies in the far distance with fewer banners and parasols, a still lotus lake glinting at the far edge of the field, a bright warm gold sun climbing in a hazy saffron-gold sky, soft shadows. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for chariots and duelling warriors to be placed later. No people in the foreground, no named figures. Bright daylight — NOT night: no moon, no stars, no torches. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no watermark.",
+    "camp18-master": "byte copy of episodes/16-karna-commander/stills/_locks/camp16-master.jpg (Kaurava camp at night) — not regenerated"
+  },
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/18-shalya-fall/stills/_locks/field18-master.jpg",
+    "episodes/18-shalya-fall/stills/_locks/camp18-master.jpg",
+    "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/18-shalya-fall/stills/_locks/krishna.jpg",
+    "episodes/18-shalya-fall/stills/_locks/yudhishthira.jpg",
+    "episodes/18-shalya-fall/stills/_locks/bhima.jpg",
+    "episodes/18-shalya-fall/stills/_locks/shalya.jpg",
+    "episodes/18-shalya-fall/stills/_locks/duryodhana.jpg",
+    "episodes/18-shalya-fall/stills/_locks/ashwatthama.jpg"
+  ],
+  "imagine_refs_note": "Gate-check list (lineage). The operative per-image attach order is in stills/_inbox/consumer-imagine/PROMPTS.md: scene master first, then the Ep 04 Krishna lock (on Krishna images), then the other character locks, then the Ep 10 field-master. The Ep 09 Krishna path is listed for the gate only and is NOT attached.",
+  "character_lock_refs": {
+    "krishna": "episodes/18-shalya-fall/stills/_locks/krishna.jpg",
+    "yudhishthira": "episodes/18-shalya-fall/stills/_locks/yudhishthira.jpg",
+    "bhima": "episodes/18-shalya-fall/stills/_locks/bhima.jpg",
+    "shalya": "episodes/18-shalya-fall/stills/_locks/shalya.jpg",
+    "duryodhana": "episodes/18-shalya-fall/stills/_locks/duryodhana.jpg",
+    "ashwatthama": "episodes/18-shalya-fall/stills/_locks/ashwatthama.jpg"
+  },
+  "local_lock_plan": {
+    "copy_forward": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg (byte copy)",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg (byte copy)",
+      "bhima": "episodes/15-narayanastra/stills/_locks/bhima.jpg (byte copy)",
+      "shalya": "episodes/16-karna-commander/stills/_locks/shalya.jpg (byte copy)",
+      "duryodhana": "episodes/16-karna-commander/stills/_locks/duryodhana.jpg (byte copy)",
+      "ashwatthama": "episodes/16-karna-commander/stills/_locks/ashwatthama.jpg (byte copy)",
+      "camp18-master": "episodes/16-karna-commander/stills/_locks/camp16-master.jpg (byte copy; Kaurava camp at night)"
+    },
+    "new": {
+      "field18-master": "scene master — Kurukshetra, eighteenth day (eight daytime plates + poster); generate first"
+    },
+    "not_needed": "No new character locks: every drawn face already has a series lock. Kripa, Sahadeva, Shakuni, Kritavarma and the charioteers are narrated only or small unnamed figures.",
+    "note": "stills_review.py (GATE C) requires episodes/18-shalya-fall/stills/_locks/<id>.jpg for every face on a plate; these are byte copies, not new art. The Shalya lock is a night portrait — every daytime prompt forces daylight."
+  },
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; Arjuna's charioteer (reins looped over one wrist), counsellor to Yudhishthira in this episode — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets, bow of the king; the gold-and-gem shakti dart on beats dart/fall — no gold chest armor, no Gandiva, no flower garland"
+    },
+    "bhima": {
+      "face": "Adult Pandava, broad noble face, full dark mustache, fierce dark eyes — never a child (Ep 14/15 lock)",
+      "hair": "Dark hair, gold warrior circlet (not Arjuna's crown, not peacock)",
+      "costume": "Deep gold and leaf-green engraved armor, great gold-decked mace — never saffron sage robes"
+    },
+    "shalya": {
+      "face": "Mature king of Madra: strong weathered face, thick dark mustache and short dark beard streaked with grey, fierce dark eyes (Ep 16 lock) — a warrior-king, never a sage, never fully white-bearded",
+      "hair": "Dark hair streaked with grey under a tall silver-and-gold Madra crown",
+      "costume": "Deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram, gold armlets; commander now, on his own chariot under the golden-ploughshare banner; mace, sword and round shield in the duels — never saffron sage robes, never flower garland"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava king, proud upswept mustache, fierce gaze (Ep 13 lock via Ep 16)",
+      "hair": "Dark hair under a tall jeweled Kuru crown",
+      "costume": "Jewel-tone gold Kaurava armor with saffron-orange cape, gold-decked mace — field king, not a sage"
+    },
+    "ashwatthama": {
+      "face": "Young adult Brahmin-warrior, the guru's son: noble lean face, dark mustache, intense dark eyes; a luminous jewel (mani) in the middle of his forehead (Ep 15 lock via Ep 16); never a child, never white-bearded",
+      "hair": "Dark hair tied back under a slim bronze-gold warrior band (no royal crown, no peacock feather)",
+      "costume": "Deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti, great bow — no saffron sage robes, no flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore, no bodies"
+    }
+  },
+  "plates": [
+    {
+      "id": "anoint",
+      "file": "plate-anoint.jpg",
+      "beat_text": "Night after Karna’s fall. Kripa begs Duryodhana to make peace. He refuses, and at Ashwatthama’s word anoints Shalya commander.",
+      "cast_present": [
+        "duryodhana",
+        "shalya",
+        "ashwatthama"
+      ],
+      "locus_master": "episodes/18-shalya-fall/stills/_locks/camp18-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kaurava camp at night (camp18 master = Ep 16 camp master), torchlight and oil lamps",
+        "Duryodhana (Ep 13 lock via Ep 16): proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor, saffron-orange cape, gold-decked mace",
+        "Shalya (Ep 16 lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold armor — a warrior-king, never a sage",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, slim bronze-gold band, maroon and bronze-gold armor, white sacred thread — never a child",
+        "Duryodhana pours consecration water from a gold vessel over Shalya, who kneels on one knee with his head bowed, sword laid across his knees",
+        "Ashwatthama stands beside them, one hand raised toward Shalya as the one who named him",
+        "Kripa is narrated only — not drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Bhima",
+        "Arjuna",
+        "Karna",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "second Duryodhana",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama"
+      ],
+      "props": [
+        "gold consecration vessel",
+        "oil lamps",
+        "torches",
+        "Shalya's sword",
+        "Kaurava banners"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult men in a torchlit war-camp at night. Duryodhana, the Kaurava king (match the attached Duryodhana lock: proud upswept mustache, fierce gaze, tall jeweled Kuru crown, jewel-tone gold Kaurava armor with a saffron-orange cape, a gold-decked mace) stands and pours consecration water from a gold vessel over Shalya, king of Madra (match the attached Shalya lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram; never a sage, never fully white-bearded), who kneels on one knee with his head bowed and his sword laid across his knees. Beside them stands Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold armor, white sacred thread across the chest, great bow; never a child, never white-bearded), one hand raised toward Shalya as the one who named him. Banners, tents and a ring of oil lamps behind; no other figures. Night in the Kaurava camp after the seventeenth day: deep indigo sky, stars, warm torchlight and a ring of oil lamps on gold (this beat is meant to be at night). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna, no Karna.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), opening chapters: Kripa counsels Duryodhana to make peace with the Pandavas; Duryodhana refuses; Ashvatthama proposes Shalya, and Shalya is consecrated commander that night"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva opening adhyayas (vulgate; numbering = Ganguli) — Kripacharya's counsel of peace, Duryodhana's refusal, Shalya's abhisheka as senapati at Ashvatthama's suggestion"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §4–§7 — Kripa's counsel (§4), Duryodhana's refusal (§5), Ashvatthama names the king of the Madras (§6), Shalya installed in the command (§6–§7)"
+        }
+      ]
+    },
+    {
+      "id": "counsel",
+      "file": "plate-counsel.jpg",
+      "beat_text": "At dawn Krishna tells Yudhishthira: “Shalya is your kin and a mighty warrior. None but you can match him. Do not hold back from pity.”",
+      "cast_present": [
+        "krishna",
+        "yudhishthira"
+      ],
+      "locus_master": "episodes/18-shalya-fall/stills/_locks/field18-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Pandava side of the Kurukshetra field at dawn (field18 master)",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; Arjuna's charioteer with the reins looped over one wrist — no flute",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash — no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Krishna stands close to Yudhishthira beside a chariot, one hand on Yudhishthira's shoulder, the other raised pointing toward the far Kaurava ranks",
+        "Yudhishthira listens gravely, bow in hand, his calm face firming into resolve",
+        "Exactly two named figures"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Bhima",
+        "Shalya",
+        "Duryodhana",
+        "Ashwatthama",
+        "Arjuna",
+        "Karna",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "Yudhishthira's chariot",
+        "king's bow",
+        "distant Kaurava banners"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men standing beside a chariot. Krishna (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather — not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; Arjuna's charioteer, the chariot reins looped over one wrist; no flute, no bow) rests one hand on the shoulder of Yudhishthira, eldest Pandava king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets, a king's bow; no gold chest armor, no Gandiva, no flower garland, no peacock feather) and raises his other hand, pointing toward the far Kaurava ranks as he speaks. Yudhishthira listens gravely, bow in hand, his calm face firming into resolve. Distant ranks and banners only. Cool clear dawn of the eighteenth day: pale gold sunrise, soft rose-saffron sky — daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Shalya. No Duryodhana. No Arjuna, no Karna.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), after Shalya's consecration: Vasudeva tells Yudhishthira that no one but he is a match for the king of Madra and that he must slay Shalya, not sparing him out of kinship or compassion"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva adhyaya 7 (vulgate) — Shri Krishna urges Yudhishthira to slay Shalya himself"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §7 — Vasudeva to Yudhishthira: none other is Shalya's match; he must not show compassion because Shalya is the maternal uncle of the sons of Pandu"
+        }
+      ]
+    },
+    {
+      "id": "array",
+      "file": "plate-array.jpg",
+      "beat_text": "The eighteenth day. What is left of the Kaurava host marches out, and Shalya rides at its head, blazing like the sun.",
+      "cast_present": [
+        "shalya"
+      ],
+      "locus_master": "episodes/18-shalya-fall/stills/_locks/field18-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright morning daylight (field18 master)",
+        "Shalya (Ep 16 lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold armor — a warrior-king, never a sage",
+        "Shalya stands tall on his chariot drawn by white horses, great bow raised, under his banner bearing a golden ploughshare",
+        "Thinned Kaurava ranks marching behind him, small, banners only",
+        "Only one named figure; his charioteer is a small plain figure at the reins, face turned away"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "Arjuna",
+        "Karna",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "Shalya's chariot",
+        "white horses",
+        "golden-ploughshare banner",
+        "great bow",
+        "distant marching ranks"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium. Shalya, king of Madra (match the attached Shalya lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram; never a sage, never fully white-bearded) stands tall on his war chariot, great bow raised, under a banner bearing a golden ploughshare; a small plain charioteer at the reins with his face turned away. White horses surge forward; behind them the thinned Kaurava ranks march out, small, banners only. Shalya is the only named figure. Bright morning-to-midday daylight of the eighteenth day: high warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches (the attached Shalya lock is a night portrait; take only his face, crown and armor, never its night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Duryodhana. No Arjuna, no Karna.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7) — on the eighteenth morning Shalya arrays the remnant of the Kaurava host and leads it in front"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva adhyaya 8 (vulgate) — the eighteenth day's array with Shalya at its head"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §8 — the king of the Madras at the head of the Kaurava army, the array of the eighteenth day"
+        }
+      ]
+    },
+    {
+      "id": "mace",
+      "file": "plate-mace.jpg",
+      "beat_text": "Bhima meets Shalya mace to mace. They circle and strike like two bulls, until both stagger and fall back.",
+      "cast_present": [
+        "bhima",
+        "shalya"
+      ],
+      "locus_master": "episodes/18-shalya-fall/stills/_locks/field18-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright daylight (field18 master)",
+        "Bhima (Ep 14/15 lock): broad face, full dark mustache, gold warrior circlet, gold and leaf-green armor, great mace",
+        "Shalya (Ep 16 lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold armor — a warrior-king, never a sage",
+        "Bhima and Shalya on foot in the dust, both swinging great gold-decked maces that meet in a burst of sparks",
+        "Both warriors straining, knees bent, like two bulls — no wounds, no blood",
+        "Only these two named figures"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Duryodhana",
+        "Ashwatthama",
+        "Arjuna",
+        "Karna",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "saffron sage robes on Bhima",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "two great gold-decked maces",
+        "sparks where the maces meet",
+        "trampled dust"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men fighting on foot in the dust. Bhima (match the attached Bhima lock: broad noble face, full dark mustache, fierce dark eyes, gold warrior circlet, deep gold and leaf-green engraved armor, a great gold-decked mace; never saffron sage robes) and Shalya, king of Madra (match the attached Shalya lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram; never a sage, never fully white-bearded) swing great gold-decked maces that meet between them in a burst of golden sparks; both strain with knees bent like two bulls, dust rising. No wounds, no blood. Distant ranks only. Bright morning-to-midday daylight of the eighteenth day: high warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches (the attached Shalya lock is a night portrait; take only his face, crown and armor, never its night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Duryodhana. No Arjuna, no Karna.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7) — Bhima and Shalya fight with maces; struck by each other, both fall, and Shalya is carried off by Kritavarman while Bhima rises"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate) — the gada-yuddha of Bhimasena and Shalya"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §11–§12 — Bhima and Shalya, mace in hand, roar like bulls and strike each other until both fall"
+        }
+      ]
+    },
+    {
+      "id": "resolve",
+      "file": "plate-resolve.jpg",
+      "beat_text": "Then Yudhishthira, the gentlest of the brothers, rides out. Today his anger blazes. He will slay Shalya, or be slain.",
+      "cast_present": [
+        "yudhishthira"
+      ],
+      "locus_master": "episodes/18-shalya-fall/stills/_locks/field18-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright midday daylight (field18 master)",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash — no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Yudhishthira stands on his chariot drawing his bow, his usually calm face fierce with resolve",
+        "Only one named figure; his charioteer is a small plain figure at the reins, face turned away"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Bhima",
+        "Shalya",
+        "Duryodhana",
+        "Ashwatthama",
+        "Arjuna",
+        "Karna",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "Yudhishthira's chariot",
+        "white horses",
+        "king's bow",
+        "banner"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium. Yudhishthira, eldest Pandava king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets, a king's bow; no gold chest armor, no Gandiva, no flower garland, no peacock feather) stands on his war chariot drawing his bow, his usually calm face now fierce with resolve; a small plain charioteer at the reins with his face turned away, white horses charging. Yudhishthira is the only named figure. Bright midday daylight of the eighteenth day: high warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Shalya. No Duryodhana. No Arjuna, no Karna.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7) — Yudhishthira, resolved to kill Shalya as Krishna counselled, advances on him with the twins guarding his wheels"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate) — Dharmaraja's resolve and advance against Madraraja"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §15–§16 — Yudhishthira declares he will slay Shalya or be slain, and rushes at him"
+        }
+      ]
+    },
+    {
+      "id": "charge",
+      "file": "plate-charge.jpg",
+      "beat_text": "Shalya’s horses and charioteer fall. Unhorsed, the old king leaps down with sword and shield and rushes at Yudhishthira.",
+      "cast_present": [
+        "shalya"
+      ],
+      "locus_master": "episodes/18-shalya-fall/stills/_locks/field18-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright midday daylight (field18 master)",
+        "Shalya (Ep 16 lock): mature king of Madra, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold armor — a warrior-king, never a sage",
+        "Shalya on foot charging across the dust with a raised sword and a round shield, his crown still on",
+        "Behind him his chariot stands empty, its golden-ploughshare banner cut down",
+        "No charioteer, no horses, no bodies shown; Yudhishthira is off-frame to the right"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Bhima",
+        "Duryodhana",
+        "Ashwatthama",
+        "Arjuna",
+        "Karna",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "white beard on Shalya",
+        "saffron sage robes on Shalya",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "sword",
+        "round shield",
+        "empty chariot",
+        "cut golden-ploughshare banner"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult man. Shalya, king of Madra (match the attached Shalya lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram; never a sage, never fully white-bearded) charges on foot across the dust with a raised sword and a round shield, fierce and undaunted; behind him his war chariot stands empty, its golden-ploughshare banner cut down. His foe is off-frame to the right (not drawn). No horses lying, no bodies, no blood. Bright morning-to-midday daylight of the eighteenth day: high warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches (the attached Shalya lock is a night portrait; take only his face, crown and armor, never its night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Duryodhana. No Arjuna, no Karna.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7) — Shalya's steeds and charioteer are slain; deprived of his chariot, Shalya takes up sword and shield and rushes at Yudhishthira"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva adhyaya 17 (vulgate) — Madraraja, carless, rushes forward with sword and shield"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §17 — Shalya, his steeds and driver slain, takes sword and shield and rushes toward Yudhishthira"
+        }
+      ]
+    },
+    {
+      "id": "dart",
+      "file": "plate-dart.jpg",
+      "beat_text": "Yudhishthira takes up a gleaming dart, adorned with gold and gems and worshipped like a goddess, and hurls it with all his might.",
+      "cast_present": [
+        "yudhishthira"
+      ],
+      "locus_master": "episodes/18-shalya-fall/stills/_locks/field18-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field in bright midday daylight (field18 master)",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash — no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Yudhishthira on his chariot, arm drawn back, hurling a long gleaming dart (shakti) with a gold-and-gem handle that blazes like fire",
+        "Arm, dart and gaze on one straight line toward Shalya far off-frame to the right (not drawn)",
+        "Only one named figure"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Bhima",
+        "Shalya",
+        "Duryodhana",
+        "Ashwatthama",
+        "Arjuna",
+        "Karna",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "shakti dart with gold-and-gem handle",
+        "Yudhishthira's chariot",
+        "white horses"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium. Yudhishthira, eldest Pandava king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets, a king's bow; no gold chest armor, no Gandiva, no flower garland, no peacock feather) stands on his chariot, right arm drawn back, hurling a long gleaming dart with a handle of gold and gems that blazes like fire; arm, dart and his gaze lie on one straight line toward his foe far off-frame to the right. Only one named figure; the charioteer, if shown, is small and turned away. Bright midday daylight of the eighteenth day: high warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Shalya. No Duryodhana. No Arjuna, no Karna.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7) — Yudhishthira takes up a terrible dart decorated with gold and gems, long worshipped with garlands, and hurls it at Shalya"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva adhyaya 17 (vulgate) — Yudhishthira's shakti, adorned with gold and jewels and long worshipped"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §17 — Yudhishthira hurls the dart with gold and gem-decked handle, blazing like fire, which he had long worshipped"
+        }
+      ],
+      "aim_geometry": {
+        "archer": "yudhishthira",
+        "target": "Shalya, far off-frame right (not drawn)",
+        "bow_points_at_target": true,
+        "gaze_at_target": true,
+        "target_distance": "far"
+      }
+    },
+    {
+      "id": "fall",
+      "file": "plate-fall.jpg",
+      "beat_text": "At midday the dart strikes. Shalya falls with arms outstretched, as if embracing the earth he loved.",
+      "cast_present": [
+        "yudhishthira"
+      ],
+      "locus_master": "episodes/18-shalya-fall/stills/_locks/field18-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Kurukshetra field at midday (field18 master)",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash — no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Yudhishthira stands on his chariot, arm lowered after the throw, looking down gravely and sorrowfully toward the dust",
+        "In the dust in front lie only Shalya's silver-and-gold Madra crown, his round shield and a fallen sword, catching the light",
+        "Shalya's body is NOT shown — no body, no blood"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Bhima",
+        "Shalya",
+        "Duryodhana",
+        "Ashwatthama",
+        "Arjuna",
+        "Karna",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "night sky, moon or stars",
+        "torches",
+        "Shalya's body",
+        "a lying warrior"
+      ],
+      "props": [
+        "fallen silver-and-gold Madra crown",
+        "round shield",
+        "fallen sword",
+        "Yudhishthira's chariot"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium. Yudhishthira, eldest Pandava king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets, a king's bow; no gold chest armor, no Gandiva, no flower garland, no peacock feather) stands on his chariot, his throwing arm lowered, looking down gravely and sorrowfully toward the dust. In the foreground dust lie only a fallen tall silver-and-gold Madra crown, a round shield and a sword, catching the high sun. No body, no blood, no other named figure. Bright midday daylight of the eighteenth day: high warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Duryodhana. Shalya himself is not shown. No Arjuna, no Karna.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7) — the dart pierces Shalya and he falls with his arms outstretched toward Yudhishthira, as if embracing the earth like a beloved; the battle of the eighteenth day had reached its middle"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva adhyaya 17 (vulgate) — Shalya falls 'as if embracing the earth'"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §17 — Shalya falls with outstretched arms facing Yudhishthira, as though embracing the beloved Earth"
+        }
+      ]
+    },
+    {
+      "id": "lake",
+      "file": "plate-lake.jpg",
+      "beat_text": "Sahadeva slays Shakuni. The Kaurava host is gone. Duryodhana, alone, takes up his mace and walks toward a lake.",
+      "cast_present": [
+        "duryodhana"
+      ],
+      "locus_master": "episodes/18-shalya-fall/stills/_locks/field18-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Edge of the Kurukshetra field under the low late-afternoon sun (field18 master), a still lake with lotuses ahead",
+        "Duryodhana (Ep 13 lock via Ep 16): proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor, saffron-orange cape, gold-decked mace",
+        "Duryodhana walks alone on foot, mace on his shoulder, head bowed, toward the still lake",
+        "Empty field and broken banners behind him — no bodies",
+        "Sahadeva and Shakuni are narrated only — not drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Bhima",
+        "Shalya",
+        "Ashwatthama",
+        "Arjuna",
+        "Karna",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "second Duryodhana",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "gold-decked mace",
+        "still lotus lake",
+        "broken banners",
+        "long shadows"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult man. Duryodhana, the Kaurava king (match the attached Duryodhana lock: proud upswept mustache, fierce gaze, tall jeweled Kuru crown, jewel-tone gold Kaurava armor with a saffron-orange cape, a gold-decked mace) walks alone on foot, his mace on his shoulder and his head bowed, toward a still lake edged with reeds and lotuses at the edge of the battlefield; behind him the empty field and a few broken banners, long shadows. No bodies, no other figures. Low late-afternoon sun of the eighteenth day, deep gold-amber light and long shadows — still daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Shalya. No Arjuna, no Karna.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7) — Sahadeva slays Shakuni; the Kaurava host destroyed, Duryodhana flees alone on foot with his mace and enters the lake (Dvaipayana), stilling its waters by his illusion"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva adhyaya 28–29 (vulgate) — Shakuni's death at Sahadeva's hand; Duryodhana's flight into the hrada"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §28 (Sahadeva slays Shakuni) and §29 (Duryodhana, alone, mace in hand, flees to the lake and enters its waters)"
+        }
+      ]
+    }
+  ],
+  "poster": {
+    "file": "poster.jpg",
+    "cast_present": [
+      "yudhishthira",
+      "shalya"
+    ],
+    "prompt": "Premium painted comic Amar Chitra poster, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men. On the right, Yudhishthira, eldest Pandava king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets, a king's bow; no gold chest armor, no Gandiva, no flower garland, no peacock feather) stands on his chariot hurling a long gleaming gold-and-gem dart; on the left foreground, Shalya, king of Madra (match the attached Shalya lock: mature warrior-king, thick dark mustache and short dark beard streaked with grey, tall silver-and-gold Madra crown, deep indigo-blue and silver-gold engraved armor, white-and-silver angavastram; never a sage, never fully white-bearded) charges on foot with raised sword and round shield. Strong diagonal composition with clear headroom for a title. Bright morning-to-midday daylight of the eighteenth day: high warm gold sun, hazy saffron-gold sky — daytime, NOT night: no moon, no stars, no torches (the attached Shalya lock is a night portrait; take only his face, crown and armor, never its night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark.",
+    "note": "Poster = Ep 18 thesis (the gentle king's dart against the old king of Madra). If a separate poster pass is cut, copy the GATE C-passed plate-dart.jpg."
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Shalya Parva · night after the seventeenth day and the eighteenth (last) day of Kurukshetra · Shalya's command and fall (shalya-vadha), Shakuni's death, Duryodhana's flight to the lake",
+    "bori": "BORI CE Shalya Parva, Debroy translation vol. 7 (chapter-level citations): opening chapters — Kripa's counsel of peace, Duryodhana's refusal, Ashvatthama proposes Shalya, Shalya consecrated, Vasudeva's counsel to Yudhishthira; the eighteenth-day array; the Bhima–Shalya mace fight; Yudhishthira's advance; Shalya unhorsed with sword and shield; the gold-and-gem dart and Shalya's fall 'as if embracing the earth'; Sahadeva slays Shakuni; Duryodhana flees alone into the lake (Dvaipayana).",
+    "gita_press": "Gita Press Gorakhpur Mahabharata (Hindi, Shalya Parva, vulgate numbering = Ganguli): adhyayas 4–7 Kripa's counsel, Duryodhana's reply, Shalya's abhisheka, Shri Krishna's counsel; 8 the array; 11–12 Bhima–Shalya gada-yuddha; 15–17 Yudhishthira's resolve and Shalya-vadha; 28 Shakuni-vadha; 29 Duryodhana enters the hrada.",
+    "ganguli": "K.M. Ganguli, Shalya Parva §4–§7 (Kripa, Duryodhana, Ashvatthama, Shalya installed, Vasudeva to Yudhishthira), §8 (array), §11–§12 (mace fight), §15–§17 (Yudhishthira's resolve, the dart, Shalya's fall), §28 (Shakuni), §29 (the lake).",
+    "divergence": "Section/adhyaya numbers follow the vulgate (Ganguli = Gita Press); BORI CE chapters are cited at chapter-group level only. Kinship: Shalya is the brother of Madri, uncle of Nakula and Sahadeva and so kin to all the Pandavas; Ganguli has Krishna call him the maternal uncle — we narrate only 'your kin'. Omitted for length: the deaths of Shalya's younger brother and the Madra guard, Kritavarma's rescue after the mace fight, Shalya's fierce duels with the twins, Satyaki and Dhrishtadyumna, Bhima's part in unhorsing Shalya, Duryodhana's illusion that stills the lake. Shalya's fall is narrated and shown only through his fallen crown — no body.",
+    "chosen": "Gita Press + BORI/Debroy overlap: Kripa's counsel and Duryodhana's refusal, Ashvatthama naming Shalya, Krishna's counsel to Yudhishthira, the eighteenth-day array, Bhima and Shalya with maces, Yudhishthira's resolve, Shalya unhorsed with sword and shield, the worshipped dart, the fall at midday, Shakuni slain by Sahadeva, and Duryodhana alone walking to the lake. Ganguli for English wording.",
+    "notes": "Not TV. Comic-mythology only; no gore, no bodies. Kripa, Sahadeva, Shakuni, Kritavarma and Arjuna are narrated only or absent. Krishna = Ep 04 lock (official, Avinash 2026-10-05). One new scene master (field18, daylight); camp18 = Ep 16 camp master byte copy. Never attach Ep01 plate-wide-gold or any finished plate as an Imagine ref. Picks up Ep 17's end line; the mace duel at the lake is Ep 19."
+  },
+  "stills_status": "not generated — PROMPTS.md prepared at stills/_inbox/consumer-imagine/PROMPTS.md (SuperGrok consumer path)"
+}

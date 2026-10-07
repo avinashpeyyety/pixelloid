@@ -195,4 +195,16 @@ export const EPISODES = [
       "Drona has fallen. Karna leads the Kaurava host — and asks for one charioteer to match Krishna: proud Shalya, who takes the reins with scorn.",
     play: "play.html?ep=16",
   },
+  {
+    id: "17",
+    slug: "karna-fall",
+    title: "The Fall of Karna",
+    sanskrit: "कर्णवधः",
+    chapter: "Karna Parva · seventeenth day",
+    duration: "~112s",
+    status: "live",
+    blurb:
+      "Karna and Arjuna meet at last. A serpent arrow takes only a crown, the earth seizes Karna’s wheel — and the son of the Sun falls in the afternoon light.",
+    play: "play.html?ep=17",
+  },
 ];

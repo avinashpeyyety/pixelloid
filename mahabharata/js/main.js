@@ -1,7 +1,7 @@
 /**
  * Mahābhārata player — cinematic plate theater.
  * Painterly Imagine plates + Ken Burns / crossfade; voice + raga underscore (tanpura; episode raga).
- * Loads episode from ?ep=01 … ?ep=16
+ * Loads episode from ?ep=01 … ?ep=17
  */
 const EP_LOADERS = {
   "01": () => import("../episodes/01-birds-eye/script.js"),
@@ -20,6 +20,7 @@ const EP_LOADERS = {
   "14": () => import("../episodes/14-drona-fall/script.js"),
   "15": () => import("../episodes/15-narayanastra/script.js"),
   "16": () => import("../episodes/16-karna-commander/script.js"),
+  "17": () => import("../episodes/17-karna-fall/script.js"),
 };
 
 const _epParam = String(new URLSearchParams(location.search).get("ep") || "01").replace(/\D/g, "") || "01";

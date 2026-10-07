@@ -42,10 +42,13 @@
 ## Publish
 
 - Message: `mahabharata Ep16: GATE D install PASS + ship Karna Takes Command`
-- Commit: _(filled after push)_
+- Commits on `main` (pushed 2026-10-06 ~22:56 CT, fast-forward `d52da57..b4c466d`, no force): 80e159d (import + GATE C, branch) → 9003748 (merge `studio/ep16-karna-commander`, NEXT.md conflict resolved keeping main's narrator hard rules) → **7447b4b** (`7447b4b` ship: GATE D + registry) → b4c466d (NEXT / SPRINT_PLAN tally); author `Chief <Avinashpeyyety@icloud.com>`
 - Pages: `.github/workflows/deploy-pages.yml` on push to `main`
 - Live: https://avinashpeyyety.github.io/pixelloid/mahabharata/play.html?ep=16
 - Hub: https://avinashpeyyety.github.io/pixelloid/mahabharata/
+- Pages run: Deploy to GitHub Pages #37569087253 — **success** (2026-10-06 22:56–22:57 CT)
+- Live verify (~23:00 CT): `play.html?ep=16` 200 (`main.js?v=ep16-20261006`); deployed `js/episodes.js` has Ep 16; `js/main.js` has `EP_LOADERS["16"]`; 9 plates + poster + 3 thumbs + `orion-00…08.mp3` all 200 and md5-identical to the repo; headless Chrome `play.html?ep=16&auto=1` loads all 9 plates, streams orion-00/01 (206), clock advancing, no JS errors (only 404 = site-wide `/favicon.ico`); hub renders the Ep 16 card + thumb.
+- Orion regression (live): Ep 05–08 `script.js` voice_id `orion`; all 36 `orion-*.mp3` md5-identical to repo (= Orion-restore commit e7dc13c); `install_review.py` PASS on 05–08.
 
 ## Notes
 

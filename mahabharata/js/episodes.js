@@ -207,4 +207,16 @@ export const EPISODES = [
       "Karna and Arjuna meet at last. A serpent arrow takes only a crown, the earth seizes Karna’s wheel — and the son of the Sun falls in the afternoon light.",
     play: "play.html?ep=17",
   },
+  {
+    id: "18",
+    slug: "shalya-fall",
+    title: "The Fall of Shalya",
+    sanskrit: "शल्यवधः",
+    chapter: "Shalya Parva · eighteenth day",
+    duration: "~112s",
+    status: "live",
+    blurb:
+      "Karna is gone, and old Shalya leads what is left. Gentle Yudhishthira rides out in anger, a worshipped dart in his hand — and Duryodhana walks alone to a lake.",
+    play: "play.html?ep=18",
+  },
 ];

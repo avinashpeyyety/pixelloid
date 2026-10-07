@@ -40,6 +40,7 @@ Episodic itihāsa theater: **write script → Grok Imagine key panels → Blende
 | 15 | **The Narayana Weapon** — fifteenth day, Ashwatthama’s wrath | Live |
 | 16 | **Karna Takes Command** — sixteenth/seventeenth days, Shalya at the reins | Live |
 | 17 | **The Fall of Karna** — seventeenth day, the sunken wheel | Live |
+| 18 | **The Fall of Shalya** — eighteenth day, Yudhishthira’s dart | Live |
 
 ## Local
 

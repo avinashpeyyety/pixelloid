@@ -48,3 +48,10 @@
 
 - Narrator Kokoro `bm_george` (new episode). Not added to the Orion remaster queue — that queue is Avinash's call.
 - Next: Ep 20 (the night raid — Sauptika Parva) — Track B.
+
+## Live verify (2026-10-07 ~22:30 CT)
+
+- Pages run: Deploy to GitHub Pages #37722490337 — **success** (head d49b112; the merge run 37722438909 was superseded/cancelled by it)
+- `play.html?ep=19` 200 with `main.js?v=ep19-20261007`; deployed `js/episodes.js` has Ep 19 and `js/main.js` has `EP_LOADERS["19"]`
+- 9 plates + poster + thumbs + `orion-00…08.mp3` + `script.js` md5-identical to the repo; headless Chrome `play.html?ep=19&auto=1` renders the title and end card
+- Orion regression (live): Ep 05–08 `script.js` voice_id `orion`; all their `orion-*.mp3` md5-identical to the repo

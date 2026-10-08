@@ -2,6 +2,7 @@
 
 ## Hard rules (2026-10-05, after Ep04–08 lost Orion; Ep05–08 restored)
 - **New-resolution re-render is COMPLETE — do not redo it.** Ep 01–02 restyled 2026-09-02; Ep 03–08 SuperGrok 1536×1024+/1728×1152 plates shipped 2026-09-16→18 (ad4bf2c, afd2ac4, 62513ab, 3944e6b, 48d25dd, fa536dd). Ep 09–15 were born at the bar. The "01–08 rewrite ladder" is closed; no sprint may pick an already-shipped episode back up as a "rewrite" without a ticket from Avinash naming the episode.
+- **Pace: 2 episodes per week, maximum (Avinash 2026-10-07).** The sprint runs Mon and Thu at 11:47 AM CT and ships at most one episode per run and at most 2 new episodes per Mon–Sun week. If 2 have already shipped this week, the run does no episode work and stops. A third episode happens only when Avinash asks for one ad hoc (depends on SuperGrok limits). The earlier "target ≥3 / stretch 4" no longer applies.
 - **Never re-synthesize narration for an existing episode.** Any re-render (plates, resolution, Blender, retime) reuses the episode's existing `audio/*.mp3`. Ep 01–03 and 05–13 are Orion-locked (`config/narrator.json` `orion_locked_episodes`; GATE D install FAILs otherwise). Ep 04 (Oct rewrite text), 14, 15 keep their existing Kokoro `bm_george` audio until the queued Orion remaster. Kokoro `bm_george` is only for NEW episodes. If new text truly needs new audio, stop and ask Avinash.
 
 ## Now

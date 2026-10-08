@@ -1,0 +1,883 @@
+{
+  "episode_id": "19",
+  "strict_hero_lock": "bhima",
+  "title": "The Mace Duel",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Krishna locked to the Ep 04 look (official reference), Yudhishthira, Bhima and Arjuna to the Ep 14/15 locks, Duryodhana to Ep 13 via Ep 16, Ashwatthama to Ep 15 via Ep 16, Balarama to a new Ep 19 lock",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "krishna_visual_lock_ref": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+  "krishna_lock_note": "Avinash 2026-10-05: the Ep 04 Krishna is the official series reference and the operative visual lock for Ep 19 — byte-copied to episodes/19-mace-duel/stills/_locks/krishna.jpg and attached as the FIRST character ref (right after the scene master) on every Krishna image in PROMPTS.md. krishna_look_lock_ref keeps the Ep 09 path only because tools/logic_review.py still checks for it.",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+  "scene_lock_refs": {
+    "lake19-master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg"
+  },
+  "scene_master_prompt": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The lake Dvaipayana and the holy pools of Samantapanchaka at the edge of Kurukshetra on the late afternoon of the eighteenth day: a broad, glassy, unnaturally still lake edged with reeds and pink lotuses, a wide open stretch of pale golden sand on the near shore as a duelling ground, a few old trees and rocks, distant broken banners at the far edge of the empty battlefield, a low warm gold sun, long shadows, golden glints on the water. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for duelling warriors to be placed later. No people, no named figures. Daylight — NOT night: no moon, no stars, no torches. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no watermark.",
+  "scene_master_prompts": {
+    "lake19-master": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The lake Dvaipayana and the holy pools of Samantapanchaka at the edge of Kurukshetra on the late afternoon of the eighteenth day: a broad, glassy, unnaturally still lake edged with reeds and pink lotuses, a wide open stretch of pale golden sand on the near shore as a duelling ground, a few old trees and rocks, distant broken banners at the far edge of the empty battlefield, a low warm gold sun, long shadows, golden glints on the water. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for duelling warriors to be placed later. No people, no named figures. Daylight — NOT night: no moon, no stars, no torches. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no watermark."
+  },
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+    "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "episodes/19-mace-duel/stills/_locks/krishna.jpg",
+    "episodes/19-mace-duel/stills/_locks/yudhishthira.jpg",
+    "episodes/19-mace-duel/stills/_locks/bhima.jpg",
+    "episodes/19-mace-duel/stills/_locks/arjuna.jpg",
+    "episodes/19-mace-duel/stills/_locks/balarama.jpg",
+    "episodes/19-mace-duel/stills/_locks/duryodhana.jpg",
+    "episodes/19-mace-duel/stills/_locks/ashwatthama.jpg"
+  ],
+  "imagine_refs_note": "Gate-check list (lineage). The operative per-image attach order is in stills/_inbox/consumer-imagine/PROMPTS.md: scene master first, then the Ep 04 Krishna lock (on Krishna images), then the other character locks, then the Ep 10 field-master. The Ep 09 Krishna path is listed for the gate only and is NOT attached.",
+  "character_lock_refs": {
+    "krishna": "episodes/19-mace-duel/stills/_locks/krishna.jpg",
+    "yudhishthira": "episodes/19-mace-duel/stills/_locks/yudhishthira.jpg",
+    "bhima": "episodes/19-mace-duel/stills/_locks/bhima.jpg",
+    "arjuna": "episodes/19-mace-duel/stills/_locks/arjuna.jpg",
+    "balarama": "episodes/19-mace-duel/stills/_locks/balarama.jpg",
+    "duryodhana": "episodes/19-mace-duel/stills/_locks/duryodhana.jpg",
+    "ashwatthama": "episodes/19-mace-duel/stills/_locks/ashwatthama.jpg"
+  },
+  "local_lock_plan": {
+    "copy_forward": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg (byte copy)",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg (byte copy)",
+      "bhima": "episodes/15-narayanastra/stills/_locks/bhima.jpg (byte copy)",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg (byte copy)",
+      "duryodhana": "episodes/16-karna-commander/stills/_locks/duryodhana.jpg (byte copy)",
+      "ashwatthama": "episodes/16-karna-commander/stills/_locks/ashwatthama.jpg (byte copy)"
+    },
+    "new": {
+      "lake19-master": "scene master — the lake Dvaipayana / Samantapanchaka, late afternoon of the eighteenth day (all plates + poster); generate first",
+      "balarama": "new character lock (first appearance in the series); generate second, attach on balarama and wrath"
+    },
+    "new_prompts": {
+      "balarama": "Premium painted comic Amar Chitra character lock portrait, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium three-quarter portrait of exactly one adult man standing on a golden lake shore: Balarama, elder brother of Krishna (match the attached Balarama lock: mature powerful adult, fair milk-white complexion, broad shoulders, clean-shaven strong face, tall gold crown, one large gold earring, deep indigo-blue dhoti and angavastram, wildflower garland, a great golden plough (hala) carried on his shoulder; never blue skin, never a peacock feather, never a flute). Calm, noble, powerful expression. Late afternoon gold light — daytime, NOT night: no moon, no stars. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No other figures."
+    },
+    "not_needed": "Kripa, Kritavarma, Nakula, Sahadeva, the hunters and the spectators are narrated only or absent.",
+    "note": "stills_review.py (GATE C) requires episodes/19-mace-duel/stills/_locks/<id>.jpg for every face on a plate; the copy-forward locks are byte copies, not new art. Every plate but vow is daytime (late afternoon; wrath at sunset)."
+  },
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; Arjuna's charioteer, on foot at the lake and the duelling ground in this episode — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets, bow of the king — no gold chest armor, no Gandiva, no flower garland"
+    },
+    "bhima": {
+      "face": "Adult Pandava, broad noble face, full dark mustache, fierce dark eyes — never a child (Ep 14/15 lock)",
+      "hair": "Dark hair, gold warrior circlet (not Arjuna's crown, not peacock)",
+      "costume": "Deep gold and leaf-green engraved armor, great gold-decked mace — never saffron sage robes"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes — Ep 09 face via the Ep 14/15 lock",
+      "hair": "Tall gold crown",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva — never flower garland, never peacock feather"
+    },
+    "balarama": {
+      "face": "Elder brother of Krishna: mature powerful adult, fair milk-white complexion, clean-shaven strong face, calm until roused (new Ep 19 lock) — never blue-skinned",
+      "hair": "Dark hair under a tall gold crown, one large gold earring; no peacock feather",
+      "costume": "Deep indigo-blue dhoti and angavastram, wildflower garland, gold armlets, a great golden plough (hala) on his shoulder; palm-tree banner — never a flute, never Krishna's saffron-yellow pitambar"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava king, proud upswept mustache, fierce gaze (Ep 13 lock via Ep 16)",
+      "hair": "Dark hair under a tall jeweled Kuru crown",
+      "costume": "Jewel-tone gold Kaurava armor with saffron-orange cape, gold-decked mace — field king, not a sage"
+    },
+    "ashwatthama": {
+      "face": "Young adult Brahmin-warrior, the guru's son: noble lean face, dark mustache, intense dark eyes; a luminous jewel (mani) in the middle of his forehead (Ep 15 lock via Ep 16); never a child, never white-bearded",
+      "hair": "Dark hair tied back under a slim bronze-gold warrior band (no royal crown, no peacock feather)",
+      "costume": "Deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti, great bow — no saffron sage robes, no flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore, no bodies"
+    }
+  },
+  "plates": [
+    {
+      "id": "shore",
+      "file": "plate-shore.jpg",
+      "beat_text": "Hunters lead the Pandavas to a lake where Duryodhana hides beneath the still water. Yudhishthira calls out: “Rise and fight, Duryodhana!”",
+      "cast_present": [
+        "yudhishthira",
+        "bhima"
+      ],
+      "locus_master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The lake Dvaipayana at the edge of Kurukshetra in late-afternoon light (lake19 master), its water unnaturally still",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash — no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Bhima (Ep 14/15 lock): broad face, full dark mustache, gold warrior circlet, gold and leaf-green armor, great mace",
+        "Yudhishthira stands at the water's edge, one hand raised, calling out across the still lake",
+        "Bhima beside him grips his great mace, glaring at the water",
+        "Duryodhana is hidden under the water — not drawn; the hunters are narrated only"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Arjuna",
+        "Balarama",
+        "Duryodhana",
+        "Ashwatthama",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "hunters",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "saffron sage robes on Bhima",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "still lotus lake",
+        "reeds",
+        "Bhima's mace",
+        "king's bow"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men at the edge of a broad, unnaturally still lake edged with reeds and lotuses. Yudhishthira, eldest Pandava king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets, a king's bow; no gold chest armor, no Gandiva, no flower garland, no peacock feather) stands at the water's edge, his right hand raised, calling out across the glassy water, his bow in his left hand. Beside him Bhima (match the attached Bhima lock: broad noble face, full dark mustache, fierce dark eyes, gold warrior circlet, deep gold and leaf-green engraved armor, a great gold-decked mace; never saffron sage robes) grips his great mace with both hands and glares at the water. No one is visible in the lake. Late afternoon of the eighteenth day: low warm gold sun, deep gold-amber light, long shadows, golden glints on the lake — daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. No Balarama. No Duryodhana. No Ashwatthama. No Karna, no Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), Gada (Hrada-pravesha and Gada-yuddha) sub-parva — hunters who supply Bhima with meat overhear Duryodhana at the lake and lead the Pandavas there; Yudhishthira, seeing the waters stilled by illusion, challenges him to rise"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 30–31 — the vyadhas reveal the hrada; Yudhishthira's challenge to Duryodhana"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §30 (the hunters tell Bhima) and §31 (Yudhishthira at the lake: 'Rise, O Suyodhana, and fight with us')"
+        }
+      ]
+    },
+    {
+      "id": "rise",
+      "file": "plate-rise.jpg",
+      "beat_text": "Duryodhana rises, mace in hand. Yudhishthira makes an offer: “Fight any one of us, with any weapon. Win, and the kingdom is yours.”",
+      "cast_present": [
+        "duryodhana"
+      ],
+      "locus_master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The lake (lake19 master) in late-afternoon light",
+        "Duryodhana (Ep 13 lock via Ep 16): proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor, saffron-orange cape, gold-decked mace",
+        "Duryodhana rises from the lake, waist-deep, water streaming from his armor, his gold-decked mace raised on his shoulder, defiant",
+        "Yudhishthira is off-frame on the shore (not drawn)"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Bhima",
+        "Arjuna",
+        "Balarama",
+        "Ashwatthama",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "hunters",
+        "second Duryodhana",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "gold-decked mace",
+        "streaming water",
+        "lotuses and reeds"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult man. Duryodhana, the Kaurava king (match the attached Duryodhana lock: proud upswept mustache, fierce gaze, tall jeweled Kuru crown, jewel-tone gold Kaurava armor with a saffron-orange cape, a gold-decked mace) rises out of the still lake, waist-deep, water streaming from his armor and crown, his gold-decked mace raised onto his shoulder, his face proud and defiant as he looks toward the shore off-frame. Lotuses and reeds around him, ripples spreading. Late afternoon of the eighteenth day: low warm gold sun, deep gold-amber light, long shadows, golden glints on the lake — daytime, NOT night: no moon, no stars, no torches (the attached Duryodhana lock may be darker; take only his face, crown and armor, never a night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Bhima. No Arjuna. No Balarama. No Ashwatthama. No Karna, no Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), Gada (Hrada-pravesha and Gada-yuddha) sub-parva — stung by Yudhishthira's words, Duryodhana rises from the water, mace in hand; Yudhishthira grants that he may fight any one Pandava with the weapon of his choice and be king if he wins"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 32 — Duryodhana emerges with his gada; Yudhishthira's offer"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §32 — 'Fight with any one of us … slaying him, be king'; Duryodhana rises with his mace"
+        }
+      ]
+    },
+    {
+      "id": "warn",
+      "file": "plate-warn.jpg",
+      "beat_text": "Krishna is alarmed at the rash offer: with the mace, Duryodhana has no equal. But Bhima steps forward, his great mace raised.",
+      "cast_present": [
+        "krishna",
+        "bhima"
+      ],
+      "locus_master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Lake shore in late-afternoon light (lake19 master)",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; Arjuna's charioteer, here on foot beside the duelling ground (no reins) — no flute",
+        "Bhima (Ep 14/15 lock): broad face, full dark mustache, gold warrior circlet, gold and leaf-green armor, great mace",
+        "Krishna, troubled, raises his right hand in warning; his left hand at his side",
+        "Bhima strides forward past him, hefting his great mace onto his shoulder, eager to fight",
+        "Exactly two named figures; Yudhishthira and Duryodhana are off-frame"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Yudhishthira",
+        "Arjuna",
+        "Balarama",
+        "Duryodhana",
+        "Ashwatthama",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "hunters",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "saffron sage robes on Bhima",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "Bhima's great mace",
+        "lake shore"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men on a sandy lake shore. Krishna (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather — not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; Arjuna's charioteer, here standing on foot with no chariot and no reins; no flute, no bow) stands on the left, his face troubled, his right hand raised in warning and his left hand at his side; he does not touch the other man. Bhima (match the attached Bhima lock: broad noble face, full dark mustache, fierce dark eyes, gold warrior circlet, deep gold and leaf-green engraved armor, a great gold-decked mace; never saffron sage robes) strides forward past him toward the right, hefting his great mace onto his shoulder with both hands, eager and fierce. Exactly four hands in the whole picture. Late afternoon of the eighteenth day: low warm gold sun, deep gold-amber light, long shadows, golden glints on the lake — daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Yudhishthira. No Arjuna. No Balarama. No Duryodhana. No Ashwatthama. No Karna, no Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), Gada (Hrada-pravesha and Gada-yuddha) sub-parva — Vasudeva angrily rebukes Yudhishthira for the rash offer, since none of the Pandavas but Bhima can face Duryodhana with the mace, and even Bhima lacks his skill; Bhima then steps forward"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 33 — Shri Krishna's rebuke; Bhimasena accepts the challenge"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §33 — Vasudeva: 'What rashness is this …'; Bhima comes forward, mace in hand"
+        }
+      ]
+    },
+    {
+      "id": "balarama",
+      "file": "plate-balarama.jpg",
+      "beat_text": "Then Balarama arrives from his pilgrimage, teacher of both men. He leads them to the holy lakes of Samantapanchaka to fight.",
+      "cast_present": [
+        "balarama"
+      ],
+      "locus_master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Lake shore in late-afternoon light (lake19 master)",
+        "Balarama (new Ep 19 lock): fair milk-white complexion, powerful build, clean-shaven, tall gold crown, one large gold earring, deep indigo-blue dhoti and angavastram, wildflower garland, golden plough on his shoulder — never blue-skinned, never a peacock feather; clearly distinct from Krishna",
+        "Balarama strides in on foot, his golden plough on his shoulder, one hand raised in greeting, travel-dusted from his pilgrimage",
+        "Only one named figure"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Bhima",
+        "Arjuna",
+        "Duryodhana",
+        "Ashwatthama",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "hunters",
+        "blue skin on Balarama",
+        "peacock feather on Balarama",
+        "flute on Balarama",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "golden plough (hala)",
+        "wildflower garland",
+        "palm-tree banner in the distance"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult man. Balarama, elder brother of Krishna (match the attached Balarama lock: mature powerful adult, fair milk-white complexion, broad shoulders, clean-shaven strong face, tall gold crown, one large gold earring, deep indigo-blue dhoti and angavastram, wildflower garland, a great golden plough (hala) carried on his shoulder; never blue skin, never a peacock feather, never a flute) strides in along the lake shore on foot, his golden plough resting on his shoulder in his right hand, his left hand raised in greeting, travel-dusted from a long pilgrimage; far behind him a small palm-tree banner. Late afternoon of the eighteenth day: low warm gold sun, deep gold-amber light, long shadows, golden glints on the lake — daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Bhima. No Arjuna. No Duryodhana. No Ashwatthama. No Karna, no Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), Gada (Hrada-pravesha and Gada-yuddha) sub-parva — Balarama, returning from his pilgrimage along the Sarasvati, arrives to see the duel of his two disciples; at his word the combatants go to Samantapanchaka"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 34 (Baladeva's arrival) and 54–55 (the move to Samantapanchaka)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §34 (Rama arrives) and §54–§55 (they proceed to Samantapanchaka for the fight)"
+        }
+      ]
+    },
+    {
+      "id": "duel",
+      "file": "plate-duel.jpg",
+      "beat_text": "Bhima and Duryodhana circle and clash like two mountains. Bhima is the stronger, but Duryodhana is the more skilful.",
+      "cast_present": [
+        "bhima",
+        "duryodhana"
+      ],
+      "locus_master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Open sandy duelling ground beside the lake in late-afternoon light (lake19 master)",
+        "Bhima (Ep 14/15 lock): broad face, full dark mustache, gold warrior circlet, gold and leaf-green armor, great mace",
+        "Duryodhana (Ep 13 lock via Ep 16): proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor, saffron-orange cape, gold-decked mace",
+        "Bhima and Duryodhana on foot, great gold-decked maces meeting in a burst of golden sparks; Duryodhana light on his feet, Bhima planted and massive",
+        "No wounds, no blood; only these two named figures"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Balarama",
+        "Ashwatthama",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "hunters",
+        "saffron sage robes on Bhima",
+        "second Duryodhana",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "two great gold-decked maces",
+        "sparks where the maces meet",
+        "rising sand"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men fighting on foot on open golden sand beside a lake. Bhima (match the attached Bhima lock: broad noble face, full dark mustache, fierce dark eyes, gold warrior circlet, deep gold and leaf-green engraved armor, a great gold-decked mace; never saffron sage robes) and Duryodhana, the Kaurava king (match the attached Duryodhana lock: proud upswept mustache, fierce gaze, tall jeweled Kuru crown, jewel-tone gold Kaurava armor with a saffron-orange cape, a gold-decked mace) swing great gold-decked maces that meet between them in a burst of golden sparks; Duryodhana is light and agile on his feet, Bhima massive and planted, sand rising around them. No wounds, no blood. No spectators in the foreground. Late afternoon of the eighteenth day: low warm gold sun, deep gold-amber light, long shadows, golden glints on the lake — daytime, NOT night: no moon, no stars, no torches (the attached Duryodhana lock may be darker; take only his face, crown and armor, never a night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Balarama. No Ashwatthama. No Karna, no Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), Gada (Hrada-pravesha and Gada-yuddha) sub-parva — the great mace duel at Samantapanchaka; Bhima superior in strength, Duryodhana in skill, the two circling like bulls"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 56–57 — the gada-yuddha of Bhima and Duryodhana"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §56–§57 — the two heroes, mace in hand, clash like two mountains; Duryodhana excels in skill"
+        }
+      ]
+    },
+    {
+      "id": "signal",
+      "file": "plate-signal.jpg",
+      "beat_text": "Krishna tells Arjuna: “Fairly, Bhima cannot win. Let him keep his vow.” Arjuna strikes his own left thigh, and Bhima sees.",
+      "cast_present": [
+        "krishna",
+        "arjuna"
+      ],
+      "locus_master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Edge of the duelling ground by the lake in late-afternoon light (lake19 master)",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; Arjuna's charioteer, here on foot beside the duelling ground (no reins) — no flute",
+        "Arjuna (Ep 14/15 lock, Ep 09 face): noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, quiver, Gandiva — no garland, no peacock feather; distinct from Yudhishthira",
+        "Krishna leans toward Arjuna and speaks quietly, his right hand pointing toward the duel off-frame",
+        "Arjuna, looking toward the duel, slaps his own left thigh with his right hand, the Gandiva held in his left hand",
+        "Exactly two named figures; the duel is off-frame"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Yudhishthira",
+        "Bhima",
+        "Balarama",
+        "Duryodhana",
+        "Ashwatthama",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "hunters",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "flower garland on Arjuna",
+        "peacock feather on Arjuna",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "Gandiva bow",
+        "quiver"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men standing side by side at the edge of a sandy duelling ground by a lake. Krishna (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather — not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; Arjuna's charioteer, here standing on foot with no chariot and no reins; no flute, no bow) leans toward the other man and speaks quietly, his right hand pointing toward the fight off-frame to the right, his left hand at his side. Beside him Arjuna (match the attached Arjuna lock: noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, gold belt and armlets, quiver on his back, the great Gandiva bow; no flower garland, no peacock feather) looks toward the fight and slaps his own left thigh with his right hand as a signal, holding the Gandiva bow upright in his left hand. Exactly four hands in the whole picture; neither man touches the other. Late afternoon of the eighteenth day: low warm gold sun, deep gold-amber light, long shadows, golden glints on the lake — daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Yudhishthira. No Bhima. No Balarama. No Duryodhana. No Ashwatthama. No Karna, no Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), Gada (Hrada-pravesha and Gada-yuddha) sub-parva — asked by Arjuna, Vasudeva says Bhima cannot win fairly and must keep his vow to break Duryodhana's thighs; Arjuna strikes his own left thigh, and Bhima understands the sign"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 58 — Shri Krishna to Arjuna; Arjuna's signal (savya uru-tadana)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §58 — Vasudeva recalls Bhima's vow at the dice; 'Dhananjaya struck his own left thigh in the sight of Bhima'"
+        }
+      ]
+    },
+    {
+      "id": "strike",
+      "file": "plate-strike.jpg",
+      "beat_text": "Duryodhana leaps high. Bhima’s mace sweeps low and breaks his thighs, and the Kaurava king crashes to the earth.",
+      "cast_present": [
+        "bhima",
+        "duryodhana"
+      ],
+      "locus_master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Duelling ground by the lake in late-afternoon light (lake19 master)",
+        "Bhima (Ep 14/15 lock): broad face, full dark mustache, gold warrior circlet, gold and leaf-green armor, great mace",
+        "Duryodhana (Ep 13 lock via Ep 16): proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor, saffron-orange cape, gold-decked mace",
+        "Duryodhana in mid-leap, high in the air with his mace raised; below him Bhima swings his mace in a low sweeping arc, a flash of golden light",
+        "Stylized impact flash only — no wounds, no blood, no broken limbs drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Balarama",
+        "Ashwatthama",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "hunters",
+        "saffron sage robes on Bhima",
+        "second Duryodhana",
+        "night sky, moon or stars",
+        "torches",
+        "wounds or broken limbs drawn",
+        "a dead or lifeless figure"
+      ],
+      "props": [
+        "two gold-decked maces",
+        "golden impact flash",
+        "sand spray"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men. Duryodhana, the Kaurava king (match the attached Duryodhana lock: proud upswept mustache, fierce gaze, tall jeweled Kuru crown, jewel-tone gold Kaurava armor with a saffron-orange cape, a gold-decked mace) leaps high into the air with his mace raised over his head; below him Bhima (match the attached Bhima lock: broad noble face, full dark mustache, fierce dark eyes, gold warrior circlet, deep gold and leaf-green engraved armor, a great gold-decked mace; never saffron sage robes) crouches and swings his great mace in a low, sweeping arc toward the leaping man's legs, a stylized flash of golden light and a spray of sand at the moment of the blow. Dramatic action, no wounds, no blood, no broken limbs shown. Late afternoon of the eighteenth day: low warm gold sun, deep gold-amber light, long shadows, golden glints on the lake — daytime, NOT night: no moon, no stars, no torches (the attached Duryodhana lock may be darker; take only his face, crown and armor, never a night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Balarama. No Ashwatthama. No Karna, no Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), Gada (Hrada-pravesha and Gada-yuddha) sub-parva — as Duryodhana leaps up to evade a blow, Bhima hurls his mace and breaks both his thighs; the Kaurava king falls, and the earth trembles"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 58 — Bhima breaks Duryodhana's urus as he springs into the air"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §58 — 'Bhima … hurled his mace at the thighs of Duryodhana' as the king leapt up; he fell, causing the earth to resound"
+        }
+      ]
+    },
+    {
+      "id": "wrath",
+      "file": "plate-wrath.jpg",
+      "beat_text": "Balarama raises his plough in fury: a blow below the navel breaks the law of the mace. Krishna calms him: it was Bhima’s vow.",
+      "cast_present": [
+        "krishna",
+        "balarama"
+      ],
+      "locus_master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Duelling ground by the lake at sunset (lake19 master)",
+        "Balarama (new Ep 19 lock): fair milk-white complexion, powerful build, clean-shaven, tall gold crown, one large gold earring, deep indigo-blue dhoti and angavastram, wildflower garland, golden plough on his shoulder — never blue-skinned, never a peacock feather; clearly distinct from Krishna",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; Arjuna's charioteer, here on foot beside the duelling ground (no reins) — no flute",
+        "Balarama, enraged, raises his golden plough high in both hands",
+        "Krishna stands before him, one open palm raised to calm him, the other at his side — he does not grab the plough",
+        "Exactly two named figures; Bhima is off-frame"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Yudhishthira",
+        "Bhima",
+        "Arjuna",
+        "Duryodhana",
+        "Ashwatthama",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "hunters",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "blue skin on Balarama",
+        "peacock feather on Balarama",
+        "flute on Balarama",
+        "night sky, moon or stars",
+        "torches"
+      ],
+      "props": [
+        "golden plough raised",
+        "sunset sky"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men facing each other at sunset beside a lake. On the left Balarama, elder brother of Krishna (match the attached Balarama lock: mature powerful adult, fair milk-white complexion, broad shoulders, clean-shaven strong face, tall gold crown, one large gold earring, deep indigo-blue dhoti and angavastram, wildflower garland, a great golden plough (hala) carried on his shoulder; never blue skin, never a peacock feather, never a flute) raises his golden plough high over his head in both hands, his fair face blazing with fury. On the right Krishna (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather — not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; Arjuna's charioteer, here standing on foot with no chariot and no reins; no flute, no bow) stands calmly before him, his right palm raised open to calm his brother, his left hand at his side; he does not touch the plough. Exactly four hands in the whole picture. Sunset of the eighteenth day: a huge low red-gold sun at the horizon, saffron and rose sky, long shadows across the sand — still daytime, NOT night: no moon, no stars, no torches. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Yudhishthira. No Bhima. No Arjuna. No Duryodhana. No Ashwatthama. No Karna, no Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), Gada (Hrada-pravesha and Gada-yuddha) sub-parva — Balarama, enraged that Duryodhana was struck below the navel against the rule of mace combat, raises his plough and rushes at Bhima; Keshava restrains him, recalling Bhima's vow and the coming of the Kali age"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 60 — Baladeva's krodha and Shri Krishna's pacification"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §60 — 'Rama … uplifting his plough, rushed toward Bhima'; Krishna seizes and soothes him with words of the vow"
+        }
+      ]
+    },
+    {
+      "id": "vow",
+      "file": "plate-vow.jpg",
+      "beat_text": "Night falls. Duryodhana lies by the lake, unable to rise. Ashwatthama comes to him, and the fallen king names him commander.",
+      "cast_present": [
+        "duryodhana",
+        "ashwatthama"
+      ],
+      "locus_master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The lake at night (lake19 master), moon rising",
+        "Duryodhana (Ep 13 lock via Ep 16): proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold armor, saffron-orange cape, gold-decked mace",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, slim bronze-gold band, maroon and bronze-gold armor, white sacred thread — never a child",
+        "Duryodhana, alive, half-reclines against a rock on the sand, propped on one elbow, his crown fallen beside him and his mace at his side; no wounds shown",
+        "Ashwatthama kneels before him with his head bowed, the jewel on his forehead glowing, receiving the command",
+        "Kripa and Kritavarma narrated only — not drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "severed head",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Bhima",
+        "Arjuna",
+        "Balarama",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Shakuni",
+        "Sahadeva",
+        "Nakula",
+        "Kritavarma",
+        "Draupadi",
+        "hunters",
+        "second Duryodhana",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama",
+        "wounds or broken limbs drawn",
+        "a dead or lifeless figure"
+      ],
+      "props": [
+        "fallen jeweled crown",
+        "mace on the sand",
+        "moonlit lake"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men on the moonlit sand of a lake shore. Duryodhana, the Kaurava king (match the attached Duryodhana lock: proud upswept mustache, fierce gaze, tall jeweled Kuru crown, jewel-tone gold Kaurava armor with a saffron-orange cape, a gold-decked mace), alive but unable to rise, half-reclines against a rock, propped on one elbow, his jeweled crown fallen on the sand beside him and his mace at his side, his free hand raised in command; no wounds shown. Before him Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold armor, white sacred thread across the chest, great bow; never a child, never white-bearded) kneels on one knee with his head bowed, the jewel on his forehead glowing faintly, his bow upright. Night falls over the lake after the eighteenth day: deep indigo sky, a pale rising moon and stars, the last ember glow on the horizon, silver light on the still water (this beat is meant to be at night). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Bhima. No Arjuna. No Balarama. No Karna, no Shalya.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), Gada (Hrada-pravesha and Gada-yuddha) sub-parva, closing chapters — Ashvatthaman, Kripa and Kritavarman come to the fallen Duryodhana at nightfall; Ashvatthaman vows to destroy the Panchalas and Duryodhana has him consecrated commander"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 65 — Ashvatthama's abhisheka as senapati by the fallen Duryodhana"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §65 — the three warriors find Duryodhana at evening; at his bidding Kripa installs Ashvatthaman as commander"
+        }
+      ]
+    }
+  ],
+  "poster": {
+    "file": "poster.jpg",
+    "cast_present": [
+      "bhima",
+      "duryodhana"
+    ],
+    "prompt": "Premium painted comic Amar Chitra poster, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men. Bhima (match the attached Bhima lock: broad noble face, full dark mustache, fierce dark eyes, gold warrior circlet, deep gold and leaf-green engraved armor, a great gold-decked mace; never saffron sage robes) on the left and Duryodhana, the Kaurava king (match the attached Duryodhana lock: proud upswept mustache, fierce gaze, tall jeweled Kuru crown, jewel-tone gold Kaurava armor with a saffron-orange cape, a gold-decked mace) on the right face each other on golden sand beside a lake, great gold-decked maces crossed between them in a shower of golden sparks. Strong diagonal composition with clear headroom for a title. Late afternoon of the eighteenth day: low warm gold sun, deep gold-amber light, long shadows, golden glints on the lake — daytime, NOT night: no moon, no stars, no torches (the attached Duryodhana lock may be darker; take only his face, crown and armor, never a night sky). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no speech bubbles, no watermark.",
+    "note": "Poster = Ep 19 thesis (the last duel of the war). If a separate poster pass is cut, copy the GATE C-passed plate-duel.jpg."
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Shalya Parva (Hrada-pravesha and Gada-yuddha sub-parvas) · late afternoon and night of the eighteenth day · Duryodhana in the lake, the mace duel, the breaking of the thighs, Balarama's wrath, Ashwatthama made commander",
+    "bori": "BORI CE Shalya Parva, Debroy translation vol. 7 (chapter-group citations): the hunters reveal the lake; Yudhishthira's challenge and offer; Vasudeva's rebuke; Bhima accepts; Balarama arrives from his Sarasvati pilgrimage and the duel moves to Samantapanchaka; the duel; Vasudeva's counsel and Arjuna's thigh signal; the breaking of the thighs; Balarama's wrath restrained by Keshava; the closing chapters — Ashvatthaman consecrated commander by the fallen king.",
+    "gita_press": "Gita Press Gorakhpur Mahabharata (Hindi, Shalya Parva, vulgate numbering = Ganguli): adhyayas 30–33 (the hunters, the challenge, the offer, Krishna's rebuke), 34 and 54–55 (Baladeva; to Samantapanchaka), 56–58 (gada-yuddha, Arjuna's signal, uru-bhanga), 60 (Baladeva's anger), 65 (Ashvatthama's abhisheka).",
+    "ganguli": "K.M. Ganguli, Shalya Parva §30–§33, §34, §54–§58, §60, §65.",
+    "divergence": "Section/adhyaya numbers follow the vulgate (Ganguli = Gita Press); BORI CE chapters are cited at chapter-group level only. Omitted for length: Balarama's long pilgrimage digression (§35–§54), the exchange of taunts before the duel, Duryodhana's lament and the omens after his fall, Krishna's dialogue with the fallen Duryodhana, Kripa and Kritavarma's presence at the consecration. 'Samantapanchaka' is narrated as the holy lakes (Parashurama's five pools) and drawn with the lake master. The thigh blow is shown only as a stylized flash in mid-leap — no wound.",
+    "chosen": "Gita Press + BORI/Debroy overlap: the hunters and the lake, Yudhishthira's offer, Krishna's alarm, Bhima steps forward, Balarama's arrival and Samantapanchaka, the duel (strength vs skill), Krishna's word to Arjuna and the thigh signal, the blow as Duryodhana leaps, Balarama's wrath and Krishna's calming by the vow, Ashwatthama made commander at night. Ganguli for English wording.",
+    "notes": "Not TV. Comic-mythology only; no gore, no bodies. Kripa, Kritavarma, Nakula, Sahadeva and the hunters are narrated only or absent. Krishna = Ep 04 lock (official, Avinash 2026-10-05). One new scene master (lake19) and one new character lock (balarama). Never attach Ep01 plate-wide-gold or any finished plate as an Imagine ref. Picks up Ep 18's end line; the night raid (Sauptika Parva) is Ep 20."
+  },
+  "stills_status": "not generated — PROMPTS.md prepared at stills/_inbox/consumer-imagine/PROMPTS.md (SuperGrok consumer path)"
+}

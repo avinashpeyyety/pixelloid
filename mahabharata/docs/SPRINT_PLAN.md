@@ -112,4 +112,4 @@ Until then, canonical narrator for **new** episodes is **Kokoro `bm_george`** (`
 ## Weekly tally
 
 - ISO week 2026-09-28 → 2026-10-04 (Mon–Sun CT): shipped Ep 04 (*The Akshayapatra*, 10-02), Ep 14 (*The Fall of Drona*, 10-02), Ep 05 (*Yaksha Prashna*, 10-03), Ep 06 (*The Kirata*, 10-03), Ep 07 (*Jayadratha*, 10-04), Ep 08 (*The Peace Embassy*, 10-04) — **6** (beats ≥3 target and stretch 4). 01–08 ladder complete. *(Corrected 2026-10-04: earlier lines split this one ISO week into "09-29" and "10-03" buckets.)*
-- ISO week 2026-10-05 → 2026-10-11: shipped Ep 15 (*The Narayana Weapon*, 10-05), Ep 16 (*Karna Takes Command*, 10-06), Ep 17 (*The Fall of Karna*, 10-07), Ep 18 (*The Fall of Shalya*, 10-07) — **4** so far (target ≥3 met; stretch 4 met). Next: Ep 19 (the lake and the Bhima–Duryodhana mace duel; Track B).
+- ISO week 2026-10-05 → 2026-10-11: shipped Ep 15 (*The Narayana Weapon*, 10-05), Ep 16 (*Karna Takes Command*, 10-06), Ep 17 (*The Fall of Karna*, 10-07), Ep 18 (*The Fall of Shalya*, 10-07), Ep 19 (*The Mace Duel*, 10-07) — **5** so far (target ≥3 met; stretch 4 met). Next: Ep 20 (the night raid on the Pandava camp — Sauptika Parva; Track B).

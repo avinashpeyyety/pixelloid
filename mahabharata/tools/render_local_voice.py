@@ -102,6 +102,10 @@ PRONOUNCE: dict[str, str] = {
     # Ep18 The Fall of Shalya (Shalya Parva, eighteenth day)
     "Kripa": "Kri-pa",
     "Shakuni": "Shaku-nee",
+    # Ep19 The Mace Duel (Gada-yuddha, eighteenth day)
+    "Balarama": "Bala-raama",
+    "Samantapanchaka": "Samanta-panchaka",
+    "Kaurava": "Kau-rava",
 }
 
 

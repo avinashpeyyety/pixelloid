@@ -219,4 +219,16 @@ export const EPISODES = [
       "Karna is gone, and old Shalya leads what is left. Gentle Yudhishthira rides out in anger, a worshipped dart in his hand — and Duryodhana walks alone to a lake.",
     play: "play.html?ep=18",
   },
+  {
+    id: "19",
+    slug: "mace-duel",
+    title: "The Mace Duel",
+    sanskrit: "गदायुद्धम्",
+    chapter: "Shalya Parva · eighteenth day",
+    duration: "~112s",
+    status: "live",
+    blurb:
+      "Duryodhana rises from the lake to face Bhima, mace to mace. Arjuna gives a silent sign, an old vow is kept — and Balarama raises his plough in fury.",
+    play: "play.html?ep=19",
+  },
 ];

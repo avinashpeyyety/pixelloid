@@ -1,0 +1,60 @@
+{
+  "episode_id": "19",
+  "notes": "Shalya Parva (Gada-yuddha), eighteenth day afternoon and night — Duryodhana in the lake, the mace duel, the breaking of the thighs, Balarama's wrath, Ashwatthama made commander. No gore, no bodies, no wounds shown. Kripa, Kritavarma, Nakula, Sahadeva and the hunters are narrated only, never drawn. Krishna = Ep 04 lock (official series reference): pale silvery dusty-blue skin, long loose curls, slim gold band with one peacock feather, white U-tilak, jasmine-rose garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands. Yudhishthira, Bhima, Arjuna = Ep 14/15 locks; Duryodhana and Ashwatthama = Ep 16 locks; Balarama = new Ep 19 lock (fair, indigo-blue garments, golden plough). One new scene master (lake19).",
+  "locks": {
+    "reuse": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg",
+      "bhima": "episodes/15-narayanastra/stills/_locks/bhima.jpg",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg",
+      "duryodhana": "episodes/16-karna-commander/stills/_locks/duryodhana.jpg",
+      "ashwatthama": "episodes/16-karna-commander/stills/_locks/ashwatthama.jpg"
+    },
+    "new": {
+      "lake19-master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg",
+      "balarama": "episodes/19-mace-duel/stills/_locks/balarama.jpg"
+    }
+  },
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; Arjuna's charioteer, on foot at the lake and the duelling ground in this episode — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets, bow of the king — no gold chest armor, no Gandiva, no flower garland"
+    },
+    "bhima": {
+      "face": "Adult Pandava, broad noble face, full dark mustache, fierce dark eyes — never a child (Ep 14/15 lock)",
+      "hair": "Dark hair, gold warrior circlet (not Arjuna's crown, not peacock)",
+      "costume": "Deep gold and leaf-green engraved armor, great gold-decked mace — never saffron sage robes"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes — Ep 09 face via the Ep 14/15 lock",
+      "hair": "Tall gold crown",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva — never flower garland, never peacock feather"
+    },
+    "balarama": {
+      "face": "Elder brother of Krishna: mature powerful adult, fair milk-white complexion, clean-shaven strong face, calm until roused (new Ep 19 lock) — never blue-skinned",
+      "hair": "Dark hair under a tall gold crown, one large gold earring; no peacock feather",
+      "costume": "Deep indigo-blue dhoti and angavastram, wildflower garland, gold armlets, a great golden plough (hala) on his shoulder; palm-tree banner — never a flute, never Krishna's saffron-yellow pitambar"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava king, proud upswept mustache, fierce gaze (Ep 13 lock via Ep 16)",
+      "hair": "Dark hair under a tall jeweled Kuru crown",
+      "costume": "Jewel-tone gold Kaurava armor with saffron-orange cape, gold-decked mace — field king, not a sage"
+    },
+    "ashwatthama": {
+      "face": "Young adult Brahmin-warrior, the guru's son: noble lean face, dark mustache, intense dark eyes; a luminous jewel (mani) in the middle of his forehead (Ep 15 lock via Ep 16); never a child, never white-bearded",
+      "hair": "Dark hair tied back under a slim bronze-gold warrior band (no royal crown, no peacock feather)",
+      "costume": "Deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti, great bow — no saffron sage robes, no flower garland"
+    },
+    "armies": {
+      "face": "Background warriors distant",
+      "hair": "Helmets",
+      "costume": "Muted banners, equal human scale, no gore, no bodies"
+    }
+  }
+}

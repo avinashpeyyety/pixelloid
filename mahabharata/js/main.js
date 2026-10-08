@@ -1,7 +1,7 @@
 /**
  * Mahābhārata player — cinematic plate theater.
  * Painterly Imagine plates + Ken Burns / crossfade; voice + raga underscore (tanpura; episode raga).
- * Loads episode from ?ep=01 … ?ep=18
+ * Loads episode from ?ep=01 … ?ep=19
  */
 const EP_LOADERS = {
   "01": () => import("../episodes/01-birds-eye/script.js"),
@@ -22,6 +22,7 @@ const EP_LOADERS = {
   "16": () => import("../episodes/16-karna-commander/script.js"),
   "17": () => import("../episodes/17-karna-fall/script.js"),
   "18": () => import("../episodes/18-shalya-fall/script.js"),
+  "19": () => import("../episodes/19-mace-duel/script.js"),
 };
 
 const _epParam = String(new URLSearchParams(location.search).get("ep") || "01").replace(/\D/g, "") || "01";
@@ -394,6 +395,18 @@ const RAGA_PRESETS = {
     duckLevel: 0.15,
     tanpuraMs: 1200,
   },
+  bageshri: {
+    // Bageshri (Kafi thaat) — late-night raga of longing: n D S g m D n S' up, S' n D m P D g m g R S down;
+    // komal Ga and Ni, Pa only lightly touched; dwell on Ma and Dha. Bansuri over tanpura, no tabla.
+    Sa: 123.47, // B2 — under male VO; distinct from Sarang's A2
+    fluteSa: 246.94,
+    degrees: ["S", "R", "g", "m", "P", "D", "n"],
+    tabla: "none",
+    voice: "bansuri",
+    bedLevel: 0.44,
+    duckLevel: 0.14,
+    tanpuraMs: 1400,
+  },
   default: {
     // eps 01–08 — keep close to old FluteTablaBed so they don't jump
     Sa: 293.66,
@@ -441,6 +454,7 @@ class RagaBed {
       else if (id === "16") key = "adana";
       else if (id === "17") key = "multani";
       else if (id === "18") key = "sarang";
+      else if (id === "19") key = "bageshri";
       else key = "default";
     }
     if (!RAGA_PRESETS[key]) key = "default";
@@ -1105,6 +1119,42 @@ class RagaBed {
         ],
       ];
     }
+    if (key === "bageshri") {
+      // Bageshri — n D S g m / m D n S' / S' n D m / m P D g m / g R S. Pa only as a light touch.
+      return [
+        [
+          [0, "n", -1, 1.4],
+          [1.6, "D", -1, 1.4],
+          [3.2, "S", 0, 1.8],
+          [5.2, "g", 0, 1.4],
+          [6.8, "m", 0, 2.2],
+        ],
+        [
+          [0, "m", 0, 1.4],
+          [1.6, "D", 0, 1.6],
+          [3.4, "n", 0, 1.4],
+          [5.0, "S", 1, 2.4],
+        ],
+        [
+          [0, "S", 1, 1.6],
+          [1.8, "n", 0, 1.4],
+          [3.4, "D", 0, 1.8],
+          [5.4, "m", 0, 2.0],
+        ],
+        [
+          [0, "m", 0, 1.2],
+          [1.4, "P", 0, 0.8],
+          [2.4, "D", 0, 1.4],
+          [4.0, "g", 0, 1.4],
+          [5.6, "m", 0, 1.6],
+        ],
+        [
+          [0, "g", 0, 1.4],
+          [1.6, "R", 0, 1.4],
+          [3.2, "S", 0, 2.6],
+        ],
+      ];
+    }
     if (key === "sarang") {
       // Brindavani Sarang — N S R m P / m P N S' / S' n P m R / R m R S. Ga and Dha never sounded.
       return [
@@ -1217,6 +1267,7 @@ class RagaBed {
     if (key === "shree") return 4.0 + Math.random() * 2.6;
     if (key === "multani") return 4.0 + Math.random() * 2.6;
     if (key === "sarang") return 3.6 + Math.random() * 2.4;
+    if (key === "bageshri") return 4.2 + Math.random() * 2.6;
     return 1.2 + Math.random() * 2.0;
   }
 
@@ -1325,7 +1376,7 @@ class RagaBed {
       this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
     }
 
-    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "multani" ? 4000 : key === "sarang" ? 3600 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
+    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "multani" ? 4000 : key === "sarang" ? 3600 : key === "bageshri" ? 4000 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
     this.timers.push(setTimeout(() => this._scheduleMelody(), melodyDelay));
 
     this.master.gain.cancelScheduledValues(t);

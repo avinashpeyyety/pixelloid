@@ -56,3 +56,10 @@
 - Narrator Kokoro `bm_george` (new episode). Not added to the Orion remaster queue — that queue is Avinash's call.
 - Week of 2026-10-12: 1 shipped (cap 2/week, Mon/Thu sprint).
 - Next: Ep 21 (the pursuit and the brahmashira — Draupadi's vow, Bhima rides after Ashwatthama, the brahmashira at Vyasa's hermitage, the jewel taken; Sauptika Parva, Aishika sub-parva) — Track B. Picks up Ep 20's end line.
+
+## Live verify (2026-10-12 ~12:55 CT)
+
+- Pages run: Deploy to GitHub Pages #38286911511 — **success** (head 7cb4559, the ship record; the merge run #38286585342 on 1e35dbe had already succeeded)
+- `play.html?ep=20` 200 with `main.js?v=ep20-20261012`; deployed `js/episodes.js` has Ep 20 and `js/main.js` has `EP_LOADERS["20"]`
+- `play.html`, `index.html`, `main.js`, `episodes.js`, `landing.js`, `NEXT.md`, `script.js`, 9 plates + poster + 3 re-rendered thumbs + `orion-00…08.mp3` md5-identical to the repo (29/29); headless Chrome `play.html?ep=20&auto=1` renders the title and end card; hub lists `play.html?ep=20` with the Ep 20 thumb
+- Orion regression (live): Ep 05–08 `play.html` 200, `script.js` voice_id `orion`; all their `orion-*.mp3` md5-identical to the repo (one Ep 08 clip read short on the first pass, a transient fetch; re-fetch 10/10 OK)

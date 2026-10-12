@@ -106,6 +106,10 @@ PRONOUNCE: dict[str, str] = {
     "Balarama": "Bala-raama",
     "Samantapanchaka": "Samanta-panchaka",
     "Kaurava": "Kau-rava",
+    # Ep20 The Night Raid (Sauptika Parva)
+    "Kritavarma": "Kritha-varma",
+    "Oghavati": "Ogha-vati",
+    "Shikhandi": "Shi-khandi",
 }
 
 

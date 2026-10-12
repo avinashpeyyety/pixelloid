@@ -231,4 +231,16 @@ export const EPISODES = [
       "Duryodhana rises from the lake to face Bhima, mace to mace. Arjuna gives a silent sign, an old vow is kept — and Balarama raises his plough in fury.",
     play: "play.html?ep=19",
   },
+  {
+    id: "20",
+    slug: "night-raid",
+    title: "The Night Raid",
+    sanskrit: "सौप्तिकम्",
+    chapter: "Sauptika Parva · the night after the eighteenth day",
+    duration: "~112s",
+    status: "live",
+    blurb:
+      "The war is won, but sleepless Ashwatthama sees an owl fall on sleeping crows. Shiva gives him a shining sword at the gate — and before dawn the Pandava camp is lost.",
+    play: "play.html?ep=20",
+  },
 ];

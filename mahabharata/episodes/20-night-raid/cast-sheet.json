@@ -1,0 +1,62 @@
+{
+  "episode_id": "20",
+  "notes": "Shalya Parva close + Sauptika Parva — the night after the eighteenth day and the dawn after. The Pandavas, Krishna and Satyaki sleep away from camp by the Oghavati; Ashwatthama, Kripa and Kritavarma raid the sleeping camp. Family-friendly: the raid is told by implication only — no victims, bodies, gore or wounds are ever drawn. Bhima, Nakula, Sahadeva, Satyaki, Dhrishtadyumna, Shikhandi, Draupadi and her sons are narrated only, never drawn. Krishna = Ep 04 lock (official series reference): pale silvery dusty-blue skin, long loose curls, slim gold band with one peacock feather, white U-tilak, jasmine-rose garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands — away plate only. Yudhishthira, Arjuna = Ep 14/15 locks; Duryodhana and Ashwatthama = Ep 16 locks; Shiva = Ep 06 lock; Kripa and Kritavarma = new Ep 20 locks. One new scene master (camp20); lake20 = Ep 19 lake19 byte copy.",
+  "locks": {
+    "reuse": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg",
+      "duryodhana": "episodes/16-karna-commander/stills/_locks/duryodhana.jpg",
+      "ashwatthama": "episodes/16-karna-commander/stills/_locks/ashwatthama.jpg",
+      "shiva": "episodes/06-kirata/stills/_locks/shiva.jpg",
+      "lake20-master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg"
+    },
+    "new": {
+      "camp20-master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+      "kripa": "episodes/20-night-raid/stills/_locks/kripa.jpg",
+      "kritavarma": "episodes/20-night-raid/stills/_locks/kritavarma.jpg"
+    }
+  },
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; Arjuna's charioteer, on foot by the Oghavati river in this episode (away plate only) — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor, no Gandiva, no flower garland"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes — Ep 09 face via the Ep 14/15 lock",
+      "hair": "Tall gold crown",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva — never flower garland, never peacock feather"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava king, proud upswept mustache, fierce gaze (Ep 13 lock via Ep 16); here dying in peace at dawn, no wounds shown",
+      "hair": "Dark hair; tall jeweled Kuru crown fallen on the sand beside him",
+      "costume": "Jewel-tone gold Kaurava armor with saffron-orange cape, gold-decked mace at his side"
+    },
+    "ashwatthama": {
+      "face": "Young adult Brahmin-warrior, the guru's son: noble lean face, dark mustache, intense dark eyes; a luminous jewel (mani) in the middle of his forehead (Ep 15 lock via Ep 16); never a child, never white-bearded",
+      "hair": "Dark hair tied back under a slim bronze-gold warrior band (no royal crown, no peacock feather)",
+      "costume": "Deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; great bow (owl, plan), Shiva's long shining sword (tent, fire, poster) — no saffron sage robes, no flower garland"
+    },
+    "kripa": {
+      "face": "Elderly Brahmin warrior, Kuru weapons-teacher: lean upright frame, grave lined face, close-trimmed silver-grey beard and mustache, three white ash lines on the brow (new Ep 20 lock) — clearly not Drona",
+      "hair": "Silver-grey hair tied in a topknot; no crown",
+      "costume": "Slate-grey and silver engraved armor over a cream dhoti, white sacred thread, a plain long bow — never saffron robes, never a long flowing white beard, no flower garland"
+    },
+    "kritavarma": {
+      "face": "Yadava chief of the Bhojas: mature, strongly built adult, square face, thick black mustache and short black beard, warm brown complexion (new Ep 20 lock) — never blue skin",
+      "hair": "Dark steel helmet-crown with a small silver crest",
+      "costume": "Blackened-steel and silver engraved armor over deep indigo cloth, sword at the hip — no peacock feather, no flute"
+    },
+    "shiva": {
+      "face": "Mahadeva as the guardian of the gate and the giver of the sword: pale blue-grey skin, calm stern face, vertical third-eye mark and three white ash lines on the brow (Ep 06 lock, byte copy) — clearly distinct from Krishna; fierce only through flame and scale, never fangs or skulls",
+      "hair": "Long matted dark locks piled high with a silver crescent moon",
+      "costume": "Tiger-skin garment, cobra coiled at the neck, rudraksha beads, golden trident; exactly two arms and two hands — never Krishna's peacock feather or saffron-yellow pitambar"
+    }
+  }
+}

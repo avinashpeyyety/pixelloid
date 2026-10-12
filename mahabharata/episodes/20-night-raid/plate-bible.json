@@ -1,0 +1,977 @@
+{
+  "episode_id": "20",
+  "strict_hero_lock": "ashwatthama",
+  "title": "The Night Raid",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Krishna locked to the Ep 04 look (official reference), Yudhishthira and Arjuna to the Ep 14/15 locks, Duryodhana to Ep 13 via Ep 16, Ashwatthama to Ep 15 via Ep 16, Shiva to the Ep 06 lock, Kripa and Kritavarma to new Ep 20 locks",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536×1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "krishna_visual_lock_ref": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+  "krishna_lock_note": "Avinash 2026-10-05: the Ep 04 Krishna is the official series reference and the operative visual lock for Ep 20 — byte-copied to episodes/20-night-raid/stills/_locks/krishna.jpg and attached as the FIRST character ref (right after the scene master) on the one Krishna image (away) in PROMPTS.md. krishna_look_lock_ref keeps the Ep 09 path only because tools/logic_review.py still checks for it.",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+  "scene_lock_refs": {
+    "camp20-master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+    "lake20-master": "episodes/20-night-raid/stills/_locks/lake20-master.jpg"
+  },
+  "scene_master_prompt": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The Pandava war-camp at the edge of Kurukshetra on the night after the eighteenth day, seen from just outside its gate: a tall timber palisade with a carved wooden gate standing open, two torches burning on the gateposts, rows of quiet striped war-tents beyond with a few dim oil lamps, tall Pandava banners hanging still; on the left the dark edge of a forest with a huge old banyan tree trailing aerial roots; a quiet river glinting far off on the right; deep indigo night sky with a pale moon and many stars, cool silver moonlight and warm torch glow. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for figures to be placed later. No people, no named figures. Night — no sun, no daylight. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no watermark.",
+  "scene_master_prompts": {
+    "camp20-master": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The Pandava war-camp at the edge of Kurukshetra on the night after the eighteenth day, seen from just outside its gate: a tall timber palisade with a carved wooden gate standing open, two torches burning on the gateposts, rows of quiet striped war-tents beyond with a few dim oil lamps, tall Pandava banners hanging still; on the left the dark edge of a forest with a huge old banyan tree trailing aerial roots; a quiet river glinting far off on the right; deep indigo night sky with a pale moon and many stars, cool silver moonlight and warm torch glow. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for figures to be placed later. No people, no named figures. Night — no sun, no daylight. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no watermark.",
+    "lake20-master": "byte copy of episodes/19-mace-duel/stills/_locks/lake19-master.jpg (the lake Dvaipayana, late-afternoon daylight master) — not regenerated; the dawn plate forces first light"
+  },
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+    "episodes/20-night-raid/stills/_locks/lake20-master.jpg",
+    "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "episodes/20-night-raid/stills/_locks/krishna.jpg",
+    "episodes/20-night-raid/stills/_locks/yudhishthira.jpg",
+    "episodes/20-night-raid/stills/_locks/arjuna.jpg",
+    "episodes/20-night-raid/stills/_locks/duryodhana.jpg",
+    "episodes/20-night-raid/stills/_locks/ashwatthama.jpg",
+    "episodes/20-night-raid/stills/_locks/kripa.jpg",
+    "episodes/20-night-raid/stills/_locks/kritavarma.jpg",
+    "episodes/20-night-raid/stills/_locks/shiva.jpg"
+  ],
+  "imagine_refs_note": "Gate-check list (lineage). The operative per-image attach order is in stills/_inbox/consumer-imagine/PROMPTS.md: scene master first, then the Ep 04 Krishna lock (away only), then the other character locks, then the Ep 10 field-master. The Ep 09 Krishna/Arjuna paths are listed for the gate only and are NOT attached.",
+  "character_lock_refs": {
+    "krishna": "episodes/20-night-raid/stills/_locks/krishna.jpg",
+    "yudhishthira": "episodes/20-night-raid/stills/_locks/yudhishthira.jpg",
+    "arjuna": "episodes/20-night-raid/stills/_locks/arjuna.jpg",
+    "duryodhana": "episodes/20-night-raid/stills/_locks/duryodhana.jpg",
+    "ashwatthama": "episodes/20-night-raid/stills/_locks/ashwatthama.jpg",
+    "kripa": "episodes/20-night-raid/stills/_locks/kripa.jpg",
+    "kritavarma": "episodes/20-night-raid/stills/_locks/kritavarma.jpg",
+    "shiva": "episodes/20-night-raid/stills/_locks/shiva.jpg"
+  },
+  "local_lock_plan": {
+    "copy_forward": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg (byte copy)",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg (byte copy)",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg (byte copy)",
+      "duryodhana": "episodes/16-karna-commander/stills/_locks/duryodhana.jpg (byte copy)",
+      "ashwatthama": "episodes/16-karna-commander/stills/_locks/ashwatthama.jpg (byte copy)",
+      "shiva": "episodes/06-kirata/stills/_locks/shiva.jpg (byte copy)",
+      "lake20-master": "episodes/19-mace-duel/stills/_locks/lake19-master.jpg (byte copy)"
+    },
+    "new": {
+      "camp20-master": "scene master — the Pandava camp gate at night with the banyan forest edge and the river (all plates but dawn + both locks + poster); generate first",
+      "kripa": "new character lock (first drawn appearance); generate second, attach on plan, watch, dawn",
+      "kritavarma": "new character lock (first drawn appearance); generate third, attach on plan, watch, dawn"
+    },
+    "new_prompts": {
+      "kripa": "Premium painted comic Amar Chitra character lock portrait, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium three-quarter portrait of exactly one adult man standing at night before the torchlit gate of a war-camp: Kripa, the old weapons-teacher of the Kuru princes: an elderly Brahmin warrior, lean and upright, grave lined face, close-trimmed silver-grey beard and mustache, silver-grey hair tied in a topknot, three white ash lines on the brow, white sacred thread, slate-grey and silver engraved armor over a cream dhoti, a plain long bow; never saffron robes, never a long flowing white beard, no crown, no flower garland. Grave, wise, troubled expression; both hands resting on his long bow. Warm torchlight on his face and armor against an indigo night sky with stars — night, no sun. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. No Ashwatthama. No Shiva. No other figures.",
+      "kritavarma": "Premium painted comic Amar Chitra character lock portrait, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium three-quarter portrait of exactly one adult man standing at night before the torchlit gate of a war-camp: Kritavarma, the Yadava chief of the Bhojas: a mature, strongly built adult warrior, square face with a thick black mustache and short black beard, warm brown complexion, dark steel helmet-crown with a small silver crest, blackened-steel and silver engraved armor over deep indigo cloth, a sword at his hip; never blue skin, never a peacock feather, no flute. Hard, watchful expression; right hand on the hilt of his sheathed sword, left hand at his side. Warm torchlight on his face and armor against an indigo night sky with stars — night, no sun. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. No Ashwatthama. No Shiva. No other figures."
+    },
+    "not_needed": "Bhima, Nakula, Sahadeva, Satyaki, Dhrishtadyumna, Shikhandi, Draupadi and Draupadi's sons are narrated only, never drawn.",
+    "note": "stills_review.py (GATE C) requires episodes/20-night-raid/stills/_locks/<id>.jpg for every face on a plate; the copy-forward locks are byte copies, not new art. Every plate but dawn is night (away at nightfall, fire lit by the burning camp); dawn is first light by the lake."
+  },
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; Arjuna's charioteer, on foot by the Oghavati river in this episode (away plate only) — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor, no Gandiva, no flower garland"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes — Ep 09 face via the Ep 14/15 lock",
+      "hair": "Tall gold crown",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva — never flower garland, never peacock feather"
+    },
+    "duryodhana": {
+      "face": "Adult Kaurava king, proud upswept mustache, fierce gaze (Ep 13 lock via Ep 16); here dying in peace at dawn, no wounds shown",
+      "hair": "Dark hair; tall jeweled Kuru crown fallen on the sand beside him",
+      "costume": "Jewel-tone gold Kaurava armor with saffron-orange cape, gold-decked mace at his side"
+    },
+    "ashwatthama": {
+      "face": "Young adult Brahmin-warrior, the guru's son: noble lean face, dark mustache, intense dark eyes; a luminous jewel (mani) in the middle of his forehead (Ep 15 lock via Ep 16); never a child, never white-bearded",
+      "hair": "Dark hair tied back under a slim bronze-gold warrior band (no royal crown, no peacock feather)",
+      "costume": "Deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; great bow (owl, plan), Shiva's long shining sword (tent, fire, poster) — no saffron sage robes, no flower garland"
+    },
+    "kripa": {
+      "face": "Elderly Brahmin warrior, Kuru weapons-teacher: lean upright frame, grave lined face, close-trimmed silver-grey beard and mustache, three white ash lines on the brow (new Ep 20 lock) — clearly not Drona",
+      "hair": "Silver-grey hair tied in a topknot; no crown",
+      "costume": "Slate-grey and silver engraved armor over a cream dhoti, white sacred thread, a plain long bow — never saffron robes, never a long flowing white beard, no flower garland"
+    },
+    "kritavarma": {
+      "face": "Yadava chief of the Bhojas: mature, strongly built adult, square face, thick black mustache and short black beard, warm brown complexion (new Ep 20 lock) — never blue skin",
+      "hair": "Dark steel helmet-crown with a small silver crest",
+      "costume": "Blackened-steel and silver engraved armor over deep indigo cloth, sword at the hip — no peacock feather, no flute"
+    },
+    "shiva": {
+      "face": "Mahadeva as the guardian of the gate and the giver of the sword: pale blue-grey skin, calm stern face, vertical third-eye mark and three white ash lines on the brow (Ep 06 lock, byte copy) — clearly distinct from Krishna; fierce only through flame and scale, never fangs or skulls",
+      "hair": "Long matted dark locks piled high with a silver crescent moon",
+      "costume": "Tiger-skin garment, cobra coiled at the neck, rudraksha beads, golden trident; exactly two arms and two hands — never Krishna's peacock feather or saffron-yellow pitambar"
+    }
+  },
+  "plates": [
+    {
+      "id": "away",
+      "file": "plate-away.jpg",
+      "beat_text": "The war is won. That night Krishna leads Yudhishthira and his brothers out of their camp, to sleep beside the Oghavati river.",
+      "cast_present": [
+        "krishna",
+        "yudhishthira",
+        "arjuna"
+      ],
+      "locus_master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+      "light": "night",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The moonlit bank of the Oghavati river at nightfall, the Pandava camp's torches small on the far horizon (camp20 master, night)",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; Arjuna's charioteer, here walking on foot (no reins) — no flute",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash — no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Arjuna (Ep 14/15 lock, Ep 09 face): noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, quiver, Gandiva — no garland, no peacock feather; distinct from Yudhishthira",
+        "Krishna walks in front, turning back with a calm smile, his right hand gesturing onward along the river",
+        "Yudhishthira and Arjuna follow him, walking away from the camp",
+        "Bhima, Nakula, Sahadeva and Satyaki are narrated only — not drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "severed head",
+        "sleeping victims drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Duryodhana",
+        "Ashwatthama",
+        "Kripa",
+        "Kritavarma",
+        "Shiva",
+        "Karna",
+        "Shalya",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Draupadi",
+        "Dhrishtadyumna",
+        "Shikhandi",
+        "Draupadi's sons",
+        "Satyaki",
+        "Balarama",
+        "Shakuni",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "flower garland on Arjuna",
+        "peacock feather on Arjuna",
+        "daylight or sun in the sky",
+        "bright midday light"
+      ],
+      "props": [
+        "quiet river",
+        "distant camp torches",
+        "Gandiva on Arjuna's shoulder"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult men walking along the moonlit grassy bank of a quiet river at nightfall, away from a distant war-camp whose torches glow small on the far left horizon. In front, Krishna (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather — not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; Arjuna's charioteer, here walking on foot with no chariot and no reins; no flute, no bow) turns back toward the others with a calm smile, his right hand gesturing onward along the river, his left hand at his side. Behind him walk Yudhishthira, eldest Pandava king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets; no gold chest armor, no Gandiva, no flower garland, no peacock feather) and Arjuna (match the attached Arjuna lock: noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, gold belt and armlets, quiver on his back, the great Gandiva bow; no flower garland, no peacock feather), the Gandiva resting on Arjuna's shoulder. Exactly six hands in the whole picture. Nightfall after the eighteenth day: deep blue-indigo sky with the last ember-gold glow low on the western horizon, a pale rising moon and the first stars, silver moonlight on the river (this beat is at night — no sun, no daylight; the cream-saffron-gold palette lives only in the carved cartouche and the warm distant torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Duryodhana. No Ashwatthama. No Kripa. No Kritavarma. No Shiva. No Karna, no Shalya, no Bhima, no Draupadi.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Shalya Parva (Debroy vol. 7), closing chapters (Gada sub-parva) — after the fall of Duryodhana, Vasudeva tells the Pandavas that for auspiciousness they must pass the night outside the camp; with Satyaki they go to the bank of the Oghavati"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Shalya Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 62 — mangalartha the Pandavas, Satyaki and Shri Krishna spend the night on the Oghavati, outside the shibira"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Shalya Parva §62 — 'we should, for the sake of auspiciousness, stay outside the camp this night'; the Pandavas with Satyaki and Krishna pass the night by the Oghavati"
+        }
+      ]
+    },
+    {
+      "id": "owl",
+      "file": "plate-owl.jpg",
+      "beat_text": "In a nearby forest, Ashwatthama lies awake beneath a banyan tree. An owl swoops on the sleeping crows — and gives him a terrible idea.",
+      "cast_present": [
+        "ashwatthama"
+      ],
+      "locus_master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+      "light": "night",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "A huge old banyan tree with hanging aerial roots at the dark forest edge, the Pandava camp far off (camp20 master, night)",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, slim bronze-gold band, maroon and bronze-gold armor, white sacred thread — never a child",
+        "Ashwatthama lies propped on one elbow on the ground, wide awake, staring up into the branches, his bow beside him",
+        "High in the branches a great owl swoops with spread wings among crows roosting there; the crows burst up in alarm",
+        "No blood, no dead crows; Kripa and Kritavarma are narrated only — not drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "severed head",
+        "sleeping victims drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Duryodhana",
+        "Kripa",
+        "Kritavarma",
+        "Shiva",
+        "Karna",
+        "Shalya",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Draupadi",
+        "Dhrishtadyumna",
+        "Shikhandi",
+        "Draupadi's sons",
+        "Satyaki",
+        "Balarama",
+        "Shakuni",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama",
+        "daylight or sun in the sky",
+        "bright midday light"
+      ],
+      "props": [
+        "banyan tree with aerial roots",
+        "great owl",
+        "flock of crows",
+        "Ashwatthama's bow on the ground"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult man at night beneath a huge old banyan tree with hanging aerial roots at the edge of a dark forest. Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; never a child, never white-bearded, no royal crown) lies propped on one elbow on a spread cloth on the ground, wide awake, staring up into the branches, his great bow lying beside him. High in the branches a great pale owl swoops with spread wings among a flock of roosting crows, which burst up in alarm, black feathers scattering in the moonlight. No blood, no dead crows. Deep night after the eighteenth day: indigo-black sky, a pale moon and many stars, cool silver moonlight, warm torch or lamp glow only where described (this beat is at night — no sun, no daylight; the cream-saffron-gold palette lives only in the carved cartouche and the firelight). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Duryodhana. No Kripa. No Kritavarma. No Shiva. No Karna, no Shalya, no Bhima, no Draupadi.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva (Debroy vol. 7), ch. 1 — the three warriors rest under a great banyan in a forest near the Pandava camp; sleepless Ashvatthaman watches an owl slay the sleeping crows and resolves on a night attack"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 1 — vata-vriksha, the uluka among the sleeping kakas, Ashvatthama's resolve"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva §1 — 'he beheld a horrible owl' falling on the sleeping crows; 'this owl hath given me a lesson'"
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "file": "plate-plan.jpg",
+      "beat_text": "He wakes Kripa and Kritavarma: they will strike the Pandava camp tonight. Kripa pleads that to attack men in their sleep is against dharma.",
+      "cast_present": [
+        "ashwatthama",
+        "kripa",
+        "kritavarma"
+      ],
+      "locus_master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+      "light": "night",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Beneath the banyan tree at night, the distant camp torches visible between the roots (camp20 master)",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, slim bronze-gold band, maroon and bronze-gold armor, white sacred thread — never a child",
+        "Kripa (new Ep 20 lock): elderly Brahmin warrior, close-trimmed silver-grey beard, silver topknot, three white ash lines, slate-grey and silver armor over cream dhoti, long bow — clearly not Drona (no saffron robes, no long white beard)",
+        "Kritavarma (new Ep 20 lock): mature Yadava warrior, thick black mustache and short black beard, brown complexion, dark steel helmet-crown with silver crest, blackened-steel and silver armor over deep indigo cloth, sword — never blue skin",
+        "Ashwatthama stands in the centre, fist clenched, pointing toward the distant camp",
+        "Kripa raises one open palm in protest, grave and pleading; Kritavarma listens, hand on his sheathed sword"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "severed head",
+        "sleeping victims drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Duryodhana",
+        "Shiva",
+        "Karna",
+        "Shalya",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Draupadi",
+        "Dhrishtadyumna",
+        "Shikhandi",
+        "Draupadi's sons",
+        "Satyaki",
+        "Balarama",
+        "Shakuni",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama",
+        "saffron sage robes on Kripa",
+        "long flowing white beard on Kripa",
+        "blue skin on Kritavarma",
+        "peacock feather on Kritavarma",
+        "daylight or sun in the sky",
+        "bright midday light"
+      ],
+      "props": [
+        "banyan roots",
+        "distant camp torches",
+        "sheathed sword",
+        "Kripa's long bow"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult men standing beneath a huge banyan tree at night, distant camp torches glimmering between its hanging roots. In the centre Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; never a child, never white-bearded, no royal crown) stands with his right fist clenched before his chest and his left hand pointing toward the distant torches, his face fierce. On the left Kripa (match the attached Kripa lock — the old weapons-teacher of the Kuru princes: an elderly Brahmin warrior, lean and upright, grave lined face, close-trimmed silver-grey beard and mustache, silver-grey hair tied in a topknot, three white ash lines on the brow, white sacred thread, slate-grey and silver engraved armor over a cream dhoti, a plain long bow; never saffron robes, never a long flowing white beard, no crown, no flower garland) raises one open palm in protest, his face grave and pleading, his long bow held in his other hand. On the right Kritavarma (match the attached Kritavarma lock — the Yadava chief of the Bhojas: a mature, strongly built adult warrior, square face with a thick black mustache and short black beard, warm brown complexion, dark steel helmet-crown with a small silver crest, blackened-steel and silver engraved armor over deep indigo cloth, a sword at his hip; never blue skin, never a peacock feather, no flute) listens in silence, one hand resting on the hilt of his sheathed sword, the other at his side. Exactly six hands in the whole picture. Deep night after the eighteenth day: indigo-black sky, a pale moon and many stars, cool silver moonlight, warm torch or lamp glow only where described (this beat is at night — no sun, no daylight; the cream-saffron-gold palette lives only in the carved cartouche and the firelight). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Duryodhana. No Shiva. No Karna, no Shalya, no Bhima, no Draupadi.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva (Debroy vol. 7), ch. 1–5 — Ashvatthaman wakes Kripa and Kritavarman and reveals his plan; Kripa counsels against it (slaying sleepers is not dharma) and urges him to consult Dhritarashtra, Gandhari and Vidura; Ashvatthaman refuses and the two follow him"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 1–5 — Kripacharya's upadesha and Ashvatthama's refusal"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva §1–§5 — Kripa: 'the slaughter of sleeping men is not approved by righteousness'; Drona's son will not desist"
+        }
+      ]
+    },
+    {
+      "id": "guardian",
+      "file": "plate-guardian.jpg",
+      "beat_text": "Ashwatthama will not listen. At the camp gate a towering guardian blazes with fire, and swallows every weapon he hurls.",
+      "cast_present": [
+        "ashwatthama",
+        "shiva"
+      ],
+      "locus_master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+      "light": "night",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The carved wooden gate of the Pandava camp at night (camp20 master)",
+        "Shiva (Ep 06 lock): pale blue-grey skin, third-eye mark and ash lines, matted locks with crescent moon, cobra at the neck, rudraksha, tiger skin, golden trident; exactly two arms — clearly not Krishna",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, slim bronze-gold band, maroon and bronze-gold armor, white sacred thread — never a child",
+        "Shiva fills the gateway as a towering guardian wreathed in tall golden-orange flame, stern and calm, trident planted, serpents on his arms",
+        "Ashwatthama, small before him, hurls a spear into the blaze; the spear dissolves into sparks in the flames",
+        "Fierce but family-friendly: no fangs, no skulls, no blood; exactly two arms on Shiva"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "severed head",
+        "sleeping victims drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Duryodhana",
+        "Kripa",
+        "Kritavarma",
+        "Karna",
+        "Shalya",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Draupadi",
+        "Dhrishtadyumna",
+        "Shikhandi",
+        "Draupadi's sons",
+        "Satyaki",
+        "Balarama",
+        "Shakuni",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama",
+        "fangs or skulls on Shiva",
+        "more than two arms on Shiva",
+        "peacock feather on Shiva",
+        "daylight or sun in the sky",
+        "bright midday light"
+      ],
+      "props": [
+        "camp gate",
+        "aura of flame",
+        "golden trident",
+        "spear dissolving into sparks"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two figures before the carved wooden gate of a sleeping war-camp at night. Filling the gateway and towering far above a man, Shiva (match the attached Shiva lock: pale blue-grey skin, calm stern face, a vertical third-eye mark and three white ash lines on the brow, long matted dark locks piled high with a silver crescent moon, a cobra coiled around his neck, rudraksha beads, tiger-skin garment, a golden trident; exactly two arms and two hands; never Krishna's peacock feather, never a saffron-yellow pitambar) stands as the fierce guardian of the gate, wreathed in a tall aura of golden-orange flame, his face stern and calm, his right hand planting the trident, his left hand open at his side, serpents coiled around his arms. Before him, small and defiant, Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; never a child, never white-bearded, no royal crown) hurls a spear into the blaze with his right hand; the spear dissolves into sparks in the flames. Exactly four hands in the whole picture. No fangs, no skulls, no blood. Deep night after the eighteenth day: indigo-black sky, a pale moon and many stars, cool silver moonlight, warm torch or lamp glow only where described (this beat is at night — no sun, no daylight; the cream-saffron-gold palette lives only in the carved cartouche and the firelight). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Duryodhana. No Kripa. No Kritavarma. No Karna, no Shalya, no Bhima, no Draupadi.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva (Debroy vol. 7), ch. 6 — at the camp gate a gigantic, blazing being bars the way; every weapon Ashvatthaman hurls is swallowed by it"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 6 — the mahabhuta at the dvara swallows Ashvatthama's astras"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva §6 — 'a being of gigantic frame' at the gate, blazing with fire; it devours the shafts, dart, sword and mace he hurls"
+        }
+      ]
+    },
+    {
+      "id": "boon",
+      "file": "plate-boon.jpg",
+      "beat_text": "Knowing it is Shiva, Ashwatthama prays and offers himself to a sacred fire. Shiva appears, gives him a shining sword, and enters him.",
+      "cast_present": [
+        "ashwatthama",
+        "shiva"
+      ],
+      "locus_master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+      "light": "night",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Before the camp gate at night (camp20 master), a golden fire altar blazing",
+        "Shiva (Ep 06 lock): pale blue-grey skin, third-eye mark and ash lines, matted locks with crescent moon, cobra at the neck, rudraksha, tiger skin, golden trident; exactly two arms — clearly not Krishna",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, slim bronze-gold band, maroon and bronze-gold armor, white sacred thread — never a child",
+        "Ashwatthama kneels before the altar, palms joined, offering himself to the fire",
+        "Shiva rises from the flames and holds out a long shining sword, hilt first; Ashwatthama reaches up with both hands to receive it",
+        "A soft white-gold radiance flows from Shiva toward Ashwatthama; no burning, no injury"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "severed head",
+        "sleeping victims drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Duryodhana",
+        "Kripa",
+        "Kritavarma",
+        "Karna",
+        "Shalya",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Draupadi",
+        "Dhrishtadyumna",
+        "Shikhandi",
+        "Draupadi's sons",
+        "Satyaki",
+        "Balarama",
+        "Shakuni",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama",
+        "fangs or skulls on Shiva",
+        "more than two arms on Shiva",
+        "peacock feather on Shiva",
+        "daylight or sun in the sky",
+        "bright midday light"
+      ],
+      "props": [
+        "golden fire altar",
+        "long shining sword",
+        "golden trident",
+        "white-gold radiance"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two figures beside a blazing golden fire altar before the gate of a sleeping war-camp at night. Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; never a child, never white-bearded, no royal crown) kneels before the altar, reaching up with both hands, having offered himself to the sacred fire; he is unharmed. Rising from the flames, Shiva (match the attached Shiva lock: pale blue-grey skin, calm stern face, a vertical third-eye mark and three white ash lines on the brow, long matted dark locks piled high with a silver crescent moon, a cobra coiled around his neck, rudraksha beads, tiger-skin garment, a golden trident; exactly two arms and two hands; never Krishna's peacock feather, never a saffron-yellow pitambar) leans down and holds out a long shining sword, hilt first, in his right hand, his golden trident in his left hand. A soft white-gold radiance flows from Shiva toward Ashwatthama. Exactly four hands in the whole picture. No burning, no injury. Deep night after the eighteenth day: indigo-black sky, a pale moon and many stars, cool silver moonlight, warm torch or lamp glow only where described (this beat is at night — no sun, no daylight; the cream-saffron-gold palette lives only in the carved cartouche and the firelight). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Duryodhana. No Kripa. No Kritavarma. No Karna, no Shalya, no Bhima, no Draupadi.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva (Debroy vol. 7), ch. 7 — Ashvatthaman hymns Mahadeva; a golden altar appears and he offers himself into its fire; Shiva gives him a bright sword and enters his body"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 7 — Ashvatthama's atma-samarpana; Shiva bestows the khadga and enters him"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva §7 — 'a golden altar' and fire appear; the god gives him 'an excellent sword' and enters his body"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "file": "plate-watch.jpg",
+      "beat_text": "Ashwatthama slips into the sleeping camp alone. Kripa and Kritavarma stand guard at the gate, so that no one may escape.",
+      "cast_present": [
+        "kripa",
+        "kritavarma"
+      ],
+      "locus_master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+      "light": "night",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The carved wooden gate of the Pandava camp at night, torches on the gateposts (camp20 master)",
+        "Kripa (new Ep 20 lock): elderly Brahmin warrior, close-trimmed silver-grey beard, silver topknot, three white ash lines, slate-grey and silver armor over cream dhoti, long bow — clearly not Drona (no saffron robes, no long white beard)",
+        "Kritavarma (new Ep 20 lock): mature Yadava warrior, thick black mustache and short black beard, brown complexion, dark steel helmet-crown with silver crest, blackened-steel and silver armor over deep indigo cloth, sword — never blue skin",
+        "Kripa on the left of the gate with his long bow held low; Kritavarma on the right with a drawn sword held low; both watch the dark gateway grimly",
+        "Through the open gate only dark, quiet tents; Ashwatthama has already gone in — not drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "severed head",
+        "sleeping victims drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Duryodhana",
+        "Ashwatthama",
+        "Shiva",
+        "Karna",
+        "Shalya",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Draupadi",
+        "Dhrishtadyumna",
+        "Shikhandi",
+        "Draupadi's sons",
+        "Satyaki",
+        "Balarama",
+        "Shakuni",
+        "saffron sage robes on Kripa",
+        "long flowing white beard on Kripa",
+        "blue skin on Kritavarma",
+        "peacock feather on Kritavarma",
+        "daylight or sun in the sky",
+        "bright midday light"
+      ],
+      "props": [
+        "camp gate",
+        "two gatepost torches",
+        "long bow",
+        "drawn sword"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men standing guard on either side of the open carved wooden gate of a sleeping war-camp at night, two torches burning on the gateposts. On the left Kripa (match the attached Kripa lock — the old weapons-teacher of the Kuru princes: an elderly Brahmin warrior, lean and upright, grave lined face, close-trimmed silver-grey beard and mustache, silver-grey hair tied in a topknot, three white ash lines on the brow, white sacred thread, slate-grey and silver engraved armor over a cream dhoti, a plain long bow; never saffron robes, never a long flowing white beard, no crown, no flower garland), his long bow held low in both hands. On the right Kritavarma (match the attached Kritavarma lock — the Yadava chief of the Bhojas: a mature, strongly built adult warrior, square face with a thick black mustache and short black beard, warm brown complexion, dark steel helmet-crown with a small silver crest, blackened-steel and silver engraved armor over deep indigo cloth, a sword at his hip; never blue skin, never a peacock feather, no flute), a drawn sword held low in his right hand, his left hand on the gatepost. Both watch the dark gateway grimly. Through the gate only dark, quiet tents under the moon; no one else is visible. Exactly four hands in the whole picture. Deep night after the eighteenth day: indigo-black sky, a pale moon and many stars, cool silver moonlight, warm torch or lamp glow only where described (this beat is at night — no sun, no daylight; the cream-saffron-gold palette lives only in the carved cartouche and the firelight). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Duryodhana. No Ashwatthama. No Shiva. No Karna, no Shalya, no Bhima, no Draupadi.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva (Debroy vol. 7), ch. 8 — Ashvatthaman enters the camp; Kripa and Kritavarman wait at the gate so that none may escape"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 8 — Kripa and Kritavarma at the shibira-dvara"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva §8 — 'Kripa and Kritavarman … stationed themselves at the gate' while Drona's son entered"
+        }
+      ]
+    },
+    {
+      "id": "tent",
+      "file": "plate-tent.jpg",
+      "beat_text": "He finds the tent where Dhrishtadyumna, who slew his father Drona, lies asleep. What happens inside, the night keeps hidden.",
+      "cast_present": [
+        "ashwatthama"
+      ],
+      "locus_master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+      "light": "night",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Inside the sleeping Pandava camp at night, dark tents under the moon (camp20 master)",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, slim bronze-gold band, maroon and bronze-gold armor, white sacred thread — never a child",
+        "Ashwatthama at the entrance of a large war-tent, lifting its curtain with his left hand, the shining sword held low in his right",
+        "Inside the tent only warm lamplight and shadow — no one is shown; Dhrishtadyumna is narrated only, never drawn",
+        "Implication only: no struggle, no victim, no blood"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "severed head",
+        "sleeping victims drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Duryodhana",
+        "Kripa",
+        "Kritavarma",
+        "Shiva",
+        "Karna",
+        "Shalya",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Draupadi",
+        "Dhrishtadyumna",
+        "Shikhandi",
+        "Draupadi's sons",
+        "Satyaki",
+        "Balarama",
+        "Shakuni",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama",
+        "daylight or sun in the sky",
+        "bright midday light"
+      ],
+      "props": [
+        "large war-tent",
+        "lifted tent curtain",
+        "small oil lamp glow",
+        "shining sword"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult man inside a sleeping war-camp at night. Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; never a child, never white-bearded, no royal crown) stands at the entrance of a large war-tent, lifting its curtain with his left hand, a long shining sword held low in his right hand, the jewel on his forehead glowing; his face is set and grim. Inside the tent only a small oil lamp's warm glow and deep shadow are visible — no one is shown. Dark tents behind him under the moon. Exactly two hands in the whole picture. Deep night after the eighteenth day: indigo-black sky, a pale moon and many stars, cool silver moonlight, warm torch or lamp glow only where described (this beat is at night — no sun, no daylight; the cream-saffron-gold palette lives only in the carved cartouche and the firelight). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Duryodhana. No Kripa. No Kritavarma. No Shiva. No Karna, no Shalya, no Bhima, no Draupadi.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva (Debroy vol. 7), ch. 8 — Ashvatthaman goes first to the tent of Dhrishtadyumna, the slayer of his father, finds him asleep and kills him"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 8 — Dhrishtadyumna-vadha in his shayana"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva §8 — Drona's son 'entered the abode of Dhrishtadyumna' and found him asleep on his bed"
+        }
+      ]
+    },
+    {
+      "id": "fire",
+      "file": "plate-fire.jpg",
+      "beat_text": "Before dawn the camp is lost. Draupadi’s five sons and Shikhandi never wake, and fire rises over the tents.",
+      "cast_present": [
+        "ashwatthama"
+      ],
+      "locus_master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg",
+      "light": "fire",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The Pandava camp gate at night with the tents behind it burning (camp20 master)",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, slim bronze-gold band, maroon and bronze-gold armor, white sacred thread — never a child",
+        "Ashwatthama walks out through the gate toward the viewer, the shining sword lowered at his side, face weary and grim",
+        "Tall orange flames and smoke rise from the tents behind him, sparks drifting",
+        "Implication only: no people in the camp, no bodies, no blood; Draupadi's sons and Shikhandi are narrated only"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "severed head",
+        "sleeping victims drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Duryodhana",
+        "Kripa",
+        "Kritavarma",
+        "Shiva",
+        "Karna",
+        "Shalya",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Draupadi",
+        "Dhrishtadyumna",
+        "Shikhandi",
+        "Draupadi's sons",
+        "Satyaki",
+        "Balarama",
+        "Shakuni",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama",
+        "daylight or sun in the sky",
+        "bright midday light"
+      ],
+      "props": [
+        "burning tents",
+        "smoke and sparks",
+        "camp gate",
+        "shining sword lowered"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult man walking out through the open carved wooden gate of a war-camp at night, toward the viewer. Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; never a child, never white-bearded, no royal crown) carries a long shining sword lowered at his right side, his left hand clenched, his face weary and grim, the jewel on his forehead glowing. Behind him the tents of the camp burn, tall orange flames and smoke rising into the night sky, sparks drifting. No other people, no bodies, no blood. Exactly two hands in the whole picture. Deep night after the eighteenth day: indigo-black sky streaked with smoke, a pale moon half-hidden, the scene lit from behind by tall orange flames (this beat is at night — no sun, no daylight). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Duryodhana. No Kripa. No Kritavarma. No Shiva. No Karna, no Shalya, no Bhima, no Draupadi.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva (Debroy vol. 7), ch. 8 — through the night the sleeping warriors are slain, among them the five sons of Draupadi and Shikhandin; the camp is set on fire"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 8 — the Draupadeyas and Shikhandi slain; Kripa and Kritavarma set fire to the shibira in three places"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva §8 — the sons of Draupadi and Shikhandin fall; 'Kripa and Kritavarman set fire to the camp in three places'"
+        }
+      ]
+    },
+    {
+      "id": "dawn",
+      "file": "plate-dawn.jpg",
+      "beat_text": "At first light the three bring the news to Duryodhana by the lake. Content at last, the fallen king closes his eyes forever.",
+      "cast_present": [
+        "duryodhana",
+        "ashwatthama",
+        "kripa",
+        "kritavarma"
+      ],
+      "locus_master": "episodes/20-night-raid/stills/_locks/lake20-master.jpg",
+      "light": "dawn",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium — named figures fill the frame",
+        "Native 3:2 1536×1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The lake shore at first light (lake20 master = Ep 19 lake), mist on the water",
+        "Duryodhana (Ep 13 lock via Ep 16): proud upswept mustache, tall jeweled Kuru crown (fallen beside him here), jewel-tone gold armor, saffron-orange cape, gold-decked mace",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead, slim bronze-gold band, maroon and bronze-gold armor, white sacred thread — never a child",
+        "Kripa (new Ep 20 lock): elderly Brahmin warrior, close-trimmed silver-grey beard, silver topknot, three white ash lines, slate-grey and silver armor over cream dhoti, long bow — clearly not Drona (no saffron robes, no long white beard)",
+        "Kritavarma (new Ep 20 lock): mature Yadava warrior, thick black mustache and short black beard, brown complexion, dark steel helmet-crown with silver crest, blackened-steel and silver armor over deep indigo cloth, sword — never blue skin",
+        "Duryodhana, alive, half-reclines against a rock, crown fallen beside him, mace at his side, face peaceful, eyes half-closed; no wounds",
+        "Ashwatthama kneels close before him; Kripa and Kritavarma stand behind with heads bowed"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "severed head",
+        "sleeping victims drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded sage",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Shiva",
+        "Karna",
+        "Shalya",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Draupadi",
+        "Dhrishtadyumna",
+        "Shikhandi",
+        "Draupadi's sons",
+        "Satyaki",
+        "Balarama",
+        "Shakuni",
+        "second Duryodhana",
+        "wounds on Duryodhana",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama",
+        "saffron sage robes on Kripa",
+        "long flowing white beard on Kripa",
+        "blue skin on Kritavarma",
+        "peacock feather on Kritavarma",
+        "deep night sky or full moon",
+        "torches",
+        "bright midday sun"
+      ],
+      "props": [
+        "fallen jeweled crown",
+        "mace on the sand",
+        "misty lake at dawn"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly four adult men on the sand of a lake shore at first light. Duryodhana, the Kaurava king (match the attached Duryodhana lock: proud upswept mustache, tall jeweled Kuru crown, jewel-tone gold Kaurava armor with a saffron-orange cape, a gold-decked mace), alive, half-reclines against a rock, his jeweled crown fallen on the sand beside him and his mace at his side, his face peaceful with a faint smile, eyes half-closed; no wounds shown. Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; never a child, never white-bearded, no royal crown) kneels close before him, speaking softly, one hand resting on his own knee. Behind them Kripa (match the attached Kripa lock — the old weapons-teacher of the Kuru princes: an elderly Brahmin warrior, lean and upright, grave lined face, close-trimmed silver-grey beard and mustache, silver-grey hair tied in a topknot, three white ash lines on the brow, white sacred thread, slate-grey and silver engraved armor over a cream dhoti, a plain long bow; never saffron robes, never a long flowing white beard, no crown, no flower garland) and Kritavarma (match the attached Kritavarma lock — the Yadava chief of the Bhojas: a mature, strongly built adult warrior, square face with a thick black mustache and short black beard, warm brown complexion, dark steel helmet-crown with a small silver crest, blackened-steel and silver engraved armor over deep indigo cloth, a sword at his hip; never blue skin, never a peacock feather, no flute) stand with heads bowed. Exactly eight hands in the whole picture. First light of dawn after the night raid: pale rose-gold and grey-blue sky at the horizon, the last stars fading, soft cool light on the still lake, mist on the water — dawn, NOT night: no full moon, no torches, no deep night sky. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Shiva. No Karna, no Shalya, no Bhima, no Draupadi.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva (Debroy vol. 7), ch. 9 — at daybreak the three return to the fallen Duryodhana and tell him of the night's deed; pleased, he gives up his life"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 9 — Duryodhana hears the news and dies content (prana-tyaga)"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva §9 — 'Drona's son … told the king'; Duryodhana, gladdened, 'cast off his life'"
+        }
+      ]
+    }
+  ],
+  "poster": {
+    "file": "poster.jpg",
+    "cast_present": [
+      "ashwatthama"
+    ],
+    "prompt": "Premium painted comic Amar Chitra poster, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult man. Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; never a child, never white-bearded, no royal crown) stands before the carved wooden gate of a sleeping war-camp at night, a long shining sword raised before him in his right hand, his left hand clenched, the jewel on his forehead blazing; moonlight and torchlight on his maroon armor; behind the gate dark tents under the moon and a faint red glow. Strong diagonal composition with clear headroom for a title. Exactly two hands. Deep night after the eighteenth day: indigo-black sky, a pale moon and many stars, cool silver moonlight, warm torch or lamp glow only where described (this beat is at night — no sun, no daylight; the cream-saffron-gold palette lives only in the carved cartouche and the firelight). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Duryodhana. No Kripa. No Kritavarma. No Shiva. No Karna, no Shalya, no Bhima, no Draupadi.",
+    "note": "Poster = Ep 20 thesis (the night raid). If a separate poster pass is cut, copy the GATE C-passed plate-tent.jpg."
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Shalya Parva (closing chapters: the Pandavas pass the night by the Oghavati) and Sauptika Parva (Sauptika sub-parva, ch. 1–9) · night after the eighteenth day and the following dawn · the owl and the crows, Kripa's counsel refused, the guardian at the gate, Shiva's sword, Kripa and Kritavarma at the gate, the night raid told by implication, Duryodhana's death at dawn",
+    "bori": "BORI CE Shalya Parva closing chapters (the Oghavati night) and Sauptika Parva ch. 1–9, Debroy translation vol. 7 (chapter-group citations): the banyan and the owl; Kripa's counsel and Ashvatthaman's refusal; the being at the gate; the hymn to Mahadeva, the golden altar, the sword; Kripa and Kritavarman at the gate; Dhrishtadyumna, the sons of Draupadi, Shikhandin; the fire; the return to Duryodhana at daybreak.",
+    "gita_press": "Gita Press Gorakhpur Mahabharata (Hindi, vulgate numbering = Ganguli): Shalya Parva adhyaya 62 (the night by the Oghavati); Sauptika Parva adhyayas 1 (vata and uluka), 1–5 (Kripa's upadesha), 6 (the bhuta at the gate), 7 (Shiva's khadga), 8 (the raid, the gate, the fire), 9 (Duryodhana's prana-tyaga).",
+    "ganguli": "K.M. Ganguli, Shalya Parva §62; Sauptika Parva §1–§9.",
+    "divergence": "Section/adhyaya numbers follow the vulgate (Ganguli = Gita Press); BORI CE chapters are cited at chapter-group level only. Omitted for length: Krishna's night journey to Hastinapura to console Gandhari (Shalya §62–§63), the full debate of §2–§5, the vision of Kali, the many named victims (Uttamaujas, Yudhamanyu, Shatanika and others) beyond Draupadi's five sons and Shikhandi, Kripa and Kritavarma cutting down those who fled, and the escape of Dhrishtadyumna's charioteer (left for Ep 21 with Draupadi's vow and the pursuit). The gate-being is drawn as Shiva in a towering flame-wreathed form with two arms (the texts give a many-eyed, terrifying form). Every killing is told by implication only — no victim is ever drawn.",
+    "chosen": "Gita Press + BORI/Debroy overlap: the Pandavas and Krishna spend the night away from camp by the Oghavati, the owl among the sleeping crows, Kripa's dharma objection overruled, the guardian who swallows weapons, the self-offering and Shiva's sword, Kripa and Kritavarma at the gate, Dhrishtadyumna's tent, Draupadi's sons and Shikhandi, the fire, Duryodhana's death at dawn. Ganguli for English wording.",
+    "notes": "Not TV. Comic-mythology only; family-friendly: no gore, no bodies, no victims drawn, no wounds. Bhima, Nakula, Sahadeva, Satyaki, Dhrishtadyumna, Shikhandi, Draupadi and her sons are narrated only or absent. Krishna (Ep 04 lock) and Arjuna appear only on away, away from the camp — accurate to the texts. One new scene master (camp20), lake20 = Ep 19 lake byte copy, two new character locks (kripa, kritavarma), Shiva = Ep 06 lock. Never attach Ep01 plate-wide-gold or any finished plate as an Imagine ref. Picks up Ep 19's end line; Draupadi's vow and the brahmashira (Aishika sub-parva) are Ep 21."
+  },
+  "stills_status": "NOT GENERATED — SuperGrok consumer prompt pack ready (13 images: camp20 master, kripa + kritavarma locks, 9 plates, poster); generate on grok.com, then import + GATE C"
+}

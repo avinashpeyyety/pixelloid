@@ -407,6 +407,18 @@ const RAGA_PRESETS = {
     duckLevel: 0.14,
     tanpuraMs: 1400,
   },
+  shankara: {
+    // Shankara (Bilawal thaat) — heroic/fierce second-prahar night raga named for Shiva: S G P N D S' up (D grazed),
+    // S' N P G P D P G P R G R S down; no Ma, Re weak (descent only); vadi Ga, samvadi Ni, nyasa on Ni. Bansuri, no tabla.
+    Sa: 155.56, // D#3 — brighter veer-rasa register under male VO; distinct from Bageshri's B2 and Adana's C#3
+    fluteSa: 311.13,
+    degrees: ["S", "R", "G", "P", "D", "N"],
+    tabla: "none",
+    voice: "bansuri",
+    bedLevel: 0.44,
+    duckLevel: 0.14,
+    tanpuraMs: 1200,
+  },
   default: {
     // eps 01–08 — keep close to old FluteTablaBed so they don't jump
     Sa: 293.66,
@@ -455,6 +467,7 @@ class RagaBed {
       else if (id === "17") key = "multani";
       else if (id === "18") key = "sarang";
       else if (id === "19") key = "bageshri";
+      else if (id === "20") key = "shankara";
       else key = "default";
     }
     if (!RAGA_PRESETS[key]) key = "default";
@@ -1119,6 +1132,43 @@ class RagaBed {
         ],
       ];
     }
+    if (key === "shankara") {
+      // Shankara — S G P / G P N D S' N / S' N P / G P D P G / P R G R S. Ma never sounded; Re only in descent.
+      return [
+        [
+          [0, "S", 0, 1.4],
+          [1.6, "G", 0, 1.6],
+          [3.4, "P", 0, 2.2],
+        ],
+        [
+          [0, "G", 0, 1.0],
+          [1.2, "P", 0, 1.2],
+          [2.6, "N", 0, 1.0],
+          [3.8, "D", 0, 0.6],
+          [4.6, "S", 1, 1.4],
+          [6.2, "N", 0, 2.2],
+        ],
+        [
+          [0, "S", 1, 1.6],
+          [1.8, "N", 0, 1.4],
+          [3.4, "P", 0, 2.2],
+        ],
+        [
+          [0, "G", 0, 1.2],
+          [1.4, "P", 0, 1.0],
+          [2.6, "D", 0, 0.8],
+          [3.6, "P", 0, 1.2],
+          [5.0, "G", 0, 2.0],
+        ],
+        [
+          [0, "P", 0, 1.2],
+          [1.4, "R", 0, 0.8],
+          [2.4, "G", 0, 1.4],
+          [4.0, "R", 0, 0.8],
+          [5.0, "S", 0, 2.6],
+        ],
+      ];
+    }
     if (key === "bageshri") {
       // Bageshri — n D S g m / m D n S' / S' n D m / m P D g m / g R S. Pa only as a light touch.
       return [
@@ -1268,6 +1318,7 @@ class RagaBed {
     if (key === "multani") return 4.0 + Math.random() * 2.6;
     if (key === "sarang") return 3.6 + Math.random() * 2.4;
     if (key === "bageshri") return 4.2 + Math.random() * 2.6;
+    if (key === "shankara") return 3.8 + Math.random() * 2.4;
     return 1.2 + Math.random() * 2.0;
   }
 
@@ -1376,7 +1427,7 @@ class RagaBed {
       this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
     }
 
-    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "multani" ? 4000 : key === "sarang" ? 3600 : key === "bageshri" ? 4000 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
+    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "multani" ? 4000 : key === "sarang" ? 3600 : key === "bageshri" ? 4000 : key === "shankara" ? 3600 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
     this.timers.push(setTimeout(() => this._scheduleMelody(), melodyDelay));
 
     this.master.gain.cancelScheduledValues(t);

@@ -243,4 +243,16 @@ export const EPISODES = [
       "The war is won, but sleepless Ashwatthama sees an owl fall on sleeping crows. Shiva gives him a shining sword at the gate — and before dawn the Pandava camp is lost.",
     play: "play.html?ep=20",
   },
+  {
+    id: "21",
+    slug: "brahmashira",
+    title: "The Brahmashira",
+    sanskrit: "ब्रह्मशिरः",
+    chapter: "Sauptika Parva · Aishika, the morning after the night raid",
+    duration: "~112s",
+    status: "live",
+    blurb:
+      "Draupadi vows to fast until Ashwatthama's forehead jewel is hers. At Vyasa's hermitage a blade of grass blazes into the brahmashira — and two sages step between the fires.",
+    play: "play.html?ep=21",
+  },
 ];

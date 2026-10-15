@@ -1,0 +1,1001 @@
+{
+  "episode_id": "21",
+  "strict_hero_lock": "ashwatthama",
+  "title": "The Brahmashira",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Krishna locked to the Ep 04 look (official reference), Yudhishthira, Bhima and Arjuna to the Ep 14/15 locks, Draupadi to the Ep 04 lock, Ashwatthama to Ep 15 via Ep 16, Vyasa and Narada to new Ep 21 locks",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame, distant ranks only in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "krishna_visual_lock_ref": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+  "krishna_lock_note": "Avinash 2026-10-05: the Ep 04 Krishna is the official series reference and the operative visual lock for Ep 21 — byte-copied to episodes/21-brahmashira/stills/_locks/krishna.jpg and attached as the FIRST character ref (right after the scene master) on every Krishna image (follow, answer, word) in PROMPTS.md. krishna_look_lock_ref keeps the Ep 09 path only because tools/logic_review.py still checks for it.",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg",
+  "scene_lock_refs": {
+    "ganga21-master": "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg",
+    "camp21-master": "episodes/21-brahmashira/stills/_locks/camp21-master.jpg"
+  },
+  "scene_master_prompt": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The hermitage of the rishi Vyasa on the bank of the sacred Ganga, by day: a wide, slow, glittering river curving into the distance with a pale far bank; on the near bank a broad stretch of clean pale sand and a few worn stone steps down to the water; on the right, under tall peepal and kadamba trees, a cluster of simple thatched huts of hermits with a small sacred fire altar sending up a thin thread of smoke, kusha grass and wildflowers along the path, a deerskin and a wooden water pot beside a hut door; clear blue sky with soft white clouds, warm late-morning sunlight. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for figures to be placed later. No people, no named figures. Daylight - no moon, no stars, no night. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no watermark.",
+  "scene_master_prompts": {
+    "ganga21-master": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The hermitage of the rishi Vyasa on the bank of the sacred Ganga, by day: a wide, slow, glittering river curving into the distance with a pale far bank; on the near bank a broad stretch of clean pale sand and a few worn stone steps down to the water; on the right, under tall peepal and kadamba trees, a cluster of simple thatched huts of hermits with a small sacred fire altar sending up a thin thread of smoke, kusha grass and wildflowers along the path, a deerskin and a wooden water pot beside a hut door; clear blue sky with soft white clouds, warm late-morning sunlight. Carved gold-and-lotus cartouche integrated into the painting, heroic depth for figures to be placed later. No people, no named figures. Daylight - no moon, no stars, no night. Not photoreal. No Drona. No flute. No gore, no blood, no bodies. No text, no letters, no plaques, no watermark.",
+    "camp21-master": "byte copy of episodes/20-night-raid/stills/_locks/camp20-master.jpg (the Pandava camp gate, banyan and river, night master) — not regenerated; the vow, ride and home plates repaint it in daylight (morning / late afternoon)"
+  },
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg",
+    "episodes/21-brahmashira/stills/_locks/camp21-master.jpg",
+    "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "episodes/21-brahmashira/stills/_locks/krishna.jpg",
+    "episodes/21-brahmashira/stills/_locks/yudhishthira.jpg",
+    "episodes/21-brahmashira/stills/_locks/bhima.jpg",
+    "episodes/21-brahmashira/stills/_locks/arjuna.jpg",
+    "episodes/21-brahmashira/stills/_locks/draupadi.jpg",
+    "episodes/21-brahmashira/stills/_locks/ashwatthama.jpg",
+    "episodes/21-brahmashira/stills/_locks/vyasa.jpg",
+    "episodes/21-brahmashira/stills/_locks/narada.jpg"
+  ],
+  "imagine_refs_note": "Gate-check list (lineage). The operative per-image attach order is in stills/_inbox/consumer-imagine/PROMPTS.md: scene master first, then the Ep 04 Krishna lock (follow, answer, word), then the other character locks, then the Ep 10 field-master. The Ep 09 Krishna/Arjuna paths are listed for the gate only and are NOT attached.",
+  "character_lock_refs": {
+    "krishna": "episodes/21-brahmashira/stills/_locks/krishna.jpg",
+    "yudhishthira": "episodes/21-brahmashira/stills/_locks/yudhishthira.jpg",
+    "bhima": "episodes/21-brahmashira/stills/_locks/bhima.jpg",
+    "arjuna": "episodes/21-brahmashira/stills/_locks/arjuna.jpg",
+    "draupadi": "episodes/21-brahmashira/stills/_locks/draupadi.jpg",
+    "ashwatthama": "episodes/21-brahmashira/stills/_locks/ashwatthama.jpg",
+    "vyasa": "episodes/21-brahmashira/stills/_locks/vyasa.jpg",
+    "narada": "episodes/21-brahmashira/stills/_locks/narada.jpg"
+  },
+  "local_lock_plan": {
+    "copy_forward": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg (byte copy)",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg (byte copy)",
+      "bhima": "episodes/15-narayanastra/stills/_locks/bhima.jpg (byte copy)",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg (byte copy)",
+      "draupadi": "episodes/04-akshayapatra/stills/_locks/draupadi.jpg (byte copy)",
+      "ashwatthama": "episodes/16-karna-commander/stills/_locks/ashwatthama.jpg (byte copy)",
+      "camp21-master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg (byte copy)"
+    },
+    "new": {
+      "ganga21-master": "scene master — Vyasa's hermitage on the bank of the Ganga by day (follow, loose, answer, between, turn, word + both new locks + poster); generate first",
+      "vyasa": "new character lock (first drawn appearance); generate second, attach on loose, between, word",
+      "narada": "new character lock (first drawn appearance); generate third, attach on between"
+    },
+    "new_prompts": {
+      "vyasa": "Premium painted comic Amar Chitra character lock portrait, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium three-quarter portrait of exactly one adult man standing in daylight on the bank of the Ganga before a thatched hermitage hut: Vyasa, the great rishi, author of the epic and grandfather of the Pandavas: a tall, ancient yet vigorous holy man with a dark complexion, calm deep-set luminous eyes, long matted tawny-brown locks piled high on his head, a long flowing grey beard, three white ash lines on the brow, white sacred thread, an ochre bark-cloth garment with a black deerskin over one shoulder, a rudraksha rosary; no weapons, no crown, never saffron robes, never Drona. Calm, all-seeing, compassionate expression; right hand raised in blessing, left hand holding a rudraksha rosary. Soft late-morning sunlight on his face, clear sky - daylight, NOT night. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. No Ashwatthama. No Bhima. No Draupadi. No other figures.",
+      "narada": "Premium painted comic Amar Chitra character lock portrait, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium three-quarter portrait of exactly one adult man standing in daylight on the bank of the Ganga before a thatched hermitage hut: Narada, the wandering celestial rishi: an ageless, youthful holy man with a fair golden glowing complexion, a clean-shaven serene face with a gentle smile, dark hair in a high topknot tied with a white cloth, a vertical sandal-paste tilak, white dhoti and white upper cloth, white sacred thread, a tulasi-bead necklace, a long-necked veena; never blue skin, no beard, no weapons, no crown, no peacock feather, no flute. Gentle, knowing smile; left arm cradling his veena against his shoulder, right hand raised in blessing. Soft late-morning sunlight on his face, clear sky - daylight, NOT night. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. No Ashwatthama. No Bhima. No Draupadi. No other figures."
+    },
+    "not_needed": "Nakula, Sahadeva, Uttara, Subhadra, Draupadi's sons and the unborn heir are narrated only, never drawn.",
+    "note": "stills_review.py (GATE C) requires episodes/21-brahmashira/stills/_locks/<id>.jpg for every face on a plate; the copy-forward locks are byte copies, not new art. Every plate is daylight: vow and ride in the morning, home in late afternoon (camp21 night master repainted), the Ganga beats by day with the weapons' white-gold fire."
+  },
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; Arjuna's charioteer — holds the reins on `follow`, on foot by the Ganga on `answer` and `word` — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor, no Gandiva, no flower garland"
+    },
+    "bhima": {
+      "face": "Adult Pandava, broad noble face, full dark mustache, fierce dark eyes — never a child (Ep 14/15 lock)",
+      "hair": "Dark hair, gold warrior circlet (not Arjuna's crown, not peacock)",
+      "costume": "Deep gold and leaf-green engraved armor; great bow in hand for the pursuit (ride, loose), gold-decked mace racked in his chariot — never saffron sage robes"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes — Ep 09 face via the Ep 14/15 lock",
+      "hair": "Tall gold crown",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva — never flower garland, never peacock feather"
+    },
+    "draupadi": {
+      "face": "Young adult queen of the Pandavas, warm brown skin, large dark eyes, soft brows, small red bindi; grief and resolve (vow), calm dignity (home) — painted comic, not photoreal, never sexualized (Ep 04 lock, byte copy)",
+      "hair": "Long black wavy hair worn loose (as in grief), simple gold ornaments — no crown, no peacock",
+      "costume": "Deep red sari with gold border, modest gold ornaments — no armor, no palace excess"
+    },
+    "ashwatthama": {
+      "face": "Young adult Brahmin-warrior, the guru's son: noble lean face, dark mustache, intense dark eyes; a luminous jewel (mani) in the middle of his forehead (Ep 15 lock via Ep 16) — bare brow on `word` after he yields it; never a child, never white-bearded",
+      "hair": "Dark hair tied back under a slim bronze-gold warrior band (no royal crown, no peacock feather)",
+      "costume": "Deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; at the hermitage a rough cloak of woven kusha grass over the armor, dust on his arms; the blade of grass that blazes into the brahmashira — no saffron sage robes, no flower garland"
+    },
+    "vyasa": {
+      "face": "Krishna Dvaipayana Vyasa, the great rishi and grandfather of the Pandavas: tall, ancient yet vigorous, dark complexion, calm deep-set luminous eyes, long flowing grey beard, three white ash lines on the brow (new Ep 21 lock) — clearly not Drona",
+      "hair": "Long matted tawny-brown locks (jata) piled high; no crown",
+      "costume": "Ochre bark-cloth garment, black deerskin over one shoulder, white sacred thread, rudraksha rosary — never saffron robes, never weapons, no flower garland"
+    },
+    "narada": {
+      "face": "Narada, the wandering celestial rishi: ageless and youthful, fair golden-glowing complexion, clean-shaven serene face, gentle smile, vertical sandal-paste tilak (new Ep 21 lock) — never blue skin, clearly not Krishna",
+      "hair": "Dark hair in a high topknot tied with a white cloth; no crown, no peacock feather",
+      "costume": "White dhoti and white upper cloth, white sacred thread, tulasi-bead necklace, long-necked veena (mahati) — no weapons, no flute"
+    }
+  },
+  "plates": [
+    {
+      "id": "vow",
+      "file": "plate-vow.jpg",
+      "beat_text": "Morning finds the ruined camp. Draupadi, grieving her five sons, vows to fast until Ashwatthama's forehead jewel is brought to her.",
+      "cast_present": [
+        "yudhishthira",
+        "draupadi"
+      ],
+      "locus_master": "episodes/21-brahmashira/stills/_locks/camp21-master.jpg",
+      "light": "morning",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The Pandava camp gate the morning after the raid, tents scorched, thin smoke, no people inside (camp21 master = Ep 20 camp, repainted in daylight)",
+        "Draupadi (Ep 04 lock): young adult queen, warm brown skin, large dark eyes, small red bindi, long black wavy hair loose, deep red sari with gold border, modest gold ornaments - dignified, never sexualized",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash - no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Draupadi sits upright on a mat, grief-stricken, right palm raised in a solemn vow, left hand on her heart",
+        "Yudhishthira kneels beside her, head bowed in sorrow",
+        "Her sons are narrated only - no bodies, no funeral, no victims drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "weapon striking a person",
+        "pregnant woman, unborn child or baby drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Bhima",
+        "Arjuna",
+        "Ashwatthama",
+        "Vyasa",
+        "Narada",
+        "Duryodhana",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Kritavarma",
+        "Nakula",
+        "Sahadeva",
+        "Uttara",
+        "Subhadra",
+        "Gandhari",
+        "Shiva",
+        "Draupadi's sons",
+        "Dhrishtadyumna",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "crown or armor on Draupadi",
+        "sexualized pose or costume on Draupadi",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "simple mat on the ground",
+        "scorched tents",
+        "thin grey smoke",
+        "carved camp gate"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult figures, one woman and one man, before the open carved wooden gate of a war-camp on the morning after a night raid; beyond the gate the tents are dark and scorched, thin grey smoke drifting, no one inside. Use the attached scene master only for the carved gate, the timber palisade, the tents, the banyan tree and the river - it is a night view, so repaint the whole scene in daylight. In the centre Draupadi, queen of the Pandavas (match the attached Draupadi lock: young adult woman, warm brown skin, large dark eyes, soft brows, a small red bindi, long black wavy hair worn loose, a deep red sari with a gold border, modest gold ornaments; dignified, never sexualized, no crown, no armor, no peacock feather) sits upright on a simple mat on the ground, grief-stricken, tears on her cheeks, her right hand raised with the palm outward in a solemn vow, her left hand pressed to her heart. Beside her Yudhishthira, eldest Pandava king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets; no gold chest armor, no Gandiva, no flower garland, no peacock feather) kneels with his head bowed in sorrow, his right hand reaching gently toward her, his left hand on his knee. Exactly four hands in the whole picture. No bodies, no blood. Morning after the night raid: a pale, clear morning sky, soft early sunlight, thin grey smoke drifting from the scorched tents far behind (this beat is in DAYLIGHT, NOT night: no moon, no stars, no burning torches; the cream-saffron-gold palette lives in the sunlight and the carved cartouche). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Bhima. No Arjuna. No Ashwatthama. No Vyasa. No Narada. No Duryodhana, no Karna, no Kripa, no Kritavarma, no Nakula, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva, Aishika sub-parva (Debroy vol. 7), ch. 10-11 - at dawn Yudhishthira hears of the night's slaughter and grieves; Nakula brings Draupadi from Upaplavya; she vows to sit in fast (praya) unless the jewel born with Ashvatthaman's head is brought to her"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva, Aishika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 10-11 - Yudhishthira's shoka; Draupadi's pratijna of prayopavesha for Ashvatthama's shiromani"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva (Aishika Parva) §10-§11 - Draupadi declares she will sit in praya until the gem on the head of Drona's son is brought to her"
+        }
+      ]
+    },
+    {
+      "id": "ride",
+      "file": "plate-ride.jpg",
+      "beat_text": "Bhima will not wait. Bow in hand, he races out in his chariot, following Ashwatthama's tracks toward the Ganga.",
+      "cast_present": [
+        "bhima"
+      ],
+      "locus_master": "episodes/21-brahmashira/stills/_locks/camp21-master.jpg",
+      "light": "morning",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The Pandava camp gate in morning daylight (camp21 master), a dusty road running off along the river",
+        "Bhima (Ep 14/15 lock): broad face, full dark mustache, gold warrior circlet, gold and leaf-green armor, powerful build",
+        "Bhima stands tall in a gold-trimmed war chariot bursting out of the gate behind two galloping horses, bow in his left hand, reins in his right",
+        "Dust flying from the wheels; his face fierce, set on the road ahead",
+        "Nakula (his charioteer in the texts) is narrated-not and not drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "weapon striking a person",
+        "pregnant woman, unborn child or baby drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Draupadi",
+        "Ashwatthama",
+        "Vyasa",
+        "Narada",
+        "Duryodhana",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Kritavarma",
+        "Nakula",
+        "Sahadeva",
+        "Uttara",
+        "Subhadra",
+        "Gandhari",
+        "Shiva",
+        "Draupadi's sons",
+        "Dhrishtadyumna",
+        "saffron sage robes on Bhima",
+        "peacock feather on Bhima",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "war chariot",
+        "two galloping horses",
+        "great bow",
+        "reins",
+        "mace racked in the chariot",
+        "dusty road"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult man in a gold-trimmed war chariot drawn by two galloping horses, bursting out of the open carved wooden gate of a war-camp onto a dusty road in the morning, dust flying from the wheels. Use the attached scene master only for the carved gate, the timber palisade, the tents, the banyan tree and the river - it is a night view, so repaint the whole scene in daylight. Bhima (match the attached Bhima lock: broad noble face, full dark mustache, fierce dark eyes, gold warrior circlet, deep gold and leaf-green engraved armor, powerful build; never saffron sage robes, no peacock feather) stands tall in the chariot, his great bow gripped in his left hand and the reins in his right hand, his gold-decked mace racked beside him, his face fierce and set on the road ahead; the road runs off along the river toward distant hills. Exactly two hands in the whole picture. No charioteer, no other people. Morning after the night raid: a pale, clear morning sky, soft early sunlight, thin grey smoke drifting from the scorched tents far behind (this beat is in DAYLIGHT, NOT night: no moon, no stars, no burning torches; the cream-saffron-gold palette lives in the sunlight and the carved cartouche). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Draupadi. No Ashwatthama. No Vyasa. No Narada. No Duryodhana, no Karna, no Kripa, no Kritavarma, no Nakula, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva, Aishika sub-parva (Debroy vol. 7), ch. 11 - Bhima takes up his bow and sets out after Drona's son, with Nakula as his charioteer, following the tracks"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva, Aishika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 11 - Bhimasena, dhanush in hand, rides after Ashvatthama with Nakula as sarathi"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva (Aishika Parva) §11 - Bhima, taking his bow, mounts his car with Nakula as driver and speeds after Drona's son by his tracks"
+        }
+      ]
+    },
+    {
+      "id": "follow",
+      "file": "plate-follow.jpg",
+      "beat_text": "Krishna warns that Ashwatthama holds the brahmashira, which can burn the worlds. With Arjuna and Yudhishthira, he races after Bhima.",
+      "cast_present": [
+        "krishna",
+        "yudhishthira",
+        "arjuna"
+      ],
+      "locus_master": "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg",
+      "light": "day",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The green bank of the wide Ganga in late-morning daylight, a hermitage far ahead under great trees (ganga21 master)",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; Arjuna's charioteer (reins on follow, on foot elsewhere) - no flute",
+        "Arjuna (Ep 14/15 lock, Ep 09 face): noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, quiver, Gandiva - no garland, no peacock feather; distinct from Yudhishthira",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash - no gold chest armor, no Gandiva; distinct from Arjuna",
+        "One great gold chariot with four white horses at full gallop; Krishna at the front holds the reins and looks back, speaking a grave warning",
+        "Arjuna grips the Gandiva; Yudhishthira raises a hand in alarm",
+        "Bhima is far ahead - not drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "weapon striking a person",
+        "pregnant woman, unborn child or baby drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Bhima",
+        "Draupadi",
+        "Ashwatthama",
+        "Vyasa",
+        "Narada",
+        "Duryodhana",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Kritavarma",
+        "Nakula",
+        "Sahadeva",
+        "Uttara",
+        "Subhadra",
+        "Gandhari",
+        "Shiva",
+        "Draupadi's sons",
+        "Dhrishtadyumna",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "flower garland on Arjuna",
+        "peacock feather on Arjuna",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "great gold chariot",
+        "four white galloping horses",
+        "reins",
+        "Gandiva",
+        "saffron pennant"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult men in one great gold war chariot drawn by four white horses at full gallop along the green bank of the wide Ganga, a plain saffron pennant streaming from its staff. At the front Krishna (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather - not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; Arjuna's charioteer, here driving the chariot with the reins in both hands; no flute, no bow) holds the reins and looks back over his shoulder, speaking a grave warning. Behind him stand Arjuna (match the attached Arjuna lock: noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, gold belt and armlets, quiver on his back, the great Gandiva bow; no flower garland, no peacock feather), gripping the Gandiva in his left hand with his right hand on the chariot rail, and Yudhishthira, eldest Pandava king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets; no gold chest armor, no Gandiva, no flower garland, no peacock feather), his right hand on the rail and his left hand raised in alarm. Far ahead along the riverbank, the thatched huts of a hermitage under great trees. Exactly six hands in the whole picture. Bright late-morning daylight on the Ganga: clear blue sky with soft white clouds, sunlight glittering on the wide river (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Bhima. No Draupadi. No Ashwatthama. No Vyasa. No Narada. No Duryodhana, no Karna, no Kripa, no Kritavarma, no Nakula, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva, Aishika sub-parva (Debroy vol. 7), ch. 12-13 - Vasudeva tells Yudhishthira that Drona's son holds the brahmashira and cannot be trusted with it; Krishna, Arjuna and Yudhishthira follow Bhima in Krishna's chariot"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva, Aishika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 12-13 - Shri Krishna warns of the brahmashira astra; the three follow Bhimasena on Krishna's ratha"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva (Aishika Parva) §12-§13 - Krishna warns that Drona's son has the weapon called Brahmashira that can burn the world; they ascend Krishna's car and pursue Bhima"
+        }
+      ]
+    },
+    {
+      "id": "loose",
+      "file": "plate-loose.jpg",
+      "beat_text": "At Vyasa's hermitage on the Ganga, Ashwatthama sees Bhima coming. He plucks a blade of grass, and it blazes into the brahmashira.",
+      "cast_present": [
+        "bhima",
+        "ashwatthama",
+        "vyasa"
+      ],
+      "locus_master": "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg",
+      "light": "fire",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Vyasa's hermitage on the sandy bank of the Ganga by day (ganga21 master)",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead (bare after he yields it on `word`), slim bronze-gold band, maroon and bronze-gold armor, white sacred thread, rough kusha-grass cloak at the hermitage - never a child",
+        "Bhima (Ep 14/15 lock): broad face, full dark mustache, gold warrior circlet, gold and leaf-green armor, powerful build",
+        "Vyasa (new Ep 21 lock): tall, dark-complexioned great rishi, luminous deep-set eyes, matted tawny-brown locks piled high, long grey beard, ash lines, ochre bark cloth and black deerskin, rudraksha rosary - clearly not Drona (no saffron, no weapons)",
+        "Ashwatthama, in a rough kusha-grass cloak, rises holding up a single blade of grass that bursts into a blazing white-gold flame",
+        "Vyasa sits calmly on a deerskin before a hut, watching gravely; Bhima strides in from the left with his bow, hand raised in challenge",
+        "The fire is light only - it touches no one"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "weapon striking a person",
+        "pregnant woman, unborn child or baby drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Draupadi",
+        "Narada",
+        "Duryodhana",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Kritavarma",
+        "Nakula",
+        "Sahadeva",
+        "Uttara",
+        "Subhadra",
+        "Gandhari",
+        "Shiva",
+        "Draupadi's sons",
+        "Dhrishtadyumna",
+        "saffron sage robes on Bhima",
+        "peacock feather on Bhima",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama",
+        "saffron robes on Vyasa",
+        "weapons on Vyasa",
+        "crown on Vyasa",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "single blade of grass blazing with white-gold fire",
+        "kusha-grass cloak",
+        "deerskin seat",
+        "thatched hermitage hut",
+        "Bhima's bow"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult men on the sandy bank of the wide Ganga beside a hermitage of thatched huts. In the centre Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti, here wearing a rough cloak of woven kusha grass over his armor, dust on his arms; never a child, never white-bearded, no royal crown) rises from where he sat, holding up a single long blade of grass in his right hand; the blade bursts into a blazing white-gold flame like a small sun, his left hand clenched, his face desperate and fierce. Behind him on the right, seated calmly on a deerskin before a thatched hut, Vyasa (match the attached Vyasa lock - the great rishi, author of the epic and grandfather of the Pandavas: a tall, ancient yet vigorous holy man with a dark complexion, calm deep-set luminous eyes, long matted tawny-brown locks piled high on his head, a long flowing grey beard, three white ash lines on the brow, white sacred thread, an ochre bark-cloth garment with a black deerskin over one shoulder, a rudraksha rosary; no weapons, no crown, never saffron robes, never Drona) watches gravely, his right hand raised, his left hand on his knee. On the left, arriving on foot across the sand, Bhima (match the attached Bhima lock: broad noble face, full dark mustache, fierce dark eyes, gold warrior circlet, deep gold and leaf-green engraved armor, powerful build; never saffron sage robes, no peacock feather) strides forward with his great bow in his left hand and his right hand raised in challenge. Exactly six hands in the whole picture. The fire is light only - it touches no one. Bright daylight on the Ganga, but the blazing weapons flood the scene with white-gold fire and a hot shimmer in the air, the sky above them flaring (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Draupadi. No Narada. No Duryodhana, no Karna, no Kripa, no Kritavarma, no Nakula, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva, Aishika sub-parva (Debroy vol. 7), ch. 13 - on the bank of the Ganga they see Ashvatthaman seated near Vyasa among the rishis, clad in kusha grass, smeared with ghee and covered in dust; seeing Bhima with his bow, he takes a blade of grass and invokes the brahmashira"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva, Aishika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 13 - Ganga-tata, Vyasa and the munis; Ashvatthama abhimantrit the aishika (blade of grass) as brahmashira"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva (Aishika Parva) §13 - Drona's son, seated by Vyasa on the shore of the Ganga, takes up a blade of grass and turns it into a celestial weapon, saying it is for the destruction of the Pandavas"
+        }
+      ]
+    },
+    {
+      "id": "answer",
+      "file": "plate-answer.jpg",
+      "beat_text": "At Krishna's word, Arjuna looses his own brahmashira — to quell the other weapon, with a blessing for all the worlds.",
+      "cast_present": [
+        "krishna",
+        "arjuna"
+      ],
+      "locus_master": "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg",
+      "light": "fire",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The sandy bank of the Ganga by day, a distant blaze of white-gold fire across the river (ganga21 master)",
+        "Arjuna (Ep 14/15 lock, Ep 09 face): noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, quiver, Gandiva - no garland, no peacock feather; distinct from Yudhishthira",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; Arjuna's charioteer (reins on follow, on foot elsewhere) - no flute",
+        "Arjuna, feet planted, draws the Gandiva with a single arrow blazing with calm white-gold fire, aimed up and out over the river toward the far blaze",
+        "Krishna stands on foot beside him, pointing toward the far blaze, his other hand on Arjuna's shoulder",
+        "Arjuna's face solemn, not angry"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "weapon striking a person",
+        "pregnant woman, unborn child or baby drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Yudhishthira",
+        "Bhima",
+        "Draupadi",
+        "Ashwatthama",
+        "Vyasa",
+        "Narada",
+        "Duryodhana",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Kritavarma",
+        "Nakula",
+        "Sahadeva",
+        "Uttara",
+        "Subhadra",
+        "Gandhari",
+        "Shiva",
+        "Draupadi's sons",
+        "Dhrishtadyumna",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "flower garland on Arjuna",
+        "peacock feather on Arjuna",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "Gandiva fully drawn",
+        "single blazing arrow",
+        "distant blaze of white-gold fire",
+        "quiver"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men standing on the sandy bank of the wide Ganga. Arjuna (match the attached Arjuna lock: noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, gold belt and armlets, quiver on his back, the great Gandiva bow; no flower garland, no peacock feather) stands with his feet planted, the Gandiva fully drawn, a single long arrow on the string blazing with calm white-gold fire, aimed up and outward across the river toward a distant blaze of light; his face is solemn, not angry. Beside him Krishna (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather - not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; Arjuna's charioteer, here standing on foot, no reins in his hands; no flute, no bow) points with his right hand toward the far blaze, his left hand resting on Arjuna's shoulder. Exactly four hands in the whole picture. Bright daylight on the Ganga, but the blazing weapons flood the scene with white-gold fire and a hot shimmer in the air, the sky above them flaring (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Yudhishthira. No Bhima. No Draupadi. No Ashwatthama. No Vyasa. No Narada. No Duryodhana, no Karna, no Kripa, no Kritavarma, no Nakula, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva, Aishika sub-parva (Debroy vol. 7), ch. 14 - Krishna urges Arjuna to release the weapon Drona taught him; Arjuna releases it wishing good to all and saying, let this weapon pacify the other"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva, Aishika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 14 - Arjuna's brahmashira-prayoga to pacify the other astra, with svasti (well-being) for all beings"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva (Aishika Parva) §14 - Arjuna, at Keshava's word, lets go his weapon for neutralising the other, wishing good to all"
+        }
+      ]
+    },
+    {
+      "id": "between",
+      "file": "plate-between.jpg",
+      "beat_text": "The two fires rush to meet. Vyasa and Narada step between them, calm and shining, and bid both warriors call their weapons back.",
+      "cast_present": [
+        "vyasa",
+        "narada"
+      ],
+      "locus_master": "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg",
+      "light": "fire",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Above the sandy bank of the Ganga by day (ganga21 master), two vast walls of white-gold fire rushing in from left and right",
+        "Vyasa (new Ep 21 lock): tall, dark-complexioned great rishi, luminous deep-set eyes, matted tawny-brown locks piled high, long grey beard, ash lines, ochre bark cloth and black deerskin, rudraksha rosary - clearly not Drona (no saffron, no weapons)",
+        "Narada (new Ep 21 lock): ageless, fair golden-glowing celestial rishi, clean-shaven, high topknot, white dhoti and upper cloth, tulasi beads, long-necked veena - never blue skin, clearly not Krishna",
+        "Vyasa and Narada stand side by side between the fires, palms raised outward, calm, radiant and unharmed; the fires halt just short of them",
+        "No warriors visible on this plate"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "weapon striking a person",
+        "pregnant woman, unborn child or baby drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Bhima",
+        "Arjuna",
+        "Draupadi",
+        "Ashwatthama",
+        "Duryodhana",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Kritavarma",
+        "Nakula",
+        "Sahadeva",
+        "Uttara",
+        "Subhadra",
+        "Gandhari",
+        "Shiva",
+        "Draupadi's sons",
+        "Dhrishtadyumna",
+        "saffron robes on Vyasa",
+        "weapons on Vyasa",
+        "crown on Vyasa",
+        "blue skin on Narada",
+        "flute on Narada",
+        "peacock feather on Narada",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "two vast walls of white-gold fire",
+        "rudraksha rosary",
+        "veena",
+        "soft halo of light"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult holy men standing side by side on the sandy bank of the wide Ganga, between two vast blazing walls of white-gold fire that rush toward each other from the left and the right edges of the frame. On the left Vyasa (match the attached Vyasa lock - the great rishi, author of the epic and grandfather of the Pandavas: a tall, ancient yet vigorous holy man with a dark complexion, calm deep-set luminous eyes, long matted tawny-brown locks piled high on his head, a long flowing grey beard, three white ash lines on the brow, white sacred thread, an ochre bark-cloth garment with a black deerskin over one shoulder, a rudraksha rosary; no weapons, no crown, never saffron robes, never Drona), his right palm raised outward toward one fire, his left hand holding a rudraksha rosary. On the right Narada (match the attached Narada lock - the wandering celestial rishi: an ageless, youthful holy man with a fair golden glowing complexion, a clean-shaven serene face with a gentle smile, dark hair in a high topknot tied with a white cloth, a vertical sandal-paste tilak, white dhoti and white upper cloth, white sacred thread, a tulasi-bead necklace, a long-necked veena; never blue skin, no beard, no weapons, no crown, no peacock feather, no flute), his right palm raised outward toward the other fire, his left arm cradling his veena against his shoulder. Both are calm, radiant and unharmed, a soft halo of light around each, the fires halted just short of them. Behind them the hermitage huts on the bank. No warriors visible. Exactly four hands in the whole picture. Bright daylight on the Ganga, but the blazing weapons flood the scene with white-gold fire and a hot shimmer in the air, the sky above them flaring (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Bhima. No Arjuna. No Draupadi. No Ashwatthama. No Duryodhana, no Karna, no Kripa, no Kritavarma, no Nakula, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva, Aishika sub-parva (Debroy vol. 7), ch. 14 - as the two weapons blaze, Narada and Vyasa appear between them to pacify them and ask both heroes to withdraw"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva, Aishika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 14 - Narada and Vyasa stand between the two astras like two blazing fires"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva (Aishika Parva) §14 - the two rishis, Narada and the Island-born, stand between the two weapons, blazing like two fires"
+        }
+      ]
+    },
+    {
+      "id": "turn",
+      "file": "plate-turn.jpg",
+      "beat_text": "Arjuna withdraws his weapon. Ashwatthama cannot. Instead, he turns his against the unborn heir of the Pandavas.",
+      "cast_present": [
+        "arjuna",
+        "ashwatthama"
+      ],
+      "locus_master": "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg",
+      "light": "fire",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The sandy bank of the Ganga by day (ganga21 master)",
+        "Arjuna (Ep 14/15 lock, Ep 09 face): noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, quiver, Gandiva - no garland, no peacock feather; distinct from Yudhishthira",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead (bare after he yields it on `word`), slim bronze-gold band, maroon and bronze-gold armor, white sacred thread, rough kusha-grass cloak at the hermitage - never a child",
+        "Arjuna lowers the Gandiva, the fire of his arrow folding back into his quiver in a soft glow, his face calm",
+        "Ashwatthama flings his arm toward the far horizon; the blazing blade of grass streams a long comet of fire away over the river into the distant sky",
+        "Implication only: the target is never shown - no woman, no child, no baby"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "weapon striking a person",
+        "pregnant woman, unborn child or baby drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Bhima",
+        "Draupadi",
+        "Vyasa",
+        "Narada",
+        "Duryodhana",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Kritavarma",
+        "Nakula",
+        "Sahadeva",
+        "Uttara",
+        "Subhadra",
+        "Gandhari",
+        "Shiva",
+        "Draupadi's sons",
+        "Dhrishtadyumna",
+        "flower garland on Arjuna",
+        "peacock feather on Arjuna",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "Gandiva lowered",
+        "soft glow folding into the quiver",
+        "comet of white-gold fire streaking to the horizon",
+        "kusha-grass cloak"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men facing each other across the sandy bank of the wide Ganga. On the left Arjuna (match the attached Arjuna lock: noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, gold belt and armlets, quiver on his back, the great Gandiva bow; no flower garland, no peacock feather) lowers the Gandiva with his left hand, his right hand open as the white-gold fire of his arrow folds back into his quiver in a soft glow; his face is calm. On the right Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti, here wearing a rough cloak of woven kusha grass over his armor, dust on his arms; never a child, never white-bearded, no royal crown) flings his right arm out toward the far horizon, the blazing blade of grass in his hand streaming a long white-gold comet of fire away over the river into the distant sky; his left hand is clenched, his face anguished and defiant. No woman, no child and no baby anywhere in the picture - the weapon's target is never shown. Exactly four hands in the whole picture. Bright daylight on the Ganga, but the blazing weapons flood the scene with white-gold fire and a hot shimmer in the air, the sky above them flaring (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Bhima. No Draupadi. No Vyasa. No Narada. No Duryodhana, no Karna, no Kripa, no Kritavarma, no Nakula, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva, Aishika sub-parva (Debroy vol. 7), ch. 15 - Arjuna, pure in his vows, withdraws his weapon; Ashvatthaman cannot, and directs his into the wombs of the Pandava women"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva, Aishika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 15 - Arjuna's astra-upasamhara; Ashvatthama turns the brahmashira on the Pandava garbha"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva (Aishika Parva) §15 - Dhananjaya withdraws his weapon; Drona's son, unable to withdraw his, lets it fall upon the wombs of the Pandava women"
+        }
+      ]
+    },
+    {
+      "id": "word",
+      "file": "plate-word.jpg",
+      "beat_text": "Krishna gives his word: the child will be born, and will live. Ashwatthama yields the jewel from his forehead, and walks away alone.",
+      "cast_present": [
+        "krishna",
+        "ashwatthama",
+        "vyasa"
+      ],
+      "locus_master": "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg",
+      "light": "day",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The sandy bank of the Ganga beside the hermitage huts by day (ganga21 master)",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; Arjuna's charioteer (reins on follow, on foot elsewhere) - no flute",
+        "Ashwatthama (Ep 15 lock via Ep 16): young adult Brahmin-warrior, luminous jewel in the middle of his forehead (bare after he yields it on `word`), slim bronze-gold band, maroon and bronze-gold armor, white sacred thread, rough kusha-grass cloak at the hermitage - never a child",
+        "Vyasa (new Ep 21 lock): tall, dark-complexioned great rishi, luminous deep-set eyes, matted tawny-brown locks piled high, long grey beard, ash lines, ochre bark cloth and black deerskin, rudraksha rosary - clearly not Drona (no saffron, no weapons)",
+        "Krishna raises his right hand in a solemn promise, serene and stern",
+        "Ashwatthama, head bowed, holds out the glowing forehead jewel on his open palm; his forehead now bare",
+        "Vyasa reaches out to receive the jewel"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "weapon striking a person",
+        "pregnant woman, unborn child or baby drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Yudhishthira",
+        "Bhima",
+        "Arjuna",
+        "Draupadi",
+        "Narada",
+        "Duryodhana",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Kritavarma",
+        "Nakula",
+        "Sahadeva",
+        "Uttara",
+        "Subhadra",
+        "Gandhari",
+        "Shiva",
+        "Draupadi's sons",
+        "Dhrishtadyumna",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "child Ashwatthama",
+        "royal crown on Ashwatthama",
+        "saffron robes on Vyasa",
+        "weapons on Vyasa",
+        "crown on Vyasa",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "glowing forehead jewel on an open palm",
+        "rudraksha rosary",
+        "hermitage huts"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult men on the sandy bank of the wide Ganga beside the thatched hermitage huts. On the left Krishna (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather - not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; Arjuna's charioteer, here standing on foot, no reins in his hands; no flute, no bow) raises his right hand in a solemn promise, his left hand at his side, his face serene and stern. In the centre Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, the middle of his forehead now bare where the jewel was, no jewel on his brow, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti, here wearing a rough cloak of woven kusha grass over his armor, dust on his arms; never a child, never white-bearded, no royal crown) stands with his head bowed, holding out the glowing forehead jewel on his open right palm, his left hand at his side. On the right Vyasa (match the attached Vyasa lock - the great rishi, author of the epic and grandfather of the Pandavas: a tall, ancient yet vigorous holy man with a dark complexion, calm deep-set luminous eyes, long matted tawny-brown locks piled high on his head, a long flowing grey beard, three white ash lines on the brow, white sacred thread, an ochre bark-cloth garment with a black deerskin over one shoulder, a rudraksha rosary; no weapons, no crown, never saffron robes, never Drona) reaches out with his right hand to receive the jewel, his left hand holding a rudraksha rosary. Exactly six hands in the whole picture. Bright late-morning daylight on the Ganga: clear blue sky with soft white clouds, sunlight glittering on the wide river (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Yudhishthira. No Bhima. No Arjuna. No Draupadi. No Narada. No Duryodhana, no Karna, no Kripa, no Kritavarma, no Nakula, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva, Aishika sub-parva (Debroy vol. 7), ch. 15-16 - Vyasa asks Ashvatthaman to give up the jewel; Krishna declares that Uttara's child, though struck, will live, and that Drona's son will wander alone; Ashvatthaman gives up the gem and goes to the forest"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva, Aishika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 15-16 - the mani surrendered; Shri Krishna's vachana that Parikshit will live; Ashvatthama departs to the vana"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva (Aishika Parva) §15-§16 - Drona's son gives the gem to the Pandavas; Krishna promises to revive the child and pronounces that Drona's son shall wander alone"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "file": "plate-home.jpg",
+      "beat_text": "Bhima places the jewel in Draupadi's hands. Her vow fulfilled, she gives it to Yudhishthira, to wear upon his head.",
+      "cast_present": [
+        "yudhishthira",
+        "bhima",
+        "draupadi"
+      ],
+      "locus_master": "episodes/21-brahmashira/stills/_locks/camp21-master.jpg",
+      "light": "afternoon",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "The Pandava camp gate in golden late-afternoon daylight (camp21 master), the smoke gone",
+        "Draupadi (Ep 04 lock): young adult queen, warm brown skin, large dark eyes, small red bindi, long black wavy hair loose, deep red sari with gold border, modest gold ornaments - dignified, never sexualized",
+        "Bhima (Ep 14/15 lock): broad face, full dark mustache, gold warrior circlet, gold and leaf-green armor, powerful build",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash - no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Draupadi stands calm now, holding the luminous jewel in both cupped hands",
+        "Bhima has just placed it there, his hand still extended; Yudhishthira bows his head toward her, ready to receive it"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "weapon striking a person",
+        "pregnant woman, unborn child or baby drawn",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "white-bearded saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Arjuna",
+        "Ashwatthama",
+        "Vyasa",
+        "Narada",
+        "Duryodhana",
+        "Karna",
+        "Shalya",
+        "Kripa",
+        "Kritavarma",
+        "Nakula",
+        "Sahadeva",
+        "Uttara",
+        "Subhadra",
+        "Gandhari",
+        "Shiva",
+        "Draupadi's sons",
+        "Dhrishtadyumna",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "saffron sage robes on Bhima",
+        "peacock feather on Bhima",
+        "crown or armor on Draupadi",
+        "sexualized pose or costume on Draupadi",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "luminous jewel in cupped hands",
+        "carved camp gate",
+        "late-afternoon light"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult figures, one woman and two men, before the carved wooden gate of a war-camp in late-afternoon light. Use the attached scene master only for the carved gate, the timber palisade, the tents, the banyan tree and the river - it is a night view, so repaint the whole scene in daylight. In the centre Draupadi, queen of the Pandavas (match the attached Draupadi lock: young adult woman, warm brown skin, large dark eyes, soft brows, a small red bindi, long black wavy hair worn loose, a deep red sari with a gold border, modest gold ornaments; dignified, never sexualized, no crown, no armor, no peacock feather) stands, calm now, holding a luminous jewel in both cupped hands. On the left Bhima (match the attached Bhima lock: broad noble face, full dark mustache, fierce dark eyes, gold warrior circlet, deep gold and leaf-green engraved armor, powerful build; never saffron sage robes, no peacock feather) has just placed it there, his right hand still extended, his left hand at his side, his face softened. On the right Yudhishthira, eldest Pandava king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets; no gold chest armor, no Gandiva, no flower garland, no peacock feather) bows his head toward her, his right hand on his heart, his left hand at his side, ready to receive it. Exactly six hands in the whole picture. Late-afternoon golden daylight at the camp: long warm shadows, a calm clear sky, the smoke gone (this beat is in DAYLIGHT, NOT night: no moon, no stars, no burning torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. No Ashwatthama. No Vyasa. No Narada. No Duryodhana, no Karna, no Kripa, no Kritavarma, no Nakula, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Sauptika Parva, Aishika sub-parva (Debroy vol. 7), ch. 16 - the Pandavas return to Draupadi with the gem; Bhima gives it to her; she ends her fast and asks Yudhishthira to wear it on his head"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Sauptika Parva, Aishika Parva (vulgate; adhyaya numbering = Ganguli) adhyaya 16 - Bhimasena hands Draupadi the mani; she gives it to Yudhishthira, who wears it on his head"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Sauptika Parva (Aishika Parva) §16 - Bhima gives Draupadi the gem; she bids the king bind it on his head, and Yudhishthira wears it"
+        }
+      ]
+    }
+  ],
+  "poster": {
+    "file": "poster.jpg",
+    "cast_present": [
+      "arjuna",
+      "ashwatthama"
+    ],
+    "prompt": "Premium painted comic Amar Chitra poster, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men facing each other across the sandy bank of the wide Ganga in daylight. On the left Arjuna (match the attached Arjuna lock: noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, gold belt and armlets, quiver on his back, the great Gandiva bow; no flower garland, no peacock feather) draws the Gandiva, a single arrow blazing with calm white-gold fire. On the right Ashwatthama (match the attached Ashwatthama lock: young adult Brahmin-warrior, noble lean face, dark mustache, intense dark eyes, a luminous jewel set in the middle of his forehead, dark hair tied back under a slim bronze-gold band, deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti, here wearing a rough cloak of woven kusha grass over his armor, dust on his arms; never a child, never white-bearded, no royal crown) raises a blade of grass blazing like a small sun, the jewel on his forehead glowing. Their two fires surge toward each other and meet in a great burst of white-gold light above the river in the centre. Strong diagonal composition with clear headroom for a title. Exactly four hands. Bright daylight on the Ganga, but the blazing weapons flood the scene with white-gold fire and a hot shimmer in the air, the sky above them flaring (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Bhima. No Draupadi. No Vyasa. No Narada. No Duryodhana, no Karna, no Kripa, no Kritavarma, no Nakula, no Shiva.",
+    "note": "Poster = Ep 21 thesis (the two brahmashiras over the Ganga). If a separate poster pass is cut, copy the GATE C-passed plate-answer.jpg."
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Sauptika Parva, Aishika sub-parva (vulgate §10–§16; BORI CE ch. 10–16) · the morning after the night raid and the day of the pursuit · Draupadi's vow for the jewel, Bhima's pursuit, Krishna's warning of the brahmashira, Vyasa's hermitage on the Ganga, the blade of grass, Arjuna's answering weapon, Vyasa and Narada between the weapons, Arjuna's withdrawal, the weapon turned on the unborn heir (implication only), Krishna's word, the jewel taken and given to Draupadi",
+    "bori": "BORI CE Sauptika Parva ch. 10–16 (Aishika sub-parva), Debroy translation vol. 7 (chapter-group citations): Yudhishthira's grief and Draupadi's vow; Bhima's pursuit with Nakula; Vasudeva's warning (the brahmashira, the Sudarshana episode); the Ganga bank, Vyasa and the rishis, the aishika; Arjuna's weapon; Narada and Vyasa; withdrawal and the wombs of the Pandava women; Krishna's promise and curse; the gem given up and brought to Draupadi; Yudhishthira wears it.",
+    "gita_press": "Gita Press Gorakhpur Mahabharata (Hindi, vulgate numbering = Ganguli): Sauptika Parva, Aishika Parva adhyayas 10–11 (Yudhishthira's shoka, Draupadi's prayopavesha pratijna, Bhima rides), 12–13 (Shri Krishna's warning; the pursuit; the Ganga-tata; the aishika), 14 (Arjuna's astra; Narada and Vyasa between the astras), 15 (upasamhara; the garbha), 16 (Krishna's vachana; the mani; Draupadi; Yudhishthira wears it).",
+    "ganguli": "K.M. Ganguli, Sauptika Parva (Aishika Parva) §10–§16.",
+    "divergence": "Section/adhyaya numbers follow the vulgate (Ganguli = Gita Press); BORI CE chapters are cited at chapter-group level only. Omitted for length: Dhrishtadyumna's charioteer bringing the news, Yudhishthira's lament, Krishna's tale of Ashwatthama asking for the Sudarshana discus at Dvaraka, the names of Krishna's horses, Krishna's full curse (three thousand years of wandering, told only as 'walks away alone'), and the later dialogue on why Arjuna could withdraw his weapon. Nakula drove Bhima's chariot in the texts; on the ride plate Bhima holds the reins himself and Nakula is not drawn. Arjuna dismounts to loose his weapon; Krishna stands beside him on foot. Ashwatthama's kusha-grass garment is drawn as a rough grass cloak over his locked armor so the lock reads across plates. The weapon on the wombs of the Pandava women is told only as 'the unborn heir' — no woman, unborn child or baby is ever drawn; Uttara and Parikshit are not named.",
+    "chosen": "Gita Press + BORI/Debroy overlap: Draupadi's vow for the jewel, Bhima's pursuit, Krishna's warning, Krishna, Arjuna and Yudhishthira following in Krishna's chariot, Ashwatthama at Vyasa's hermitage on the Ganga, the blade of grass turned into the brahmashira, Arjuna's answering weapon with a blessing for all, Narada and Vyasa between the weapons, Arjuna's withdrawal, Ashwatthama's turning of the weapon on the Pandava unborn, Krishna's promise that the child will live, the jewel surrendered and brought to Draupadi, Yudhishthira wearing it. Ganguli for English wording.",
+    "notes": "Not TV. Comic-mythology only; family-friendly: no gore, no bodies, no wounds; the weapon on the womb by implication only (a comet of fire toward the horizon, no target drawn). One new scene master (ganga21), camp21 = Ep 20 camp byte copy, two new character locks (vyasa, narada); Krishna (Ep 04 lock) on follow, answer, word. Never attach Ep01 plate-wide-gold or any finished plate as an Imagine ref. Picks up Ep 20's end line ('The night is over. The Pandavas learn what it has done — and Bhima rides after Ashwatthama.')."
+  },
+  "stills_status": "NOT GENERATED — SuperGrok consumer prompt pack ready (13 images: ganga21 master, vyasa + narada locks, 9 plates, poster); generate on grok.com, then import + GATE C"
+}

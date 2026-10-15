@@ -1,0 +1,62 @@
+{
+  "episode_id": "21",
+  "notes": "Sauptika Parva, Aishika sub-parva — the morning after the night raid and the day of the pursuit. Draupadi vows to fast for Ashwatthama's forehead jewel; Bhima rides after him; Krishna, Arjuna and Yudhishthira follow to Vyasa's hermitage on the Ganga; the two brahmashiras, Vyasa and Narada between them, Arjuna's withdrawal, Ashwatthama's weapon turned on the unborn heir (implication only), Krishna's word, the jewel taken and given to Draupadi. Family-friendly: no gore, no wounds; no woman, unborn child or baby is ever drawn on the weapon beats. Nakula (Bhima's charioteer), Uttara, Draupadi's sons and the women of the house are narrated only. Krishna = Ep 04 lock (official series reference): pale silvery dusty-blue skin, long loose curls, slim gold band with one peacock feather, white U-tilak, jasmine-rose garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands — follow, answer, word. Yudhishthira, Bhima, Arjuna = Ep 14/15 locks (via Ep 15); Draupadi = Ep 04 lock; Ashwatthama = Ep 15 lock via Ep 16; Vyasa and Narada = new Ep 21 locks. One new scene master (ganga21); camp21 = Ep 20 camp20 byte copy (night master, repainted in daylight on the camp beats).",
+  "locks": {
+    "reuse": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg",
+      "bhima": "episodes/15-narayanastra/stills/_locks/bhima.jpg",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg",
+      "draupadi": "episodes/04-akshayapatra/stills/_locks/draupadi.jpg",
+      "ashwatthama": "episodes/16-karna-commander/stills/_locks/ashwatthama.jpg",
+      "camp21-master": "episodes/20-night-raid/stills/_locks/camp20-master.jpg"
+    },
+    "new": {
+      "ganga21-master": "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg",
+      "vyasa": "episodes/21-brahmashira/stills/_locks/vyasa.jpg",
+      "narada": "episodes/21-brahmashira/stills/_locks/narada.jpg"
+    }
+  },
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; Arjuna's charioteer — holds the reins on `follow`, on foot by the Ganga on `answer` and `word` — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava king, calm noble face, modest mustache, dharma in the eyes — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor, no Gandiva, no flower garland"
+    },
+    "bhima": {
+      "face": "Adult Pandava, broad noble face, full dark mustache, fierce dark eyes — never a child (Ep 14/15 lock)",
+      "hair": "Dark hair, gold warrior circlet (not Arjuna's crown, not peacock)",
+      "costume": "Deep gold and leaf-green engraved armor; great bow in hand for the pursuit (ride, loose), gold-decked mace racked in his chariot — never saffron sage robes"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes — Ep 09 face via the Ep 14/15 lock",
+      "hair": "Tall gold crown",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva — never flower garland, never peacock feather"
+    },
+    "draupadi": {
+      "face": "Young adult queen of the Pandavas, warm brown skin, large dark eyes, soft brows, small red bindi; grief and resolve (vow), calm dignity (home) — painted comic, not photoreal, never sexualized (Ep 04 lock, byte copy)",
+      "hair": "Long black wavy hair worn loose (as in grief), simple gold ornaments — no crown, no peacock",
+      "costume": "Deep red sari with gold border, modest gold ornaments — no armor, no palace excess"
+    },
+    "ashwatthama": {
+      "face": "Young adult Brahmin-warrior, the guru's son: noble lean face, dark mustache, intense dark eyes; a luminous jewel (mani) in the middle of his forehead (Ep 15 lock via Ep 16) — bare brow on `word` after he yields it; never a child, never white-bearded",
+      "hair": "Dark hair tied back under a slim bronze-gold warrior band (no royal crown, no peacock feather)",
+      "costume": "Deep maroon and bronze-gold engraved armor, white sacred thread across the chest, cream dhoti; at the hermitage a rough cloak of woven kusha grass over the armor, dust on his arms; the blade of grass that blazes into the brahmashira — no saffron sage robes, no flower garland"
+    },
+    "vyasa": {
+      "face": "Krishna Dvaipayana Vyasa, the great rishi and grandfather of the Pandavas: tall, ancient yet vigorous, dark complexion, calm deep-set luminous eyes, long flowing grey beard, three white ash lines on the brow (new Ep 21 lock) — clearly not Drona",
+      "hair": "Long matted tawny-brown locks (jata) piled high; no crown",
+      "costume": "Ochre bark-cloth garment, black deerskin over one shoulder, white sacred thread, rudraksha rosary — never saffron robes, never weapons, no flower garland"
+    },
+    "narada": {
+      "face": "Narada, the wandering celestial rishi: ageless and youthful, fair golden-glowing complexion, clean-shaven serene face, gentle smile, vertical sandal-paste tilak (new Ep 21 lock) — never blue skin, clearly not Krishna",
+      "hair": "Dark hair in a high topknot tied with a white cloth; no crown, no peacock feather",
+      "costume": "White dhoti and white upper cloth, white sacred thread, tulasi-bead necklace, long-necked veena (mahati) — no weapons, no flute"
+    }
+  }
+}

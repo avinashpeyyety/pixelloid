@@ -43,6 +43,7 @@ Episodic itihāsa theater: **write script → Grok Imagine key panels → Blende
 | 18 | **The Fall of Shalya** — eighteenth day, Yudhishthira’s dart | Live |
 | 19 | **The Mace Duel** — the lake, Bhima’s vow, Balarama’s wrath | Live |
 | 20 | **The Night Raid** — Sauptika Parva, the owl, Shiva at the gate | Live |
+| 21 | **The Brahmashira** — Draupadi’s vow, the blade of grass, Vyasa and Narada between the fires | Live |
 
 ## Local
 

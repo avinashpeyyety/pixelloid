@@ -110,6 +110,11 @@ PRONOUNCE: dict[str, str] = {
     "Kritavarma": "Kritha-varma",
     "Oghavati": "Ogha-vati",
     "Shikhandi": "Shi-khandi",
+    # Ep21 The Brahmashira (Sauptika Parva, Aishika sub-parva)
+    "brahmashira": "brahma-shira",
+    "Vyasa": "Vyaa-sa",
+    "Narada": "Naa-rada",
+    "Ganga": "Gun-gaa",
 }
 
 

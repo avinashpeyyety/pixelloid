@@ -1,7 +1,7 @@
 /**
  * Mahābhārata player — cinematic plate theater.
  * Painterly Imagine plates + Ken Burns / crossfade; voice + raga underscore (tanpura; episode raga).
- * Loads episode from ?ep=01 … ?ep=20
+ * Loads episode from ?ep=01 … ?ep=21
  */
 const EP_LOADERS = {
   "01": () => import("../episodes/01-birds-eye/script.js"),
@@ -24,6 +24,7 @@ const EP_LOADERS = {
   "18": () => import("../episodes/18-shalya-fall/script.js"),
   "19": () => import("../episodes/19-mace-duel/script.js"),
   "20": () => import("../episodes/20-night-raid/script.js"),
+  "21": () => import("../episodes/21-brahmashira/script.js"),
 };
 
 const _epParam = String(new URLSearchParams(location.search).get("ep") || "01").replace(/\D/g, "") || "01";
@@ -420,6 +421,18 @@ const RAGA_PRESETS = {
     duckLevel: 0.14,
     tanpuraMs: 1200,
   },
+  jaunpuri: {
+    // Jaunpuri (Asavari thaat) — grave late-morning raga (second prahar of the day): S R m P d n S' up (no Ga in the ascent),
+    // S' n d P, m g R S down; komal Ga/Dha/Ni; vadi komal Dha, samvadi komal Ga; pakad m P d, m P, n d P, m g R S. Bansuri, no tabla.
+    Sa: 98.0, // G2 mandra — grave karuna under male VO; distinct from Multani's G#2 and Shankara's D#3
+    fluteSa: 196.0,
+    degrees: ["S", "R", "g", "m", "P", "d", "n"],
+    tabla: "none",
+    voice: "bansuri",
+    bedLevel: 0.44,
+    duckLevel: 0.14,
+    tanpuraMs: 1300,
+  },
   default: {
     // eps 01–08 — keep close to old FluteTablaBed so they don't jump
     Sa: 293.66,
@@ -469,6 +482,7 @@ class RagaBed {
       else if (id === "18") key = "sarang";
       else if (id === "19") key = "bageshri";
       else if (id === "20") key = "shankara";
+      else if (id === "21") key = "jaunpuri";
       else key = "default";
     }
     if (!RAGA_PRESETS[key]) key = "default";
@@ -1133,6 +1147,48 @@ class RagaBed {
         ],
       ];
     }
+    if (key === "jaunpuri") {
+      // Jaunpuri — S R m P / m P d, m P / P d n S' n d P / d m P g R m P / m g R S. Ga never in the ascent; dwell on komal Dha.
+      return [
+        [
+          [0, "S", 0, 1.2],
+          [1.4, "R", 0, 1.0],
+          [2.6, "m", 0, 1.2],
+          [4.0, "P", 0, 2.2],
+        ],
+        [
+          [0, "m", 0, 1.0],
+          [1.2, "P", 0, 1.0],
+          [2.4, "d", 0, 2.0],
+          [4.6, "m", 0, 0.8],
+          [5.6, "P", 0, 2.0],
+        ],
+        [
+          [0, "P", 0, 1.0],
+          [1.2, "d", 0, 1.0],
+          [2.4, "n", 0, 1.0],
+          [3.6, "S", 1, 1.6],
+          [5.4, "n", 0, 0.8],
+          [6.4, "d", 0, 1.2],
+          [7.8, "P", 0, 2.0],
+        ],
+        [
+          [0, "d", 0, 1.2],
+          [1.4, "m", 0, 0.8],
+          [2.4, "P", 0, 1.0],
+          [3.6, "g", 0, 1.4],
+          [5.2, "R", 0, 0.8],
+          [6.2, "m", 0, 0.8],
+          [7.2, "P", 0, 2.0],
+        ],
+        [
+          [0, "m", 0, 1.2],
+          [1.4, "g", 0, 1.4],
+          [3.0, "R", 0, 1.0],
+          [4.2, "S", 0, 2.6],
+        ],
+      ];
+    }
     if (key === "shankara") {
       // Shankara — S G P / G P N D S' N / S' N P / G P D P G / P R G R S. Ma never sounded; Re only in descent.
       return [
@@ -1320,6 +1376,7 @@ class RagaBed {
     if (key === "sarang") return 3.6 + Math.random() * 2.4;
     if (key === "bageshri") return 4.2 + Math.random() * 2.6;
     if (key === "shankara") return 3.8 + Math.random() * 2.4;
+    if (key === "jaunpuri") return 4.0 + Math.random() * 2.6;
     return 1.2 + Math.random() * 2.0;
   }
 
@@ -1428,7 +1485,7 @@ class RagaBed {
       this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
     }
 
-    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "multani" ? 4000 : key === "sarang" ? 3600 : key === "bageshri" ? 4000 : key === "shankara" ? 3600 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
+    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "multani" ? 4000 : key === "sarang" ? 3600 : key === "bageshri" ? 4000 : key === "shankara" ? 3600 : key === "jaunpuri" ? 3800 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
     this.timers.push(setTimeout(() => this._scheduleMelody(), melodyDelay));
 
     this.master.gain.cancelScheduledValues(t);

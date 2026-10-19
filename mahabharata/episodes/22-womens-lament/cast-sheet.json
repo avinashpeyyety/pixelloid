@@ -1,0 +1,65 @@
+{
+  "episode_id": "22",
+  "notes": "Stri Parva (vulgate §10-§27; Jalapradanika, Stri-vilapa and Shraddha sub-parvas) — the days after the war. Dhritarashtra comes from Hastinapura with Gandhari, Kunti and the Kuru women; Vyasa restrains Gandhari's curse and she forgives the Pandavas; Kunti raises Draupadi and Gandhari comforts them both; by Vyasa's boon Gandhari sees the whole field; she curses Krishna; Krishna accepts with a faint smile; Yudhishthira orders the last rites (night); at the Ganga Kunti reveals Karna and Yudhishthira offers him water. Family-friendly: grief with dignity — no bodies, no gore, no wounds, no blood, no corpses, no pyres up close; the field is shown by implication (empty chariots, fallen banners, lamps, the river). Karna, Duryodhana, Bhima, Draupadi's sons, Vidura, Sanjaya and Yuyutsu are narrated only or absent; the Kuru women appear only as small, distant, unnamed figures in white. Krishna = Ep 04 lock (official series reference): pale silvery dusty-blue skin, long loose curls, slim gold band with one peacock feather, white U-tilak, jasmine-rose garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands — curse, accept. Yudhishthira, Arjuna = Ep 14/15 locks (via Ep 15); Draupadi = Ep 04 lock; Dhritarashtra = Ep 08 lock; Vyasa = Ep 21 lock; Gandhari and Kunti (aged forward from Ep 03) = new Ep 22 locks. One new scene master (field22); ganga22 = Ep 21 ganga21 byte copy.",
+  "locks": {
+    "reuse": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg",
+      "draupadi": "episodes/04-akshayapatra/stills/_locks/draupadi.jpg",
+      "dhritarashtra": "episodes/08-peace-embassy/stills/_locks/dhritarashtra.jpg",
+      "vyasa": "episodes/21-brahmashira/stills/_locks/vyasa.jpg",
+      "ganga22-master": "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg"
+    },
+    "new": {
+      "field22-master": "episodes/22-womens-lament/stills/_locks/field22-master.jpg",
+      "gandhari": "episodes/22-womens-lament/stills/_locks/gandhari.jpg",
+      "kunti": "episodes/22-womens-lament/stills/_locks/kunti.jpg"
+    },
+    "face_continuity_ref": {
+      "kunti": "episodes/03-bhima-bakasura/stills/_locks/kunti.jpg (young Kunti; attached only on the Kunti lock pass)"
+    }
+  },
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile (a faint smile on `accept`) — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; Arjuna's charioteer in the war — here on foot on the field (`curse`, `accept`), no reins — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava, now king, calm noble face, modest mustache, grief in the eyes — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor, no Gandiva, no flower garland; knee-deep in the Ganga on `offering`"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes, stunned on `accept` — Ep 09 face via the Ep 14/15 lock",
+      "hair": "Tall gold crown",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva held low and unstrung — never flower garland, never peacock feather"
+    },
+    "draupadi": {
+      "face": "Young adult queen of the Pandavas, warm brown skin, large dark eyes, soft brows, small red bindi; grief for her five sons told with dignity — painted comic, not photoreal, never sexualized (Ep 04 lock, byte copy)",
+      "hair": "Long black wavy hair worn loose (as in grief), simple gold ornaments — no crown, no peacock",
+      "costume": "Deep red sari with gold border, modest gold ornaments — no armor, no palace excess"
+    },
+    "dhritarashtra": {
+      "face": "Elderly blind king of the Kurus, long white beard, lined grieving face, eyes closed and unseeing (Ep 08 lock, byte copy) — comic mythology, not photoreal; clearly not Drona (no saffron, no bow)",
+      "hair": "Long flowing white hair under a gold crown with a red gem",
+      "costume": "Cream-white and gold royal robes, gold sash, bead necklaces; standing on the field with a tall gold-capped staff — no throne on the field"
+    },
+    "gandhari": {
+      "face": "Gandhari, queen of the Kurus, mother of the hundred Kauravas: tall and regal, about sixty, fair wheat-gold complexion, noble composed face; a band of folded pale-cream silk always tied over her eyes (her eyes are never visible); a soft golden glow of divine sight at the brow on `sight` only (new Ep 22 lock)",
+      "hair": "Silver-streaked dark hair in a low knot, the sari's end drawn over her head; no crown",
+      "costume": "Plain ivory-white sari with a deep maroon-and-gold border, maroon blouse, small gold earrings and thin gold bangles only (mourning) — no crown, no armor, never without the blindfold"
+    },
+    "kunti": {
+      "face": "Kunti, mother of the Pandavas: about sixty, warm brown skin, gentle strong face, large dark eyes — the Ep 03 Kunti aged forward (new Ep 22 lock; the Ep 03 lock is attached once, as a face-continuity ref, on the lock pass only); no blindfold",
+      "hair": "Dark hair streaked with grey in a low knot, the sari's end drawn over her head; no crown",
+      "costume": "Simple white sari with a narrow saffron border (echoing her Ep 03 saffron), saffron blouse, thin gold chain, plain gold bangles — no crown, no armor"
+    },
+    "vyasa": {
+      "face": "Krishna Dvaipayana Vyasa, the great rishi and grandfather of both houses: tall, ancient yet vigorous, dark complexion, calm deep-set luminous eyes, long flowing grey beard, three white ash lines on the brow (Ep 21 lock, byte copy) — clearly not Drona",
+      "hair": "Long matted tawny-brown locks (jata) piled high; no crown",
+      "costume": "Ochre bark-cloth garment, black deerskin over one shoulder, white sacred thread, rudraksha rosary — never saffron robes, never weapons, no flower garland"
+    }
+  }
+}

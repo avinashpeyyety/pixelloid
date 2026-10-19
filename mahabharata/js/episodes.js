@@ -255,4 +255,16 @@ export const EPISODES = [
       "Draupadi vows to fast until Ashwatthama's forehead jewel is hers. At Vyasa's hermitage a blade of grass blazes into the brahmashira — and two sages step between the fires.",
     play: "play.html?ep=21",
   },
+  {
+    id: "22",
+    slug: "womens-lament",
+    title: "The Women's Lament",
+    sanskrit: "स्त्रीविलापः",
+    chapter: "Stri Parva · the days after the war",
+    duration: "~112s",
+    status: "live",
+    blurb:
+      "The women of both houses come to the silent field. Gandhari forgives, sees through her blindfold, and lays a curse on Krishna — and at the Ganga, Kunti tells Yudhishthira who Karna was.",
+    play: "play.html?ep=22",
+  },
 ];

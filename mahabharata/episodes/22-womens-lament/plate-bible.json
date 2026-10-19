@@ -1,0 +1,1037 @@
+{
+  "episode_id": "22",
+  "strict_hero_lock": "gandhari",
+  "title": "The Women's Lament",
+  "style_lock": "Premium high-quality charming painted comic / Amar Chitra mythology; cream-saffron-gold cartouche; refined linework; Ep 10 field-master density; Krishna locked to the Ep 04 look (official reference), Yudhishthira and Arjuna to the Ep 14/15 locks, Draupadi to the Ep 04 lock, Dhritarashtra to the Ep 08 lock, Vyasa to the Ep 21 lock, Gandhari and Kunti to new Ep 22 locks",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "Heroic medium — named cast fills the frame; the Kuru women only as small distant figures in the background",
+  "frame": "Carved gold-and-lotus cartouche integrated into the painting (Ep 10 field-master / Ep 09 counsel) — not a thin rectangular sticker on a cream mat",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with engraved armor, refined linework, cream-saffron-gold hour. Not photoreal, not 16:9, not tiny distant heroes.",
+  "quality_bar_ref": "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+  "krishna_look_lock_ref": "episodes/09-gita/stills/_locks/krishna.jpg",
+  "krishna_visual_lock_ref": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+  "krishna_lock_note": "Avinash 2026-10-05: the Ep 04 Krishna is the official series reference and the operative visual lock for Ep 22 — byte-copied to episodes/22-womens-lament/stills/_locks/krishna.jpg and attached as the FIRST character ref (right after the scene master) on every Krishna image (curse, accept) in PROMPTS.md. krishna_look_lock_ref keeps the Ep 09 path only because tools/logic_review.py still checks for it.",
+  "style_master_ref": "mood: cream-saffron-gold comic (do not attach Ep01 plate-wide-gold.jpg)",
+  "scene_lock_ref": "episodes/22-womens-lament/stills/_locks/field22-master.jpg",
+  "scene_lock_refs": {
+    "field22-master": "episodes/22-womens-lament/stills/_locks/field22-master.jpg",
+    "ganga22-master": "episodes/22-womens-lament/stills/_locks/ganga22-master.jpg"
+  },
+  "scene_master_prompt": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The edge of the silent battlefield of Kurukshetra on the morning after the war, by day: a vast, empty plain of trodden pale earth stretching to a low horizon under a pale clear sky; torn and faded war banners hanging from leaning poles; several empty war chariots standing still, one tipped on its side with a broken wheel; abandoned bows, round shields and a helmet half-sunk in the dust; a few small unlit clay lamps on the ground in the foreground; a line of distant trees and the faint gleam of a river on the horizon; a clear open foreground for figures to be placed later. Grief by implication only. Carved gold-and-lotus cartouche integrated into the painting, heroic depth. No people, no named figures. Daylight - no moon, no stars, no night. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no skulls or bones, no vultures or jackals, no funeral pyres. No text, no letters, no plaques, no watermark.",
+  "scene_master_prompts": {
+    "field22-master": "Premium painted comic Amar Chitra, in the style, palette and frame of the attached Ep 10 field-master. The edge of the silent battlefield of Kurukshetra on the morning after the war, by day: a vast, empty plain of trodden pale earth stretching to a low horizon under a pale clear sky; torn and faded war banners hanging from leaning poles; several empty war chariots standing still, one tipped on its side with a broken wheel; abandoned bows, round shields and a helmet half-sunk in the dust; a few small unlit clay lamps on the ground in the foreground; a line of distant trees and the faint gleam of a river on the horizon; a clear open foreground for figures to be placed later. Grief by implication only. Carved gold-and-lotus cartouche integrated into the painting, heroic depth. No people, no named figures. Daylight - no moon, no stars, no night. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no skulls or bones, no vultures or jackals, no funeral pyres. No text, no letters, no plaques, no watermark.",
+    "ganga22-master": "byte copy of episodes/21-brahmashira/stills/_locks/ganga21-master.jpg (the wide Ganga, pale sand, worn stone steps, Vyasa's thatched hermitage under great trees; day master) — not regenerated; the reveal and offering plates repaint it at sunrise with the huts small in the far background"
+  },
+  "imagine_refs": [
+    "episodes/10-bhishma-fall/stills/_locks/field-master.jpg",
+    "episodes/22-womens-lament/stills/_locks/field22-master.jpg",
+    "episodes/22-womens-lament/stills/_locks/ganga22-master.jpg",
+    "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/krishna.jpg",
+    "episodes/09-gita/stills/_locks/arjuna.jpg",
+    "episodes/03-bhima-bakasura/stills/_locks/kunti.jpg",
+    "episodes/22-womens-lament/stills/_locks/krishna.jpg",
+    "episodes/22-womens-lament/stills/_locks/yudhishthira.jpg",
+    "episodes/22-womens-lament/stills/_locks/arjuna.jpg",
+    "episodes/22-womens-lament/stills/_locks/draupadi.jpg",
+    "episodes/22-womens-lament/stills/_locks/dhritarashtra.jpg",
+    "episodes/22-womens-lament/stills/_locks/gandhari.jpg",
+    "episodes/22-womens-lament/stills/_locks/kunti.jpg",
+    "episodes/22-womens-lament/stills/_locks/vyasa.jpg"
+  ],
+  "imagine_refs_note": "Gate-check list (lineage). The operative per-image attach order is in stills/_inbox/consumer-imagine/PROMPTS.md: scene master first, then the Ep 04 Krishna lock (curse, accept), then the other character locks, then the Ep 10 field-master. The Ep 09 Krishna/Arjuna paths are listed for the gate only and are NOT attached. The Ep 03 Kunti lock is attached only on the new Kunti lock pass (#3), as a face-continuity ref.",
+  "character_lock_refs": {
+    "krishna": "episodes/22-womens-lament/stills/_locks/krishna.jpg",
+    "yudhishthira": "episodes/22-womens-lament/stills/_locks/yudhishthira.jpg",
+    "arjuna": "episodes/22-womens-lament/stills/_locks/arjuna.jpg",
+    "draupadi": "episodes/22-womens-lament/stills/_locks/draupadi.jpg",
+    "dhritarashtra": "episodes/22-womens-lament/stills/_locks/dhritarashtra.jpg",
+    "gandhari": "episodes/22-womens-lament/stills/_locks/gandhari.jpg",
+    "kunti": "episodes/22-womens-lament/stills/_locks/kunti.jpg",
+    "vyasa": "episodes/22-womens-lament/stills/_locks/vyasa.jpg"
+  },
+  "local_lock_plan": {
+    "copy_forward": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg (byte copy)",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg (byte copy)",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg (byte copy)",
+      "draupadi": "episodes/04-akshayapatra/stills/_locks/draupadi.jpg (byte copy)",
+      "dhritarashtra": "episodes/08-peace-embassy/stills/_locks/dhritarashtra.jpg (byte copy)",
+      "vyasa": "episodes/21-brahmashira/stills/_locks/vyasa.jpg (byte copy)",
+      "ganga22-master": "episodes/21-brahmashira/stills/_locks/ganga21-master.jpg (byte copy)"
+    },
+    "new": {
+      "field22-master": "scene master — the edge of the silent field of Kurukshetra the morning after the war (arrive, forgive, mothers, sight, curse, accept, rites + both new locks + poster); generate first",
+      "gandhari": "new character lock (first drawn appearance; blindfolded queen); generate second, attach on arrive, forgive, mothers, sight, curse, accept, poster",
+      "kunti": "new character lock — Kunti aged forward from the young Ep 03 lock (attached as a face-continuity ref); generate third, attach on arrive, mothers, reveal, offering, poster"
+    },
+    "new_prompts": {
+      "gandhari": "Premium painted comic Amar Chitra character lock portrait, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium three-quarter portrait of exactly one adult woman standing in daylight at the edge of a silent battlefield with torn banners and empty chariots far behind her: Gandhari, queen of the Kurus and mother of the hundred Kaurava sons: a tall, regal mature woman of about sixty with a fair wheat-gold complexion and a noble, composed face, a band of folded pale-cream silk tied firmly over her eyes as a blindfold (her eyes are never visible), silver-streaked dark hair in a low knot, a plain ivory-white sari with a deep maroon-and-gold border drawn over her head, a maroon blouse, only small gold earrings and thin gold bangles in mourning; no crown, no armor, never without the blindfold. Grave, grieving, regal expression; her hands joined before her at the waist. Soft morning sunlight on her face, pale clear sky - daylight, NOT night. Dignified, grieving, never sexualized. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Draupadi. No Dhritarashtra. No Kunti. No Vyasa. No other figures.",
+      "kunti": "Premium painted comic Amar Chitra character lock portrait, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium three-quarter portrait of exactly one adult woman standing in daylight at the edge of a silent battlefield with torn banners and empty chariots far behind her: Kunti, mother of the Pandavas: a mature woman of about sixty with warm brown skin, the same gentle, strong face and large dark eyes as the young Kunti in the attached Ep 03 Kunti lock but older, a few soft lines at the eyes, dark hair streaked with grey in a low knot, a simple white sari with a narrow saffron border drawn over her head, a saffron blouse, a thin gold chain and plain gold bangles; no blindfold, no crown, no armor. Sorrowful, gentle, steadfast expression; her right hand on her heart, her left hand at her side. Soft morning sunlight on her face, pale clear sky - daylight, NOT night. Dignified, grieving, never sexualized. Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Draupadi. No Dhritarashtra. No Gandhari. No Vyasa. No blindfold. No other figures."
+    },
+    "not_needed": "Karna, Duryodhana, Bhima, Nakula, Sahadeva, Draupadi's sons, Abhimanyu, Vidura, Sanjaya and Yuyutsu are narrated only or absent; the Kuru women are small, distant, unnamed figures with no close faces.",
+    "note": "stills_review.py (GATE C) requires episodes/22-womens-lament/stills/_locks/<id>.jpg for every face on a plate; the copy-forward locks are byte copies, not new art. Light: arrive morning; forgive, mothers, sight day; curse and accept late afternoon; rites NIGHT (stars, clay lamps, a distant glow beyond a rise — the fires are never drawn); reveal and offering sunrise on the Ganga; poster golden sunset."
+  },
+  "photoreal_allowed": false,
+  "apparatus": {},
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile (a faint smile on `accept`) — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands; Arjuna's charioteer in the war — here on foot on the field (`curse`, `accept`), no reins — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava, now king, calm noble face, modest mustache, grief in the eyes — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor, no Gandiva, no flower garland; knee-deep in the Ganga on `offering`"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes, stunned on `accept` — Ep 09 face via the Ep 14/15 lock",
+      "hair": "Tall gold crown",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva held low and unstrung — never flower garland, never peacock feather"
+    },
+    "draupadi": {
+      "face": "Young adult queen of the Pandavas, warm brown skin, large dark eyes, soft brows, small red bindi; grief for her five sons told with dignity — painted comic, not photoreal, never sexualized (Ep 04 lock, byte copy)",
+      "hair": "Long black wavy hair worn loose (as in grief), simple gold ornaments — no crown, no peacock",
+      "costume": "Deep red sari with gold border, modest gold ornaments — no armor, no palace excess"
+    },
+    "dhritarashtra": {
+      "face": "Elderly blind king of the Kurus, long white beard, lined grieving face, eyes closed and unseeing (Ep 08 lock, byte copy) — comic mythology, not photoreal; clearly not Drona (no saffron, no bow)",
+      "hair": "Long flowing white hair under a gold crown with a red gem",
+      "costume": "Cream-white and gold royal robes, gold sash, bead necklaces; standing on the field with a tall gold-capped staff — no throne on the field"
+    },
+    "gandhari": {
+      "face": "Gandhari, queen of the Kurus, mother of the hundred Kauravas: tall and regal, about sixty, fair wheat-gold complexion, noble composed face; a band of folded pale-cream silk always tied over her eyes (her eyes are never visible); a soft golden glow of divine sight at the brow on `sight` only (new Ep 22 lock)",
+      "hair": "Silver-streaked dark hair in a low knot, the sari's end drawn over her head; no crown",
+      "costume": "Plain ivory-white sari with a deep maroon-and-gold border, maroon blouse, small gold earrings and thin gold bangles only (mourning) — no crown, no armor, never without the blindfold"
+    },
+    "kunti": {
+      "face": "Kunti, mother of the Pandavas: about sixty, warm brown skin, gentle strong face, large dark eyes — the Ep 03 Kunti aged forward (new Ep 22 lock; the Ep 03 lock is attached once, as a face-continuity ref, on the lock pass only); no blindfold",
+      "hair": "Dark hair streaked with grey in a low knot, the sari's end drawn over her head; no crown",
+      "costume": "Simple white sari with a narrow saffron border (echoing her Ep 03 saffron), saffron blouse, thin gold chain, plain gold bangles — no crown, no armor"
+    },
+    "vyasa": {
+      "face": "Krishna Dvaipayana Vyasa, the great rishi and grandfather of both houses: tall, ancient yet vigorous, dark complexion, calm deep-set luminous eyes, long flowing grey beard, three white ash lines on the brow (Ep 21 lock, byte copy) — clearly not Drona",
+      "hair": "Long matted tawny-brown locks (jata) piled high; no crown",
+      "costume": "Ochre bark-cloth garment, black deerskin over one shoulder, white sacred thread, rudraksha rosary — never saffron robes, never weapons, no flower garland"
+    }
+  },
+  "plates": [
+    {
+      "id": "arrive",
+      "file": "plate-arrive.jpg",
+      "beat_text": "From Hastinapura the blind king Dhritarashtra comes to the field, with Gandhari, Kunti and all the women of the Kuru house.",
+      "cast_present": [
+        "dhritarashtra",
+        "gandhari",
+        "kunti"
+      ],
+      "locus_master": "episodes/22-womens-lament/stills/_locks/field22-master.jpg",
+      "light": "morning",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Grief told with dignity - the war is shown only by implication (empty chariots, fallen banners, lamps, the river)",
+        "The edge of the silent field of Kurukshetra in the early morning (field22 master): fallen banners, empty chariots, no bodies",
+        "Dhritarashtra (Ep 08 lock): blind old king, long white hair and beard, eyes closed, gold crown with a red gem, cream-white and gold robes - standing, no throne",
+        "Gandhari (new Ep 22 lock): tall regal queen of about sixty, fair wheat-gold complexion, folded pale-cream silk blindfold always over her eyes, silver-streaked hair, ivory sari with a maroon-and-gold border over her head - no crown",
+        "Kunti (new Ep 22 lock, aged forward from the Ep 03 lock): mother of the Pandavas, about sixty, warm brown skin, large dark eyes, grey-streaked hair, white sari with a narrow saffron border over her head - no blindfold, no crown",
+        "Dhritarashtra in the centre, blind, his right hand on a tall gold-capped staff; Gandhari beside him, blindfolded, her hand in Kunti's",
+        "The Kuru women far behind in white, small and distant, faces turned away - unnamed, no close faces"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "funeral pyre with a body on it",
+        "skulls or bones",
+        "vultures, jackals or carrion birds",
+        "weapon striking a person",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Draupadi",
+        "Vyasa",
+        "Duryodhana",
+        "Karna",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Ashwatthama",
+        "Vidura",
+        "Sanjaya",
+        "Yuyutsu",
+        "Abhimanyu",
+        "Draupadi's sons",
+        "Narada",
+        "Shiva",
+        "open seeing eyes on Dhritarashtra",
+        "throne on the field",
+        "Gandhari without her blindfold",
+        "Gandhari's eyes visible",
+        "crown on Gandhari",
+        "young Kunti",
+        "blindfold on Kunti",
+        "crown on Kunti",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "tall gold-capped staff",
+        "fallen banners",
+        "empty chariots",
+        "a broken wheel",
+        "small clay lamps"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult figures, one old man and two women, standing at the edge of a vast silent battlefield in the early morning. The field after the war is shown only by implication: torn banners on leaning poles, empty chariots, a broken wheel, abandoned shields and bows in the dust, small clay lamps - no bodies, no blood, no wounds, no carrion birds. In the centre Dhritarashtra, the blind old king of the Kurus (match the attached Dhritarashtra lock: elderly, long flowing white hair and a long white beard, a lined grieving face, eyes closed and unseeing, a gold crown with a red gem, cream-white and gold royal robes, a gold sash, bead necklaces; standing, no throne) stands with his right hand on a tall gold-capped staff and his left hand raised a little before him, his face lifted toward the field he cannot see. On the left Gandhari (match the attached Gandhari lock - queen of the Kurus and mother of the hundred Kaurava sons: a tall, regal mature woman of about sixty with a fair wheat-gold complexion and a noble, composed face, a band of folded pale-cream silk tied firmly over her eyes as a blindfold (her eyes are never visible), silver-streaked dark hair in a low knot, a plain ivory-white sari with a deep maroon-and-gold border drawn over her head, a maroon blouse, only small gold earrings and thin gold bangles in mourning; no crown, no armor, never without the blindfold) stands beside him, her left hand on her heart, her right hand held in Kunti's left hand. On the right Kunti (match the attached Kunti lock - mother of the Pandavas: a mature woman of about sixty with warm brown skin, a gentle strong face, large dark eyes, dark hair streaked with grey in a low knot, a simple white sari with a narrow saffron border drawn over her head, a saffron blouse, a thin gold chain and plain gold bangles; no blindfold, no crown) leads her gently forward, her right hand at her side, her face full of grief. Behind them, far behind them, small and distant, the women of the Kuru house in plain white saris, their faces turned away or veiled, walking among the fallen banners. Exactly six hands on the three main figures. Early morning after the war: a pale clear sky, soft low sunlight, a thin mist over the silent field (this beat is in DAYLIGHT, NOT night: no moon, no stars, no burning torches; the cream-saffron-gold palette lives in the sunlight and the carved cartouche). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Draupadi. No Vyasa. No Duryodhana, no Karna, no Bhima, no Ashwatthama, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Stri Parva (Debroy vol. 8), ch. 9-10 (Jalapradanika sub-parva) - Dhritarashtra has his chariot yoked and sets out from Hastinapura for the field, with Gandhari, Kunti and the women of the Bharata house"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Stri Parva (vulgate; adhyaya numbering = Ganguli), Jalapradanika Parva adhyaya 10 - Dhritarashtra ka ranbhumi ki or prasthan, Gandhari, Kunti aur Kuru-striyan saath"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Stri Parva (Jalapradanika Parva) §10 - the king orders his car yoked, bids Gandhari, Kunti and all the ladies be brought, and sets out for the field of battle"
+        }
+      ]
+    },
+    {
+      "id": "forgive",
+      "file": "plate-forgive.jpg",
+      "beat_text": "Gandhari's grief turns to anger. Vyasa reminds her: 'Where dharma is, there is victory.' And she forgives the Pandavas.",
+      "cast_present": [
+        "yudhishthira",
+        "gandhari",
+        "vyasa"
+      ],
+      "locus_master": "episodes/22-womens-lament/stills/_locks/field22-master.jpg",
+      "light": "day",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Grief told with dignity - the war is shown only by implication (empty chariots, fallen banners, lamps, the river)",
+        "The edge of the silent field by day (field22 master)",
+        "Gandhari (new Ep 22 lock): tall regal queen of about sixty, fair wheat-gold complexion, folded pale-cream silk blindfold always over her eyes, silver-streaked hair, ivory sari with a maroon-and-gold border over her head - no crown",
+        "Vyasa (Ep 21 lock): tall, dark-complexioned great rishi, luminous deep-set eyes, matted tawny-brown locks piled high, long grey beard, ash lines, ochre bark cloth and black deerskin, rudraksha rosary - clearly not Drona (no saffron, no weapons)",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash - no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Gandhari stands tall and stern, blindfolded, her anger softening",
+        "Vyasa beside her raises his right hand in calm counsel",
+        "Yudhishthira kneels before her with palms joined, head lowered, asking her forgiveness"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "funeral pyre with a body on it",
+        "skulls or bones",
+        "vultures, jackals or carrion birds",
+        "weapon striking a person",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Arjuna",
+        "Draupadi",
+        "Dhritarashtra",
+        "Kunti",
+        "Duryodhana",
+        "Karna",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Ashwatthama",
+        "Vidura",
+        "Sanjaya",
+        "Yuyutsu",
+        "Abhimanyu",
+        "Draupadi's sons",
+        "Narada",
+        "Shiva",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "Gandhari without her blindfold",
+        "Gandhari's eyes visible",
+        "crown on Gandhari",
+        "saffron robes on Vyasa",
+        "weapons on Vyasa",
+        "crown on Vyasa",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "rudraksha rosary",
+        "fallen banners",
+        "empty chariots"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult figures, one woman and two men, at the edge of the silent battlefield by day. The field after the war is shown only by implication: torn banners on leaning poles, empty chariots, a broken wheel, abandoned shields and bows in the dust, small clay lamps - no bodies, no blood, no wounds, no carrion birds. In the centre Gandhari (match the attached Gandhari lock - queen of the Kurus and mother of the hundred Kaurava sons: a tall, regal mature woman of about sixty with a fair wheat-gold complexion and a noble, composed face, a band of folded pale-cream silk tied firmly over her eyes as a blindfold (her eyes are never visible), silver-streaked dark hair in a low knot, a plain ivory-white sari with a deep maroon-and-gold border drawn over her head, a maroon blouse, only small gold earrings and thin gold bangles in mourning; no crown, no armor, never without the blindfold) stands tall and stern, her chin lifted, her right hand pressed to her heart and her left hand lowered, her anger softening. On the right Vyasa (match the attached Vyasa lock - the great rishi, author of the epic and grandfather of the Pandavas and the Kauravas: a tall, ancient yet vigorous holy man with a dark complexion, calm deep-set luminous eyes, long matted tawny-brown locks piled high on his head, a long flowing grey beard, three white ash lines on the brow, white sacred thread, an ochre bark-cloth garment with a black deerskin over one shoulder, a rudraksha rosary; no weapons, no crown, never saffron robes, never Drona) stands beside her, his right hand raised in calm counsel, his left hand holding a rudraksha rosary. On the left, before her, Yudhishthira, eldest Pandava, now king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets; no gold chest armor, no Gandiva, no flower garland, no peacock feather) kneels on the earth with his palms joined together and his head lowered, asking her forgiveness. Exactly six hands in the whole picture. Clear daylight over the silent field: a pale blue sky with soft haze, even sunlight (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. No Draupadi. No Dhritarashtra. No Kunti. No Duryodhana, no Karna, no Bhima, no Ashwatthama, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Stri Parva (Debroy vol. 8), ch. 13-15 - Gandhari wishes to curse Yudhishthira; Vyasa comes and reminds her that she always told Duryodhana 'where there is dharma, there is victory'; Yudhishthira approaches with joined hands; she casts off her anger and comforts the Pandavas as a mother"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Stri Parva (vulgate; adhyaya numbering = Ganguli), Jalapradanika Parva adhyaya 14-15 - Vyasaji Gandhari ko shaap se rokte hain ('yato dharmastato jayah'); Yudhishthira hath jodkar aate hain; Gandhari krodh tyagkar Pandavon ko sanatvana deti hain"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Stri Parva §14-§15 - Vyasa bids Gandhari remember her own words, 'Thither is victory where righteousness is'; Yudhishthira with joined hands begs her curse; she casts off her wrath and comforts the Pandavas as a mother should"
+        }
+      ]
+    },
+    {
+      "id": "mothers",
+      "file": "plate-mothers.jpg",
+      "beat_text": "Kunti weeps over her sons, then lifts up Draupadi, who has lost all her children. Gandhari holds them both: 'I grieve as you do.'",
+      "cast_present": [
+        "draupadi",
+        "gandhari",
+        "kunti"
+      ],
+      "locus_master": "episodes/22-womens-lament/stills/_locks/field22-master.jpg",
+      "light": "day",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Grief told with dignity - the war is shown only by implication (empty chariots, fallen banners, lamps, the river)",
+        "The edge of the silent field by day (field22 master)",
+        "Kunti (new Ep 22 lock, aged forward from the Ep 03 lock): mother of the Pandavas, about sixty, warm brown skin, large dark eyes, grey-streaked hair, white sari with a narrow saffron border over her head - no blindfold, no crown",
+        "Draupadi (Ep 04 lock): young adult queen, warm brown skin, large dark eyes, small red bindi, long black wavy hair loose in grief, deep red sari with gold border, modest gold ornaments - dignified, never sexualized",
+        "Gandhari (new Ep 22 lock): tall regal queen of about sixty, fair wheat-gold complexion, folded pale-cream silk blindfold always over her eyes, silver-streaked hair, ivory sari with a maroon-and-gold border over her head - no crown",
+        "Kunti raises the weeping Draupadi from the ground by both hands",
+        "Gandhari, blindfolded, embraces the two women, one hand on each shoulder - the women of both houses grieving together",
+        "Draupadi's sons are narrated only - never drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "funeral pyre with a body on it",
+        "skulls or bones",
+        "vultures, jackals or carrion birds",
+        "weapon striking a person",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Dhritarashtra",
+        "Vyasa",
+        "Duryodhana",
+        "Karna",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Ashwatthama",
+        "Vidura",
+        "Sanjaya",
+        "Yuyutsu",
+        "Abhimanyu",
+        "Draupadi's sons",
+        "Narada",
+        "Shiva",
+        "crown or armor on Draupadi",
+        "sexualized pose or costume on Draupadi",
+        "Gandhari without her blindfold",
+        "Gandhari's eyes visible",
+        "crown on Gandhari",
+        "young Kunti",
+        "blindfold on Kunti",
+        "crown on Kunti",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "fallen banners",
+        "small clay lamps",
+        "trodden earth"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult women grieving together at the edge of the silent battlefield by day. The field after the war is shown only by implication: torn banners on leaning poles, empty chariots, a broken wheel, abandoned shields and bows in the dust, small clay lamps - no bodies, no blood, no wounds, no carrion birds. On the left Kunti (match the attached Kunti lock - mother of the Pandavas: a mature woman of about sixty with warm brown skin, a gentle strong face, large dark eyes, dark hair streaked with grey in a low knot, a simple white sari with a narrow saffron border drawn over her head, a saffron blouse, a thin gold chain and plain gold bangles; no blindfold, no crown) bends to raise the weeping Draupadi, queen of the Pandavas (match the attached Draupadi lock: young adult woman, warm brown skin, large dark eyes, soft brows, a small red bindi, long black wavy hair worn loose in grief, a deep red sari with a gold border, modest gold ornaments; dignified, never sexualized, no crown, no armor, no peacock feather) from the ground, holding both of Draupadi's hands in both of hers. On the right Gandhari (match the attached Gandhari lock - queen of the Kurus and mother of the hundred Kaurava sons: a tall, regal mature woman of about sixty with a fair wheat-gold complexion and a noble, composed face, a band of folded pale-cream silk tied firmly over her eyes as a blindfold (her eyes are never visible), silver-streaked dark hair in a low knot, a plain ivory-white sari with a deep maroon-and-gold border drawn over her head, a maroon blouse, only small gold earrings and thin gold bangles in mourning; no crown, no armor, never without the blindfold) embraces the two of them, her right hand on Kunti's shoulder and her left hand on Draupadi's shoulder, her blindfolded face bowed toward them with tears on her cheeks. Exactly six hands in the whole picture. Clear daylight over the silent field: a pale blue sky with soft haze, even sunlight (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Dhritarashtra. No Vyasa. No Duryodhana, no Karna, no Bhima, no Ashwatthama, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Stri Parva (Debroy vol. 8), ch. 15 - the Pandavas go to Kunti, who weeps with them; she raises the grieving Draupadi, who has lost all her sons; with Draupadi she goes to Gandhari, who says 'do not grieve, daughter, I am as stricken as you'"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Stri Parva (vulgate; adhyaya numbering = Ganguli), Jalapradanika Parva adhyaya 15 - Kunti ka putron se milna, Draupadi ko uthana; Gandhari ka Kunti aur Draupadi ko dheeraj bandhana"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Stri Parva §15 - Pritha weeps with her sons and with Draupadi, who has lost all her children, and raises her; Gandhari says, 'Do not, O daughter, grieve so. Behold, I too am as much stricken with grief as thou'"
+        }
+      ]
+    },
+    {
+      "id": "sight",
+      "file": "plate-sight.jpg",
+      "beat_text": "By Vyasa's boon, Gandhari sees the whole field through her blindfold, as if it lay close beside her. Across it, the women weep.",
+      "cast_present": [
+        "gandhari"
+      ],
+      "locus_master": "episodes/22-womens-lament/stills/_locks/field22-master.jpg",
+      "light": "day",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Grief told with dignity - the war is shown only by implication (empty chariots, fallen banners, lamps, the river)",
+        "The vast silent field by day seen from its edge (field22 master): torn banners, empty chariots, small clay lamps - no bodies",
+        "Gandhari (new Ep 22 lock): tall regal queen of about sixty, fair wheat-gold complexion, folded pale-cream silk blindfold always over her eyes, silver-streaked hair, ivory sari with a maroon-and-gold border over her head - no crown",
+        "Gandhari stands alone in the foreground, blindfold in place, a soft golden glow of divine sight shining at her brow",
+        "Far across the field, small distant women in white kneel among the fallen banners - unnamed, faces turned away",
+        "Implication only: nothing on the field but banners, chariots, wheels, shields and lamps"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "funeral pyre with a body on it",
+        "skulls or bones",
+        "vultures, jackals or carrion birds",
+        "weapon striking a person",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Yudhishthira",
+        "Arjuna",
+        "Draupadi",
+        "Dhritarashtra",
+        "Kunti",
+        "Vyasa",
+        "Duryodhana",
+        "Karna",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Ashwatthama",
+        "Vidura",
+        "Sanjaya",
+        "Yuyutsu",
+        "Abhimanyu",
+        "Draupadi's sons",
+        "Narada",
+        "Shiva",
+        "Gandhari without her blindfold",
+        "Gandhari's eyes visible",
+        "crown on Gandhari",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "soft golden glow at the brow",
+        "fallen banners",
+        "empty chariots",
+        "broken wheel",
+        "small clay lamps"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly one adult woman in the foreground at the edge of a vast silent battlefield by day. The field after the war is shown only by implication: torn banners on leaning poles, empty chariots, a broken wheel, abandoned shields and bows in the dust, small clay lamps - no bodies, no blood, no wounds, no carrion birds. In the foreground Gandhari (match the attached Gandhari lock - queen of the Kurus and mother of the hundred Kaurava sons: a tall, regal mature woman of about sixty with a fair wheat-gold complexion and a noble, composed face, a band of folded pale-cream silk tied firmly over her eyes as a blindfold (her eyes are never visible), silver-streaked dark hair in a low knot, a plain ivory-white sari with a deep maroon-and-gold border drawn over her head, a maroon blouse, only small gold earrings and thin gold bangles in mourning; no crown, no armor, never without the blindfold) stands alone, her blindfold firmly in place, her face lifted toward the field; a soft golden glow of divine sight shines at her brow and in the folds of the cloth over her eyes; her right hand is raised a little before her as if touching what she sees, her left hand is pressed to her heart, a single tear on her cheek. Before her the wide field stretches away, and far across it small, distant women in plain white saris kneel among the fallen banners, their faces turned away. Every person has exactly two hands. Clear daylight over the silent field: a pale blue sky with soft haze, even sunlight (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Draupadi. No Dhritarashtra. No Kunti. No Vyasa. No Duryodhana, no Karna, no Bhima, no Ashwatthama, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Stri Parva (Debroy vol. 8), ch. 16 (Stri-vilapa sub-parva) - by the boon of the great rishi Vyasa, Gandhari, though far from the field, sees the whole of it with divine sight as if it were near, and the Kuru women weeping across it"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Stri Parva (vulgate; adhyaya numbering = Ganguli), Stri-vilapa Parva adhyaya 16 - Vyasaji ke vardan se Gandhari ko divya drishti; door se hi samast ranbhumi ka darshan; Kuru-striyon ka vilap"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Stri Parva (Stri-vilapa Parva) §16 - in consequence of the boon of Vyasa, Gandhari beheld with her spiritual eye, from a distance but as if from a near point, the field of battle, and the weeping ladies"
+        }
+      ]
+    },
+    {
+      "id": "curse",
+      "file": "plate-curse.jpg",
+      "beat_text": "Then her grief turns on Krishna. 'You could have stopped this war. In thirty-six years your own clan will fall, and its women will weep like these.'",
+      "cast_present": [
+        "krishna",
+        "gandhari"
+      ],
+      "locus_master": "episodes/22-womens-lament/stills/_locks/field22-master.jpg",
+      "light": "afternoon",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Grief told with dignity - the war is shown only by implication (empty chariots, fallen banners, lamps, the river)",
+        "The silent field in late-afternoon golden light (field22 master)",
+        "Gandhari (new Ep 22 lock): tall regal queen of about sixty, fair wheat-gold complexion, folded pale-cream silk blindfold always over her eyes, silver-streaked hair, ivory sari with a maroon-and-gold border over her head - no crown",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; Arjuna's charioteer in the war, here on foot, no reins - no flute",
+        "Gandhari, blindfolded, points her right hand at Krishna, her left hand clenched at her heart, speaking the curse",
+        "Krishna stands on foot facing her, calm and grave, listening, his right hand on his heart"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "funeral pyre with a body on it",
+        "skulls or bones",
+        "vultures, jackals or carrion birds",
+        "weapon striking a person",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Yudhishthira",
+        "Arjuna",
+        "Draupadi",
+        "Dhritarashtra",
+        "Kunti",
+        "Vyasa",
+        "Duryodhana",
+        "Karna",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Ashwatthama",
+        "Vidura",
+        "Sanjaya",
+        "Yuyutsu",
+        "Abhimanyu",
+        "Draupadi's sons",
+        "Narada",
+        "Shiva",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "Gandhari without her blindfold",
+        "Gandhari's eyes visible",
+        "crown on Gandhari",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "fallen banners",
+        "empty chariots",
+        "long golden shadows"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult figures, one woman and one man, facing each other at the edge of the silent battlefield in late-afternoon light. The field after the war is shown only by implication: torn banners on leaning poles, empty chariots, a broken wheel, abandoned shields and bows in the dust, small clay lamps - no bodies, no blood, no wounds, no carrion birds. On the left Gandhari (match the attached Gandhari lock - queen of the Kurus and mother of the hundred Kaurava sons: a tall, regal mature woman of about sixty with a fair wheat-gold complexion and a noble, composed face, a band of folded pale-cream silk tied firmly over her eyes as a blindfold (her eyes are never visible), silver-streaked dark hair in a low knot, a plain ivory-white sari with a deep maroon-and-gold border drawn over her head, a maroon blouse, only small gold earrings and thin gold bangles in mourning; no crown, no armor, never without the blindfold) stands with her blindfolded face turned toward him, her right arm outstretched with one finger pointing at him as she speaks a curse, her left hand clenched at her heart, grief and anger in her face. On the right Krishna (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather - not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; Arjuna's charioteer in the war, here standing on foot on the field; no reins, no flute, no bow) stands calm and grave, listening, his right hand resting on his heart and his left hand at his side. Exactly four hands in the whole picture. Late-afternoon golden daylight over the field: long warm shadows, a calm amber sky (this beat is in DAYLIGHT, NOT night: no moon, no stars, no burning torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Yudhishthira. No Arjuna. No Draupadi. No Dhritarashtra. No Kunti. No Vyasa. No Duryodhana, no Karna, no Bhima, no Ashwatthama, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Stri Parva (Debroy vol. 8), ch. 25 - Gandhari blames Krishna, who could have prevented the slaughter, and curses him: in the thirty-sixth year he will cause the slaughter of his own kinsmen and the women of his race will weep as the Bharata women do"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Stri Parva (vulgate; adhyaya numbering = Ganguli), Stri-vilapa Parva adhyaya 25 - Gandhari ka Shri Krishna ko shaap: chhattisven varsh mein Yaduvansh ka nash"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Stri Parva §25 - 'Thou wert competent to prevent the slaughter... in the thirty-sixth year from this thou shalt be the slayer of thy own kinsmen; the ladies of thy race shall weep even as these ladies of the Bharata race'"
+        }
+      ]
+    },
+    {
+      "id": "accept",
+      "file": "plate-accept.jpg",
+      "beat_text": "Krishna accepts it with a faint smile. 'None but I could end my clan,' he says. The Pandavas stand stunned.",
+      "cast_present": [
+        "krishna",
+        "yudhishthira",
+        "arjuna",
+        "gandhari"
+      ],
+      "locus_master": "episodes/22-womens-lament/stills/_locks/field22-master.jpg",
+      "light": "afternoon",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Grief told with dignity - the war is shown only by implication (empty chariots, fallen banners, lamps, the river)",
+        "The silent field in late-afternoon golden light (field22 master)",
+        "Krishna matching the Ep 04 Krishna lock (official reference): pale silvery dusty-blue skin, youthful divine adult, long loose dark curls, slim gold band with one peacock feather, white U-tilak, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands; Arjuna's charioteer in the war, here on foot, no reins - no flute",
+        "Gandhari (new Ep 22 lock): tall regal queen of about sixty, fair wheat-gold complexion, folded pale-cream silk blindfold always over her eyes, silver-streaked hair, ivory sari with a maroon-and-gold border over her head - no crown",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash - no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Arjuna (Ep 14/15 lock, Ep 09 face): noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, quiver, Gandiva held low - no garland, no peacock feather; distinct from Yudhishthira",
+        "Krishna, a faint gentle smile, inclines his head to Gandhari with palms joined, accepting the curse",
+        "Gandhari has sunk down to sit on the earth, head bowed, one hand at her brow",
+        "Yudhishthira and Arjuna stand behind, stunned"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "funeral pyre with a body on it",
+        "skulls or bones",
+        "vultures, jackals or carrion birds",
+        "weapon striking a person",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Draupadi",
+        "Dhritarashtra",
+        "Kunti",
+        "Vyasa",
+        "Duryodhana",
+        "Karna",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Ashwatthama",
+        "Vidura",
+        "Sanjaya",
+        "Yuyutsu",
+        "Abhimanyu",
+        "Draupadi's sons",
+        "Narada",
+        "Shiva",
+        "second Krishna",
+        "Krishna with a flute or a bow",
+        "tall crown on Krishna",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "flower garland on Arjuna",
+        "peacock feather on Arjuna",
+        "Gandhari without her blindfold",
+        "Gandhari's eyes visible",
+        "crown on Gandhari",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "fallen banners",
+        "empty chariots",
+        "Gandiva held low",
+        "long golden shadows"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly four adult figures, one woman and three men, at the edge of the silent battlefield in late-afternoon light. The field after the war is shown only by implication: torn banners on leaning poles, empty chariots, a broken wheel, abandoned shields and bows in the dust, small clay lamps - no bodies, no blood, no wounds, no carrion birds. In the centre Krishna (match the attached Ep 04 Krishna lock exactly: pale silvery dusty-blue skin, youthful divine adult, serene dark eyes, long loose dark curls, a slim gold band with one peacock feather - not a tall crown, white U-tilak on the brow, jasmine-and-rose flower garland, saffron-yellow pitambar dhoti, crimson sash, gold jewelry, exactly two hands; Arjuna's charioteer in the war, here standing on foot on the field; no reins, no flute, no bow) inclines his head toward her with a faint, gentle smile, his palms joined together, accepting her words. On the left Gandhari (match the attached Gandhari lock - queen of the Kurus and mother of the hundred Kaurava sons: a tall, regal mature woman of about sixty with a fair wheat-gold complexion and a noble, composed face, a band of folded pale-cream silk tied firmly over her eyes as a blindfold (her eyes are never visible), silver-streaked dark hair in a low knot, a plain ivory-white sari with a deep maroon-and-gold border drawn over her head, a maroon blouse, only small gold earrings and thin gold bangles in mourning; no crown, no armor, never without the blindfold) has sunk down to sit on the earth, her blindfolded face bowed, her right hand at her brow and her left hand on the ground. Behind Krishna on the right stand Yudhishthira, eldest Pandava, now king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets; no gold chest armor, no Gandiva, no flower garland, no peacock feather), his right hand on his chest and his left hand at his side, and Arjuna (match the attached Arjuna lock: noble adult warrior, dark mustache, tall gold crown, cream-white dhoti and angavastram, gold belt and armlets, quiver on his back, the Gandiva held low and unstrung; no flower garland, no peacock feather), his left hand holding the Gandiva low and his right hand at his side, both of them stunned and silent. Exactly eight hands in the whole picture. Late-afternoon golden daylight over the field: long warm shadows, a calm amber sky (this beat is in DAYLIGHT, NOT night: no moon, no stars, no burning torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Draupadi. No Dhritarashtra. No Kunti. No Vyasa. No Duryodhana, no Karna, no Bhima, no Ashwatthama, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Stri Parva (Debroy vol. 8), ch. 25 - Vasudeva, smiling a little, replies that none but he could destroy the Vrishnis, that he knew this, and that she has helped his task; the Pandavas are stupefied"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Stri Parva (vulgate; adhyaya numbering = Ganguli), Stri-vilapa Parva adhyaya 25 - Shri Krishna muskurakar shaap sweekar karte hain: 'Vrishniyon ka nash mere siva koi nahin kar sakta'; Pandav stabdh"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Stri Parva §25 - Vasudeva, with a faint smile: 'There is none in the world, save myself, that is capable of exterminating the Vrishnis... thou hast aided me'; the Pandavas became stupefied"
+        }
+      ]
+    },
+    {
+      "id": "rites",
+      "file": "plate-rites.jpg",
+      "beat_text": "At Dhritarashtra's word, Yudhishthira orders last rites for all the fallen, friend and foe. All night, the fires burn and hymns rise.",
+      "cast_present": [
+        "yudhishthira",
+        "dhritarashtra"
+      ],
+      "locus_master": "episodes/22-womens-lament/stills/_locks/field22-master.jpg",
+      "light": "night",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Grief told with dignity - the war is shown only by implication (empty chariots, fallen banners, lamps, the river)",
+        "The edge of the field at NIGHT (field22 master repainted at night): starry indigo sky, a long row of small clay lamps on the ground",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash - no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Dhritarashtra (Ep 08 lock): blind old king, long white hair and beard, eyes closed, gold crown with a red gem, cream-white and gold robes - standing, no throne",
+        "Yudhishthira and Dhritarashtra stand side by side with palms joined in prayer, lit by the lamps",
+        "Far off beyond a low rise, a soft golden glow of the funeral fires lights pale smoke rising to the stars - the fires and anything on them are never drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "funeral pyre with a body on it",
+        "skulls or bones",
+        "vultures, jackals or carrion birds",
+        "weapon striking a person",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Arjuna",
+        "Draupadi",
+        "Gandhari",
+        "Kunti",
+        "Vyasa",
+        "Duryodhana",
+        "Karna",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Ashwatthama",
+        "Vidura",
+        "Sanjaya",
+        "Yuyutsu",
+        "Abhimanyu",
+        "Draupadi's sons",
+        "Narada",
+        "Shiva",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "open seeing eyes on Dhritarashtra",
+        "throne on the field",
+        "daylight sky or sun",
+        "funeral fire or pyre drawn up close",
+        "anything lying on a fire"
+      ],
+      "props": [
+        "long row of small clay lamps",
+        "distant golden glow beyond a low rise",
+        "pale smoke rising",
+        "starry night sky"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult men standing side by side at the edge of the silent battlefield at night. The field after the war is shown only by implication: torn banners on leaning poles, empty chariots, a broken wheel, abandoned shields and bows in the dust, small clay lamps - no bodies, no blood, no wounds, no carrion birds. On the left Yudhishthira, eldest Pandava, now king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets; no gold chest armor, no Gandiva, no flower garland, no peacock feather) stands with his palms joined in prayer and his head bowed. On the right Dhritarashtra, the blind old king of the Kurus (match the attached Dhritarashtra lock: elderly, long flowing white hair and a long white beard, a lined grieving face, eyes closed and unseeing, a gold crown with a red gem, cream-white and gold royal robes, a gold sash, bead necklaces; standing, no throne) stands with his palms joined in prayer, his blind face lifted, his lips moving in a hymn. Before them a long row of small clay lamps burns on the ground, and far off beyond a low rise a soft golden glow lights pale smoke rising into the starry sky. Exactly four hands in the whole picture. NIGHT: a deep indigo night sky scattered with stars, no sun and no daylight sky; the figures are lit warmly from below by the row of small clay lamps, and far off beyond a low rise a soft golden glow of distant fires lights pale smoke rising to the stars (correct night light - the fires themselves and anything on them are never shown). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. No Draupadi. No Gandhari. No Kunti. No Vyasa. No Duryodhana, no Karna, no Bhima, no Ashwatthama, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Stri Parva (Debroy vol. 8), ch. 26 (Shraddha sub-parva) - Dhritarashtra asks that the dead, friend and friendless alike, receive due rites; Yudhishthira commands Sudharma, Dhaumya, Sanjaya, Vidura and Yuyutsu to perform them; the fires burn through the night amid Sama and Rik chants and the women's laments"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Stri Parva (vulgate; adhyaya numbering = Ganguli), Shraddha Parva adhyaya 26 - Dhritarashtra ki agya se Yudhishthira dwara sabhi veeron ka vidhipoorvak daah-sanskar; raatbhar chitayen aur Sama-gaan"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Stri Parva (Sraddha Parva) §26 - Yudhishthira causes the funeral rites of the slain, numbering by thousands, to be duly performed, so that nobody may perish for want of persons to take care of them; the Samas and Riks resound that night"
+        }
+      ]
+    },
+    {
+      "id": "reveal",
+      "file": "plate-reveal.jpg",
+      "beat_text": "At the Ganga, the women offer water to their dead. Then Kunti weeps: 'Karna was your eldest brother. Offer water to him too.'",
+      "cast_present": [
+        "yudhishthira",
+        "kunti"
+      ],
+      "locus_master": "episodes/22-womens-lament/stills/_locks/ganga22-master.jpg",
+      "light": "dawn",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Grief told with dignity - the war is shown only by implication (empty chariots, fallen banners, lamps, the river)",
+        "The stone steps and sandy bank of the wide Ganga at sunrise (ganga22 master = Ep 21 ganga21 byte copy)",
+        "Kunti (new Ep 22 lock, aged forward from the Ep 03 lock): mother of the Pandavas, about sixty, warm brown skin, large dark eyes, grey-streaked hair, white sari with a narrow saffron border over her head - no blindfold, no crown",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash - no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Kunti, weeping, grasps Yudhishthira's arm and tells him the secret of Karna",
+        "Yudhishthira stands on the steps, stunned",
+        "Far along the water's edge, small distant women in white pour water from cupped hands - unnamed",
+        "Karna is narrated only - never drawn"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "funeral pyre with a body on it",
+        "skulls or bones",
+        "vultures, jackals or carrion birds",
+        "weapon striking a person",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Arjuna",
+        "Draupadi",
+        "Dhritarashtra",
+        "Gandhari",
+        "Vyasa",
+        "Duryodhana",
+        "Karna",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Ashwatthama",
+        "Vidura",
+        "Sanjaya",
+        "Yuyutsu",
+        "Abhimanyu",
+        "Draupadi's sons",
+        "Narada",
+        "Shiva",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "young Kunti",
+        "blindfold on Kunti",
+        "crown on Kunti",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "worn stone steps down to the water",
+        "wide river at sunrise",
+        "water poured from cupped hands"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly two adult figures, one woman and one man, on the worn stone steps down to the wide Ganga at sunrise. Use the attached scene master for the wide river, the pale sand and the worn stone steps down to the water; the thatched huts stay small in the far background. On the left Kunti (match the attached Kunti lock - mother of the Pandavas: a mature woman of about sixty with warm brown skin, a gentle strong face, large dark eyes, dark hair streaked with grey in a low knot, a simple white sari with a narrow saffron border drawn over her head, a saffron blouse, a thin gold chain and plain gold bangles; no blindfold, no crown) weeps as she speaks, her right hand grasping Yudhishthira's forearm and her left hand pressed to her heart. On the right Yudhishthira, eldest Pandava, now king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets; no gold chest armor, no Gandiva, no flower garland, no peacock feather) stands a step below her at the water's edge, stunned, his right hand raised a little toward her and his left hand at his side. Far along the bank, small distant women in plain white saris stand ankle-deep in the river, pouring water from cupped hands, their faces turned away. Exactly four hands on the two main figures. Sunrise on the Ganga the next morning: a pale gold sky, the low sun glittering on the wide water, soft mist on the far bank (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. No Draupadi. No Dhritarashtra. No Gandhari. No Vyasa. No Duryodhana, no Karna, no Bhima, no Ashwatthama, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Stri Parva (Debroy vol. 8), ch. 27 - at the Ganga the Kuru women offer water to their dead; Kunti, weeping, tells her sons that Karna, born of her by Surya, was their eldest brother, and bids them offer him water"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Stri Parva (vulgate; adhyaya numbering = Ganguli), Shraddha Parva adhyaya 27 - Ganga-tat par jalanjali; Kunti dwara Karna ke janm ka rahasya: 'vah tumhara jyeshtha bhrata tha'"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Stri Parva §27 - arrived at the Ganga the Kuru ladies offer oblations of water; Kunti weepingly says, 'that hero... was your eldest brother. Offer oblations of water unto that eldest brother of yours'"
+        }
+      ]
+    },
+    {
+      "id": "offering",
+      "file": "plate-offering.jpg",
+      "beat_text": "Yudhishthira grieves for the brother he never knew. Standing in the Ganga, he offers water to Karna, eldest son of Kunti.",
+      "cast_present": [
+        "yudhishthira",
+        "draupadi",
+        "kunti"
+      ],
+      "locus_master": "episodes/22-womens-lament/stills/_locks/ganga22-master.jpg",
+      "light": "dawn",
+      "has_fish_apparatus": false,
+      "is_aim_beat": false,
+      "must_show": [
+        "Premium painted comic quality",
+        "Carved gold-and-lotus cartouche integrated into the painting",
+        "Heroic medium - named figures fill the frame",
+        "Native 3:2 1536x1024",
+        "Every person has normal anatomy: exactly two arms and two hands",
+        "Grief told with dignity - the war is shown only by implication (empty chariots, fallen banners, lamps, the river)",
+        "The wide Ganga at sunrise (ganga22 master)",
+        "Yudhishthira (Ep 14/15 lock): calm noble face, modest mustache, simple gold diadem, cream-white royal dhoti and angavastram, gold sash - no gold chest armor, no Gandiva; distinct from Arjuna",
+        "Kunti (new Ep 22 lock, aged forward from the Ep 03 lock): mother of the Pandavas, about sixty, warm brown skin, large dark eyes, grey-streaked hair, white sari with a narrow saffron border over her head - no blindfold, no crown",
+        "Draupadi (Ep 04 lock): young adult queen, warm brown skin, large dark eyes, small red bindi, long black wavy hair loose in grief, deep red sari with gold border, modest gold ornaments - dignified, never sexualized",
+        "Yudhishthira stands knee-deep in the river, eyes closed, letting water fall from his cupped hands as an offering",
+        "Kunti and Draupadi watch from the stone steps behind him, palms joined"
+      ],
+      "must_not_show": [
+        "Photoreal",
+        "Graphic gore",
+        "blood",
+        "dead bodies or corpses",
+        "wounds",
+        "funeral pyre with a body on it",
+        "skulls or bones",
+        "vultures, jackals or carrion birds",
+        "weapon striking a person",
+        "16:9 banner",
+        "thin lotus sticker on cream mat",
+        "tiny distant heroes as the A-shot",
+        "Drona",
+        "saffron-robed guru",
+        "flute",
+        "child Krishna",
+        "English text or plaques",
+        "speech bubbles or letters",
+        "watermark",
+        "modern props",
+        "third arm or extra hand",
+        "Krishna",
+        "Arjuna",
+        "Dhritarashtra",
+        "Gandhari",
+        "Vyasa",
+        "Duryodhana",
+        "Karna",
+        "Bhima",
+        "Nakula",
+        "Sahadeva",
+        "Ashwatthama",
+        "Vidura",
+        "Sanjaya",
+        "Yuyutsu",
+        "Abhimanyu",
+        "Draupadi's sons",
+        "Narada",
+        "Shiva",
+        "gold chest armor on Yudhishthira",
+        "Gandiva on Yudhishthira",
+        "crown or armor on Draupadi",
+        "sexualized pose or costume on Draupadi",
+        "young Kunti",
+        "blindfold on Kunti",
+        "crown on Kunti",
+        "night sky, moon or stars",
+        "burning torches as the main light"
+      ],
+      "props": [
+        "water falling from cupped hands",
+        "worn stone steps",
+        "wide river at sunrise"
+      ],
+      "prompt": "Premium painted comic Amar Chitra, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult figures, one man and two women, at the wide Ganga at sunrise. Use the attached scene master for the wide river, the pale sand and the worn stone steps down to the water; the thatched huts stay small in the far background. In the centre Yudhishthira, eldest Pandava, now king (match the attached Yudhishthira lock: calm noble face, modest dark mustache, simple gold diadem lighter than a heavy crown, cream-white royal dhoti and cream angavastram, gold sash, gold armlets; no gold chest armor, no Gandiva, no flower garland, no peacock feather) stands knee-deep in the river, his eyes closed and a tear on his cheek, raising both cupped hands and letting a stream of water fall back into the river as an offering. On the stone steps behind him, Kunti (match the attached Kunti lock - mother of the Pandavas: a mature woman of about sixty with warm brown skin, a gentle strong face, large dark eyes, dark hair streaked with grey in a low knot, a simple white sari with a narrow saffron border drawn over her head, a saffron blouse, a thin gold chain and plain gold bangles; no blindfold, no crown) on the left and Draupadi, queen of the Pandavas (match the attached Draupadi lock: young adult woman, warm brown skin, large dark eyes, soft brows, a small red bindi, long black wavy hair worn loose in grief, a deep red sari with a gold border, modest gold ornaments; dignified, never sexualized, no crown, no armor, no peacock feather) on the right watch with their palms joined, grieving. Exactly six hands in the whole picture. Sunrise on the Ganga the next morning: a pale gold sky, the low sun glittering on the wide water, soft mist on the far bank (this beat is in DAYLIGHT, NOT night: no moon, no stars, no torches). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Arjuna. No Dhritarashtra. No Gandhari. No Vyasa. No Duryodhana, no Karna, no Bhima, no Ashwatthama, no Shiva.",
+      "sources": [
+        {
+          "work": "bori",
+          "cite": "BORI CE / Debroy, Stri Parva (Debroy vol. 8), ch. 27 - Yudhishthira laments that the secret was kept, grieves for Karna above all the slain, and with Karna's family offers him water; then rises from the Ganga"
+        },
+        {
+          "work": "gita_press",
+          "cite": "Gita Press Gorakhpur, Stri Parva (vulgate; adhyaya numbering = Ganguli), Shraddha Parva adhyaya 27 - Yudhishthira ka Karna ke liye vilap aur jalanjali; Ganga se nikalna"
+        },
+        {
+          "work": "ganguli",
+          "cite": "K.M. Ganguli, Stri Parva §27 - the king offered oblations of water unto his deceased elder brother and performed the water-rite with Karna's family, then rose from the waters of Ganga"
+        }
+      ]
+    }
+  ],
+  "poster": {
+    "file": "poster.jpg",
+    "cast_present": [
+      "draupadi",
+      "gandhari",
+      "kunti"
+    ],
+    "prompt": "Premium painted comic Amar Chitra poster, in the style and palette of the attached scene master and Ep 10 field-master. Heroic medium, exactly three adult women standing together at the edge of the silent battlefield at golden sunset - the women of both houses. The field after the war is shown only by implication: torn banners on leaning poles, empty chariots, a broken wheel, abandoned shields and bows in the dust, small clay lamps - no bodies, no blood, no wounds, no carrion birds. In the centre Gandhari (match the attached Gandhari lock - queen of the Kurus and mother of the hundred Kaurava sons: a tall, regal mature woman of about sixty with a fair wheat-gold complexion and a noble, composed face, a band of folded pale-cream silk tied firmly over her eyes as a blindfold (her eyes are never visible), silver-streaked dark hair in a low knot, a plain ivory-white sari with a deep maroon-and-gold border drawn over her head, a maroon blouse, only small gold earrings and thin gold bangles in mourning; no crown, no armor, never without the blindfold) stands tall, blindfolded, her palms joined. On the left Kunti (match the attached Kunti lock - mother of the Pandavas: a mature woman of about sixty with warm brown skin, a gentle strong face, large dark eyes, dark hair streaked with grey in a low knot, a simple white sari with a narrow saffron border drawn over her head, a saffron blouse, a thin gold chain and plain gold bangles; no blindfold, no crown) holds a small lit clay lamp in both cupped hands. On the right Draupadi, queen of the Pandavas (match the attached Draupadi lock: young adult woman, warm brown skin, large dark eyes, soft brows, a small red bindi, long black wavy hair worn loose in grief, a deep red sari with a gold border, modest gold ornaments; dignified, never sexualized, no crown, no armor, no peacock feather) holds a small lit clay lamp in both cupped hands. Behind them the long field with torn banners and empty chariots fades into a glowing amber sky. Strong composition with clear headroom for a title. Exactly six hands. Golden sunset daylight (DAYLIGHT, NOT night: no moon, no stars). Carved gold-and-lotus cartouche integrated into the painting. Every person has normal anatomy with exactly two arms and two hands. Not photoreal. No Drona. No flute. No gore, no blood, no bodies, no corpses, no wounds, no funeral pyres up close, no skulls or bones, no vultures or jackals. No text, no letters, no plaques, no speech bubbles, no watermark. No Krishna. No Yudhishthira. No Arjuna. No Dhritarashtra. No Vyasa. No Duryodhana, no Karna, no Bhima, no Ashwatthama, no Shiva.",
+    "note": "Poster = Ep 22 thesis (the women of both houses on the field). If a separate poster pass is cut, copy the GATE C-passed plate-mothers.jpg."
+  },
+  "source_block": {
+    "authoritative": [
+      "bori",
+      "gita_press",
+      "ganguli"
+    ],
+    "parva": "Stri Parva (vulgate §10–§27; BORI CE ch. 9–27): Jalapradanika sub-parva (Dhritarashtra and the Kuru women set out; Vyasa restrains Gandhari; Kunti, Draupadi and Gandhari), Stri-vilapa sub-parva (Vyasa's boon of divine sight; Gandhari's lament; her curse on Krishna and his acceptance), Shraddha sub-parva (the funeral rites; the water-offerings at the Ganga; Kunti reveals Karna; Yudhishthira's offering to Karna)",
+    "bori": "BORI CE Stri Parva ch. 9–27, Debroy translation vol. 8 (chapter-group citations): Dhritarashtra sets out with Gandhari, Kunti and the women; Vyasa restrains Gandhari (dharma and victory); Yudhishthira with joined hands, Gandhari's forgiveness; Kunti, Draupadi and Gandhari; Vyasa's boon of divine sight; Gandhari's lament to Krishna and her curse (the thirty-sixth year); Krishna's smiling acceptance; the funeral rites; the water-offerings at the Ganga; Kunti's revelation of Karna; Yudhishthira's water-rite for Karna.",
+    "gita_press": "Gita Press Gorakhpur Mahabharata (Hindi, vulgate numbering = Ganguli): Stri Parva, Jalapradanika Parva adhyayas 10 (prasthan), 14–15 (Vyasa restrains Gandhari; Kunti, Draupadi, Gandhari); Stri-vilapa Parva adhyayas 16 (divya drishti), 25 (shaap and Krishna's sweekriti); Shraddha Parva adhyayas 26 (daah-sanskar), 27 (jalanjali; Karna-janm rahasya).",
+    "ganguli": "K.M. Ganguli, Stri Parva §10, §14–§16, §25–§27.",
+    "divergence": "Section/adhyaya numbers follow the vulgate (Ganguli = Gita Press); BORI CE chapters are cited at chapter-group level only, and the CE sub-parva boundaries differ slightly from the vulgate's. Omitted for length: Vidura's and Sanjaya's consolations (§1–§9), the meeting with Kripa, Ashwatthama and Kritavarma on the road, the iron image of Bhima that Dhritarashtra crushes (§12–§13), Gandhari's exchange with Bhima, her glance through the blindfold at Yudhishthira's toe, the long lament over each fallen warrior (§16–§25), Krishna's rebuke of Gandhari (§26), the numbers of the slain, and Yudhishthira's curse on women's secrets (later, Shanti Parva). In the texts Gandhari sees the field from afar by Vyasa's boon and then all go to it; the plate shows her at its edge. The fires are lit by Vidura, Sanjaya, Sudharma, Dhaumya and Yuyutsu at Yudhishthira's command; the rites plate shows only Yudhishthira and Dhritarashtra at prayer before lamps, the fires as a distant glow. Yudhishthira offers water to Karna together with Karna's family; the offering plate shows Kunti and Draupadi watching.",
+    "chosen": "Gita Press + BORI/Debroy overlap: Dhritarashtra comes to the field with Gandhari, Kunti and the Kuru women; Vyasa reminds Gandhari of 'where dharma is, there is victory' and she forgives the Pandavas; Kunti raises Draupadi and Gandhari comforts them; Vyasa's boon of divine sight; Gandhari's curse on Krishna (the thirty-sixth year, his own clan) and his smiling acceptance; the funeral rites for all the slain at Dhritarashtra's word and Yudhishthira's command; the water-offerings at the Ganga; Kunti's revelation that Karna was the eldest brother; Yudhishthira's water-rite for Karna. Ganguli for English wording.",
+    "notes": "Not TV. Comic-mythology only; family-friendly: grief told with dignity — no bodies, no gore, no wounds, no blood, no corpses, no pyres up close, no carrion birds; the field by implication only (empty chariots, fallen banners, lamps, the river). One new scene master (field22), ganga22 = Ep 21 ganga21 byte copy, two new character locks (gandhari; kunti aged forward from Ep 03); Krishna (Ep 04 lock) on curse, accept. Never attach Ep01 plate-wide-gold or any finished plate as an Imagine ref. Picks up Ep 21's end line ('The jewel is home and the war is over. Now the women of both houses come to the field to grieve.')."
+  },
+  "stills_status": "imported 2026-10-19 — 13 SuperGrok consumer Imagine images (field22 master, gandhari + kunti locks, 9 plates, poster; 1728×1152) generated by Chief on grok.com; GATE C PASS (see logic-reviews/RR-gateC-visual.md)"
+}

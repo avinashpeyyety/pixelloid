@@ -115,6 +115,9 @@ PRONOUNCE: dict[str, str] = {
     "Vyasa": "Vyaa-sa",
     "Narada": "Naa-rada",
     "Ganga": "Gun-gaa",
+    # Ep22 The Women's Lament (Stri Parva)
+    "Gandhari": "Gaan-dhaari",
+    "Kunti": "Koon-tee",
 }
 
 

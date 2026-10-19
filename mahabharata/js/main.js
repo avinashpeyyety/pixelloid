@@ -433,6 +433,18 @@ const RAGA_PRESETS = {
     duckLevel: 0.14,
     tanpuraMs: 1300,
   },
+  jogiya: {
+    // Jogiya (Bhairav thaat) — dawn raga of the jogi, karuna + viraha / vairagya: S r m P d S' up (Ga and Ni omitted in the ascent),
+    // S' N d P, d m, P d m, G r S down; komal Re/Dha, shuddha Ga/Ni (light); vadi Ma, samvadi Sa; pakad r m P d, d m, m G r S. Bansuri, no tabla.
+    Sa: 116.54, // A#2 — grave karuna under male VO; distinct from Jaunpuri's G2 and Bageshri's B2
+    fluteSa: 233.08,
+    degrees: ["S", "r", "G", "m", "P", "d", "N"],
+    tabla: "none",
+    voice: "bansuri",
+    bedLevel: 0.42,
+    duckLevel: 0.14,
+    tanpuraMs: 1300,
+  },
   default: {
     // eps 01–08 — keep close to old FluteTablaBed so they don't jump
     Sa: 293.66,
@@ -483,6 +495,7 @@ class RagaBed {
       else if (id === "19") key = "bageshri";
       else if (id === "20") key = "shankara";
       else if (id === "21") key = "jaunpuri";
+      else if (id === "22") key = "jogiya";
       else key = "default";
     }
     if (!RAGA_PRESETS[key]) key = "default";
@@ -1147,6 +1160,44 @@ class RagaBed {
         ],
       ];
     }
+    if (key === "jogiya") {
+      // Jogiya — S r m P / m P d, d m / P d S' N d P / d m P d m / m G r S. Ga and Ni never in the ascent; dwell on Ma and komal Dha.
+      return [
+        [
+          [0, "S", 0, 1.2],
+          [1.4, "r", 0, 1.0],
+          [2.6, "m", 0, 1.4],
+          [4.2, "P", 0, 2.0],
+        ],
+        [
+          [0, "m", 0, 1.0],
+          [1.2, "P", 0, 1.0],
+          [2.4, "d", 0, 2.2],
+          [4.8, "m", 0, 2.2],
+        ],
+        [
+          [0, "P", 0, 1.0],
+          [1.2, "d", 0, 1.2],
+          [2.6, "S", 1, 1.8],
+          [4.6, "N", 0, 0.8],
+          [5.6, "d", 0, 1.2],
+          [7.0, "P", 0, 2.0],
+        ],
+        [
+          [0, "d", 0, 1.2],
+          [1.4, "m", 0, 1.0],
+          [2.6, "P", 0, 1.0],
+          [3.8, "d", 0, 1.2],
+          [5.2, "m", 0, 2.0],
+        ],
+        [
+          [0, "m", 0, 1.4],
+          [1.6, "G", 0, 1.0],
+          [2.8, "r", 0, 1.2],
+          [4.2, "S", 0, 2.6],
+        ],
+      ];
+    }
     if (key === "jaunpuri") {
       // Jaunpuri — S R m P / m P d, m P / P d n S' n d P / d m P g R m P / m g R S. Ga never in the ascent; dwell on komal Dha.
       return [
@@ -1377,6 +1428,7 @@ class RagaBed {
     if (key === "bageshri") return 4.2 + Math.random() * 2.6;
     if (key === "shankara") return 3.8 + Math.random() * 2.4;
     if (key === "jaunpuri") return 4.0 + Math.random() * 2.6;
+    if (key === "jogiya") return 4.2 + Math.random() * 2.6;
     return 1.2 + Math.random() * 2.0;
   }
 
@@ -1485,7 +1537,7 @@ class RagaBed {
       this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
     }
 
-    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "multani" ? 4000 : key === "sarang" ? 3600 : key === "bageshri" ? 4000 : key === "shankara" ? 3600 : key === "jaunpuri" ? 3800 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
+    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "multani" ? 4000 : key === "sarang" ? 3600 : key === "bageshri" ? 4000 : key === "shankara" ? 3600 : key === "jaunpuri" ? 3800 : key === "jogiya" ? 4000 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
     this.timers.push(setTimeout(() => this._scheduleMelody(), melodyDelay));
 
     this.master.gain.cancelScheduledValues(t);

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shivaji — sketchbook episodes · Pixelloid</title>
+  <meta name="description" content="Shivaji Maharaj stories in a hand-drawn sketchbook style. Ep 01: Sinhagad." />
+  <meta property="og:image" content="episodes/01-sinhagad/media/poster.jpg" />
+  <style>
+    :root {
+      --paper: #F4EEDF; --graphite: #3A3631; --sepia: #6B4F3A; --torch: #D9772B;
+      --saffron: #E8892F; --night: #34485E; --moon: #8DA3B8; --earth: #9A8C74;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh; font-family: Georgia, "Iowan Old Style", serif;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(141,163,184,0.25), transparent 60%), var(--paper);
+      color: var(--graphite); padding: 2.5rem 1.25rem 3rem; line-height: 1.5;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; }
+    .brand { font: 600 0.72rem system-ui, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: var(--earth); margin-bottom: 0.5rem; }
+    .brand a { color: inherit; text-decoration: none; }
+    h1 { font-size: clamp(1.9rem, 4.5vw, 2.6rem); letter-spacing: -0.02em; color: var(--sepia); margin-bottom: 0.5rem; }
+    .lead { color: var(--graphite); opacity: 0.8; margin-bottom: 2rem; max-width: 40em; }
+    .ep { border: 1px solid rgba(107,79,58,0.25); border-radius: 16px; background: rgba(255,255,255,0.45); padding: 1rem; margin-bottom: 1rem; }
+    .ep video { width: 100%; border-radius: 10px; background: var(--night); display: block; }
+    .ep h2 { font-size: 1.2rem; color: var(--sepia); margin: 0.9rem 0 0.25rem; }
+    .ep h2 .num { color: var(--saffron); margin-right: 0.4rem; }
+    .ep p { font-size: 0.95rem; opacity: 0.85; }
+    .meta { font: 0.75rem ui-monospace, Menlo, monospace; color: var(--night); margin-top: 0.5rem; }
+    .meta a { color: var(--torch); }
+    .soon { opacity: 0.6; font-style: italic; }
+    footer { margin-top: 2.5rem; font: 0.8rem system-ui, sans-serif; color: var(--earth); }
+    footer a { color: var(--sepia); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="brand"><a href="../">Pixelloid</a> · Series</p>
+    <h1>Shivaji</h1>
+    <p class="lead">
+      Stories of Chhatrapati Shivaji Maharaj and his companions, drawn in a sketchbook style:
+      graphite and sepia lines, moonlit washes, and colour only where the story needs it.
+    </p>
+
+    <section class="ep" id="ep01">
+      <video controls preload="metadata" playsinline
+             poster="episodes/01-sinhagad/media/poster.jpg"
+             src="episodes/01-sinhagad/media/ep01-sinhagad.mp4"></video>
+      <h2><span class="num">Ep 01</span>Sinhagad</h2>
+      <p>A moonlit climb up the cliffs of Kondhana. Tanaji Malusare keeps his word to win back the fort,
+        and it gets a new name: Sinhagad, the Lion's Fort.</p>
+      <p class="meta">~3:35 · <a href="episodes/01-sinhagad/media/ep01-sinhagad.mp4">direct mp4</a></p>
+    </section>
+
+    <p class="soon">More episodes coming.</p>
+
+    <footer>
+      <a href="../">← All shows</a> ·
+      Source: <a href="https://github.com/avinashpeyyety/pixelloid/tree/main/shivaji">github.com/avinashpeyyety/pixelloid</a>
+    </footer>
+  </div>
+</body>
+</html>

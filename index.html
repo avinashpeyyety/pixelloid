@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pixelloid — interactive shows</title>
-  <meta name="description" content="Pixelloid: kids-grok, Chocolate Dance School, Cosmos, and Mahābhārata" />
+  <meta name="description" content="Pixelloid: kids-grok, Chocolate Dance School, Cosmos, Mahābhārata, and Shivaji" />
   <style>
     :root {
       --bg: #0c0e16;
@@ -16,6 +16,7 @@
       --b: #fbbf24;
       --c: #a78bfa;
       --d: #e8a838;
+      --e: #8DA3B8;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -87,6 +88,10 @@
       border-color: rgba(232, 168, 56, 0.5);
       background: rgba(232, 168, 56, 0.1);
     }
+    a.card.shivaji:hover {
+      border-color: rgba(141, 163, 184, 0.5);
+      background: rgba(141, 163, 184, 0.1);
+    }
     .card h2 {
       font-size: 1.1rem;
       margin-bottom: 0.35rem;
@@ -102,6 +107,7 @@
     a.card.dance .path { color: var(--b); }
     a.card.cosmos .path { color: var(--c); }
     a.card.maha .path { color: var(--d); }
+    a.card.shivaji .path { color: var(--e); }
     footer {
       margin-top: 2.5rem;
       font-size: 0.8rem;
@@ -115,7 +121,7 @@
     <p class="brand">Pixelloid</p>
     <h1>Interactive shows</h1>
     <p class="lead">
-      Browser experiences — kids comedy, dance school, solar-system theater, and Mahābhārata episodes.
+      Browser experiences — kids comedy, dance school, solar-system theater, Mahābhārata, and Shivaji episodes.
       No signup. Pick one and play.
     </p>
     <div class="grid">
@@ -138,6 +144,11 @@
         <h2>Mahābhārata</h2>
         <p>Phad-style itihāsa — 2D narrative cloth. Ep 01: The Bird's Eye.</p>
         <span class="path">/pixelloid/mahabharata/</span>
+      </a>
+      <a class="card shivaji" href="shivaji/">
+        <h2>Shivaji</h2>
+        <p>Sketchbook-style tales of Shivaji Maharaj. Ep 01: Sinhagad.</p>
+        <span class="path">/pixelloid/shivaji/</span>
       </a>
     </div>
     <footer>

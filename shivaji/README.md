@@ -52,4 +52,4 @@ Common suffix for every prompt: `pencil and ink line art, children's book sketch
 ## Episodes
 | # | Title | Status |
 |---|-------|--------|
-| 01 | **Sinhagad** — the capture of Kondhana, Feb 1670 | Script — awaiting Avinash's review |
+| 01 | **Sinhagad** — the capture of Kondhana, Feb 1670 | Rendered (Kokoro narration) — awaiting Avinash's review |

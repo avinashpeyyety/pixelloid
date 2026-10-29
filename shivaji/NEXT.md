@@ -12,10 +12,10 @@
 - [x] Avinash approved `episodes/01-sinhagad/script.md`
 - [x] Character sheets generated → `episodes/01-sinhagad/chars/` (shivaji, tanaji, suryaji, udaybhan, jijabai)
 - [x] 17 keyframes generated → `episodes/01-sinhagad/stills/shot01–17.png` + `contact_sheet.jpg`
-- [ ] **Avinash reviews stills** (contact_sheet.jpg) — blocking for next steps
-- [ ] Next (after stills review): draw-on reveal — write `tools/reveal.py` (edge-detect → stroke-order reveal → color fade) + ffmpeg assemble
-- [ ] Record narration → `audio/`
-- [ ] Motion: Grok Imagine for Sh-09 climb + Sh-12 duel (≤6 s each)
+- [x] Narration → `episodes/01-sinhagad/audio/line01–17.mp3` (Kokoro-82M bm_george, local; `tts_ep01.py` with phonetic respellings)
+- [x] **Ep01 v1 rendered** (2026-10-28) → `episodes/01-sinhagad/render/shivaji_ep01_sinhagad_v1.mp4` (3:34, 1280x720/24fps, H.264+AAC, 42.5 MB) via `build_ep01.py` (stroke-order draw-on reveal → shading → selective color → Ken Burns; local climb pan Sh-09, duel shake Sh-11/12; title/end cards; no music bed)
+- [ ] **Avinash reviews v1** (also still pending: stills review, pronunciation check)
+- [ ] Optional: swap local motion for Grok Imagine clips (≤6 s) on Sh-09 climb + Sh-11/12 duel
 
 ## Later
 - [ ] Ep 02 candidates: Escape from Agra (1666), Pratapgad (1659), Coronation (1674)

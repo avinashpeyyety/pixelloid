@@ -30,3 +30,6 @@ _studio/**
 !_studio/**/.gitkeep
 
 # Ep 11 Blender proxies (regenerate: blender --python .../build_ep11_scene.py)
+
+# Shivaji renders (mp4) stay out of git, like mahabharata — live in OneDrive at shivaji/episodes/*/render/
+shivaji/episodes/*/render/

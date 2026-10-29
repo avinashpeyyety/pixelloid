@@ -1,0 +1,63 @@
+{
+  "episode_id": "23",
+  "notes": "Shanti Parva opening (vulgate §1-§53; Rajadharmanushasana sub-parva) — the king who does not want his kingdom. After the water-rites the Pandavas spend a month of mourning by the Ganga; Yudhishthira grieves for Karna and Kunti consoles him; he tells Arjuna he will give up the kingdom and go to the forest; Arjuna and Bhima argue that a king must act; Draupadi pleads; Vyasa counsels that a king's dharma is to protect his people; Krishna takes his hand and tells him of the great kings of old; Yudhishthira is crowned in Hastinapura with Draupadi beside him and Krishna pours the conch water; one morning Krishna sits in meditation, thinking of Bhishma; Krishna brings Yudhishthira to Bhishma on his bed of arrows and asks the grandsire to teach him. Family-friendly: no gore, no wounds, no blood, no bodies; Bhishma serene on the arrow bed. Karna, Narada, Dhaumya, Dhritarashtra, Gandhari, Nakula, Sahadeva and Satyaki are narrated only or absent. Krishna = Ep 04 lock (official series reference): pale silvery dusty-blue skin, long loose curls, slim gold band with one peacock feather, white U-tilak, jasmine-rose garland, saffron-yellow pitambar dhoti, crimson sash, exactly two hands — comfort, crown, meditate, bedside, poster. Yudhishthira, Arjuna, Bhima = Ep 14/15 locks (via Ep 15); Draupadi = Ep 04 lock; Kunti = Ep 22 lock; Vyasa = Ep 21 lock; Bhishma = Ep 10 lock. No new character locks. Two new scene masters (palace23, kuru23); ganga23 = Ep 22 ganga22 byte copy.",
+  "locks": {
+    "reuse": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg",
+      "bhima": "episodes/15-narayanastra/stills/_locks/bhima.jpg",
+      "draupadi": "episodes/04-akshayapatra/stills/_locks/draupadi.jpg",
+      "kunti": "episodes/22-womens-lament/stills/_locks/kunti.jpg",
+      "vyasa": "episodes/21-brahmashira/stills/_locks/vyasa.jpg",
+      "bhishma": "episodes/10-bhishma-fall/stills/_locks/bhishma.jpg",
+      "ganga23-master": "episodes/22-womens-lament/stills/_locks/ganga22-master.jpg"
+    },
+    "new": {
+      "palace23-master": "episodes/23-reluctant-king/stills/_locks/palace23-master.jpg",
+      "kuru23-master": "episodes/23-reluctant-king/stills/_locks/kuru23-master.jpg"
+    }
+  },
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile; eyes closed and perfectly still on `meditate` — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands (never four-armed, even in meditation); Arjuna's charioteer in the war — here off the chariot (comfort, crown, meditate, bedside, poster), no reins — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava, the reluctant king, calm noble face, modest mustache, grief in the eyes that slowly lifts — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown), held out in both hands on `renounce`; no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor, no Gandiva, no flower garland"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes, stunned on `renounce`, earnest on `brothers` — Ep 09 face via the Ep 14/15 lock",
+      "hair": "Tall gold crown",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva held low and unstrung — never flower garland, never peacock feather"
+    },
+    "bhima": {
+      "face": "Big, powerful second Pandava, broad noble face, full dark curled mustache, fierce on `brothers` (Ep 14/15 lock, byte copy)",
+      "hair": "Dark hair in a topknot with a gold warrior circlet — not Arjuna's crown",
+      "costume": "Deep gold and leaf-green engraved armor, red sash, gold-decked mace resting head-down — never a child"
+    },
+    "draupadi": {
+      "face": "Young adult queen of the Pandavas, warm brown skin, large dark eyes, soft brows, small red bindi; earnest on `plea`, humble on `crown` — painted comic, not photoreal, never sexualized (Ep 04 lock, byte copy)",
+      "hair": "Long black wavy hair, simple gold ornaments — no crown, no peacock",
+      "costume": "Deep red sari with gold border, modest gold ornaments — no armor"
+    },
+    "kunti": {
+      "face": "Kunti, mother of the Pandavas: about sixty, warm brown skin, gentle strong face, large dark eyes (Ep 22 lock, byte copy); no blindfold",
+      "hair": "Dark hair streaked with grey in a low knot, the sari's end drawn over her head; no crown",
+      "costume": "Simple white sari with a narrow saffron border, saffron blouse, thin gold chain, plain gold bangles — no crown, no armor"
+    },
+    "vyasa": {
+      "face": "Krishna Dvaipayana Vyasa, the great rishi and grandfather of both houses: tall, ancient yet vigorous, dark complexion, calm deep-set luminous eyes, long flowing grey beard, three white ash lines on the brow (Ep 21 lock, byte copy) — clearly not Drona",
+      "hair": "Long matted tawny-brown locks (jata) piled high; no crown",
+      "costume": "Ochre bark-cloth garment, black deerskin over one shoulder, white sacred thread, rudraksha rosary — never saffron robes, never weapons, no flower garland"
+    },
+    "bhishma": {
+      "face": "Bhishma, the Kuru grandsire: ancient warrior, noble lined face, calm open eyes, long flowing white hair and full white warrior beard (Ep 10 lock, byte copy) — serene, at peace; clearly not Drona",
+      "hair": "Long white hair under a silver Kuru diadem",
+      "costume": "Silver-white engraved armor, pale cream dhoti; lying on the bed of upright golden arrows that holds him above the ground like a couch, his bow laid aside — no blood, no wounds, no arrow in face or chest; never saffron robes"
+    }
+  }
+}

@@ -446,6 +446,18 @@ const RAGA_PRESETS = {
     duckLevel: 0.14,
     tanpuraMs: 1300,
   },
+  ahirbhairav: {
+    // Ahir Bhairav (Bhairav family; Bhairav below, Kafi above) — early-morning raga of shanti: bhakti, gentle sorrow, quiet resolve:
+    // S r G m P D n S' up, S' n D P m G r S down; komal Re/Ni, shuddha Ga/Dha; vadi Ma, samvadi Sa; pakad G m r S, D n r S. Bansuri, no tabla.
+    Sa: 146.83, // D3 — brighter morning register under male VO; distinct from Jogiya's A#2 and Jaunpuri's G2
+    fluteSa: 293.66,
+    degrees: ["S", "r", "G", "m", "P", "D", "n"],
+    tabla: "none",
+    voice: "bansuri",
+    bedLevel: 0.42,
+    duckLevel: 0.14,
+    tanpuraMs: 1300,
+  },
   default: {
     // eps 01–08 — keep close to old FluteTablaBed so they don't jump
     Sa: 293.66,
@@ -497,6 +509,7 @@ class RagaBed {
       else if (id === "20") key = "shankara";
       else if (id === "21") key = "jaunpuri";
       else if (id === "22") key = "jogiya";
+      else if (id === "23") key = "ahirbhairav";
       else key = "default";
     }
     if (!RAGA_PRESETS[key]) key = "default";
@@ -1199,6 +1212,43 @@ class RagaBed {
         ],
       ];
     }
+    if (key === "ahirbhairav") {
+      // Ahir Bhairav — S r G m / G m r S / m P D n S' / S' n D P m / D n r S. Dwell on Ma; komal Re and komal Ni, shuddha Dha.
+      return [
+        [
+          [0, "S", 0, 1.2],
+          [1.4, "r", 0, 1.0],
+          [2.6, "G", 0, 1.2],
+          [4.0, "m", 0, 2.2],
+        ],
+        [
+          [0, "G", 0, 1.0],
+          [1.2, "m", 0, 1.4],
+          [2.8, "r", 0, 1.2],
+          [4.2, "S", 0, 2.2],
+        ],
+        [
+          [0, "m", 0, 1.0],
+          [1.2, "P", 0, 1.0],
+          [2.4, "D", 0, 1.2],
+          [3.8, "n", 0, 1.0],
+          [5.0, "S", 1, 2.2],
+        ],
+        [
+          [0, "S", 1, 1.2],
+          [1.4, "n", 0, 1.0],
+          [2.6, "D", 0, 1.2],
+          [4.0, "P", 0, 1.0],
+          [5.2, "m", 0, 2.2],
+        ],
+        [
+          [0, "D", -1, 1.2],
+          [1.4, "n", -1, 1.0],
+          [2.6, "r", 0, 1.2],
+          [4.0, "S", 0, 2.6],
+        ],
+      ];
+    }
     if (key === "jaunpuri") {
       // Jaunpuri — S R m P / m P d, m P / P d n S' n d P / d m P g R m P / m g R S. Ga never in the ascent; dwell on komal Dha.
       return [
@@ -1430,6 +1480,7 @@ class RagaBed {
     if (key === "shankara") return 3.8 + Math.random() * 2.4;
     if (key === "jaunpuri") return 4.0 + Math.random() * 2.6;
     if (key === "jogiya") return 4.2 + Math.random() * 2.6;
+    if (key === "ahirbhairav") return 4.0 + Math.random() * 2.6;
     return 1.2 + Math.random() * 2.0;
   }
 
@@ -1538,7 +1589,7 @@ class RagaBed {
       this.timers.push(setTimeout(() => this._scheduleTablaLoop(), 400));
     }
 
-    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "multani" ? 4000 : key === "sarang" ? 3600 : key === "bageshri" ? 4000 : key === "shankara" ? 3600 : key === "jaunpuri" ? 3800 : key === "jogiya" ? 4000 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
+    const melodyDelay = key === "darbari" ? 4200 : key === "malkauns" ? 4000 : key === "todi" ? 3800 : key === "shree" ? 4000 : key === "multani" ? 4000 : key === "sarang" ? 3600 : key === "bageshri" ? 4000 : key === "shankara" ? 3600 : key === "jaunpuri" ? 3800 : key === "jogiya" ? 4000 : key === "ahirbhairav" ? 3800 : key === "bhupali" ? 3400 : key === "yaman" ? 3400 : key === "bhairav" ? 3200 : key === "marwa" ? 3600 : key === "megh" ? 2400 : 2200;
     this.timers.push(setTimeout(() => this._scheduleMelody(), melodyDelay));
 
     this.master.gain.cancelScheduledValues(t);

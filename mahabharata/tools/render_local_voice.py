@@ -118,6 +118,8 @@ PRONOUNCE: dict[str, str] = {
     # Ep22 The Women's Lament (Stri Parva)
     "Gandhari": "Gaan-dhaari",
     "Kunti": "Koon-tee",
+    # Ep23 The Reluctant King (Shanti Parva)
+    "Bhishma": "Bheesh-ma",
 }
 
 

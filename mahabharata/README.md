@@ -45,6 +45,7 @@ Episodic itihāsa theater: **write script → Grok Imagine key panels → Blende
 | 20 | **The Night Raid** — Sauptika Parva, the owl, Shiva at the gate | Live |
 | 21 | **The Brahmashira** — Draupadi’s vow, the blade of grass, Vyasa and Narada between the fires | Live |
 | 22 | **The Women’s Lament** — Stri Parva, Gandhari’s forgiveness and curse, Kunti’s secret at the Ganga | Live |
+| 23 | **The Reluctant King** — Shanti Parva, the king who wants the forest, his coronation, Krishna sends him to Bhishma | Live |
 
 ## Local
 

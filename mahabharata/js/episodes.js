@@ -267,4 +267,16 @@ export const EPISODES = [
       "The women of both houses come to the silent field. Gandhari forgives, sees through her blindfold, and lays a curse on Krishna — and at the Ganga, Kunti tells Yudhishthira who Karna was.",
     play: "play.html?ep=22",
   },
+  {
+    id: "23",
+    slug: "reluctant-king",
+    title: "The Reluctant King",
+    sanskrit: "राजधर्मः",
+    chapter: "Shanti Parva · the month by the Ganga",
+    duration: "~112s",
+    status: "live",
+    blurb:
+      "Yudhishthira wants no kingdom, only the forest. His brothers, Draupadi, Vyasa and Krishna turn him back — he is crowned in Hastinapura, and Krishna leads him to Bhishma on the bed of arrows.",
+    play: "play.html?ep=23",
+  },
 ];

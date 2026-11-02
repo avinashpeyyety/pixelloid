@@ -1,0 +1,50 @@
+{
+  "episode_id": "24",
+  "notes": "Shanti Parva, Rajadharma (vulgate §53–§59, §67, §88; BORI CE 12.53–59, 12.67, 12.89) — Bhishma on his bed of arrows teaches Yudhishthira the duties of a king. Next morning Krishna and the five Pandavas return to Kurukshetra; by Krishna's grace Bhishma is free of pain and his mind is clear; Bhishma asks why Krishna does not teach the king himself, and Krishna says he wants Bhishma's fame to last as long as the earth; Yudhishthira hangs back in shame and fear of a curse; Bhishma says a kshatriya's duty is righteous battle, Yudhishthira touches his feet, and Bhishma tells him to ask without fear; the lessons: exertion is greater than fate and truth is a king's strength; care for the people as a mother for her child; without a king the strong swallow the weak like big fish eating little fish; take taxes gently like a bee taking honey; day after day Krishna and the Pandavas listen until sunset. Family-friendly: no gore, no wounds, no blood, no bodies; Bhishma serene on the golden arrow bed. Satyaki, Kripa and the gathered rishis are narrated only or absent. Krishna = Ep 04 lock (official series reference) on arrive, why, fear, listen and the poster — always the FIRST attached ref. Yudhishthira, Arjuna, Bhima = Ep 14/15 locks (via Ep 15); Nakula and Sahadeva = Ep 05 twins lock (one image, both twins); Bhishma = Ep 10 lock. Scene master kuru24 = byte copy of Ep 23 kuru23-master (no new scene master). One new group lock (pandavas24, generated from the four existing Pandava locks) so the two seven-figure plates (arrive, listen) stay within five refs.",
+  "locks": {
+    "reuse": {
+      "krishna": "episodes/04-akshayapatra/stills/_locks/krishna.jpg",
+      "yudhishthira": "episodes/15-narayanastra/stills/_locks/yudhishthira.jpg",
+      "arjuna": "episodes/15-narayanastra/stills/_locks/arjuna.jpg",
+      "bhima": "episodes/15-narayanastra/stills/_locks/bhima.jpg",
+      "nakula_sahadeva": "episodes/05-yaksha-prashna/stills/_locks/nakula_sahadeva.jpg",
+      "bhishma": "episodes/10-bhishma-fall/stills/_locks/bhishma.jpg",
+      "kuru24-master": "episodes/23-reluctant-king/stills/_locks/kuru23-master.jpg"
+    },
+    "new": {
+      "pandavas24": "episodes/24-rajadharma/stills/_locks/pandavas24.jpg (group lock; generate #1)"
+    }
+  },
+  "cast": {
+    "krishna": {
+      "face": "Youthful divine adult, serene dark eyes, gentle half-smile — the official series Krishna is the Ep 04 lock (episodes/04-akshayapatra/stills/_locks/krishna.jpg; Avinash 2026-10-05): pale silvery dusty-blue skin, white U-tilak on the brow",
+      "hair": "Long loose dark curls under a slim gold band with one peacock feather (not a tall crown)",
+      "costume": "Saffron-yellow pitambar dhoti, crimson sash, jasmine-and-rose flower garland, gold jewelry; exactly two hands (never four-armed); Arjuna's charioteer in the war — here off the chariot on foot (arrive, why, fear, listen, poster), no reins — never a flute, never a bow, never a child"
+    },
+    "yudhishthira": {
+      "face": "Eldest Pandava, the new king, calm noble face, modest mustache; ashamed and afraid on `fear`, relieved on `bless`, at peace by `listen` — distinct from Arjuna (Ep 14/15 lock)",
+      "hair": "Dark hair, simple gold diadem (lighter than Arjuna's heavy crown); no peacock feather",
+      "costume": "Cream-white royal dhoti and cream angavastram, gold sash, gold armlets — no gold chest armor, no Gandiva, no flower garland"
+    },
+    "arjuna": {
+      "face": "Noble adult warrior, dark mustache, steady dark eyes, listening with respect — Ep 09 face via the Ep 14/15 lock",
+      "hair": "Tall gold crown",
+      "costume": "Cream-white dhoti and angavastram, gold belt and armlets, quiver on back, Gandiva held low and unstrung — never flower garland, never peacock feather"
+    },
+    "bhima": {
+      "face": "Big, powerful second Pandava, broad noble face, full dark curled mustache, quiet and respectful at the bedside (Ep 14/15 lock, byte copy)",
+      "hair": "Dark hair in a topknot with a gold warrior circlet — not Arjuna's crown",
+      "costume": "Deep gold and leaf-green engraved armor, red sash, gold-decked mace resting head-down — never a child"
+    },
+    "nakula_sahadeva": {
+      "face": "Nakula and Sahadeva, the youngest Pandavas: near-identical handsome young twins, clean-shaven, gentle faces (Ep 05 twins lock, byte copy — one image showing both)",
+      "hair": "Long black curly hair to the shoulders, a small gold ornament on the brow; no crowns",
+      "costume": "Cream dhotis with saffron angavastram sashes over one shoulder, gold necklaces, armlets and bangles — no armor, no peacock feather"
+    },
+    "bhishma": {
+      "face": "Bhishma, the Kuru grandsire: ancient warrior, noble lined face, calm open eyes, long flowing white hair and full white warrior beard (Ep 10 lock, byte copy) — serene, free of pain, a teacher; clearly not Drona",
+      "hair": "Long white hair under a silver Kuru diadem",
+      "costume": "Silver-white engraved armor, pale cream dhoti; lying on the bed of upright golden arrows that holds him above the ground like a couch, his bow laid aside — no blood, no wounds, no arrow in face or chest; never saffron robes; never standing or fighting"
+    }
+  }
+}

@@ -279,4 +279,16 @@ export const EPISODES = [
       "Yudhishthira wants no kingdom, only the forest. His brothers, Draupadi, Vyasa and Krishna turn him back — he is crowned in Hastinapura, and Krishna leads him to Bhishma on the bed of arrows.",
     play: "play.html?ep=23",
   },
+  {
+    id: "24",
+    slug: "rajadharma",
+    title: "Rajadharma",
+    sanskrit: "राजधर्मः",
+    chapter: "Shanti Parva · Bhishma on the bed of arrows",
+    duration: "~112s",
+    status: "live",
+    blurb:
+      "Freed of pain by Krishna's grace, Bhishma teaches the new king from his bed of arrows — effort over fate, care like a mother's, the big fish and the little fish, taxes taken like a bee takes honey.",
+    play: "play.html?ep=24",
+  },
 ];

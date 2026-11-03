@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pixelloid — interactive shows</title>
-  <meta name="description" content="Pixelloid: kids-grok, Chocolate Dance School, Cosmos, Mahābhārata, and Shivaji" />
+  <meta name="description" content="Pixelloid: kids-grok, Chocolate Dance School, Cosmos, Mahābhārata, Shivaji, and Mārkaṇḍeya Purāṇa" />
   <style>
     :root {
       --bg: #0c0e16;
@@ -17,6 +17,7 @@
       --c: #a78bfa;
       --d: #e8a838;
       --e: #8DA3B8;
+      --f: #e05a5a;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -92,6 +93,10 @@
       border-color: rgba(141, 163, 184, 0.5);
       background: rgba(141, 163, 184, 0.1);
     }
+    a.card.markandeya:hover {
+      border-color: rgba(224, 90, 90, 0.5);
+      background: rgba(224, 90, 90, 0.1);
+    }
     .card h2 {
       font-size: 1.1rem;
       margin-bottom: 0.35rem;
@@ -108,6 +113,7 @@
     a.card.cosmos .path { color: var(--c); }
     a.card.maha .path { color: var(--d); }
     a.card.shivaji .path { color: var(--e); }
+    a.card.markandeya .path { color: var(--f); }
     footer {
       margin-top: 2.5rem;
       font-size: 0.8rem;
@@ -149,6 +155,11 @@
         <h2>Shivaji</h2>
         <p>Sketchbook-style tales of Shivaji Maharaj. Ep 01: Sinhagad.</p>
         <span class="path">/pixelloid/shivaji/</span>
+      </a>
+      <a class="card markandeya" href="markandeya/">
+        <h2>Mārkaṇḍeya Purāṇa</h2>
+        <p>Devī Māhātmyam — the glory of the Goddess, one episode a week. Ep 01: The King and the Merchant (coming soon).</p>
+        <span class="path">/pixelloid/markandeya/</span>
       </a>
     </div>
     <footer>

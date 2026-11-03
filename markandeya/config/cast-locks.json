@@ -1,0 +1,133 @@
+{
+  "series": "markandeya",
+  "arc": "Devi Mahatmyam",
+  "rule": "Locked character sheets (face / hair / costume / never). Every named face on a plate needs stills/_locks/<id>.jpg; later episodes copy the first episode's lock byte-for-byte. Respectful, devotional, child-appropriate: no blood, no gore, no severed heads, no skulls.",
+  "characters": {
+    "markandeya": {
+      "name": "Markandeya (Mārkaṇḍeya)",
+      "role": "Narrator-sage of the Purana; frames every arc",
+      "first_ep": "01",
+      "face": "Ageless radiant sage who looks about forty (blessed to stay young), warm brown skin, calm large dark eyes, short neat dark-brown beard, three horizontal white ash lines (tripundra) with a small red dot on the forehead",
+      "hair": "Long dark-brown matted hair (jata) coiled in a high topknot bound with one rudraksha string; no crown",
+      "costume": "Bare chest with a long rudraksha mala, ochre-saffron dhoti and ochre shawl over the left shoulder, holds an open palm-leaf manuscript; barefoot",
+      "never": "white beard or white hair (that is Medhas), crown, jewels, weapons, elderly frail body, extra arms"
+    },
+    "medhas": {
+      "name": "Medhas (Medhā), the sage",
+      "role": "Forest sage who tells the Devi Mahatmyam to Suratha and Samadhi",
+      "first_ep": "01",
+      "face": "Elderly kind sage about seventy, fair-wheatish skin, gentle smiling eyes with laugh lines, long snow-white beard to the chest, vertical white-and-red sandal-paste tilak",
+      "hair": "Long flowing snow-white hair to the shoulders with a small white topknot; no crown",
+      "costume": "Bare chest with a tulsi-bead mala, plain cream-white cotton dhoti and cream shawl, sits on a spotted deerskin; brass kamandalu (water pot) and a wooden staff nearby; barefoot",
+      "never": "dark hair, ochre-saffron robes (that is Markandeya), crown, jewels, weapons, stern or angry face, extra arms"
+    },
+    "suratha": {
+      "name": "King Suratha (Suratha)",
+      "role": "Good king of the Chaitra line who loses his kingdom; later the Manu Savarni",
+      "first_ep": "01",
+      "face": "Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes",
+      "hair": "Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby",
+      "costume": "Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness",
+      "never": "beard, missing crown, armor helmet, drawn sword, saffron sage robes, extra arms"
+    },
+    "samadhi": {
+      "name": "Samadhi (Samādhi), the merchant",
+      "role": "Kind merchant cast out by his greedy wife and sons",
+      "first_ep": "01",
+      "face": "Gentle round-faced man about fifty, light brown skin, sad kind eyes, thin grey-streaked mustache, clean-shaven chin",
+      "hair": "Short grey-black hair under a simple white wrapped turban",
+      "costume": "Mustard-yellow shawl (uttariya) wrapped over the chest and shoulders, plain white dhoti, small gold ear-studs, one gold ring, slightly plump build, travel-worn but tidy, carries a small cloth bundle",
+      "never": "crown, sword, royal jewelry, indigo cloth (that is Suratha), sage robes, extra arms"
+    },
+    "devi": {
+      "name": "The Devi — Durga / Ambika / Chandika, as Mahishasuramardini",
+      "role": "The Great Goddess; heroine of all three charitras",
+      "first_ep": "03",
+      "face": "Radiant serene young goddess with a golden-fair glowing complexion, large compassionate lotus-shaped eyes, a gentle confident half-smile even in battle, small vertical third eye on the brow, red bindi",
+      "hair": "Long thick black hair flowing behind her, tall jeweled gold crown (karanda-mukuta) with a halo of light",
+      "costume": "Rich red silk sari with a broad gold border, gold necklaces, armlets and anklets; exactly TEN arms (five on each side, symmetric) holding the gods' gifts: trident (Shiva), discus (Vishnu), conch (Varuna), bow and arrows (Vayu), thunderbolt (Indra), sword and shield (Kala), mace, noose, and a lotus; rides a golden-maned lion (gift of Himavan), seated sideways or standing on it",
+      "never": "blood, wounds, severed heads, angry snarl or bared teeth, revealing or sexualized clothing, missing or extra arms, black skin (that is Kali), photoreal"
+    },
+    "lion": {
+      "name": "The Devi's lion (vahana)",
+      "role": "Mount gifted by Himavan",
+      "first_ep": "03",
+      "face": "Majestic lion with a kind brave face, amber eyes",
+      "hair": "Thick flowing golden mane",
+      "costume": "Tawny-gold coat, small gold ornaments on the brow; roars but never bites",
+      "never": "tiger stripes, blood, biting"
+    },
+    "mahishasura": {
+      "name": "Mahishasura (buffalo and human forms)",
+      "role": "Buffalo-demon king who drives the gods from heaven (arc 2)",
+      "first_ep": "03",
+      "face": "BUFFALO FORM: huge dark slate-grey water buffalo with sweeping curved horns, glowing amber eyes, flared nostrils, proud stance. HUMAN FORM: tall muscular asura king, dark grey-blue skin, proud scowl, thick black mustache, bushy eyebrows — fierce but not monstrous",
+      "hair": "HUMAN FORM: wild black hair under a dark bronze helmet-crown with two curved buffalo horns",
+      "costume": "HUMAN FORM: dark bronze breastplate and armlets, maroon dhoti, sword and round shield; in the final moment shown half-emerging from the buffalo, subdued under the Devi's trident with no wound shown",
+      "never": "blood, gore, cut neck, severed head, visible wounds, horror-movie demon"
+    },
+    "vishnu_yoganidra": {
+      "name": "Vishnu in yoga-nidra (Anantashayana)",
+      "role": "Sleeps on Shesha at the cosmic dissolution (Ep02)",
+      "first_ep": "02",
+      "face": "Serene deep cloud-blue skin, eyes gently closed in yogic sleep, peaceful smile, white U-shaped namam tilak",
+      "hair": "Black curls under a tall gold kirita crown",
+      "costume": "Four arms (conch, discus, mace, lotus), yellow pitambar silk, kaustubha gem, vanamala flower garland; reclines on the coils of the many-hooded serpent Shesha on a calm milky cosmic ocean; Lakshmi optional at his feet",
+      "never": "Krishna's peacock feather or flute, two arms, open eyes before the Devi leaves him"
+    },
+    "brahma": {
+      "name": "Brahma",
+      "role": "Creator; sings the hymn that wakes the Devi (Ep02)",
+      "first_ep": "02",
+      "face": "Four bearded faces (three visible), ruddy-golden skin, kind wise eyes, long white beards",
+      "hair": "Gold crowns on each head",
+      "costume": "Four arms holding palm-leaf Vedas, kamandalu, rosary and a lotus; white and red silks; seated on a pink lotus rising from Vishnu's navel",
+      "never": "weapons, fear-distorted faces, extra heads beyond four"
+    },
+    "madhu_kaitabha": {
+      "name": "Madhu and Kaitabha (pair lock)",
+      "role": "Two giant asura brothers born from Vishnu's ear-wax at the dissolution (Ep02)",
+      "first_ep": "02",
+      "face": "MADHU: taller, dark green-grey skin, broad grin, big round eyes. KAITABHA: bronze-brown skin, pointed beard, sly smile. Both boastful and a little comic, not scary",
+      "hair": "MADHU: bald with a gold helmet with two small horns. KAITABHA: wild red-black hair in a tall knot",
+      "costume": "Gold-and-black armor, heavy maces, giant size wading in the cosmic ocean",
+      "never": "blood, gore, severed heads, horror faces"
+    },
+    "kali": {
+      "name": "Kali / Chamunda",
+      "role": "Fierce protector who springs from the Devi's brow (Ep09–10)",
+      "first_ep": "09",
+      "face": "Fierce but protective face, deep blue-black skin, three wide bright eyes, tiny tip of red tongue, no fangs dripping",
+      "hair": "Wild flowing black hair like a storm cloud",
+      "costume": "Four arms with sword, noose, khatvanga staff and a gesture of protection (abhaya); tiger-skin wrap, garland of RED HIBISCUS FLOWERS (never skulls or heads), gold ornaments",
+      "never": "skulls, severed heads, blood, gore, corpses, nudity, horror styling"
+    },
+    "shumbha": {
+      "name": "Shumbha",
+      "role": "Asura emperor who conquers the three worlds (arc 3)",
+      "first_ep": "07",
+      "face": "Tall regal asura emperor, dark indigo skin, full black beard, proud piercing eyes",
+      "hair": "Long black hair under a tall spiked gold crown",
+      "costume": "Crimson-and-gold armor, royal purple cloak, gold-hilted sword; sits on a high gold throne",
+      "never": "blood, gore, horror face, horns"
+    },
+    "nishumbha": {
+      "name": "Nishumbha",
+      "role": "Shumbha's younger brother (arc 3)",
+      "first_ep": "07",
+      "face": "Younger burly asura, slate-grey skin, thick black mustache only (no beard), hot-tempered eyes",
+      "hair": "Black hair in a topknot under a bronze helmet-crown",
+      "costume": "Green-bronze armor, heavy mace and bow, rides a chariot",
+      "never": "full beard (that is Shumbha), blood, gore"
+    },
+    "raktabija": {
+      "name": "Raktabija",
+      "role": "Asura whose every falling drop becomes a copy of himself (Ep10)",
+      "first_ep": "10",
+      "face": "Hulking asura, deep maroon-red skin, glowing ember eyes, bald head with a black topknot",
+      "hair": "Bald with a single black topknot",
+      "costume": "Black iron armor, mace; his copies are shown as glowing RED SPARKS that sprout smaller look-alike figures — never blood",
+      "never": "blood, bleeding wounds, gore, puddles of blood"
+    }
+  }
+}

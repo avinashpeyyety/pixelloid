@@ -1,0 +1,12 @@
+{
+  "canonical_voice_id": "orion",
+  "provider": "grok-tts",
+  "engine": "xai-tts",
+  "endpoint": "https://api.x.ai/v1/tts",
+  "language": "en",
+  "render": "tools/render_orion_voice.py",
+  "fallback": null,
+  "policy": "Avinash 2026-11-02: ORION-ONLY — every Markandeya Purana episode is narrated ONLY by xAI Grok TTS voice 'orion' (XAI_API_KEY; xAI API credits are authorized for Orion narration only, nothing else). NO fallback voice of any kind (no Kokoro/bm_george, no macOS say, no browser speech, no default voice). If Orion is unavailable the episode is flagged 'BLOCKED: awaiting Orion' in NEXT.md and does not ship. Re-renders reuse existing audio; never re-synthesize a shipped episode without Avinash's approval.",
+  "pronounce_file": "config/pronounce.json",
+  "orion_locked_episodes": []
+}

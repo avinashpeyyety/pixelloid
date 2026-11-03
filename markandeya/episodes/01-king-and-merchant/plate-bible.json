@@ -1,0 +1,563 @@
+{
+  "episode_id": "01",
+  "series": "markandeya",
+  "title": "The King and the Merchant",
+  "style_lock": "Premium Amar Chitra / painted-comic devotional illustration; carved gold-and-lotus cartouche integrated; heroic medium shot; not photoreal",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "heroic medium; named figures fill the frame",
+  "frame": "carved gold-and-lotus cartouche (series spine)",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures.",
+  "style": "Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children.",
+  "close": "Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark.",
+  "output": "Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+  "quality_bar_ref": "assets/spine/field-master.jpg",
+  "scene_lock_ref": "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg",
+  "scene_master_prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. Scene master, NO PEOPLE: the forest hermitage of the sage Medhas: a sunlit clearing in a green Indian forest beside a clear stream, three thatched huts on bamboo posts, a small square fire altar with a thin wisp of smoke, a giant old banyan tree with a raised round mud platform under it, a lotus pond, a spotted deer and a calm tiger resting side by side, parrots in the branches. Wide but rich establishing view, every element clearly drawn so it can be reused as a background reference: the banyan with its round mud platform at center-left, the three thatched huts at right, the fire altar in front of them, the lotus pond and stream at the bottom, the deer and tiger resting together in the foreground. Fresh MORNING DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. No people at all. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+  "imagine_refs": [
+    "assets/spine/field-master.jpg",
+    "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg",
+    "episodes/01-king-and-merchant/stills/_locks/markandeya.jpg",
+    "episodes/01-king-and-merchant/stills/_locks/medhas.jpg",
+    "episodes/01-king-and-merchant/stills/_locks/suratha.jpg",
+    "episodes/01-king-and-merchant/stills/_locks/samadhi.jpg"
+  ],
+  "character_lock_refs": {
+    "markandeya": "episodes/01-king-and-merchant/stills/_locks/markandeya.jpg",
+    "medhas": "episodes/01-king-and-merchant/stills/_locks/medhas.jpg",
+    "suratha": "episodes/01-king-and-merchant/stills/_locks/suratha.jpg",
+    "samadhi": "episodes/01-king-and-merchant/stills/_locks/samadhi.jpg"
+  },
+  "local_lock_plan": {
+    "markandeya": {
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. Character lock portrait for a series: heroic medium three-quarter portrait of exactly one adult, Markandeya, on a Himalayan riverbank at dawn, standing or seated, face clearly visible, whole costume readable. Ageless radiant sage who looks about forty (blessed to stay young), warm brown skin, calm large dark eyes, short neat dark-brown beard, three horizontal white ash lines (tripundra) with a small red dot on the forehead; Long dark-brown matted hair (jata) coiled in a high topknot bound with one rudraksha string; no crown; Bare chest with a long rudraksha mala, ochre-saffron dhoti and ochre shawl over the left shoulder, holds an open palm-leaf manuscript; barefoot. Never: white beard or white hair (that is Medhas), crown, jewels, weapons, elderly frail body, extra arms. DAWN light, pink-gold sunrise, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. Only one person in the picture. No Medhas. No King Suratha. No Samadhi the merchant. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "refs": [
+        "assets/spine/field-master.jpg"
+      ]
+    },
+    "medhas": {
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. Character lock portrait for a series: heroic medium three-quarter portrait of exactly one adult, Medhas, in the forest hermitage under the banyan, standing or seated, face clearly visible, whole costume readable. Elderly kind sage about seventy, fair-wheatish skin, gentle smiling eyes with laugh lines, long snow-white beard to the chest, vertical white-and-red sandal-paste tilak; Long flowing snow-white hair to the shoulders with a small white topknot; no crown; Bare chest with a tulsi-bead mala, plain cream-white cotton dhoti and cream shawl, sits on a spotted deerskin; brass kamandalu (water pot) and a wooden staff nearby; barefoot. Never: dark hair, ochre-saffron robes (that is Markandeya), crown, jewels, weapons, stern or angry face, extra arms. Fresh MORNING DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. Only one person in the picture. No Markandeya. No King Suratha. No Samadhi the merchant. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "refs": [
+        "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg",
+        "assets/spine/field-master.jpg"
+      ]
+    },
+    "suratha": {
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. Character lock portrait for a series: heroic medium three-quarter portrait of exactly one adult, King Suratha, in a bright palace hall, standing or seated, face clearly visible, whole costume readable. Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes; Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby; Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness. Never: beard, missing crown, armor helmet, drawn sword, saffron sage robes, extra arms. Bright DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. Only one person in the picture. No Markandeya. No Medhas. No Samadhi the merchant. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "refs": [
+        "assets/spine/field-master.jpg"
+      ]
+    },
+    "samadhi": {
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. Character lock portrait for a series: heroic medium three-quarter portrait of exactly one adult, Samadhi the merchant, at the edge of the forest hermitage, standing or seated, face clearly visible, whole costume readable. Gentle round-faced man about fifty, light brown skin, sad kind eyes, thin grey-streaked mustache, clean-shaven chin; Short grey-black hair under a simple white wrapped turban; Mustard-yellow shawl (uttariya) wrapped over the chest and shoulders, plain white dhoti, small gold ear-studs, one gold ring, slightly plump build, travel-worn but tidy, carries a small cloth bundle. Never: crown, sword, royal jewelry, indigo cloth (that is Suratha), sage robes, extra arms. Fresh MORNING DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. Only one person in the picture. No Markandeya. No Medhas. No King Suratha. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "refs": [
+        "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg",
+        "assets/spine/field-master.jpg"
+      ]
+    }
+  },
+  "image_path": "SuperGrok consumer Imagine (grok.com) only — never api.x.ai for images",
+  "photoreal_allowed": false,
+  "family_friendly": true,
+  "cast": {
+    "markandeya": {
+      "name": "Markandeya",
+      "face": "Ageless radiant sage who looks about forty (blessed to stay young), warm brown skin, calm large dark eyes, short neat dark-brown beard, three horizontal white ash lines (tripundra) with a small red dot on the forehead",
+      "hair": "Long dark-brown matted hair (jata) coiled in a high topknot bound with one rudraksha string; no crown",
+      "costume": "Bare chest with a long rudraksha mala, ochre-saffron dhoti and ochre shawl over the left shoulder, holds an open palm-leaf manuscript; barefoot",
+      "never": "white beard or white hair (that is Medhas), crown, jewels, weapons, elderly frail body, extra arms"
+    },
+    "medhas": {
+      "name": "Medhas",
+      "face": "Elderly kind sage about seventy, fair-wheatish skin, gentle smiling eyes with laugh lines, long snow-white beard to the chest, vertical white-and-red sandal-paste tilak",
+      "hair": "Long flowing snow-white hair to the shoulders with a small white topknot; no crown",
+      "costume": "Bare chest with a tulsi-bead mala, plain cream-white cotton dhoti and cream shawl, sits on a spotted deerskin; brass kamandalu (water pot) and a wooden staff nearby; barefoot",
+      "never": "dark hair, ochre-saffron robes (that is Markandeya), crown, jewels, weapons, stern or angry face, extra arms"
+    },
+    "suratha": {
+      "name": "King Suratha",
+      "face": "Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes",
+      "hair": "Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby",
+      "costume": "Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness",
+      "never": "beard, missing crown, armor helmet, drawn sword, saffron sage robes, extra arms"
+    },
+    "samadhi": {
+      "name": "Samadhi the merchant",
+      "face": "Gentle round-faced man about fifty, light brown skin, sad kind eyes, thin grey-streaked mustache, clean-shaven chin",
+      "hair": "Short grey-black hair under a simple white wrapped turban",
+      "costume": "Mustard-yellow shawl (uttariya) wrapped over the chest and shoulders, plain white dhoti, small gold ear-studs, one gold ring, slightly plump build, travel-worn but tidy, carries a small cloth bundle",
+      "never": "crown, sword, royal jewelry, indigo cloth (that is Suratha), sage robes, extra arms"
+    }
+  },
+  "poster": {
+    "file": "poster.jpg",
+    "cast_present": [
+      "medhas",
+      "suratha",
+      "samadhi"
+    ],
+    "imagine_refs": [
+      "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg",
+      "episodes/01-king-and-merchant/stills/_locks/medhas.jpg",
+      "episodes/01-king-and-merchant/stills/_locks/suratha.jpg",
+      "episodes/01-king-and-merchant/stills/_locks/samadhi.jpg",
+      "assets/spine/field-master.jpg"
+    ],
+    "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. Episode poster. In the forest hermitage of the sage Medhas: a sunlit clearing in a green Indian forest beside a clear stream, three thatched huts on bamboo posts, a small square fire altar with a thin wisp of smoke, a giant old banyan tree with a raised round mud platform under it, a lotus pond, a spotted deer and a calm tiger resting side by side, parrots in the branches. Medhas sits on his deerskin under the great banyan, teaching with one hand raised; King Suratha and Samadhi sit before him listening with wonder. Behind and above the banyan, a vast soft golden radiance like a thousand-petalled lotus of light fills the sky. A calm tiger and a deer rest nearby. Leave clean painted sky space at the top for a title to be added later (do not draw any text). Characters (match the attached locks exactly): Medhas - Elderly kind sage about seventy, fair-wheatish skin, gentle smiling eyes with laugh lines, long snow-white beard to the chest, vertical white-and-red sandal-paste tilak; Long flowing snow-white hair to the shoulders with a small white topknot; no crown; Bare chest with a tulsi-bead mala, plain cream-white cotton dhoti and cream shawl, sits on a spotted deerskin; brass kamandalu (water pot) and a wooden staff nearby; barefoot; King Suratha - Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes; Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby; Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness; Samadhi the merchant - Gentle round-faced man about fifty, light brown skin, sad kind eyes, thin grey-streaked mustache, clean-shaven chin; Short grey-black hair under a simple white wrapped turban; Mustard-yellow shawl (uttariya) wrapped over the chest and shoulders, plain white dhoti, small gold ear-studs, one gold ring, slightly plump build, travel-worn but tidy, carries a small cloth bundle. Warm late-AFTERNOON DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. The Goddess is NOT shown as a person. No Markandeya. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+    "note": "Title is added later in the page, never drawn."
+  },
+  "source_block": {
+    "primary": [
+      "Gita Press Gorakhpur, Shri Durga Saptashati (Sanskrit with Hindi translation), adhyaya 1",
+      "Swami Jagadiswarananda, Devi-Mahatmyam (Sri Ramakrishna Math, Chennai), chapter 1",
+      "F. E. Pargiter, The Markandeya Purana (Asiatic Society, 1904), canto 81"
+    ],
+    "note": "Jagadiswarananda verse numbers vv.1-25 checked against the published translation; later ranges and Gita Press / Pargiter numbering are approximate (editions number uvacha lines differently)."
+  },
+  "stills_status": "awaiting SuperGrok consumer Imagine (prompt pack ready)",
+  "plates": [
+    {
+      "id": "tale",
+      "file": "plate-tale.jpg",
+      "beat": "orion-00",
+      "t": 0,
+      "beat_text": "Long ago, the sage Markandeya told a story of the Great Goddess, the Devi: how she saved the gods, and how a lost king found her.",
+      "cast_present": [
+        "markandeya"
+      ],
+      "locus_master": null,
+      "light": "dawn",
+      "imagine_refs": [
+        "episodes/01-king-and-merchant/stills/_locks/markandeya.jpg",
+        "assets/spine/field-master.jpg"
+      ],
+      "must_show": [
+        "Markandeya alone, storyteller pose",
+        "open palm-leaf manuscript",
+        "Himalayan river at dawn"
+      ],
+      "must_not_show": [
+        "Medhas",
+        "white beard",
+        "crown",
+        "the Goddess as a figure",
+        "weapons"
+      ],
+      "props": [
+        "palm-leaf manuscript",
+        "rudraksha mala",
+        "small fire altar"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. Markandeya sits cross-legged on a flat rock on the bank of a wide Himalayan river at dawn, an open palm-leaf manuscript on his lap, right hand raised in a gentle teaching gesture, looking warmly toward the viewer as if beginning a story. Snowy peaks glow pink-gold behind him, mist on the water, a small fire altar beside him. Characters (match the attached locks exactly): Markandeya - Ageless radiant sage who looks about forty (blessed to stay young), warm brown skin, calm large dark eyes, short neat dark-brown beard, three horizontal white ash lines (tripundra) with a small red dot on the forehead; Long dark-brown matted hair (jata) coiled in a high topknot bound with one rudraksha string; no crown; Bare chest with a long rudraksha mala, ochre-saffron dhoti and ochre shawl over the left shoulder, holds an open palm-leaf manuscript; barefoot. DAWN light, pink-gold sunrise, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. The Goddess is NOT shown as a person in this picture. No Medhas. No King Suratha. No Samadhi the merchant. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "sources": [
+        {
+          "work": "Gita Press Gorakhpur, Shri Durga Saptashati (Sanskrit with Hindi translation), adhyaya 1",
+          "cite": "adhyaya 1 (Markandeya to Kraushtuki: the birth of Savarni by Mahamaya's grace)"
+        },
+        {
+          "work": "Swami Jagadiswarananda, Devi-Mahatmyam (Sri Ramakrishna Math, Chennai), chapter 1",
+          "cite": "chapter 1, verses 1-3 (Markandeya said ... by the grace of Mahamaya)"
+        },
+        {
+          "work": "F. E. Pargiter, The Markandeya Purana (Asiatic Society, 1904), canto 81",
+          "cite": "canto 81.1-3 (Pargiter verse numbering; approximate)"
+        }
+      ]
+    },
+    {
+      "id": "king",
+      "file": "plate-king.jpg",
+      "beat": "orion-01",
+      "t": 12,
+      "beat_text": "Once, a good king named Suratha ruled the whole earth. He cared for his people as if they were his own children.",
+      "cast_present": [
+        "suratha"
+      ],
+      "locus_master": null,
+      "light": "day",
+      "imagine_refs": [
+        "episodes/01-king-and-merchant/stills/_locks/suratha.jpg",
+        "assets/spine/field-master.jpg"
+      ],
+      "must_show": [
+        "Suratha crowned on throne",
+        "blessing gesture",
+        "grateful common family (generic, unnamed)"
+      ],
+      "must_not_show": [
+        "Samadhi",
+        "sage",
+        "battle",
+        "soldiers fighting"
+      ],
+      "props": [
+        "lion-throne",
+        "basket of mangoes",
+        "silk banners"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. King Suratha sits on a gold lion-throne in a bright palace hall of carved sandstone pillars, leaning forward with a warm smile, his right hand raised in blessing over a grateful farmer family (father, mother and a small child offering a basket of mangoes) who stand before the steps. Silk banners, lamps, a window showing a prosperous city and green fields. Characters (match the attached locks exactly): King Suratha - Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes; Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby; Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness. Bright DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. No Markandeya. No Medhas. No Samadhi the merchant. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "sources": [
+        {
+          "work": "Gita Press Gorakhpur, Shri Durga Saptashati (Sanskrit with Hindi translation), adhyaya 1",
+          "cite": "adhyaya 1 (Suratha of the Chaitra line, protected his subjects like his own children)"
+        },
+        {
+          "work": "Swami Jagadiswarananda, Devi-Mahatmyam (Sri Ramakrishna Math, Chennai), chapter 1",
+          "cite": "chapter 1, verses 4-5 (ruling over the whole world ... protected his subjects duly like his own children)"
+        },
+        {
+          "work": "F. E. Pargiter, The Markandeya Purana (Asiatic Society, 1904), canto 81",
+          "cite": "canto 81.4-5 (Pargiter verse numbering; approximate)"
+        }
+      ]
+    },
+    {
+      "id": "ride",
+      "file": "plate-ride.jpg",
+      "beat": "orion-02",
+      "t": 24,
+      "beat_text": "But enemies defeated him in battle, and at home his own ministers seized his treasure and his army. Alone, the king rode away into the forest.",
+      "cast_present": [
+        "suratha"
+      ],
+      "locus_master": null,
+      "light": "afternoon",
+      "imagine_refs": [
+        "episodes/01-king-and-merchant/stills/_locks/suratha.jpg",
+        "assets/spine/field-master.jpg"
+      ],
+      "must_show": [
+        "Suratha alone on a white horse",
+        "looking back sadly",
+        "distant city with shut gates"
+      ],
+      "must_not_show": [
+        "Samadhi",
+        "sage",
+        "fighting",
+        "soldiers",
+        "blood"
+      ],
+      "props": [
+        "white horse with red-and-gold harness",
+        "sheathed sword"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. King Suratha rides his white horse alone at a slow walk along a narrow path into a deep green forest, looking back over his shoulder with a sad face toward his far-off city on a hill, whose gates are shut and whose banners now fly a different color. Long late-afternoon shafts of light through tall sal trees. Characters (match the attached locks exactly): King Suratha - Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes; Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby; Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness. Warm late-AFTERNOON DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. No Markandeya. No Medhas. No Samadhi the merchant. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "sources": [
+        {
+          "work": "Gita Press Gorakhpur, Shri Durga Saptashati (Sanskrit with Hindi translation), adhyaya 1",
+          "cite": "adhyaya 1 (defeated by the Kolavidhvamsins; ministers seized treasury and army; rode alone to the forest on the pretext of hunting)"
+        },
+        {
+          "work": "Swami Jagadiswarananda, Devi-Mahatmyam (Sri Ramakrishna Math, Chennai), chapter 1",
+          "cite": "chapter 1, verses 6-9 (robbed of his treasury and army by his own ministers ... left alone on horse-back for a dense forest)"
+        },
+        {
+          "work": "F. E. Pargiter, The Markandeya Purana (Asiatic Society, 1904), canto 81",
+          "cite": "canto 81.6-9 (Pargiter verse numbering; approximate)"
+        }
+      ]
+    },
+    {
+      "id": "ashram",
+      "file": "plate-ashram.jpg",
+      "beat": "orion-03",
+      "t": 36,
+      "beat_text": "There he found the peaceful hermitage of the sage Medhas, where tigers and deer lived side by side. The sage welcomed him kindly.",
+      "cast_present": [
+        "medhas",
+        "suratha"
+      ],
+      "locus_master": "ashram01-master",
+      "light": "afternoon",
+      "imagine_refs": [
+        "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/medhas.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/suratha.jpg",
+        "assets/spine/field-master.jpg"
+      ],
+      "must_show": [
+        "Medhas welcoming",
+        "Suratha bowing with joined palms",
+        "tiger and deer resting together"
+      ],
+      "must_not_show": [
+        "Samadhi",
+        "Markandeya",
+        "ochre robes on Medhas",
+        "the tiger hunting"
+      ],
+      "props": [
+        "white horse",
+        "thatched huts",
+        "fire altar",
+        "banyan tree"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. In the forest hermitage of the sage Medhas: a sunlit clearing in a green Indian forest beside a clear stream, three thatched huts on bamboo posts, a small square fire altar with a thin wisp of smoke, a giant old banyan tree with a raised round mud platform under it, a lotus pond, a spotted deer and a calm tiger resting side by side, parrots in the branches. Medhas stands at the edge of the clearing with both palms raised in welcome and a warm smile; King Suratha, dismounted, bows to him with joined palms, his white horse waiting behind him. In the foreground a tiger and a spotted deer rest calmly together. Characters (match the attached locks exactly): Medhas - Elderly kind sage about seventy, fair-wheatish skin, gentle smiling eyes with laugh lines, long snow-white beard to the chest, vertical white-and-red sandal-paste tilak; Long flowing snow-white hair to the shoulders with a small white topknot; no crown; Bare chest with a tulsi-bead mala, plain cream-white cotton dhoti and cream shawl, sits on a spotted deerskin; brass kamandalu (water pot) and a wooden staff nearby; barefoot; King Suratha - Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes; Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby; Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness. Warm late-AFTERNOON DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. No Markandeya. No Samadhi the merchant. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "sources": [
+        {
+          "work": "Gita Press Gorakhpur, Shri Durga Saptashati (Sanskrit with Hindi translation), adhyaya 1",
+          "cite": "adhyaya 1 (the hermitage of Medhas, wild animals made peaceful, disciples; the king was honored there)"
+        },
+        {
+          "work": "Swami Jagadiswarananda, Devi-Mahatmyam (Sri Ramakrishna Math, Chennai), chapter 1",
+          "cite": "chapter 1, verses 10-11 (inhabited by wild animals which were peaceful ... entertained by the sage)"
+        },
+        {
+          "work": "F. E. Pargiter, The Markandeya Purana (Asiatic Society, 1904), canto 81",
+          "cite": "canto 81.10-11 (Pargiter verse numbering; approximate)"
+        }
+      ]
+    },
+    {
+      "id": "worry",
+      "file": "plate-worry.jpg",
+      "beat": "orion-04",
+      "t": 48,
+      "beat_text": "Yet even there the king could not rest. ‘Is my city safe? Is my great elephant cared for? Who spends my treasure now?’",
+      "cast_present": [
+        "suratha"
+      ],
+      "locus_master": "ashram01-master",
+      "light": "sunset",
+      "imagine_refs": [
+        "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/suratha.jpg",
+        "assets/spine/field-master.jpg"
+      ],
+      "must_show": [
+        "Suratha alone, worried",
+        "dream-cloud visions: city, royal elephant, treasure chest"
+      ],
+      "must_not_show": [
+        "Medhas",
+        "Samadhi",
+        "night sky",
+        "ministers as figures"
+      ],
+      "props": [
+        "banyan platform",
+        "thought-cloud vision"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. In the forest hermitage of the sage Medhas: a sunlit clearing in a green Indian forest beside a clear stream, three thatched huts on bamboo posts, a small square fire altar with a thin wisp of smoke, a giant old banyan tree with a raised round mud platform under it, a lotus pond, a spotted deer and a calm tiger resting side by side, parrots in the branches, at sunset. King Suratha sits alone on the round platform under the banyan, chin resting on his hand, brow furrowed with worry. Above him, painted inside soft swirling golden clouds like a dream, small faded visions of what he misses: his city walls, his great royal elephant with a gold head-cloth, and an open treasure chest of coins. Characters (match the attached locks exactly): King Suratha - Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes; Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby; Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness. Golden-orange SUNSET light, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. No Markandeya. No Medhas. No Samadhi the merchant. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "sources": [
+        {
+          "work": "Gita Press Gorakhpur, Shri Durga Saptashati (Sanskrit with Hindi translation), adhyaya 1",
+          "cite": "adhyaya 1 (his worries: the city, his chief elephant, his followers, the treasure squandered)"
+        },
+        {
+          "work": "Swami Jagadiswarananda, Devi-Mahatmyam (Sri Ramakrishna Math, Chennai), chapter 1",
+          "cite": "chapter 1, verses 12-16 (I do not know what enjoyments my chief elephant ... will get ... the treasure ... will be squandered)"
+        },
+        {
+          "work": "F. E. Pargiter, The Markandeya Purana (Asiatic Society, 1904), canto 81",
+          "cite": "canto 81.12-16 (Pargiter verse numbering; approximate)"
+        }
+      ]
+    },
+    {
+      "id": "merchant",
+      "file": "plate-merchant.jpg",
+      "beat": "orion-05",
+      "t": 60,
+      "beat_text": "One day he met a sad merchant named Samadhi. ‘My own wife and sons wanted my wealth,’ Samadhi said, ‘so they sent me away from home.’",
+      "cast_present": [
+        "suratha",
+        "samadhi"
+      ],
+      "locus_master": "ashram01-master",
+      "light": "morning",
+      "imagine_refs": [
+        "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/suratha.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/samadhi.jpg",
+        "assets/spine/field-master.jpg"
+      ],
+      "must_show": [
+        "Samadhi sad with cloth bundle",
+        "Suratha kind and curious",
+        "stream at the hermitage"
+      ],
+      "must_not_show": [
+        "Medhas",
+        "Markandeya",
+        "wife and sons as figures",
+        "crown on Samadhi"
+      ],
+      "props": [
+        "cloth bundle",
+        "stream",
+        "stepping stones"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. At the stream at the edge of the forest hermitage of the sage Medhas: a sunlit clearing in a green Indian forest beside a clear stream, three thatched huts on bamboo posts, a small square fire altar with a thin wisp of smoke, a giant old banyan tree with a raised round mud platform under it, a lotus pond, a spotted deer and a calm tiger resting side by side, parrots in the branches, in fresh morning light. Samadhi the merchant, holding his small cloth bundle, bows respectfully, his face sad, one open hand gesturing back toward the road he came from. King Suratha faces him with a kind, curious expression, one hand on his heart. Characters (match the attached locks exactly): King Suratha - Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes; Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby; Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness; Samadhi the merchant - Gentle round-faced man about fifty, light brown skin, sad kind eyes, thin grey-streaked mustache, clean-shaven chin; Short grey-black hair under a simple white wrapped turban; Mustard-yellow shawl (uttariya) wrapped over the chest and shoulders, plain white dhoti, small gold ear-studs, one gold ring, slightly plump build, travel-worn but tidy, carries a small cloth bundle. Fresh MORNING DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. No Markandeya. No Medhas. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "sources": [
+        {
+          "work": "Gita Press Gorakhpur, Shri Durga Saptashati (Sanskrit with Hindi translation), adhyaya 1",
+          "cite": "adhyaya 1 (the merchant Samadhi, cast out by his wife and sons greedy for wealth)"
+        },
+        {
+          "work": "Swami Jagadiswarananda, Devi-Mahatmyam (Sri Ramakrishna Math, Chennai), chapter 1",
+          "cite": "chapter 1, verses 17-25 (I am a merchant named Samadhi ... cast out by my sons and wife, who are wicked through greed of wealth)"
+        },
+        {
+          "work": "F. E. Pargiter, The Markandeya Purana (Asiatic Society, 1904), canto 81",
+          "cite": "canto 81.17-25 (Pargiter verse numbering; approximate)"
+        }
+      ]
+    },
+    {
+      "id": "cling",
+      "file": "plate-cling.jpg",
+      "beat": "orion-06",
+      "t": 72,
+      "beat_text": "‘Still I worry. Are they well? Are they happy?’ The king nodded. ‘My heart is just the same. Why can’t we let go?’",
+      "cast_present": [
+        "suratha",
+        "samadhi"
+      ],
+      "locus_master": "ashram01-master",
+      "light": "morning",
+      "imagine_refs": [
+        "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/suratha.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/samadhi.jpg",
+        "assets/spine/field-master.jpg"
+      ],
+      "must_show": [
+        "two friends sitting together",
+        "hand on heart",
+        "lotus pond reflections"
+      ],
+      "must_not_show": [
+        "Medhas",
+        "Markandeya",
+        "crying faces distorted"
+      ],
+      "props": [
+        "lotus pond",
+        "mossy rock"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. In the forest hermitage of the sage Medhas: a sunlit clearing in a green Indian forest beside a clear stream, three thatched huts on bamboo posts, a small square fire altar with a thin wisp of smoke, a giant old banyan tree with a raised round mud platform under it, a lotus pond, a spotted deer and a calm tiger resting side by side, parrots in the branches. Samadhi and King Suratha sit side by side on a mossy rock by the lotus pond, both looking down at their reflections in the water. Samadhi presses a hand to his chest with a worried, loving face; Suratha nods slowly with understanding, a hand on Samadhi's shoulder. In the water, faint golden ripples. Characters (match the attached locks exactly): King Suratha - Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes; Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby; Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness; Samadhi the merchant - Gentle round-faced man about fifty, light brown skin, sad kind eyes, thin grey-streaked mustache, clean-shaven chin; Short grey-black hair under a simple white wrapped turban; Mustard-yellow shawl (uttariya) wrapped over the chest and shoulders, plain white dhoti, small gold ear-studs, one gold ring, slightly plump build, travel-worn but tidy, carries a small cloth bundle. Fresh MORNING DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. No Markandeya. No Medhas. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "sources": [
+        {
+          "work": "Gita Press Gorakhpur, Shri Durga Saptashati (Sanskrit with Hindi translation), adhyaya 1",
+          "cite": "adhyaya 1 (the merchant still longs for his family's welfare; the king asks why the mind clings)"
+        },
+        {
+          "work": "Swami Jagadiswarananda, Devi-Mahatmyam (Sri Ramakrishna Math, Chennai), chapter 1",
+          "cite": "chapter 1, verses 23-34 (Are my sons living good or evil lives? ... why is your mind affectionately attached)"
+        },
+        {
+          "work": "F. E. Pargiter, The Markandeya Purana (Asiatic Society, 1904), canto 81",
+          "cite": "canto 81.23-34 (Pargiter verse numbering; approximate)"
+        }
+      ]
+    },
+    {
+      "id": "ask",
+      "file": "plate-ask.jpg",
+      "beat": "orion-07",
+      "t": 84,
+      "beat_text": "Together they went to the sage and bowed. ‘We know these thoughts bring only sorrow,’ said the king, ‘and yet they will not leave us. Why?’",
+      "cast_present": [
+        "medhas",
+        "suratha",
+        "samadhi"
+      ],
+      "locus_master": "ashram01-master",
+      "light": "day",
+      "imagine_refs": [
+        "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/medhas.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/suratha.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/samadhi.jpg",
+        "assets/spine/field-master.jpg"
+      ],
+      "must_show": [
+        "Medhas seated on deerskin",
+        "Suratha and Samadhi kneeling with joined palms",
+        "banyan platform"
+      ],
+      "must_not_show": [
+        "Markandeya",
+        "a fourth person",
+        "the Goddess as a figure"
+      ],
+      "props": [
+        "deerskin",
+        "kamandalu",
+        "wooden staff",
+        "banyan"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. In the forest hermitage of the sage Medhas: a sunlit clearing in a green Indian forest beside a clear stream, three thatched huts on bamboo posts, a small square fire altar with a thin wisp of smoke, a giant old banyan tree with a raised round mud platform under it, a lotus pond, a spotted deer and a calm tiger resting side by side, parrots in the branches. Medhas sits on his deerskin on the round platform under the banyan, listening kindly. King Suratha and Samadhi kneel before him on the ground, hands joined in respect; Suratha looks up asking his question, one palm turned upward. Medhas's kamandalu and staff beside him. Characters (match the attached locks exactly): Medhas - Elderly kind sage about seventy, fair-wheatish skin, gentle smiling eyes with laugh lines, long snow-white beard to the chest, vertical white-and-red sandal-paste tilak; Long flowing snow-white hair to the shoulders with a small white topknot; no crown; Bare chest with a tulsi-bead mala, plain cream-white cotton dhoti and cream shawl, sits on a spotted deerskin; brass kamandalu (water pot) and a wooden staff nearby; barefoot; King Suratha - Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes; Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby; Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness; Samadhi the merchant - Gentle round-faced man about fifty, light brown skin, sad kind eyes, thin grey-streaked mustache, clean-shaven chin; Short grey-black hair under a simple white wrapped turban; Mustard-yellow shawl (uttariya) wrapped over the chest and shoulders, plain white dhoti, small gold ear-studs, one gold ring, slightly plump build, travel-worn but tidy, carries a small cloth bundle. Bright DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. The Goddess is NOT shown as a person in this picture. No Markandeya. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "sources": [
+        {
+          "work": "Gita Press Gorakhpur, Shri Durga Saptashati (Sanskrit with Hindi translation), adhyaya 1",
+          "cite": "adhyaya 1 (both approach the sage; the king asks why, though knowing, they are still deluded)"
+        },
+        {
+          "work": "Swami Jagadiswarananda, Devi-Mahatmyam (Sri Ramakrishna Math, Chennai), chapter 1",
+          "cite": "chapter 1, verses 35-44 (the king and the merchant approached the sage ... why this delusion though we know)"
+        },
+        {
+          "work": "F. E. Pargiter, The Markandeya Purana (Asiatic Society, 1904), canto 81",
+          "cite": "canto 81.35-44 (Pargiter verse numbering; approximate)"
+        }
+      ]
+    },
+    {
+      "id": "mahamaya",
+      "file": "plate-mahamaya.jpg",
+      "beat": "orion-08",
+      "t": 96,
+      "beat_text": "Medhas pointed to the birds feeding their young, though hungry themselves. ‘That is Mahamaya, the Great Goddess,’ he said. ‘She binds the world with love, and she sets it free.’",
+      "cast_present": [
+        "medhas",
+        "suratha",
+        "samadhi"
+      ],
+      "locus_master": "ashram01-master",
+      "light": "day",
+      "imagine_refs": [
+        "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/medhas.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/suratha.jpg",
+        "episodes/01-king-and-merchant/stills/_locks/samadhi.jpg",
+        "assets/spine/field-master.jpg"
+      ],
+      "must_show": [
+        "Medhas pointing",
+        "mother bird feeding chicks in a nest",
+        "golden lotus-shaped radiance in the sky (formless)"
+      ],
+      "must_not_show": [
+        "the Goddess as a human figure",
+        "Markandeya",
+        "weapons"
+      ],
+      "props": [
+        "bird nest",
+        "banyan branch",
+        "lotus of light"
+      ],
+      "prompt": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures. Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children. In the forest hermitage of the sage Medhas: a sunlit clearing in a green Indian forest beside a clear stream, three thatched huts on bamboo posts, a small square fire altar with a thin wisp of smoke, a giant old banyan tree with a raised round mud platform under it, a lotus pond, a spotted deer and a calm tiger resting side by side, parrots in the branches. Medhas, standing, points up to a low banyan branch where a mother bird drops a seed into the open beaks of three chicks in a nest. King Suratha and Samadhi look up in wonder. Above the trees the sky glows with a vast soft golden radiance shaped like a thousand-petalled lotus of light - a presence, not a person. Characters (match the attached locks exactly): Medhas - Elderly kind sage about seventy, fair-wheatish skin, gentle smiling eyes with laugh lines, long snow-white beard to the chest, vertical white-and-red sandal-paste tilak; Long flowing snow-white hair to the shoulders with a small white topknot; no crown; Bare chest with a tulsi-bead mala, plain cream-white cotton dhoti and cream shawl, sits on a spotted deerskin; brass kamandalu (water pot) and a wooden staff nearby; barefoot; King Suratha - Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes; Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby; Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness; Samadhi the merchant - Gentle round-faced man about fifty, light brown skin, sad kind eyes, thin grey-streaked mustache, clean-shaven chin; Short grey-black hair under a simple white wrapped turban; Mustard-yellow shawl (uttariya) wrapped over the chest and shoulders, plain white dhoti, small gold ear-studs, one gold ring, slightly plump build, travel-worn but tidy, carries a small cloth bundle. Bright DAYLIGHT, NOT night. Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark. The Goddess is NOT shown as a person in this picture. No Markandeya. Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+      "sources": [
+        {
+          "work": "Gita Press Gorakhpur, Shri Durga Saptashati (Sanskrit with Hindi translation), adhyaya 1",
+          "cite": "adhyaya 1 (birds feed their young though hungry; Mahamaya, Vishnu's yoga-nidra, deludes even the wise and, when gracious, grants liberation)"
+        },
+        {
+          "work": "Swami Jagadiswarananda, Devi-Mahatmyam (Sri Ramakrishna Math, Chennai), chapter 1",
+          "cite": "chapter 1, verses 45-58 (birds ... though distressed by hunger ... dropping grain into the beaks of their young ... she, when propitious, becomes a boon-giver for liberation)"
+        },
+        {
+          "work": "F. E. Pargiter, The Markandeya Purana (Asiatic Society, 1904), canto 81",
+          "cite": "canto 81.45-58 (Pargiter verse numbering; approximate)"
+        }
+      ]
+    }
+  ]
+}

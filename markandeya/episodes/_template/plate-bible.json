@@ -1,0 +1,91 @@
+{
+  "episode_id": "NN",
+  "series": "markandeya",
+  "title": "TITLE",
+  "style_lock": "Premium Amar Chitra / painted-comic devotional illustration; carved gold-and-lotus cartouche integrated; heroic medium shot; not photoreal",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "aspect": "3:2"
+  },
+  "camera": "heroic medium; named figures fill the frame",
+  "frame": "carved gold-and-lotus cartouche (series spine)",
+  "prompt_prefix": "Premium Amar Chitra / painted-comic devotional illustration, native 3:2 canvas at least 1536x1024. Carved gold-and-lotus cartouche frame integrated into the artwork (not a thin sticker border, not a cream mat with four corner lotuses). Heroic medium shot: named figures fill the frame with refined ink linework, detailed jewelry and textiles, cream-saffron-gold palette. Not photoreal, not 16:9, not tiny distant figures.",
+  "style": "Style: classic Indian painted-comic art of the Devi Mahatmyam, warm hand-inked outlines, rich mineral colors (vermilion, saffron, peacock blue, leaf green, gold), soft painted shading, gentle devotional mood for children.",
+  "close": "Carved gold-and-lotus cartouche frame painted into the artwork, matching the attached series frame reference (copy its frame and palette only, ignore its battlefield and armies). Every human figure has exactly two arms and two hands. Gentle, family-friendly mood: no blood, no gore, no injuries, no weapons pointed at anyone. No text, no letters, no captions, no watermark.",
+  "output": "Output: native 3:2 landscape, at least 1536x1024. No watermark.",
+  "quality_bar_ref": "assets/spine/field-master.jpg",
+  "scene_lock_ref": "episodes/NN-slug/stills/_locks/<scene>-master.jpg",
+  "scene_master_prompt": "<prompt_prefix> ... scene master, no people ...",
+  "imagine_refs": [
+    "assets/spine/field-master.jpg",
+    "episodes/NN-slug/stills/_locks/<scene>-master.jpg"
+  ],
+  "character_lock_refs": {
+    "<cid>": "episodes/NN-slug/stills/_locks/<cid>.jpg"
+  },
+  "local_lock_plan": {},
+  "image_path": "SuperGrok consumer Imagine (grok.com) only — never api.x.ai for images",
+  "photoreal_allowed": false,
+  "family_friendly": true,
+  "cast": {
+    "<cid>": {
+      "name": "<Name>",
+      "face": "",
+      "hair": "",
+      "costume": "",
+      "never": ""
+    }
+  },
+  "poster": {
+    "file": "poster.jpg",
+    "cast_present": [],
+    "imagine_refs": [
+      "assets/spine/field-master.jpg"
+    ],
+    "prompt": "",
+    "note": ""
+  },
+  "source_block": {
+    "primary": [
+      "Gita Press Gorakhpur, Shri Durga Saptashati (Sanskrit with Hindi translation), adhyaya 1",
+      "Swami Jagadiswarananda, Devi-Mahatmyam (Sri Ramakrishna Math, Chennai), chapter 1",
+      "F. E. Pargiter, The Markandeya Purana (Asiatic Society, 1904), canto 81"
+    ],
+    "note": "Jagadiswarananda verse numbers vv.1-25 checked against the published translation; later ranges and Gita Press / Pargiter numbering are approximate (editions number uvacha lines differently)."
+  },
+  "stills_status": "not started",
+  "plates": [
+    {
+      "id": "<plate>",
+      "file": "plate-<plate>.jpg",
+      "beat": "",
+      "t": 0,
+      "beat_text": "",
+      "cast_present": [],
+      "locus_master": null,
+      "light": "",
+      "imagine_refs": [
+        "assets/spine/field-master.jpg"
+      ],
+      "must_show": [],
+      "must_not_show": [],
+      "props": [],
+      "prompt": "",
+      "sources": [
+        {
+          "work": "Gita Press Gorakhpur, Shri Durga Saptashati",
+          "cite": ""
+        },
+        {
+          "work": "Swami Jagadiswarananda, Devi-Mahatmyam (Ramakrishna Math)",
+          "cite": ""
+        },
+        {
+          "work": "F. E. Pargiter, The Markandeya Purana (1904)",
+          "cite": ""
+        }
+      ]
+    }
+  ]
+}

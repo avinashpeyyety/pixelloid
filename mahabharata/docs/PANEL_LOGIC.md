@@ -154,3 +154,16 @@ Spoken beats: `python3 tools/dialogue_review.py episodes/<id> --report`.
 FAIL if `t` is not strictly increasing, a spoken line has no speaker, the speaker is not in that plate’s `cast_present`, the action named in the line is not on the plate, a silent plate-change would Ken Burns/crossfade the line over the wrong still, beats jump backward in bible order, a non-omniscient speaker names someone not yet introduced, a speaker claims off-stage facts they could not know, or lines contradict an earlier vow/plan. Narrator / Kathavachak / Krishna are omniscient. `--strict-bible` (default) requires script `text` to match plate `beat_text`. FAIL blocks Imagine commit and publish.
 
 Does not replace panel-logic (GATE A/B) or stills review (GATE C).
+
+## Counting rules (image prompts) — added 2026-11-03
+
+Most SuperGrok regenerations on Ep 20–24 were miscounts: a third hand (Ep 24 `bless`, `bee`; Ep 23 `counsel`), a merged twin (Ep 24 `fish`), the wrong pose (Ep 24 `listen`), clasped hands (Ep 22 `arrive`). The template `episodes/_template/plate-bible.json` now carries `figure_count_rules`; put them in every multi-figure beat prompt on the **first** attempt:
+
+1. "Exactly N people in the frame", then name them left to right.
+2. "Exactly two arms and two hands each, no extra hands."
+3. Twins = "TWO separate young men side by side, never merged into one."
+4. Explicit pose words (Bhishma "stretched out horizontally, reclining on his back — NOT sitting up, NOT cross-legged"; "namaste / raised hand" instead of handshakes or clasped hands).
+5. Counted props stated ("at least eight small fish").
+6. Reuse saved **v2** prompts from earlier `PROMPTS.md` files for similar beats before writing new wording.
+
+These only add constraints the GATE C eye-check already enforces; the bar and the eye-check are unchanged.

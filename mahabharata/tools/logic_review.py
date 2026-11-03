@@ -936,13 +936,23 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="Panel logic review agent")
     ap.add_argument("bible", type=Path)
     ap.add_argument("--report", action="store_true")
+    ap.add_argument(
+        "--skip-if-unchanged",
+        action="store_true",
+        help="reuse the last PASS when script.js/plate-bible.json/tool hashes are unchanged (tools/review_cache.py)",
+    )
     args = ap.parse_args()
     path = args.bible if args.bible.is_absolute() else ROOT / args.bible
     if not path.exists():
         print(f"FAIL: missing {path}", file=sys.stderr)
         return 2
+    import review_cache  # noqa: E402  (tools/ is on sys.path when run as a script)
+    if args.skip_if_unchanged and review_cache.cached_pass(path.parent, "gateB", Path(__file__)):
+        print("PASS (cached: inputs unchanged since last PASS)")
+        return 0
     bible = load(path)
     ok, fails = review(bible)
+    review_cache.record(path.parent, "gateB", Path(__file__), ok)
     if args.report:
         print(f"report: {write_report(path, bible, ok, fails)}")
     print("PASS" if ok else "FAIL")

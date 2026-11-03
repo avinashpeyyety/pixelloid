@@ -1,0 +1,14 @@
+{
+  "_doc": "Canonical character/scene lock sources. tools/copy_locks.py copies episodes/<source>/stills/_locks/<file> into a new episode's _locks/ and byte-verifies it. Episodes keep their own _locks/ copies (no path changes; player and GATE C read them as before). Add an entry when Avinash approves a new lock.",
+  "locks": {
+    "krishna": {"source": "04-akshayapatra", "file": "krishna.jpg", "note": "official Krishna reference (Avinash 2026-10-06); FIRST ref"},
+    "yudhishthira": {"source": "15-narayanastra", "file": "yudhishthira.jpg"},
+    "arjuna": {"source": "15-narayanastra", "file": "arjuna.jpg"},
+    "bhima": {"source": "15-narayanastra", "file": "bhima.jpg"},
+    "nakula_sahadeva": {"source": "05-yaksha-prashna", "file": "nakula_sahadeva.jpg"},
+    "bhishma": {"source": "10-bhishma-fall", "file": "bhishma.jpg"},
+    "field-master": {"source": "10-bhishma-fall", "file": "field-master.jpg", "note": "style spine"},
+    "kuru-master": {"source": "23-reluctant-king", "file": "kuru23-master.jpg"},
+    "pandavas": {"source": "24-rajadharma", "file": "pandavas24.jpg", "note": "group lock: five brothers, ten hands"}
+  }
+}

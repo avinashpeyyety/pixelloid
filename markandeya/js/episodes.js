@@ -15,7 +15,7 @@ export const EPISODES = [
     sanskrit: "सुरथः समाधिश्च",
     chapter: "Devī Māhātmyam · Chapter 1 (frame story)",
     duration: "~114s",
-    status: "planned", // UNPUBLISHED until stills + GATE C + install PASS
+    status: "live", // shipped 2026-11-03 (GATE C + install PASS)
     blurb:
       "A good king who lost his kingdom and a kind merchant cast out by his family meet in a sage's forest hermitage. Why do our hearts hold on? The sage Medhas begins to tell of Mahāmāyā, the Great Goddess.",
     play: "play.html?ep=01",

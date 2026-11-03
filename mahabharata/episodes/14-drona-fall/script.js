@@ -14,10 +14,10 @@ export const EPISODE = {
   style: "cinematic-plates",
   stillsDir: "episodes/14-drona-fall/stills/",
   voice: {
-    provider: "local-kokoro",
-    voice_id: "bm_george",
-    cache: "ep14-local-20261002",
-    note: "Kathavachak — Kokoro-82M bm_george (free local, Apache-2.0) via tools/render_local_voice.sh; Orion API retired 2026-09-29 (SuperGrok-only rule, no paid API). Files keep orion-NN.mp3 names/fingerprint.",
+    provider: "grok-tts",
+    voice_id: "orion",
+    cache: "14-orion-20261102",
+    note: "Kathavachak — Grok TTS orion (xAI API), remastered 2026-11-02 from Kokoro bm_george via tools/render_orion_voice.py (Avinash-approved Orion-only rule). 24 kHz / 128 kbps / no ID3.",
     base: "episodes/14-drona-fall/audio/",
   },
   music: {

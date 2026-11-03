@@ -8,8 +8,8 @@ Usage:
 Checks:
   - Every beat plate key resolves to an on-disk still
   - Every spoken beat has a non-empty audio file
-  - voice.voice_id matches config/narrator.json canonical_voice_id (bm_george) for new episodes;
-    orion_locked_episodes (Ep 01–03, 05–13) must stay voice_id orion (never re-voiced)
+  - voice.voice_id must be orion for every episode (config/narrator.json canonical_voice_id; 2026-11-02 Orion-only rule);
+    orion_locked_episodes must stay voice_id orion (never re-voiced)
   - Named Hindustani raga present in script.js music.raga
 
 FAIL (exit 1) blocks ship. Writes logic-reviews/RR-gateD-install.md when --report.
@@ -30,7 +30,7 @@ NARRATOR_CFG = ROOT / "config" / "narrator.json"
 
 def load_narrator() -> dict:
     if not NARRATOR_CFG.exists():
-        return {"canonical_voice_id": "bm_george", "provider": "local-kokoro"}
+        return {"canonical_voice_id": "orion", "provider": "grok-tts"}
     return json.loads(NARRATOR_CFG.read_text(encoding="utf-8"))
 
 
@@ -99,7 +99,7 @@ def review(ep_dir: Path) -> tuple[bool, list[str], list[str], dict]:
     fails: list[str] = []
     warns: list[str] = []
     cfg = load_narrator()
-    canonical = cfg.get("canonical_voice_id", "bm_george")
+    canonical = cfg.get("canonical_voice_id", "orion")
     script_path = ep_dir / "script.js"
     if not script_path.exists():
         return False, [f"missing {script_path}"], warns, {}

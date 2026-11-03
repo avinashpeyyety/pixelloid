@@ -2,15 +2,15 @@
 
 Status: **PASS**
 Reviewer: install_review.py (box)
-Time: 2026-10-07 12:40 CDT
+Time: 2026-11-02 21:22 CST
 
 ## Install checks
 
 | Check | Result |
 |-------|--------|
-| Canonical narrator (`config/narrator.json`) | `bm_george` |
-| `voice.voice_id` | `bm_george` — **PASS** |
-| `voice.provider` | `local-kokoro` |
+| Canonical narrator (`config/narrator.json`) | `orion` |
+| `voice.voice_id` | `orion` — **PASS** |
+| `voice.provider` | `grok-tts` |
 | Named raga | `multani` — **PASS** |
 | `totalSec` | 112 |
 | Beat plate files on disk | **PASS** |
@@ -33,7 +33,7 @@ Time: 2026-10-07 12:40 CDT
 
 ## Strict checks
 
-- [x] voice_id == expected bm_george
+- [x] voice_id == expected orion
 - [x] No missing plate file for a script beat key
 - [x] No missing audio for narration beats
 - [x] Named Hindustani raga in episode module

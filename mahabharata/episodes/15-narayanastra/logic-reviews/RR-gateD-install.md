@@ -2,15 +2,15 @@
 
 Status: **PASS**
 Reviewer: install_review.py (box)
-Time: 2026-10-05 12:42 CDT
+Time: 2026-11-02 21:22 CST
 
 ## Install checks
 
 | Check | Result |
 |-------|--------|
-| Canonical narrator (`config/narrator.json`) | `bm_george` |
-| `voice.voice_id` | `bm_george` — **PASS** |
-| `voice.provider` | `local-kokoro` |
+| Canonical narrator (`config/narrator.json`) | `orion` |
+| `voice.voice_id` | `orion` — **PASS** |
+| `voice.provider` | `grok-tts` |
 | Named raga | `shree` — **PASS** |
 | `totalSec` | 112 |
 | Beat plate files on disk | **PASS** |
@@ -33,15 +33,9 @@ Time: 2026-10-05 12:42 CDT
 
 ## Strict checks
 
-- [x] voice_id == canonical bm_george
+- [x] voice_id == expected orion
 - [x] No missing plate file for a script beat key
 - [x] No missing audio for narration beats
 - [x] Named Hindustani raga in episode module
 
 **GATE D install: PASS**
-
-## Manual addenda (Chief, 2026-10-05)
-
-- **Raga preset resolves:** `music.raga: "shree"` → `js/main.js` `RAGA_PRESETS.shree` (A2 mandra; degrees S r G M P d N; andolan on komal Re; `tabla: "none"`; Shree pakad phrases). The player no longer falls back to `default` flute+tabla. `install_review.py` only checks that a raga is named, so this was checked by hand.
-- **Speaker / action on panel:** Krishna speaks on `counsel` (Krishna on the plate). Narrator beats show the named action: invoke = weapon called, surrender = bow set down, pull = mace taken, calm = Bhima disarmed (v2 continuity fix).
-- **3D cut:** steps 7–9 (Blender block/map/render) were not done for Ep 15. Ep 08 and Ep 14 shipped the same way, as plate-only cinematic episodes.

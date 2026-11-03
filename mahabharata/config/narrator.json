@@ -1,24 +1,48 @@
 {
-  "canonical_voice_id": "bm_george",
-  "provider": "local-kokoro",
-  "engine": "kokoro-82M",
-  "speed": 0.9,
-  "render": "tools/render_local_voice.sh",
-  "policy": "Avinash 2026-10-03: default narrator for NEW episodes (Ep 14+ greenfield). Never spend paid xAI API credits. 2026-10-05 fix: existing episodes keep the narration they shipped with — re-renders (resolution, plates, retime) MUST reuse the existing audio files and never re-synthesize voice. Episodes in orion_locked_episodes (01–03, 05–13) stay Grok TTS orion; Ep04/14/15 keep their existing bm_george audio until the orion_remaster ticket is unblocked; GATE D install FAILs if one of them is not voice_id orion, and FAILs any other episode whose voice_id differs from canonical_voice_id.",
+  "canonical_voice_id": "orion",
+  "provider": "grok-tts",
+  "engine": "xai-tts",
+  "render": "tools/render_orion_voice.py",
+  "policy": "Avinash 2026-11-02: ORION-ONLY rule — every episode (existing and new) is narrated by Grok TTS orion via xAI API (tools/render_orion_voice.py); Kokoro/bm_george and macOS say are retired as narrators. Re-renders (resolution, plates, retime) MUST reuse existing audio and never re-synthesize voice. GATE D install FAILs any episode whose voice_id is not orion. History: 2026-10-03 Kokoro default (no paid credits); 2026-11-02 Ep04, 14–24 remastered to orion.",
   "orion_remaster": {
-    "status": "queued_blocked_on_credits",
+    "status": "done",
     "voice_id": "orion",
     "order": [
       "14-drona-fall",
       "04-akshayapatra",
-      "15-narayanastra"
+      "15-narayanastra",
+      "16-karna-commander",
+      "17-karna-fall",
+      "18-shalya-fall",
+      "19-mace-duel",
+      "20-night-raid",
+      "21-brahmashira",
+      "22-womens-lament",
+      "23-reluctant-king",
+      "24-rajadharma"
     ],
-    "note": "Re-voice with Grok TTS orion when Avinash says credits available; keep timing aligned. Do not start until unblocked. Ep05–08 removed 2026-10-05: original Orion clips restored from git (fix/keep-orion-narration). Ep04 stays: its Oct 2026 rewrite text was only ever voiced by bm_george (Avinash 2026-10-05: keep the rewrite)."
+    "note": "Done 2026-11-02 (Avinash-approved, xAI credits, $5 cap): re-voiced with Grok TTS orion; clip durations fit existing beat windows, no retime needed.",
+    "completed": "2026-11-02",
+    "done": [
+      "04-akshayapatra",
+      "14-drona-fall",
+      "15-narayanastra",
+      "16-karna-commander",
+      "17-karna-fall",
+      "18-shalya-fall",
+      "19-mace-duel",
+      "20-night-raid",
+      "21-brahmashira",
+      "22-womens-lament",
+      "23-reluctant-king",
+      "24-rajadharma"
+    ]
   },
   "orion_locked_episodes": [
     "01",
     "02",
     "03",
+    "04",
     "05",
     "06",
     "07",
@@ -27,6 +51,17 @@
     "10",
     "11",
     "12",
-    "13"
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24"
   ]
 }

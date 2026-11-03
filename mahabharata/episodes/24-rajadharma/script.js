@@ -29,10 +29,10 @@ export const EPISODE = {
   style: "cinematic-plates",
   stillsDir: "episodes/24-rajadharma/stills/",
   voice: {
-    provider: "local-kokoro",
-    voice_id: "bm_george",
-    cache: "ep24-kokoro-20261102",
-    note: "Kathavachak — Kokoro-82M bm_george (free local, Apache-2.0, speed 0.9) via tools/render_local_voice.sh; no paid xAI API (SuperGrok-only rule). Files keep orion-NN.mp3 names/fingerprint (24 kHz / 128 kbps / mono / -16 LUFS).",
+    provider: "grok-tts",
+    voice_id: "orion",
+    cache: "24-orion-20261102",
+    note: "Kathavachak — Grok TTS orion (xAI API), remastered 2026-11-02 from Kokoro bm_george via tools/render_orion_voice.py (Avinash-approved Orion-only rule). 24 kHz / 128 kbps / no ID3.",
     base: "episodes/24-rajadharma/audio/",
   },
   music: {

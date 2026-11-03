@@ -1,0 +1,42 @@
+{
+  "episode_id": "01",
+  "notes": "Devi Mahatmyam ch.1 frame story (Durga Saptashati adhyaya 1; Markandeya Purana canto 81). Markandeya opens; Suratha, defeated and robbed by his ministers, rides alone to Medhas's hermitage; meets the merchant Samadhi, cast out by his greedy wife and sons; both still cling; Medhas: the birds feeding their young — that is Mahamaya. Series character locks live in config/cast-locks.json (all arc characters); Ep01 seeds the first four local locks. The Goddess is formless light only in Ep01. Family-friendly: no battle shown, no blood, no weapons drawn.",
+  "locks": {
+    "reuse": {
+      "series-frame-spine": "assets/spine/field-master.jpg (byte copy of mahabharata Ep10 field-master; frame + palette only)"
+    },
+    "new": {
+      "markandeya": "episodes/01-king-and-merchant/stills/_locks/markandeya.jpg (solo lock — generate first, SuperGrok consumer Imagine)",
+      "medhas": "episodes/01-king-and-merchant/stills/_locks/medhas.jpg (solo lock — generate first, SuperGrok consumer Imagine)",
+      "suratha": "episodes/01-king-and-merchant/stills/_locks/suratha.jpg (solo lock — generate first, SuperGrok consumer Imagine)",
+      "samadhi": "episodes/01-king-and-merchant/stills/_locks/samadhi.jpg (solo lock — generate first, SuperGrok consumer Imagine)",
+      "ashram01-master": "episodes/01-king-and-merchant/stills/_locks/ashram01-master.jpg (scene master, no people)"
+    }
+  },
+  "cast": {
+    "markandeya": {
+      "face": "Ageless radiant sage who looks about forty (blessed to stay young), warm brown skin, calm large dark eyes, short neat dark-brown beard, three horizontal white ash lines (tripundra) with a small red dot on the forehead",
+      "hair": "Long dark-brown matted hair (jata) coiled in a high topknot bound with one rudraksha string; no crown",
+      "costume": "Bare chest with a long rudraksha mala, ochre-saffron dhoti and ochre shawl over the left shoulder, holds an open palm-leaf manuscript; barefoot",
+      "never": "white beard or white hair (that is Medhas), crown, jewels, weapons, elderly frail body, extra arms"
+    },
+    "medhas": {
+      "face": "Elderly kind sage about seventy, fair-wheatish skin, gentle smiling eyes with laugh lines, long snow-white beard to the chest, vertical white-and-red sandal-paste tilak",
+      "hair": "Long flowing snow-white hair to the shoulders with a small white topknot; no crown",
+      "costume": "Bare chest with a tulsi-bead mala, plain cream-white cotton dhoti and cream shawl, sits on a spotted deerskin; brass kamandalu (water pot) and a wooden staff nearby; barefoot",
+      "never": "dark hair, ochre-saffron robes (that is Markandeya), crown, jewels, weapons, stern or angry face, extra arms"
+    },
+    "suratha": {
+      "face": "Dignified king in his late thirties, wheat-brown skin, strong jaw, thick black upturned mustache, clean-shaven chin (no beard), honest worried dark eyes",
+      "hair": "Shoulder-length wavy black hair under a tall gold crown (mukuta) set with one red ruby",
+      "costume": "Royal indigo-blue angavastram (upper cloth) over a bare chest with a pearl necklace, gold earrings and armlets, cream silk dhoti with a gold border, gold-hilted sword sheathed at the waist; rides a white horse with a red-and-gold harness",
+      "never": "beard, missing crown, armor helmet, drawn sword, saffron sage robes, extra arms"
+    },
+    "samadhi": {
+      "face": "Gentle round-faced man about fifty, light brown skin, sad kind eyes, thin grey-streaked mustache, clean-shaven chin",
+      "hair": "Short grey-black hair under a simple white wrapped turban",
+      "costume": "Mustard-yellow shawl (uttariya) wrapped over the chest and shoulders, plain white dhoti, small gold ear-studs, one gold ring, slightly plump build, travel-worn but tidy, carries a small cloth bundle",
+      "never": "crown, sword, royal jewelry, indigo cloth (that is Suratha), sage robes, extra arms"
+    }
+  }
+}

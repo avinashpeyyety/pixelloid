@@ -1,0 +1,20 @@
+{
+  "_note": "PRONOUNCE map for Orion TTS input ONLY. On-screen captions (script.js text) keep normal spellings. Applied whole-word, case-sensitive, by tools/render_orion_voice.py. Add series names as they first appear; verify with a whisper listen-back.",
+  "Markandeya": "Maarkandayya",
+  "Suratha": "Soorutha",
+  "Samadhi": "Samaadhi",
+  "Medhas": "Maydhus",
+  "Mahamaya": "Mahaa-maaya",
+  "Devi": "Dayvee",
+  "Devi Mahatmyam": "Dayvee Mahaatmyam",
+  "Durga": "Doorgaa",
+  "Mahishasura": "Mahishaasura",
+  "Madhu": "Madhoo",
+  "Kaitabha": "Kaitabha",
+  "Chamunda": "Chaamoonda",
+  "Shumbha": "Shoombha",
+  "Nishumbha": "Nishoombha",
+  "Raktabija": "Raktabeeja",
+  "Ambika": "Ambikaa",
+  "Narayani": "Naaraayani"
+}

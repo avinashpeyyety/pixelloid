@@ -14,8 +14,8 @@
   - [x] Scaffold (registry, landing, player, tools, hub card), episode plan, series character locks
   - [x] Script + GATE D dialogue PASS · plate bible + GATE A/B PASS · prompt pack (15 images)
   - [x] Orion narration orion-00…08 (78.94 s; `logic-reviews/RR-tts-orion.md`) · raga Puriya Dhanashri
-  - [ ] **Stills: Chief generates 15 images on grok.com (SuperGrok consumer Imagine)** from `episodes/01-king-and-merchant/stills/_inbox/consumer-imagine/PROMPTS.md`, drop into that folder, then `python3 tools/import_consumer_stills.py 01-king-and-merchant`
-  - [ ] GATE C: `python3 tools/stills_review.py episodes/01-king-and-merchant --require` + `RR-gateC-visual.md`
+  - [x] Stills: 15 images generated on grok.com (SuperGrok consumer) and imported 2026-11-03 (`--allow-watermark`: C2PA APP11 only, corners clean). 14/15 pass the eye-check.
+  - [ ] **GATE C: FAIL (2026-11-03): `stills/_locks/suratha.jpg` has blood-like red drips on the dhoti under the sword hand.** Removed from the stills tree. Plates and poster are clean. Fix: Chief does an Imagine *edit* of the existing `lock-suratha.jpg` (prompt in `logic-reviews/RR-gateC-visual.md` § Fix), drops it in the inbox, then runs `import_consumer_stills.py 01-king-and-merchant --allow-watermark --force` → `stills_review --require` → zoom-check → flip RR-gateC to PASS.
   - [ ] Thumbs: `python3 tools/make_thumbs.py episodes/01-king-and-merchant`
   - [ ] GATE D install: `python3 tools/install_review.py episodes/01-king-and-merchant --report`
   - [ ] Ship: flip Ep01 `status: "live"` in `js/episodes.js`, bump `?v=` tags, merge to `main` (Pages deploys on push to main)

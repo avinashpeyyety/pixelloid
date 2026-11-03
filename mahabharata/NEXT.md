@@ -1,54 +1,21 @@
 # NEXT — mahabharata (pixelloid)
 
-## Hard rules (2026-10-05, after Ep04–08 lost Orion; Ep05–08 restored)
-- **New-resolution re-render is COMPLETE — do not redo it.** Ep 01–02 restyled 2026-09-02; Ep 03–08 SuperGrok 1536×1024+/1728×1152 plates shipped 2026-09-16→18 (ad4bf2c, afd2ac4, 62513ab, 3944e6b, 48d25dd, fa536dd). Ep 09–15 were born at the bar. The "01–08 rewrite ladder" is closed; no sprint may pick an already-shipped episode back up as a "rewrite" without a ticket from Avinash naming the episode.
-- **Pace: 2 episodes per week, maximum (Avinash 2026-10-07).** The sprint runs Mon and Thu at 11:47 AM CT and ships at most one episode per run and at most 2 new episodes per Mon–Sun week. If 2 have already shipped this week, the run does no episode work and stops. A third episode happens only when Avinash asks for one ad hoc (depends on SuperGrok limits). The earlier "target ≥3 / stretch 4" no longer applies.
-- **Never re-synthesize narration for an existing episode.** Any re-render (plates, resolution, Blender, retime) reuses the episode's existing `audio/*.mp3`. Ep 01–03 and 05–13 are Orion-locked (`config/narrator.json` `orion_locked_episodes`; GATE D install FAILs otherwise). Ep 04 (Oct rewrite text), 14, 15 keep their existing Kokoro `bm_george` audio until the queued Orion remaster. Kokoro `bm_george` is only for NEW episodes. If new text truly needs new audio, stop and ask Avinash.
+## Hard rules
+- **Pace: 1 episode per week, Mondays 11:47 AM CT** (routine "Mahabharata episode sprint"). Ship at most one episode per run and per Mon–Sun week. If this week already has a ship, the run does no episode work and stops. Extra episodes only when Avinash asks ad hoc (depends on SuperGrok limits).
+- **Narration: Orion only** (Avinash 2026-11-02, `config/narrator.json`). Every episode is narrated by Grok TTS `orion` via `tools/render_orion_voice.sh` (xAI API, ~2¢ per episode). Kokoro `bm_george` and macOS `say` are retired as narrators. GATE D install FAILs any episode whose `voice_id` is not `orion`.
+- **Never re-synthesize narration for an existing episode.** Re-renders (plates, resolution, Blender, retime) reuse the existing `audio/*.mp3`; `render_orion_voice.py` refuses to overwrite clips without `--force` (Avinash's OK only). All of Ep 01–24 are `orion_locked_episodes`.
+- **Do not reopen shipped episodes** (the 01–08 rewrite ladder and the new-resolution re-render are closed) without a ticket from Avinash naming the episode.
+- **Run order:** `docs/PIPELINE_CHECKLIST.md` → "Routine run order". The ship record is written by `tools/ship_record.py` inside the merge commit; one push to `main`.
 
 ## Now
-- [ ] **Active sprint board:** [`docs/SPRINT_PLAN.md`](docs/SPRINT_PLAN.md) — Track A (improvements) + Track B (Ep 15+ factory). Studio lead; Chief one ticket/cycle.
-- [x] Ep 11: player uses Blender `renders/beat-*.png` (Ken Burns on 3D proxies; Orion/Megh kept)
-- [x] Pilot one beat in **3D**: Ep09 A3 counsel → Blender → `episodes/09-gita/renders/beat-35-counsel.png` (docs in `episodes/09-gita/blender/`; player still on stills/) — SPRINT_PLAN Track A3
-- [ ] **Track B: Ep 24 (Shanti Parva, Rajadharma: Bhishma on the bed of arrows teaches Yudhishthira the duties of a king, with Krishna and the Pandavas at his side)** via [`docs/PIPELINE_CHECKLIST.md`](docs/PIPELINE_CHECKLIST.md): script → GATE D dialogue → cast/bible → GATE A/B → SuperGrok consumer Imagine keys (Chief generates on grok.com) → GATE C → Kokoro bm_george + named raga → GATE D install → ship. One episode at a time. Picks up Ep 23's end line ("So they go to Kurukshetra, where Bhishma lies on his bed of arrows. 'Teach him, grandsire,' Krishna says, 'and lift his grief.'"). Family-friendly: no gore, no wounds; Bhishma serene on the golden arrow bed as in Ep 10 / 23 (no blood). **Pace: week of 10-26 has 1 shipped (Ep 23); next sprint Mon 2026-11-02.** (Ep 23 shipped 2026-10-29 e70ffeb.) — SPRINT_PLAN Track B
-- [ ] **Queued: Orion remaster (when xAI credits are available)** — re-voice **Ep14, then Ep04 (Oct rewrite text), then Ep15** (later George-only episodes) with Grok TTS `orion`, keeping timing aligned. **Blocked on credits**; do not start until Avinash says credits available. Ep05–08 are **not** in this queue any more: their original Orion clips were restored from git 2026-10-05 (`fix/keep-orion-narration`). Ep04 kept its October rewrite in George (Avinash 2026-10-05). Canonical narrator for NEW episodes remains Kokoro `bm_george` (`config/narrator.json`; GATE D install enforces). — SPRINT_PLAN
+- [ ] **Active sprint board:** [`docs/SPRINT_PLAN.md`](docs/SPRINT_PLAN.md) — Track B (Ep 15+ factory).
+<!-- ship:now:start -->
+- Last ship: **Ep 24 *Rajadharma*** 2026-11-02 (`episodes/24-rajadharma/logic-reviews/RR-ship.md`). Week of 2026-11-02: 1 shipped.
+- [ ] **Track B next:** Ep 25 (Shanti/Anushasana Parva — Bhishma's teaching continues; pick up Ep 24's end line "The grandsire will go on teaching for many days, until the sun turns north.") — next sprint Monday 2026-11-09 11:47 AM CT.
+<!-- ship:now:end -->
 
 ## Curiosity / explore
 - [ ] Tighten Ep 10 Arjuna lock: cream-white dhoti (no gold armor / peacock on the arrows plate) — SPRINT_PLAN Track A4
 
-## Done
-- [x] **Ep 23 *The Reluctant King*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Ahir Bhairav; SuperGrok consumer plates generated by Chief incl. new palace23 + kuru23 masters (no new character locks), counsel regenerated once (extra hands; "no handshake, namaste / raised hand + rosary, exactly two arms each"), 9 minor accepted deviations; ship 2026-10-29, e70ffeb) — week of 10-26: 1 shipped (cap 2/week, Mon/Thu)
-- [x] **Ep 22 *The Women's Lament*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Jogiya; SuperGrok consumer plates generated by Chief incl. new field22-master + Gandhari + Kunti (aged forward from Ep 03) locks, arrive regenerated once (ambiguous clasped hands, accepted as minor), 11 minor accepted deviations; ship 2026-10-19, 14e90f9) — week of 10-19: 1 shipped (cap 2/week, Mon/Thu)
-- [x] **Ep 21 *The Brahmashira*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Jaunpuri; SuperGrok consumer plates generated by Chief incl. new Vyasa + Narada locks, ganga21-master / follow / turn regenerated once each, 11 minor accepted deviations; ship 2026-10-15, bf1449c) — week of 10-12: 2 shipped (Ep 20, Ep 21; cap 2/week reached)
-- [x] **Ep 20 *The Night Raid*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Shankara; SuperGrok consumer plates generated by Chief incl. new Kripa + Kritavarma locks, away regenerated once (charset-mangled prompt), 7 minor accepted deviations; ship 2026-10-12, 1e35dbe) — week of 10-12: 1 shipped (cap 2/week, Mon/Thu)
-- [x] **Ep 19 *The Mace Duel*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Bageshri; SuperGrok consumer plates generated by Chief incl. new Balarama lock, signal v1 kept; ship 2026-10-07, 3c42bc3) — week of 10-05: 5 shipped (Ep 15–19; target ≥3 met, stretch 4 met)
-- [x] **Ep 18 *The Fall of Shalya*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Brindavani Sarang; SuperGrok consumer plates generated by Chief, counsel v2; ship 2026-10-07) — week of 10-05: 4 shipped (Ep 15, 16, 17, 18; target ≥3 met, stretch 4 met)
-- [x] **Ep 17 *The Fall of Karna*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Multani; SuperGrok consumer plates, meet/crown v2; ship 2026-10-07, 30620d8)
-- [x] **Ep 16 *Karna Takes Command*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Adana; SuperGrok consumer plates, outrage/secret v2; ship 2026-10-06, 7447b4b) — week of 10-05: 2 shipped (Ep 15, Ep 16; target ≥3)
-- [x] **Ep 15 *The Narayana Weapon*** (Track B; GATE A/B/C/D PASS; Kokoro local bm_george orion-00…08; Raga Shree; ship 2026-10-05, 6c413ed)
-- [x] **Ep 04 *The Akshayapatra* rewrite** (09/10 bar, Yaman, Kokoro local orion-*, GATE D install + ship 2026-10-02)
-- [x] **Ep 05 *Yaksha Prashna* rewrite** (09/10 bar, Bhairav, Kokoro local bm_george orion-00…08, GATE D install + ship 2026-10-03)
-- [x] **Ep 06 *The Kirata* rewrite** (09/10 bar, Bhairav, Kokoro local bm_george orion-00…08, GATE D install + ship 2026-10-03)
-- [x] **Ep 07 *Jayadratha* rewrite** (09/10 bar, Bhairavi, Kokoro local bm_george orion-00…08, GATE D install + ship 2026-10-04)
-- [x] **Ep 08 *The Peace Embassy* rewrite** (09/10 bar, Yaman, Kokoro local bm_george orion-00…08, GATE D install + ship 2026-10-04) — **01–08 ladder complete**
-- [x] Ep 11 reimagine scaffold: GATE C panels + blender-map + Blender scene/renders (3D+Imagine workflow)
-- [x] Workflow north star: Blender 3D + Grok Imagine key panels (`docs/WORKFLOW.md`, README, AGENTS, TOOLING)
-- [x] Ep 02 *The Fish's Eye* rewrite (09/10 bar, Yaman, Orion, sources)
-- [x] Ep 01 *The Bird's Eye* rewrite (09/10 bar, Bhupali, Orion, sources)
-- [x] Ep 01–06
-- [x] Ep 07 *Jayadratha*
-- [x] Ep 08 *The Peace Embassy*
-- [x] Ep 09 *The Bhagavad Gita* (Kurukshetra open)
-- [x] Ep 10 *The Fall of Bhishma* (tenth day, Shikhandi, bed of arrows)
-- [x] **Core art workflow = Ep 10 canvas.** STYLE / WORKFLOW / AGENTS / PANEL_LOGIC lock 3:2 1536×1024, carved cartouche, heroic medium. `logic_review.py` + `stills_review.py` block 720p / Ep01 gold on Ep 10+.
-- [x] **Krishna look lock = Ep 09.** Face/body `episodes/09-gita/stills/_locks/krishna.jpg`; cream–saffron–gold cartouche; not photoreal. Enforced from Ep 12 in `logic_review.py`.
-- [x] Ep 11 *The Chakravyuha* (Drona Parva, thirteenth day, Abhimanyu)
-- [x] Ep 11 restyle to Ep 09/10 cream–saffron–gold cartouche (native 2k → 1536×1024; Megh+Jhaptal kept)
-- [x] Ep 11 Orion TTS (grok-tts, 24 kHz / 128 kbps; Aman fallback retired)
-- [x] Hub: drop phad/flute-tabla lead; featured plate = Ep 11 gold cartouche 1536×1024
-- [x] Ep 09–11 raga underscoring (Bhairav / Darbari / Megh+Jhaptal) in the player; duck under Orion
-- [x] Ep 12 *Jayadratha Falls* (Drona Parva, fourteenth day, sunset vow; Marwa; Orion)
-- [x] Ep 13 *Ghatotkacha* (Drona Parva, night of the fourteenth, Karna’s Shakti; Malkauns; Orion)
-- [x] **Ep 14 *The Fall of Drona*** (GATE A/B/C/D PASS; Kokoro local orion-00…10; Miyan ki Todi; ship 2026-10-02)
-- [x] **Character-model bar = Ep 09 + Ep 10.** Krishna, Arjuna (09); Bhishma, Shikhandi (10). Enforced from Ep 12 in `logic_review.py` + GATE C.
-- [x] **GATE D sync:** speaker on plate, action visible, no Ken Burns over the wrong still.
-- [x] **Source gate:** ≥2 of BORI/Debroy, Gita Press Gorakhpur, K.M. Ganguli per beat; divergence → Gita Press + BORI overlap; never TV-only.
+## History
+Shipped-episode log: [`docs/HISTORY.md`](docs/HISTORY.md).

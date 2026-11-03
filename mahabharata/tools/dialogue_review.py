@@ -608,6 +608,11 @@ def main() -> int:
         action="store_false",
         help="Do not require script text to match bible beat_text",
     )
+    ap.add_argument(
+        "--skip-if-unchanged",
+        action="store_true",
+        help="reuse the last PASS when script.js/plate-bible.json/tool hashes are unchanged (tools/review_cache.py)",
+    )
     args = ap.parse_args()
     ep_dir = resolve_ep_dir(args.episode)
     script_path = ep_dir / "script.js"
@@ -621,6 +626,11 @@ def main() -> int:
     if not bible_path.exists():
         print(f"FAIL: missing {bible_path}", file=sys.stderr)
         return 2
+
+    import review_cache  # noqa: E402  (tools/ is on sys.path when run as a script)
+    if args.skip_if_unchanged and review_cache.cached_pass(ep_dir, "gateD-dialogue", Path(__file__)):
+        print("PASS (cached: inputs unchanged since last PASS)")
+        return 0
 
     js = script_path.read_text(encoding="utf-8")
     try:
@@ -637,6 +647,7 @@ def main() -> int:
     bible = json.loads(bible_path.read_text(encoding="utf-8"))
     fails = review(beats, bible, strict_bible=args.strict_bible)
     ok = len(fails) == 0
+    review_cache.record(ep_dir, "gateD-dialogue", Path(__file__), ok)
     if args.report:
         print(f"report: {write_report(ep_dir, ok, fails, beats, bible)}")
     print("PASS" if ok else "FAIL")

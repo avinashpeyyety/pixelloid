@@ -15,7 +15,7 @@ Drop downloaded Imagine files **here** (per episode). Do not scatter into `still
 ## Steps
 
 1. **Open** [grok.com](https://grok.com) Imagine (SuperGrok consumer).
-2. **Attach lock refs** (first image = 3:2 ≥1536×1024 scene master or Ep10 `field-master.jpg`):
+2. **Copy locks** (`python3 tools/copy_locks.py <id> <names…>`, byte-verified from `config/locks.json`), then **attach lock refs** (first image = 3:2 ≥1536×1024 scene master or Ep10 `field-master.jpg`):
    - This episode `stills/_locks/<scene>-master.jpg`
    - Only the cast locks in `cast_present` for that beat
    - Ep10 `episodes/10-bhishma-fall/stills/_locks/field-master.jpg` for style spine
@@ -51,7 +51,7 @@ Example map:
 }
 ```
 
-7. **Eye-check watermark** on every imported plate (corners). The script’s byte heuristic can miss UI overlays — GATE C template has a manual checkbox.
+7. **Eye-check watermark** on every imported plate: open `stills/_inbox/corner-sheet.jpg` (written by the importer — four 300 px corners of every imported image on one sheet; untracked). The byte heuristic skips Grok/xAI strings only inside the APP11 C2PA content-credentials manifest (every Grok Imagine file has one) and in pixel scan data; any Grok/xAI token in EXIF/XMP/comments or appended bytes still FAILs. It cannot see painted-in marks — that is what the sheet is for. GATE C template keeps the manual checkbox. `--allow-watermark` is no longer needed for the C2PA-only case.
 8. **GATE C:**
 
 ```bash

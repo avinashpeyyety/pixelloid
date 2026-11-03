@@ -1,0 +1,6 @@
+# local caches written by tools (not part of the site)
+episodes/*/logic-reviews/.review-cache.json
+episodes/*/stills/_inbox/corner-sheet.jpg
+episodes/*/stills/_inbox/.tmp_convert/
+tools/tests/__pycache__/
+tools/__pycache__/

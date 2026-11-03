@@ -169,15 +169,106 @@ def ensure_jpeg(src: Path, tmp_dir: Path) -> Path:
     return out
 
 
-def watermark_hits(path: Path) -> list[str]:
-    """Heuristic: scan file bytes / APP markers for obvious Grok watermark strings."""
+def jpeg_segments(data: bytes) -> list[tuple[int, int, int]]:
+    """Return (marker, start, end) byte ranges for JPEG header segments up to SOS.
+
+    Ranges cover the marker bytes through the end of the segment payload. Parsing
+    stops at SOS (0xFFDA); the entropy-coded scan data is not segmented.
+    Returns [] for non-JPEG data.
+    """
+    segs: list[tuple[int, int, int]] = []
+    if data[:2] != b"\xff\xd8":
+        return segs
+    i = 2
+    n = len(data)
+    while i + 4 <= n:
+        if data[i] != 0xFF:
+            break
+        marker = data[i + 1]
+        if marker == 0xFF:  # fill byte
+            i += 1
+            continue
+        if marker in (0x01,) or 0xD0 <= marker <= 0xD7:
+            i += 2
+            continue
+        length = int.from_bytes(data[i + 2 : i + 4], "big")
+        end = i + 2 + length
+        segs.append((marker, i, min(end, n)))
+        if marker == 0xDA:  # SOS: scan data follows
+            break
+        i = end
+    return segs
+
+
+def c2pa_ranges(data: bytes) -> list[tuple[int, int]]:
+    """Byte ranges of APP11 (0xFFEB) segments that carry a C2PA / JUMBF manifest.
+
+    Only these ranges are exempt from the watermark byte heuristic: they hold the
+    signed content-credentials manifest Grok Imagine embeds (it names Grok/xAI by
+    design) and are never rendered as pixels. Every other byte is still scanned.
+    """
+    out: list[tuple[int, int]] = []
+    for marker, start, end in jpeg_segments(data):
+        if marker == 0xEB:
+            seg = data[start:end]
+            # JPEG XT / JUMBF box: payload starts with the "JP" common identifier.
+            if seg[4:6] == b"JP" or b"c2pa" in seg.lower() or b"jumb" in seg.lower():
+                out.append((start, end))
+    return out
+
+
+def strip_ranges(data: bytes, ranges: list[tuple[int, int]]) -> bytes:
+    if not ranges:
+        return data
+    parts: list[bytes] = []
+    pos = 0
+    for start, end in sorted(ranges):
+        parts.append(data[pos:start])
+        parts.append(b"\x00")  # separator so strings cannot join across the gap
+        pos = end
+    parts.append(data[pos:])
+    return b"".join(parts)
+
+
+def text_bearing_bytes(data: bytes) -> bytes:
+    """Bytes that can carry text labels: header segments (EXIF, XMP, COM, …) minus
+    C2PA manifests, plus anything appended after the last EOI. The entropy-coded
+    scan data is pixels, so random 3-byte runs there (e.g. b"xai") are not text.
+    Non-JPEG input is returned unchanged (whole file scanned)."""
+    segs = jpeg_segments(data)
+    if not segs:
+        return data
+    exempt = set(c2pa_ranges(data))
+    parts = [data[s:e] for m, s, e in segs if m != 0xDA and (s, e) not in exempt]
+    eoi = data.rfind(b"\xff\xd9")
+    if eoi != -1 and eoi + 2 < len(data):
+        parts.append(data[eoi + 2 :])
+    return b"\x00".join(parts)
+
+
+def watermark_hits(path: Path, ignore_c2pa: bool = True) -> list[str]:
+    """Heuristic: scan file bytes / APP markers for obvious Grok watermark strings.
+
+    With ignore_c2pa (default), hits inside APP11 C2PA/JUMBF manifest segments are
+    ignored; hits anywhere else (EXIF, XMP, COM, scan data, trailing bytes) still fire.
+    This is a byte check only: a visible watermark painted into pixels is caught by
+    the corner-crop contact sheet + GATE C eye-check, not by this function.
+    """
     hits: list[str] = []
     data = path.read_bytes()
+    if ignore_c2pa:
+        data = text_bearing_bytes(data)
     # Limit scan cost on huge files
     sample = data if len(data) < 12_000_000 else (data[:2_000_000] + data[-500_000:])
     lower = sample.lower()
     for marker in WATERMARK_MARKERS:
-        if marker.lower() in lower:
+        if ignore_c2pa:
+            # whole-token match: random base64/binary runs (e.g. "...05xaIMK..." in an
+            # EXIF signature blob) are not text; a real "Grok"/"xAI" label is a token.
+            pat = rb"(?<![a-z0-9+/])" + re.escape(marker.lower()) + rb"(?![a-z0-9+/])"
+            if re.search(pat, lower):
+                hits.append(marker.decode("utf-8", errors="replace"))
+        elif marker.lower() in lower:
             hits.append(marker.decode("utf-8", errors="replace"))
     # EXIF/XMP-ish ASCII
     for m in re.finditer(rb"[\x20-\x7e]{8,120}", sample):
@@ -193,6 +284,39 @@ def watermark_hits(path: Path) -> list[str]:
             seen.add(h)
             uniq.append(h)
     return uniq
+
+
+def write_corner_sheet(images: list[Path], out: Path, crop: int = 300, thumb: int = 200) -> Path | None:
+    """Write a contact sheet: one row per image, its four corner crops (crop px each).
+
+    Used for the GATE C watermark eye-check (one image to look at instead of 4×N).
+    Needs Pillow; returns None (and the caller warns) when Pillow is missing.
+    """
+    try:
+        from PIL import Image, ImageDraw
+    except ImportError:
+        return None
+    if not images:
+        return None
+    label_w = 260
+    pad = 6
+    row_h = thumb + pad
+    sheet = Image.new("RGB", (label_w + 4 * (thumb + pad), row_h * len(images) + pad), "white")
+    draw = ImageDraw.Draw(sheet)
+    for r, path in enumerate(images):
+        with Image.open(path) as im:
+            im = im.convert("RGB")
+            w, h = im.size
+            c = min(crop, w // 2, h // 2)
+            boxes = [(0, 0, c, c), (w - c, 0, w, c), (0, h - c, c, h), (w - c, h - c, w, h)]
+            y = pad + r * row_h
+            draw.text((pad, y + thumb // 2 - 6), path.name, fill="black")
+            for k, box in enumerate(boxes):
+                tile = im.crop(box).resize((thumb, thumb))
+                sheet.paste(tile, (label_w + k * (thumb + pad), y))
+    out.parent.mkdir(parents=True, exist_ok=True)
+    sheet.save(out, "JPEG", quality=85)
+    return out
 
 
 def check_dims(jpeg_path: Path) -> list[str]:
@@ -235,6 +359,17 @@ def main() -> int:
         action="store_true",
         help="do not fail when watermark heuristic fires (still prints warning)",
     )
+    ap.add_argument(
+        "--no-c2pa-exempt",
+        action="store_true",
+        help="also count 'grok' hits inside APP11 C2PA manifests (old behaviour)",
+    )
+    ap.add_argument(
+        "--corner-sheet",
+        type=Path,
+        default=None,
+        help="contact-sheet path (default: stills/_inbox/corner-sheet.jpg; untracked)",
+    )
     args = ap.parse_args()
 
     ep_id, ep_dir = resolve_ep(args.episode)
@@ -263,6 +398,7 @@ def main() -> int:
     tmp_dir = stills / "_inbox" / ".tmp_convert"
     errors: list[str] = []
     imported: list[str] = []
+    sheet_srcs: list[Path] = []
 
     print(f"episode: {ep_id}")
     print(f"inbox:   {inbox}")
@@ -289,7 +425,7 @@ def main() -> int:
                 errors.append(f"{dest_rel} ({src.name}): {reason}")
             continue
 
-        wm = watermark_hits(jpeg_src)
+        wm = watermark_hits(jpeg_src, ignore_c2pa=not args.no_c2pa_exempt)
         if wm:
             msg = f"{dest_rel}: possible Grok watermark markers in file bytes: {wm[:3]}"
             if args.allow_watermark:
@@ -310,6 +446,18 @@ def main() -> int:
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(jpeg_src, dest)
         imported.append(dest_rel)
+        sheet_srcs.append(jpeg_src if args.dry_run else dest)
+
+    # corner-crop contact sheet for the watermark eye-check (before tmp cleanup)
+    if sheet_srcs:
+        sheet_path = args.corner_sheet or (stills / "_inbox" / "corner-sheet.jpg")
+        if not sheet_path.is_absolute():
+            sheet_path = (ROOT / sheet_path).resolve()
+        made = write_corner_sheet(sheet_srcs, sheet_path)
+        if made:
+            print(f"corner sheet: {made}  (4 corners × {len(sheet_srcs)} images; eye-check for watermarks)")
+        else:
+            print("WARN  corner sheet skipped (pip install pillow); eye-check corners by hand")
 
     # cleanup tmp converts
     if tmp_dir.exists() and not args.dry_run:
@@ -327,7 +475,7 @@ def main() -> int:
     print(f"OK  imported {len(imported)} file(s)")
     print()
     print("Next steps:")
-    print(f"  1. Eye-check corners for Grok watermark (heuristic is not enough).")
+    print(f"  1. Eye-check the corner sheet for a visible Grok watermark (byte heuristic is not enough).")
     print(f"  2. python3 tools/stills_review.py episodes/{ep_id} --require")
     print(f"  3. Fill episodes/{ep_id}/logic-reviews/RR-gateC-visual.md from docs/GATE_C_TEMPLATE.md")
     print(f"  4. On GATE C PASS → publish path (registry / commit / publish-pages)")

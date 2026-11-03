@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# RETIRED as narrator 2026-11-02 (Orion-only rule). Kept for local previews only; never ship its output.
 # Render episode beat lines with a FREE LOCAL neural TTS (Kokoro-82M, else Piper) to
 # Orion-fingerprint MP3s (24 kHz / 128 kbps / mono / no ID3, -16 LUFS). No network, no paid API.
 # Default voice pipeline since 2026-09-29 (Avinash: SuperGrok-only, never api.x.ai / Orion API).

@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
-# RETIRED 2026-09-29: do not run (calls paid api.x.ai). Use tools/render_local_voice.sh.
-"""Render episode beat lines to Orion-fingerprint MP3s (24 kHz / 128 kbps / mono / no ID3).
+"""Canonical narrator renderer (Orion-only rule, Avinash 2026-11-02; config/narrator.json).
 
-Prefer Grok TTS Orion when $XAI_API_KEY is set:
-  POST https://api.x.ai/v1/tts  voice_id=orion  language=en
-Fallback: macOS say -v Rishi (else Aman (English (India))) then ffmpeg.
+Render episode beat lines with Grok TTS Orion to MP3s (24 kHz / 128 kbps / mono / no ID3):
+  POST https://api.x.ai/v1/tts  voice_id=orion  language=en   (needs $XAI_API_KEY; ~$15 / 1M chars)
+
+Run ONCE per NEW episode. Never re-synthesize an existing episode: if audio/ already has
+clips the script refuses unless --force (re-renders of plates/resolution reuse audio).
+macOS `say` is retired as a narrator; it runs only with the explicit --fallback-say flag
+(local preview, never ship).
 
 Usage:
-  python3 tools/render_orion_voice.py episodes/10-bhishma-fall
+  python3 tools/render_orion_voice.py episodes/25-foo --dry-run   # chars + cost estimate, no API call
+  python3 tools/render_orion_voice.py episodes/25-foo
 """
 from __future__ import annotations
 
@@ -104,11 +108,17 @@ def render_say(text: str, dest: Path, voice: str) -> None:
         aiff.unlink(missing_ok=True)
 
 
+PRICE_PER_CHAR = 15 / 1_000_000  # USD, Grok TTS list price
+
+
 def main() -> int:
-    if len(sys.argv) < 2:
-        print("usage: python3 tools/render_orion_voice.py episodes/<id>", file=sys.stderr)
+    argv = sys.argv[1:]
+    flags = {a for a in argv if a.startswith("--")}
+    pos = [a for a in argv if not a.startswith("--")]
+    if not pos:
+        print("usage: python3 tools/render_orion_voice.py episodes/<id> [--dry-run] [--force] [--fallback-say]", file=sys.stderr)
         return 2
-    ep = Path(sys.argv[1])
+    ep = Path(pos[0])
     ep_dir = ep if ep.is_absolute() else ROOT / ep
     if not (ep_dir / "script.js").is_file():
         print(f"FAIL: missing {ep_dir}/script.js", file=sys.stderr)
@@ -121,8 +131,23 @@ def main() -> int:
         print(f"FAIL: no spoken beats with audio in {ep_dir}/script.js", file=sys.stderr)
         return 1
     audio_dir = ep_dir / "audio"
+    chars = sum(len(t) for _, t in pairs)
+    print(f"{len(pairs)} clips, {chars} chars, est ${chars * PRICE_PER_CHAR:.4f} (Grok TTS orion)")
+    if "--dry-run" in flags:
+        return 0
+    existing = [a for a, _ in pairs if (audio_dir / a).exists()]
+    if existing and "--force" not in flags:
+        print(
+            f"FAIL: {len(existing)} clip(s) already exist in {audio_dir} — never re-synthesize an "
+            "existing episode (NEXT.md hard rule). Pass --force only with Avinash's OK.",
+            file=sys.stderr,
+        )
+        return 1
     audio_dir.mkdir(parents=True, exist_ok=True)
     api_key = os.environ.get("XAI_API_KEY", "").strip()
+    if not api_key and "--fallback-say" not in flags:
+        print("FAIL: XAI_API_KEY not set (Orion-only rule; --fallback-say for a local preview only)", file=sys.stderr)
+        return 2
     if api_key:
         print(f"voice: grok-tts/{VOICE_ID}  (24 kHz / 128 kbps / no ID3)")
         for audio, text in pairs:

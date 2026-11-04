@@ -11,7 +11,7 @@ Kid-friendly, historically careful stories of Chhatrapati Shivaji Maharaj and hi
 | **Draw-on reveal** | Local free tools: Python (OpenCV/numpy) stroke-order reveal → ffmpeg encode |
 | **Color** | Selective color layered after reveal (see palette) |
 | **Motion** | Grok Imagine (consumer) **only** for Sh-09 climb and Sh-12 duel, ≤6 s each |
-| **Voice** | Narration (Avinash's own voice preferred; local TTS fallback) |
+| **Voice** | **Orion only** — xAI Grok TTS `orion` via `tools/render_orion_voice.py` (Avinash 2026-11-02; no fallback voice). Ep01 used Kokoro and is in the Orion remaster queue (NEXT.md) |
 | **Assembly** | ffmpeg / DaVinci Resolve (free) — target 3–4 min |
 
 Why not VideoScribe/Doodly/AI script-to-video: paid subscriptions, stock doodle libraries look generic, and AI story tools weaken character consistency and historical control. Hybrid keeps our own bible + zero extra cost.
@@ -46,10 +46,15 @@ Common suffix for every prompt: `pencil and ink line art, children's book sketch
 - **Suryaji Malusare** (Tanaji's younger brother): slimmer, younger, shorter moustache, pheta, spear or sword; steady eyes. Mood: dependable, rallies others.
 - **Udaybhan Rathod** (Rajput fort commander for the Mughals): tall, stern, strong; Rajput turban, side-parted beard, chainmail under jama, long sword. Shown as a worthy opponent, **not a monster**.
 - **Jijabai** (Shivaji's mother): dignified older woman, nauvari saree draped over head, kind but firm face; tells stories and gives counsel. (In the popular telling she wishes to see the Mughal flag off Kondhana — label as tradition.)
+- **Sambhaji** (Ep02, age ~9 in 1666): boyish, curious, small pagadi with tiny plume echoing his father's; short angarkha.
+- **Aurangzeb** (Ep02): dignified, distant emperor; white-grey beard, plain white jama; never a caricature.
+- **Hiroji Farzand** (Ep02): Shivaji's loyal companion, similar build, short beard, ring on right hand.
+- **Madari Mehtar** (Ep02): young helper (~15), cheerful, plain kurta and head-wrap.
 - **Mavla soldiers** (background): simple silhouettes, pheta, shields, rope coils.
 - **The ghorpad (monitor lizard)** — legend only: gentle, cartoon-friendly lizard named *Yashwanti* in the legend.
 
 ## Episodes
 | # | Title | Status |
 |---|-------|--------|
-| 01 | **Sinhagad** — the capture of Kondhana, Feb 1670 | Rendered (Kokoro narration) — awaiting Avinash's review |
+| 01 | **Sinhagad** — the capture of Kondhana, Feb 1670 | Published 2026-10-28 (Kokoro narration — Orion remaster queued, awaiting approval) |
+| 02 | **Escape from Agra** — 1666 | Script draft + Orion narration ready; keyframes pending SuperGrok; script & contact-sheet review pending |

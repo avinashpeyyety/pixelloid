@@ -1,0 +1,4 @@
+{"episode":"02-escape-from-agra","cast":["shivaji","sambhaji","jijabai","aurangzeb","hiroji","madari","mughal-guards","porters"],
+ "locks_reused":{"shivaji":"../01-sinhagad/chars/shivaji.png","jijabai":"../01-sinhagad/chars/jijabai.png"},
+ "locks_new_pending":["sambhaji","aurangzeb","hiroji","madari"],
+ "status":"script-review","images_generated":false,"narrator":"orion"}

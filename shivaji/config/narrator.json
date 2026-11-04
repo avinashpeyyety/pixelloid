@@ -1,0 +1,11 @@
+{
+  "canonical_voice_id": "orion",
+  "provider": "grok-tts",
+  "endpoint": "https://api.x.ai/v1/tts",
+  "language": "en",
+  "render": "tools/render_orion_voice.py",
+  "fallback": null,
+  "policy": "Avinash 2026-11-02: ORION-ONLY for every pixelloid series incl. Shivaji. xAI API credits authorized for Orion narration only (never images). No Kokoro/bm_george, macOS say, browser speech or default voice. If Orion is unavailable: 'BLOCKED: awaiting Orion' in NEXT.md, episode does not ship. Never re-voice a shipped episode without Avinash's approval.",
+  "orion_locked_episodes": [],
+  "non_orion_episodes": {"01-sinhagad": "Kokoro-82M bm_george (local) — in Orion remaster queue, awaiting approval"}
+}

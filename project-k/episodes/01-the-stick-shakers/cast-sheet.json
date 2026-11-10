@@ -1,0 +1,15 @@
+{
+  "series": "ORBITAL HEXES",
+  "episode": "01-the-stick-shakers",
+  "status": "text-only locks; no character images until script approval",
+  "voice": "orion (all parts; xAI Grok TTS, narration-only authorization)",
+  "cast": [
+    {"id": "narrator", "name": "Narrator (V.O.)", "notes": "Dry, warm, documentary-deadpan. Never mocks; just observes."},
+    {"id": "brok", "name": "Chief Ritualist Brok", "look": "Middle-aged, heavy brows, faded striped bathrobe over tunic, paper crown reading 'People's Spiritual Liaison', carved walking stick", "notes": "Utterly sincere, theatrical, dignified when falling."},
+    {"id": "mira", "name": "Elder Mira", "look": "Small elderly woman, shawl, practical shoes, short stick", "notes": "Pragmatic; hedges her bets; quiet power in the village."},
+    {"id": "petro", "name": "Petro", "look": "Young man, rolled sleeves, too-clean stick he barely uses", "notes": "Reluctant participant; deadpan asides."},
+    {"id": "teen1", "name": "Teen 1", "look": "Hoodie, foil snack packet", "notes": "Bored observer."},
+    {"id": "teen2", "name": "Teen 2", "look": "Braids, cracked phone face-down on knee", "notes": "Sharper of the two; the uncle stories."}
+  ],
+  "palette_draft": "Dusty ochre ground, violet-to-indigo dusk sky, single cool white satellite pinprick; muted, film-grain, contemporary indie look (not the gold/cartouche spiritual style)."
+}
